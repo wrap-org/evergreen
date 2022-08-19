@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+$thumb: 2.75rem; // 44px
+
+$horizontal: 1rem; // 16px
+$horizontal-lg: $horizontal * 2;
+$horizontal-sm: math.div($horizontal, 2);
+$horizontal-xl: $horizontal * 4;
+$horizontal-xs: math.div($horizontal, 4);
+
+$horizontal-fluid: 5%;
+$horizontal-fluid-lg: $horizontal-fluid * 1.5;
+$horizontal-fluid-sm: $horizontal-fluid * 0.5;
+
+$horizontal-root: 5vw;
+$horizontal-root-lg: $horizontal-root * 1.5;
+$horizontal-root-sm: $horizontal-root * 0.5;
+$horizontal-root-xl: $horizontal-root * 2.25;
+
+$vertical: 1rem; // 16px
+$vertical-lg: $vertical * 2;
+$vertical-md: $vertical * 0.75;
+$vertical-sm: math.div($vertical, 2);
+$vertical-xl: $vertical * 4;
+$vertical-xs: math.div($vertical, 4);
+
+$vertical-fluid: 5%;
+$vertical-fluid-lg: $vertical-fluid * 1.5;
+$vertical-fluid-sm: $vertical-fluid * 0.5;
+
+$vertical-root: 5vw;
+$vertical-root-lg: $vertical-root * 1.5;
+$vertical-root-sm: $vertical-root * 0.5;
+$vertical-root-xl: $vertical-root * 2.25;

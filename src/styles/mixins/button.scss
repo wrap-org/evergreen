@@ -1,0 +1,30 @@
+@use '../variables/color';
+@use '../variables/font';
+@use '../variables/spacing';
+@use '../variables/transition';
+
+@mixin base {
+  appearance: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.75;
+  min-height: spacing.$thumb;
+  min-width: 7.5em;
+  padding: spacing.$vertical-sm spacing.$horizontal;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity transition.$duration transition.$timing,
+    background transition.$duration transition.$timing,
+    border-color transition.$duration transition.$timing;
+  user-select: none;
+}
+
+@mixin default {
+  @include base;
+  background: color.$white;
+  border-radius: 0.25em;
+  color: color.$blue;
+  cursor: pointer;
+  font-weight: font.$weight-bold;
+}

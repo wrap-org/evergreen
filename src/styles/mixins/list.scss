@@ -1,0 +1,16 @@
+@use '../variables/spacing';
+
+@mixin default() {
+  list-style: none;
+  margin: (-#{spacing.$vertical-xs}) 0;
+  padding: 0;
+}
+
+@mixin item() {
+  display: flex;
+  padding: #{spacing.$vertical-xs} 0;
+
+  &-icon {
+    margin-right: spacing.$horizontal-sm;
+  }
+}

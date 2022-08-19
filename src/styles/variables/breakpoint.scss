@@ -1,0 +1,23 @@
+$xs: 0;
+$sm: 30em; // 480
+$md: 37.5em; // 600
+$lg: 48em; // 768
+$xl: 64em; // 1024
+$xxl: 80em; // 1280
+$xxxl: 90em; // 1440
+$tablet: $lg;
+$desktop: $xl;
+$max: 90em; // 1440
+
+$map: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+  xxxl: $xxxl,
+  tablet: $tablet,
+  desktop: $desktop,
+  max: $max
+);

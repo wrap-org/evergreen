@@ -1,0 +1,13 @@
+@use './color';
+@use './spacing';
+
+$background: color.$blue-lightest;
+$border: color.$blue-light;
+$border-hover: color.$link;
+$border-radius: 0.25em;
+
+$color: color.$body;
+
+$padding-vertical: spacing.$vertical-sm;
+$padding-horizontal: spacing.$horizontal;
+$padding: $padding-vertical $padding-horizontal;

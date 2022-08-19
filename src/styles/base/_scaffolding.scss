@@ -1,0 +1,30 @@
+@use '../variables/font';
+@use '../variables/color';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: color.$background;
+  color: color.$body;
+  margin: 0;
+  min-width: 20em;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  border: 0 none;
+  border-bottom: 1px solid color.$blue-light;
+}

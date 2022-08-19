@@ -1,0 +1,91 @@
+@use 'sass:color' as sassColor;
+@use '../../../styles/variables/breakpoint';
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/mixins/button';
+
+.button {
+  @include button.default;
+
+  border-color: rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &--loading,
+  &[disabled] {
+    opacity: 0.75;
+    pointer-events: none;
+  }
+
+  &--primary {
+    background: color.$yellow;
+    color: color.$blue-darkest;
+
+    &[disabled] {
+      background: sassColor.scale(color.$yellow, $alpha: -40%);
+    }
+  }
+
+  &--secondary {
+    background: color.$blue;
+    color: color.$white;
+
+    &[disabled] {
+      background: sassColor.scale(color.$blue, $alpha: -40%);
+    }
+  }
+
+  &--positive {
+    background: color.$positive;
+    color: color.$white;
+
+    &[disabled] {
+      background: sassColor.scale(color.$positive, $alpha: -40%);
+    }
+  }
+
+  &--negative {
+    background: color.$negative;
+    color: color.$white;
+
+    &[disabled] {
+      background: sassColor.scale(color.$negative, $alpha: -40%);
+    }
+  }
+
+  &--icon {
+    line-height: font.$line-height;
+    min-height: 0;
+    min-width: 0;
+    padding: spacing.$vertical-xs spacing.$horizontal-sm;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+
+    &-mobile {
+      display: block;
+      width: 100%;
+
+      @media screen and (min-width: breakpoint.$md) {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}
