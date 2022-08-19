@@ -12,6 +12,7 @@ module.exports = {
     "@storybook/addon-interactions"
   ],
   "framework": "@storybook/react",
+  staticDirs: [path.resolve(__dirname, '../src/assets')],
   core: {
     builder: 'webpack5',
   },
