@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "WRAP’s design system",
   "scripts": {
-    "build": "webpack --mode development",
+    "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "stylelint '**/*.scss'",

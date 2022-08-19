@@ -42,24 +42,7 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.scss$/,
-        exclude: /\.module\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
-        ]
       }
     ]
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss']
-  }
 };
