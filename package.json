@@ -1,5 +1,5 @@
 {
-  "name": "mobius",
+  "name": "@etchteam/mobius",
   "version": "0.0.0",
   "description": "WRAP’s design system",
   "scripts": {

@@ -4,9 +4,10 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/components/index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'index.js',
     library: 'mobius',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    clean: true
   },
   resolve: {
     alias: {
