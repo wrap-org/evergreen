@@ -6,7 +6,12 @@
     "build": "webpack --mode production",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "stylelint '**/*.scss'",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css": "stylelint \"./**/*.{htm,html,css,sss,less,scss,sass}\"",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "commitlint": "commitlint",
     "pre-commit": "lint-staged",
@@ -19,8 +24,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "stylelint --fix --allow-empty-input"
+      "eslint --fix"
     ],
     "*.{css,sss,less,scss,sass}": "stylelint --fix --allow-empty-input"
   },
@@ -60,9 +64,10 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
+    "postcss": "8.4.18",
+    "prettier": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "prettier": "^2.3.2",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",

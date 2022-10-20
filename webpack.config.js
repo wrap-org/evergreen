@@ -7,13 +7,13 @@ module.exports = {
     filename: 'index.js',
     library: 'mobius',
     libraryTarget: 'umd',
-    clean: true
+    clean: true,
   },
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components'),
     },
-    extensions: ['.ts', '.tsx', '.scss']
+    extensions: ['.ts', '.tsx', '.scss'],
   },
   module: {
     rules: [
@@ -21,9 +21,9 @@ module.exports = {
         test: /\.(?<!stories\.)(ts|tsx)$/,
         use: [
           {
-            loader: require.resolve('ts-loader')
-          }
-        ]
+            loader: require.resolve('ts-loader'),
+          },
+        ],
       },
       {
         test: /\.module\.scss$/,
@@ -33,17 +33,17 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ]
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
   },
 };
