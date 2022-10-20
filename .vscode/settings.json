@@ -1,0 +1,17 @@
+{
+  "eslint.enable": true,
+  "eslint.validate": ["javascript"],
+  // Disable builtin CSS validators, as stylelint will do this for us
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  // Ensure the git config matches our commit convention
+  "git.inputValidationSubjectLength": 100,
+  "git.inputValidationLength": 100,
+}
