@@ -19,7 +19,6 @@
     "prepare": "node ./scripts/install-husky.js && node ./scripts/export-components.js",
     "release": "semantic-release"
   },
-  "private": true,
   "engines": {
     "npm": ">=8.5.5",
     "node": ">=16.15.0"
