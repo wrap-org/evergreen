@@ -1,10 +1,11 @@
-import React, { lazy } from 'react';
+// import React, { lazy } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import styles from './Icon.module.scss';
 
 interface IconProps {
-  icon: string;
+  // icon: string;
   color?: string;
   title?: string;
 }
@@ -14,12 +15,18 @@ interface IconProps {
 class Icon extends React.PureComponent<IconProps> {
   render() {
     const {
-      icon,
+      // icon,
       color,
       title,
     } = this.props;
 
-    // const IconSVG = lazy(() => import(`!!@svgr/webpack?{ dimensions: false, svgProps: { viewBox: '0 0 24 24' } }!mono-icons/svg/${icon}.svg`));
+    // const IconSVG =
+    // lazy(() =>
+    // import(
+    //  `!!@svgr/webpack?{
+    // dimensions: false, svgProps: { viewBox: '0 0 24 24' }
+    // }!mono-icons/svg/${icon}.svg`)
+    // );
 
     return (
       <span
