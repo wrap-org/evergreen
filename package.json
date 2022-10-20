@@ -13,9 +13,11 @@
     "lint:css": "stylelint \"./**/*.{htm,html,css,sss,less,scss,sass}\"",
     "lint:css:fix": "npm run lint:css -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:a11y:from-build": "node ./scripts/storybook-a11y-tests.js",
     "commitlint": "commitlint",
     "pre-commit": "lint-staged",
-    "prepare": "node ./scripts/install-husky.js"
+    "prepare": "node ./scripts/install-husky.js",
+    "release": "semantic-release"
   },
   "private": true,
   "engines": {
@@ -41,6 +43,9 @@
     "@babel/core": "^7.18.10",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@shopify/storybook-a11y-test": "1.1.0",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
@@ -70,6 +75,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
+    "semantic-release": "19.0.5",
     "style-loader": "^3.3.1",
     "stylelint": "^14.10.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
