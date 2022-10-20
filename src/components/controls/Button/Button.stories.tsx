@@ -7,6 +7,19 @@ import Button from './Button';
 export default {
   title: 'Controls/Button',
   component: Button,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export function Types() {
@@ -23,7 +36,7 @@ export function Types() {
       <Button type="negative">Button</Button>
       {' '}
       <Button type="primary" icon>
-        <Icon icon="clipboard" title="Moderate" />
+        <Icon title="Moderate" />
       </Button>
     </>
   );

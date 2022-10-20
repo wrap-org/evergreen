@@ -11,7 +11,7 @@ export default {
 export function Default() {
   return (
     <>
-      <Icon icon="circle-information" />
+      <Icon />
       {' '}
       Icons from
       <a href="https://icons.mono.company/" target="_blank" rel="noopener noreferrer">Mono icons</a>

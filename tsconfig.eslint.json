@@ -1,13 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "**/*.ts",
     "**/*.js",
+    "**/*.ts",
+    "**/*.jsx",
     "**/*.tsx",
     ".eslintrc.js"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules",
   ]
 }
