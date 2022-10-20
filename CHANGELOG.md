@@ -1,3 +1,11 @@
+### [1.1.1](https://github.com/etchteam/mobius/compare/v1.1.0...v1.1.1) (2022-10-20)
+
+
+### Bug Fixes
+
+* set the package to public ([928b8f8](https://github.com/etchteam/mobius/commit/928b8f8eb8e1a85ad9956a613f119fda44b228c2))
+* use node auth token ([7ae3353](https://github.com/etchteam/mobius/commit/7ae33531a98bd8fbf31cce32a882624ce79889a0))
+
 ## [1.1.0](https://github.com/etchteam/mobius/compare/v1.0.0...v1.1.0) (2022-10-20)
 
 
