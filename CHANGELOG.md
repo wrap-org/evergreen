@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/etchteam/mobius/compare/v1.0.0...v1.1.0) (2022-10-20)
+
+
+### Features
+
+* publish releases to npm ([b575806](https://github.com/etchteam/mobius/commit/b5758067a9a36ce62d941617943b7e2148f8da28))
+
 ## 1.0.0 (2022-10-20)
 
 
