@@ -15,7 +15,12 @@ module.exports = {
       },
     ],
     '@semantic-release/changelog',
-    '@semantic-release/npm',
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: true,
+      },
+    ],
     '@semantic-release/github',
 
     // NOTE: this plugin must be last to ensure all updated files are committed
