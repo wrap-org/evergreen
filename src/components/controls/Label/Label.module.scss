@@ -1,0 +1,17 @@
+@use '../../../styles/mixins/screen-reader';
+@use '../../../styles/mixins/forms';
+@use '../../../styles/variables/spacing';
+
+.label {
+  @include forms.label;
+
+  &--hidden {
+    @include screen-reader.sr-only;
+  }
+
+  &--type-secondary {
+    align-items: flex-start;
+    font-weight: normal;
+    min-height: spacing.$vertical-lg;
+  }
+}

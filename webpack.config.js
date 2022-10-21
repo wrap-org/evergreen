@@ -13,6 +13,7 @@ module.exports = {
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components'),
+      lib: path.resolve(__dirname, 'src/lib'),
     },
     extensions: ['.ts', '.tsx', '.scss'],
     plugins: [

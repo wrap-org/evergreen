@@ -1,0 +1,34 @@
+@use 'sass:math';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/input';
+@use '../../../styles/mixins/forms';
+
+.date-picker {
+  @include forms.input;
+
+  &__icon {
+    align-self: center;
+    background: none;
+    border: 0 none;
+    color: color.$blue-dark;
+    cursor: pointer;
+    font-size: font.$size-xl;
+    line-height: 1;
+    margin-right: -(math.div(input.$padding-horizontal, 2));
+    padding: 0 0 0 math.div(input.$padding-horizontal, 2);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    @include forms.ninja-input;
+    @include forms.input-padding;
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+}

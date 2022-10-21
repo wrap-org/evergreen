@@ -1,0 +1,57 @@
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+
+.longform {
+  h1 {
+    margin-bottom: spacing.$vertical-lg;
+  }
+
+  h2 {
+    margin-bottom: spacing.$vertical-md;
+  }
+
+  h3,
+  h4,
+  h5 {
+    margin-bottom: spacing.$vertical-sm;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: spacing.$vertical-md;
+  }
+
+  ul,
+  ol {
+    padding-left: font.$line-height * 1rem;
+  }
+
+  li {
+    margin-bottom: spacing.$vertical-sm;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p +,
+  ul +,
+  ol + {
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: spacing.$vertical-lg;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  table,
+  img {
+    margin: spacing.$vertical-lg 0;
+  }
+}

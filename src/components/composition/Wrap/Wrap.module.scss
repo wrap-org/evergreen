@@ -1,0 +1,19 @@
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/breakpoint';
+
+.wrap {
+  margin: 0 auto;
+  max-width: 90em; // 1440px
+  padding: 0 spacing.$horizontal;
+  width: 100%;
+
+  @each $key, $bp in breakpoint.$map {
+    &--#{$key} {
+      max-width: $bp;
+    }
+  }
+
+  &--auto {
+    max-width: none;
+  }
+}

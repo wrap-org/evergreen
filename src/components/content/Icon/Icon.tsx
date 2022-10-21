@@ -1,32 +1,31 @@
-// import React, { lazy } from 'react';
 import React from 'react';
 import classNames from 'classnames';
+import loadable from '@loadable/component';
 
 import styles from './Icon.module.scss';
 
 interface IconProps {
-  // icon: string;
+  icon: string;
   color?: string;
   title?: string;
 }
+
+const IconSVG = loadable(
+  ({ icon }) => import(`!!@svgr/webpack?{ dimensions: false, svgProps: { viewBox: '0 0 24 24' }}!mono-icons/svg/${icon}.svg`),
+  {
+    cacheKey: (props) => props.icon,
+  },
+);
 
 // Has to be a PureComponent so we get the shallow prop comparison
 // and runs shouldComponentUpdate otherwise the icon flashes when state changes
 class Icon extends React.PureComponent<IconProps> {
   render() {
     const {
-      // icon,
+      icon,
       color,
       title,
     } = this.props;
-
-    // const IconSVG =
-    // lazy(() =>
-    // import(
-    //  `!!@svgr/webpack?{
-    // dimensions: false, svgProps: { viewBox: '0 0 24 24' }
-    // }!mono-icons/svg/${icon}.svg`)
-    // );
 
     return (
       <span
@@ -36,7 +35,7 @@ class Icon extends React.PureComponent<IconProps> {
         title={title}
         aria-hidden={!title}
       >
-        {/* <IconSVG /> */}
+        <IconSVG icon={icon} />
       </span>
     );
   }

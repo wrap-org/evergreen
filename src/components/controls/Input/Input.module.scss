@@ -1,0 +1,33 @@
+@use 'sass:math';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/input';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/mixins/forms';
+
+.input {
+  @include forms.input;
+
+  &__icon {
+    align-self: center;
+    font-size: font.$size-xl;
+    margin-right: -(math.div(input.$padding-horizontal, 2));
+    padding: 0 0 0 math.div(input.$padding-horizontal, 2);
+  }
+
+  &__prefix {
+    align-self: center;
+    font-weight: font.$weight-bold;
+    line-height: font.$line-height;
+    margin-right: -(math.div(input.$padding-horizontal, 2));
+    padding: 0 0 0 input.$padding-horizontal;
+  }
+
+  &__input {
+    @include forms.ninja-input;
+    @include forms.input-padding;
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+}

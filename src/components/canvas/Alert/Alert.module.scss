@@ -1,0 +1,18 @@
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/skin';
+
+.alert {
+  background: skin.$background;
+  border-radius: 0.25em;
+  color: skin.$color;
+  padding: spacing.$vertical spacing.$horizontal;
+
+  &__close {
+    background: none;
+    border: 0 none;
+    color: inherit;
+    cursor: pointer;
+    float: right;
+  }
+}

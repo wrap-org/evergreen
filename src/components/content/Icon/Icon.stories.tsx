@@ -11,7 +11,7 @@ export default {
 export function Default() {
   return (
     <>
-      <Icon />
+      <Icon icon="favorite" />
       {' '}
       Icons from
       <a href="https://icons.mono.company/" target="_blank" rel="noopener noreferrer">Mono icons</a>
