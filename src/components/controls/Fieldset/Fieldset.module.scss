@@ -1,0 +1,10 @@
+@use '../../../styles/mixins/forms';
+
+.fieldset {
+  border: 0 none;
+  padding: 0;
+
+  &__legend {
+    @include forms.label;
+  }
+}

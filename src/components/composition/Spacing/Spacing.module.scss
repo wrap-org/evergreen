@@ -1,0 +1,217 @@
+@use '../../../styles/variables/spacing';
+
+.spacing {
+  &--top {
+    &-xs {
+      margin-top: spacing.$vertical-xs;
+    }
+
+    &-sm {
+      margin-top: spacing.$vertical-sm;
+    }
+
+    &-md {
+      margin-top: spacing.$vertical;
+    }
+
+    &-lg {
+      margin-top: spacing.$vertical-lg;
+    }
+
+    &-xl {
+      margin-top: spacing.$vertical-xl;
+    }
+
+    &-fluid {
+      margin-top: spacing.$vertical-fluid;
+    }
+  }
+
+  &--left {
+    &-xs {
+      margin-left: spacing.$horizontal-xs;
+    }
+
+    &-sm {
+      margin-left: spacing.$horizontal-sm;
+    }
+
+    &-md {
+      margin-left: spacing.$horizontal;
+    }
+
+    &-lg {
+      margin-left: spacing.$horizontal-lg;
+    }
+
+    &-xl {
+      margin-left: spacing.$horizontal-xl;
+    }
+
+    &-fluid {
+      margin-left: spacing.$horizontal-fluid;
+    }
+  }
+
+  &--bottom {
+    &-xs {
+      margin-bottom: spacing.$vertical-xs;
+    }
+
+    &-sm {
+      margin-bottom: spacing.$vertical-sm;
+    }
+
+    &-md {
+      margin-bottom: spacing.$vertical;
+    }
+
+    &-lg {
+      margin-bottom: spacing.$vertical-lg;
+    }
+
+    &-xl {
+      margin-bottom: spacing.$vertical-xl;
+    }
+
+    &-fluid {
+      margin-bottom: spacing.$vertical-fluid;
+    }
+  }
+
+  &--right {
+    &-xs {
+      margin-right: spacing.$horizontal-xs;
+    }
+
+    &-sm {
+      margin-right: spacing.$horizontal-sm;
+    }
+
+    &-md {
+      margin-right: spacing.$horizontal;
+    }
+
+    &-lg {
+      margin-right: spacing.$horizontal-lg;
+    }
+
+    &-xl {
+      margin-right: spacing.$horizontal-xl;
+    }
+
+    &-right {
+      margin-left: spacing.$horizontal-fluid;
+    }
+  }
+
+  /* stylelint-disable max-nesting-depth */
+  &--negative {
+    &.spacing {
+      &--top {
+        &-xs {
+          margin-top: -(spacing.$vertical-xs);
+        }
+
+        &-sm {
+          margin-top: -(spacing.$vertical-sm);
+        }
+
+        &-md {
+          margin-top: -(spacing.$vertical);
+        }
+
+        &-lg {
+          margin-top: -(spacing.$vertical-lg);
+        }
+
+        &-xl {
+          margin-top: -(spacing.$vertical-xl);
+        }
+
+        &-fluid {
+          margin-top: -(spacing.$vertical-fluid);
+        }
+      }
+
+      &--left {
+        &-xs {
+          margin-left: -(spacing.$horizontal-xs);
+        }
+
+        &-sm {
+          margin-left: -(spacing.$horizontal-sm);
+        }
+
+        &-md {
+          margin-left: -(spacing.$horizontal);
+        }
+
+        &-lg {
+          margin-left: -(spacing.$horizontal-lg);
+        }
+
+        &-xl {
+          margin-left: -(spacing.$horizontal-xl);
+        }
+
+        &-fluid {
+          margin-left: -(spacing.$horizontal-fluid);
+        }
+      }
+
+      &--bottom {
+        &-xs {
+          margin-bottom: -(spacing.$vertical-xs);
+        }
+
+        &-sm {
+          margin-bottom: -(spacing.$vertical-sm);
+        }
+
+        &-md {
+          margin-bottom: -(spacing.$vertical);
+        }
+
+        &-lg {
+          margin-bottom: -(spacing.$vertical-lg);
+        }
+
+        &-xl {
+          margin-bottom: -(spacing.$vertical-xl);
+        }
+
+        &-fluid {
+          margin-bottom: -(spacing.$vertical-fluid);
+        }
+      }
+
+      &--right {
+        &-xs {
+          margin-right: -(spacing.$horizontal-xs);
+        }
+
+        &-sm {
+          margin-right: -(spacing.$horizontal-sm);
+        }
+
+        &-md {
+          margin-right: -(spacing.$horizontal);
+        }
+
+        &-lg {
+          margin-right: -(spacing.$horizontal-lg);
+        }
+
+        &-xl {
+          margin-right: -(spacing.$horizontal-xl);
+        }
+
+        &-right {
+          margin-left: -(spacing.$horizontal-fluid);
+        }
+      }
+    }
+  }
+  /* stylelint-enable max-nesting-depth */
+}

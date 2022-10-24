@@ -1,0 +1,9 @@
+@use '../../../styles/mixins/list';
+
+.list {
+  @include list.default;
+
+  &__item {
+    @include list.item;
+  }
+}

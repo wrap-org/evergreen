@@ -1,45 +1,42 @@
-// import React, { lazy } from 'react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
 import styles from './Icon.module.scss';
 
 interface IconProps {
-  // icon: string;
+  icon: string;
   color?: string;
   title?: string;
 }
 
 // Has to be a PureComponent so we get the shallow prop comparison
 // and runs shouldComponentUpdate otherwise the icon flashes when state changes
-class Icon extends React.PureComponent<IconProps> {
-  render() {
-    const {
-      // icon,
-      color,
-      title,
-    } = this.props;
+function Icon({
+  icon,
+  color,
+  title,
+}: IconProps) {
+  const [IconSVG, setIcon] = useState(null);
+  useEffect(() => {
+    const fetchIcon = async () => {
+      const dynamicIcon = await import(`!!@svgr/webpack!mono-icons/svg/${icon}.svg`);
+      setIcon(dynamicIcon.default);
+    };
 
-    // const IconSVG =
-    // lazy(() =>
-    // import(
-    //  `!!@svgr/webpack?{
-    // dimensions: false, svgProps: { viewBox: '0 0 24 24' }
-    // }!mono-icons/svg/${icon}.svg`)
-    // );
+    fetchIcon();
+  }, [icon]);
 
-    return (
-      <span
-        className={classNames(styles.icon, {
-          [styles[`icon--${color}`]]: color,
-        })}
-        title={title}
-        aria-hidden={!title}
-      >
-        {/* <IconSVG /> */}
-      </span>
-    );
-  }
+  return (
+    <span
+      className={classNames(styles.icon, {
+        [styles[`icon--${color}`]]: color,
+      })}
+      title={title}
+      aria-hidden={!title}
+    >
+      {IconSVG}
+    </span>
+  );
 }
 
 export default Icon;

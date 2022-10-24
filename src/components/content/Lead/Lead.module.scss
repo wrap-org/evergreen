@@ -1,0 +1,6 @@
+@use '../../../styles/variables/font';
+
+.lead {
+  font-size: font.$size-xl;
+  font-weight: font.$weight-base;
+}

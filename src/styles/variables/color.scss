@@ -12,19 +12,46 @@ $blue-2: #2d9cdb;
 $grey-light: #eceff2;
 
 $yellow: #f3ce36;
-
 $orange: #f2994a;
+$purple: #5a62a6;
 
 $green: #228524;
 $green-3: #6fcf97;
 
 $maroon: #860e4a;
+$magenta: #d12767;
 
 $red: #eb5757;
 
 $body: $blue-dark;
 $background: $grey-light;
+$accent: $yellow;
 $link: $blue;
 
 $positive: $green;
 $negative: $maroon;
+
+$colors: (
+  'white': $white,
+  'blue-lightest': $blue-lightest,
+  'blue-light': $blue-light,
+  'blue': $blue,
+  'blue-dark': $blue-dark,
+  'blue-darkest': $blue-darkest,
+  'blue-2': $blue-2,
+  'grey-light': $grey-light,
+  'yellow': $yellow,
+  'orange': $orange,
+  'purple': $purple,
+  'green': $green,
+  'green-3': $green-3,
+  'maroon': $maroon,
+  'magenta': $magenta,
+  'red': $red,
+  'body': $body,
+  'background': $background,
+  'accent': $accent,
+  'link': $link,
+  'positive': $positive,
+  'negative': $negative
+);

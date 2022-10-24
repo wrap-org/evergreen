@@ -3,10 +3,8 @@
 @use '../variables/input';
 @use '../variables/spacing';
 @use '../variables/transition';
-@use './moderation';
 
 @mixin input() {
-  @include moderation.status;
   background: input.$background;
   border: 1px solid input.$border;
   border-radius: input.$border-radius;

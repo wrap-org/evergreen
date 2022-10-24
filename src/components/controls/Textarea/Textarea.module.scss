@@ -1,0 +1,17 @@
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/input';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/mixins/forms';
+
+.textarea {
+  @include forms.input;
+
+  &__input {
+    @include forms.ninja-input;
+    @include forms.input-padding;
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+}

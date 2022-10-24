@@ -1,6 +1,8 @@
 @use '../variables/color';
 @use '../variables/font';
 @use '../variables/spacing';
+@use '../variables/skin';
+@use '../mixins/title';
 
 body {
   font-family: font.$family;
@@ -13,16 +15,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: color.$blue-darkest;
-  letter-spacing: -0.025em;
-  line-height: font.$line-height-sm;
-  margin-bottom: spacing.$vertical-xs;
-  margin-top: 0;
-
-  b,
-  strong {
-    font-weight: font.$weight-black;
-  }
+  @include title.title;
 }
 
 h1 {
@@ -53,7 +46,7 @@ p {
 }
 
 a {
-  color: color.$link;
+  color: skin.$link-color;
   text-decoration: none;
 }
 

@@ -1,0 +1,17 @@
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+
+.help-text {
+  color: color.$blue-dark;
+  font-size: font.$size-sm;
+  padding-top: spacing.$vertical-sm;
+
+  &--positive {
+    color: color.$positive;
+  }
+
+  &--negative {
+    color: color.$negative;
+  }
+}

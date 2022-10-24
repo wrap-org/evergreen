@@ -1,0 +1,59 @@
+@use '../variables/color';
+
+:root {
+  --skin-background: #{color.$white};
+  --skin-background-muted: #{color.$blue-lightest};
+  --skin-border-color: #{color.$blue-light};
+  --skin-color: #{color.$body};
+  --skin-heading-color: #{color.$blue-darkest};
+  --skin-link-color: #{color.$link};
+
+  --skin-background-light: #{color.$white};
+  --skin-background-muted-light: #{color.$blue-lightest};
+  --skin-border-color-light: #{color.$blue-light};
+  --skin-color-light: #{color.$body};
+  --skin-heading-color-light: #{color.$blue-darkest};
+  --skin-link-color-light: #{color.$link};
+
+  --skin-background-medium: #{color.$grey-light};
+  --skin-background-muted-medium: #{color.$blue-lightest};
+  --skin-border-color-medium: #{color.$blue-light};
+  --skin-color-medium: #{color.$body};
+  --skin-heading-color-medium: #{color.$blue-darkest};
+  --skin-link-color-medium: #{color.$link};
+
+  --skin-background-dark: #{color.$blue-darkest};
+  --skin-background-muted-dark: #{color.$blue-lightest};
+  --skin-border-color-dark: #{color.$blue-light};
+  --skin-color-dark: #{color.$white};
+  --skin-heading-color-dark: #{color.$white};
+  --skin-link-color-dark: #{color.$white};
+
+  --skin-background-neutral: #{color.$blue};
+  --skin-background-muted-neutral: #{color.$blue-lightest};
+  --skin-border-color-neutral: #{color.$blue};
+  --skin-color-neutral: #{color.$white};
+  --skin-heading-color-neutral: #{color.$white};
+  --skin-link-color-neutral: #{color.$white};
+
+  --skin-background-positive: #{color.$green};
+  --skin-background-muted-positive: #{color.$blue-lightest};
+  --skin-border-color-positive: #{color.$green};
+  --skin-color-positive: #{color.$white};
+  --skin-heading-color-positive: #{color.$white};
+  --skin-link-color-positive: #{color.$white};
+
+  --skin-background-negative: #{color.$maroon};
+  --skin-background-muted-negative: #{color.$blue-lightest};
+  --skin-border-color-negative: #{color.$maroon};
+  --skin-color-negative: #{color.$white};
+  --skin-heading-color-negative: #{color.$white};
+  --skin-link-color-negative: #{color.$white};
+
+  --skin-background-attention: #{color.$yellow};
+  --skin-background-muted-attention: #{color.$blue-lightest};
+  --skin-border-color-attention: #{color.$yellow};
+  --skin-color-attention: #{color.$blue-darkest};
+  --skin-heading-color-attention: #{color.$blue-darkest};
+  --skin-link-color-attention: #{color.$blue};
+}

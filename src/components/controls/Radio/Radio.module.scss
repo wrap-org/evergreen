@@ -1,0 +1,46 @@
+@use '../../../styles/variables/transition';
+@use '../../../styles/mixins/forms';
+@use '../../../styles/mixins/screen-reader';
+
+$radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
+
+.radio {
+  @include forms.input;
+  @include forms.input-padding;
+  cursor: pointer;
+
+  &--checked {
+    @include forms.checked;
+  }
+
+  &__input {
+    @include screen-reader.sr-only;
+  }
+
+  &__indicator {
+    @include forms.indicator;
+    border-radius: 100%;
+  }
+
+  &__dot {
+    background: currentColor;
+    border-radius: 100%;
+    display: block;
+    height: $radio-dot-size;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity transition.$duration transition.$timing, transform transition.$duration-boing transition.$timing-boing;
+    width: $radio-dot-size;
+
+    .radio--checked & {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

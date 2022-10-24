@@ -1,0 +1,8 @@
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/skin';
+
+.section {
+  background: skin.$background;
+  color: skin.$color;
+  overflow: hidden;
+}
