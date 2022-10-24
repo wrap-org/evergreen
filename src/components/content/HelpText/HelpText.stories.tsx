@@ -16,7 +16,7 @@ export default {
       rules: [
         {
           // Temporary disable
-          id: 'label',
+          id: 'color-contrast',
           enabled: false,
         },
       ],
