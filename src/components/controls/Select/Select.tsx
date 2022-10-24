@@ -31,7 +31,7 @@ const Select = React.forwardRef((
       [styles[`select--${status}`]]: status,
     })}
   >
-    <select className={styles.select__select} ref={ref} disabled={disabled} {...props}>
+    <select className={styles.select__select} disabled={disabled} {...props} ref={ref}>
       {children}
     </select>
     <div className={styles.select__affix}>

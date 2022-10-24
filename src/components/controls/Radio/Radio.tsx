@@ -46,7 +46,6 @@ const Radio = React.forwardRef((
       type="radio"
       className={styles.radio__input}
       checked={checked}
-      ref={forwardedRef}
       onChange={(event) => {
         if (onRadioChange) {
           onRadioChange(event);
@@ -56,6 +55,7 @@ const Radio = React.forwardRef((
         }
       }}
       {...props}
+      ref={forwardedRef}
     />
     <span className={styles.radio__indicator}>
       <span className={styles.radio__dot} />

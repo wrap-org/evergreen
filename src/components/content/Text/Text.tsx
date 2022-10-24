@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import { Sizes, Weights } from '@/types/font.type';
-import { Colors } from '@/types/colors.type';
+import { Sizes, Weights } from '../../../types/font.type';
+import { Colors } from '../../../types/colors.type';
 
 import styles from './Text.module.scss';
 

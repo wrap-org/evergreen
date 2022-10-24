@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 import Icon from 'components/content/Icon/Icon';
 
-import CardHeader from './Header';
-import CardBody from './Body';
+import CardHeader from './CardHeader';
+import CardBody from './CardBody';
 
 import styles from './Card.module.scss';
 

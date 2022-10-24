@@ -26,10 +26,10 @@ const Textarea = React.forwardRef((
     })}
   >
     <TextareaAutosize
-      ref={ref}
       className={styles.textarea__input}
       disabled={disabled}
       {...props}
+      ref={ref}
     />
   </div>
 ));

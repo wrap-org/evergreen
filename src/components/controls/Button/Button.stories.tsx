@@ -36,7 +36,7 @@ export function Types() {
       <Button type="negative">Button</Button>
       {' '}
       <Button type="primary" icon>
-        <Icon title="Moderate" />
+        <Icon icon="edit" title="Moderate" />
       </Button>
     </>
   );

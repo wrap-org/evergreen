@@ -84,10 +84,10 @@ const DatePicker = React.forwardRef((
         parseDate={parseDate}
         placeholder={placeholder || (format || '').toUpperCase()}
         inputProps={{
-          ref,
           disabled,
           className: styles['date-picker__input'],
           ...inputProps,
+          ref,
         }}
         dayPickerProps={dayPickerProps}
       />
