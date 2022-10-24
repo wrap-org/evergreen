@@ -11,6 +11,17 @@ import HelpText from './HelpText';
 export default {
   title: 'Content/Help text',
   component: HelpText,
+  a11y: {
+    config: {
+      rules: [
+        {
+          // Temporary disable
+          id: 'label',
+          enabled: false,
+        },
+      ],
+    },
+  },
 } as Meta;
 
 export const Default = () => (

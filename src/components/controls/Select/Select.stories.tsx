@@ -15,6 +15,11 @@ export default {
             id: 'label',
             enabled: false,
           },
+          {
+            // Temporary disable
+            id: 'select-name',
+            enabled: false,
+          },
         ],
       },
     },
