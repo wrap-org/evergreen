@@ -6,6 +6,19 @@ import Text, { TextProps } from './Text';
 export default {
   title: 'Content/Text',
   component: Text,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export const Sizes = () => {

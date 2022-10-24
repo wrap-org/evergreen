@@ -6,6 +6,19 @@ import Textarea from './Textarea';
 export default {
   title: 'Controls/Textarea',
   component: Textarea,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'label',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export function Default() {

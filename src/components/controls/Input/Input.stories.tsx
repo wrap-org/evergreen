@@ -6,6 +6,19 @@ import Input from './Input';
 export default {
   title: 'Controls/Input',
   component: Input,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'label',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export function Default() {

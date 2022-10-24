@@ -72,6 +72,7 @@ const DatePicker = React.forwardRef((
         onClick={() => {
           ref.current?.focus();
         }}
+        aria-label="Choose a date"
       >
         <Icon icon="calendar" />
       </button>
