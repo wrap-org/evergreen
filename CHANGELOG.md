@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/etchteam/mobius/compare/v1.1.1...v1.2.0) (2022-10-24)
+
+
+### Features
+
+* add initial components ([2433f54](https://github.com/etchteam/mobius/commit/2433f54b480c974af7ffdf8eecac2893f7c397d3))
+
+
+### Bug Fixes
+
+* the icon component imports ([779da72](https://github.com/etchteam/mobius/commit/779da72a6f9e6c2732d22c96c8bd9b245e04a340))
+
 ### [1.1.1](https://github.com/etchteam/mobius/compare/v1.1.0...v1.1.1) (2022-10-20)
 
 
