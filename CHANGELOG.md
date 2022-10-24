@@ -1,3 +1,10 @@
+### [1.2.2](https://github.com/etchteam/mobius/compare/v1.2.1...v1.2.2) (2022-10-24)
+
+
+### Bug Fixes
+
+* actually run the build on publish ([2b5ad45](https://github.com/etchteam/mobius/commit/2b5ad45087f3f7db61541fba88a2b1568ba46792))
+
 ### [1.2.1](https://github.com/etchteam/mobius/compare/v1.2.0...v1.2.1) (2022-10-24)
 
 
