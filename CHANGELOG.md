@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/etchteam/mobius/compare/v1.2.0...v1.2.1) (2022-10-24)
+
+
+### Bug Fixes
+
+* the build ([e82ef7f](https://github.com/etchteam/mobius/commit/e82ef7fcb1d9e59fa607b58d8d4a77bd440707a8))
+
 ## [1.2.0](https://github.com/etchteam/mobius/compare/v1.1.1...v1.2.0) (2022-10-24)
 
 
