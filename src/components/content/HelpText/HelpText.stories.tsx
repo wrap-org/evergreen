@@ -11,15 +11,17 @@ import HelpText from './HelpText';
 export default {
   title: 'Content/Help text',
   component: HelpText,
-  a11y: {
-    config: {
-      rules: [
-        {
-          // Temporary disable
-          id: 'color-contrast',
-          enabled: false,
-        },
-      ],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 } as Meta;
