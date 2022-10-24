@@ -15,7 +15,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components'),
       lib: path.resolve(__dirname, 'src/lib'),
     },
-    extensions: ['.ts', '.tsx', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: 'tsconfig.build.json',

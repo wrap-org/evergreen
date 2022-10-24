@@ -57,10 +57,6 @@ export const Colors = () => {
     'link',
     'positive',
     'negative',
-    'dry-stream',
-    'residual-stream',
-    'food-stream',
-    'garden-stream',
   ];
 
   return (

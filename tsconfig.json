@@ -16,6 +16,7 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "noImplicitAny": false,
+    "allowJs": true,
     "paths": {
       "components/*": [
         "./src/components/*"

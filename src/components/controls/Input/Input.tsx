@@ -43,7 +43,7 @@ const Input = React.forwardRef((
         {prefix}
       </div>
     )}
-    <input ref={ref} className={styles.input__input} disabled={disabled} {...props} />
+    <input className={styles.input__input} disabled={disabled} {...props} ref={ref} />
   </div>
 ));
 

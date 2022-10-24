@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AppHeader from './Header';
-import AppMain from './Main';
-import AppFooter from './Footer';
+import AppHeader from './AppHeader';
+import AppMain from './AppMain';
+import AppFooter from './AppFooter';
 
 import styles from './App.module.scss';
 

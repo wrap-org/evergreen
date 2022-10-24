@@ -9,8 +9,8 @@ const Title = ({
   size,
 }: {
   children: React.ReactNode;
-  as: string;
-  size: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+  as?: string;
+  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 }) => {
   const CustomTag = as as keyof JSX.IntrinsicElements;
 

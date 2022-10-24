@@ -18,7 +18,7 @@ interface CheckboxProps extends BaseInputProps {
 
 const Checkbox = React.forwardRef((
   {
-    defaultChecked,
+    defaultChecked = false,
     forceChecked,
     type,
     children,
@@ -56,7 +56,6 @@ const Checkbox = React.forwardRef((
         type="checkbox"
         className={styles.checkbox__input}
         checked={checked}
-        ref={combinedRef}
         onChange={(event) => {
           setChecked(event.target.checked);
           if (onChange) {
@@ -64,6 +63,7 @@ const Checkbox = React.forwardRef((
           }
         }}
         {...props}
+        ref={combinedRef}
       />
       <span className={styles.checkbox__indicator}>
         <span className={styles.checkbox__check}>

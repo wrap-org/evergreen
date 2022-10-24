@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Item from './Item';
+import Item from './GridItem';
 
 import styles from './Grid.module.scss';
 
