@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-# Installing Mobius
+# Install
 
 ```bash
 npm install --save @etchteam/mobius
@@ -12,9 +12,15 @@ npm install --save @etchteam/mobius
 
 # Usage
 
+Install the global CSS in your main app file;
+
+```js
+import '@etchteam/mobius/src/styles/main.scss';
+```
+
 ```jsx
 import React from 'react';
-import { Button } from 'mobius';
+import { Button } from '@etchteam/mobius';
 
 const MyComponent = () => (
   <Button

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './Grid.module.scss';
 
-interface ItemProps {
+export interface ItemProps {
   children?: React.ReactNode;
   grow?: boolean;
   shrink?: boolean;

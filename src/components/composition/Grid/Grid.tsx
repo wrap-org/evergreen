@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import Item from './GridItem';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Item, { ItemProps } from './GridItem';
 
 import styles from './Grid.module.scss';
 
