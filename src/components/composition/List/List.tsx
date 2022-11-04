@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Item from './ListItem';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Item, { ItemProps } from './ListItem';
 
 import styles from './List.module.scss';
 

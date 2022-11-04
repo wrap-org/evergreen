@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './List.module.scss';
 
-interface ItemProps {
+export interface ItemProps {
   children: React.ReactNode;
   icon?: React.ReactNode;
   [index: string]: any;
