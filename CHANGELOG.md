@@ -1,3 +1,17 @@
+## [1.3.0](https://github.com/etchteam/mobius/compare/v1.2.2...v1.3.0) (2022-11-04)
+
+
+### Features
+
+* install sass-loader ([2e85cf5](https://github.com/etchteam/mobius/commit/2e85cf54e5757ae4c9ca0c85efed5116c4690a10))
+* remove datepicker ([06cfeeb](https://github.com/etchteam/mobius/commit/06cfeeb5503ec7c7624020a2edf2a4d3bb851e70))
+* use rollup to build the lib ([e6db0e0](https://github.com/etchteam/mobius/commit/e6db0e07d29c4ec6336125ba436d4b60b37c24e1))
+
+
+### Bug Fixes
+
+* remove day picker ([3d39af2](https://github.com/etchteam/mobius/commit/3d39af2a2264d06ab64a8d521e0800ef00a4191d))
+
 ### [1.2.2](https://github.com/etchteam/mobius/compare/v1.2.1...v1.2.2) (2022-10-24)
 
 
