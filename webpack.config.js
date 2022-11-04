@@ -1,5 +1,6 @@
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
@@ -9,6 +10,8 @@ module.exports = {
     library: 'mobius',
     libraryTarget: 'umd',
     clean: true,
+    globalObject: 'this',
+    publicPath: '',
   },
   resolve: {
     alias: {
@@ -20,6 +23,7 @@ module.exports = {
       new TsconfigPathsPlugin({
         configFile: 'tsconfig.build.json',
       }),
+      new MiniCssExtractPlugin(),
     ],
   },
   module: {
@@ -35,7 +39,7 @@ module.exports = {
       {
         test: /\.module\.scss$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
