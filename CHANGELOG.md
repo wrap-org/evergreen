@@ -1,3 +1,10 @@
+### [2.0.1](https://github.com/etchteam/mobius/compare/v2.0.0...v2.0.1) (2022-11-17)
+
+
+### Bug Fixes
+
+* make output file same name as the type file ([#23](https://github.com/etchteam/mobius/issues/23)) ([c576ff9](https://github.com/etchteam/mobius/commit/c576ff9d991920ab061805aa712417d9be9b868d))
+
 ## [2.0.0](https://github.com/etchteam/mobius/compare/v1.3.0...v2.0.0) (2022-11-17)
 
 
