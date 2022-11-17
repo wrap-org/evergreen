@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/etchteam/mobius/compare/v1.3.0...v2.0.0) (2022-11-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* support suffix in input and remove icon prop (#21)
+
+### Features
+
+* support suffix in input and remove icon prop ([#21](https://github.com/etchteam/mobius/issues/21)) ([f3ab49a](https://github.com/etchteam/mobius/commit/f3ab49a4d88b7a3ecd03ecb1b30631706db6030b))
+
 ## [1.3.0](https://github.com/etchteam/mobius/compare/v1.2.2...v1.3.0) (2022-11-04)
 
 
