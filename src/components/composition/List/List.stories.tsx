@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import Icon from 'components/content/Icon/Icon';
 
@@ -11,19 +11,21 @@ export default {
   subcomponents: {
     ListItem: List.Item,
   },
-} as Meta;
+} as ComponentMeta<typeof List>;
 
-export function Default() {
-  return (
-    <List>
-      <List.Item>List Item</List.Item>
+const Template: ComponentStory<typeof List> = (args) => (
+  <List {...args}>
+    {[1, 2, 3, 4, 5, 6].map((item) => (
       <List.Item
-        icon={<Icon icon="home" />}
+        key={item}
+        icon={<Icon icon="favorite" />}
       >
         Icon List Item
       </List.Item>
-    </List>
-  );
-}
+    ))}
+  </List>
+);
+
+export const Default = Template.bind({});
 
 Default.storyName = 'List';

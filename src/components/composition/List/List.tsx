@@ -1,15 +1,30 @@
 import React from 'react';
+import cx from 'classnames';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Item, { ItemProps } from './ListItem';
+import Item from './ListItem';
 
 import styles from './List.module.scss';
 
-const List = ({ children }: { children: React.ReactNode; }) => (
-  <ul className={styles.list}>
-    {children}
-  </ul>
-);
+const List = ({
+  children,
+  spacing = 'md',
+  as = 'ul',
+}: {
+  children: React.ReactNode;
+  spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
+  as?: string;
+}) => {
+  const CustomTag = as as keyof JSX.IntrinsicElements;
+  return (
+    <CustomTag
+      className={cx(styles.list, {
+        [styles[`list--spacing-${spacing}`]]: spacing,
+      })}
+    >
+      {children}
+    </CustomTag>
+  );
+};
 
 List.Item = Item;
 
