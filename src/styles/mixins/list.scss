@@ -1,14 +1,15 @@
 @use '../variables/spacing';
 
 @mixin default() {
+  --list-spacing: #{spacing.$vertical-xs};
   list-style: none;
-  margin: (-#{spacing.$vertical-xs}) 0;
+  margin: calc(var(--list-spacing) * -1) 0;
   padding: 0;
 }
 
 @mixin item() {
   display: flex;
-  padding: #{spacing.$vertical-xs} 0;
+  padding: var(--list-spacing) 0;
 
   &-icon {
     margin-right: spacing.$horizontal-sm;

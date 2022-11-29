@@ -1,3 +1,4 @@
+@use '../../../styles//variables/spacing';
 @use '../../../styles/mixins/list';
 
 .list {
@@ -5,5 +6,32 @@
 
   &__item {
     @include list.item;
+  }
+
+  &--spacing {
+    &-none {
+      --list-spacing: 0;
+    }
+
+    &-xs,
+    &-default {
+      --list-spacing: #{spacing.$vertical-xs};
+    }
+
+    &-sm {
+      --list-spacing: #{spacing.$vertical-sm};
+    }
+
+    &-md {
+      --list-spacing: #{spacing.$vertical-md};
+    }
+
+    &-lg {
+      --list-spacing: #{spacing.$vertical-lg};
+    }
+
+    &-xl {
+      --list-spacing: #{spacing.$vertical-xl};
+    }
   }
 }
