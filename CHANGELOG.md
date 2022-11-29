@@ -1,3 +1,10 @@
+## [4.5.0](https://github.com/etchteam/mobius/compare/v4.4.0...v4.5.0) (2022-11-29)
+
+
+### Features
+
+* list spacing prop ([7afaae0](https://github.com/etchteam/mobius/commit/7afaae024aec6c9ed45dbee5fd279f29e124b1d6))
+
 ## [4.4.0](https://github.com/etchteam/mobius/compare/v4.3.2...v4.4.0) (2022-11-25)
 
 
