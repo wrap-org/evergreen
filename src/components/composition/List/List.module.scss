@@ -13,8 +13,7 @@
       --list-spacing: 0;
     }
 
-    &-xs,
-    &-default {
+    &-xs {
       --list-spacing: #{spacing.$vertical-xs};
     }
 

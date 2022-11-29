@@ -7,11 +7,11 @@ import styles from './List.module.scss';
 
 const List = ({
   children,
-  spacing,
+  spacing = 'md',
   as = 'ul',
 }: {
   children: React.ReactNode;
-  spacing?: 'default' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
+  spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
   as?: string;
 }) => {
   const CustomTag = as as keyof JSX.IntrinsicElements;
