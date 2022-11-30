@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 
-import { BaseInputProps } from 'lib/types';
 import { defaultInputProps } from 'lib/default-props';
 import useCombinedRefs from 'lib/hooks/combined-refs';
 
 import Icon from 'components/content/Icon/Icon';
+import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Checkbox.module.scss';
 
-interface CheckboxProps extends BaseInputProps {
+interface CheckboxProps extends FormControl {
   defaultChecked?: boolean;
   forceChecked?: boolean;
   type?: 'default' | 'list' | 'input';

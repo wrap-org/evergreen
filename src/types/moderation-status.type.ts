@@ -1,0 +1,9 @@
+export type ModerationStatus =
+  'PENDING' |
+  'LIVE' |
+  'REJECTED' |
+  'HISTORICAL' |
+  'HISTORICAL_PENDING' |
+  'REMOVAL_PENDING' |
+  'REMOVAL_REJECTED' |
+  'REMOVAL_APPROVED';

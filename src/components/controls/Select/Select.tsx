@@ -1,14 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseInputProps } from 'lib/types';
 import { defaultInputProps } from 'lib/default-props';
-
 import Icon from 'components/content/Icon/Icon';
+import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Select.module.scss';
 
-interface SelectProps extends BaseInputProps {
+interface SelectProps extends FormControl {
   children: React.ReactNode;
 }
 

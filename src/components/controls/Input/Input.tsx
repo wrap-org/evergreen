@@ -1,14 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseInputProps } from 'lib/types';
 import { defaultInputProps } from 'lib/default-props';
+import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Input.module.scss';
 
-interface InputProps extends BaseInputProps {
+interface InputProps extends FormControl {
   icon?: string;
   prefix?: string;
+  suffix?: string;
+  [key: string]: any;
 }
 
 const Input = React.forwardRef((
