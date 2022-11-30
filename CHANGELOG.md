@@ -1,3 +1,10 @@
+### [4.5.1](https://github.com/etchteam/mobius/compare/v4.5.0...v4.5.1) (2022-11-30)
+
+
+### Bug Fixes
+
+* input types ([66a754e](https://github.com/etchteam/mobius/commit/66a754e2487d3b89df8131a8c784eae855d3c26c))
+
 ## [4.5.0](https://github.com/etchteam/mobius/compare/v4.4.0...v4.5.0) (2022-11-29)
 
 
