@@ -1,13 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseInputProps } from 'lib/types';
 import { defaultInputProps } from 'lib/default-props';
-
-import { ChangeHandler } from 'react-hook-form';
+import { FormControl } from '../../../types/form-control.type';
 import styles from './Radio.module.scss';
 
-interface RadioProps extends BaseInputProps {
+interface RadioProps extends FormControl {
   checked?: boolean;
   children: React.ReactNode;
   /**
@@ -16,7 +14,7 @@ interface RadioProps extends BaseInputProps {
    * the onChange event for the last radio in the DOM with the registered name
    * instead of the onChange for this radio!
    */
-  onRadioChange: ChangeHandler;
+  onRadioChange?: Function;
 }
 
 const Radio = React.forwardRef((

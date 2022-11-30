@@ -2,8 +2,8 @@ import React from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import classNames from 'classnames';
 
-import { BaseInputProps } from 'lib/types';
 import { defaultInputProps } from 'lib/default-props';
+import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Textarea.module.scss';
 
@@ -14,7 +14,7 @@ const Textarea = React.forwardRef((
     valid,
     status,
     ...props
-  }: BaseInputProps,
+  }: FormControl,
   ref: any,
 ) => (
   <div
