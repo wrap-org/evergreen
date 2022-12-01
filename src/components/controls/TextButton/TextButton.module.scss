@@ -1,0 +1,52 @@
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/transition';
+
+.text-button {
+  appearance: none;
+  background: none;
+  border: 0 none;
+  color: var(--skin-link-color);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity transition.$duration transition.$timing,
+    color transition.$duration transition.$timing;
+
+  &[disabled] {
+    color: color.$blue-dark;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid color.$blue;
+    outline-offset: spacing.$vertical-sm;
+  }
+
+  &__icon {
+    &--left {
+      margin-right: spacing.$horizontal-xs;
+    }
+
+    &--right {
+      margin-left: spacing.$horizontal-xs;
+    }
+  }
+
+  &--size-sm {
+    font-size: font.$size-sm;
+  }
+
+  &--decorate {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
