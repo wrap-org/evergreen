@@ -9,10 +9,7 @@ pull_request_rules:
         - label!=wontfix
     actions:
       merge:
-        method: squash
-    actions:
-      merge:
-        method: squash
+        method: merge
   - name: Auto-squash when all builds pass and the PR has been approved
     conditions:
       - and:
@@ -23,7 +20,7 @@ pull_request_rules:
         - "#approved-reviews-by>=1"
     actions:
       merge:
-        method: squash
+        method: merge
   - name: Ask an old fart to review the code
     conditions:
       - -closed
