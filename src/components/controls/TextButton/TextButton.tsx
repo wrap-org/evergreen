@@ -9,7 +9,7 @@ interface TextButtonProps {
   children: React.ReactNode;
   icon?: string;
   iconRight?: boolean;
-  size?: 'sm' | 'base';
+  size?: 'sm';
   decorate?: boolean;
   [x:string]: any;
 }
@@ -18,7 +18,7 @@ export default function TextButton({
   icon,
   iconRight,
   children,
-  size = 'base',
+  size,
   decorate,
   ...props
 }: TextButtonProps) {
@@ -27,9 +27,9 @@ export default function TextButton({
       type="button"
       className={classNames(
         styles['text-button'],
-        styles[`text-button--size-${size}`],
         {
           [styles['text-button--decorate']]: decorate,
+          [styles['text-button--size-sm']]: size === 'sm',
         },
       )}
       {...props}
@@ -48,8 +48,3 @@ export default function TextButton({
     </button>
   );
 }
-
-TextButton.defaultProps = {
-  icon: undefined,
-  iconRight: false,
-};
