@@ -6,6 +6,19 @@ import TextButton from './TextButton';
 export default {
   title: 'Controls/Text button',
   component: TextButton,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporarily disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export const Default = () => (
