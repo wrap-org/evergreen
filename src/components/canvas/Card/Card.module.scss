@@ -8,6 +8,7 @@
 .card {
   background: skin.$background;
   border: 1px solid transparent;
+  border-radius: var(--card-border-radius, 0);
   color: skin.$color;
   display: block;
   width: 100%;

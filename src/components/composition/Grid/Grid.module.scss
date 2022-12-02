@@ -92,6 +92,10 @@
     }
   }
 
+  &--full-width {
+    width: 100%;
+  }
+
   &__item {
     flex: 0 0 auto;
     min-width: 0;
