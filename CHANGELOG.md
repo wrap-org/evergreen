@@ -1,3 +1,10 @@
+### [4.6.1](https://github.com/etchteam/mobius/compare/v4.6.0...v4.6.1) (2022-12-02)
+
+
+### Bug Fixes
+
+* remove speech marks ([1e0aaf2](https://github.com/etchteam/mobius/commit/1e0aaf24dd0d06f152b4cf56165f93affd3106a4))
+
 ## [4.6.0](https://github.com/etchteam/mobius/compare/v4.5.1...v4.6.0) (2022-12-02)
 
 
