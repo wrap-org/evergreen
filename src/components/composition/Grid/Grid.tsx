@@ -15,6 +15,7 @@ interface GridProps {
   justify?: string;
   align?: string;
   spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
+  fullWidth: boolean;
 }
 
 const Grid = ({
@@ -27,6 +28,7 @@ const Grid = ({
   insetFluid,
   insetVerticalFluid,
   spacing,
+  fullWidth,
 }: GridProps) => {
   const cx = classNames(styles.grid, {
     [styles['grid--wrap']]: wrap,
@@ -37,6 +39,7 @@ const Grid = ({
     [styles[`grid--justify-${justify}`]]: justify,
     [styles[`grid--align-${align}`]]: align,
     [styles[`grid--spacing-${spacing}`]]: spacing !== 'default',
+    [styles['grid--full-width']]: fullWidth,
   });
 
   return <div className={cx}>{children}</div>;
