@@ -1,3 +1,12 @@
+## [4.6.0](https://github.com/etchteam/mobius/compare/v4.5.1...v4.6.0) (2022-12-02)
+
+
+### Features
+
+* add full width prop to grid fixes [#46](https://github.com/etchteam/mobius/issues/46) ([08d56f0](https://github.com/etchteam/mobius/commit/08d56f05a03914ee2c80a47a4315af94dfe1b165))
+* make card border radius themable fixes [#52](https://github.com/etchteam/mobius/issues/52) ([7a56c5f](https://github.com/etchteam/mobius/commit/7a56c5f85ab78f799a4c44907f511bde184347ee))
+* make headin font weight themeable fixes [#45](https://github.com/etchteam/mobius/issues/45) ([67e3cba](https://github.com/etchteam/mobius/commit/67e3cba0fee50174da3a5e0f699469b828717e58))
+
 ### [4.5.1](https://github.com/etchteam/mobius/compare/v4.5.0...v4.5.1) (2022-11-30)
 
 
