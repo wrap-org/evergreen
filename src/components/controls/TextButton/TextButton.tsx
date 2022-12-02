@@ -3,6 +3,8 @@ import classNames from 'classnames';
 
 import Icon from 'components/content/Icon/Icon';
 
+import { Weights } from 'src/types/font.type';
+
 import styles from './TextButton.module.scss';
 
 interface TextButtonProps {
@@ -11,6 +13,7 @@ interface TextButtonProps {
   iconRight?: boolean;
   size?: 'sm';
   decorate?: boolean;
+  weight?: Weights;
   [x:string]: any;
 }
 
@@ -20,6 +23,7 @@ export default function TextButton({
   children,
   size,
   decorate,
+  weight,
   ...props
 }: TextButtonProps) {
   return (
@@ -28,8 +32,9 @@ export default function TextButton({
       className={classNames(
         styles['text-button'],
         {
-          [styles['text-button--decorate']]: decorate,
           [styles['text-button--size-sm']]: size === 'sm',
+          [styles['text-button--decorate']]: decorate,
+          [styles[`text-button--weight-${weight}`]]: weight,
         },
       )}
       {...props}
