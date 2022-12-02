@@ -1,3 +1,16 @@
+## [4.7.0](https://github.com/etchteam/mobius/compare/v4.6.1...v4.7.0) (2022-12-02)
+
+
+### Features
+
+* text button ([4ef0f9d](https://github.com/etchteam/mobius/commit/4ef0f9dc86ea8f98871aa2d2e659dc00dae17bd1))
+
+
+### Bug Fixes
+
+* temporarily disable a11y color contrast test ([20b32a2](https://github.com/etchteam/mobius/commit/20b32a2a311ae5cab0a863a0575ca61c37b42b42))
+* tidy up ([0db653b](https://github.com/etchteam/mobius/commit/0db653bdec22676ed7ebfe4c4a554c283ec50717))
+
 ### [4.6.1](https://github.com/etchteam/mobius/compare/v4.6.0...v4.6.1) (2022-12-02)
 
 
