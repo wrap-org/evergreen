@@ -1,3 +1,10 @@
+## [4.8.0](https://github.com/etchteam/mobius/compare/v4.7.0...v4.8.0) (2022-12-02)
+
+
+### Features
+
+* text button weights ([e6189d5](https://github.com/etchteam/mobius/commit/e6189d5356af1ed30bd497fcf598e3a47b8c11b8))
+
 ## [4.7.0](https://github.com/etchteam/mobius/compare/v4.6.1...v4.7.0) (2022-12-02)
 
 
