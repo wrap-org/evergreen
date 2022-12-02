@@ -35,6 +35,8 @@ $skins: light, medium, dark, accent, neutral, positive, negative, attention;
   --font-size-h3: 1.5rem;
   --font-size-h4: 1.25rem;
 
+  --font-size-lead: 1.25rem;
+
   --link-font-weight: 700;
 
   --button-border-radius: 1.5rem;
@@ -57,6 +59,8 @@ $skins: light, medium, dark, accent, neutral, positive, negative, attention;
   --input-border: #{color.$duck-egg};
   --input-border-hover: #{color.$duck-egg};
   --input-color: #{color.$blue-darkest};
+
+  --card-border-radius: 0.5rem;
 }
 
 @media (min-width: breakpoint.$tablet) {
