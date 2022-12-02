@@ -49,4 +49,12 @@
       text-decoration: none;
     }
   }
+
+  &--weight {
+    @each $name, $weight in font.$weights {
+      &-#{$name} {
+        font-weight: $weight;
+      }
+    }
+  }
 }
