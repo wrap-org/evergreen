@@ -4,6 +4,7 @@
 
 @mixin title {
   color: skin.$heading-color;
+  font-weight: var(--heading-font-weight, 700);
   letter-spacing: -0.025em;
   line-height: font.$line-height-sm;
   margin-bottom: spacing.$vertical-xs;
