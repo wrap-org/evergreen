@@ -1,3 +1,17 @@
+## [4.9.0](https://github.com/etchteam/mobius/compare/v4.8.0...v4.9.0) (2022-12-06)
+
+
+### Features
+
+* add color types for teep colors ([10c21f2](https://github.com/etchteam/mobius/commit/10c21f217a73db02bb4d89a295a71d2d68e39b28))
+* add teep colors ([6e550dc](https://github.com/etchteam/mobius/commit/6e550dc9c301d38904d997a39971377bcf9e7381))
+
+
+### Bug Fixes
+
+* grid does not need to be full width ([543bf27](https://github.com/etchteam/mobius/commit/543bf27e8c83600b33e0976f8068199291c98c3f))
+* we dont need default props especially when they conflict with default args ([fc07506](https://github.com/etchteam/mobius/commit/fc07506a7cd25ed7757f9f2f10fcf95bffe51b73))
+
 ## [4.8.0](https://github.com/etchteam/mobius/compare/v4.7.0...v4.8.0) (2022-12-02)
 
 
