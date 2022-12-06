@@ -45,17 +45,6 @@ const Grid = ({
   return <div className={cx}>{children}</div>;
 };
 
-Grid.defaultProps = {
-  wrap: undefined,
-  inset: undefined,
-  insetFluid: undefined,
-  insetVerticalFluid: undefined,
-  direction: undefined,
-  justify: undefined,
-  align: undefined,
-  spacing: undefined,
-};
-
 Grid.Item = Item;
 
 export default Grid;
