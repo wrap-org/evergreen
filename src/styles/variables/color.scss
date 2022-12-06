@@ -9,13 +9,19 @@ $blue-dark: #4d6b87;
 $blue-darkest: #05224b;
 $blue-2: #2d9cdb;
 
+$teal: #2e627a;
+
 $grey-light: #eceff2;
 
 $yellow: #f3ce36;
+$yellow-light: #fcf0bf;
+
 $orange: #f2994a;
+
 $purple: #5a62a6;
 
 $green: #228524;
+$green-light: #e2f5e2;
 $green-3: #6fcf97;
 
 $maroon: #860e4a;
@@ -23,7 +29,7 @@ $magenta: #d12767;
 
 $red: #eb5757;
 
-// TBOR
+// Business recycling hub
 $harp: #ebf5f1;
 $duck-egg: #89c1ab;
 $citrus: #c7d56b;
@@ -44,11 +50,14 @@ $colors: (
   'blue-dark': $blue-dark,
   'blue-darkest': $blue-darkest,
   'blue-2': $blue-2,
+  'teal': $teal,
   'grey-light': $grey-light,
   'yellow': $yellow,
+  'yellow-light': $yellow-light,
   'orange': $orange,
   'purple': $purple,
   'green': $green,
+  'green-light': $green-light,
   'green-3': $green-3,
   'maroon': $maroon,
   'magenta': $magenta,
