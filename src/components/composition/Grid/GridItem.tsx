@@ -76,22 +76,4 @@ const Item = ({
   return <div className={cx}>{children}</div>;
 };
 
-Item.defaultProps = {
-  children: null,
-  grow: undefined,
-  shrink: undefined,
-  align: undefined,
-  xs: undefined,
-  sm: undefined,
-  md: undefined,
-  lg: undefined,
-  xl: undefined,
-  xxl: undefined,
-  xxxl: undefined,
-  max: undefined,
-  desktop: undefined,
-  flex: undefined,
-  order: undefined,
-};
-
 export default Item;

@@ -15,7 +15,7 @@ interface GridProps {
   justify?: string;
   align?: string;
   spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
-  fullWidth: boolean;
+  fullWidth?: boolean;
 }
 
 const Grid = ({
@@ -43,17 +43,6 @@ const Grid = ({
   });
 
   return <div className={cx}>{children}</div>;
-};
-
-Grid.defaultProps = {
-  wrap: undefined,
-  inset: undefined,
-  insetFluid: undefined,
-  insetVerticalFluid: undefined,
-  direction: undefined,
-  justify: undefined,
-  align: undefined,
-  spacing: undefined,
 };
 
 Grid.Item = Item;
