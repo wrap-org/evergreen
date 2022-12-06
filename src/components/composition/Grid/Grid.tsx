@@ -15,7 +15,7 @@ interface GridProps {
   justify?: string;
   align?: string;
   spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
-  fullWidth: boolean;
+  fullWidth?: boolean;
 }
 
 const Grid = ({
