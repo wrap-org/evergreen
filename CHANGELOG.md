@@ -1,3 +1,11 @@
+### [5.1.1](https://github.com/etchteam/mobius/compare/v5.1.0...v5.1.1) (2022-12-07)
+
+
+### Bug Fixes
+
+* exports ([3cf5465](https://github.com/etchteam/mobius/commit/3cf54652742c28ff3542665b1d84fd703be045ca))
+* missing semi ([325c3c8](https://github.com/etchteam/mobius/commit/325c3c810fe633b55aa90f478f8cc7ffe031ed76))
+
 ## [5.1.0](https://github.com/etchteam/mobius/compare/v5.0.0...v5.1.0) (2022-12-07)
 
 
