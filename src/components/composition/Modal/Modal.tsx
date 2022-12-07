@@ -7,6 +7,7 @@ import { Breakpoints } from '../../../types/breakpoints.type';
 
 import styles from './Modal.module.scss';
 import Inner from './Inner';
+import Header from './Header';
 
 interface ModalProps extends Pick<A11yDialogProps, 'id' | 'title' | 'role'> {
   children: React.ReactNode;
@@ -39,5 +40,6 @@ const Modal = ({
 };
 
 Modal.Inner = Inner;
+Modal.Header = Header;
 
 export default Modal;
