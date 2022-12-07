@@ -1,3 +1,16 @@
+## [5.1.0](https://github.com/etchteam/mobius/compare/v5.0.0...v5.1.0) (2022-12-07)
+
+
+### Features
+
+* modal header ([5a7e4a0](https://github.com/etchteam/mobius/commit/5a7e4a04ea7bad9e53a2431f8b07d5eb2a7f3190))
+
+
+### Bug Fixes
+
+* merge conflict ([dcc7ad0](https://github.com/etchteam/mobius/commit/dcc7ad01058be67594faf6ab23b0981e0f99235c))
+* rename modal files to work with the export script ([0ee74fc](https://github.com/etchteam/mobius/commit/0ee74fc9753e3dc5d0df313a654ef16c16220430))
+
 ## [5.0.0](https://github.com/etchteam/mobius/compare/v4.9.0...v5.0.0) (2022-12-07)
 
 
