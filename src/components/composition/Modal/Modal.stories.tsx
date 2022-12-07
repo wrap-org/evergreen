@@ -3,7 +3,6 @@ import { Meta } from '@storybook/react/types-6-0';
 
 import Card from 'components/canvas/Card/Card';
 import Button from 'components/controls/Button/Button';
-import Icon from 'components/content/Icon/Icon';
 
 import Modal, { useModalRef } from './Modal';
 import Grid from '../Grid/Grid';
@@ -13,6 +12,7 @@ export default {
   component: Modal,
   subcomponents: {
     ModalInner: Modal.Inner,
+    ModalHeader: Modal.Header,
   },
 } as Meta;
 
@@ -35,20 +35,10 @@ export const Default = () => {
         <Card border>
           <Card.Body>
             <Modal.Inner>
-              <Grid>
-                <Grid.Item shrink grow>
-                  <h3>Modal</h3>
-                </Grid.Item>
-                <Grid.Item>
-                  <Button
-                    aria-label="Close dialog"
-                    onClick={() => modalRef.current?.hide()}
-                    icon
-                  >
-                    <Icon icon="close" />
-                  </Button>
-                </Grid.Item>
-              </Grid>
+              <Modal.Header onClose={() => modalRef.current?.hide()}>
+                <h3>Modal</h3>
+              </Modal.Header>
+
               <p>Content goes here</p>
             </Modal.Inner>
           </Card.Body>

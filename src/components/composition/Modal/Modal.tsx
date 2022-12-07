@@ -6,7 +6,8 @@ import classnames from 'classnames';
 import { Breakpoints } from '../../../types/breakpoints.type';
 
 import styles from './Modal.module.scss';
-import Inner from './Inner';
+import Inner from './ModalInner';
+import Header from './ModalHeader';
 
 export type ModalInstance = A11yDialogInstance;
 
@@ -60,4 +61,4 @@ const Modal = React.forwardRef<any, ModalProps>((
 export const useModalRef = () => React.useRef<ModalInstance>();
 
 // eslint-disable-next-line prefer-object-spread
-export default Object.assign({}, Modal, { Inner });
+export default Object.assign({}, Modal, { Inner, Header });
