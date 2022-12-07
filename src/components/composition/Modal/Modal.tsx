@@ -6,8 +6,8 @@ import classnames from 'classnames';
 import { Breakpoints } from '../../../types/breakpoints.type';
 
 import styles from './Modal.module.scss';
-import Inner from './Inner';
-import Header from './Header';
+import Inner from './ModalInner';
+import Header from './ModalHeader';
 
 interface ModalProps extends Pick<A11yDialogProps, 'id' | 'title' | 'role'> {
   children: React.ReactNode;
