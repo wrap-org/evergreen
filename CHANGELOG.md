@@ -1,3 +1,14 @@
+## [5.0.0](https://github.com/etchteam/mobius/compare/v4.9.0...v5.0.0) (2022-12-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* The modal setupRef function has been removed, pass the ref as a prop instead
+
+### Features
+
+* nicer modal api ([81f7b7b](https://github.com/etchteam/mobius/commit/81f7b7be66c16b6a961342d0b8ab4a1e9ec71559))
+
 ## [4.9.0](https://github.com/etchteam/mobius/compare/v4.8.0...v4.9.0) (2022-12-06)
 
 
