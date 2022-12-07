@@ -1,11 +1,10 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import A11yDialogInstance from 'a11y-dialog';
 
 import Card from 'components/canvas/Card/Card';
 import Button from 'components/controls/Button/Button';
 
-import Modal from './Modal';
+import Modal, { useModalRef } from './Modal';
 import Grid from '../Grid/Grid';
 
 export default {
@@ -18,7 +17,7 @@ export default {
 } as Meta;
 
 export const Default = () => {
-  const modalRef = React.useRef<A11yDialogInstance>();
+  const modalRef = useModalRef();
 
   return (
     <>
@@ -30,9 +29,8 @@ export const Default = () => {
         id="story-modal"
         title="Modal title"
         size="lg"
-        setupRef={(instance) => {
-          modalRef.current = instance;
-        }}
+        ref={modalRef}
+        onModalMounted={(modalInstance) => modalInstance.current?.show()}
       >
         <Card border>
           <Card.Body>
