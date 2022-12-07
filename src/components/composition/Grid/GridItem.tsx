@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './Grid.module.scss';
 
-export interface ItemProps {
+export interface GridItemProps {
   children?: React.ReactNode;
   grow?: boolean;
   shrink?: boolean;
@@ -47,7 +47,7 @@ const Item = ({
   desktop = 0,
   flex = false,
   order = {},
-}: ItemProps) => {
+}: GridItemProps) => {
   const cx = classNames(styles.grid__item, {
     [styles['grid__item--grow']]: grow,
     [styles['grid__item--shrink']]: shrink,
