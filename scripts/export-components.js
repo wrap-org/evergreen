@@ -17,8 +17,9 @@ glob(`${__dirname}/../src/components/**/!(*.stories).tsx`, {}, (err, files) => {
       .split('/')
       .pop()
       .replace('.tsx', '');
+    const pathNoExt = path.replace('.tsx', '');
 
-    return `export { default as ${name} } from './${path.replace('.tsx', '')}';`;
+    return `export { default as ${name} } from './${pathNoExt}';\nexport * from './${pathNoExt}';`;
   });
 
   fs.writeFileSync(
