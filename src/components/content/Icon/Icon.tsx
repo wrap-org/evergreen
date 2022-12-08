@@ -10,7 +10,7 @@ interface IconProps {
   icon: string;
   color?: Colors;
   title?: string;
-  size?: Sizes;
+  size?: Sizes | 'giant';
   /**
    * Whether to use https://icons.mono.company/ or a custom icon from the ./svg
    */

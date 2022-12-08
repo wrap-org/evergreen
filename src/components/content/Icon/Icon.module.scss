@@ -1,6 +1,8 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 
+$icon-size-giant: 3.5em;
+
 .icon {
   display: inline-block;
   height: 1em;
@@ -38,5 +40,9 @@
     &--#{$key} {
       font-size: $size;
     }
+  }
+
+  &--giant {
+    font-size: $icon-size-giant;
   }
 }
