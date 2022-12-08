@@ -11,6 +11,9 @@
   border-radius: var(--card-border-radius, 0);
   color: skin.$color;
   display: block;
+  transition: background-color transition.$duration transition.$timing,
+    color transition.$duration transition.$timing,
+    border-color transition.$duration transition.$timing;
   width: 100%;
 
   &__arrow {
@@ -23,6 +26,7 @@
   &__header {
     border-bottom: 1px solid transparent;
     padding: spacing.$vertical spacing.$horizontal;
+    transition: border-color transition.$duration transition.$timing;
 
     // when there's a card with only a header
     &:last-child {
@@ -70,7 +74,6 @@
     cursor: pointer;
     font-weight: 400;
     text-decoration: none;
-    transition: border-color transition.$duration transition.$timing;
 
     &:hover {
       border-color: skin.$link-color;

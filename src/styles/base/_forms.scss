@@ -7,6 +7,8 @@
   --input-border: #{color.$blue-light};
   --input-border-hover: var(--link-color);
   --input-color: var(--skin-color-light);
+  --input-checked: #{color.$blue};
+  --input-checkradio-border-radius: 0.25rem;
 }
 
 fieldset {
