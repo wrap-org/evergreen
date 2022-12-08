@@ -17,29 +17,35 @@ function importAll(r) {
 }
 
 const icons = importAll(require.context('../../../../node_modules/mono-icons/svg/', true, /\.svg$/));
+const customIconNames = importAll(require.context('./svg/', true, /\.svg$/));
 
-export function Default() {
-  return (
-    <Grid wrap>
-      {icons.map((icon) => (
-        <Grid.Item xs={6} sm={3} md={2} flex>
-          <Card border>
-            <Card.Body>
-              <TextAlign align="center">
-                <Text size="xl">
-                  <Icon icon={icon} />
-                </Text>
-                <br />
-                <Text size="sm">
-                  {icon}
-                </Text>
-              </TextAlign>
-            </Card.Body>
-          </Card>
-        </Grid.Item>
-      ))}
-    </Grid>
-  );
-}
+const Template = ({ iconNames, type }: { iconNames: string[], type?: 'mono' | 'custom' }) => (
+  <Grid wrap>
+    {iconNames.map((icon) => (
+      <Grid.Item xs={6} sm={3} md={2} flex>
+        <Card border>
+          <Card.Body>
+            <TextAlign align="center">
+              <Text size="xl">
+                <Icon icon={icon} type={type} />
+              </Text>
+              <br />
+              <Text size="sm">
+                {icon}
+              </Text>
+            </TextAlign>
+          </Card.Body>
+        </Card>
+      </Grid.Item>
+    ))}
+  </Grid>
+);
 
+export const Default = () => (
+  <Template iconNames={icons} />
+);
 Default.storyName = 'Icon';
+
+export const Custom = () => (
+  <Template iconNames={customIconNames} type="custom" />
+);
