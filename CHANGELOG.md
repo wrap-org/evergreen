@@ -1,3 +1,12 @@
+## [5.2.0](https://github.com/etchteam/mobius/compare/v5.1.1...v5.2.0) (2022-12-08)
+
+
+### Features
+
+* custom icons ([e90278e](https://github.com/etchteam/mobius/commit/e90278e6998f8197eb02612bef203a725fc9cdbe))
+* giant icon size ([695d0eb](https://github.com/etchteam/mobius/commit/695d0ebf87aa4e6965c642e753a309237c577166))
+* icon props ([662f8e7](https://github.com/etchteam/mobius/commit/662f8e79e61a79d400bd5b7ff5ab2731aac1566f))
+
 ### [5.1.1](https://github.com/etchteam/mobius/compare/v5.1.0...v5.1.1) (2022-12-07)
 
 
