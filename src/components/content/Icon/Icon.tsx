@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
+import { customIcons } from 'lib/custom-icons';
 import styles from './Icon.module.scss';
 
 interface IconProps {
@@ -21,7 +22,9 @@ function Icon({
   const [IconSVG, setIcon] = useState(null);
   useEffect(() => {
     const fetchIcon = async () => {
-      const dynamicIcon = await import(`!!@svgr/webpack!mono-icons/svg/${icon}.svg`);
+      const dynamicIcon = icon in customIcons
+        ? await import(`!!@svgr/webpack!../../../assets/icons/${customIcons[icon]}`)
+        : await import(`!!@svgr/webpack!mono-icons/svg/${icon}.svg`);
       setIcon(dynamicIcon.default);
     };
 
