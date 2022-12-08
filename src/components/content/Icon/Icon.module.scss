@@ -27,6 +27,13 @@
     color: color.$yellow;
   }
 
+  &--baseline {
+    svg {
+      position: relative;
+      top: -10%;
+    }
+  }
+
   @each $key, $size in font.$sizes {
     &--#{$key} {
       font-size: $size;

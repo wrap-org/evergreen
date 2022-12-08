@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
-import { customIcons } from 'lib/custom-icons';
+import { Sizes } from '../../../types/font.type';
+import { Colors } from '../../../types/colors.type';
+
 import styles from './Icon.module.scss';
 
 interface IconProps {
   icon: string;
-  color?: string;
+  color?: Colors;
   title?: string;
-  size?: string;
+  size?: Sizes;
+  /**
+   * Whether to use https://icons.mono.company/ or a custom icon from the ./svg
+   */
+  type?: 'mono' | 'custom';
+  /**
+   * Align this icon to the text baseline (default true)
+   */
+  baseline?: boolean;
 }
 
 // Has to be a PureComponent so we get the shallow prop comparison
@@ -18,24 +28,27 @@ function Icon({
   color,
   title,
   size,
+  type = 'mono',
+  baseline = true,
 }: IconProps) {
   const [IconSVG, setIcon] = useState(null);
   useEffect(() => {
     const fetchIcon = async () => {
-      const dynamicIcon = icon in customIcons
-        ? await import(`!!@svgr/webpack!../../../assets/icons/${customIcons[icon]}`)
+      const dynamicIcon = type === 'custom'
+        ? await import(`!!@svgr/webpack!./svg/${icon}.svg`)
         : await import(`!!@svgr/webpack!mono-icons/svg/${icon}.svg`);
       setIcon(dynamicIcon.default);
     };
 
     fetchIcon();
-  }, [icon]);
+  }, [icon, type]);
 
   return (
     <span
       className={classNames(styles.icon, {
         [styles[`icon--${color}`]]: color,
         [styles[`icon--${size}`]]: size,
+        [styles['icon--baseline']]: baseline,
       })}
       title={title}
       aria-hidden={!title}

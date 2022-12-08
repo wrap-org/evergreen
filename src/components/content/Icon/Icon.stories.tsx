@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
-import { customIcons } from 'lib/custom-icons';
 import Grid from 'components/composition/Grid/Grid';
 import TextAlign from 'components/composition/TextAlign/TextAlign';
 import Text from 'components/content/Text/Text';
@@ -18,9 +17,9 @@ function importAll(r) {
 }
 
 const icons = importAll(require.context('../../../../node_modules/mono-icons/svg/', true, /\.svg$/));
-const customIconNames = Object.keys(customIcons);
+const customIconNames = importAll(require.context('./svg/', true, /\.svg$/));
 
-const Template = ({ iconNames }: { iconNames: string[] }) => (
+const Template = ({ iconNames, type }: { iconNames: string[], type?: 'mono' | 'custom' }) => (
   <Grid wrap>
     {iconNames.map((icon) => (
       <Grid.Item xs={6} sm={3} md={2} flex>
@@ -28,7 +27,7 @@ const Template = ({ iconNames }: { iconNames: string[] }) => (
           <Card.Body>
             <TextAlign align="center">
               <Text size="xl">
-                <Icon icon={icon} />
+                <Icon icon={icon} type={type} />
               </Text>
               <br />
               <Text size="sm">
@@ -48,5 +47,5 @@ export const Default = () => (
 Default.storyName = 'Icon';
 
 export const Custom = () => (
-  <Template iconNames={customIconNames} />
+  <Template iconNames={customIconNames} type="custom" />
 );
