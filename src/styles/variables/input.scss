@@ -7,6 +7,9 @@ $border-radius: 0.25em;
 
 $color: var(--input-color);
 
+$checked: var(--input-checked);
+$checkradio-border-radius: var(--input-checkradio-border-radius);
+
 $padding-vertical: spacing.$vertical-sm;
 $padding-horizontal: spacing.$horizontal;
 $padding: $padding-vertical $padding-horizontal;

@@ -16,11 +16,17 @@
   text-decoration: none;
   transition: opacity transition.$duration transition.$timing,
     background transition.$duration transition.$timing,
-    border-color transition.$duration transition.$timing;
+    border-color transition.$duration transition.$timing,
+    filter transition.$duration transition.$timing;
   user-select: none;
 
   &:hover {
+    filter: brightness(0.9) saturate(1.025) contrast(1.5);
     text-decoration: none;
+  }
+
+  &:active {
+    filter: brightness(0.85) saturate(1.025) contrast(1.5);
   }
 }
 

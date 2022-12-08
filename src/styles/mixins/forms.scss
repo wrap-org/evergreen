@@ -1,6 +1,7 @@
 @use '../variables/color';
 @use '../variables/font';
 @use '../variables/input';
+@use '../variables/skin';
 @use '../variables/spacing';
 @use '../variables/transition';
 
@@ -74,7 +75,7 @@
 // Radios/checkboxes
 @mixin checked() {
   background: color.$white;
-  color: color.$blue;
+  color: input.$checked;
 }
 
 @mixin indicator() {
