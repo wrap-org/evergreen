@@ -1,3 +1,13 @@
+## [5.3.0](https://github.com/etchteam/mobius/compare/v5.2.0...v5.3.0) (2022-12-08)
+
+
+### Features
+
+* button hover styles ([9f0563a](https://github.com/etchteam/mobius/commit/9f0563a78270e25cbfe69eefe5479bfd617bfa32))
+* button icon aspect ratio, better button theming ([d698366](https://github.com/etchteam/mobius/commit/d69836679cf47268782cc5304f9104b71b00f36e))
+* themable radio checkbox border radius and indicator selected color ([f729be8](https://github.com/etchteam/mobius/commit/f729be801c7adaea688f797cae0f63bd1ab8fd0b))
+* transition card background and color ([143fbfd](https://github.com/etchteam/mobius/commit/143fbfdc2ee57bc090e0f992adcc8f54dab9ecb6))
+
 ## [5.2.0](https://github.com/etchteam/mobius/compare/v5.1.1...v5.2.0) (2022-12-08)
 
 
