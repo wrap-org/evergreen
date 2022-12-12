@@ -35,7 +35,7 @@ function Icon({
   useEffect(() => {
     const fetchIcon = async () => {
       const dynamicIcon = type === 'custom'
-        ? await import(`!!@svgr/webpack!./svg/${icon}.svg`)
+        ? await import(`!!@svgr/webpack!./custom-icons/${icon}.svg`)
         : await import(`!!@svgr/webpack!mono-icons/svg/${icon}.svg`);
       setIcon(dynamicIcon.default);
     };

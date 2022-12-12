@@ -6,6 +6,7 @@ const babel = require('@rollup/plugin-babel').default;
 const typescript = require('@rollup/plugin-typescript').default;
 const postcss = require('rollup-plugin-postcss');
 const commonjs = require('@rollup/plugin-commonjs');
+const copy = require('rollup-plugin-copy');
 
 // see below for details on the options
 const inputOptions = {
@@ -25,6 +26,12 @@ const inputOptions = {
     }),
     postcss({
       modules: true,
+    }),
+    // Get the custom icons
+    copy({
+      targets: [
+        { src: 'src/components/content/Icon/custom-icons/**/*', dest: 'dist/custom-icons' },
+      ],
     }),
   ],
 };
