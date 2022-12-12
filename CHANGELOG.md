@@ -1,3 +1,11 @@
+### [5.3.1](https://github.com/etchteam/mobius/compare/v5.3.0...v5.3.1) (2022-12-12)
+
+
+### Bug Fixes
+
+* custom icon imports ([75da150](https://github.com/etchteam/mobius/commit/75da150af5dc2b6f26712575bea50fd3bf1818a7))
+* update the docs ref to custom icons folder ([4eac3fc](https://github.com/etchteam/mobius/commit/4eac3fc6f1337be929810b2635293325e2e3e6ad))
+
 ## [5.3.0](https://github.com/etchteam/mobius/compare/v5.2.0...v5.3.0) (2022-12-08)
 
 
