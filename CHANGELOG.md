@@ -1,3 +1,15 @@
+## [5.4.0](https://github.com/etchteam/mobius/compare/v5.3.1...v5.4.0) (2022-12-13)
+
+
+### Features
+
+* color tokens ([c787a05](https://github.com/etchteam/mobius/commit/c787a059634a982cb784658bae6923e39d7a7beb))
+
+
+### Bug Fixes
+
+* custom icons viewbox ([91c9cd3](https://github.com/etchteam/mobius/commit/91c9cd34f0dad24ce0587a290c4582478f71631a))
+
 ### [5.3.1](https://github.com/etchteam/mobius/compare/v5.3.0...v5.3.1) (2022-12-12)
 
 
