@@ -1,3 +1,14 @@
+## [6.0.0](https://github.com/etchteam/mobius/compare/v5.4.1...v6.0.0) (2022-12-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* extract component css to own file
+
+### Features
+
+* extract component css to own file ([9713277](https://github.com/etchteam/mobius/commit/97132778ba53e689c73a84a6944f584fdf829cf5))
+
 ### [5.4.1](https://github.com/etchteam/mobius/compare/v5.4.0...v5.4.1) (2022-12-14)
 
 
