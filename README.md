@@ -20,6 +20,7 @@ Install the global CSS in your main app file;
 
 ```js
 import '@etchteam/mobius/src/styles/main.scss';
+import '@etchteam/mobius/components.css';
 ```
 
 Import a theme file

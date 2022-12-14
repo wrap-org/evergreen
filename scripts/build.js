@@ -26,6 +26,8 @@ const inputOptions = {
     }),
     postcss({
       modules: true,
+      extract: 'components.css',
+      minimize: true,
     }),
     // Get the custom icons
     copy({
