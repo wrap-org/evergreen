@@ -1,0 +1,7 @@
+@use '../styles/variables/font';
+
+:export {
+  @each $name, $size in font.$sizes {
+    #{$name}: $size;
+  }
+}
