@@ -7,7 +7,7 @@
     @each $colorName, $color in container.$colors {
       &.container-svg__lid--colour-#{$colorName},
       &.container-svg__body--colour-#{$colorName} {
-        fill: $colour;
+        fill: $color;
       }
     }
 
