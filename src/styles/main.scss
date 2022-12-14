@@ -3,10 +3,10 @@
 @use 'variables/font';
 @use 'variables/transition';
 
-@import 'base/buttons';
-@import 'base/skins';
-@import 'base/scaffolding';
-@import 'base/typography';
-@import 'base/forms';
+@use 'base/buttons';
+@use 'base/skins';
+@use 'base/scaffolding';
+@use 'base/typography';
+@use 'base/forms';
 
-@import 'vendor/react-collapse';
+@use 'vendor/react-collapse';

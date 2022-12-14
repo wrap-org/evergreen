@@ -1,3 +1,5 @@
+@use '../variables/transition';
+
 .ReactCollapse--collapse {
   transition: height transition.$duration transition.$timing;
 }
