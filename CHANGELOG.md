@@ -1,3 +1,11 @@
+### [5.4.1](https://github.com/etchteam/mobius/compare/v5.4.0...v5.4.1) (2022-12-14)
+
+
+### Bug Fixes
+
+* a11y contrast ([ef1e6bb](https://github.com/etchteam/mobius/commit/ef1e6bb2d497aefc3240fe1ebff04c6fb87812e9))
+* undefined variable ([9cc2b7e](https://github.com/etchteam/mobius/commit/9cc2b7e5b4af833fe200466cbc94dc8280be9623))
+
 ## [5.4.0](https://github.com/etchteam/mobius/compare/v5.3.1...v5.4.0) (2022-12-13)
 
 
