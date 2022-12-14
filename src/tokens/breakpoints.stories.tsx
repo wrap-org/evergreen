@@ -16,7 +16,7 @@ export const Breakpoints = () => (
         <div
           style={{
             minHeight: '1rem',
-            background: 'rgba(0, 0 ,0 , 0.1)',
+            background: 'rgba(0, 0 ,0 , 0.05)',
             width,
             padding: '.5rem',
           }}
