@@ -1,3 +1,18 @@
+## [6.1.0](https://github.com/etchteam/mobius/compare/v6.0.0...v6.1.0) (2022-12-16)
+
+
+### Features
+
+* better id name ([d563366](https://github.com/etchteam/mobius/commit/d563366066428c019469b6df046e1c3ec2bd0c30))
+* collapse a11y ([d8b3736](https://github.com/etchteam/mobius/commit/d8b37360744f2262b3977367babbefaad646b5dd))
+* faq ([4826bd3](https://github.com/etchteam/mobius/commit/4826bd384e65be42cb034859ff8bf1813554e493))
+* migrate collapse from tbor ([add12b4](https://github.com/etchteam/mobius/commit/add12b429fc99528275a3c509306ea7918d15dd2))
+
+
+### Bug Fixes
+
+* unnecessary arrow fn ([946f3c7](https://github.com/etchteam/mobius/commit/946f3c7b8cbaed72ff251eef898e1dedd6e36477))
+
 ## [6.0.0](https://github.com/etchteam/mobius/compare/v5.4.1...v6.0.0) (2022-12-14)
 
 
