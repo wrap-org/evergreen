@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Collapse as ReactCollapse } from 'react-collapse';
+import uniqueId from 'lodash/uniqueId';
+import cx from 'classnames';
+
 import Icon from 'components/content/Icon/Icon';
 import Grid from 'components/composition/Grid/Grid';
-import { Collapse as ReactCollapse } from 'react-collapse';
-import cx from 'classnames';
 
 import styles from './Collapse.module.scss';
 
@@ -21,6 +23,7 @@ const Collapse = ({
     setOpen(!open);
   };
 
+  const controlId = `${uniqueId()}`;
   const direction = align === 'right' ? 'row-reverse' : 'row';
 
   return (
@@ -33,6 +36,8 @@ const Collapse = ({
         type="button"
         onClick={toggle}
         className={styles.collapse__button}
+        aria-controls={controlId}
+        aria-expanded={open}
       >
         <Grid direction={direction} spacing="sm">
           <Grid.Item>
@@ -44,7 +49,7 @@ const Collapse = ({
         </Grid>
       </button>
       <ReactCollapse isOpened={open}>
-        <div>{children}</div>
+        <div id={controlId}>{children}</div>
       </ReactCollapse>
     </div>
   );
