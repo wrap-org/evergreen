@@ -8,19 +8,24 @@ import Grid from 'components/composition/Grid/Grid';
 
 import styles from './Collapse.module.scss';
 
+interface CollapseProps {
+  children: React.ReactNode;
+  headerLabel: React.ReactNode;
+  align?: 'right';
+  onToggle?: (open?: boolean) => void;
+}
+
 const Collapse = ({
   children,
   headerLabel,
   align,
-}: {
-  children: React.ReactNode;
-  headerLabel: React.ReactNode;
-  align?: 'right';
-}) => {
+  onToggle,
+}: CollapseProps) => {
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
     setOpen(!open);
+    onToggle?.(!open);
   };
 
   const controlId = `collapse-control-${uniqueId()}`;

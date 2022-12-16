@@ -1,0 +1,9 @@
+@use '../../../styles/variables/spacing';
+
+.faq {
+  width: 100%;
+
+  &__content {
+    padding-top: spacing.$vertical;
+  }
+}

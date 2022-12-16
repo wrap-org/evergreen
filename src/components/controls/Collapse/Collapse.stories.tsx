@@ -7,7 +7,7 @@ export default {
   component: Collapse,
 } as Meta;
 
-export const Default: Story<{ headerLabel: string }> = ({ headerLabel }) => (
+export const Default: Story<{ headerLabel: React.ReactNode }> = ({ headerLabel }) => (
   <Collapse headerLabel={headerLabel}>
     <div>
       <p>Hidden content</p>
