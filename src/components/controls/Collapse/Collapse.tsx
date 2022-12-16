@@ -23,7 +23,7 @@ const Collapse = ({
     setOpen(!open);
   };
 
-  const controlId = `${uniqueId()}`;
+  const controlId = `collapse-control-${uniqueId()}`;
   const direction = align === 'right' ? 'row-reverse' : 'row';
 
   return (
