@@ -9,6 +9,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/require-default-props': 0,
     'react/function-component-definition': 0,
+    'react/prop-types': 0,
     'jsx-a11y/label-has-associated-control': [2, {
       assert: 'either',
     }],
