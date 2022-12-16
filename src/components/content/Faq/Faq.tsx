@@ -13,11 +13,7 @@ interface FaqProps {
 }
 
 const Faq = ({ question, children }: FaqProps) => {
-  const [open, setOpen] = useState(false);
-
-  const handleToggle = (isOpen?: boolean) => {
-    setOpen(isOpen || false);
-  };
+  const [open, setOpen] = useState<boolean>();
 
   return (
     <div
@@ -29,7 +25,7 @@ const Faq = ({ question, children }: FaqProps) => {
       <Card muted={!open} border={open} shadow={open}>
         <Card.Body>
           <Collapse
-            onToggle={handleToggle}
+            onToggle={setOpen}
             headerLabel={(
               <Title as="h3" size="h4">
                 <span itemProp="name">{question}</span>
