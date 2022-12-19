@@ -1,3 +1,10 @@
+## [6.2.0](https://github.com/etchteam/mobius/compare/v6.1.0...v6.2.0) (2022-12-19)
+
+
+### Features
+
+* stop card headers having their own styles ([758436a](https://github.com/etchteam/mobius/commit/758436a78a9ce035e27ffddb522586249159626f))
+
 ## [6.1.0](https://github.com/etchteam/mobius/compare/v6.0.0...v6.1.0) (2022-12-16)
 
 
