@@ -21,6 +21,20 @@ interface IconProps {
   baseline?: boolean;
 }
 
+const defaultIcon = {
+  default() {
+    return (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    );
+  },
+};
+
 // Has to be a PureComponent so we get the shallow prop comparison
 // and runs shouldComponentUpdate otherwise the icon flashes when state changes
 function Icon({
@@ -31,17 +45,19 @@ function Icon({
   type = 'mono',
   baseline = true,
 }: IconProps) {
-  const [IconSVG, setIcon] = useState(null);
+  const [iconImport, setIcon] = useState(defaultIcon);
   useEffect(() => {
     const fetchIcon = async () => {
       const dynamicIcon = type === 'custom'
         ? await import(`!!@svgr/webpack?{ svgo: false }!./custom-icons/${icon}.svg`)
         : await import(`!!@svgr/webpack?{ svgo: false }!mono-icons/svg/${icon}.svg`);
-      setIcon(dynamicIcon.default);
+      setIcon(dynamicIcon);
     };
 
     fetchIcon();
   }, [icon, type]);
+
+  const IconSVG = iconImport ? iconImport.default : null;
 
   return (
     <span
@@ -53,7 +69,7 @@ function Icon({
       title={title}
       aria-hidden={!title}
     >
-      {IconSVG}
+      {IconSVG && (<IconSVG />)}
     </span>
   );
 }
