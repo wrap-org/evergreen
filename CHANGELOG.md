@@ -1,3 +1,10 @@
+### [6.2.1](https://github.com/etchteam/mobius/compare/v6.2.0...v6.2.1) (2022-12-21)
+
+
+### Bug Fixes
+
+* 75096typeof is not a valid attribute on svg ([46a36b3](https://github.com/etchteam/mobius/commit/46a36b3369da0371ad4c915cd08690b8476bb914))
+
 ## [6.2.0](https://github.com/etchteam/mobius/compare/v6.1.0...v6.2.0) (2022-12-19)
 
 
