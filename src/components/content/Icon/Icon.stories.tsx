@@ -22,7 +22,7 @@ const customIconNames = importAll(require.context('./custom-icons/', true, /\.sv
 const Template = ({ iconNames, type }: { iconNames: string[], type?: 'mono' | 'custom' }) => (
   <Grid wrap>
     {iconNames.map((icon) => (
-      <Grid.Item xs={6} sm={3} md={2} flex>
+      <Grid.Item xs={6} sm={3} md={2} flex key={icon}>
         <Card border>
           <Card.Body>
             <TextAlign align="center">
