@@ -58,6 +58,8 @@ const Modal = React.forwardRef<any, ModalProps>(
   }
 );
 
+Modal.displayName = "Modal";
+
 export const useModalRef = () => React.useRef<ModalInstance>();
 
 // eslint-disable-next-line prefer-object-spread

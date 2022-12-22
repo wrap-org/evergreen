@@ -16,7 +16,7 @@ interface RadioProps extends FormControl {
    * the onChange event for the last radio in the DOM with the registered name
    * instead of the onChange for this radio!
    */
-  onRadioChange?: Function;
+  onRadioChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Radio = React.forwardRef(

@@ -32,7 +32,7 @@ export function Default() {
   return (
     <Grid spacing="none" wrap>
       {skins.map((skin, i) => (
-        <Grid.Item xs={12} md={6}>
+        <Grid.Item xs={12} md={6} key={skin}>
           <Skin skin={skin}>
             <Section>
               <Spacing top="lg" bottom="lg" left="lg" right="lg">
