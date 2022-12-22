@@ -1,10 +1,10 @@
-@use 'sass:color' as sassColor;
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/transition';
-@use '../../../styles/mixins/screen-reader';
+@use "sass:color" as sassColor;
+@use "../../../styles/variables/color";
+@use "../../../styles/variables/font";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/variables/breakpoint";
+@use "../../../styles/variables/transition";
+@use "../../../styles/mixins/screen-reader";
 
 @keyframes fade-in {
   from {
@@ -23,7 +23,7 @@
   display: flex;
   z-index: 9; // sit in front of most stuff, but not global alerts
 
-  &[aria-hidden='true'] {
+  &[aria-hidden="true"] {
     display: none;
   }
 
@@ -42,7 +42,8 @@
   }
 
   &__dialog {
-    animation: fade-in-scale transition.$duration (transition.$duration / 2) both transition.$timing;
+    animation: fade-in-scale transition.$duration (transition.$duration / 2)
+      both transition.$timing;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
     max-height: 100vh;

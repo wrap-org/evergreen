@@ -1,4 +1,4 @@
-@use '../variables/spacing';
+@use "../variables/spacing";
 
 @mixin default() {
   --list-spacing: #{spacing.$vertical-md};

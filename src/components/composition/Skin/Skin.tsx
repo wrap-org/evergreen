@@ -1,17 +1,9 @@
-import React from 'react';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React from "react";
 
-export const skins = [
-  'light',
-  'dark',
-];
+export const skins = ["light", "dark"];
 
-export const emphasisSkins = [
-  'neutral',
-  'positive',
-  'negative',
-  'attention',
-];
+export const emphasisSkins = ["neutral", "positive", "negative", "attention"];
 
 // This component uses non-module CSS
 // so that we can define skins at the
@@ -21,11 +13,11 @@ export default function Skin({
   children,
 }: {
   skin: string;
-  children: React.ReactNode,
+  children: React.ReactNode;
 }) {
   return (
     <div
-      className={classNames('skin', {
+      className={classNames("skin", {
         [`skin--${skin}`]: skin,
       })}
     >

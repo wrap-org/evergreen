@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Legend from './Legend';
-
-import styles from './Fieldset.module.scss';
+import styles from "./Fieldset.module.scss";
+import Legend from "./Legend";
 
 function Fieldset({
   children,
@@ -12,10 +11,7 @@ function Fieldset({
   [x: string]: any;
 }) {
   return (
-    <fieldset
-      className={styles.fieldset}
-      {...props}
-    >
+    <fieldset className={styles.fieldset} {...props}>
       {children}
     </fieldset>
   );

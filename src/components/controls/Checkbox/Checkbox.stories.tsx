@@ -1,15 +1,19 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Checkbox from './Checkbox';
+import Checkbox from "./Checkbox";
 
 export default {
-  title: 'Controls/Checkbox',
+  title: "Controls/Checkbox",
   component: Checkbox,
 } as Meta;
 
 export function Default() {
-  return <Checkbox name="checkbox" id="checkbox">Checkbox label</Checkbox>;
+  return (
+    <Checkbox name="checkbox" id="checkbox">
+      Checkbox label
+    </Checkbox>
+  );
 }
 
-Default.storyName = 'Checkbox';
+Default.storyName = "Checkbox";

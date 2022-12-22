@@ -1,19 +1,19 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Card from 'components/canvas/Card/Card';
-import Spacing from 'components/composition/Spacing/Spacing';
-import TextAlign from 'components/composition/TextAlign/TextAlign';
+import Wrap from "./Wrap";
 
-import Wrap from './Wrap';
+import Card from "components/canvas/Card/Card";
+import Spacing from "components/composition/Spacing/Spacing";
+import TextAlign from "components/composition/TextAlign/TextAlign";
 
 export default {
-  title: 'Composition/Wrap',
+  title: "Composition/Wrap",
   component: Wrap,
 } as Meta;
 
 export function Default() {
-  const sizes = ['sm', 'md', 'lg', 'xl'];
+  const sizes = ["sm", "md", "lg", "xl"];
 
   return (
     <>
@@ -22,9 +22,7 @@ export function Default() {
           <Wrap size={size}>
             <Card border>
               <Card.Body>
-                <TextAlign align="center">
-                  Limit width of the content
-                </TextAlign>
+                <TextAlign align="center">Limit width of the content</TextAlign>
               </Card.Body>
             </Card>
           </Wrap>
@@ -34,4 +32,4 @@ export function Default() {
   );
 }
 
-Default.storyName = 'Wrap';
+Default.storyName = "Wrap";

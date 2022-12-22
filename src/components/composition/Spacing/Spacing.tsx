@@ -1,15 +1,15 @@
-import React from 'react';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React from "react";
 
-import styles from './Spacing.module.scss';
+import styles from "./Spacing.module.scss";
 
 interface SpacingProps {
   children?: React.ReactNode;
   negative?: boolean;
-  top?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  left?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  bottom?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  right?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
+  top?: "xs" | "sm" | "md" | "lg" | "xl" | "fluid";
+  left?: "xs" | "sm" | "md" | "lg" | "xl" | "fluid";
+  bottom?: "xs" | "sm" | "md" | "lg" | "xl" | "fluid";
+  right?: "xs" | "sm" | "md" | "lg" | "xl" | "fluid";
 }
 
 export default function Spacing({
@@ -25,7 +25,7 @@ export default function Spacing({
     [styles[`spacing--left-${left}`]]: left,
     [styles[`spacing--bottom-${bottom}`]]: bottom,
     [styles[`spacing--right-${right}`]]: right,
-    [styles['spacing--negative']]: negative,
+    [styles["spacing--negative"]]: negative,
   });
   return <div className={cx}>{children}</div>;
 }

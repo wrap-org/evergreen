@@ -1,4 +1,4 @@
-@use '../variables/color';
+@use "../variables/color";
 
 :root {
   --skin-background-light: #{color.$white};
@@ -62,5 +62,7 @@
   --skin-heading-color: var(--skin-heading-color-light);
   --skin-link-color: var(--skin-link-color-light);
   --skin-link-text-decoration: var(--skin-link-text-decoration-light);
-  --skin-link-text-decoration-hover: var(--skin-link-text-decoration-hover-light);
+  --skin-link-text-decoration-hover: var(
+    --skin-link-text-decoration-hover-light
+  );
 }

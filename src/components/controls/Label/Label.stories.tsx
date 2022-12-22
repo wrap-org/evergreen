@@ -1,10 +1,10 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Label from './Label';
+import Label from "./Label";
 
 export default {
-  title: 'Controls/Label',
+  title: "Controls/Label",
   component: Label,
 } as Meta;
 
@@ -13,5 +13,9 @@ export function Primary() {
 }
 
 export function Secondary() {
-  return <Label htmlFor="my-input" type="secondary">Label</Label>;
+  return (
+    <Label htmlFor="my-input" type="secondary">
+      Label
+    </Label>
+  );
 }

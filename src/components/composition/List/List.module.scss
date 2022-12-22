@@ -1,5 +1,5 @@
-@use '../../../styles//variables/spacing';
-@use '../../../styles/mixins/list';
+@use "../../../styles//variables/spacing";
+@use "../../../styles/mixins/list";
 
 .list {
   @include list.default;

@@ -1,25 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import Grid from 'components/composition/Grid/Grid';
-import Wrap from 'components/composition/Wrap/Wrap';
-import Spacing from 'components/composition/Spacing/Spacing';
-import FormGroup from 'components/composition/FormGroup/FormGroup';
-import Label from 'components/controls/Label/Label';
-import Input from 'components/controls/Input/Input';
-import Select from 'components/controls/Select/Select';
-import Radio from 'components/controls/Radio/Radio';
-import Icon from 'components/content/Icon/Icon';
-import Button from 'components/controls/Button/Button';
+import FormGroup from "components/composition/FormGroup/FormGroup";
+import Grid from "components/composition/Grid/Grid";
+import Spacing from "components/composition/Spacing/Spacing";
+import Wrap from "components/composition/Wrap/Wrap";
+import Icon from "components/content/Icon/Icon";
+import Button from "components/controls/Button/Button";
+import Input from "components/controls/Input/Input";
+import Label from "components/controls/Label/Label";
+import Radio from "components/controls/Radio/Radio";
+import Select from "components/controls/Select/Select";
 
 export default {
-  title: 'Docs/Examples',
+  title: "Docs/Examples",
   parameters: {
     a11y: {
       config: {
         rules: [
           {
             // Temporary disable
-            id: 'color-contrast',
+            id: "color-contrast",
             enabled: false,
           },
         ],
@@ -38,7 +38,8 @@ export function Form() {
             <Icon color="positive" icon="circle-check" />
           </Grid.Item>
           <Grid.Item grow shrink>
-            Your selections have been saved in your browser to save you time in future.
+            Your selections have been saved in your browser to save you time in
+            future.
           </Grid.Item>
         </Grid>
         <Spacing bottom="lg" />
@@ -75,10 +76,14 @@ export function Form() {
               <div role="radiogroup" aria-label="Multiple sites" id="multiple">
                 <Grid>
                   <Grid.Item xs={6}>
-                    <Radio name="radio" id="yes">Yes</Radio>
+                    <Radio name="radio" id="yes">
+                      Yes
+                    </Radio>
                   </Grid.Item>
                   <Grid.Item xs={6}>
-                    <Radio name="radio" id="no">No</Radio>
+                    <Radio name="radio" id="no">
+                      No
+                    </Radio>
                   </Grid.Item>
                 </Grid>
               </div>
@@ -88,7 +93,9 @@ export function Form() {
         <Spacing bottom="lg" />
         <Grid direction="row-reverse">
           <Grid.Item xs={6}>
-            <Button type="primary" block>Save</Button>
+            <Button type="primary" block>
+              Save
+            </Button>
           </Grid.Item>
           <Grid.Item xs={6}>
             <Button block>Skip</Button>

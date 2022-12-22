@@ -1,15 +1,15 @@
-import React from 'react';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React from "react";
 
-import { Breakpoints } from '../../../types/breakpoints.type';
+import { Breakpoints } from "../../../types/breakpoints.type";
 
-import styles from './Wrap.module.scss';
+import styles from "./Wrap.module.scss";
 
 function Wrap({
   size,
   children,
 }: {
-  size?: Breakpoints | 'auto' | string;
+  size?: Breakpoints | "auto" | string;
   children: React.ReactNode;
 }) {
   return (

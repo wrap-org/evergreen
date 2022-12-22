@@ -1,10 +1,11 @@
-@use 'sass:math';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/breakpoint';
+@use "sass:math";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/variables/breakpoint";
 
 .grid {
   display: flex;
-  margin: (-#{math.div(spacing.$vertical, 2)}) (-#{math.div(spacing.$horizontal, 2)});
+  margin: (-#{math.div(spacing.$vertical, 2)})
+    (-#{math.div(spacing.$horizontal, 2)});
 
   // Wrap
   &--wrap {
@@ -164,34 +165,42 @@
   // Spacing
   &--spacing {
     &-xs {
-      margin: (-#{math.div(spacing.$vertical-xs, 2)}) (-#{math.div(spacing.$horizontal-xs, 2)});
+      margin: (-#{math.div(spacing.$vertical-xs, 2)})
+        (-#{math.div(spacing.$horizontal-xs, 2)});
 
       > .grid__item {
-        padding: (math.div(spacing.$vertical-xs, 2)) (math.div(spacing.$horizontal-xs, 2));
+        padding: (math.div(spacing.$vertical-xs, 2))
+          (math.div(spacing.$horizontal-xs, 2));
       }
     }
 
     &-sm {
-      margin: (-#{math.div(spacing.$vertical-sm, 2)}) (-#{math.div(spacing.$horizontal-sm, 2)});
+      margin: (-#{math.div(spacing.$vertical-sm, 2)})
+        (-#{math.div(spacing.$horizontal-sm, 2)});
 
       > .grid__item {
-        padding: (math.div(spacing.$vertical-sm, 2)) (math.div(spacing.$horizontal-sm, 2));
+        padding: (math.div(spacing.$vertical-sm, 2))
+          (math.div(spacing.$horizontal-sm, 2));
       }
     }
 
     &-lg {
-      margin: (-#{math.div(spacing.$vertical-lg, 2)}) (-#{math.div(spacing.$horizontal-lg, 2)});
+      margin: (-#{math.div(spacing.$vertical-lg, 2)})
+        (-#{math.div(spacing.$horizontal-lg, 2)});
 
       > .grid__item {
-        padding: (math.div(spacing.$vertical-lg, 2)) (math.div(spacing.$horizontal-lg, 2));
+        padding: (math.div(spacing.$vertical-lg, 2))
+          (math.div(spacing.$horizontal-lg, 2));
       }
     }
 
     &-xl {
-      margin: (-#{math.div(spacing.$vertical-xl, 2)}) (-#{math.div(spacing.$horizontal-xl, 2)});
+      margin: (-#{math.div(spacing.$vertical-xl, 2)})
+        (-#{math.div(spacing.$horizontal-xl, 2)});
 
       > .grid__item {
-        padding: (math.div(spacing.$vertical-xl, 2)) (math.div(spacing.$horizontal-xl, 2));
+        padding: (math.div(spacing.$vertical-xl, 2))
+          (math.div(spacing.$horizontal-xl, 2));
       }
     }
 

@@ -1,6 +1,6 @@
-@use '../variables/font';
-@use '../variables/skin';
-@use '../variables/spacing';
+@use "../variables/font";
+@use "../variables/skin";
+@use "../variables/spacing";
 
 @mixin title {
   color: skin.$heading-color;

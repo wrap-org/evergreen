@@ -1,10 +1,10 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Container from './Container';
+import Container from "./Container";
 
 export default {
-  title: 'Content/Container',
+  title: "Content/Container",
   component: Container,
 } as Meta;
 

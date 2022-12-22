@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Fieldset.module.scss';
+import styles from "./Fieldset.module.scss";
 
 function Legend({
   children,
@@ -10,10 +10,7 @@ function Legend({
   [x: string]: any;
 }) {
   return (
-    <legend
-      className={styles.fieldset__legend}
-      {...props}
-    >
+    <legend className={styles.fieldset__legend} {...props}>
       {children}
     </legend>
   );

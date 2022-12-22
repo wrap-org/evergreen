@@ -1,14 +1,15 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import map from 'lodash/map';
-import Grid from '../components/composition/Grid/Grid';
-import Card from '../components/canvas/Card/Card';
-import Text from '../components/content/Text/Text';
+import { Meta } from "@storybook/react/types-6-0";
+import map from "lodash/map";
+import React from "react";
 
-import colors from './container-colors.module.scss';
+import Card from "../components/canvas/Card/Card";
+import Grid from "../components/composition/Grid/Grid";
+import Text from "../components/content/Text/Text";
+
+import colors from "./container-colors.module.scss";
 
 export default {
-  title: 'Tokens/Container Colors',
+  title: "Tokens/Container Colors",
 } as Meta;
 
 export const ContainerColors = () => (
@@ -18,7 +19,7 @@ export const ContainerColors = () => (
         <Card border>
           <div
             style={{
-              height: '10rem',
+              height: "10rem",
               background: color,
             }}
           />

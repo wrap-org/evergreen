@@ -1,8 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
-import Item from './GridItem';
+import classNames from "classnames";
+import React from "react";
 
-import styles from './Grid.module.scss';
+import styles from "./Grid.module.scss";
+import Item from "./GridItem";
 
 interface GridProps {
   children: React.ReactNode;
@@ -13,16 +13,16 @@ interface GridProps {
   direction?: string;
   justify?: string;
   align?: string;
-  spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
+  spacing?: "default" | "xs" | "sm" | "lg" | "xl" | "none";
   fullWidth?: boolean;
 }
 
 const Grid = ({
   children,
   wrap,
-  direction = 'row',
-  justify = 'flex-start',
-  align = 'stretch',
+  direction = "row",
+  justify = "flex-start",
+  align = "stretch",
   inset,
   insetFluid,
   insetVerticalFluid,
@@ -30,15 +30,15 @@ const Grid = ({
   fullWidth,
 }: GridProps) => {
   const cx = classNames(styles.grid, {
-    [styles['grid--wrap']]: wrap,
-    [styles['grid--inset']]: inset,
-    [styles['grid--inset-fluid']]: insetFluid,
-    [styles['grid--inset-vertical-fluid']]: insetVerticalFluid,
+    [styles["grid--wrap"]]: wrap,
+    [styles["grid--inset"]]: inset,
+    [styles["grid--inset-fluid"]]: insetFluid,
+    [styles["grid--inset-vertical-fluid"]]: insetVerticalFluid,
     [styles[`grid--${direction}`]]: direction,
     [styles[`grid--justify-${justify}`]]: justify,
     [styles[`grid--align-${align}`]]: align,
-    [styles[`grid--spacing-${spacing}`]]: spacing !== 'default',
-    [styles['grid--full-width']]: fullWidth,
+    [styles[`grid--spacing-${spacing}`]]: spacing !== "default",
+    [styles["grid--full-width"]]: fullWidth,
   });
 
   return <div className={cx}>{children}</div>;

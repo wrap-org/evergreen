@@ -1,25 +1,25 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Grid from 'components/composition/Grid/Grid';
-import Section from 'components/canvas/Section/Section';
-import Card from 'components/canvas/Card/Card';
-import Spacing from 'components/composition/Spacing/Spacing';
-import Button from 'components/controls/Button/Button';
+import Skin, { skins } from "./Skin";
 
-import Skin, { skins } from './Skin';
+import Card from "components/canvas/Card/Card";
+import Section from "components/canvas/Section/Section";
+import Grid from "components/composition/Grid/Grid";
+import Spacing from "components/composition/Spacing/Spacing";
+import Button from "components/controls/Button/Button";
 
 export default {
-  title: 'Composition/Skin',
+  title: "Composition/Skin",
   component: Skin,
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
     a11y: {
       config: {
         rules: [
           {
             // Temporary disable
-            id: 'color-contrast',
+            id: "color-contrast",
             enabled: false,
           },
         ],
@@ -39,21 +39,18 @@ export function Default() {
                 <Skin skin={skins[i + 1] || skins[0]}>
                   <Card border>
                     <Card.Body>
-                      <h3>
-                        Card title
-                      </h3>
+                      <h3>Card title</h3>
                       <p>
-                        Aliquam egestas mi quam, a
-                        {' '}
-                        <a href="https://etch.co">tincidunt lectus</a>
-                        {' '}
-                        faucibus euismod.
-                        Pellentesque et metus nunc.
+                        Aliquam egestas mi quam, a{" "}
+                        <a href="https://etch.co">tincidunt lectus</a> faucibus
+                        euismod. Pellentesque et metus nunc.
                       </p>
                       <Spacing bottom="md" />
                       <Grid wrap direction="row-reverse">
                         <Grid.Item xs={12} md={6}>
-                          <Button block type="primary">Button text</Button>
+                          <Button block type="primary">
+                            Button text
+                          </Button>
                         </Grid.Item>
                         <Grid.Item xs={12} md={6}>
                           <Button block>Button text</Button>
@@ -71,4 +68,4 @@ export function Default() {
   );
 }
 
-Default.storyName = 'Skin';
+Default.storyName = "Skin";

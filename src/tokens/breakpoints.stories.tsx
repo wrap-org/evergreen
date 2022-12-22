@@ -1,12 +1,13 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import map from 'lodash/map';
-import Spacing from '../components/composition/Spacing/Spacing';
+import { Meta } from "@storybook/react/types-6-0";
+import map from "lodash/map";
+import React from "react";
 
-import breakpoints from './breakpoints.module.scss';
+import Spacing from "../components/composition/Spacing/Spacing";
+
+import breakpoints from "./breakpoints.module.scss";
 
 export default {
-  title: 'Tokens/Breakpoints',
+  title: "Tokens/Breakpoints",
 } as Meta;
 
 export const Breakpoints = () => (
@@ -15,10 +16,10 @@ export const Breakpoints = () => (
       <Spacing bottom="md" key={key}>
         <div
           style={{
-            minHeight: '1rem',
-            background: 'rgba(0, 0 ,0 , 0.05)',
+            minHeight: "1rem",
+            background: "rgba(0, 0 ,0 , 0.05)",
             width,
-            padding: '.5rem',
+            padding: ".5rem",
           }}
         >
           {key}

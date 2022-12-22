@@ -1,10 +1,10 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import TextButton from './TextButton';
+import TextButton from "./TextButton";
 
 export default {
-  title: 'Controls/Text button',
+  title: "Controls/Text button",
   component: TextButton,
   parameters: {
     a11y: {
@@ -12,7 +12,7 @@ export default {
         rules: [
           {
             // Temporarily disable
-            id: 'color-contrast',
+            id: "color-contrast",
             enabled: false,
           },
         ],
@@ -26,7 +26,9 @@ export const Default = () => (
 );
 
 export const IconRight = () => (
-  <TextButton icon="chevron-down" iconRight>TextButton label</TextButton>
+  <TextButton icon="chevron-down" iconRight>
+    TextButton label
+  </TextButton>
 );
 
 export const Decorate = () => (

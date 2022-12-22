@@ -1,8 +1,8 @@
-@use 'sass:math';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/mixins/forms';
+@use "sass:math";
+@use "../../../styles/variables/font";
+@use "../../../styles/variables/input";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/mixins/forms";
 
 .input {
   @include forms.input;

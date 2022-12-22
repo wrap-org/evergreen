@@ -1,9 +1,9 @@
-@use 'sass:color' as sassColor;
-@use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/mixins/button';
+@use "sass:color" as sassColor;
+@use "../../../styles/variables/breakpoint";
+@use "../../../styles/variables/color";
+@use "../../../styles/variables/font";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/mixins/button";
 
 .button {
   $types: primary, secondary, positive, negative;
@@ -48,7 +48,8 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(#{spacing.$vertical-xs} - var(--button-border-width)) spacing.$horizontal-sm;
+    padding: calc(#{spacing.$vertical-xs} - var(--button-border-width))
+      spacing.$horizontal-sm;
   }
 
   @each $type in $types {

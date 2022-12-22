@@ -1,15 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Eyebrow.module.scss';
+import styles from "./Eyebrow.module.scss";
 
-export default function Eyebrow({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <span className={styles.eyebrow}>
-      {children}
-    </span>
-  );
+export default function Eyebrow({ children }: { children: React.ReactNode }) {
+  return <span className={styles.eyebrow}>{children}</span>;
 }

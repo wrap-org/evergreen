@@ -1,13 +1,12 @@
 /* eslint-disable react/prefer-stateless-function */
-import React from 'react';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React from "react";
 
-import Icon from 'components/content/Icon/Icon';
+import styles from "./Card.module.scss";
+import CardBody from "./CardBody";
+import CardHeader from "./CardHeader";
 
-import CardHeader from './CardHeader';
-import CardBody from './CardBody';
-
-import styles from './Card.module.scss';
+import Icon from "components/content/Icon/Icon";
 
 export interface CardProps {
   children: React.ReactNode;
@@ -15,7 +14,7 @@ export interface CardProps {
   href?: string;
   onClick?: any;
   id?: string;
-  [x:string]: any;
+  [x: string]: any;
   arrow?: boolean;
   shadow?: boolean;
   control?: boolean;
@@ -41,16 +40,16 @@ class Card extends React.Component<CardProps> {
       muted,
     } = this.props;
 
-    const CardElement = href ? 'a' : 'div';
+    const CardElement = href ? "a" : "div";
     return (
       <CardElement
         className={classNames(styles.card, {
-          [styles['card--border']]: border,
-          [styles['card--clickable']]: href,
-          [styles['card--shadow']]: shadow,
-          [styles['card--disabled']]: disabled,
-          [styles['card--control']]: control,
-          [styles['card--muted']]: muted,
+          [styles["card--border"]]: border,
+          [styles["card--clickable"]]: href,
+          [styles["card--shadow"]]: shadow,
+          [styles["card--disabled"]]: disabled,
+          [styles["card--control"]]: control,
+          [styles["card--muted"]]: muted,
         })}
         href={href}
         onClick={onClick}

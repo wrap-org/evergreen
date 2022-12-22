@@ -1,6 +1,4 @@
-
-
-@use '../../../styles/variables/transition';
+@use "../../../styles/variables/transition";
 $enter-transition-duration: 0.5s;
 $enter-transition-timing: ease-in-out;
 
@@ -49,8 +47,6 @@ $enter-transition-timing: ease-in-out;
     transform: scale(1);
   }
 }
-
-
 
 .enter {
   animation-duration: $enter-transition-duration;

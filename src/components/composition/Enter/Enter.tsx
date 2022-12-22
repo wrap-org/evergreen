@@ -1,7 +1,7 @@
-import React from 'react';
-import classNames from 'classnames';
+import classNames from "classnames";
+import React from "react";
 
-import styles from './Enter.module.scss';
+import styles from "./Enter.module.scss";
 
 export default function Enter({
   children,
@@ -18,8 +18,8 @@ export default function Enter({
 }) {
   const cx = classNames(styles.enter, {
     [styles[`enter--${type}`]]: type,
-    [styles['enter--enter']]: enter,
-    [styles['enter--flex']]: flex,
+    [styles["enter--enter"]]: enter,
+    [styles["enter--flex"]]: flex,
   });
   return (
     <div className={cx} style={{ animationDelay: delay }}>
@@ -29,8 +29,8 @@ export default function Enter({
 }
 
 Enter.defaultProps = {
-  type: 'fade',
-  delay: '0s',
+  type: "fade",
+  delay: "0s",
   enter: true,
   flex: false,
 };

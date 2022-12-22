@@ -1,12 +1,12 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Grid from 'components/composition/Grid/Grid';
+import ContainerSvg from "./ContainerSvg";
 
-import ContainerSvg from './ContainerSvg';
+import Grid from "components/composition/Grid/Grid";
 
 export default {
-  title: 'Content/ContainerSvg',
+  title: "Content/ContainerSvg",
   component: ContainerSvg,
 } as Meta;
 
@@ -66,7 +66,11 @@ export const Coloured = () => (
       <ContainerSvg name="Wheeled Bin" bodyColour="yellow" lidColour="red" />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Communal Wheeled Bin" bodyColour="green" lidColour="red" />
+      <ContainerSvg
+        name="Communal Wheeled Bin"
+        bodyColour="green"
+        lidColour="red"
+      />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
       <ContainerSvg name="Inner Caddy" bodyColour="black" lidColour="red" />
@@ -81,7 +85,10 @@ export const Coloured = () => (
       <ContainerSvg name="Reusable Sack" bodyColour="green" />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Householder Provided Carrier Bag" bodyColour="orange" />
+      <ContainerSvg
+        name="Householder Provided Carrier Bag"
+        bodyColour="orange"
+      />
     </Grid.Item>
   </Grid>
 );

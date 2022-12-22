@@ -1,11 +1,12 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Icon from '../../content/Icon/Icon';
-import Input from './Input';
+import Icon from "../../content/Icon/Icon";
+
+import Input from "./Input";
 
 export default {
-  title: 'Controls/Input',
+  title: "Controls/Input",
   component: Input,
   parameters: {
     a11y: {
@@ -13,7 +14,7 @@ export default {
         rules: [
           {
             // Temporary disable
-            id: 'label',
+            id: "label",
             enabled: false,
           },
         ],
@@ -23,7 +24,13 @@ export default {
 } as Meta;
 
 export function Default() {
-  return <Input name="my-input" id="my-input" prefix={<Icon icon="search" size="lg" />} />;
+  return (
+    <Input
+      name="my-input"
+      id="my-input"
+      prefix={<Icon icon="search" size="lg" />}
+    />
+  );
 }
 
 export function Prefix() {
@@ -35,5 +42,11 @@ export function Suffix() {
 }
 
 export function SuffixAsIcon() {
-  return <Input name="my-input" id="my-input" suffix={<Icon icon="calendar" size="lg" />} />;
+  return (
+    <Input
+      name="my-input"
+      id="my-input"
+      suffix={<Icon icon="calendar" size="lg" />}
+    />
+  );
 }

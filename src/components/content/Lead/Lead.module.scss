@@ -1,4 +1,4 @@
-@use '../../../styles/variables/font';
+@use "../../../styles/variables/font";
 
 .lead {
   font-size: var(--font-size-lead, #{font.$size-xl});

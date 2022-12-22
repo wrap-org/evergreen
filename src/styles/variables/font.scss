@@ -1,5 +1,7 @@
-$family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-$family-roboto: Roboto, Lato, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+$family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+  Helvetica, Arial, sans-serif;
+$family-roboto: Roboto, Lato, -apple-system, system-ui, BlinkMacSystemFont,
+  Helvetica, Arial, sans-serif;
 
 $line-height: 1.25;
 $line-height-sm: 1.125;
@@ -23,21 +25,21 @@ $weight-bold: 700;
 $weight-black: 800;
 
 $sizes: (
-  'base': $size-base,
-  'xs': $size-xs,
-  'sm': $size-sm,
-  'md': $size-md,
-  'lg': $size-lg,
-  'xl': $size-xl,
-  'h1': $size-h1,
-  'h2': $size-h2,
-  'h3': $size-h3,
-  'h4': $size-h4,
+  "base": $size-base,
+  "xs": $size-xs,
+  "sm": $size-sm,
+  "md": $size-md,
+  "lg": $size-lg,
+  "xl": $size-xl,
+  "h1": $size-h1,
+  "h2": $size-h2,
+  "h3": $size-h3,
+  "h4": $size-h4,
 );
 
 $weights: (
-  'base': $weight-base,
-  'light': $weight-light,
-  'bold': $weight-bold,
-  'black': $weight-black
+  "base": $weight-base,
+  "light": $weight-light,
+  "bold": $weight-bold,
+  "black": $weight-black,
 );

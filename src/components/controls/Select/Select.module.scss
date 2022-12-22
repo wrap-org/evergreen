@@ -1,8 +1,8 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/mixins/forms';
+@use "../../../styles/variables/color";
+@use "../../../styles/variables/font";
+@use "../../../styles/variables/input";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/mixins/forms";
 
 .select {
   @include forms.input;

@@ -1,7 +1,7 @@
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/mixins/forms';
+@use "../../../styles/variables/font";
+@use "../../../styles/variables/input";
+@use "../../../styles/variables/spacing";
+@use "../../../styles/mixins/forms";
 
 .textarea {
   @include forms.input;

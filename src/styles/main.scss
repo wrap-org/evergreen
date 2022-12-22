@@ -1,12 +1,12 @@
-@use '~normalize.css/normalize';
-@use 'variables/color';
-@use 'variables/font';
-@use 'variables/transition';
+@use "~normalize.css/normalize";
+@use "variables/color";
+@use "variables/font";
+@use "variables/transition";
 
-@use 'base/buttons';
-@use 'base/skins';
-@use 'base/scaffolding';
-@use 'base/typography';
-@use 'base/forms';
+@use "base/buttons";
+@use "base/skins";
+@use "base/scaffolding";
+@use "base/typography";
+@use "base/forms";
 
-@use 'vendor/react-collapse';
+@use "vendor/react-collapse";

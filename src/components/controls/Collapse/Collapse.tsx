@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Collapse as ReactCollapse } from 'react-collapse';
-import uniqueId from 'lodash/uniqueId';
-import cx from 'classnames';
+import cx from "classnames";
+import uniqueId from "lodash/uniqueId";
+import React, { useState } from "react";
+import { Collapse as ReactCollapse } from "react-collapse";
 
-import Icon from 'components/content/Icon/Icon';
-import Grid from 'components/composition/Grid/Grid';
+import styles from "./Collapse.module.scss";
 
-import styles from './Collapse.module.scss';
+import Grid from "components/composition/Grid/Grid";
+import Icon from "components/content/Icon/Icon";
 
 interface CollapseProps {
   children: React.ReactNode;
   headerLabel: React.ReactNode;
-  align?: 'right';
+  align?: "right";
   onToggle?: (open?: boolean) => void;
 }
 
@@ -29,12 +29,12 @@ const Collapse = ({
   };
 
   const controlId = `collapse-control-${uniqueId()}`;
-  const direction = align === 'right' ? 'row-reverse' : 'row';
+  const direction = align === "right" ? "row-reverse" : "row";
 
   return (
     <div
       className={cx(styles.collapse, {
-        [styles['collapse--right']]: align === 'right',
+        [styles["collapse--right"]]: align === "right",
       })}
     >
       <button
@@ -46,7 +46,7 @@ const Collapse = ({
       >
         <Grid direction={direction} spacing="sm">
           <Grid.Item>
-            <Icon icon={open ? 'chevron-up' : 'chevron-down'} size="lg" />
+            <Icon icon={open ? "chevron-up" : "chevron-down"} size="lg" />
           </Grid.Item>
           <Grid.Item grow shrink>
             {headerLabel}

@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import AppHeader from './AppHeader';
-import AppMain from './AppMain';
-import AppFooter from './AppFooter';
-
-import styles from './App.module.scss';
+import styles from "./App.module.scss";
+import AppFooter from "./AppFooter";
+import AppHeader from "./AppHeader";
+import AppMain from "./AppMain";
 
 const App = ({ children }: { children: React.ReactNode }) => (
-  <div className={styles.app}>
-    {children}
-  </div>
+  <div className={styles.app}>{children}</div>
 );
 
 App.Header = AppHeader;

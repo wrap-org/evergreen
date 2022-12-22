@@ -1,15 +1,19 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from "@storybook/react/types-6-0";
+import React from "react";
 
-import Radio from './Radio';
+import Radio from "./Radio";
 
 export default {
-  title: 'Controls/Radio',
+  title: "Controls/Radio",
   component: Radio,
 } as Meta;
 
 export function Default() {
-  return <Radio name="Radio" id="Radio">Radio label</Radio>;
+  return (
+    <Radio name="Radio" id="Radio">
+      Radio label
+    </Radio>
+  );
 }
 
-Default.storyName = 'Radio';
+Default.storyName = "Radio";
