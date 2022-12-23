@@ -10,7 +10,7 @@
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:css": "stylelint \"./**/*.{htm,html,css,sss,less,scss,sass}\"",
+    "lint:css": "stylelint \"./**/*.{css,scss}\"",
     "lint:css:fix": "npm run lint:css -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:a11y:from-build": "node ./scripts/storybook-a11y-tests.js",
@@ -27,7 +27,7 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ],
-    "*.{css,sss,less,scss,sass}": "stylelint --fix --allow-empty-input"
+    "*.{css,scss}": "stylelint --fix --allow-empty-input"
   },
   "postcss": {
     "plugins": {

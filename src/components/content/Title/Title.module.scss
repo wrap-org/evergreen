@@ -1,6 +1,6 @@
-@use "../../../styles/variables/font";
-@use "../../../styles/variables/breakpoint";
-@use "../../../styles/mixins/title";
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/breakpoint';
+@use '../../../styles/mixins/title';
 
 .title {
   @include title.title;

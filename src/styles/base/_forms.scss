@@ -1,5 +1,5 @@
-@use "../variables/color";
-@use "../variables/input";
+@use '../variables/color';
+@use '../variables/input';
 
 :root {
   --input-background: #{color.$blue-lightest};

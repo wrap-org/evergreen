@@ -1,6 +1,6 @@
-@use "../../variables/breakpoint";
-@use "../../variables/color";
-@use "../../mixins/skin";
+@use '../../variables/breakpoint';
+@use '../../variables/color';
+@use '../../mixins/skin';
 
 // Create the skins globally
 $skins: light, medium, dark, accent, neutral, positive, negative, attention;

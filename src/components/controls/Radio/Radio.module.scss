@@ -1,7 +1,7 @@
-@use "../../../styles/variables/input";
-@use "../../../styles/variables/transition";
-@use "../../../styles/mixins/forms";
-@use "../../../styles/mixins/screen-reader";
+@use '../../../styles/variables/input';
+@use '../../../styles/variables/transition';
+@use '../../../styles/mixins/forms';
+@use '../../../styles/mixins/screen-reader';
 
 $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
 

@@ -1,7 +1,7 @@
-@use "../variables/color";
-@use "../variables/font";
-@use "../variables/spacing";
-@use "../variables/transition";
+@use '../variables/color';
+@use '../variables/font';
+@use '../variables/spacing';
+@use '../variables/transition';
 
 @mixin base {
   appearance: none;

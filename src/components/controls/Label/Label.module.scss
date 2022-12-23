@@ -1,6 +1,6 @@
-@use "../../../styles/mixins/screen-reader";
-@use "../../../styles/mixins/forms";
-@use "../../../styles/variables/spacing";
+@use '../../../styles/mixins/screen-reader';
+@use '../../../styles/mixins/forms';
+@use '../../../styles/variables/spacing';
 
 .label {
   @include forms.label;

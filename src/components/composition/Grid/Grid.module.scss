@@ -1,6 +1,6 @@
-@use "sass:math";
-@use "../../../styles/variables/spacing";
-@use "../../../styles/variables/breakpoint";
+@use 'sass:math';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/breakpoint';
 
 .grid {
   display: flex;
