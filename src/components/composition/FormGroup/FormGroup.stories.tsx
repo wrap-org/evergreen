@@ -21,3 +21,16 @@ export function Default() {
 }
 
 Default.storyName = 'Form group';
+
+export function Horizontal() {
+  return (
+    <FormGroup horizontal>
+      <FormGroup.Label>
+        <Label htmlFor="my-input">Input label</Label>
+      </FormGroup.Label>
+      <FormGroup.Control>
+        <Input id="my-input" name="my-input" />
+      </FormGroup.Control>
+    </FormGroup>
+  );
+}
