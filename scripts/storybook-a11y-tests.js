@@ -1,9 +1,10 @@
-const path = require('path');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require("path");
 
-const { A11yTestRunner } = require('@shopify/storybook-a11y-test');
+const { A11yTestRunner } = require("@shopify/storybook-a11y-test");
 
 const storybookTestA11y = async () => {
-  const buildDir = path.join(__dirname, '../storybook-static');
+  const buildDir = path.join(__dirname, "../storybook-static");
 
   const testRunner = new A11yTestRunner(buildDir);
 
@@ -18,13 +19,13 @@ const storybookTestA11y = async () => {
     });
 
     if (results.length) {
-      console.error('‼️  Accessibility violations found');
+      console.error("‼️  Accessibility violations found");
       // eslint-disable-next-line no-console
-      console.log(results.join('\n'));
+      console.log(results.join("\n"));
       process.exitCode = 1;
     } else {
       // eslint-disable-next-line no-console
-      console.log('🧚  Accessibility tests passed');
+      console.log("🧚  Accessibility tests passed");
     }
   } finally {
     await testRunner.teardown();

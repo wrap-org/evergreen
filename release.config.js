@@ -1,29 +1,29 @@
 module.exports = {
-  branches: ['main'],
+  branches: ["main"],
   plugins: [
     [
-      '@semantic-release/commit-analyzer',
+      "@semantic-release/commit-analyzer",
       {
-        preset: 'conventionalcommits',
+        preset: "conventionalcommits",
         presetConfig: {},
       },
     ],
     [
-      '@semantic-release/release-notes-generator',
+      "@semantic-release/release-notes-generator",
       {
-        preset: 'conventionalcommits',
+        preset: "conventionalcommits",
       },
     ],
-    '@semantic-release/changelog',
+    "@semantic-release/changelog",
     [
-      '@semantic-release/npm',
+      "@semantic-release/npm",
       {
         npmPublish: true,
       },
     ],
-    '@semantic-release/github',
+    "@semantic-release/github",
 
     // NOTE: this plugin must be last to ensure all updated files are committed
-    '@semantic-release/git',
+    "@semantic-release/git",
   ],
 };
