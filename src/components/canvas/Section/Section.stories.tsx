@@ -22,6 +22,10 @@ export default {
             id: 'color-contrast',
             enabled: false,
           },
+          {
+            id: 'link-in-text-block',
+            enabled: false,
+          },
         ],
       },
     },
