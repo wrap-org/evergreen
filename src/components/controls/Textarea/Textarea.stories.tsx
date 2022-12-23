@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Textarea from "./Textarea";
+import Textarea from './Textarea';
 
 export default {
-  title: "Controls/Textarea",
+  title: 'Controls/Textarea',
   component: Textarea,
   parameters: {
     a11y: {
@@ -12,7 +12,7 @@ export default {
         rules: [
           {
             // Temporary disable
-            id: "label",
+            id: 'label',
             enabled: false,
           },
         ],
@@ -25,4 +25,4 @@ export function Default() {
   return <Textarea name="my-input" id="my-input" />;
 }
 
-Default.storyName = "Textarea";
+Default.storyName = 'Textarea';

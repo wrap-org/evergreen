@@ -1,25 +1,25 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Skin, { skins } from "./Skin";
+import Skin, { skins } from './Skin';
 
-import Card from "components/canvas/Card/Card";
-import Section from "components/canvas/Section/Section";
-import Grid from "components/composition/Grid/Grid";
-import Spacing from "components/composition/Spacing/Spacing";
-import Button from "components/controls/Button/Button";
+import Card from 'components/canvas/Card/Card';
+import Section from 'components/canvas/Section/Section';
+import Grid from 'components/composition/Grid/Grid';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Button from 'components/controls/Button/Button';
 
 export default {
-  title: "Composition/Skin",
+  title: 'Composition/Skin',
   component: Skin,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
     a11y: {
       config: {
         rules: [
           {
             // Temporary disable
-            id: "color-contrast",
+            id: 'color-contrast',
             enabled: false,
           },
         ],
@@ -41,7 +41,7 @@ export function Default() {
                     <Card.Body>
                       <h3>Card title</h3>
                       <p>
-                        Aliquam egestas mi quam, a{" "}
+                        Aliquam egestas mi quam, a{' '}
                         <a href="https://etch.co">tincidunt lectus</a> faucibus
                         euismod. Pellentesque et metus nunc.
                       </p>
@@ -68,4 +68,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Skin";
+Default.storyName = 'Skin';

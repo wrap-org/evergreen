@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Grid from "components/composition/Grid/Grid";
-import Icon from "components/content/Icon/Icon";
-import Button from "components/controls/Button/Button";
+import Grid from 'components/composition/Grid/Grid';
+import Icon from 'components/content/Icon/Icon';
+import Button from 'components/controls/Button/Button';
 
 export interface HeaderProps {
   children: React.ReactNode;

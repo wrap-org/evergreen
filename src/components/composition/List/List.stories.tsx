@@ -1,12 +1,12 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 
-import List from "./List";
+import List from './List';
 
-import Icon from "components/content/Icon/Icon";
+import Icon from 'components/content/Icon/Icon';
 
 export default {
-  title: "Composition/List",
+  title: 'Composition/List',
   component: List,
   subcomponents: {
     ListItem: List.Item,
@@ -25,4 +25,4 @@ const Template: ComponentStory<typeof List> = (args) => (
 
 export const Default = Template.bind({});
 
-Default.storyName = "List";
+Default.storyName = 'List';

@@ -1,15 +1,15 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 
-import Enter from "./Enter";
+import Enter from './Enter';
 
-import Card from "components/canvas/Card/Card";
-import Grid from "components/composition/Grid/Grid";
-import Spacing from "components/composition/Spacing/Spacing";
-import Button from "components/controls/Button/Button";
+import Card from 'components/canvas/Card/Card';
+import Grid from 'components/composition/Grid/Grid';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Button from 'components/controls/Button/Button';
 
 export default {
-  title: "Composition/Enter",
+  title: 'Composition/Enter',
   component: Enter,
   parameters: {
     a11y: {
@@ -17,7 +17,7 @@ export default {
         rules: [
           {
             // a11y plugin has a problem with the fade
-            id: "color-contrast",
+            id: 'color-contrast',
             enabled: false,
           },
         ],
@@ -64,10 +64,10 @@ const Template: ComponentStory<typeof Enter> = (args) => {
 export const Fade = Template.bind({});
 
 export const FadeInUp = Template.bind({});
-FadeInUp.args = { type: "fade-in-up" };
+FadeInUp.args = { type: 'fade-in-up' };
 
 export const FadeInDown = Template.bind({});
-FadeInDown.args = { type: "fade-in-down" };
+FadeInDown.args = { type: 'fade-in-down' };
 
 export const Boing = Template.bind({});
-Boing.args = { type: "boing" };
+Boing.args = { type: 'boing' };

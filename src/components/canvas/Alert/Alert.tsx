@@ -1,16 +1,16 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import styles from "./Alert.module.scss";
+import styles from './Alert.module.scss';
 
-import Icon from "components/content/Icon/Icon";
+import Icon from 'components/content/Icon/Icon';
 
 export default function Alert({
   type,
   children,
   onClose,
 }: {
-  type?: "positive" | "negative" | "neutral" | "attention";
+  type?: 'positive' | 'negative' | 'neutral' | 'attention';
   children: React.ReactNode;
   onClose?: () => void;
 }) {
@@ -32,6 +32,6 @@ export default function Alert({
 }
 
 Alert.defaultProps = {
-  type: "neutral",
+  type: 'neutral',
   onClose: undefined,
 };

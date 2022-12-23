@@ -1,15 +1,15 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Grid from "../Grid/Grid";
+import Grid from '../Grid/Grid';
 
-import Modal, { useModalRef } from "./Modal";
+import Modal, { useModalRef } from './Modal';
 
-import Card from "components/canvas/Card/Card";
-import Button from "components/controls/Button/Button";
+import Card from 'components/canvas/Card/Card';
+import Button from 'components/controls/Button/Button';
 
 export default {
-  title: "Composition/Modal",
+  title: 'Composition/Modal',
   component: Modal,
   subcomponents: {
     ModalInner: Modal.Inner,
@@ -64,4 +64,4 @@ export const Default = () => {
   );
 };
 
-Default.storyName = "Modal";
+Default.storyName = 'Modal';

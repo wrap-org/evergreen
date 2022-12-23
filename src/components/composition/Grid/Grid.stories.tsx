@@ -1,12 +1,12 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Grid from "./Grid";
+import Grid from './Grid';
 
-import Card from "components/canvas/Card/Card";
+import Card from 'components/canvas/Card/Card';
 
 export default {
-  title: "Composition/Grid",
+  title: 'Composition/Grid',
   component: Grid,
   subcomponents: {
     GridItem: Grid.Item,
@@ -76,4 +76,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Grid";
+Default.storyName = 'Grid';

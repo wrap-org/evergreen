@@ -1,11 +1,11 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import { FormControl } from "../../../types/form-control.type";
+import { FormControl } from '../../../types/form-control.type';
 
-import styles from "./Radio.module.scss";
+import styles from './Radio.module.scss';
 
-import { defaultInputProps } from "lib/default-props";
+import { defaultInputProps } from 'lib/default-props';
 
 interface RadioProps extends FormControl {
   checked?: boolean;
@@ -36,10 +36,10 @@ const Radio = React.forwardRef(
   ) => (
     <label
       className={classNames(styles.radio, {
-        [styles["radio--checked"]]: checked,
-        [styles["radio--disabled"]]: disabled,
-        [styles["radio--valid"]]: touched && valid === true,
-        [styles["radio--invalid"]]: touched && valid === false,
+        [styles['radio--checked']]: checked,
+        [styles['radio--disabled']]: disabled,
+        [styles['radio--valid']]: touched && valid === true,
+        [styles['radio--invalid']]: touched && valid === false,
         [styles[`radio--${status}`]]: status,
       })}
     >
@@ -71,6 +71,6 @@ Radio.defaultProps = {
   checked: false,
 };
 
-Radio.displayName = "Radio";
+Radio.displayName = 'Radio';
 
 export default Radio;

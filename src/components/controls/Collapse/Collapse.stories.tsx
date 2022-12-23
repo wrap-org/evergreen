@@ -1,10 +1,10 @@
-import { Meta, Story } from "@storybook/react";
-import React from "react";
+import { Meta, Story } from '@storybook/react';
+import React from 'react';
 
-import Collapse from "./Collapse";
+import Collapse from './Collapse';
 
 export default {
-  title: "Controls/Collapse",
+  title: 'Controls/Collapse',
   component: Collapse,
 } as Meta;
 
@@ -18,9 +18,9 @@ export const Default: Story<{ headerLabel: React.ReactNode }> = ({
   </Collapse>
 );
 
-Default.storyName = "Collapse";
+Default.storyName = 'Collapse';
 Default.args = {
-  headerLabel: "Click me",
+  headerLabel: 'Click me',
 };
 
 export const RightAlign: Story = () => (

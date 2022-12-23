@@ -1,18 +1,18 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import styles from "./TextAlign.module.scss";
+import styles from './TextAlign.module.scss';
 
 export default function TextAlign({
   align,
   children,
 }: {
-  align?: "left" | "right" | "center";
+  align?: 'left' | 'right' | 'center';
   children: React.ReactNode;
 }) {
   return (
     <div
-      className={classNames(styles["text-align"], {
+      className={classNames(styles['text-align'], {
         [styles[`text-align--${align}`]]: align,
       })}
     >
@@ -22,5 +22,5 @@ export default function TextAlign({
 }
 
 TextAlign.defaultProps = {
-  align: "left",
+  align: 'left',
 };

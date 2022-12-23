@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import FormGroup from "components/composition/FormGroup/FormGroup";
-import Grid from "components/composition/Grid/Grid";
-import Spacing from "components/composition/Spacing/Spacing";
-import Wrap from "components/composition/Wrap/Wrap";
-import Icon from "components/content/Icon/Icon";
-import Button from "components/controls/Button/Button";
-import Input from "components/controls/Input/Input";
-import Label from "components/controls/Label/Label";
-import Radio from "components/controls/Radio/Radio";
-import Select from "components/controls/Select/Select";
+import FormGroup from 'components/composition/FormGroup/FormGroup';
+import Grid from 'components/composition/Grid/Grid';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Wrap from 'components/composition/Wrap/Wrap';
+import Icon from 'components/content/Icon/Icon';
+import Button from 'components/controls/Button/Button';
+import Input from 'components/controls/Input/Input';
+import Label from 'components/controls/Label/Label';
+import Radio from 'components/controls/Radio/Radio';
+import Select from 'components/controls/Select/Select';
 
 export default {
-  title: "Docs/Examples",
+  title: 'Docs/Examples',
   parameters: {
     a11y: {
       config: {
         rules: [
           {
             // Temporary disable
-            id: "color-contrast",
+            id: 'color-contrast',
             enabled: false,
           },
         ],

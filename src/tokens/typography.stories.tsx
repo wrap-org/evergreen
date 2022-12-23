@@ -1,16 +1,16 @@
-import { Meta } from "@storybook/react/types-6-0";
-import map from "lodash/map";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import map from 'lodash/map';
+import React from 'react';
 
-import Spacing from "../components/composition/Spacing/Spacing";
-import Text from "../components/content/Text/Text";
+import Spacing from '../components/composition/Spacing/Spacing';
+import Text from '../components/content/Text/Text';
 
-import fonts from "./typography.module.scss";
+import fonts from './typography.module.scss';
 
-import { Sizes } from "src/types/font.type";
+import { Sizes } from 'src/types/font.type';
 
 export default {
-  title: "Tokens/Typography",
+  title: 'Tokens/Typography',
 } as Meta;
 
 export const Typography = () => (

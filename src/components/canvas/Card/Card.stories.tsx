@@ -1,13 +1,13 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react';
 
-import Card from "./Card";
+import Card from './Card';
 
-import Grid from "components/composition/Grid/Grid";
-import Skin, { skins } from "components/composition/Skin/Skin";
+import Grid from 'components/composition/Grid/Grid';
+import Skin, { skins } from 'components/composition/Skin/Skin';
 
 export default {
-  title: "Canvas/Card",
+  title: 'Canvas/Card',
   component: Card,
 } as ComponentMeta<typeof Card>;
 
@@ -45,7 +45,7 @@ export const Border = Template.bind({});
 Border.args = { border: true };
 
 export const Link = Template.bind({});
-Link.args = { border: true, href: "#somewhere" };
+Link.args = { border: true, href: '#somewhere' };
 
 export const Arrow = Template.bind({});
 Arrow.args = { border: true, arrow: true };

@@ -1,15 +1,15 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Alert from "./Alert";
+import Alert from './Alert';
 
-import Grid from "components/composition/Grid/Grid";
-import Skin, { emphasisSkins } from "components/composition/Skin/Skin";
-import Spacing from "components/composition/Spacing/Spacing";
-import Button from "components/controls/Button/Button";
+import Grid from 'components/composition/Grid/Grid';
+import Skin, { emphasisSkins } from 'components/composition/Skin/Skin';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Button from 'components/controls/Button/Button';
 
 export default {
-  title: "Canvas/Alert",
+  title: 'Canvas/Alert',
   component: Alert,
 } as Meta;
 
@@ -41,4 +41,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Alert";
+Default.storyName = 'Alert';

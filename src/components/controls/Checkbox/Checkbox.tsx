@@ -1,18 +1,18 @@
-import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
+import classNames from 'classnames';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { FormControl } from "../../../types/form-control.type";
+import { FormControl } from '../../../types/form-control.type';
 
-import styles from "./Checkbox.module.scss";
+import styles from './Checkbox.module.scss';
 
-import Icon from "components/content/Icon/Icon";
-import { defaultInputProps } from "lib/default-props";
-import useCombinedRefs from "lib/hooks/combined-refs";
+import Icon from 'components/content/Icon/Icon';
+import { defaultInputProps } from 'lib/default-props';
+import useCombinedRefs from 'lib/hooks/combined-refs';
 
 interface CheckboxProps extends FormControl {
   defaultChecked?: boolean;
   forceChecked?: boolean;
-  type?: "default" | "list" | "input";
+  type?: 'default' | 'list' | 'input';
   children: React.ReactNode;
 }
 
@@ -37,7 +37,7 @@ const Checkbox = React.forwardRef(
     const combinedRef = useCombinedRefs(forwardedRef, innerRef);
 
     useEffect(() => {
-      if (typeof forceChecked === "boolean" && forceChecked !== checked) {
+      if (typeof forceChecked === 'boolean' && forceChecked !== checked) {
         setChecked(forceChecked);
       }
     }, [checked, forceChecked]);
@@ -45,10 +45,10 @@ const Checkbox = React.forwardRef(
     return (
       <label
         className={classNames(styles.checkbox, {
-          [styles["checkbox--checked"]]: checked,
-          [styles["checkbox--disabled"]]: disabled,
-          [styles["checkbox--valid"]]: touched && valid === true,
-          [styles["checkbox--invalid"]]: touched && valid === false,
+          [styles['checkbox--checked']]: checked,
+          [styles['checkbox--disabled']]: disabled,
+          [styles['checkbox--valid']]: touched && valid === true,
+          [styles['checkbox--invalid']]: touched && valid === false,
           [styles[`checkbox--type-${type}`]]: type,
           [styles[`checkbox--${status}`]]: status,
         })}
@@ -79,11 +79,11 @@ const Checkbox = React.forwardRef(
 
 Checkbox.defaultProps = {
   ...defaultInputProps,
-  type: "input",
+  type: 'input',
   defaultChecked: false,
   forceChecked: undefined,
 };
 
-Checkbox.displayName = "Checkbox";
+Checkbox.displayName = 'Checkbox';
 
 export default Checkbox;

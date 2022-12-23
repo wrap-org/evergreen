@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import TextAlign from "./TextAlign";
+import TextAlign from './TextAlign';
 
 export default {
-  title: "Composition/Text align",
+  title: 'Composition/Text align',
   component: TextAlign,
 } as Meta;
 
@@ -18,4 +18,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Text align";
+Default.storyName = 'Text align';

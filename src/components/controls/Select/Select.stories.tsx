@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Select from "./Select";
+import Select from './Select';
 
 export default {
-  title: "Controls/Select",
+  title: 'Controls/Select',
   component: Select,
   parameters: {
     a11y: {
@@ -12,12 +12,12 @@ export default {
         rules: [
           {
             // Temporary disable
-            id: "label",
+            id: 'label',
             enabled: false,
           },
           {
             // Temporary disable
-            id: "select-name",
+            id: 'select-name',
             enabled: false,
           },
         ],
@@ -34,4 +34,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Select";
+Default.storyName = 'Select';

@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Spacing from "./Spacing";
+import Spacing from './Spacing';
 
 export default {
-  title: "Composition/Spacing",
+  title: 'Composition/Spacing',
   component: Spacing,
 } as Meta;
 
@@ -16,4 +16,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Spacing";
+Default.storyName = 'Spacing';

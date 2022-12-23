@@ -1,12 +1,12 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import ContainerSvg from "./ContainerSvg";
+import ContainerSvg from './ContainerSvg';
 
-import Grid from "components/composition/Grid/Grid";
+import Grid from 'components/composition/Grid/Grid';
 
 export default {
-  title: "Content/ContainerSvg",
+  title: 'Content/ContainerSvg',
   component: ContainerSvg,
 } as Meta;
 

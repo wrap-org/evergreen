@@ -1,27 +1,27 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Icon from "./Icon";
+import Icon from './Icon';
 
-import Card from "components/canvas/Card/Card";
-import Grid from "components/composition/Grid/Grid";
-import TextAlign from "components/composition/TextAlign/TextAlign";
-import Text from "components/content/Text/Text";
+import Card from 'components/canvas/Card/Card';
+import Grid from 'components/composition/Grid/Grid';
+import TextAlign from 'components/composition/TextAlign/TextAlign';
+import Text from 'components/content/Text/Text';
 
 export default {
-  title: "Content/Icon",
+  title: 'Content/Icon',
   component: Icon,
 } as Meta;
 
 function importAll(r) {
-  return r.keys().map((i) => i.replace("./", "").replace(".svg", ""));
+  return r.keys().map((i) => i.replace('./', '').replace('.svg', ''));
 }
 
 const icons = importAll(
-  require.context("../../../../node_modules/mono-icons/svg/", true, /\.svg$/)
+  require.context('../../../../node_modules/mono-icons/svg/', true, /\.svg$/)
 );
 const customIconNames = importAll(
-  require.context("./custom-icons/", true, /\.svg$/)
+  require.context('./custom-icons/', true, /\.svg$/)
 );
 
 const Template = ({
@@ -29,7 +29,7 @@ const Template = ({
   type,
 }: {
   iconNames: string[];
-  type?: "mono" | "custom";
+  type?: 'mono' | 'custom';
 }) => (
   <Grid wrap>
     {iconNames.map((icon) => (
@@ -51,7 +51,7 @@ const Template = ({
 );
 
 export const Default = () => <Template iconNames={icons} />;
-Default.storyName = "Icon";
+Default.storyName = 'Icon';
 
 export const Custom = () => (
   <Template iconNames={customIconNames} type="custom" />

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./List.module.scss";
+import styles from './List.module.scss';
 
 export interface ListItemProps {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ export interface ListItemProps {
 
 const Item = ({ icon, children, ...props }: ListItemProps) => (
   <li className={styles.list__item} {...props}>
-    {icon ? <div className={styles["list__item-icon"]}>{icon}</div> : null}
+    {icon ? <div className={styles['list__item-icon']}>{icon}</div> : null}
     {children}
   </li>
 );

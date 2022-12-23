@@ -1,13 +1,13 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import FormGroup from "./FormGroup";
+import FormGroup from './FormGroup';
 
-import Input from "components/controls/Input/Input";
-import Label from "components/controls/Label/Label";
+import Input from 'components/controls/Input/Input';
+import Label from 'components/controls/Label/Label';
 
 export default {
-  title: "Composition/Form group",
+  title: 'Composition/Form group',
   component: FormGroup,
 } as Meta;
 
@@ -20,4 +20,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Form group";
+Default.storyName = 'Form group';

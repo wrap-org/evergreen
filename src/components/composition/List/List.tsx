@@ -1,16 +1,16 @@
-import cx from "classnames";
-import React from "react";
+import cx from 'classnames';
+import React from 'react';
 
-import styles from "./List.module.scss";
-import Item from "./ListItem";
+import styles from './List.module.scss';
+import Item from './ListItem';
 
 const List = ({
   children,
-  spacing = "md",
-  as = "ul",
+  spacing = 'md',
+  as = 'ul',
 }: {
   children: React.ReactNode;
-  spacing?: "xs" | "sm" | "md" | "lg" | "xl" | "none";
+  spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
   as?: string;
 }) => {
   const CustomTag = as as keyof JSX.IntrinsicElements;

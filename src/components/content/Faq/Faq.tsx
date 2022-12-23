@@ -1,11 +1,11 @@
-import cx from "classnames";
-import React, { useState } from "react";
+import cx from 'classnames';
+import React, { useState } from 'react';
 
-import styles from "./Faq.module.scss";
+import styles from './Faq.module.scss';
 
-import Card from "components/canvas/Card/Card";
-import Title from "components/content/Title/Title";
-import Collapse from "components/controls/Collapse/Collapse";
+import Card from 'components/canvas/Card/Card';
+import Title from 'components/content/Title/Title';
+import Collapse from 'components/controls/Collapse/Collapse';
 
 interface FaqProps {
   question: React.ReactNode;
@@ -17,7 +17,7 @@ const Faq = ({ question, children }: FaqProps) => {
 
   return (
     <div
-      className={cx(styles.faq, { [styles["faq--open"]]: open })}
+      className={cx(styles.faq, { [styles['faq--open']]: open })}
       itemScope
       itemProp="mainEntity"
       itemType="https://schema.org/Question"

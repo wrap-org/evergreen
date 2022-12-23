@@ -1,4 +1,4 @@
-import { ModerationStatus } from "./moderation-status.type";
+import { ModerationStatus } from './moderation-status.type';
 
 export interface FormControl {
   touched?: boolean;

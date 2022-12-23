@@ -1,29 +1,29 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import styles from "./ContainerSvg.module.scss";
+import styles from './ContainerSvg.module.scss';
 
-import { Colour } from "lib/container";
+import { Colour } from 'lib/container';
 
 interface ContainerSvgProps {
   name: string;
-  lidColour?: Colour | "no-lid";
+  lidColour?: Colour | 'no-lid';
   bodyColour?: Colour;
 }
 
 function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
-  const bodyClassName = classNames(styles["container-svg__body"], {
+  const bodyClassName = classNames(styles['container-svg__body'], {
     [styles[`container-svg__body--colour-${bodyColour}`]]: bodyColour,
   });
-  const lidClassName = classNames(styles["container-svg__lid"], {
+  const lidClassName = classNames(styles['container-svg__lid'], {
     [styles[`container-svg__lid--colour-${lidColour}`]]: lidColour,
   });
 
   switch (name) {
-    case "Box":
+    case 'Box':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 118 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
             d="M115 63H67L68.7586 90.2575C68.8943 92.3623 70.6411 94 72.7503 94H109.25C111.359 94 113.106 92.3623 113.241 90.2575L115 63ZM87 67C85.8954 67 85 67.8954 85 69C85 70.1046 85.8954 71 87 71H95C96.1046 71 97 70.1046 97 69C97 67.8954 96.1046 67 95 67H87Z"
             fill="#2A8CC1"
           />
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M64 60C64 58.8954 64.8954 58 66 58H116C117.105 58 118 58.8954 118 60V62H64V60Z"
@@ -53,15 +53,15 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           )}
         </svg>
       );
-    case "Wheeled Bin":
+    case 'Wheeled Bin':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 64 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M0 4.2578C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.2578Z"
@@ -76,12 +76,12 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           <circle cx="10" cy="88" r="8" fill="#4D6B87" />
         </svg>
       );
-    case "Communal Bin":
-    case "Communal Wheeled Bin":
-    case "Large Wheeled Bin":
+    case 'Communal Bin':
+    case 'Communal Wheeled Bin':
+    case 'Large Wheeled Bin':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 128 126"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -106,14 +106,14 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
             d="M4 18H124L120.454 92.4757C120.2 97.8075 115.803 102 110.465 102H17.5351C12.1972 102 7.80036 97.8075 7.54646 92.4757L4 18Z"
             fill="#2A8CC1"
           />
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M4 12C4 5.37258 9.37258 0 16 0H112C118.627 0 124 5.37258 124 12V16H4V12Z"
               fill="#2A8CC1"
             />
           )}
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M0 12C0 9.79086 1.79086 8 4 8H124C126.209 8 128 9.79086 128 12V16H0V12Z"
@@ -122,10 +122,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           )}
         </svg>
       );
-    case "Inner Caddy":
+    case 'Inner Caddy':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 64 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -148,10 +148,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Kerbside Caddy":
+    case 'Kerbside Caddy':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 100 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
             d="M82.633 67.2929L96.7085 81.435C97.0972 81.8256 97.0972 82.4587 96.7085 82.8492C96.3198 83.2398 95.6896 83.2398 95.3009 82.8492L81.2255 68.7071C80.8368 68.3166 80.8368 67.6834 81.2255 67.2929C81.6142 66.9024 82.2444 66.9024 82.633 67.2929Z"
             fill="#2A8CC1"
           />
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M64 60C64 58.8954 64.8954 58 66 58H98C99.1046 58 100 58.8954 100 60V62H64V60Z"
@@ -184,10 +184,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           )}
         </svg>
       );
-    case "Kitchen Caddy":
+    case 'Kitchen Caddy':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 128 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
             d="M93.633 79.2929L107.708 93.435C108.097 93.8256 108.097 94.4587 107.708 94.8492C107.32 95.2398 106.69 95.2398 106.301 94.8492L92.2255 80.7071C91.8368 80.3166 91.8368 79.6834 92.2255 79.2929C92.6142 78.9024 93.2444 78.9024 93.633 79.2929Z"
             fill="#2A8CC1"
           />
-          {lidColour !== "no-lid" && (
+          {lidColour !== 'no-lid' && (
             <path
               className={lidClassName}
               d="M75 72C75 70.8954 75.8954 70 77 70H109C110.105 70 111 70.8954 111 72V74H75V72Z"
@@ -232,11 +232,11 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           )}
         </svg>
       );
-    case "Reusable Sack":
-    case "Non-Reusable Sack":
+    case 'Reusable Sack':
+    case 'Non-Reusable Sack':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 101 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -257,11 +257,11 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Householder Provides":
-    case "Householder Provided Carrier Bag":
+    case 'Householder Provides':
+    case 'Householder Provided Carrier Bag':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 104 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -289,10 +289,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Trollibox":
+    case 'Trollibox':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 65 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -342,10 +342,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           <circle cx="9.73975" cy="88" r="8" fill="#4D6B87" />
         </svg>
       );
-    case "Single Sack":
+    case 'Single Sack':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 64 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -357,10 +357,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Skip":
+    case 'Skip':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 160 78"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -384,10 +384,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Front End Load":
+    case 'Front End Load':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 104 97"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -421,10 +421,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Rear End Loader":
+    case 'Rear End Loader':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 197 76"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -457,10 +457,10 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
         </svg>
       );
-    case "Roll On Roll Off":
+    case 'Roll On Roll Off':
       return (
         <svg
-          className={styles["container-svg"]}
+          className={styles['container-svg']}
           viewBox="0 0 160 88"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -510,8 +510,8 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
 }
 
 ContainerSvg.defaultProps = {
-  bodyColour: "blue",
-  lidColour: "blue",
+  bodyColour: 'blue',
+  lidColour: 'blue',
 };
 
 export default ContainerSvg;

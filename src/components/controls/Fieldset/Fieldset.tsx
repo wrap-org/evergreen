@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Fieldset.module.scss";
-import Legend from "./Legend";
+import styles from './Fieldset.module.scss';
+import Legend from './Legend';
 
 function Fieldset({
   children,

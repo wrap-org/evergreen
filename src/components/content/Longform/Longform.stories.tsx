@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Longform from "./Longform";
+import Longform from './Longform';
 
 export default {
-  title: "Content/Longform",
+  title: 'Content/Longform',
   component: Longform,
 } as Meta;
 
@@ -85,4 +85,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Longform";
+Default.storyName = 'Longform';

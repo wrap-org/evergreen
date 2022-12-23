@@ -1,22 +1,22 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import styles from "./Grid.module.scss";
+import styles from './Grid.module.scss';
 
 export interface GridItemProps {
   children?: React.ReactNode;
   grow?: boolean;
   shrink?: boolean;
   align?: string;
-  xs?: number | "auto";
-  sm?: number | "auto";
-  md?: number | "auto";
-  lg?: number | "auto";
-  xl?: number | "auto";
-  xxl?: number | "auto";
-  xxxl?: number | "auto";
-  max?: number | "auto";
-  desktop?: number | "auto";
+  xs?: number | 'auto';
+  sm?: number | 'auto';
+  md?: number | 'auto';
+  lg?: number | 'auto';
+  xl?: number | 'auto';
+  xxl?: number | 'auto';
+  xxxl?: number | 'auto';
+  max?: number | 'auto';
+  desktop?: number | 'auto';
   flex?: boolean;
   order?: {
     xs?: number;
@@ -49,8 +49,8 @@ const Item = ({
   order = {},
 }: GridItemProps) => {
   const cx = classNames(styles.grid__item, {
-    [styles["grid__item--grow"]]: grow,
-    [styles["grid__item--shrink"]]: shrink,
+    [styles['grid__item--grow']]: grow,
+    [styles['grid__item--shrink']]: shrink,
     [styles[`grid__item--align-${align}`]]: align,
     [styles[`grid__item--xs-${xs}`]]: xs,
     [styles[`grid__item--sm-${sm}`]]: sm,
@@ -61,7 +61,7 @@ const Item = ({
     [styles[`grid__item--xxxl-${xxxl}`]]: xxxl,
     [styles[`grid__item--max-${max}`]]: max,
     [styles[`grid__item--desktop-${desktop}`]]: desktop,
-    [styles["grid__item--flex"]]: flex,
+    [styles['grid__item--flex']]: flex,
     [styles[`grid__item--order-xs-${order.xs}`]]: order.xs,
     [styles[`grid__item--order-sm-${order.sm}`]]: order.sm,
     [styles[`grid__item--order-md-${order.md}`]]: order.md,

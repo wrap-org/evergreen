@@ -1,19 +1,19 @@
-import A11yDialogInstance from "a11y-dialog";
-import classnames from "classnames";
-import React from "react";
-import { A11yDialog, A11yDialogProps } from "react-a11y-dialog";
+import A11yDialogInstance from 'a11y-dialog';
+import classnames from 'classnames';
+import React from 'react';
+import { A11yDialog, A11yDialogProps } from 'react-a11y-dialog';
 
-import { Breakpoints } from "../../../types/breakpoints.type";
+import { Breakpoints } from '../../../types/breakpoints.type';
 
-import styles from "./Modal.module.scss";
-import Header from "./ModalHeader";
-import Inner from "./ModalInner";
+import styles from './Modal.module.scss';
+import Header from './ModalHeader';
+import Inner from './ModalInner';
 
 export type ModalInstance = A11yDialogInstance;
 
-interface ModalProps extends Pick<A11yDialogProps, "id" | "title" | "role"> {
+interface ModalProps extends Pick<A11yDialogProps, 'id' | 'title' | 'role'> {
   children: React.ReactNode;
-  size?: Breakpoints | "auto";
+  size?: Breakpoints | 'auto';
   /**
    * Called when the modal has mounted and the ref has been setup
    */
@@ -22,7 +22,7 @@ interface ModalProps extends Pick<A11yDialogProps, "id" | "title" | "role"> {
 
 const Modal = React.forwardRef<any, ModalProps>(
   (
-    { children, size = "auto", onModalMounted, ...a11yDialogProps },
+    { children, size = 'auto', onModalMounted, ...a11yDialogProps },
     ref: React.ForwardedRef<ModalInstance>
   ) => {
     const dialogClasses = classnames(styles.modal__dialog, {
@@ -30,11 +30,11 @@ const Modal = React.forwardRef<any, ModalProps>(
     });
 
     const setupRef = (instance: ModalInstance) => {
-      if (typeof ref !== "function" && ref) {
+      if (typeof ref !== 'function' && ref) {
         // eslint-disable-next-line no-param-reassign
         ref.current = instance;
 
-        if (typeof onModalMounted === "function") {
+        if (typeof onModalMounted === 'function') {
           onModalMounted(ref as React.MutableRefObject<ModalInstance>);
         }
       }
@@ -58,7 +58,7 @@ const Modal = React.forwardRef<any, ModalProps>(
   }
 );
 
-Modal.displayName = "Modal";
+Modal.displayName = 'Modal';
 
 export const useModalRef = () => React.useRef<ModalInstance>();
 

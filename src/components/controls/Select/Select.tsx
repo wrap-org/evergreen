@@ -1,12 +1,12 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import { FormControl } from "../../../types/form-control.type";
+import { FormControl } from '../../../types/form-control.type';
 
-import styles from "./Select.module.scss";
+import styles from './Select.module.scss';
 
-import Icon from "components/content/Icon/Icon";
-import { defaultInputProps } from "lib/default-props";
+import Icon from 'components/content/Icon/Icon';
+import { defaultInputProps } from 'lib/default-props';
 
 interface SelectProps extends FormControl {
   children: React.ReactNode;
@@ -19,9 +19,9 @@ const Select = React.forwardRef(
   ) => (
     <div
       className={classNames(styles.select, {
-        [styles["select--disabled"]]: disabled,
-        [styles["select--valid"]]: touched && valid === true,
-        [styles["select--invalid"]]: touched && valid === false,
+        [styles['select--disabled']]: disabled,
+        [styles['select--valid']]: touched && valid === true,
+        [styles['select--invalid']]: touched && valid === false,
         [styles[`select--${status}`]]: status,
       })}
     >
@@ -42,6 +42,6 @@ const Select = React.forwardRef(
 
 Select.defaultProps = defaultInputProps;
 
-Select.displayName = "Select";
+Select.displayName = 'Select';
 
 export default Select;

@@ -1,11 +1,11 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Fieldset from "./Fieldset";
-import Legend from "./Legend";
+import Fieldset from './Fieldset';
+import Legend from './Legend';
 
 export default {
-  title: "Controls/Fieldset",
+  title: 'Controls/Fieldset',
   component: Fieldset,
   subcomponents: {
     Legend,
@@ -21,4 +21,4 @@ export function Default() {
   );
 }
 
-Default.storyName = "Feidlset";
+Default.storyName = 'Feidlset';

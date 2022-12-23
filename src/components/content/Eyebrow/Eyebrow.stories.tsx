@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Eyebrow from "./Eyebrow";
+import Eyebrow from './Eyebrow';
 
 export default {
-  title: "Content/Eyebrow",
+  title: 'Content/Eyebrow',
   component: Eyebrow,
 } as Meta;
 
@@ -19,4 +19,4 @@ export const Default = () => (
   </>
 );
 
-Default.storyName = "Eyebrow";
+Default.storyName = 'Eyebrow';

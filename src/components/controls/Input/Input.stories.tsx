@@ -1,12 +1,12 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Icon from "../../content/Icon/Icon";
+import Icon from '../../content/Icon/Icon';
 
-import Input from "./Input";
+import Input from './Input';
 
 export default {
-  title: "Controls/Input",
+  title: 'Controls/Input',
   component: Input,
   parameters: {
     a11y: {
@@ -14,7 +14,7 @@ export default {
         rules: [
           {
             // Temporary disable
-            id: "label",
+            id: 'label',
             enabled: false,
           },
         ],

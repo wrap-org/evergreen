@@ -1,10 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import React from "react";
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import Lead from "./Lead";
+import Lead from './Lead';
 
 export default {
-  title: "Content/Lead",
+  title: 'Content/Lead',
   component: Lead,
 } as Meta;
 
@@ -15,4 +15,4 @@ export const Default = () => (
   </>
 );
 
-Default.storyName = "Lead";
+Default.storyName = 'Lead';

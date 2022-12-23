@@ -1,11 +1,11 @@
-import classNames from "classnames";
-import React from "react";
+import classNames from 'classnames';
+import React from 'react';
 
-import { FormControl } from "../../../types/form-control.type";
+import { FormControl } from '../../../types/form-control.type';
 
-import styles from "./Input.module.scss";
+import styles from './Input.module.scss';
 
-import { defaultInputProps } from "lib/default-props";
+import { defaultInputProps } from 'lib/default-props';
 
 interface InputProps extends FormControl {
   icon?: string;
@@ -21,9 +21,9 @@ const Input = React.forwardRef(
   ) => (
     <div
       className={classNames(styles.input, {
-        [styles["input--disabled"]]: disabled,
-        [styles["input--valid"]]: touched && valid === true,
-        [styles["input--invalid"]]: touched && valid === false,
+        [styles['input--disabled']]: disabled,
+        [styles['input--valid']]: touched && valid === true,
+        [styles['input--invalid']]: touched && valid === false,
         [styles[`input--${status}`]]: status,
       })}
     >
@@ -44,6 +44,6 @@ Input.defaultProps = {
   icon: undefined,
 };
 
-Input.displayName = "Input";
+Input.displayName = 'Input';
 
 export default Input;
