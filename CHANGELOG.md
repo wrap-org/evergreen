@@ -1,3 +1,10 @@
+## [6.3.0](https://github.com/etchteam/mobius/compare/v6.2.1...v6.3.0) (2022-12-22)
+
+
+### Features
+
+* type the container svg name prop ([f18e215](https://github.com/etchteam/mobius/commit/f18e215d00a810bd3d005b696b6836dd783b305d))
+
 ### [6.2.1](https://github.com/etchteam/mobius/compare/v6.2.0...v6.2.1) (2022-12-21)
 
 

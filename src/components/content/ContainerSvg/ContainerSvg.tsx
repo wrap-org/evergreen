@@ -6,7 +6,25 @@ import styles from './ContainerSvg.module.scss';
 import { Colour } from 'lib/container';
 
 interface ContainerSvgProps {
-  name: string;
+  name:
+  | 'Box'
+  | 'Wheeled Bin'
+  | 'Communal Bin'
+  | 'Communal Wheeled Bin'
+  | 'Large Wheeled Bin'
+  | 'Inner Caddy'
+  | 'Kerbside Caddy'
+  | 'Kitchen Caddy'
+  | 'Reusable Sack'
+  | 'Non-Reusable Sack'
+  | 'Householder Provides'
+  | 'Householder Provided Carrier Bag'
+  | 'Trollibox'
+  | 'Single Sack'
+  | 'Skip'
+  | 'Front End Load'
+  | 'Rear End Loader'
+  | 'Roll On Roll Off';
   lidColour?: Colour | 'no-lid';
   bodyColour?: Colour;
 }
