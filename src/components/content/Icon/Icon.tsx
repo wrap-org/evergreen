@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import React, { useState, useEffect } from 'react';
 
-import { Sizes } from '../../../types/font.type';
 import { Colors } from '../../../types/colors.type';
+import { Sizes } from '../../../types/font.type';
 
 import styles from './Icon.module.scss';
 
@@ -48,9 +48,14 @@ function Icon({
   const [iconImport, setIcon] = useState(defaultIcon);
   useEffect(() => {
     const fetchIcon = async () => {
-      const dynamicIcon = type === 'custom'
-        ? await import(`!!@svgr/webpack?{ svgo: false }!./custom-icons/${icon}.svg`)
-        : await import(`!!@svgr/webpack?{ svgo: false }!mono-icons/svg/${icon}.svg`);
+      const dynamicIcon =
+        type === 'custom'
+          ? await import(
+              `!!@svgr/webpack?{ svgo: false }!./custom-icons/${icon}.svg`
+            )
+          : await import(
+              `!!@svgr/webpack?{ svgo: false }!mono-icons/svg/${icon}.svg`
+            );
       setIcon(dynamicIcon);
     };
 
@@ -69,7 +74,7 @@ function Icon({
       title={title}
       aria-hidden={!title}
     >
-      {IconSVG && (<IconSVG />)}
+      {IconSVG && <IconSVG />}
     </span>
   );
 }

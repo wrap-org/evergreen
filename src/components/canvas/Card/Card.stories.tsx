@@ -1,10 +1,10 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
-import Skin, { skins } from 'components/composition/Skin/Skin';
-import Grid from 'components/composition/Grid/Grid';
+import React from 'react';
 
 import Card from './Card';
+
+import Grid from 'components/composition/Grid/Grid';
+import Skin, { skins } from 'components/composition/Skin/Skin';
 
 export default {
   title: 'Canvas/Card',
@@ -21,15 +21,16 @@ const Template: ComponentStory<typeof Card> = (args) => (
               <h2>Card title</h2>
             </Card.Header>
             <Card.Body>
-              Aliquam egestas mi quam, a tincidunt lectus faucibus euismod. Pellentesque et metus
-              nunc. Fusce ante arcu, mattis pretium semper ac, pretium vitae velit. Donec vitae
-              eros et arcu accumsan auctor at id ipsum. Aliquam finibus, mi ac tincidunt blandit,
-              purus elit ornare dui, nec dignissim mi ante sit amet mauris. Nulla eget dui in
-              mauris tempus tincidunt a eget enim. Proin eu neque lorem. Sed quis tellus magna.
-              Nunc scelerisque nisi eget dictum laoreet. Nullam aliquam et massa id euismod.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla vehicula ornare
-              ligula nec rutrum. Maecenas convallis
-              rutrum metus sed ultricies.
+              Aliquam egestas mi quam, a tincidunt lectus faucibus euismod.
+              Pellentesque et metus nunc. Fusce ante arcu, mattis pretium semper
+              ac, pretium vitae velit. Donec vitae eros et arcu accumsan auctor
+              at id ipsum. Aliquam finibus, mi ac tincidunt blandit, purus elit
+              ornare dui, nec dignissim mi ante sit amet mauris. Nulla eget dui
+              in mauris tempus tincidunt a eget enim. Proin eu neque lorem. Sed
+              quis tellus magna. Nunc scelerisque nisi eget dictum laoreet.
+              Nullam aliquam et massa id euismod. Interdum et malesuada fames ac
+              ante ipsum primis in faucibus. Nulla vehicula ornare ligula nec
+              rutrum. Maecenas convallis rutrum metus sed ultricies.
             </Card.Body>
           </Card>
         </Skin>

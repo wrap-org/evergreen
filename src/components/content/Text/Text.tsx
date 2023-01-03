@@ -1,8 +1,8 @@
-import React from 'react';
 import classnames from 'classnames';
+import React from 'react';
 
-import { Sizes, Weights } from '../../../types/font.type';
 import { Colors } from '../../../types/colors.type';
+import { Sizes, Weights } from '../../../types/font.type';
 
 import styles from './Text.module.scss';
 
@@ -19,13 +19,19 @@ export interface TextProps {
   [key: string]: any;
 }
 
-const Text = (
-  {
-    children, as, align, display, weight, size, color, flush, transform, ...props
-  }:
-  TextProps,
-) => {
-  const CustomTag = as ?? 'span' as keyof JSX.IntrinsicElements;
+const Text = ({
+  children,
+  as,
+  align,
+  display,
+  weight,
+  size,
+  color,
+  flush,
+  transform,
+  ...props
+}: TextProps) => {
+  const CustomTag = as ?? ('span' as keyof JSX.IntrinsicElements);
   const classes = classnames(styles.text, {
     [styles[`text--display-${display}`]]: display,
     [styles[`text--align-${align}`]]: align,

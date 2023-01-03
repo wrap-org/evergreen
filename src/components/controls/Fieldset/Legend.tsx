@@ -10,10 +10,7 @@ function Legend({
   [x: string]: any;
 }) {
   return (
-    <legend
-      className={styles.fieldset__legend}
-      {...props}
-    >
+    <legend className={styles.fieldset__legend} {...props}>
       {children}
     </legend>
   );

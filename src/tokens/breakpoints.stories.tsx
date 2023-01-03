@@ -1,6 +1,7 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import map from 'lodash/map';
+import React from 'react';
+
 import Spacing from '../components/composition/Spacing/Spacing';
 
 import breakpoints from './breakpoints.module.scss';

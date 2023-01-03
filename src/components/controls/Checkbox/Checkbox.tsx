@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { defaultInputProps } from 'lib/default-props';
-import useCombinedRefs from 'lib/hooks/combined-refs';
-
-import Icon from 'components/content/Icon/Icon';
 import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Checkbox.module.scss';
+
+import Icon from 'components/content/Icon/Icon';
+import { defaultInputProps } from 'lib/default-props';
+import useCombinedRefs from 'lib/hooks/combined-refs';
 
 interface CheckboxProps extends FormControl {
   defaultChecked?: boolean;
@@ -16,66 +16,66 @@ interface CheckboxProps extends FormControl {
   children: React.ReactNode;
 }
 
-const Checkbox = React.forwardRef((
-  {
-    defaultChecked = false,
-    forceChecked,
-    type,
-    children,
-    disabled,
-    touched,
-    valid,
-    status,
-    onChange,
-    ...props
-  }: CheckboxProps,
-  forwardedRef: any,
-) => {
-  const [checked, setChecked] = useState<boolean>(defaultChecked);
-  const innerRef = useRef(null);
-  const combinedRef = useCombinedRefs(forwardedRef, innerRef);
+const Checkbox = React.forwardRef(
+  (
+    {
+      defaultChecked = false,
+      forceChecked,
+      type,
+      children,
+      disabled,
+      touched,
+      valid,
+      status,
+      onChange,
+      ...props
+    }: CheckboxProps,
+    forwardedRef: any
+  ) => {
+    const [checked, setChecked] = useState<boolean>(defaultChecked);
+    const innerRef = useRef(null);
+    const combinedRef = useCombinedRefs(forwardedRef, innerRef);
 
-  useEffect(() => {
-    if (typeof forceChecked === 'boolean' && forceChecked !== checked) {
-      setChecked(forceChecked);
-    }
-  }, [checked, forceChecked]);
+    useEffect(() => {
+      if (typeof forceChecked === 'boolean' && forceChecked !== checked) {
+        setChecked(forceChecked);
+      }
+    }, [checked, forceChecked]);
 
-  return (
-    <label
-      className={classNames(styles.checkbox, {
-        [styles['checkbox--checked']]: checked,
-        [styles['checkbox--disabled']]: disabled,
-        [styles['checkbox--valid']]: touched && valid === true,
-        [styles['checkbox--invalid']]: touched && valid === false,
-        [styles[`checkbox--type-${type}`]]: type,
-        [styles[`checkbox--${status}`]]: status,
-      })}
-    >
-      <input
-        type="checkbox"
-        className={styles.checkbox__input}
-        checked={checked}
-        onChange={(event) => {
-          setChecked(event.target.checked);
-          if (onChange) {
-            onChange(event);
-          }
-        }}
-        {...props}
-        ref={combinedRef}
-      />
-      <span className={styles.checkbox__indicator}>
-        <span className={styles.checkbox__check}>
-          <Icon icon="check" />
+    return (
+      <label
+        className={classNames(styles.checkbox, {
+          [styles['checkbox--checked']]: checked,
+          [styles['checkbox--disabled']]: disabled,
+          [styles['checkbox--valid']]: touched && valid === true,
+          [styles['checkbox--invalid']]: touched && valid === false,
+          [styles[`checkbox--type-${type}`]]: type,
+          [styles[`checkbox--${status}`]]: status,
+        })}
+      >
+        <input
+          type="checkbox"
+          className={styles.checkbox__input}
+          checked={checked}
+          onChange={(event) => {
+            setChecked(event.target.checked);
+            if (onChange) {
+              onChange(event);
+            }
+          }}
+          {...props}
+          ref={combinedRef}
+        />
+        <span className={styles.checkbox__indicator}>
+          <span className={styles.checkbox__check}>
+            <Icon icon="check" />
+          </span>
         </span>
-      </span>
-      <span className={styles.checkbox__content}>
-        {children}
-      </span>
-    </label>
-  );
-});
+        <span className={styles.checkbox__content}>{children}</span>
+      </label>
+    );
+  }
+);
 
 Checkbox.defaultProps = {
   ...defaultInputProps,

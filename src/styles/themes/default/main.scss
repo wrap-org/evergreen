@@ -4,4 +4,3 @@
 $skins: light, dark, neutral, positive, negative, attention;
 
 @include skin.create-skins($skins);
-

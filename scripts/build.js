@@ -1,12 +1,15 @@
 #!/usr/bin/env node
-const rollup = require('rollup');
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const path = require('path');
-const resolve = require('@rollup/plugin-node-resolve').default;
+
 const babel = require('@rollup/plugin-babel').default;
-const typescript = require('@rollup/plugin-typescript').default;
-const postcss = require('rollup-plugin-postcss');
 const commonjs = require('@rollup/plugin-commonjs');
+const resolve = require('@rollup/plugin-node-resolve').default;
+const typescript = require('@rollup/plugin-typescript').default;
+const rollup = require('rollup');
 const copy = require('rollup-plugin-copy');
+const postcss = require('rollup-plugin-postcss');
 
 // see below for details on the options
 const inputOptions = {
@@ -32,7 +35,10 @@ const inputOptions = {
     // Get the custom icons
     copy({
       targets: [
-        { src: 'src/components/content/Icon/custom-icons/**/*', dest: 'dist/custom-icons' },
+        {
+          src: 'src/components/content/Icon/custom-icons/**/*',
+          dest: 'dist/custom-icons',
+        },
       ],
     }),
   ],

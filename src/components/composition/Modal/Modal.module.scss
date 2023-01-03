@@ -42,7 +42,8 @@
   }
 
   &__dialog {
-    animation: fade-in-scale transition.$duration (transition.$duration / 2) both transition.$timing;
+    animation: fade-in-scale transition.$duration (transition.$duration / 2)
+      both transition.$timing;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
     max-height: 100vh;

@@ -1,13 +1,12 @@
 /* eslint-disable react/prefer-stateless-function */
-import React from 'react';
 import classNames from 'classnames';
-
-import Icon from 'components/content/Icon/Icon';
-
-import CardHeader from './CardHeader';
-import CardBody from './CardBody';
+import React from 'react';
 
 import styles from './Card.module.scss';
+import CardBody from './CardBody';
+import CardHeader from './CardHeader';
+
+import Icon from 'components/content/Icon/Icon';
 
 export interface CardProps {
   children: React.ReactNode;
@@ -15,7 +14,7 @@ export interface CardProps {
   href?: string;
   onClick?: any;
   id?: string;
-  [x:string]: any;
+  [x: string]: any;
   arrow?: boolean;
   shadow?: boolean;
   control?: boolean;

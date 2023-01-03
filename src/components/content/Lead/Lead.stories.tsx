@@ -1,5 +1,5 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
 import Lead from './Lead';
 
@@ -11,9 +11,7 @@ export default {
 export const Default = () => (
   <>
     <h1>Page title</h1>
-    <Lead>
-      Lead text is a bit bigger.
-    </Lead>
+    <Lead>Lead text is a bit bigger.</Lead>
   </>
 );
 

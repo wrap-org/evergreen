@@ -1,8 +1,9 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import map from 'lodash/map';
-import Grid from '../components/composition/Grid/Grid';
+import React from 'react';
+
 import Card from '../components/canvas/Card/Card';
+import Grid from '../components/composition/Grid/Grid';
 import Text from '../components/content/Text/Text';
 
 import colors from './container-colors.module.scss';

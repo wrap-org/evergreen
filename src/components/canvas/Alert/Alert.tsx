@@ -1,9 +1,9 @@
-import React from 'react';
 import classNames from 'classnames';
-
-import Icon from 'components/content/Icon/Icon';
+import React from 'react';
 
 import styles from './Alert.module.scss';
+
+import Icon from 'components/content/Icon/Icon';
 
 export default function Alert({
   type,
@@ -11,7 +11,7 @@ export default function Alert({
   onClose,
 }: {
   type?: 'positive' | 'negative' | 'neutral' | 'attention';
-  children: React.ReactNode
+  children: React.ReactNode;
   onClose?: () => void;
 }) {
   return (

@@ -1,5 +1,5 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
 
 import Fieldset from './Fieldset';
 import Legend from './Legend';
@@ -15,10 +15,8 @@ export default {
 export function Default() {
   return (
     <Fieldset>
-      <Fieldset.Legend>
-        Legend
-      </Fieldset.Legend>
-      A group of form fields usually go here
+      <Fieldset.Legend>Legend</Fieldset.Legend>A group of form fields usually go
+      here
     </Fieldset>
   );
 }

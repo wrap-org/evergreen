@@ -1,9 +1,14 @@
 import React from 'react';
 
-import { Container as ContainerType, getColourName, Colour } from 'lib/container';
-
 import ContainerSvg from '../ContainerSvg/ContainerSvg';
+
 import styles from './Container.module.scss';
+
+import {
+  Container as ContainerType,
+  getColourName,
+  Colour,
+} from 'lib/container';
 
 export default function Container({
   name,
