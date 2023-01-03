@@ -1,0 +1,16 @@
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/breakpoint';
+
+.form-group {
+  &--horizontal {
+    @media (min-width: breakpoint.$tablet) {
+      display: flex;
+      gap: spacing.$horizontal;
+
+      .form-group__label,
+      .form-group__control {
+        width: 50%;
+      }
+    }
+  }
+}

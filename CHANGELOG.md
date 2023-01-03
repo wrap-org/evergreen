@@ -1,3 +1,10 @@
+## [6.4.0](https://github.com/etchteam/mobius/compare/v6.3.0...v6.4.0) (2022-12-23)
+
+
+### Features
+
+* horizontal form group ([b5253fc](https://github.com/etchteam/mobius/commit/b5253fcde02d2f217701d76d1bd44e96cfba4db9))
+
 ## [6.3.0](https://github.com/etchteam/mobius/compare/v6.2.1...v6.3.0) (2022-12-22)
 
 
