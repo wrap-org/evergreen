@@ -1,3 +1,10 @@
+### [6.5.1](https://github.com/etchteam/mobius/compare/v6.5.0...v6.5.1) (2023-01-11)
+
+
+### Bug Fixes
+
+* disabled property on radio control ([6c2fa82](https://github.com/etchteam/mobius/commit/6c2fa82e7ca21d51a0575fd9375d3b6988990a56))
+
 ## [6.5.0](https://github.com/etchteam/mobius/compare/v6.4.2...v6.5.0) (2023-01-11)
 
 
