@@ -1,3 +1,10 @@
+### [6.5.2](https://github.com/etchteam/mobius/compare/v6.5.1...v6.5.2) (2023-01-11)
+
+
+### Bug Fixes
+
+* datepicker z index ([a948860](https://github.com/etchteam/mobius/commit/a948860779fbf892d47e3f92a0ec1f61e8dc80c5))
+
 ### [6.5.1](https://github.com/etchteam/mobius/compare/v6.5.0...v6.5.1) (2023-01-11)
 
 
