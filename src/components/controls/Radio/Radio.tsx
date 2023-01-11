@@ -47,6 +47,7 @@ const Radio = React.forwardRef(
         type="radio"
         className={styles.radio__input}
         checked={checked}
+        disabled={disabled}
         onChange={(event) => {
           if (onRadioChange) {
             onRadioChange(event);

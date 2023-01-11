@@ -15,6 +15,10 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
     @include forms.checked;
   }
 
+  &--disabled {
+    @include forms.input-disabled;
+  }
+
   &__input {
     @include screen-reader.sr-only;
   }
