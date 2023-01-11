@@ -1,3 +1,10 @@
+### [6.4.2](https://github.com/etchteam/mobius/compare/v6.4.1...v6.4.2) (2023-01-11)
+
+
+### Bug Fixes
+
+* stop mergify asking for reviews on draft prs ([af1b35a](https://github.com/etchteam/mobius/commit/af1b35acfc2f87bfae6991ec8fd3cd2b1fc045be))
+
 ### [6.4.1](https://github.com/etchteam/mobius/compare/v6.4.0...v6.4.1) (2023-01-03)
 
 
