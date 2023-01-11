@@ -3,38 +3,136 @@
 @use '../../../styles/variables/input';
 @use '../../../styles/variables/spacing';
 @use '../../../styles/variables/color';
+@use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
 
 .date-picker {
-  --rdp-cell-size: 40px;
-  --rdp-accent-color: #00f;
-  --rdp-background-color: #e7edff;
-  --rdp-accent-color-dark: #3003e1;
-  --rdp-background-color-dark: #180270;
-  --rdp-outline: 2px solid var(--rdp-accent-color);
-  --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75);
-
   @include forms.input;
 
-  &__icon {
-    align-self: center;
-    background: none;
+  &__button {
+    background: input.$background;
     border: 0 none;
+    border-bottom-left-radius: input.$border-radius;
+    border-right: 1px solid input.$border;
+    border-top-left-radius: input.$border-radius;
     color: color.$blue-dark;
     cursor: pointer;
     font-size: font.$size-xl;
-    line-height: 1;
-    margin-right: -(math.div(input.$padding-horizontal, 2));
-    padding: 0 0 0 math.div(input.$padding-horizontal, 2);
+    line-height: 1.75;
+    padding: 0 math.div(input.$padding-horizontal, 2) 0 math.div(input.$padding-horizontal, 2);
+    transition: background transition.$duration transition.$timing,
+      border-color transition.$duration transition.$timing;
 
+    &:hover,
     &:focus {
-      outline: none;
+      background: color.$white;
+      border-color: input.$border-hover;
     }
   }
 
   &__input {
     @include forms.ninja-input;
     @include forms.input-padding;
+  }
+
+  &__daypicker {
+    --rdp-cell-size: 2rem;
+    --rdp-accent-color: #{color.$blue};
+    --rdp-background-color: #{color.$blue-light}; // hover color
+    --rdp-outline: 2px solid var(--rdp-accent-color);
+
+    background: color.$white;
+    border: 1px solid input.$border;
+    border-radius: input.$border-radius;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
+    margin-top: spacing.$vertical-sm;
+    padding: spacing.$vertical spacing.$horizontal;
+    position: relative;
+    z-index: 1;
+
+    &-caption {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 spacing.$horizontal-sm spacing.$vertical-sm;
+      text-align: left;
+    }
+
+    &-caption-label {
+      color: color.$blue-dark;
+      font-size: font.$size-sm;
+      font-weight: font.$weight-bold;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    &-head-cell {
+      color: color.$blue-dark;
+      font-size: font.$size-sm;
+      font-weight: font.$weight-base;
+      height: var(--rdp-cell-size);
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    &-cell {
+      padding: spacing.$vertical-xs spacing.$horizontal-xs;
+    }
+
+    &-day {
+      border-radius: input.$border-radius;
+      color: color.$blue-darkest;
+      font-size: font.$size-sm;
+      height: var(--rdp-cell-size);
+      text-align: center;
+      transition: background transition.$duration transition.$timing;
+      width: var(--rdp-cell-size);
+
+      &:focus {
+        outline: var(--rdp-outline);
+      }
+    }
+
+    &-day-selected {
+      &,
+      &:hover,
+      &:focus {
+        background: color.$blue !important;
+        color: color.$white !important;
+      }
+    }
+
+    &-nav-button {
+      align-items: center;
+      border-radius: input.$border-radius;
+      color: color.$blue;
+      display: inline-flex;
+      height: 1.65rem;
+      justify-content: center;
+      padding: spacing.$vertical-xs spacing.$horizontal-xs;
+      width: 1.65rem;
+
+      &:focus {
+        outline: var(--rdp-outline);
+      }
+    }
+
+    &-dropdown-month {
+      align-items: center;
+      display: inline-flex;
+      margin-right: spacing.$horizontal;
+      position: relative;
+    }
+
+    &-dropdown-icon {
+      color: color.$blue;
+      height: font.$size-sm;
+      margin: 0 0 0 spacing.$horizontal-xs;
+      width: font.$size-sm;
+    }
   }
 
   &--disabled {

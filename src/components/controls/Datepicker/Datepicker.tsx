@@ -9,14 +9,26 @@ import FocusTrap from 'focus-trap-react';
 import { usePopper } from 'react-popper';
 
 import Icon from 'components/content/Icon/Icon';
+import dayPickerStyles from 'react-day-picker/dist/style.module.css';
 import { FormControl } from '../../../types/form-control.type';
 
-import 'react-day-picker/dist/style.css';
 import styles from './Datepicker.module.scss';
+
+export enum Format {
+  DAY = 'dd/MM',
+  DATE = 'dd/MM/yyyy',
+  MONTH = 'MM/yyyy',
+  YEAR = 'yyyy',
+}
 
 interface DatepickerProps extends FormControl {
   value?: string;
   onChange?: (value: string) => void;
+  type?: 'date' | 'day' | 'month' | 'year';
+  fromMonth?: Date;
+  toMonth?: Date;
+  fromYear?: number;
+  toYear?: number;
   [key: string]: any;
 }
 
@@ -28,6 +40,11 @@ const Datepicker = React.forwardRef((
     status,
     value,
     onChange,
+    type = 'date',
+    fromYear,
+    toYear,
+    fromMonth,
+    toMonth,
     ...props
   }: DatepickerProps,
   ref: any,
@@ -40,16 +57,18 @@ const Datepicker = React.forwardRef((
   const popper = usePopper(popperRef.current, popperElement, {
     placement: 'bottom-start',
   });
+  const dateFormat = Format[type.toLocaleUpperCase()];
+  const thisYear = new Date().getFullYear();
 
   useEffect(() => {
-    const date = parse(value ?? '', 'dd-MM-y', new Date());
+    const date = parse(value ?? '', dateFormat, new Date());
 
     if (isValid(date)) {
       setSelected(date);
     } else {
       setSelected(undefined);
     }
-  }, [value]);
+  }, [dateFormat, value]);
 
   const closePopper = useCallback(() => {
     setIsPopperOpen(false);
@@ -63,7 +82,7 @@ const Datepicker = React.forwardRef((
   const handleDaySelect = (date?: Date) => {
     setSelected(date);
     if (date) {
-      onChange?.(format(date, 'dd-MM-y'));
+      onChange?.(format(date, dateFormat));
       closePopper();
     } else {
       onChange?.('');
@@ -89,14 +108,14 @@ const Datepicker = React.forwardRef((
           ref={buttonRef}
           type="button"
           aria-label="Pick a date"
-          className={styles['date-picker__icon']}
+          className={styles['date-picker__button']}
           onClick={handleButtonClick}
         >
           <Icon icon="calendar" />
         </button>
         <input
           type="text"
-          placeholder={format(new Date(), 'y-MM-dd')}
+          placeholder={dateFormat.toLocaleUpperCase()}
           value={value}
           onChange={handleInputChange}
           className={styles['date-picker__input']}
@@ -130,6 +149,24 @@ const Datepicker = React.forwardRef((
               defaultMonth={selected}
               selected={selected}
               onSelect={handleDaySelect}
+              captionLayout={type === 'month' || type === 'year' ? 'dropdown' : 'buttons'}
+              fromYear={fromYear || thisYear - 10}
+              toYear={toYear || thisYear + 10}
+              fromMonth={fromMonth}
+              toMonth={toMonth}
+              classNames={{
+                ...dayPickerStyles,
+                root: styles['date-picker__daypicker'],
+                caption: styles['date-picker__daypicker-caption'],
+                caption_label: `${dayPickerStyles.caption_label} ${styles['date-picker__daypicker-caption-label']}`,
+                head_cell: styles['date-picker__daypicker-head-cell'],
+                cell: styles['date-picker__daypicker-cell'],
+                day: styles['date-picker__daypicker-day'],
+                day_selected: styles['date-picker__daypicker-day-selected'],
+                nav_button: styles['date-picker__daypicker-nav-button'],
+                dropdown_month: styles['date-picker__daypicker-dropdown-month'],
+                dropdown_icon: styles['date-picker__daypicker-dropdown-icon'],
+              }}
             />
           </div>
         </FocusTrap>
