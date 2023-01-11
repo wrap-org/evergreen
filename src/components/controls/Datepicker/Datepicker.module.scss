@@ -36,6 +36,10 @@
     @include forms.input-padding;
   }
 
+  &__popper {
+    z-index: 1;
+  }
+
   &__daypicker {
     --rdp-cell-size: 2rem;
     --rdp-accent-color: #{color.$blue};
@@ -48,8 +52,6 @@
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
     margin-top: spacing.$vertical-sm;
     padding: spacing.$vertical spacing.$horizontal;
-    position: relative;
-    z-index: 1;
 
     &-caption {
       align-items: center;
