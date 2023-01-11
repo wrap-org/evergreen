@@ -1,13 +1,13 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-
-import Grid from 'components/composition/Grid/Grid';
-import Section from 'components/canvas/Section/Section';
-import Card from 'components/canvas/Card/Card';
-import Spacing from 'components/composition/Spacing/Spacing';
-import Button from 'components/controls/Button/Button';
+import React from 'react';
 
 import Skin, { skins } from './Skin';
+
+import Card from 'components/canvas/Card/Card';
+import Section from 'components/canvas/Section/Section';
+import Grid from 'components/composition/Grid/Grid';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Button from 'components/controls/Button/Button';
 
 export default {
   title: 'Composition/Skin',
@@ -22,6 +22,10 @@ export default {
             id: 'color-contrast',
             enabled: false,
           },
+          {
+            id: 'link-in-text-block',
+            enabled: false,
+          },
         ],
       },
     },
@@ -32,28 +36,25 @@ export function Default() {
   return (
     <Grid spacing="none" wrap>
       {skins.map((skin, i) => (
-        <Grid.Item xs={12} md={6}>
+        <Grid.Item xs={12} md={6} key={skin}>
           <Skin skin={skin}>
             <Section>
               <Spacing top="lg" bottom="lg" left="lg" right="lg">
                 <Skin skin={skins[i + 1] || skins[0]}>
                   <Card border>
                     <Card.Body>
-                      <h3>
-                        Card title
-                      </h3>
+                      <h3>Card title</h3>
                       <p>
-                        Aliquam egestas mi quam, a
-                        {' '}
-                        <a href="https://etch.co">tincidunt lectus</a>
-                        {' '}
-                        faucibus euismod.
-                        Pellentesque et metus nunc.
+                        Aliquam egestas mi quam, a{' '}
+                        <a href="https://etch.co">tincidunt lectus</a> faucibus
+                        euismod. Pellentesque et metus nunc.
                       </p>
                       <Spacing bottom="md" />
                       <Grid wrap direction="row-reverse">
                         <Grid.Item xs={12} md={6}>
-                          <Button block type="primary">Button text</Button>
+                          <Button block type="primary">
+                            Button text
+                          </Button>
                         </Grid.Item>
                         <Grid.Item xs={12} md={6}>
                           <Button block>Button text</Button>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
 import cx from 'classnames';
+import React, { useState } from 'react';
+
+import styles from './Faq.module.scss';
 
 import Card from 'components/canvas/Card/Card';
 import Title from 'components/content/Title/Title';
 import Collapse from 'components/controls/Collapse/Collapse';
-
-import styles from './Faq.module.scss';
 
 interface FaqProps {
   question: React.ReactNode;
@@ -26,11 +26,11 @@ const Faq = ({ question, children }: FaqProps) => {
         <Card.Body>
           <Collapse
             onToggle={setOpen}
-            headerLabel={(
+            headerLabel={
               <Title as="h3" size="h4">
                 <span itemProp="name">{question}</span>
               </Title>
-            )}
+            }
             align="right"
           >
             <div

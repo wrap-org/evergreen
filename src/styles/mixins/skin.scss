@@ -6,7 +6,9 @@
   --skin-heading-color: var(--skin-heading-color-#{$type});
   --skin-link-color: var(--skin-link-color-#{$type});
   --skin-link-text-decoration: var(--skin-link-text-decoration-#{$type});
-  --skin-link-text-decoration-hover: var(--skin-link-text-decoration-hover-#{$type});
+  --skin-link-text-decoration-hover: var(
+    --skin-link-text-decoration-hover-#{$type}
+  );
 }
 
 @mixin create-skins($skins) {

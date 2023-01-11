@@ -1,11 +1,13 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import map from 'lodash/map';
-import { Sizes } from 'src/types/font.type';
-import Text from '../components/content/Text/Text';
+import React from 'react';
+
 import Spacing from '../components/composition/Spacing/Spacing';
+import Text from '../components/content/Text/Text';
 
 import fonts from './typography.module.scss';
+
+import { Sizes } from 'src/types/font.type';
 
 export default {
   title: 'Tokens/Typography',

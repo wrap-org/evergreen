@@ -1,25 +1,25 @@
 import upperFirst from 'lodash/upperFirst';
 
 export type Colour =
-  'grey' |
-  'black' |
-  'greyLight' |
-  'blue' |
-  'blueDark' |
-  'blueLight' |
-  'green' |
-  'greenDark' |
-  'greenLight' |
-  'cream' |
-  'yellow' |
-  'white' |
-  'red' |
-  'brown' |
-  'orange' |
-  'pink' |
-  'maroon' |
-  'purple' |
-  'transparent';
+  | 'grey'
+  | 'black'
+  | 'greyLight'
+  | 'blue'
+  | 'blueDark'
+  | 'blueLight'
+  | 'green'
+  | 'greenDark'
+  | 'greenLight'
+  | 'cream'
+  | 'yellow'
+  | 'white'
+  | 'red'
+  | 'brown'
+  | 'orange'
+  | 'pink'
+  | 'maroon'
+  | 'purple'
+  | 'transparent';
 
 export interface Container {
   id?: number;
@@ -27,13 +27,13 @@ export interface Container {
   displayName?: string;
   bodyColour?: string;
   lidColour?: string;
-  frequency?: { id: number; name: string; };
-  materials?: { id: number; name?: string; }[];
+  frequency?: { id: number; name: string };
+  materials?: { id: number; name?: string }[];
   cost?: number;
   [index: string]: any;
 }
 
-export const colourOptions: { value: string; name: Colour, label: string; }[] = [
+export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#2d9cdb', name: 'blue', label: 'Blue' },
   { value: '#2262b9', name: 'blueDark', label: 'Dark blue' },
   { value: '#56ccf2', name: 'blueLight', label: 'Light blue' },
@@ -69,13 +69,11 @@ export const containersWithTransparentColour = [
   'reusable sack',
 ];
 
-export const containerHasLid = (containerName: string): boolean => (
-  containersWithLid.includes(containerName.toLowerCase())
-);
+export const containerHasLid = (containerName: string): boolean =>
+  containersWithLid.includes(containerName.toLowerCase());
 
-export const containerHasTransparentColour = (containerName: string): boolean => (
-  containersWithTransparentColour.includes(containerName.toLowerCase())
-);
+export const containerHasTransparentColour = (containerName: string): boolean =>
+  containersWithTransparentColour.includes(containerName.toLowerCase());
 
 export const getColourName = (colour: string) => {
   if (colour === 'no-lid') {
@@ -90,19 +88,12 @@ export const getColourOptions = (containerName) => {
     return colourOptions;
   }
 
-  return colourOptions.filter((option) => (
-    option.name !== 'transparent'
-  ));
+  return colourOptions.filter((option) => option.name !== 'transparent');
 };
 
 export function uniqueContainerName(
-  {
-    displayName,
-    bodyColour,
-    lidColour,
-    frequency,
-  }: Container,
-  showFrequency = false,
+  { displayName, bodyColour, lidColour, frequency }: Container,
+  showFrequency = false
 ) {
   const bodyColourName = upperFirst(getColourName(bodyColour as string));
   const frequencyName = showFrequency ? ` ‒ ${frequency?.name}` : '';

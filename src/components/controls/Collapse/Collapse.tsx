@@ -1,12 +1,12 @@
+import cx from 'classnames';
+import uniqueId from 'lodash/uniqueId';
 import React, { useState } from 'react';
 import { Collapse as ReactCollapse } from 'react-collapse';
-import uniqueId from 'lodash/uniqueId';
-import cx from 'classnames';
-
-import Icon from 'components/content/Icon/Icon';
-import Grid from 'components/composition/Grid/Grid';
 
 import styles from './Collapse.module.scss';
+
+import Grid from 'components/composition/Grid/Grid';
+import Icon from 'components/content/Icon/Icon';
 
 interface CollapseProps {
   children: React.ReactNode;

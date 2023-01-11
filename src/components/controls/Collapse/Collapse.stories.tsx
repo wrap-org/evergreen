@@ -1,5 +1,6 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import React from 'react';
+
 import Collapse from './Collapse';
 
 export default {
@@ -7,7 +8,9 @@ export default {
   component: Collapse,
 } as Meta;
 
-export const Default: Story<{ headerLabel: React.ReactNode }> = ({ headerLabel }) => (
+export const Default: Story<{ headerLabel: React.ReactNode }> = ({
+  headerLabel,
+}) => (
   <Collapse headerLabel={headerLabel}>
     <div>
       <p>Hidden content</p>

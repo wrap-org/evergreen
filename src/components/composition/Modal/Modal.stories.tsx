@@ -1,11 +1,12 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
+
+import Grid from '../Grid/Grid';
+
+import Modal, { useModalRef } from './Modal';
 
 import Card from 'components/canvas/Card/Card';
 import Button from 'components/controls/Button/Button';
-
-import Modal, { useModalRef } from './Modal';
-import Grid from '../Grid/Grid';
 
 export default {
   title: 'Composition/Modal',

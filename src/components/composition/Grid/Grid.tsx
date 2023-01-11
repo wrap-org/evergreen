@@ -1,8 +1,8 @@
-import React from 'react';
 import classNames from 'classnames';
-import Item from './GridItem';
+import React from 'react';
 
 import styles from './Grid.module.scss';
+import Item from './GridItem';
 
 interface GridProps {
   children: React.ReactNode;

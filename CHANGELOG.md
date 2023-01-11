@@ -1,3 +1,30 @@
+### [6.4.2](https://github.com/etchteam/mobius/compare/v6.4.1...v6.4.2) (2023-01-11)
+
+
+### Bug Fixes
+
+* stop mergify asking for reviews on draft prs ([af1b35a](https://github.com/etchteam/mobius/commit/af1b35acfc2f87bfae6991ec8fd3cd2b1fc045be))
+
+### [6.4.1](https://github.com/etchteam/mobius/compare/v6.4.0...v6.4.1) (2023-01-03)
+
+
+### Bug Fixes
+
+* double quotes -> single quotes ([90aa121](https://github.com/etchteam/mobius/commit/90aa1218306084806c558fa88b47e53c248908f7))
+* ignore next pages warning ([2d05b9f](https://github.com/etchteam/mobius/commit/2d05b9f4fe68033bd0251c2eb6b9fc990219df5a))
+* link in text block a11y warning ([7581156](https://github.com/etchteam/mobius/commit/75811563cbb3e58b85d8cd46cb89a2f6d6b13579))
+* lint errors ([9e74f89](https://github.com/etchteam/mobius/commit/9e74f8945c88b2a244c21e826b4a9934887669a4))
+* lint issues in .js files ([99a80f0](https://github.com/etchteam/mobius/commit/99a80f0f7df6a0685605e056130dd8974d23ab16))
+* more double to single quote fixes ([3ff8157](https://github.com/etchteam/mobius/commit/3ff8157e6b0800ecce82d291a4abc732c0f4d4d4))
+* spaces in container svg ([0d26fb2](https://github.com/etchteam/mobius/commit/0d26fb2b5fbb8edddcda960a6ecaaaa6542218dd))
+
+## [6.4.0](https://github.com/etchteam/mobius/compare/v6.3.0...v6.4.0) (2022-12-23)
+
+
+### Features
+
+* horizontal form group ([b5253fc](https://github.com/etchteam/mobius/commit/b5253fcde02d2f217701d76d1bd44e96cfba4db9))
+
 ## [6.3.0](https://github.com/etchteam/mobius/compare/v6.2.1...v6.3.0) (2022-12-22)
 
 

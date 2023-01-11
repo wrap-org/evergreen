@@ -48,7 +48,8 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(#{spacing.$vertical-xs} - var(--button-border-width)) spacing.$horizontal-sm;
+    padding: calc(#{spacing.$vertical-xs} - var(--button-border-width))
+      spacing.$horizontal-sm;
   }
 
   @each $type in $types {

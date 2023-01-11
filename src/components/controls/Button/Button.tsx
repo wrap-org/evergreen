@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import styles from './Button.module.scss';
 
@@ -15,46 +15,50 @@ interface ButtonProps {
   [x: string]: any;
 }
 
-const Button = React.forwardRef(({
-  children,
-  loading,
-  submit,
-  type,
-  href,
-  icon,
-  block,
-  size,
-  ...props
-}: ButtonProps, ref: any) => {
-  const baseProps = {
-    className: classNames(styles.button, {
-      [styles[`button--${type}`]]: !!type,
-      [styles['button--loading']]: loading,
-      [styles['button--block']]: block === true,
-      [styles['button--block-mobile']]: block === 'mobile',
-      [styles['button--icon']]: icon,
-      [styles[`button--${size}`]]: !!size,
-    }),
-    disabled: loading || undefined,
-    ref,
-    ...props,
-  };
+const Button = React.forwardRef(
+  (
+    {
+      children,
+      loading,
+      submit,
+      type,
+      href,
+      icon,
+      block,
+      size,
+      ...props
+    }: ButtonProps,
+    ref: any
+  ) => {
+    const baseProps = {
+      className: classNames(styles.button, {
+        [styles[`button--${type}`]]: !!type,
+        [styles['button--loading']]: loading,
+        [styles['button--block']]: block === true,
+        [styles['button--block-mobile']]: block === 'mobile',
+        [styles['button--icon']]: icon,
+        [styles[`button--${size}`]]: !!size,
+      }),
+      disabled: loading || undefined,
+      ref,
+      ...props,
+    };
 
-  if (href) {
+    if (href) {
+      return (
+        <a {...baseProps} href={href}>
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a {...baseProps} href={href}>{children}</a>
+      <button {...baseProps} type={submit ? 'submit' : 'button'}>
+        {children}
+      </button>
     );
   }
-
-  return (
-    <button
-      {...baseProps}
-      type={submit ? 'submit' : 'button'}
-    >
-      {children}
-    </button>
-  );
-});
+);
 
 Button.defaultProps = {
   submit: false,

@@ -1,5 +1,7 @@
-$family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
-$family-roboto: Roboto, Lato, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+$family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Roboto,
+  Helvetica, Arial, sans-serif;
+$family-roboto: Roboto, Lato, -apple-system, system-ui, BlinkMacSystemFont,
+  Helvetica, Arial, sans-serif;
 
 $line-height: 1.25;
 $line-height-sm: 1.125;
@@ -39,5 +41,5 @@ $weights: (
   'base': $weight-base,
   'light': $weight-light,
   'bold': $weight-bold,
-  'black': $weight-black
+  'black': $weight-black,
 );

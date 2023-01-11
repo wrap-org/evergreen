@@ -1,12 +1,12 @@
-import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
-import Grid from 'components/composition/Grid/Grid';
-import Card from 'components/canvas/Card/Card';
-import Button from 'components/controls/Button/Button';
-import Spacing from 'components/composition/Spacing/Spacing';
+import React from 'react';
 
 import Enter from './Enter';
+
+import Card from 'components/canvas/Card/Card';
+import Grid from 'components/composition/Grid/Grid';
+import Spacing from 'components/composition/Spacing/Spacing';
+import Button from 'components/controls/Button/Button';
 
 export default {
   title: 'Composition/Enter',
@@ -28,13 +28,13 @@ export default {
 
 const Template: ComponentStory<typeof Enter> = (args) => {
   const { delay } = args;
-  const delayValue = (delay ? parseInt(delay, 10) : 1);
+  const delayValue = delay ? parseInt(delay, 10) : 1;
 
   return (
     <Grid wrap>
       {[0, 1, 2].map((item) => (
         <Grid.Item key={item} xs={12} md={4}>
-          <Enter {...args} delay={`${(delayValue * item) * 0.2}s`}>
+          <Enter {...args} delay={`${delayValue * item * 0.2}s`}>
             <Card>
               <Card.Header>
                 <h2>Card title</h2>
@@ -42,17 +42,16 @@ const Template: ComponentStory<typeof Enter> = (args) => {
               <Card.Body>
                 <Spacing bottom="md">
                   <p>
-                    Aliquam egestas mi quam, a tincidunt lectus faucibus euismod.
-                    Pellentesque et metus nunc. Fusce ante arcu, mattis pretium
-                    semper ac, pretium vitae velit. Donec vitae eros et arcu accumsan
-                    auctor at id ipsum. Aliquam finibus, mi ac tincidunt blandit,
-                    purus elit ornare dui, nec dignissim mi ante sit amet mauris.
-                    Nulla eget dui in mauris tempus tincidunt a eget enim.
+                    Aliquam egestas mi quam, a tincidunt lectus faucibus
+                    euismod. Pellentesque et metus nunc. Fusce ante arcu, mattis
+                    pretium semper ac, pretium vitae velit. Donec vitae eros et
+                    arcu accumsan auctor at id ipsum. Aliquam finibus, mi ac
+                    tincidunt blandit, purus elit ornare dui, nec dignissim mi
+                    ante sit amet mauris. Nulla eget dui in mauris tempus
+                    tincidunt a eget enim.
                   </p>
                 </Spacing>
-                <Button block="mobile">
-                  Button text
-                </Button>
+                <Button block="mobile">Button text</Button>
               </Card.Body>
             </Card>
           </Enter>

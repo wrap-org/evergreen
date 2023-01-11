@@ -1,9 +1,8 @@
-import React from 'react';
 import cx from 'classnames';
-
-import Item from './ListItem';
+import React from 'react';
 
 import styles from './List.module.scss';
+import Item from './ListItem';
 
 const List = ({
   children,

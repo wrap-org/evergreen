@@ -1,11 +1,11 @@
-import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
+
+import Wrap from './Wrap';
 
 import Card from 'components/canvas/Card/Card';
 import Spacing from 'components/composition/Spacing/Spacing';
 import TextAlign from 'components/composition/TextAlign/TextAlign';
-
-import Wrap from './Wrap';
 
 export default {
   title: 'Composition/Wrap',
@@ -22,9 +22,7 @@ export function Default() {
           <Wrap size={size}>
             <Card border>
               <Card.Body>
-                <TextAlign align="center">
-                  Limit width of the content
-                </TextAlign>
+                <TextAlign align="center">Limit width of the content</TextAlign>
               </Card.Body>
             </Card>
           </Wrap>

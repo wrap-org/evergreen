@@ -1,5 +1,5 @@
-import React from 'react';
 import classNames from 'classnames';
+import React from 'react';
 
 import styles from './Card.module.scss';
 
@@ -10,14 +10,12 @@ interface CardBodyProps {
   hidden?: boolean;
 }
 
-export default function CardBody(
-  {
-    children,
-    padded,
-    border,
-    hidden,
-  }: CardBodyProps,
-) {
+export default function CardBody({
+  children,
+  padded,
+  border,
+  hidden,
+}: CardBodyProps) {
   return (
     <div
       className={classNames(styles.card__body, {
