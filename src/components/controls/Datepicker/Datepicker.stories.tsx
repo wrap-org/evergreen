@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
 import { Meta } from '@storybook/react/types-6-0';
+import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 
-import Datepicker from './Datepicker';
 import Label from '../Label/Label';
+
+import Datepicker from './Datepicker';
 
 export default {
   title: 'Controls/Datepicker',
@@ -112,9 +113,7 @@ export function WithReactHookForm() {
         )}
       />
       <br />
-      The selected date is:
-      {' '}
-      {day}
+      The selected date is: {day}
       <div style={{ height: 300 }} />
     </>
   );
