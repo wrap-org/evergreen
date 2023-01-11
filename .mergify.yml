@@ -1,3 +1,4 @@
+---
 pull_request_rules:
   - name: Auto-squash dependabot PRs when all checks pass
     conditions:
@@ -24,6 +25,7 @@ pull_request_rules:
   - name: Ask an old fart to review the code
     conditions:
       - -closed
+      - -draft
     actions:
       request_reviews:
         users:
