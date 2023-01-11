@@ -145,7 +145,7 @@ const Datepicker = React.forwardRef(
             <div
               tabIndex={-1}
               style={popper.styles.popper}
-              className="dialog-sheet"
+              className={styles['date-picker__popper']}
               {...popper.attributes.popper}
               ref={setPopperElement}
               role="dialog"
