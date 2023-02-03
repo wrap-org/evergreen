@@ -1,3 +1,10 @@
+## [6.6.0](https://github.com/etchteam/mobius/compare/v6.5.2...v6.6.0) (2023-02-03)
+
+
+### Features
+
+* auto animate lists ([e1310fa](https://github.com/etchteam/mobius/commit/e1310fa9839e74a7096baa5c348f1cea2bc24bd1))
+
 ### [6.5.2](https://github.com/etchteam/mobius/compare/v6.5.1...v6.5.2) (2023-01-11)
 
 
