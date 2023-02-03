@@ -1,3 +1,4 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import cx from 'classnames';
 import React from 'react';
 
@@ -7,21 +8,20 @@ import Item from './ListItem';
 const List = ({
   children,
   spacing = 'md',
-  as = 'ul',
 }: {
   children: React.ReactNode;
   spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
-  as?: string;
 }) => {
-  const CustomTag = as as keyof JSX.IntrinsicElements;
+  const [parent] = useAutoAnimate();
   return (
-    <CustomTag
+    <ul
+      ref={parent}
       className={cx(styles.list, {
         [styles[`list--spacing-${spacing}`]]: spacing,
       })}
     >
       {children}
-    </CustomTag>
+    </ul>
   );
 };
 

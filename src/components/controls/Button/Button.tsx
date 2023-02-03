@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import styles from './Button.module.scss';
 
@@ -12,10 +12,10 @@ interface ButtonProps {
   icon?: boolean;
   block?: boolean | 'mobile';
   size?: string;
-  [x: string]: any;
+  [x: string]: unknown;
 }
 
-const Button = React.forwardRef(
+const Button = forwardRef(
   (
     {
       children,
