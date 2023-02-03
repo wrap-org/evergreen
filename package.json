@@ -91,6 +91,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "@formkit/auto-animate": "1.0.0-beta.6",
     "@popperjs/core": "^2.11.6",
     "@svgr/webpack": "5.5.0",
     "a11y-dialog": "^7.5.2",
