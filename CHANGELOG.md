@@ -1,3 +1,11 @@
+### [6.6.1](https://github.com/etchteam/mobius/compare/v6.6.0...v6.6.1) (2023-02-09)
+
+
+### Bug Fixes
+
+* make all the children optional ([e05ca8a](https://github.com/etchteam/mobius/commit/e05ca8a7843eea34e7ec4a96a64d13ed2da994fe))
+* **TextButton:** make children optional ([ca276ad](https://github.com/etchteam/mobius/commit/ca276adc7d7f2d76f057f3de74c39024be0dc7e2))
+
 ## [6.6.0](https://github.com/etchteam/mobius/compare/v6.5.2...v6.6.0) (2023-02-03)
 
 
