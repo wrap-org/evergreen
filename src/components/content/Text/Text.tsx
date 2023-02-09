@@ -7,7 +7,7 @@ import { Sizes, Weights } from '../../../types/font.type';
 import styles from './Text.module.scss';
 
 export interface TextProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   as?: 'div' | 'span' | 'p' | 'a' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
   align?: 'left' | 'center' | 'right';
   display?: 'inline-block' | 'inline' | 'block';

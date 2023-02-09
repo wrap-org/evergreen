@@ -5,7 +5,7 @@ import styles from './Grid.module.scss';
 import Item from './GridItem';
 
 interface GridProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   wrap?: boolean;
   inset?: boolean;
   insetFluid?: boolean;

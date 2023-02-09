@@ -11,7 +11,7 @@ export default function Alert({
   onClose,
 }: {
   type?: 'positive' | 'negative' | 'neutral' | 'attention';
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClose?: () => void;
 }) {
   return (

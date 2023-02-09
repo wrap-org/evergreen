@@ -3,11 +3,11 @@ import React from 'react';
 
 import styles from './FormGroup.module.scss';
 
-const Label = ({ children }: { children: React.ReactNode }) => (
+const Label = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles['form-group__label']}>{children}</div>
 );
 
-const Control = ({ children }: { children: React.ReactNode }) => (
+const Control = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles['form-group__control']}>{children}</div>
 );
 
@@ -15,7 +15,7 @@ const FormGroup = ({
   children,
   horizontal,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   horizontal?: boolean;
 }) => (
   <div

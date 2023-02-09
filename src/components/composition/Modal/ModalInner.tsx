@@ -5,7 +5,7 @@ import styles from './Modal.module.scss';
 /**
  * Used to apply padding to the inner part of the modal
  */
-const ModalInner = ({ children }: { children: React.ReactNode }) => (
+const ModalInner = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles.modal__inner}>{children}</div>
 );
 

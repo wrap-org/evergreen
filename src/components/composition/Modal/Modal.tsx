@@ -12,7 +12,7 @@ import Inner from './ModalInner';
 export type ModalInstance = A11yDialogInstance;
 
 interface ModalProps extends Pick<A11yDialogProps, 'id' | 'title' | 'role'> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   size?: Breakpoints | 'auto';
   /**
    * Called when the modal has mounted and the ref has been setup

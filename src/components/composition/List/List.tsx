@@ -9,7 +9,7 @@ const List = ({
   children,
   spacing = 'md',
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
 }) => {
   const [parent] = useAutoAnimate();

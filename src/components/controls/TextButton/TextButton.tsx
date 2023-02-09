@@ -7,13 +7,13 @@ import Icon from 'components/content/Icon/Icon';
 import { Weights } from 'src/types/font.type';
 
 interface TextButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   icon?: string;
   iconRight?: boolean;
   size?: 'sm';
   decorate?: boolean;
   weight?: Weights;
-  [x: string]: any;
+  [key: string]: unknown;
 }
 
 export default function TextButton({

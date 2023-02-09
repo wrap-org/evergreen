@@ -8,7 +8,7 @@ export default function TextAlign({
   children,
 }: {
   align?: 'left' | 'right' | 'center';
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <div

@@ -9,7 +9,7 @@ import Collapse from 'components/controls/Collapse/Collapse';
 
 interface FaqProps {
   question: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Faq = ({ question, children }: FaqProps) => {
