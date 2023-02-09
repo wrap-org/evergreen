@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Label.module.scss';
 
 interface LabelProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   htmlFor?: string;
   hidden?: boolean;
   as?: 'label' | 'legend';

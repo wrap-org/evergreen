@@ -8,7 +8,7 @@ const Title = ({
   as = 'h1',
   size,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   as?: string;
   size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 }) => {

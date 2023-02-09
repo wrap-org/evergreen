@@ -9,7 +9,7 @@ import CardHeader from './CardHeader';
 import Icon from 'components/content/Icon/Icon';
 
 export interface CardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   border?: boolean;
   href?: string;
   onClick?: any;

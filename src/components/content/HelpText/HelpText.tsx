@@ -7,7 +7,7 @@ export default function HelpText({
   children,
   type,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   type?: 'neutral' | 'positive' | 'negative';
 }) {
   return (

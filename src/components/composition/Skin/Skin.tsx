@@ -13,7 +13,7 @@ export default function Skin({
   children,
 }: {
   skin: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <div

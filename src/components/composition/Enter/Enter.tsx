@@ -10,7 +10,7 @@ export default function Enter({
   enter,
   flex,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   type?: string;
   delay?: string;
   enter?: boolean;

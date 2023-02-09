@@ -9,7 +9,7 @@ import { defaultInputProps } from 'lib/default-props';
 
 interface RadioProps extends FormControl {
   checked?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /**
    * onRadioChange is added as a custom change handler because the standard
    * react-hook-form {...register(name, { onChange })} handler will trigger

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Card.module.scss';
 
 interface CardBodyProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   padded?: boolean;
   border?: boolean;
   hidden?: boolean;

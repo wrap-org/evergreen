@@ -13,7 +13,7 @@ interface CheckboxProps extends FormControl {
   defaultChecked?: boolean;
   forceChecked?: boolean;
   type?: 'default' | 'list' | 'input';
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Checkbox = React.forwardRef(

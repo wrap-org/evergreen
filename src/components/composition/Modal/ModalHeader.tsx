@@ -5,7 +5,7 @@ import Icon from 'components/content/Icon/Icon';
 import Button from 'components/controls/Button/Button';
 
 export interface HeaderProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClose: (event: Event) => void;
 }
 

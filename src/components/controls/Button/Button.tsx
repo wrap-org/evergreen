@@ -4,7 +4,7 @@ import React, { forwardRef } from 'react';
 import styles from './Button.module.scss';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   submit?: boolean;
   loading?: boolean;
   href?: string;

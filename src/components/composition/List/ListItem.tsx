@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './List.module.scss';
 
 export interface ListItemProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   icon?: React.ReactNode;
   [index: string]: any;
 }

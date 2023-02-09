@@ -10,7 +10,7 @@ function Wrap({
   children,
 }: {
   size?: Breakpoints | 'auto' | string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <div

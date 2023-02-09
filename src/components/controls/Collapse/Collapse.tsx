@@ -9,7 +9,7 @@ import Grid from 'components/composition/Grid/Grid';
 import Icon from 'components/content/Icon/Icon';
 
 interface CollapseProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   headerLabel: React.ReactNode;
   align?: 'right';
   onToggle?: (open?: boolean) => void;

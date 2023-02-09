@@ -9,7 +9,7 @@ import Icon from 'components/content/Icon/Icon';
 import { defaultInputProps } from 'lib/default-props';
 
 interface SelectProps extends FormControl {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Select = React.forwardRef(
