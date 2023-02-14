@@ -1,3 +1,10 @@
+### [6.6.2](https://github.com/etchteam/mobius/compare/v6.6.1...v6.6.2) (2023-02-14)
+
+
+### Bug Fixes
+
+* make enter not full width by default because it breaks safari layout ([462dc9e](https://github.com/etchteam/mobius/commit/462dc9e8dabe10d9e8def8290e4fbbbed34df002))
+
 ### [6.6.1](https://github.com/etchteam/mobius/compare/v6.6.0...v6.6.1) (2023-02-09)
 
 
