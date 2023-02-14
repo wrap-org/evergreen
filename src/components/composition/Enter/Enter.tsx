@@ -9,17 +9,20 @@ export default function Enter({
   delay,
   enter,
   flex,
+  fullWidth,
 }: {
   children?: React.ReactNode;
   type?: string;
   delay?: string;
   enter?: boolean;
   flex?: boolean;
+  fullWidth?: boolean;
 }) {
   const cx = classNames(styles.enter, {
     [styles[`enter--${type}`]]: type,
     [styles['enter--enter']]: enter,
     [styles['enter--flex']]: flex,
+    [styles['enter--full-width']]: fullWidth,
   });
   return (
     <div className={cx} style={{ animationDelay: delay }}>

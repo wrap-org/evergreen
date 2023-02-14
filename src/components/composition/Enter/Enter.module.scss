@@ -53,7 +53,6 @@ $enter-transition-timing: ease-in-out;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: $enter-transition-timing;
-  min-width: 100%;
   position: relative;
   z-index: 1;
 
@@ -92,5 +91,9 @@ $enter-transition-timing: ease-in-out;
 
   &--flex {
     display: flex;
+  }
+
+  &--full-width {
+    min-width: 100%;
   }
 }
