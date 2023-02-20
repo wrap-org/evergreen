@@ -138,7 +138,7 @@
     }
 
     @each $bp-key, $bp-value in breakpoint.$map {
-      @media screen and (min-width: $bp-value) {
+      @media (min-width: $bp-value) {
         &--#{$bp-key}-auto {
           width: auto;
         }
@@ -152,7 +152,7 @@
     }
 
     @each $bp-key, $bp-value in breakpoint.$map {
-      @media screen and (min-width: $bp-value) {
+      @media (min-width: $bp-value) {
         @for $i from 1 through 12 {
           &--order-#{$bp-key}-#{$i} {
             order: $i;
