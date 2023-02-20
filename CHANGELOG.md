@@ -1,3 +1,10 @@
+### [6.6.3](https://github.com/etchteam/mobius/compare/v6.6.2...v6.6.3) (2023-02-20)
+
+
+### Bug Fixes
+
+* don't just apply grid on screen devices ([be3f587](https://github.com/etchteam/mobius/commit/be3f587e4a315a55a2a0c3d9fc2b3d81a24f923e))
+
 ### [6.6.2](https://github.com/etchteam/mobius/compare/v6.6.1...v6.6.2) (2023-02-14)
 
 
