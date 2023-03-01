@@ -1,3 +1,10 @@
+### [6.7.1](https://github.com/etchteam/mobius/compare/v6.7.0...v6.7.1) (2023-03-01)
+
+
+### Bug Fixes
+
+* icon viewbox ([7ba5f02](https://github.com/etchteam/mobius/commit/7ba5f02bd065b73fe8ba8f46ed7330861e4df72e))
+
 ## [6.7.0](https://github.com/etchteam/mobius/compare/v6.6.3...v6.7.0) (2023-03-01)
 
 
