@@ -1,3 +1,10 @@
+## [6.7.0](https://github.com/etchteam/mobius/compare/v6.6.3...v6.7.0) (2023-03-01)
+
+
+### Features
+
+* custom icons ([2a78a99](https://github.com/etchteam/mobius/commit/2a78a99ddcb762ef2477fd8c316a7d9ce9284a82))
+
 ### [6.6.3](https://github.com/etchteam/mobius/compare/v6.6.2...v6.6.3) (2023-02-20)
 
 
