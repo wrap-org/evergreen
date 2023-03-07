@@ -5,6 +5,7 @@ export type Colour =
   | 'black'
   | 'greyLight'
   | 'blue'
+  | 'blueMid'
   | 'blueDark'
   | 'blueLight'
   | 'green'
@@ -17,9 +18,35 @@ export type Colour =
   | 'brown'
   | 'orange'
   | 'pink'
+  | 'magenta'
   | 'maroon'
   | 'purple'
   | 'transparent';
+
+export type Name =
+  | 'Box'
+  | 'Wheeled Bin'
+  | 'Communal Bin'
+  | 'Communal Wheeled Bin'
+  | 'Large Wheeled Bin'
+  | 'Inner Caddy'
+  | 'Kerbside Caddy'
+  | 'Kitchen Caddy'
+  | 'Reusable Sack'
+  | 'Non-Reusable Sack'
+  | 'Householder Provides'
+  | 'Householder Provided Carrier Bag'
+  | 'Trollibox'
+  | 'Single Sack'
+  | 'Skip'
+  | 'Front End Load'
+  | 'Rear End Loader'
+  | 'Roll On Roll Off'
+  | 'Single Box'
+  | 'Single Food Caddy'
+  | 'Single Wheeled Bin'
+  | 'Single Reusable Sack'
+  | 'Single Carrier Bag';
 
 export interface Container {
   id?: number;
@@ -35,6 +62,7 @@ export interface Container {
 
 export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#2d9cdb', name: 'blue', label: 'Blue' },
+  { value: '#1579c6', name: 'blueMid', label: 'Mid Blue' },
   { value: '#2262b9', name: 'blueDark', label: 'Dark blue' },
   { value: '#56ccf2', name: 'blueLight', label: 'Light blue' },
   { value: '#828282', name: 'grey', label: 'Grey' },
@@ -50,6 +78,7 @@ export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#ad7849', name: 'brown', label: 'Brown' },
   { value: '#f2994a', name: 'orange', label: 'Orange' },
   { value: '#ff649e', name: 'pink', label: 'Pink' },
+  { value: '#d12767', name: 'magenta', label: 'Magenta' },
   { value: '#a62f5a', name: 'maroon', label: 'Maroon' },
   { value: '#9946db', name: 'purple', label: 'Purple' },
   { value: '#ffffff00', name: 'transparent', label: 'Transparent' },
@@ -61,12 +90,20 @@ export const containersWithLid = [
   'wheeled bin',
   'box',
   'communal wheeled bin',
+  'communal bin',
+  'large wheeled bin',
+  'single wheeled bin',
+  'single food caddy',
+  'single box',
 ];
 
 export const containersWithTransparentColour = [
   'householder provided carrier bag',
+  'householder provides',
   'non-reusable sack',
   'reusable sack',
+  'single sack',
+  'single reusable sack',
 ];
 
 export const containerHasLid = (containerName: string): boolean =>
