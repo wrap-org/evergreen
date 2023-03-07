@@ -1,3 +1,12 @@
+## [6.8.0](https://github.com/etchteam/mobius/compare/v6.7.1...v6.8.0) (2023-03-07)
+
+
+### Features
+
+* additional container svg colours ([fc3d49e](https://github.com/etchteam/mobius/commit/fc3d49e9e290d551aaa191a208c7cde45c556f4f))
+* additional container svgs ([afe3c9f](https://github.com/etchteam/mobius/commit/afe3c9f872b0686730996d14875b985935f2a62d))
+* filled circle custom icon ([8a892e7](https://github.com/etchteam/mobius/commit/8a892e7bcf7c591ca4b937fb205e99600f116ef9))
+
 ### [6.7.1](https://github.com/etchteam/mobius/compare/v6.7.0...v6.7.1) (2023-03-01)
 
 
