@@ -5,6 +5,7 @@ export type Colour =
   | 'black'
   | 'greyLight'
   | 'blue'
+  | 'blueMid'
   | 'blueDark'
   | 'blueLight'
   | 'green'
@@ -17,6 +18,7 @@ export type Colour =
   | 'brown'
   | 'orange'
   | 'pink'
+  | 'magenta'
   | 'maroon'
   | 'purple'
   | 'transparent';
@@ -35,6 +37,7 @@ export interface Container {
 
 export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#2d9cdb', name: 'blue', label: 'Blue' },
+  { value: '#1579c6', name: 'blueMid', label: 'Mid Blue' },
   { value: '#2262b9', name: 'blueDark', label: 'Dark blue' },
   { value: '#56ccf2', name: 'blueLight', label: 'Light blue' },
   { value: '#828282', name: 'grey', label: 'Grey' },
@@ -50,6 +53,7 @@ export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#ad7849', name: 'brown', label: 'Brown' },
   { value: '#f2994a', name: 'orange', label: 'Orange' },
   { value: '#ff649e', name: 'pink', label: 'Pink' },
+  { value: '#d12767', name: 'magenta', label: 'Magenta' },
   { value: '#a62f5a', name: 'maroon', label: 'Maroon' },
   { value: '#9946db', name: 'purple', label: 'Purple' },
   { value: '#ffffff00', name: 'transparent', label: 'Transparent' },
