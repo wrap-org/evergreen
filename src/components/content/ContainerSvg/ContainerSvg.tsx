@@ -3,28 +3,10 @@ import React from 'react';
 
 import styles from './ContainerSvg.module.scss';
 
-import { Colour } from 'lib/container';
+import { Colour, Name } from 'lib/container';
 
-interface ContainerSvgProps {
-  name:
-    | 'Box'
-    | 'Wheeled Bin'
-    | 'Communal Bin'
-    | 'Communal Wheeled Bin'
-    | 'Large Wheeled Bin'
-    | 'Inner Caddy'
-    | 'Kerbside Caddy'
-    | 'Kitchen Caddy'
-    | 'Reusable Sack'
-    | 'Non-Reusable Sack'
-    | 'Householder Provides'
-    | 'Householder Provided Carrier Bag'
-    | 'Trollibox'
-    | 'Single Sack'
-    | 'Skip'
-    | 'Front End Load'
-    | 'Rear End Loader'
-    | 'Roll On Roll Off';
+export interface ContainerSvgProps {
+  name: Name;
   lidColour?: Colour | 'no-lid';
   bodyColour?: Colour;
 }
@@ -72,6 +54,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
         </svg>
       );
     case 'Wheeled Bin':
+    case 'Single Wheeled Bin':
       return (
         <svg
           className={styles['container-svg']}
@@ -361,6 +344,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
         </svg>
       );
     case 'Single Sack':
+    case 'Single Reusable Sack':
       return (
         <svg
           className={styles['container-svg']}
@@ -519,6 +503,79 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
             width="160"
             height="8"
             fill="#89C1AB"
+          />
+        </svg>
+      );
+    case 'Single Food Caddy':
+      return (
+        <svg
+          className={styles['container-svg']}
+          viewBox="0 0 31 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className={bodyClassName}
+            d="M28.2949 4.30554H2.58337L4.66302 27.8599C4.81995 29.6373 6.30187 31 8.07781 31H22.8004C24.5764 31 26.0583 29.6373 26.2152 27.8599L26.787 22.2451C26.5734 22.1611 26.3733 22.0324 26.2007 21.859L14.0802 9.6811C13.4108 9.00853 13.4108 7.91808 14.0802 7.24551C14.7496 6.57294 15.8349 6.57294 16.5043 7.24551L27.1656 17.9573L28.2949 4.30554Z"
+            fill="#2A8CC1"
+          />
+          <path
+            className={bodyClassName}
+            d="M16.0452 8.0022L28.1657 20.1801C28.5004 20.5164 28.5004 21.0617 28.1657 21.3979C27.831 21.7342 27.2883 21.7342 26.9536 21.3979L14.8331 9.22C14.4984 8.88371 14.4984 8.33849 14.8331 8.0022C15.1678 7.66592 15.7105 7.66592 16.0452 8.0022Z"
+            fill="#2A8CC1"
+          />
+          {lidColour !== 'no-lid' && (
+            <path
+              className={lidClassName}
+              d="M0 2C0 0.895431 0.89543 0 2 0H29C30.1046 0 31 0.895431 31 2V3.44444H0V2Z"
+              fill="#2A8CC1"
+            />
+          )}
+        </svg>
+      );
+    case 'Single Box':
+      return (
+        <svg
+          className={styles['container-svg']}
+          viewBox="0 0 46 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className={bodyClassName}
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M43.4445 4.30554H2.55566L4.05369 27.7773C4.16936 29.5898 5.65734 31 7.45403 31H38.5462C40.3429 31 41.8308 29.5898 41.9465 27.7773L43.4445 4.30554ZM19.5927 7.74999C18.6518 7.74999 17.889 8.52105 17.889 9.47221C17.889 10.4234 18.6518 11.1944 19.5927 11.1944H26.4075C27.3484 11.1944 28.1112 10.4234 28.1112 9.47221C28.1112 8.52105 27.3484 7.74999 26.4075 7.74999H19.5927Z"
+            fill="#2A8CC1"
+          />
+          {lidColour !== 'no-lid' && (
+            <path
+              className={lidClassName}
+              d="M0 2C0 0.895431 0.895431 0 2 0H44C45.1046 0 46 0.895431 46 2V3.44444H0V2Z"
+              fill="#2A8CC1"
+            />
+          )}
+        </svg>
+      );
+    case 'Single Carrier Bag':
+      return (
+        <svg
+          className={styles['container-svg']}
+          viewBox="0 0 34 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className={bodyClassName}
+            d="M12.75 0C11.8111 0 11.05 0.767506 11.05 1.71427V3.42853H12.75V2.57141C12.75 2.09803 13.1306 1.71427 13.6 1.71427L20.4 1.71427C20.8694 1.71427 21.25 2.09803 21.25 2.57141V3.42853H22.95V1.71427C22.95 0.767506 22.1889 0 21.25 0H12.75Z"
+            fill="#2A8CC1"
+          />
+          <path
+            className={bodyClassName}
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.4 16.2858L2.88099e-05 3.42887L17.5484 5.14316L34 3.42886L30.6 17.1429L34 30H0L3.4 16.2858ZM21.25 13.7142C22.1889 13.7142 22.95 12.9467 22.95 11.9999V6.8571C22.0111 6.8571 21.25 7.6246 21.25 8.57137V11.1428C21.25 11.6162 20.8694 11.9999 20.4 11.9999H13.6C13.1306 11.9999 12.75 11.6162 12.75 11.1428V8.57137C12.75 7.6246 11.9889 6.8571 11.05 6.8571V11.9999C11.05 12.9467 11.8111 13.7142 12.75 13.7142L21.25 13.7142Z"
+            fill="#2A8CC1"
           />
         </svg>
       );

@@ -23,6 +23,31 @@ export type Colour =
   | 'purple'
   | 'transparent';
 
+export type Name =
+  | 'Box'
+  | 'Wheeled Bin'
+  | 'Communal Bin'
+  | 'Communal Wheeled Bin'
+  | 'Large Wheeled Bin'
+  | 'Inner Caddy'
+  | 'Kerbside Caddy'
+  | 'Kitchen Caddy'
+  | 'Reusable Sack'
+  | 'Non-Reusable Sack'
+  | 'Householder Provides'
+  | 'Householder Provided Carrier Bag'
+  | 'Trollibox'
+  | 'Single Sack'
+  | 'Skip'
+  | 'Front End Load'
+  | 'Rear End Loader'
+  | 'Roll On Roll Off'
+  | 'Single Box'
+  | 'Single Food Caddy'
+  | 'Single Wheeled Bin'
+  | 'Single Reusable Sack'
+  | 'Single Carrier Bag';
+
 export interface Container {
   id?: number;
   name?: string;
@@ -65,12 +90,20 @@ export const containersWithLid = [
   'wheeled bin',
   'box',
   'communal wheeled bin',
+  'communal bin',
+  'large wheeled bin',
+  'single wheeled bin',
+  'single food caddy',
+  'single box',
 ];
 
 export const containersWithTransparentColour = [
   'householder provided carrier bag',
+  'householder provides',
   'non-reusable sack',
   'reusable sack',
+  'single sack',
+  'single reusable sack',
 ];
 
 export const containerHasLid = (containerName: string): boolean =>

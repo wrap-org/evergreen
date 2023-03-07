@@ -54,6 +54,18 @@ export const Types = () => (
     <Grid.Item xs={12} md={3}>
       <ContainerSvg name="Roll On Roll Off" />
     </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Single Food Caddy" />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Single Box" />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Single Carrier Bag" />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Trollibox" />
+    </Grid.Item>
   </Grid>
 );
 
