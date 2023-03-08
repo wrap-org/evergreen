@@ -543,8 +543,8 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
         >
           <path
             className={bodyClassName}
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M43.4445 4.30554H2.55566L4.05369 27.7773C4.16936 29.5898 5.65734 31 7.45403 31H38.5462C40.3429 31 41.8308 29.5898 41.9465 27.7773L43.4445 4.30554ZM19.5927 7.74999C18.6518 7.74999 17.889 8.52105 17.889 9.47221C17.889 10.4234 18.6518 11.1944 19.5927 11.1944H26.4075C27.3484 11.1944 28.1112 10.4234 28.1112 9.47221C28.1112 8.52105 27.3484 7.74999 26.4075 7.74999H19.5927Z"
             fill="#2A8CC1"
           />
@@ -572,8 +572,8 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           />
           <path
             className={bodyClassName}
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M3.4 16.2858L2.88099e-05 3.42887L17.5484 5.14316L34 3.42886L30.6 17.1429L34 30H0L3.4 16.2858ZM21.25 13.7142C22.1889 13.7142 22.95 12.9467 22.95 11.9999V6.8571C22.0111 6.8571 21.25 7.6246 21.25 8.57137V11.1428C21.25 11.6162 20.8694 11.9999 20.4 11.9999H13.6C13.1306 11.9999 12.75 11.6162 12.75 11.1428V8.57137C12.75 7.6246 11.9889 6.8571 11.05 6.8571V11.9999C11.05 12.9467 11.8111 13.7142 12.75 13.7142L21.25 13.7142Z"
             fill="#2A8CC1"
           />
