@@ -1,3 +1,10 @@
+### [6.8.1](https://github.com/etchteam/mobius/compare/v6.8.0...v6.8.1) (2023-03-08)
+
+
+### Bug Fixes
+
+* camel case container svg clipRule and fillRule attributes ([8311f0b](https://github.com/etchteam/mobius/commit/8311f0b12f5d13f96514fc50c223a242badac84b))
+
 ## [6.8.0](https://github.com/etchteam/mobius/compare/v6.7.1...v6.8.0) (2023-03-07)
 
 
