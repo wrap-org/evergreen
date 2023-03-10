@@ -1,0 +1,29 @@
+@use '../../../styles/variables/color';
+
+$bar-stack-border-radius: 0.25rem;
+$bar-stack-item-height: 1.5rem;
+
+.bar-stack {
+  background: color.$blue-lightest;
+  border-radius: $bar-stack-border-radius;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+
+  &__item {
+    height: $bar-stack-item-height;
+
+    &:last-child {
+      border-bottom-right-radius: $bar-stack-border-radius;
+      border-top-right-radius: $bar-stack-border-radius;
+    }
+
+    &--color {
+      @each $name, $color in color.$colors {
+        &-#{$name} {
+          background: $color;
+        }
+      }
+    }
+  }
+}

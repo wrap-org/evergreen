@@ -26,4 +26,8 @@ export type Colors =
   | 'accent'
   | 'link'
   | 'positive'
-  | 'negative';
+  | 'negative'
+  | 'dry-stream'
+  | 'food-stream'
+  | 'garden-stream'
+  | 'residual-stream';
