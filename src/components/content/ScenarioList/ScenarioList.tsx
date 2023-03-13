@@ -18,7 +18,7 @@ const ScenarioList = ({
 }) => (
   <>
     {scenarios.map((scenario) => (
-      <Card key={scenario.id} arrow>
+      <Card key={scenario.id} arrow muted={scenario.recommended}>
         <Card.Body border padded>
           <Grid wrap>
             <Grid.Item xs={12} lg={3} xl={2}>
