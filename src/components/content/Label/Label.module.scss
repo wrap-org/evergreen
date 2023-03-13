@@ -1,0 +1,38 @@
+@use 'sass:math';
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/input';
+
+.label {
+  display: inline-block;
+  padding: (math.div(spacing.$vertical-xs, 2)) spacing.$horizontal-sm;
+
+  &--size {
+    @each $name, $size in font.$sizes {
+      &-#{$name} {
+        font-size: $size;
+      }
+    }
+  }
+
+  &--rounded {
+    border-radius: input.$border-radius;
+  }
+
+  &--text {
+    @each $name, $color in color.$colors {
+      &-#{$name} {
+        color: $color;
+      }
+    }
+  }
+
+  &--background {
+    @each $name, $color in color.$colors {
+      &-#{$name} {
+        background: $color;
+      }
+    }
+  }
+}
