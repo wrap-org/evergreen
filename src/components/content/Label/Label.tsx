@@ -13,7 +13,7 @@ export interface LabelProps {
   backgroundColor?: Colors;
   rounded?: boolean;
 }
-// TODO: check !!
+
 const Label = ({
   children,
   size = 'base',
