@@ -13,15 +13,17 @@ export default {
     MenubarTab: Menubar.Tab,
     MenubarBack: Menubar.Back,
   },
-  a11y: {
-    config: {
-      rules: [
-        {
-          // Muted background is a few decimal points out of being a11y compliant with link
-          id: 'color-contrast',
-          enabled: false,
-        },
-      ],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Muted background is a few decimal points out of being a11y compliant with link
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 } as Meta;
