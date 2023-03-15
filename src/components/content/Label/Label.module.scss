@@ -1,12 +1,29 @@
 @use 'sass:math';
-@use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/spacing';
 @use '../../../styles/variables/input';
+@use '../../../styles/variables/skin';
 
 .label {
+  background: skin.$background;
+  color: skin.$color;
   display: inline-block;
   padding: (math.div(spacing.$vertical-xs, 2)) spacing.$horizontal-sm;
+
+  &--muted {
+    background: skin.$background-muted;
+    color: skin.$color-muted;
+  }
+
+  &--inverse {
+    background: skin.$color;
+    color: skin.$background;
+
+    &.label--muted {
+      background-color: skin.$color-muted;
+      color: skin.$background-muted;
+    }
+  }
 
   &--size {
     @each $name, $size in font.$sizes {
@@ -18,21 +35,5 @@
 
   &--rounded {
     border-radius: input.$border-radius;
-  }
-
-  &--text {
-    @each $name, $color in color.$colors {
-      &-#{$name} {
-        color: $color;
-      }
-    }
-  }
-
-  &--background {
-    @each $name, $color in color.$colors {
-      &-#{$name} {
-        background: $color;
-      }
-    }
   }
 }
