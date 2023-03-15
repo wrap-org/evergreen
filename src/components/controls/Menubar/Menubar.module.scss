@@ -58,7 +58,7 @@ $menubar-highlight-width: 4px;
 
     &-inner {
       &::before {
-        background: color.$green;
+        background: color.$positive;
         content: '';
         display: block;
         height: 4px;
@@ -114,7 +114,7 @@ $menubar-highlight-width: 4px;
 
       a {
         background: skin.$background;
-        color: color.$green;
+        color: color.$positive;
         cursor: default;
       }
     }
