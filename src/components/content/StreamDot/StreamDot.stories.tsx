@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
+
+import StreamDot from './StreamDot';
+
+export default {
+  title: 'Content/Stream Dot',
+  component: StreamDot,
+} as Meta;
+
+export const Default = () => (
+  <>
+    <div>
+      <StreamDot /> No stream
+    </div>
+    <div>
+      <StreamDot stream="dry" /> Dry
+    </div>
+    <div>
+      <StreamDot stream="residual" /> Residual
+    </div>
+    <div>
+      <StreamDot stream="food" /> Food
+    </div>
+    <div>
+      <StreamDot stream="garden" /> Garden
+    </div>
+  </>
+);
+
+Default.storyName = 'Stream Dot';

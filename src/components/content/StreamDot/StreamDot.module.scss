@@ -1,0 +1,28 @@
+@use '../../../styles/variables/color';
+
+.stream-dot {
+  background: color.$blue-dark;
+  border-radius: 50%;
+  display: inline-block;
+  height: 1em;
+  line-height: 1;
+  position: relative;
+  top: 0.125em;
+  width: 1em;
+
+  &--dry {
+    background: color.$dry-stream;
+  }
+
+  &--residual {
+    background: color.$residual-stream;
+  }
+
+  &--food {
+    background: color.$food-stream;
+  }
+
+  &--garden {
+    background: color.$garden-stream;
+  }
+}

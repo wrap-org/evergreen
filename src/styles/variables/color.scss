@@ -40,6 +40,12 @@ $link: $blue;
 $positive: $green;
 $negative: $maroon;
 
+// streams
+$dry-stream: $blue;
+$residual-stream: $magenta;
+$food-stream: $maroon;
+$garden-stream: $green;
+
 $colors: (
   'white': $white,
   'blue-lightest': $blue-lightest,
@@ -69,4 +75,8 @@ $colors: (
   'link': $link,
   'positive': $positive,
   'negative': $negative,
+  'dry-stream': $dry-stream,
+  'residual-stream': $residual-stream,
+  'food-stream': $food-stream,
+  'garden-stream': $garden-stream,
 );
