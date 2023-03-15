@@ -12,6 +12,7 @@ $skins: light, medium, dark, accent, neutral, positive, negative, attention;
   --skin-background-muted-light: #{color.$harp};
   --skin-border-color-light: #{color.$blue-light};
   --skin-color-light: #{color.$blue-darkest};
+  --skin-color-muted-light: #{color.$blue-darkest};
   --skin-heading-color-light: #{color.$blue-darkest};
   --skin-link-color-light: #{color.$blue-darkest};
   --skin-link-text-decoration-light: underline;
@@ -20,6 +21,7 @@ $skins: light, medium, dark, accent, neutral, positive, negative, attention;
   --skin-background-muted-medium: #{color.$duck-egg};
   --skin-border-color-medium: transparent;
   --skin-color-medium: #{color.$blue-darkest};
+  --skin-color-muted-medium: #{color.$blue-darkest};
   --skin-heading-color-medium: #{color.$blue-darkest};
   --skin-link-color-medium: #{color.$blue-darkest};
 
@@ -27,6 +29,7 @@ $skins: light, medium, dark, accent, neutral, positive, negative, attention;
   --skin-background-muted-accent: #{color.$citrus};
   --skin-border-color-accent: transparent;
   --skin-color-accent: #{color.$blue-darkest};
+  --skin-color-muted-accent: #{color.$blue-darkest};
   --skin-heading-color-accent: #{color.$blue-darkest};
   --skin-link-color-accent: #{color.$blue-darkest};
 
