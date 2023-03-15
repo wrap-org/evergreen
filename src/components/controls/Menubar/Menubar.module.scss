@@ -1,0 +1,133 @@
+@use '../../../styles/variables/color';
+@use '../../../styles/variables/font';
+@use '../../../styles/variables/spacing';
+@use '../../../styles/variables/transition';
+@use '../../../styles/variables/breakpoint';
+@use '../../../styles/variables/skin';
+
+$menubar-highlight-width: 4px;
+
+@mixin menubar-link {
+  color: skin.$link-color;
+  transition: background transition.$duration transition.$timing;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: skin.$background;
+  }
+}
+
+.menubar {
+  background: skin.$background-muted;
+
+  @media (min-width: breakpoint.$tablet) {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 10rem auto 10rem;
+  }
+
+  &__inner {
+    grid-column-start: 2;
+    margin: 0 auto;
+    max-width: breakpoint.$xl; // Same as <Container>
+    width: 100%;
+
+    @media (min-width: breakpoint.$tablet) {
+      padding: 0 spacing.$horizontal;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: breakpoint.$tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__tab {
+    display: block;
+    min-width: 25%;
+    position: relative;
+
+    &-inner {
+      &::before {
+        background: color.$green;
+        content: '';
+        display: block;
+        height: 4px;
+        height: 0;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity transition.$duration transition.$timing,
+          height transition.$duration transition.$timing;
+        width: 100%;
+      }
+
+      &:hover::before {
+        height: $menubar-highlight-width;
+        opacity: 0.5;
+      }
+
+      a {
+        @include menubar-link;
+        align-items: center;
+        display: flex;
+        font-size: font.$size-sm;
+        font-weight: font.$weight-bold;
+        justify-content: center;
+        min-height: spacing.$thumb;
+        padding: spacing.$vertical spacing.$horizontal;
+        text-align: center;
+      }
+    }
+
+    &--disabled &-inner {
+      &:hover::before {
+        height: 0;
+      }
+
+      a {
+        color: color.$body;
+        cursor: default;
+        pointer-events: none;
+
+        &:hover {
+          background: color.$blue-lightest;
+        }
+      }
+    }
+
+    &--active &-inner {
+      &::before {
+        height: $menubar-highlight-width;
+        opacity: 1;
+      }
+
+      a {
+        background: skin.$background;
+        color: color.$green;
+        cursor: default;
+      }
+    }
+  }
+
+  &__back {
+    a {
+      @include menubar-link;
+      display: block;
+      font-size: font.$size-sm;
+      font-weight: font.$weight-bold;
+      min-height: spacing.$thumb;
+      padding: spacing.$vertical spacing.$horizontal;
+    }
+  }
+}
