@@ -1,3 +1,17 @@
+## [6.10.0](https://github.com/etchteam/mobius/compare/v6.9.0...v6.10.0) (2023-03-15)
+
+
+### Features
+
+* menubar ([d689a8e](https://github.com/etchteam/mobius/commit/d689a8e18d684e53abc859bf8b46544e7afc8e2c))
+* use positive instead of green ([fcd9823](https://github.com/etchteam/mobius/commit/fcd9823003b1a8db69a646378544fbb8961c2a07))
+
+
+### Bug Fixes
+
+* a11y contrast link compliant ([af79b51](https://github.com/etchteam/mobius/commit/af79b51f88c3950946f521bdba8a9487d0ca6a0a))
+* put the a11y disable thing in the right place ([66d98e2](https://github.com/etchteam/mobius/commit/66d98e2a5e86c4fbf6e4a506c9d75227e701b450))
+
 ## [6.9.0](https://github.com/etchteam/mobius/compare/v6.8.1...v6.9.0) (2023-03-15)
 
 
