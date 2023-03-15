@@ -1,3 +1,25 @@
+## [6.9.0](https://github.com/etchteam/mobius/compare/v6.8.1...v6.9.0) (2023-03-15)
+
+
+### Features
+
+* bar stack migrated from LA portal ([35d24c4](https://github.com/etchteam/mobius/commit/35d24c44cbc93831c5716c8ea4557c96c8ab5a51))
+* label component (compatible with LA portal label component) ([fda78f2](https://github.com/etchteam/mobius/commit/fda78f2579a9fe58939c812b58ff5f6c5c6359cf))
+* muted background for recommended scenario ([e9dd18c](https://github.com/etchteam/mobius/commit/e9dd18cd89a48e8eee5c4980db00213dab86c205))
+* scenario list ([8ce513f](https://github.com/etchteam/mobius/commit/8ce513faea444a65aee3434c1a8beae46fb8fdc6))
+* scenario summary ([580928b](https://github.com/etchteam/mobius/commit/580928bc04fa273ba53697b7d949451130b0e901))
+* skin muted text colour ([8c208f0](https://github.com/etchteam/mobius/commit/8c208f04b2a3f5bc0b3446a56a37e9747bd4589c))
+* stream dot component from LA portal ([c2f0e97](https://github.com/etchteam/mobius/commit/c2f0e97122d13e883a6ca4a09cb2eca5c97e5b04))
+* use label component in scenario list story ([6ffe308](https://github.com/etchteam/mobius/commit/6ffe308212a39dc3ff9b6cf513c84c7d2db4a032))
+* use skins for label styles ([913c173](https://github.com/etchteam/mobius/commit/913c173241f7d27256c6b48dbdb49ee1bb21a0d6))
+
+
+### Bug Fixes
+
+* remove scenario components ([4c3011d](https://github.com/etchteam/mobius/commit/4c3011d10329570775ae497504ccd5c3c9af5416))
+* rename label to badge ([72217f1](https://github.com/etchteam/mobius/commit/72217f120bbbf0d163f9f07bf7589ece6bc62a04))
+* tidy up ([dc349ad](https://github.com/etchteam/mobius/commit/dc349adaae9ae752894e01666f4fff2172a1e942))
+
 ### [6.8.1](https://github.com/etchteam/mobius/compare/v6.8.0...v6.8.1) (2023-03-08)
 
 
