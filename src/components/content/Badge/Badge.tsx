@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './Label.module.scss';
+import styles from './Badge.module.scss';
 
 import { Sizes } from 'src/types/font.type';
 
-export interface LabelProps {
+export interface BadgeProps {
   children?: React.ReactNode;
   size?: Sizes;
   rounded?: boolean;
@@ -13,23 +13,23 @@ export interface LabelProps {
   inverse?: boolean;
 }
 
-const Label = ({
+const Badge = ({
   children,
   size = 'base',
   rounded = false,
   muted = false,
   inverse = false,
-}: LabelProps) => (
+}: BadgeProps) => (
   <span
-    className={classNames(styles.label, {
-      [styles[`label--size-${size}`]]: !!size,
-      [styles['label--rounded']]: rounded,
-      [styles['label--muted']]: muted,
-      [styles['label--inverse']]: inverse,
+    className={classNames(styles.badge, {
+      [styles[`badge--size-${size}`]]: !!size,
+      [styles['badge--rounded']]: rounded,
+      [styles['badge--muted']]: muted,
+      [styles['badge--inverse']]: inverse,
     })}
   >
     {children}
   </span>
 );
 
-export default Label;
+export default Badge;

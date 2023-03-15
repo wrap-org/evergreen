@@ -3,31 +3,31 @@ import React from 'react';
 
 import Text from '../Text/Text';
 
-import Label, { LabelProps } from './Label';
+import Badge, { BadgeProps } from './Badge';
 
 import Grid from 'components/composition/Grid/Grid';
 import Skin, { emphasisSkins, skins } from 'components/composition/Skin/Skin';
 
 export default {
-  title: 'Content/Label',
-  component: Label,
+  title: 'Content/Badge',
+  component: Badge,
 } as Meta;
 
-export const Default = (args: LabelProps) => (
+export const Default = (args: BadgeProps) => (
   <>
     {[...skins, ...emphasisSkins].map((skin) => (
       <Skin skin={skin} key={skin}>
         <Grid.Item xs={3}>
-          <Label {...args}>
+          <Badge {...args}>
             <Text transform="capitalize">{skin}</Text>
-          </Label>
+          </Badge>
         </Grid.Item>
       </Skin>
     ))}
   </>
 );
 
-Default.storyName = 'Label';
+Default.storyName = 'Badge';
 
 Default.args = {
   size: 'base',

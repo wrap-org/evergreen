@@ -4,7 +4,7 @@
 @use '../../../styles/variables/input';
 @use '../../../styles/variables/skin';
 
-.label {
+.badge {
   background: skin.$background;
   color: skin.$color;
   display: inline-block;
@@ -19,7 +19,7 @@
     background: skin.$color;
     color: skin.$background;
 
-    &.label--muted {
+    &.badge--muted {
       background-color: skin.$color-muted;
       color: skin.$background-muted;
     }
