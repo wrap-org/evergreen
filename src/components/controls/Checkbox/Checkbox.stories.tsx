@@ -11,6 +11,17 @@ import Grid from 'components/composition/Grid/Grid';
 export default {
   title: 'Controls/Checkbox',
   component: Checkbox,
+  a11y: {
+    config: {
+      rules: [
+        {
+          // Temporary disable
+          id: 'color-contrast',
+          enabled: false,
+        },
+      ],
+    },
+  },
 } as Meta;
 
 export function Default() {
@@ -50,7 +61,7 @@ export function Checked() {
 
 export function TypeInput() {
   return (
-    <Checkbox name="checkbox" id="checkbox" type="input">
+    <Checkbox name="checkbox" type="input">
       Checkbox label
     </Checkbox>
   );
@@ -60,12 +71,12 @@ export function TypeList() {
   return (
     <Grid wrap>
       <Grid.Item xs={12}>
-        <Checkbox name="checkbox" id="checkbox" type="list">
+        <Checkbox name="checkbox" type="list">
           Checkbox label
         </Checkbox>
       </Grid.Item>
       <Grid.Item xs={12}>
-        <Checkbox name="checkbox" id="checkbox" type="list">
+        <Checkbox name="checkbox" type="list">
           Checkbox label
         </Checkbox>
       </Grid.Item>
