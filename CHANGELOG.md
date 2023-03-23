@@ -1,3 +1,11 @@
+### [6.10.1](https://github.com/etchteam/mobius/compare/v6.10.0...v6.10.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* a11y warnings ([fe01057](https://github.com/etchteam/mobius/commit/fe01057d37cf494456f8d9f479598925ade7fcff))
+* radio/checkbox wrapping ([8433642](https://github.com/etchteam/mobius/commit/8433642ef02a1145150497ad5831c83ea2b41529))
+
 ## [6.10.0](https://github.com/etchteam/mobius/compare/v6.9.0...v6.10.0) (2023-03-15)
 
 
