@@ -19,6 +19,7 @@
 
   &__indicator {
     @include forms.indicator;
+    align-self: flex-start;
     border-radius: 0.125em;
 
     .checkbox--checked & {
@@ -39,18 +40,10 @@
     }
   }
 
-  &__content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
   &--type-default {
     display: flex;
 
     .checkbox__indicator {
-      align-self: flex-start;
-
       &:hover,
       &:focus-within {
         border-color: var(--input-border-hover);

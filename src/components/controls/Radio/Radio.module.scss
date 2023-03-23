@@ -2,6 +2,7 @@
 @use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
+@use '../../../styles/variables/color';
 
 $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
 
@@ -17,6 +18,14 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
 
   &--disabled {
     @include forms.input-disabled;
+  }
+
+  &--valid {
+    border-color: var(--input-border);
+  }
+
+  &--valid.radio--checked {
+    border-color: color.$positive;
   }
 
   &__input {
@@ -43,11 +52,5 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
       opacity: 1;
       transform: none;
     }
-  }
-
-  &__content {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }

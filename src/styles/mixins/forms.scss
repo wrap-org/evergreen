@@ -80,12 +80,13 @@
 
 @mixin indicator() {
   align-items: center;
-  align-self: center;
   border: 2px solid currentColor;
   display: inline-flex;
+  flex-shrink: 0;
   height: font.$size-lg;
   justify-content: center;
   margin-right: spacing.$horizontal-sm;
+  margin-top: spacing.$vertical-xs;
   position: relative;
   transition: background transition.$duration transition.$timing,
     border-color transition.$duration transition.$timing,
