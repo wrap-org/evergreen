@@ -1,3 +1,17 @@
+## [6.11.0](https://github.com/etchteam/mobius/compare/v6.10.1...v6.11.0) (2023-03-24)
+
+
+### Features
+
+* form group info ([623e86e](https://github.com/etchteam/mobius/commit/623e86e5c5f61a2afde16631afcf2c93ba75bb62))
+* icon with title ([dfa8f09](https://github.com/etchteam/mobius/commit/dfa8f092199ad0c5ab9553a130dd92cfb5c2d3a9))
+* info skin ([0f99c6f](https://github.com/etchteam/mobius/commit/0f99c6fec799a159522318ed54738f19f2e62727))
+
+
+### Bug Fixes
+
+* modal using deprecated math ([9d0655b](https://github.com/etchteam/mobius/commit/9d0655b3d5d0d73bc2c6cc8c7d4f38aecd7b9abe))
+
 ### [6.10.1](https://github.com/etchteam/mobius/compare/v6.10.0...v6.10.1) (2023-03-23)
 
 
