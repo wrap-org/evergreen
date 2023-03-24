@@ -10,9 +10,6 @@
   }
 
   &__info {
-    --skin-background: #{color.$blue-light};
-    --skin-color: #{color.$blue-darkest};
-
     &-inner {
       margin-block-start: spacing.$vertical;
     }

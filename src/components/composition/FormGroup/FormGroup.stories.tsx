@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
+import Skin from '../Skin/Skin';
 import Spacing from '../Spacing/Spacing';
 
 import FormGroup from './FormGroup';
@@ -42,7 +43,7 @@ export function Horizontal() {
 export function WithInfo() {
   const [infoOneOpen, setInfoOneOpen] = useState(false);
   const [infoTwoOpen, setInfoTwoOpen] = useState(true);
-  // light, dark, neutral, positive, negative, attention
+
   return (
     <>
       <FormGroup>
@@ -59,7 +60,9 @@ export function WithInfo() {
           <Input id="my-input-one" name="my-input" />
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-one" open={infoOneOpen}>
-          <Alert>This is an info message</Alert>
+          <Skin skin="info">
+            <Alert>This is an info message</Alert>
+          </Skin>
         </FormGroup.Info>
       </FormGroup>
 
@@ -79,7 +82,9 @@ export function WithInfo() {
           <Input id="my-input-two" name="my-input-two" />
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-two" open={infoTwoOpen}>
-          <Alert>This is an info message</Alert>
+          <Skin skin="info">
+            <Alert>This is an info message</Alert>
+          </Skin>
         </FormGroup.Info>
       </FormGroup>
     </>

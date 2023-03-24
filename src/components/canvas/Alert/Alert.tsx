@@ -8,6 +8,7 @@ export default function Alert({
   children,
   onClose,
 }: {
+  skin?: string;
   children?: React.ReactNode;
   onClose?: () => void;
 }) {
