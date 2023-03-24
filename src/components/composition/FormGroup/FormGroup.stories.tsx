@@ -7,6 +7,7 @@ import Spacing from '../Spacing/Spacing';
 import FormGroup from './FormGroup';
 
 import Alert from 'components/canvas/Alert/Alert';
+import Icon from 'components/content/Icon/Icon';
 import Input from 'components/controls/Input/Input';
 import Label from 'components/controls/Label/Label';
 import TextButton from 'components/controls/TextButton/TextButton';
@@ -50,11 +51,12 @@ export function WithInfo() {
         <FormGroup.Label>
           <Label htmlFor="my-input-one">Input label</Label>
           <TextButton
-            icon="circle-information"
             onClick={() => setInfoOneOpen(!infoOneOpen)}
             aria-controls="form-group-info-one"
             aria-expanded={infoOneOpen}
-          />
+          >
+            <Icon icon="circle-information" title="Information" />
+          </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>
           <Input id="my-input-one" name="my-input" />
@@ -72,11 +74,12 @@ export function WithInfo() {
         <FormGroup.Label>
           <Label htmlFor="my-input-two">Input label</Label>
           <TextButton
-            icon="circle-information"
             onClick={() => setInfoTwoOpen(!infoTwoOpen)}
             aria-controls="form-group-info-two"
             aria-expanded={infoTwoOpen}
-          />
+          >
+            <Icon icon="circle-information" title="Information" />
+          </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>
           <Input id="my-input-two" name="my-input-two" />
