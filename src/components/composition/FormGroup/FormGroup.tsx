@@ -1,7 +1,26 @@
 import classnames from 'classnames';
 import React from 'react';
+import { Collapse } from 'react-collapse';
 
 import styles from './FormGroup.module.scss';
+
+const Info = ({
+  open,
+  controlId,
+  children,
+}: {
+  open?: boolean;
+  controlId?: string;
+  children?: React.ReactNode;
+}) => (
+  <div className={styles['form-group__info']}>
+    <Collapse isOpened={open}>
+      <div id={controlId} className={styles['form-group__info-inner']}>
+        {children}
+      </div>
+    </Collapse>
+  </div>
+);
 
 const Label = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles['form-group__label']}>{children}</div>
@@ -29,5 +48,6 @@ const FormGroup = ({
 
 FormGroup.Label = Label;
 FormGroup.Control = Control;
+FormGroup.Info = Info;
 
 export default FormGroup;
