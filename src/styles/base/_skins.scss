@@ -21,6 +21,16 @@
   --skin-link-text-decoration-dark: underline;
   --skin-link-text-decoration-hover-dark: underline;
 
+  --skin-background-info: #{color.$blue-light};
+  --skin-background-muted-info: #{color.$blue-lightest};
+  --skin-border-color-info: #{color.$blue-light};
+  --skin-color-light: #{color.$blue-darkest};
+  --skin-color-muted-light: #{color.$body};
+  --skin-heading-color-light: #{color.$blue-darkest};
+  --skin-link-color-light: #{color.$link};
+  --skin-link-text-decoration-light: none;
+  --skin-link-text-decoration-hover-light: underline;
+
   --skin-background-neutral: #{color.$blue};
   --skin-background-muted-neutral: #{color.$blue-lightest};
   --skin-border-color-neutral: #{color.$blue};

@@ -3,7 +3,13 @@ import React from 'react';
 
 export const skins = ['light', 'dark'];
 
-export const emphasisSkins = ['neutral', 'positive', 'negative', 'attention'];
+export const emphasisSkins = [
+  'info',
+  'neutral',
+  'positive',
+  'negative',
+  'attention',
+];
 
 // This component uses non-module CSS
 // so that we can define skins at the

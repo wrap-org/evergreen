@@ -1,15 +1,29 @@
+@use 'sass:math';
+@use '../../../styles/variables/color';
 @use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
 
 .form-group {
+  &__label {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  &__info {
+    &-inner {
+      margin-block-start: spacing.$vertical;
+    }
+  }
+
   &--horizontal {
     @media (min-width: breakpoint.$tablet) {
-      display: flex;
-      gap: spacing.$horizontal;
+      column-gap: spacing.$horizontal;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-      .form-group__label,
-      .form-group__control {
-        width: 50%;
+      :nth-child(n + 3) {
+        // After the label and control everything else can be full width
+        grid-column-end: span 2;
       }
     }
   }
