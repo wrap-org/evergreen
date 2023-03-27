@@ -24,12 +24,12 @@
   --skin-background-info: #{color.$blue-light};
   --skin-background-muted-info: #{color.$blue-lightest};
   --skin-border-color-info: #{color.$blue-light};
-  --skin-color-light: #{color.$blue-darkest};
-  --skin-color-muted-light: #{color.$body};
-  --skin-heading-color-light: #{color.$blue-darkest};
-  --skin-link-color-light: #{color.$link};
-  --skin-link-text-decoration-light: none;
-  --skin-link-text-decoration-hover-light: underline;
+  --skin-color-info: #{color.$blue-darkest};
+  --skin-color-muted-info: #{color.$body};
+  --skin-heading-color-info: #{color.$blue-darkest};
+  --skin-link-color-info: #{color.$link};
+  --skin-link-text-decoration-info: none;
+  --skin-link-text-decoration-hover-info: underline;
 
   --skin-background-neutral: #{color.$blue};
   --skin-background-muted-neutral: #{color.$blue-lightest};
