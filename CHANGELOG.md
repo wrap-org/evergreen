@@ -1,3 +1,10 @@
+### [6.11.1](https://github.com/etchteam/mobius/compare/v6.11.0...v6.11.1) (2023-03-27)
+
+
+### Bug Fixes
+
+* info skin ([bb8a288](https://github.com/etchteam/mobius/commit/bb8a288dcef8201794b22bda5835425d010261e5))
+
 ## [6.11.0](https://github.com/etchteam/mobius/compare/v6.10.1...v6.11.0) (2023-03-24)
 
 
