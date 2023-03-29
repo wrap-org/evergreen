@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
+import Grid from '../Grid/Grid';
 import Skin from '../Skin/Skin';
 import Spacing from '../Spacing/Spacing';
 
@@ -10,6 +11,7 @@ import Alert from 'components/canvas/Alert/Alert';
 import Icon from 'components/content/Icon/Icon';
 import Input from 'components/controls/Input/Input';
 import Label from 'components/controls/Label/Label';
+import Radio from 'components/controls/Radio/Radio';
 import TextButton from 'components/controls/TextButton/TextButton';
 
 export default {
@@ -30,14 +32,39 @@ Default.storyName = 'Form group';
 
 export function Horizontal() {
   return (
-    <FormGroup horizontal>
-      <FormGroup.Label>
-        <Label htmlFor="my-input">Input label</Label>
-      </FormGroup.Label>
-      <FormGroup.Control>
-        <Input id="my-input" name="my-input" />
-      </FormGroup.Control>
-    </FormGroup>
+    <>
+      <FormGroup horizontal>
+        <FormGroup.Label>
+          <Label htmlFor="my-input">Input label</Label>
+        </FormGroup.Label>
+        <FormGroup.Control>
+          <Input id="my-input" name="my-input" />
+        </FormGroup.Control>
+      </FormGroup>
+
+      <Spacing bottom="lg" />
+
+      <FormGroup horizontal>
+        <FormGroup.Label>
+          <Label id="my-input-two">
+            Input label with a bigger list of form controls
+          </Label>
+        </FormGroup.Label>
+        <FormGroup.Control>
+          <div role="radiogroup" aria-labelledby="my-input-two">
+            <Grid wrap>
+              {[1, 2, 3, 4].map((option) => (
+                <Grid.Item xs={12} key={option}>
+                  <Radio value={option} name="my-radio-input">
+                    Option {option}
+                  </Radio>
+                </Grid.Item>
+              ))}
+            </Grid>
+          </div>
+        </FormGroup.Control>
+      </FormGroup>
+    </>
   );
 }
 
