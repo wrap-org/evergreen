@@ -1,3 +1,10 @@
+### [6.11.2](https://github.com/etchteam/mobius/compare/v6.11.1...v6.11.2) (2023-03-29)
+
+
+### Bug Fixes
+
+* label alignment ([ea9198e](https://github.com/etchteam/mobius/commit/ea9198ec198a7d710155dfac9c7e116b115be1f7))
+
 ### [6.11.1](https://github.com/etchteam/mobius/compare/v6.11.0...v6.11.1) (2023-03-27)
 
 
