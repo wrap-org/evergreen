@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import classNames from 'classnames';
-import React from 'react';
+import React, { Component } from 'react';
 
 import styles from './Card.module.scss';
 import CardBody from './CardBody';
@@ -12,18 +12,18 @@ export interface CardProps {
   children?: React.ReactNode;
   border?: boolean;
   href?: string;
-  onClick?: any;
+  onClick?: () => void;
   id?: string;
-  [x: string]: any;
   arrow?: boolean;
   shadow?: boolean;
   control?: boolean;
   muted?: boolean;
   disabled?: boolean;
+  [x: string]: unknown;
 }
-class Card extends React.Component<CardProps> {
-  static Header: typeof CardHeader;
 
+class Card extends Component<CardProps> {
+  static Header: typeof CardHeader;
   static Body: typeof CardBody;
 
   render() {
@@ -41,11 +41,18 @@ class Card extends React.Component<CardProps> {
     } = this.props;
 
     const CardElement = href ? 'a' : 'div';
+
+    const handleKeyDown = (event: React.KeyboardEvent) => {
+      if (event.key === 'Enter' && onClick) {
+        onClick();
+      }
+    };
+
     return (
       <CardElement
         className={classNames(styles.card, {
           [styles['card--border']]: border,
-          [styles['card--clickable']]: href,
+          [styles['card--clickable']]: href || onClick,
           [styles['card--shadow']]: shadow,
           [styles['card--disabled']]: disabled,
           [styles['card--control']]: control,
@@ -53,6 +60,9 @@ class Card extends React.Component<CardProps> {
         })}
         href={href}
         onClick={onClick}
+        tabIndex={onClick ? 0 : undefined}
+        onKeyDown={handleKeyDown}
+        role={onClick ? 'button' : undefined}
         id={id}
       >
         {arrow && (
