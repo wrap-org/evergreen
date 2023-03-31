@@ -32,6 +32,8 @@ export function Default() {
   );
 }
 
+Default.storyName = 'Checkbox';
+
 export function Checked() {
   return (
     <fieldset>
@@ -83,5 +85,3 @@ export function TypeList() {
     </Grid>
   );
 }
-
-Default.storyName = 'Checkbox';
