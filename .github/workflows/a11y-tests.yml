@@ -1,5 +1,5 @@
 name: 🧪 A11y tests
-on: [push, pull_request]
+on: [pull_request]
 
 env:
   HUSKY: 0
