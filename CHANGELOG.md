@@ -1,3 +1,11 @@
+### [6.11.3](https://github.com/etchteam/mobius/compare/v6.11.2...v6.11.3) (2023-03-31)
+
+
+### Bug Fixes
+
+* a11y warning for checkbox ([2ec51ee](https://github.com/etchteam/mobius/commit/2ec51eed3bb4c840c8d8af030b169d8d9933b04d))
+* cards with onClick ([38ff010](https://github.com/etchteam/mobius/commit/38ff01017cbe51c8c315195b9c38f2272e08392e))
+
 ### [6.11.2](https://github.com/etchteam/mobius/compare/v6.11.1...v6.11.2) (2023-03-29)
 
 
