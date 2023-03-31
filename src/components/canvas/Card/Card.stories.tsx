@@ -48,4 +48,10 @@ export const Link = Template.bind({});
 Link.args = { border: true, href: '#somewhere' };
 
 export const Arrow = Template.bind({});
-Arrow.args = { border: true, arrow: true };
+Arrow.args = {
+  border: true,
+  arrow: true,
+  onClick: () => {
+    console.log('clicked');
+  },
+};
