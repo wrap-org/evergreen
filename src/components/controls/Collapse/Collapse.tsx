@@ -8,10 +8,10 @@ import styles from './Collapse.module.scss';
 import Grid from 'components/composition/Grid/Grid';
 import Icon from 'components/content/Icon/Icon';
 
-interface CollapseProps {
+export interface CollapseProps {
   children?: React.ReactNode;
   headerLabel: React.ReactNode;
-  align?: 'right';
+  align?: 'left' | 'right';
   iconOpen?: string;
   iconClosed?: string;
   onToggle?: (open?: boolean) => void;
@@ -21,7 +21,7 @@ interface CollapseProps {
 const Collapse = ({
   children,
   headerLabel,
-  align,
+  align = 'left',
   iconOpen = 'chevron-up',
   iconClosed = 'chevron-down',
   onToggle,
