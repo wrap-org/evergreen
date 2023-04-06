@@ -8,20 +8,26 @@ import styles from './Collapse.module.scss';
 import Grid from 'components/composition/Grid/Grid';
 import Icon from 'components/content/Icon/Icon';
 
-interface CollapseProps {
+export interface CollapseProps {
   children?: React.ReactNode;
   headerLabel: React.ReactNode;
-  align?: 'right';
+  align?: 'left' | 'right';
+  iconOpen?: string;
+  iconClosed?: string;
   onToggle?: (open?: boolean) => void;
+  defaultOpen?: boolean;
 }
 
 const Collapse = ({
   children,
   headerLabel,
-  align,
+  align = 'left',
+  iconOpen = 'chevron-up',
+  iconClosed = 'chevron-down',
   onToggle,
+  defaultOpen = false,
 }: CollapseProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
 
   const toggle = () => {
     setOpen(!open);
@@ -46,7 +52,7 @@ const Collapse = ({
       >
         <Grid direction={direction} spacing="sm">
           <Grid.Item>
-            <Icon icon={open ? 'chevron-up' : 'chevron-down'} size="lg" />
+            <Icon icon={open ? iconOpen : iconClosed} size="lg" />
           </Grid.Item>
           <Grid.Item grow shrink>
             {headerLabel}
