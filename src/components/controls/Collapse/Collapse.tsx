@@ -12,6 +12,8 @@ interface CollapseProps {
   children?: React.ReactNode;
   headerLabel: React.ReactNode;
   align?: 'right';
+  iconOpen?: string;
+  iconClosed?: string;
   onToggle?: (open?: boolean) => void;
   initiallyOpen?: boolean;
 }
@@ -20,6 +22,8 @@ const Collapse = ({
   children,
   headerLabel,
   align,
+  iconOpen = 'chevron-up',
+  iconClosed = 'chevron-down',
   onToggle,
   initiallyOpen = false,
 }: CollapseProps) => {
@@ -52,7 +56,7 @@ const Collapse = ({
       >
         <Grid direction={direction} spacing="sm">
           <Grid.Item>
-            <Icon icon={open ? 'chevron-up' : 'chevron-down'} size="lg" />
+            <Icon icon={open ? iconOpen : iconClosed} size="lg" />
           </Grid.Item>
           <Grid.Item grow shrink>
             {headerLabel}
