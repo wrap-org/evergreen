@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Collapse as ReactCollapse } from 'react-collapse';
 
 import styles from './Collapse.module.scss';
@@ -27,11 +27,7 @@ const Collapse = ({
   onToggle,
   initiallyOpen = false,
 }: CollapseProps) => {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setOpen(initiallyOpen);
-  }, [initiallyOpen]);
+  const [open, setOpen] = useState(initiallyOpen);
 
   const toggle = () => {
     setOpen(!open);
