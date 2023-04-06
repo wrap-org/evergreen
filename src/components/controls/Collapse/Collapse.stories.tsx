@@ -22,7 +22,7 @@ Default.args = {
   align: 'left',
   iconOpen: 'chevron-up',
   iconClosed: 'chevron-down',
-  initiallyOpen: false,
+  defaultOpen: false,
 };
 
 export const RightAlign: Story = () => (
@@ -33,10 +33,10 @@ export const RightAlign: Story = () => (
   </Collapse>
 );
 
-export const InitiallyOpen: Story = () => (
-  <Collapse headerLabel="Click me" initiallyOpen>
+export const DefaultOpen: Story = () => (
+  <Collapse headerLabel="Click me" defaultOpen>
     <div>
-      <p>Collapse open from initial render</p>
+      <p>Collapse is open from initial render</p>
     </div>
   </Collapse>
 );

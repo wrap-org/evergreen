@@ -15,7 +15,7 @@ export interface CollapseProps {
   iconOpen?: string;
   iconClosed?: string;
   onToggle?: (open?: boolean) => void;
-  initiallyOpen?: boolean;
+  defaultOpen?: boolean;
 }
 
 const Collapse = ({
@@ -25,9 +25,9 @@ const Collapse = ({
   iconOpen = 'chevron-up',
   iconClosed = 'chevron-down',
   onToggle,
-  initiallyOpen = false,
+  defaultOpen = false,
 }: CollapseProps) => {
-  const [open, setOpen] = useState(initiallyOpen);
+  const [open, setOpen] = useState(defaultOpen);
 
   const toggle = () => {
     setOpen(!open);
