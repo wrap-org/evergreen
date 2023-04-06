@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Collapse as ReactCollapse } from 'react-collapse';
 
 import styles from './Collapse.module.scss';
@@ -13,6 +13,7 @@ interface CollapseProps {
   headerLabel: React.ReactNode;
   align?: 'right';
   onToggle?: (open?: boolean) => void;
+  initiallyOpen?: boolean;
 }
 
 const Collapse = ({
@@ -20,8 +21,13 @@ const Collapse = ({
   headerLabel,
   align,
   onToggle,
+  initiallyOpen = false,
 }: CollapseProps) => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(initiallyOpen);
+  }, [initiallyOpen]);
 
   const toggle = () => {
     setOpen(!open);
