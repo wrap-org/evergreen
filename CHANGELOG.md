@@ -1,3 +1,17 @@
+## [6.12.0](https://github.com/etchteam/mobius/compare/v6.11.3...v6.12.0) (2023-04-06)
+
+
+### Features
+
+* collapse initiallyOpen prop ([3b47770](https://github.com/etchteam/mobius/commit/3b477703844734f7a11425096959c6235646bfc2))
+* collapse open and closed icon props ([0e12e07](https://github.com/etchteam/mobius/commit/0e12e07e7bbc8fb16c38f1587bf78d44de5bf1b5))
+* collapse story improvements ([04e89a5](https://github.com/etchteam/mobius/commit/04e89a568d6c59b19b02a723066132547dc24aa1))
+
+
+### Bug Fixes
+
+* open initial state ([e6eaeb6](https://github.com/etchteam/mobius/commit/e6eaeb6712e426c8129e6fd40fdca53764fb6bea))
+
 ### [6.11.3](https://github.com/etchteam/mobius/compare/v6.11.2...v6.11.3) (2023-03-31)
 
 
