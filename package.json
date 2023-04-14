@@ -104,6 +104,7 @@
     "react-collapse": "^5.1.1",
     "react-day-picker": "^8.4.1",
     "react-popper": "^2.3.0",
+    "react-range-slider-input": "^3.0.7",
     "react-textarea-autosize": "^8.3.3"
   },
   "main": "dist/index.cjs.js",
