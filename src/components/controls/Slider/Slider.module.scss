@@ -1,5 +1,6 @@
 @use '../../../styles/variables/color.scss';
 @use '../../../styles/variables/font.scss';
+@use '../../../styles/mixins/forms';
 
 .slider {
   &__input {
@@ -9,6 +10,7 @@
 
     &::after {
       background: color.$green;
+      border-radius: 0.25rem;
       content: '';
       display: block;
       height: 0.5rem;
@@ -16,7 +18,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 100%;
+      width: calc((100 - var(--slider-value)) * 1%);
     }
   }
 
