@@ -1,7 +1,5 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
-import RangeSlider from 'react-range-slider-input';
-import 'react-range-slider-input/dist/style.css';
 
 import styles from './Slider.module.scss';
 
@@ -88,8 +86,8 @@ const Slider = React.forwardRef(
     const [lowerValue, setLowerValue] = useState(value ?? defaultValue);
     const [upperValue, setUpperValue] = useState(max - (value ?? defaultValue));
 
-    const handleInputChange = (values: [number, number]) => {
-      const newValue = values[1];
+    const handleInputChange = (e: InputEvent) => {
+      const newValue = Number(e?.target?.value);
       setLowerValue(newValue);
       setUpperValue(max - newValue);
       onChange?.(newValue);
@@ -124,22 +122,27 @@ const Slider = React.forwardRef(
     }, [id]);
 
     return (
-      <div className={styles.slider}>
-        <RangeSlider
-          className={styles['slider__range-slider']}
-          id={id}
-          value={value ? [0, value] : undefined}
-          defaultValue={[0, defaultValue]}
-          min={min}
-          max={max}
-          step={step}
-          disabled={disabled}
-          onInput={handleInputChange}
-          thumbsDisabled={[true, false]}
-          rangeSlideDisabled={true}
-          {...props}
-          ref={ref}
-        />
+      <div
+        className={styles.slider}
+        style={{ '--slider-value': lowerValue } as React.CSSProperties}
+      >
+        <div className={styles.slider__input}>
+          <input
+            type="range"
+            id={id}
+            value={value}
+            defaultValue={defaultValue}
+            min={min}
+            max={max}
+            step={step}
+            disabled={disabled}
+            onInput={handleInputChange}
+            thumbsDisabled={[true, false]}
+            rangeSlideDisabled={true}
+            {...props}
+            ref={ref}
+          />
+        </div>
         {(labelLower || labelUpper) && (
           <div className={styles.slider__labels}>
             <SliderLabel
