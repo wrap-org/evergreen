@@ -7,7 +7,7 @@ import styles from './Slider.module.scss';
 
 import { FormControl } from 'src/types/form-control.type';
 
-interface SliderLabel {
+interface SliderLabelProps {
   text?: string;
   showValue?: boolean;
   asPercentage?: boolean;
@@ -21,9 +21,52 @@ export interface SliderProps extends FormControl {
   max?: number;
   step?: number;
   defaultValue?: number;
-  labelLower?: SliderLabel;
-  labelUpper?: SliderLabel;
+  labelLower?: SliderLabelProps;
+  labelUpper?: SliderLabelProps;
 }
+
+const formatPercentage = (value: number, max: number) => {
+  return `${((value / max) * 100).toFixed(0)}%`;
+};
+
+const SliderLabel = ({
+  label,
+  position,
+  value,
+  max,
+}: {
+  label?: SliderLabelProps;
+  position: 'upper' | 'lower';
+  value: number;
+  max: number;
+}) => {
+  if (!label) {
+    return (
+      <div
+        className={classNames(
+          styles.slider__label,
+          styles[`slider__label-${position}`]
+        )}
+      ></div>
+    );
+  }
+  const { text, showValue, asPercentage } = label;
+  return (
+    <div
+      className={classNames(
+        styles.slider__label,
+        styles[`slider__label-${position}`]
+      )}
+    >
+      <p>
+        {text}
+        {text && showValue && <br />}
+        {showValue &&
+          (asPercentage ? <>{formatPercentage(value, max)}</> : <>{value}</>)}
+      </p>
+    </div>
+  );
+};
 
 const Slider = React.forwardRef(
   (
@@ -52,10 +95,6 @@ const Slider = React.forwardRef(
       onChange?.(newValue);
     };
 
-    const formatPercentage = (value: number) => {
-      return `${((value / max) * 100).toFixed(0)}%`;
-    };
-
     useEffect(() => {
       const inputs = document.querySelectorAll(`#${id} input[type="range"]`);
       if (inputs.length === 2) {
@@ -73,6 +112,7 @@ const Slider = React.forwardRef(
         lowerSlider.removeAttribute('aria-valuenow');
         lowerSlider.removeAttribute('aria-valuetext');
       }
+
       const upperSlider = document.querySelector(
         `#${id} div[data-upper="true"]`
       );
@@ -102,44 +142,18 @@ const Slider = React.forwardRef(
         />
         {(labelLower || labelUpper) && (
           <div className={styles.slider__labels}>
-            <div
-              className={classNames(
-                styles.slider__label,
-                styles['slider__label-lower']
-              )}
-            >
-              {labelLower && (
-                <p>
-                  {labelLower?.text}
-                  {labelLower?.text && labelLower?.showValue && <br />}
-                  {labelLower?.showValue &&
-                    (labelUpper?.asPercentage ? (
-                      <>{formatPercentage(lowerValue)}</>
-                    ) : (
-                      <>{lowerValue}</>
-                    ))}
-                </p>
-              )}
-            </div>
-            <div
-              className={classNames(
-                styles.slider__label,
-                styles['slider__label-upper']
-              )}
-            >
-              {labelUpper && (
-                <p>
-                  {labelUpper?.text}
-                  {labelUpper?.text && labelUpper?.showValue && <br />}
-                  {labelUpper?.showValue &&
-                    (labelUpper?.asPercentage ? (
-                      <>{formatPercentage(upperValue)}</>
-                    ) : (
-                      <>{upperValue}</>
-                    ))}
-                </p>
-              )}
-            </div>
+            <SliderLabel
+              label={labelLower}
+              position="lower"
+              value={lowerValue}
+              max={max}
+            />
+            <SliderLabel
+              label={labelUpper}
+              position="upper"
+              value={upperValue}
+              max={max}
+            />
           </div>
         )}
       </div>
