@@ -45,4 +45,8 @@
   &__label-upper {
     color: color.$green;
   }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
 }

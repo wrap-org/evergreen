@@ -123,7 +123,9 @@ const Slider = React.forwardRef(
 
     return (
       <div
-        className={styles.slider}
+        className={classNames(styles.slider, {
+          [styles['slider--disabled']]: disabled,
+        })}
         style={{ '--slider-value': lowerValue } as React.CSSProperties}
       >
         <div className={styles.slider__input}>
