@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 
@@ -14,6 +14,7 @@ interface SliderLabel {
 }
 
 export interface SliderProps extends FormControl {
+  id: string;
   value?: number;
   onChange?: (value: number) => void;
   min?: number;
@@ -27,6 +28,7 @@ export interface SliderProps extends FormControl {
 const Slider = React.forwardRef(
   (
     {
+      id,
       value,
       onChange,
       min = 0,
@@ -54,10 +56,38 @@ const Slider = React.forwardRef(
       return `${((value / max) * 100).toFixed(0)}%`;
     };
 
+    useEffect(() => {
+      const inputs = document.querySelectorAll(`#${id} input[type="range"]`);
+      if (inputs.length === 2) {
+        inputs[0].remove();
+        inputs[1].setAttribute('role', 'none');
+      }
+
+      const lowerSlider = document.querySelector(
+        `#${id} div[data-lower="true"]`
+      );
+      if (lowerSlider) {
+        lowerSlider.role = 'none';
+        lowerSlider.removeAttribute('aria-valuemin');
+        lowerSlider.removeAttribute('aria-valuemax');
+        lowerSlider.removeAttribute('aria-valuenow');
+        lowerSlider.removeAttribute('aria-valuetext');
+      }
+      const upperSlider = document.querySelector(
+        `#${id} div[data-upper="true"]`
+      );
+      if (upperSlider) {
+        upperSlider.setAttribute('id', `${id}_thumb`);
+        const label = document.querySelector(`[for="${id}"]`);
+        upperSlider.setAttribute('aria-label', label?.textContent ?? '');
+      }
+    }, [id]);
+
     return (
       <div className={styles.slider}>
         <RangeSlider
           className={styles['slider__range-slider']}
+          id={id}
           value={value ? [0, value] : undefined}
           defaultValue={[0, defaultValue]}
           min={min}
