@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 
 import styles from './Slider.module.scss';
-import Label, { SliderLabelProps } from './SliderLabel';
+import Label from './SliderLabel';
 
 import { FormControl } from 'src/types/form-control.type';
 
@@ -15,9 +15,6 @@ export interface SliderProps extends FormControl {
   defaultValue?: number;
   min?: number;
   max?: number;
-  step?: number;
-  labelLower?: SliderLabelProps;
-  labelUpper?: SliderLabelProps;
 }
 
 const Slider = React.forwardRef(
