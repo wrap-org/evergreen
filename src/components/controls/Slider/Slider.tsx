@@ -18,7 +18,6 @@ export interface SliderProps extends FormControl {
   min?: number;
   max?: number;
   step?: number;
-  defaultValue?: number;
   labelLower?: SliderLabelProps;
   labelUpper?: SliderLabelProps;
 }
@@ -69,13 +68,10 @@ const SliderLabel = ({
 const Slider = React.forwardRef(
   (
     {
-      id,
       value,
       onChange,
       min = 0,
       max = 100,
-      step = 1,
-      defaultValue = 50,
       disabled,
       labelLower,
       labelUpper,
@@ -83,6 +79,7 @@ const Slider = React.forwardRef(
     }: SliderProps,
     ref: any
   ) => {
+    const defaultValue = max < min ? min : min + (max - min) / 2;
     const [lowerValue, setLowerValue] = useState(value ?? defaultValue);
     const [upperValue, setUpperValue] = useState(max - (value ?? defaultValue));
 
@@ -126,17 +123,21 @@ const Slider = React.forwardRef(
         className={classNames(styles.slider, {
           [styles['slider--disabled']]: disabled,
         })}
-        style={{ '--slider-value': lowerValue } as React.CSSProperties}
+        style={
+          {
+            '--slider-value': lowerValue,
+            '--slider-max': max,
+            '--slider-min': min,
+          } as React.CSSProperties
+        }
       >
         <div className={styles.slider__input}>
           <input
             type="range"
-            id={id}
             value={value}
             defaultValue={defaultValue}
             min={min}
             max={max}
-            step={step}
             disabled={disabled}
             onInput={handleInputChange}
             thumbsDisabled={[true, false]}

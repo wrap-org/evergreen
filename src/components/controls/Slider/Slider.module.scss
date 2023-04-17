@@ -14,11 +14,17 @@
       content: '';
       display: block;
       height: 0.5rem;
-      left: calc(var(--slider-value) * 1%);
+      left: calc(
+        100% * (var(--slider-value) - var(--slider-min)) /
+          (var(--slider-max) - var(--slider-min))
+      );
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: calc((100 - var(--slider-value)) * 1%);
+      width: calc(
+        100% * (var(--slider-max) - var(--slider-value)) /
+          (var(--slider-max) - var(--slider-min))
+      );
     }
   }
 

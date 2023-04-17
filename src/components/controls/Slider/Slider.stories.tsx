@@ -35,7 +35,7 @@ const Template: ComponentStory<typeof Slider> = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { id: 'default' };
+Default.args = { id: 'default', min: 0, max: 100, step: 1 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
