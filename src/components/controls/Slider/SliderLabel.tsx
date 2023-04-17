@@ -23,23 +23,25 @@ const SliderLabel = ({
   showValue = false,
   asPercentage = false,
 }: SliderLabelProps) => {
+  if (!value) {
+    return null;
+  }
+
+  const displayValue = position === 'upper' && max ? max - value : value;
+
   return (
     <div
-      className={classNames(
-        styles.slider__label,
-        styles[`slider__label--${position}`]
-      )}
+      className={classNames(styles.slider__label, {
+        [styles[`slider__label--${position}`]]: position,
+      })}
     >
-      <div>
-        {children}
-        {children && showValue && <br />}
-        {showValue &&
-          (asPercentage && value && max ? (
-            <>{formatPercentage(value, max)}</>
-          ) : (
-            <>{value}</>
-          ))}
-      </div>
+      {children && <div>{children}</div>}
+      {showValue &&
+        (asPercentage && max ? (
+          <div>{formatPercentage(displayValue, max)}</div>
+        ) : (
+          <div>{displayValue}</div>
+        ))}
     </div>
   );
 };
