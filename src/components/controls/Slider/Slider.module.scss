@@ -43,13 +43,13 @@
     padding: 0;
   }
 
-  &__label-lower {
+  &__label--lower {
     color: color.$teal;
     flex-grow: 1;
     flex-shrink: 1;
   }
 
-  &__label-upper {
+  &__label--upper {
     color: color.$green;
   }
 

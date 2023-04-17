@@ -42,7 +42,7 @@ const SliderLabel = ({
       <div
         className={classNames(
           styles.slider__label,
-          styles[`slider__label-${position}`]
+          styles[`slider__label--${position}`]
         )}
       ></div>
     );
@@ -52,7 +52,7 @@ const SliderLabel = ({
     <div
       className={classNames(
         styles.slider__label,
-        styles[`slider__label-${position}`]
+        styles[`slider__label--${position}`]
       )}
     >
       <p>
