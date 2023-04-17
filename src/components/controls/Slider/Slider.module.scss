@@ -18,6 +18,7 @@
         100% * (var(--slider-value) - var(--slider-min)) /
           (var(--slider-max) - var(--slider-min))
       );
+      pointer-events: none;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
