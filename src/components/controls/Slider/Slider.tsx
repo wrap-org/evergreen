@@ -8,7 +8,10 @@ import { FormControl } from 'src/types/form-control.type';
 
 export interface SliderProps extends FormControl {
   children?: React.ReactNode;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (
+    event: React.ChangeEvent<HTMLInputElement>,
+    values: { lowerValue: number; upperValue: number }
+  ) => void;
   defaultValue?: number;
   min?: number;
   max?: number;
@@ -30,22 +33,21 @@ const Slider = React.forwardRef(
     }: SliderProps,
     ref: any
   ) => {
-    const value = defaultValue ?? (max < min ? min : min + (max - min) / 2);
-    const [lowerValue, setLowerValue] = useState(value);
-    // const [upperValue, setUpperValue] = useState(max - value);
+    const defaultVal =
+      defaultValue ?? (max < min ? min : min + (max - min) / 2);
+    const [value, setValue] = useState(defaultVal);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = Number(e?.target?.value);
-      setLowerValue(newValue);
-      // setUpperValue(max - newValue);
-      onChange?.(e);
+      setValue(newValue);
+      onChange?.(e, { lowerValue: newValue, upperValue: max - newValue });
     };
 
     // augment slider label children with value and max props
     const childrenWithValues = React.Children.map(children, (child) => {
       if (React.isValidElement(child)) {
         return React.cloneElement(child as React.ReactElement<any>, {
-          value: lowerValue,
+          value,
           max,
         });
       }
@@ -59,7 +61,7 @@ const Slider = React.forwardRef(
         })}
         style={
           {
-            '--slider-value': lowerValue,
+            '--slider-value': value,
             '--slider-max': max,
             '--slider-min': min,
           } as React.CSSProperties
@@ -68,7 +70,7 @@ const Slider = React.forwardRef(
         <div className={styles.slider__input}>
           <input
             type="range"
-            defaultValue={value}
+            defaultValue={defaultVal}
             min={min}
             max={max}
             disabled={disabled}
@@ -85,4 +87,7 @@ const Slider = React.forwardRef(
 
 Slider.displayName = 'Slider';
 
-export default Object.assign({}, Slider, { Label });
+const sliderComponent = Object.assign({}, Slider, { Label });
+sliderComponent.displayName = 'Slider';
+
+export default sliderComponent;

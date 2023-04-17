@@ -30,7 +30,7 @@ const SliderLabel = ({
         styles[`slider__label--${position}`]
       )}
     >
-      <p>
+      <div>
         {children}
         {children && showValue && <br />}
         {showValue &&
@@ -39,7 +39,7 @@ const SliderLabel = ({
           ) : (
             <>{value}</>
           ))}
-      </p>
+      </div>
     </div>
   );
 };
