@@ -2,12 +2,12 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 
 import styles from './Slider.module.scss';
-import SliderLabel, { SliderLabelProps } from './SliderLabel';
+import Label, { SliderLabelProps } from './SliderLabel';
 
 import { FormControl } from 'src/types/form-control.type';
 
 export interface SliderProps extends FormControl {
-  id: string;
+  children?: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   defaultValue?: number;
   min?: number;
@@ -20,27 +20,37 @@ export interface SliderProps extends FormControl {
 const Slider = React.forwardRef(
   (
     {
+      children,
       onChange,
       defaultValue,
       min = 0,
       max = 100,
       disabled,
-      labelLower,
-      labelUpper,
       ...props
     }: SliderProps,
     ref: any
   ) => {
     const value = defaultValue ?? (max < min ? min : min + (max - min) / 2);
     const [lowerValue, setLowerValue] = useState(value);
-    const [upperValue, setUpperValue] = useState(max - value);
+    // const [upperValue, setUpperValue] = useState(max - value);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = Number(e?.target?.value);
       setLowerValue(newValue);
-      setUpperValue(max - newValue);
+      // setUpperValue(max - newValue);
       onChange?.(e);
     };
+
+    // augment slider label children with value and max props
+    const childrenWithValues = React.Children.map(children, (child) => {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child as React.ReactElement<any>, {
+          value: lowerValue,
+          max,
+        });
+      }
+      return child;
+    });
 
     return (
       <div
@@ -67,22 +77,7 @@ const Slider = React.forwardRef(
             ref={ref}
           />
         </div>
-        {(labelLower || labelUpper) && (
-          <div className={styles.slider__labels}>
-            <SliderLabel
-              label={labelLower}
-              position="lower"
-              value={lowerValue}
-              max={max}
-            />
-            <SliderLabel
-              label={labelUpper}
-              position="upper"
-              value={upperValue}
-              max={max}
-            />
-          </div>
-        )}
+        <div className={styles.slider__labels}>{childrenWithValues}</div>
       </div>
     );
   }
@@ -90,4 +85,4 @@ const Slider = React.forwardRef(
 
 Slider.displayName = 'Slider';
 
-export default Slider;
+export default Object.assign({}, Slider, { Label });

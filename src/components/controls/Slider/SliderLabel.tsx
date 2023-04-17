@@ -4,7 +4,10 @@ import React from 'react';
 import styles from './Slider.module.scss';
 
 export interface SliderLabelProps {
-  text?: string;
+  children?: React.ReactNode;
+  position: 'upper' | 'lower';
+  value?: number;
+  max?: number;
   showValue?: boolean;
   asPercentage?: boolean;
 }
@@ -13,27 +16,13 @@ const formatPercentage = (value: number, max: number) => {
 };
 
 const SliderLabel = ({
-  label,
+  children,
   position,
   value,
   max,
-}: {
-  label?: SliderLabelProps;
-  position: 'upper' | 'lower';
-  value: number;
-  max: number;
-}) => {
-  if (!label) {
-    return (
-      <div
-        className={classNames(
-          styles.slider__label,
-          styles[`slider__label--${position}`]
-        )}
-      ></div>
-    );
-  }
-  const { text, showValue, asPercentage } = label;
+  showValue = false,
+  asPercentage = false,
+}: SliderLabelProps) => {
   return (
     <div
       className={classNames(
@@ -42,10 +31,14 @@ const SliderLabel = ({
       )}
     >
       <p>
-        {text}
-        {text && showValue && <br />}
+        {children}
+        {children && showValue && <br />}
         {showValue &&
-          (asPercentage ? <>{formatPercentage(value, max)}</> : <>{value}</>)}
+          (asPercentage && value && max ? (
+            <>{formatPercentage(value, max)}</>
+          ) : (
+            <>{value}</>
+          ))}
       </p>
     </div>
   );

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -25,29 +25,38 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Slider>;
+} as Meta;
 
-const Template: ComponentStory<typeof Slider> = (args) => (
+export const Default = (args) => (
   <>
     <Label htmlFor={args.id}>Slider</Label>
     <Slider {...args} />
   </>
 );
 
-export const Default = Template.bind({});
 Default.args = { id: 'default', min: 0, max: 100, step: 1 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  id: 'disabled',
-  disabled: true,
-};
+export const Disabled = (args) => (
+  <>
+    <Label htmlFor="disabled">Slider</Label>
+    <Slider id="disabled" disabled {...args} />
+  </>
+);
 
-export const WithLabels = Template.bind({});
-WithLabels.args = {
-  id: 'withLabels',
-  labelLower: { text: 'Lower Label', showValue: true, asPercentage: true },
-  labelUpper: { text: 'Upper Label', showValue: true, asPercentage: true },
+export const WithLabels = (args) => {
+  return (
+    <>
+      <Label htmlFor="withLabels">Slider</Label>
+      <Slider id="withLabels" {...args}>
+        <Slider.Label position="lower" showValue asPercentage>
+          Lower label
+        </Slider.Label>
+        <Slider.Label position="upper" showValue asPercentage>
+          Upper label
+        </Slider.Label>
+      </Slider>
+    </>
+  );
 };
 
 export const WithReactHookForm = () => {
