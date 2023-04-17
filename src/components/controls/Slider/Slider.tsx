@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import styles from './Slider.module.scss';
 
@@ -13,8 +13,8 @@ interface SliderLabelProps {
 
 export interface SliderProps extends FormControl {
   id: string;
-  value?: number;
-  onChange?: (value: number) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  defaultValue?: number;
   min?: number;
   max?: number;
   step?: number;
@@ -68,8 +68,8 @@ const SliderLabel = ({
 const Slider = React.forwardRef(
   (
     {
-      value,
       onChange,
+      defaultValue,
       min = 0,
       max = 100,
       disabled,
@@ -79,44 +79,16 @@ const Slider = React.forwardRef(
     }: SliderProps,
     ref: any
   ) => {
-    const defaultValue = max < min ? min : min + (max - min) / 2;
-    const [lowerValue, setLowerValue] = useState(value ?? defaultValue);
-    const [upperValue, setUpperValue] = useState(max - (value ?? defaultValue));
+    const value = defaultValue ?? (max < min ? min : min + (max - min) / 2);
+    const [lowerValue, setLowerValue] = useState(value);
+    const [upperValue, setUpperValue] = useState(max - value);
 
-    const handleInputChange = (e: InputEvent) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const newValue = Number(e?.target?.value);
       setLowerValue(newValue);
       setUpperValue(max - newValue);
-      onChange?.(newValue);
+      onChange?.(e);
     };
-
-    useEffect(() => {
-      const inputs = document.querySelectorAll(`#${id} input[type="range"]`);
-      if (inputs.length === 2) {
-        inputs[0].remove();
-        inputs[1].setAttribute('role', 'none');
-      }
-
-      const lowerSlider = document.querySelector(
-        `#${id} div[data-lower="true"]`
-      );
-      if (lowerSlider) {
-        lowerSlider.role = 'none';
-        lowerSlider.removeAttribute('aria-valuemin');
-        lowerSlider.removeAttribute('aria-valuemax');
-        lowerSlider.removeAttribute('aria-valuenow');
-        lowerSlider.removeAttribute('aria-valuetext');
-      }
-
-      const upperSlider = document.querySelector(
-        `#${id} div[data-upper="true"]`
-      );
-      if (upperSlider) {
-        upperSlider.setAttribute('id', `${id}_thumb`);
-        const label = document.querySelector(`[for="${id}"]`);
-        upperSlider.setAttribute('aria-label', label?.textContent ?? '');
-      }
-    }, [id]);
 
     return (
       <div
@@ -134,14 +106,11 @@ const Slider = React.forwardRef(
         <div className={styles.slider__input}>
           <input
             type="range"
-            value={value}
-            defaultValue={defaultValue}
+            defaultValue={value}
             min={min}
             max={max}
             disabled={disabled}
-            onInput={handleInputChange}
-            thumbsDisabled={[true, false]}
-            rangeSlideDisabled={true}
+            onChange={handleInputChange}
             {...props}
             ref={ref}
           />

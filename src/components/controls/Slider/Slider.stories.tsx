@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 import Label from '../Label/Label';
 
@@ -50,12 +50,8 @@ WithLabels.args = {
   labelUpper: { text: 'Upper Label', showValue: true, asPercentage: true },
 };
 
-/**
- * Slider is a controlled component must use `Controller` with react hook form
- * https://react-hook-form.com/get-started#IntegratingControlledInputs
- */
 export const WithReactHookForm = () => {
-  const { control, watch } = useForm<{ ['form-slider']: number }>({
+  const { register, watch, formState } = useForm<{ ['form-slider']: number }>({
     mode: 'onBlur',
     defaultValues: {
       ['form-slider']: 30,
@@ -66,18 +62,10 @@ export const WithReactHookForm = () => {
   return (
     <>
       <Label htmlFor="form-slider">Please select a value</Label>
-      <Controller
-        control={control}
-        name="form-slider"
-        rules={{ required: true }}
-        render={({ field, fieldState }) => (
-          <Slider
-            id="form-slider"
-            touched={fieldState.isTouched}
-            valid={!fieldState.error}
-            {...field}
-          />
-        )}
+      <Slider
+        id="form-slider"
+        defaultValue={formState.defaultValues?.['form-slider']}
+        {...register('form-slider', { required: true })}
       />
       <br />
       The selected value is: {sliderValue}
