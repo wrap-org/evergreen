@@ -1,3 +1,28 @@
+## [6.13.0](https://github.com/etchteam/mobius/compare/v6.12.0...v6.13.0) (2023-04-17)
+
+
+### Features
+
+* add upper and lower value to change handler ([1809fbe](https://github.com/etchteam/mobius/commit/1809fbe5cdac9c3d07b62b4c8158c0ef61d587fe))
+* css range slider native styles ([7dd9588](https://github.com/etchteam/mobius/commit/7dd95883936c6809c8f8b2016a8b704496a27722))
+* disabled state ([c202e41](https://github.com/etchteam/mobius/commit/c202e412690e8cdbf27d4205c03a3e5dc57d1882))
+* install react-range-slider-input package ([ccbe7df](https://github.com/etchteam/mobius/commit/ccbe7dfc54428775155e30927e83e2e93b183472))
+* rounded track ends ([b7113b1](https://github.com/etchteam/mobius/commit/b7113b14b09b9dcb5680e9882594040f6afbd59e))
+* slider component ([117980d](https://github.com/etchteam/mobius/commit/117980dcde33e58b48e8b7955d7f985ba21b812c))
+* slider label component as child ([e2cb949](https://github.com/etchteam/mobius/commit/e2cb949c18540948a034842bc69eb748751c5e5a))
+
+
+### Bug Fixes
+
+* a11y ([d0cc3a5](https://github.com/etchteam/mobius/commit/d0cc3a5741df73e088633beda99201bcf6d77e8f))
+* enable click on upper portion of track ([3a61351](https://github.com/etchteam/mobius/commit/3a61351a4fc0672d3fe0d314c747ddd0e2394f23))
+* label modifiers ([9113f9d](https://github.com/etchteam/mobius/commit/9113f9d7f14d7dc3c6ea2023729db2556cd5f83c))
+* make styles work for different min/max values ([c3e105c](https://github.com/etchteam/mobius/commit/c3e105c2296897d27efcd49e884b8ff7df35f2ff))
+* remove unnecessary package ([95bf708](https://github.com/etchteam/mobius/commit/95bf708b7d8e6f0a2c063a582b17b1b372e1896a))
+* remove unnecessary parts inc react-hook-form controller ([485fd92](https://github.com/etchteam/mobius/commit/485fd92db193a1b7dc95145d68909cf7e9b123de))
+* remove unnecessary props ([414a255](https://github.com/etchteam/mobius/commit/414a25551a06397e0407343d985fdd28accc0bfc))
+* slider label style ([b18babc](https://github.com/etchteam/mobius/commit/b18babcc745b421fb3073c20967fee9464752fc0))
+
 ## [6.12.0](https://github.com/etchteam/mobius/compare/v6.11.3...v6.12.0) (2023-04-06)
 
 
