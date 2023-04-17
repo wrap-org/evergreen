@@ -1,0 +1,57 @@
+@use '../../../styles/variables/color.scss';
+@use '../../../styles/variables/font.scss';
+@use '../../../styles/mixins/forms';
+
+.slider {
+  &__input {
+    height: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      background: color.$green;
+      border-radius: 0.25rem;
+      content: '';
+      display: block;
+      height: 0.5rem;
+      left: calc(
+        100% * (var(--slider-value) - var(--slider-min)) /
+          (var(--slider-max) - var(--slider-min))
+      );
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: calc(
+        100% * (var(--slider-max) - var(--slider-value)) /
+          (var(--slider-max) - var(--slider-min))
+      );
+    }
+  }
+
+  &__labels {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr auto;
+  }
+
+  &__label {
+    display: block;
+    font-weight: font.$weight-bold;
+    min-width: 0;
+    padding: 0;
+
+    &--lower {
+      color: color.$teal;
+    }
+
+    &--upper {
+      color: color.$green;
+      justify-self: flex-end;
+    }
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+}
