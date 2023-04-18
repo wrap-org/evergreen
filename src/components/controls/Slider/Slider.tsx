@@ -15,6 +15,7 @@ export interface SliderProps extends FormControl {
   defaultValue?: number;
   min?: number;
   max?: number;
+  [key: string]: unknown;
 }
 
 const Slider = React.forwardRef(
