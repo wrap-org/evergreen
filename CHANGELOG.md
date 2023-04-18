@@ -1,3 +1,10 @@
+### [6.13.3](https://github.com/etchteam/mobius/compare/v6.13.2...v6.13.3) (2023-04-18)
+
+
+### Bug Fixes
+
+* slider label value check for undefined/null rather than false ([57c8b24](https://github.com/etchteam/mobius/commit/57c8b24d8661310f1bece4505c4399679e6403ec))
+
 ### [6.13.2](https://github.com/etchteam/mobius/compare/v6.13.1...v6.13.2) (2023-04-18)
 
 
