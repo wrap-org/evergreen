@@ -5,5 +5,5 @@ export interface FormControl {
   valid?: boolean;
   status?: ModerationStatus;
   disabled?: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }

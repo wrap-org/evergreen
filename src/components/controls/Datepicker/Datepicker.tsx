@@ -33,10 +33,9 @@ interface DatepickerProps extends FormControl {
   toMonth?: Date;
   fromYear?: number;
   toYear?: number;
-  [key: string]: any;
 }
 
-const Datepicker = React.forwardRef(
+const Datepicker = React.forwardRef<HTMLInputElement, DatepickerProps>(
   (
     {
       disabled,
@@ -51,8 +50,8 @@ const Datepicker = React.forwardRef(
       fromMonth,
       toMonth,
       ...props
-    }: DatepickerProps,
-    ref: any
+    },
+    ref
   ) => {
     const [selected, setSelected] = useState<Date>();
     const [isPopperOpen, setIsPopperOpen] = useState<boolean>(false);
@@ -188,4 +187,6 @@ const Datepicker = React.forwardRef(
 
 Datepicker.displayName = 'Datepicker';
 
-export default Datepicker;
+export default Datepicker as React.ForwardRefExoticComponent<
+  DatepickerProps & React.RefAttributes<HTMLInputElement>
+>;

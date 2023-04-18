@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { forwardRef } from 'react';
+import React from 'react';
 
 import styles from './Button.module.scss';
 
@@ -15,20 +15,10 @@ interface ButtonProps {
   [x: string]: unknown;
 }
 
-const Button = forwardRef(
+const Button = React.forwardRef<any, ButtonProps>(
   (
-    {
-      children,
-      loading,
-      submit,
-      type,
-      href,
-      icon,
-      block,
-      size,
-      ...props
-    }: ButtonProps,
-    ref: any
+    { children, loading, submit, type, href, icon, block, size, ...props },
+    ref
   ) => {
     const baseProps = {
       className: classNames(styles.button, {
@@ -60,14 +50,8 @@ const Button = forwardRef(
   }
 );
 
-Button.defaultProps = {
-  submit: false,
-  loading: false,
-  type: undefined,
-  href: undefined,
-  icon: false,
-  block: undefined,
-};
 Button.displayName = 'Button';
 
-export default Button;
+export default Button as React.ForwardRefExoticComponent<
+  ButtonProps & React.RefAttributes<HTMLInputElement>
+>;

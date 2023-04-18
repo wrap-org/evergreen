@@ -6,17 +6,13 @@ import { FormControl } from '../../../types/form-control.type';
 import styles from './Select.module.scss';
 
 import Icon from 'components/content/Icon/Icon';
-import { defaultInputProps } from 'lib/default-props';
 
 interface SelectProps extends FormControl {
   children?: React.ReactNode;
 }
 
-const Select = React.forwardRef(
-  (
-    { children, disabled, touched, valid, status, ...props }: SelectProps,
-    ref: any
-  ) => (
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ children, disabled, touched, valid, status, ...props }, ref) => (
     <div
       className={classNames(styles.select, {
         [styles['select--disabled']]: disabled,
@@ -40,8 +36,8 @@ const Select = React.forwardRef(
   )
 );
 
-Select.defaultProps = defaultInputProps;
-
 Select.displayName = 'Select';
 
-export default Select;
+export default Select as React.ForwardRefExoticComponent<
+  SelectProps & React.RefAttributes<HTMLSelectElement>
+>;

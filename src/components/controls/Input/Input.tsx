@@ -5,20 +5,13 @@ import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Input.module.scss';
 
-import { defaultInputProps } from 'lib/default-props';
-
 interface InputProps extends FormControl {
-  icon?: string;
-  prefix?: string;
-  suffix?: string;
-  [key: string]: any;
+  prefix?: React.ReactNode | string;
+  suffix?: React.ReactNode | string;
 }
 
-const Input = React.forwardRef(
-  (
-    { prefix, suffix, disabled, touched, valid, status, ...props }: InputProps,
-    ref: any
-  ) => (
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ prefix, suffix, disabled, touched, valid, status, ...props }, ref) => (
     <div
       className={classNames(styles.input, {
         [styles['input--disabled']]: disabled,
@@ -39,11 +32,8 @@ const Input = React.forwardRef(
   )
 );
 
-Input.defaultProps = {
-  ...defaultInputProps,
-  icon: undefined,
-};
-
 Input.displayName = 'Input';
 
-export default Input;
+export default Input as React.ForwardRefExoticComponent<
+  InputProps & React.RefAttributes<HTMLInputElement>
+>;

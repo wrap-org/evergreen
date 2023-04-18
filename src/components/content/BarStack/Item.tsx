@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import styles from './BarStack.module.scss';
+import { Colors } from '../../../types/colors.type';
 
-import { Colors } from 'src/types/colors.type';
+import styles from './BarStack.module.scss';
 
 export interface ItemProps {
   color: Colors;

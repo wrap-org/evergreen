@@ -62,5 +62,4 @@ Modal.displayName = 'Modal';
 
 export const useModalRef = () => React.useRef<ModalInstance>();
 
-// eslint-disable-next-line prefer-object-spread
 export default Object.assign({}, Modal, { Inner, Header });
