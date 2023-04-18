@@ -5,8 +5,6 @@ import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Radio.module.scss';
 
-import { defaultInputProps } from 'lib/default-props';
-
 interface RadioProps extends FormControl {
   checked?: boolean;
   children?: React.ReactNode;
@@ -17,9 +15,10 @@ interface RadioProps extends FormControl {
    * instead of the onChange for this radio!
    */
   onRadioChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Radio = React.forwardRef(
+const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   (
     {
       disabled,
@@ -31,8 +30,8 @@ const Radio = React.forwardRef(
       onRadioChange,
       onChange,
       ...props
-    }: RadioProps,
-    forwardedRef: any
+    },
+    forwardedRef
   ) => (
     <label
       className={classNames(styles.radio, {
@@ -49,12 +48,8 @@ const Radio = React.forwardRef(
         checked={checked}
         disabled={disabled}
         onChange={(event) => {
-          if (onRadioChange) {
-            onRadioChange(event);
-          }
-          if (onChange) {
-            onChange(event);
-          }
+          onRadioChange?.(event);
+          onChange?.(event);
         }}
         {...props}
         ref={forwardedRef}
@@ -67,11 +62,8 @@ const Radio = React.forwardRef(
   )
 );
 
-Radio.defaultProps = {
-  ...defaultInputProps,
-  checked: false,
-};
-
 Radio.displayName = 'Radio';
 
-export default Radio;
+export default Radio as React.ForwardRefExoticComponent<
+  RadioProps & React.RefAttributes<HTMLInputElement>
+>;

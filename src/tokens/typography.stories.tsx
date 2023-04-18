@@ -4,10 +4,9 @@ import React from 'react';
 
 import Spacing from '../components/composition/Spacing/Spacing';
 import Text from '../components/content/Text/Text';
+import { Sizes } from '../types/font.type';
 
 import fonts from './typography.module.scss';
-
-import { Sizes } from 'src/types/font.type';
 
 export default {
   title: 'Tokens/Typography',

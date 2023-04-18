@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './Badge.module.scss';
+import { Sizes } from '../../../types/font.type';
 
-import { Sizes } from 'src/types/font.type';
+import styles from './Badge.module.scss';
 
 export interface BadgeProps {
   children?: React.ReactNode;

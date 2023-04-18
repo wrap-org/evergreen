@@ -1,10 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { Weights } from '../../../types/font.type';
+
 import styles from './TextButton.module.scss';
 
 import Icon from 'components/content/Icon/Icon';
-import { Weights } from 'src/types/font.type';
 
 interface TextButtonProps {
   children?: React.ReactNode;

@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import styles from './StreamDot.module.scss';
+import { StreamType } from '../../../types/stream.type';
 
-import { StreamType } from 'src/types/stream.type';
+import styles from './StreamDot.module.scss';
 
 interface StreamDotProps {
   stream?: StreamType;

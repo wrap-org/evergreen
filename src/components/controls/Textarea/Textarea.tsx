@@ -6,10 +6,8 @@ import { FormControl } from '../../../types/form-control.type';
 
 import styles from './Textarea.module.scss';
 
-import { defaultInputProps } from 'lib/default-props';
-
-const Textarea = React.forwardRef(
-  ({ disabled, touched, valid, status, ...props }: FormControl, ref: any) => (
+const Textarea = React.forwardRef<HTMLTextAreaElement, FormControl>(
+  ({ disabled, touched, valid, status, ...props }, ref) => (
     <div
       className={classNames(styles.textarea, {
         [styles['input--disabled']]: disabled,
@@ -28,10 +26,8 @@ const Textarea = React.forwardRef(
   )
 );
 
-Textarea.defaultProps = {
-  ...defaultInputProps,
-};
-
 Textarea.displayName = 'Textarea';
 
-export default Textarea;
+export default Textarea as React.ForwardRefExoticComponent<
+  FormControl & React.RefAttributes<HTMLTextAreaElement>
+>;

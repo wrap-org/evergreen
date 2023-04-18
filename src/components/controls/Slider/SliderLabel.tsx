@@ -7,19 +7,19 @@ export interface SliderLabelProps {
   children?: React.ReactNode;
   position: 'upper' | 'lower';
   value?: number;
-  max?: number;
+  maxValue?: number;
   showValue?: boolean;
   asPercentage?: boolean;
 }
-const formatPercentage = (value: number, max: number) => {
-  return `${((value / max) * 100).toFixed(0)}%`;
+const formatPercentage = (value: number, maxValue: number) => {
+  return `${((value / maxValue) * 100).toFixed(0)}%`;
 };
 
 const SliderLabel = ({
   children,
   position,
   value,
-  max,
+  maxValue,
   showValue = false,
   asPercentage = false,
 }: SliderLabelProps) => {
@@ -27,7 +27,8 @@ const SliderLabel = ({
     return null;
   }
 
-  const displayValue = position === 'upper' && max ? max - value : value;
+  const displayValue =
+    position === 'upper' && maxValue ? maxValue - value : value;
 
   return (
     <div
@@ -37,8 +38,8 @@ const SliderLabel = ({
     >
       {children && <div>{children}</div>}
       {showValue &&
-        (asPercentage && max ? (
-          <div>{formatPercentage(displayValue, max)}</div>
+        (asPercentage && maxValue ? (
+          <div>{formatPercentage(displayValue, maxValue)}</div>
         ) : (
           <div>{displayValue}</div>
         ))}

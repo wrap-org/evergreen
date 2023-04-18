@@ -6,7 +6,6 @@ import { FormControl } from '../../../types/form-control.type';
 import styles from './Checkbox.module.scss';
 
 import Icon from 'components/content/Icon/Icon';
-import { defaultInputProps } from 'lib/default-props';
 import useCombinedRefs from 'lib/hooks/combined-refs';
 
 interface CheckboxProps extends FormControl {
@@ -14,14 +13,15 @@ interface CheckboxProps extends FormControl {
   forceChecked?: boolean;
   type?: 'default' | 'list' | 'input';
   children?: React.ReactNode;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Checkbox = React.forwardRef(
+const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
       defaultChecked = false,
       forceChecked,
-      type,
+      type = 'input',
       children,
       disabled,
       touched,
@@ -76,13 +76,6 @@ const Checkbox = React.forwardRef(
     );
   }
 );
-
-Checkbox.defaultProps = {
-  ...defaultInputProps,
-  type: 'input',
-  defaultChecked: false,
-  forceChecked: undefined,
-};
 
 Checkbox.displayName = 'Checkbox';
 
