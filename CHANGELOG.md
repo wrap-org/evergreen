@@ -1,3 +1,10 @@
+### [6.13.2](https://github.com/etchteam/mobius/compare/v6.13.1...v6.13.2) (2023-04-18)
+
+
+### Bug Fixes
+
+* control props ([77c53c6](https://github.com/etchteam/mobius/commit/77c53c6609dc9fbcb5fd82dd08060774d7f37f75))
+
 ### [6.13.1](https://github.com/etchteam/mobius/compare/v6.13.0...v6.13.1) (2023-04-18)
 
 
