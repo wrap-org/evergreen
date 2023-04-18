@@ -1,3 +1,10 @@
+### [6.13.1](https://github.com/etchteam/mobius/compare/v6.13.0...v6.13.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* slider props spread type ([6ea372c](https://github.com/etchteam/mobius/commit/6ea372cca19d6539e618d84ef529a7ac9bc37601))
+
 ## [6.13.0](https://github.com/etchteam/mobius/compare/v6.12.0...v6.13.0) (2023-04-17)
 
 
