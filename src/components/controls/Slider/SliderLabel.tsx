@@ -23,7 +23,7 @@ const SliderLabel = ({
   showValue = false,
   asPercentage = false,
 }: SliderLabelProps) => {
-  if (!value) {
+  if (value === undefined || value === null) {
     return null;
   }
 
