@@ -1,3 +1,11 @@
+## [6.14.0](https://github.com/etchteam/mobius/compare/v6.13.3...v6.14.0) (2023-04-25)
+
+
+### Features
+
+* install react-minimal-pie-chart ([d866919](https://github.com/etchteam/mobius/commit/d8669199d70aabcec6af89416ee263806d13b72d))
+* migrate pie chart component from la portal ([59917b0](https://github.com/etchteam/mobius/commit/59917b03ce7681a038e8f2b67609699352a6d270))
+
 ### [6.13.3](https://github.com/etchteam/mobius/compare/v6.13.2...v6.13.3) (2023-04-18)
 
 
