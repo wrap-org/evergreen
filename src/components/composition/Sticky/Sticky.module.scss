@@ -1,0 +1,20 @@
+@use '../../../styles/variables/breakpoint';
+
+.sticky {
+  position: sticky;
+  z-index: 1;
+
+  &--large-screen-only {
+    max-height: none;
+    position: static;
+
+    @media screen and (min-width: breakpoint.$md) {
+      position: sticky;
+    }
+  }
+
+  @media screen and (min-width: breakpoint.$xl) {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
