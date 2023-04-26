@@ -15,6 +15,7 @@
 
   @media screen and (min-width: breakpoint.$xl) {
     max-height: 100vh;
+    overflow-x: hidden;
     overflow-y: auto;
   }
 }
