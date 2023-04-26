@@ -1,3 +1,10 @@
+## [6.15.0](https://github.com/etchteam/mobius/compare/v6.14.0...v6.15.0) (2023-04-26)
+
+
+### Features
+
+* sticky ([b726c37](https://github.com/etchteam/mobius/commit/b726c371cbe856aed5dd2b7b7cba42ab33516a37))
+
 ## [6.14.0](https://github.com/etchteam/mobius/compare/v6.13.3...v6.14.0) (2023-04-25)
 
 
