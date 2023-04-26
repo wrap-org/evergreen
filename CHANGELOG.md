@@ -1,3 +1,10 @@
+### [6.15.1](https://github.com/etchteam/mobius/compare/v6.15.0...v6.15.1) (2023-04-26)
+
+
+### Bug Fixes
+
+* sticky horizontal scroll ([554584b](https://github.com/etchteam/mobius/commit/554584b0021318c411f98a5310659d03cd56702b))
+
 ## [6.15.0](https://github.com/etchteam/mobius/compare/v6.14.0...v6.15.0) (2023-04-26)
 
 
