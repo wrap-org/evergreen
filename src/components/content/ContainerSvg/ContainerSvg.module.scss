@@ -3,10 +3,12 @@
 
 .container-svg {
   &__lid,
-  &__body {
+  &__body,
+  &__secondary {
     @each $colorName, $color in container.$colors {
       &.container-svg__lid--colour-#{$colorName},
-      &.container-svg__body--colour-#{$colorName} {
+      &.container-svg__body--colour-#{$colorName},
+      &.container-svg__secondary--colour-#{$colorName} {
         fill: $color;
       }
     }
