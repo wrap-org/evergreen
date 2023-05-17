@@ -9,14 +9,24 @@ export interface ContainerSvgProps {
   name: Name;
   lidColour?: Colour | 'no-lid';
   bodyColour?: Colour;
+  secondaryColour?: Colour;
 }
 
-function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
+function ContainerSvg({
+  name,
+  lidColour,
+  bodyColour,
+  secondaryColour,
+}: ContainerSvgProps) {
   const bodyClassName = classNames(styles['container-svg__body'], {
     [styles[`container-svg__body--colour-${bodyColour}`]]: bodyColour,
   });
   const lidClassName = classNames(styles['container-svg__lid'], {
     [styles[`container-svg__lid--colour-${lidColour}`]]: lidColour,
+  });
+  const secondaryClassName = classNames(styles['container-svg__secondary'], {
+    [styles[`container-svg__secondary--colour-${secondaryColour}`]]:
+      secondaryColour,
   });
 
   switch (name) {
@@ -29,14 +39,22 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className={secondaryClassName}
             d="M0 4.2578C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.2578Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             d="M60 14H4L7.21958 78.3916C8.10228 78.1366 9.03518 78 10 78C15.5228 78 20 82.4771 20 88C20 90.2512 19.2561 92.3287 18.0007 94H48.39C52.653 94 56.1671 90.6572 56.38 86.3995L60 14Z"
             fill="#D7E7F5"
           />
-          <circle cx="10" cy="88" r="8" fill="#D7E7F5" />
+          <circle
+            className={secondaryClassName}
+            cx="10"
+            cy="88"
+            r="8"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             fillRule="evenodd"
@@ -132,14 +150,22 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className={secondaryClassName}
             d="M0 4.2578C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.2578Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             d="M60 14H4L7.21958 78.3916C8.10228 78.1366 9.03518 78 10 78C15.5228 78 20 82.4771 20 88C20 90.2512 19.2561 92.3287 18.0007 94H48.39C52.653 94 56.1671 90.6572 56.38 86.3995L60 14Z"
             fill="#D7E7F5"
           />
-          <circle cx="10" cy="88" r="8" fill="#D7E7F5" />
+          <circle
+            className={secondaryClassName}
+            cx="10"
+            cy="88"
+            r="8"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             fillRule="evenodd"
@@ -158,14 +184,22 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className={secondaryClassName}
             d="M0 4.2578C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.2578Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             d="M60 14H4L7.21958 78.3916C8.10228 78.1366 9.03518 78 10 78C15.5228 78 20 82.4771 20 88C20 90.2512 19.2561 92.3287 18.0007 94H48.39C52.653 94 56.1671 90.6572 56.38 86.3995L60 14Z"
             fill="#D7E7F5"
           />
-          <circle cx="10" cy="88" r="8" fill="#D7E7F5" />
+          <circle
+            className={secondaryClassName}
+            cx="10"
+            cy="88"
+            r="8"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             d="M96.8585 63H67L69.4151 90.3535C69.5973 92.4175 71.3182 94 73.3806 94H90.4779C92.5403 94 94.2612 92.4175 94.4435 90.3535L95.1075 83.833C94.8594 83.7355 94.627 83.586 94.4266 83.3847L80.3511 69.2426C79.5738 68.4615 79.5738 67.1952 80.3511 66.4142C81.1285 65.6331 82.3889 65.6331 83.1662 66.4142L95.5471 78.8537L96.8585 63Z"
@@ -193,27 +227,58 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect x="4" y="112" width="8" height="8" fill="#D7E7F5" />
-          <rect x="116" y="112" width="8" height="8" fill="#D7E7F5" />
+          <rect
+            className={secondaryClassName}
+            x="4"
+            y="112"
+            width="8"
+            height="8"
+            fill="#D7E7F5"
+          />
+          <rect
+            className={secondaryClassName}
+            x="116"
+            y="112"
+            width="8"
+            height="8"
+            fill="#D7E7F5"
+          />
           <path
+            className={secondaryClassName}
             fillRule="evenodd"
             clipRule="evenodd"
             d="M63 38H4V110H63V38ZM59 42H55V54H59V42Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             fillRule="evenodd"
             clipRule="evenodd"
             d="M124 38H65V110H124V38ZM73 42H69V54H73V42Z"
             fill="#D7E7F5"
           />
-          <rect y="28" width="128" height="8" fill="#D7E7F5" />
+          <rect
+            className={secondaryClassName}
+            y="28"
+            width="128"
+            height="8"
+            fill="#D7E7F5"
+          />
           <path
+            className={secondaryClassName}
             d="M42 12C42 5.37258 47.3726 0 54 0C60.6274 0 66 5.37258 66 12V28H62V12C62 7.58172 58.4183 4 54 4C49.5817 4 46 7.58172 46 12L42 12Z"
             fill="#D7E7F5"
           />
-          <path d="M69 23H73V28H69V23Z" fill="#D7E7F5" />
-          <path d="M59 23H55V28H59V23Z" fill="#D7E7F5" />
+          <path
+            className={secondaryClassName}
+            d="M69 23H73V28H69V23Z"
+            fill="#D7E7F5"
+          />
+          <path
+            className={secondaryClassName}
+            d="M59 23H55V28H59V23Z"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             d="M107.859 75H78L80.4151 102.353C80.5973 104.418 82.3182 106 84.3806 106H101.478C103.54 106 105.261 104.418 105.443 102.353L106.107 95.833C105.859 95.7355 105.627 95.586 105.427 95.3847L91.3511 81.2426C90.5738 80.4615 90.5738 79.1952 91.3511 78.4142C92.1285 77.6331 93.3889 77.6331 94.1662 78.4142L106.547 90.8537L107.859 75Z"
@@ -243,14 +308,22 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className={secondaryClassName}
             d="M0 4.25781C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.25781Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             d="M60 14H4L7.21958 78.3916C8.10228 78.1366 9.03518 78 10 78C15.5228 78 20 82.4771 20 88C20 90.2512 19.2561 92.3287 18.0007 94H48.39C52.653 94 56.1671 90.6572 56.38 86.3995L60 14Z"
             fill="#D7E7F5"
           />
-          <circle cx="10" cy="88" r="8" fill="#D7E7F5" />
+          <circle
+            className={secondaryClassName}
+            cx="10"
+            cy="88"
+            r="8"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             d="M82.2106 33.3304L78.9322 30L75.7502 33.2325L81.5908 39.1658C72.0721 39.6468 64.5 47.6394 64.5 57.4286V84.8571C64.5 89.9066 68.5294 94 73.5 94H91.5C96.4706 94 100.5 89.9066 100.5 84.8571V57.4286C100.5 47.4483 92.6294 39.3355 82.8496 39.1462L88.6709 33.2325L85.489 30L82.2106 33.3304Z"
@@ -268,14 +341,22 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            className={secondaryClassName}
             d="M0 4.2578C0 1.95052 1.94672 0.12167 4.24951 0.265595L60.2495 3.76559C62.3577 3.89735 64 5.64555 64 7.7578V12H0V4.2578Z"
             fill="#D7E7F5"
           />
           <path
+            className={secondaryClassName}
             d="M60 14H4L7.21958 78.3916C8.10228 78.1366 9.03518 78 10 78C15.5228 78 20 82.4771 20 88C20 90.2512 19.2561 92.3287 18.0007 94H48.39C52.653 94 56.1671 90.6572 56.38 86.3995L60 14Z"
             fill="#D7E7F5"
           />
-          <circle cx="10" cy="88" r="8" fill="#D7E7F5" />
+          <circle
+            className={secondaryClassName}
+            cx="10"
+            cy="88"
+            r="8"
+            fill="#D7E7F5"
+          />
           <path
             className={bodyClassName}
             d="M79 59C77.8954 59 77 59.8954 77 61V63H79V62C79 61.4477 79.4477 61 80 61L88 61C88.5523 61 89 61.4477 89 62V63H91V61C91 59.8954 90.1046 59 89 59H79Z"
@@ -587,6 +668,7 @@ function ContainerSvg({ name, lidColour, bodyColour }: ContainerSvgProps) {
 ContainerSvg.defaultProps = {
   bodyColour: 'blue',
   lidColour: 'blue',
+  secondaryColour: 'blueMuted',
 };
 
 export default ContainerSvg;

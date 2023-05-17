@@ -85,21 +85,40 @@ export const Coloured = () => (
       />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Inner Caddy" bodyColour="black" lidColour="red" />
+      <ContainerSvg
+        name="Inner Caddy"
+        bodyColour="black"
+        secondaryColour="pink"
+      />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Kerbside Caddy" bodyColour="green" lidColour="red" />
+      <ContainerSvg
+        name="Kerbside Caddy"
+        bodyColour="green"
+        lidColour="red"
+        secondaryColour="yellow"
+      />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Kitchen Caddy" bodyColour="green" lidColour="red" />
+      <ContainerSvg
+        name="Kitchen Caddy"
+        bodyColour="greenDark"
+        lidColour="greenDark"
+        secondaryColour="greyLight"
+      />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Reusable Sack" bodyColour="green" />
+      <ContainerSvg
+        name="Reusable Sack"
+        bodyColour="green"
+        secondaryColour="blueDark"
+      />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
       <ContainerSvg
         name="Householder Provided Carrier Bag"
         bodyColour="orange"
+        secondaryColour="duckEgg"
       />
     </Grid.Item>
   </Grid>

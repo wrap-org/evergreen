@@ -8,6 +8,7 @@ export type Colour =
   | 'blueMid'
   | 'blueDark'
   | 'blueLight'
+  | 'blueMuted'
   | 'green'
   | 'greenDark'
   | 'greenLight'
@@ -21,6 +22,7 @@ export type Colour =
   | 'magenta'
   | 'maroon'
   | 'purple'
+  | 'duckEgg'
   | 'transparent';
 
 export type Name =
@@ -54,6 +56,7 @@ export interface Container {
   displayName?: string;
   bodyColour?: string;
   lidColour?: string;
+  secondaryColour?: string;
   frequency?: { id: number; name: string };
   materials?: { id: number; name?: string }[];
   cost?: number;
@@ -62,9 +65,10 @@ export interface Container {
 
 export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#2d9cdb', name: 'blue', label: 'Blue' },
-  { value: '#1579c6', name: 'blueMid', label: 'Mid Blue' },
+  { value: '#1579c6', name: 'blueMid', label: 'Mid blue' },
   { value: '#2262b9', name: 'blueDark', label: 'Dark blue' },
   { value: '#56ccf2', name: 'blueLight', label: 'Light blue' },
+  { value: '#d7e7f5', name: 'blueMuted', label: 'Muted blue' },
   { value: '#828282', name: 'grey', label: 'Grey' },
   { value: '#4f4f4f', name: 'black', label: 'Black' },
   { value: '#bdbdbd', name: 'greyLight', label: 'Light grey' },
@@ -81,6 +85,7 @@ export const colourOptions: { value: string; name: Colour; label: string }[] = [
   { value: '#d12767', name: 'magenta', label: 'Magenta' },
   { value: '#a62f5a', name: 'maroon', label: 'Maroon' },
   { value: '#9946db', name: 'purple', label: 'Purple' },
+  { value: '#89c1ab', name: 'duckEgg', label: 'Duck egg' },
   { value: '#ffffff00', name: 'transparent', label: 'Transparent' },
 ];
 
@@ -97,6 +102,17 @@ export const containersWithLid = [
   'single box',
 ];
 
+export const containersWithSecondary = [
+  'box',
+  'inner caddy',
+  'kerbside caddy',
+  'kitchen caddy',
+  'reuseable sack',
+  'non-reusable sack',
+  'householder provided carrier bag',
+  'householder provides',
+];
+
 export const containersWithTransparentColour = [
   'householder provided carrier bag',
   'householder provides',
@@ -108,6 +124,9 @@ export const containersWithTransparentColour = [
 
 export const containerHasLid = (containerName: string): boolean =>
   containersWithLid.includes(containerName.toLowerCase());
+
+export const containerHasSecondary = (containerName: string): boolean =>
+  containersWithSecondary.includes(containerName.toLowerCase());
 
 export const containerHasTransparentColour = (containerName: string): boolean =>
   containersWithTransparentColour.includes(containerName.toLowerCase());
