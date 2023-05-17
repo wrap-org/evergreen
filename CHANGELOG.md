@@ -1,3 +1,10 @@
+## [6.16.0](https://github.com/etchteam/mobius/compare/v6.15.1...v6.16.0) (2023-05-17)
+
+
+### Features
+
+* customisable secondary colour for container svg component ([c964bac](https://github.com/etchteam/mobius/commit/c964bac3ebdbc53c870888fc61953d0caae5b53a))
+
 ### [6.15.1](https://github.com/etchteam/mobius/compare/v6.15.0...v6.15.1) (2023-04-26)
 
 
