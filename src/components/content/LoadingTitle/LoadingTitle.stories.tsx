@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/react/types-6-0';
+import React from 'react';
+
+import LoadingTitle from './LoadingTitle';
+
+export default {
+  title: 'Content/Loading Title',
+  component: LoadingTitle,
+} as Meta;
+
+export const Default = () => (
+  <>
+    <LoadingTitle chars={50} as="h1" />
+    <LoadingTitle chars={50} as="h2" />
+    <LoadingTitle chars={50} as="h3" />
+    <LoadingTitle chars={50} as="h4" />
+    <LoadingTitle chars={50} as="h5" />
+  </>
+);
+
+Default.storyName = 'Loading Title';
