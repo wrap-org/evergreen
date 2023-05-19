@@ -10,7 +10,7 @@ export default function LoadingText({
   chars?: number;
 }) {
   const [characters, setCharacters] = useState('');
-  const Tag = as || ('span' as keyof JSX.IntrinsicElements);
+  const Tag = as ?? ('span' as keyof JSX.IntrinsicElements);
 
   useEffect(() => {
     const legalChars = '    abcdefghijklmnopqrstuvwxyz';
