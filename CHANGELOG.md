@@ -1,3 +1,10 @@
+### [6.17.1](https://github.com/etchteam/mobius/compare/v6.17.0...v6.17.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* non relative imports ([ef0bb15](https://github.com/etchteam/mobius/commit/ef0bb156306208e178325b811b4244055987d371))
+
 ## [6.17.0](https://github.com/etchteam/mobius/compare/v6.16.0...v6.17.0) (2023-05-22)
 
 
