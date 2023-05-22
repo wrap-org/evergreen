@@ -1,13 +1,12 @@
 import React from 'react';
 
+import FormGroup, {
+  FormGroupProps,
+} from '../../composition/FormGroup/FormGroup';
+import Label from '../../controls/Label/Label';
 import LoadingText from '../LoadingText/LoadingText';
 
 import styles from './LoadingFormGroup.module.scss';
-
-import FormGroup, {
-  FormGroupProps,
-} from 'components/composition/FormGroup/FormGroup';
-import Label from 'components/controls/Label/Label';
 
 interface LoadingFormGroupProps extends FormGroupProps {
   chars?: number;
