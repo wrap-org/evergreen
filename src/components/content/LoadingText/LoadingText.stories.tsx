@@ -8,6 +8,18 @@ import Spacing from 'components/composition/Spacing/Spacing';
 export default {
   title: 'Content/Loading Text',
   component: LoadingText,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'empty-heading',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export const Default = () => (

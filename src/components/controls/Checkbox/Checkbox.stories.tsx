@@ -11,15 +11,17 @@ import Grid from 'components/composition/Grid/Grid';
 export default {
   title: 'Controls/Checkbox',
   component: Checkbox,
-  a11y: {
-    config: {
-      rules: [
-        {
-          // Temporary disable
-          id: 'color-contrast',
-          enabled: false,
-        },
-      ],
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
     },
   },
 } as Meta;

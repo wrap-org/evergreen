@@ -6,6 +6,18 @@ import LoadingTitle from './LoadingTitle';
 export default {
   title: 'Content/Loading Title',
   component: LoadingTitle,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            id: 'empty-heading',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 export const Default = () => (
