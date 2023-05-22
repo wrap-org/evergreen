@@ -1,3 +1,17 @@
+## [6.17.0](https://github.com/etchteam/mobius/compare/v6.16.0...v6.17.0) (2023-05-22)
+
+
+### Features
+
+* loading form group ([0d36f30](https://github.com/etchteam/mobius/commit/0d36f309ef66c04fb540c7a513f713f0190bb80f))
+* loading placeholder components ([f8b4cf0](https://github.com/etchteam/mobius/commit/f8b4cf0fe5984af1c8b61cc74ebad36beb8f7625))
+* prefer nullish coellesoisjf ([d81a4ad](https://github.com/etchteam/mobius/commit/d81a4adf8e41b6a5c331e11057f0c6d12040ef61))
+
+
+### Bug Fixes
+
+* a11y check ([fcbef57](https://github.com/etchteam/mobius/commit/fcbef576c670ae8489fc89157fa65025706d5660))
+
 ## [6.16.0](https://github.com/etchteam/mobius/compare/v6.15.1...v6.16.0) (2023-05-17)
 
 
