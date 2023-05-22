@@ -1,0 +1,12 @@
+@use '../../../styles/mixins/loading';
+
+.loading-text {
+  @include loading.pulse;
+  display: inline-block;
+
+  word-wrap: break-word;
+
+  &__text {
+    visibility: hidden;
+  }
+}

@@ -4,6 +4,11 @@ import { Collapse } from 'react-collapse';
 
 import styles from './FormGroup.module.scss';
 
+export interface FormGroupProps {
+  children?: React.ReactNode;
+  horizontal?: boolean;
+}
+
 const Info = ({
   open,
   controlId,
@@ -30,13 +35,7 @@ const Control = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles['form-group__control']}>{children}</div>
 );
 
-const FormGroup = ({
-  children,
-  horizontal,
-}: {
-  children?: React.ReactNode;
-  horizontal?: boolean;
-}) => (
+const FormGroup = ({ children, horizontal }: FormGroupProps) => (
   <div
     className={classnames(styles['form-group'], {
       [styles['form-group--horizontal']]: horizontal,

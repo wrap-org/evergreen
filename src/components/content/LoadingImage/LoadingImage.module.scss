@@ -1,0 +1,18 @@
+@use '../../../styles/mixins/loading';
+
+.loading-image {
+  @include loading.pulse;
+
+  display: inline-block;
+  height: var(--loading-image-height);
+  max-width: 100%;
+  width: var(--loading-image-width);
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--rounded {
+    border-radius: 0.5rem;
+  }
+}
