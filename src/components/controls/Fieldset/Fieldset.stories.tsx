@@ -21,4 +21,4 @@ export function Default() {
   );
 }
 
-Default.storyName = 'Feidlset';
+Default.storyName = 'Fieldset';
