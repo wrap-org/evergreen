@@ -1,3 +1,11 @@
+## [6.19.0](https://github.com/etchteam/mobius/compare/v6.18.0...v6.19.0) (2023-06-19)
+
+
+### Features
+
+* carbon icon ([13a25b5](https://github.com/etchteam/mobius/commit/13a25b5b715685e1d466dcecad6f49e99ebff7fa))
+* improve carbon icon viewport center ([b90e6f6](https://github.com/etchteam/mobius/commit/b90e6f6f0dbdb1d8284af69ec6d5a27404baa36c))
+
 ## [6.18.0](https://github.com/etchteam/mobius/compare/v6.17.1...v6.18.0) (2023-06-06)
 
 
