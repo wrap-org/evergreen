@@ -3,23 +3,23 @@
 
 .longform {
   h1 {
-    margin-bottom: spacing.$vertical-lg;
+    margin-bottom: spacing.$lg;
   }
 
   h2 {
-    margin-bottom: spacing.$vertical-md;
+    margin-bottom: spacing.$md;
   }
 
   h3,
   h4,
   h5 {
-    margin-bottom: spacing.$vertical-sm;
+    margin-bottom: spacing.$sm;
   }
 
   p,
   ul,
   ol {
-    margin-bottom: spacing.$vertical-md;
+    margin-bottom: spacing.$md;
   }
 
   ul,
@@ -28,7 +28,7 @@
   }
 
   li {
-    margin-bottom: spacing.$vertical-sm;
+    margin-bottom: spacing.$sm;
 
     p:last-child {
       margin-bottom: 0;
@@ -42,7 +42,7 @@
     h3,
     h4,
     h5 {
-      margin-top: spacing.$vertical-lg;
+      margin-top: spacing.$lg;
     }
   }
 
@@ -52,6 +52,6 @@
 
   table,
   img {
-    margin: spacing.$vertical-lg 0;
+    margin: spacing.$lg 0;
   }
 }

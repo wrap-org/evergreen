@@ -6,7 +6,7 @@
   background: skin.$background;
   border-radius: 0.25em;
   color: skin.$color;
-  padding: spacing.$vertical spacing.$horizontal;
+  padding: spacing.$md;
 
   &__close {
     background: none;

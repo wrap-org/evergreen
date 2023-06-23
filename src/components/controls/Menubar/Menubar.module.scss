@@ -37,7 +37,7 @@ $menubar-highlight-width: 4px;
     width: 100%;
 
     @media (min-width: breakpoint.$tablet) {
-      padding: 0 spacing.$horizontal;
+      padding: 0 spacing.$md;
     }
   }
 
@@ -85,7 +85,7 @@ $menubar-highlight-width: 4px;
         font-weight: font.$weight-bold;
         justify-content: center;
         min-height: spacing.$thumb;
-        padding: spacing.$vertical spacing.$horizontal;
+        padding: spacing.$md;
         text-align: center;
       }
     }
@@ -127,7 +127,7 @@ $menubar-highlight-width: 4px;
       font-size: font.$size-sm;
       font-weight: font.$weight-bold;
       min-height: spacing.$thumb;
-      padding: spacing.$vertical spacing.$horizontal;
+      padding: spacing.$md;
     }
   }
 }

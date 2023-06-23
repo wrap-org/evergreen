@@ -50,14 +50,14 @@
     border: 1px solid input.$border;
     border-radius: input.$border-radius;
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
-    margin-top: spacing.$vertical-sm;
-    padding: spacing.$vertical spacing.$horizontal;
+    margin-top: spacing.$sm;
+    padding: spacing.$md;
 
     &-caption {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 spacing.$horizontal-sm spacing.$vertical-sm;
+      padding: 0 spacing.$sm spacing.$sm;
       text-align: left;
     }
 
@@ -82,7 +82,7 @@
     }
 
     &-cell {
-      padding: spacing.$vertical-xs spacing.$horizontal-xs;
+      padding: spacing.$xs spacing.$xs;
     }
 
     &-day {
@@ -115,7 +115,7 @@
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
-      padding: spacing.$vertical-xs spacing.$horizontal-xs;
+      padding: spacing.$xs spacing.$xs;
       width: 1.65rem;
 
       &:focus {
@@ -126,14 +126,14 @@
     &-dropdown-month {
       align-items: center;
       display: inline-flex;
-      margin-right: spacing.$horizontal;
+      margin-right: spacing.$md;
       position: relative;
     }
 
     &-dropdown-icon {
       color: color.$blue;
       height: font.$size-sm;
-      margin: -1px 0 0 spacing.$horizontal-xs;
+      margin: -1px 0 0 spacing.$xs;
       width: font.$size-sm;
     }
   }

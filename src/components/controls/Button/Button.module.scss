@@ -27,7 +27,7 @@
     line-height: font.$line-height;
     min-height: 0;
     min-width: 0;
-    padding: spacing.$vertical-xs spacing.$horizontal-sm;
+    padding: spacing.$xs spacing.$sm;
   }
 
   &--block {
@@ -48,8 +48,7 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(#{spacing.$vertical-xs} - var(--button-border-width))
-      spacing.$horizontal-sm;
+    padding: calc(#{spacing.$xs} - var(--button-border-width)) spacing.$sm;
   }
 
   @each $type in $types {
