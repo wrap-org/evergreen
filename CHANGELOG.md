@@ -1,3 +1,16 @@
+## [7.0.0](https://github.com/etchteam/mobius/compare/v6.19.0...v7.0.0) (2023-06-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove spacing axis
+* remove spacing axis
+
+### Features
+
+* remove spacing axis ([6a83845](https://github.com/etchteam/mobius/commit/6a8384591f1f392c858e975c0c7d8e245f8704d5))
+* remove spacing axis ([35e27e5](https://github.com/etchteam/mobius/commit/35e27e555319e674d14fe3da08359b9d279beea7))
+
 ## [6.19.0](https://github.com/etchteam/mobius/compare/v6.18.0...v6.19.0) (2023-06-19)
 
 
