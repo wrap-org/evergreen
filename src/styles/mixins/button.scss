@@ -11,8 +11,7 @@
   line-height: 1.75;
   min-height: spacing.$thumb;
   min-width: 6.5em;
-  padding: calc(#{spacing.$vertical-sm} - var(--button-border-width))
-    spacing.$horizontal;
+  padding: calc(#{spacing.$sm} - var(--button-border-width)) spacing.$md;
   text-align: center;
   text-decoration: none;
   transition: opacity transition.$duration transition.$timing,

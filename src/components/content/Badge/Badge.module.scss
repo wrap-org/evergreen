@@ -8,7 +8,7 @@
   background: skin.$background;
   color: skin.$color;
   display: inline-block;
-  padding: (math.div(spacing.$vertical-xs, 2)) spacing.$horizontal-sm;
+  padding: (math.div(spacing.$xs, 2)) spacing.$sm;
 
   &--muted {
     background: skin.$background-muted;

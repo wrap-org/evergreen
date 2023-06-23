@@ -1,7 +1,7 @@
 @use '../variables/spacing';
 
 @mixin default() {
-  --list-spacing: #{spacing.$vertical-md};
+  --list-spacing: #{spacing.$md};
   list-style: none;
   margin: calc(var(--list-spacing) * -1) 0;
   padding: 0;
@@ -12,6 +12,6 @@
   padding: var(--list-spacing) 0;
 
   &-icon {
-    margin-right: spacing.$horizontal-sm;
+    margin-right: spacing.$sm;
   }
 }

@@ -14,23 +14,23 @@
     }
 
     &-xs {
-      --list-spacing: #{spacing.$vertical-xs};
+      --list-spacing: #{spacing.$xs};
     }
 
     &-sm {
-      --list-spacing: #{spacing.$vertical-sm};
+      --list-spacing: #{spacing.$sm};
     }
 
     &-md {
-      --list-spacing: #{spacing.$vertical-md};
+      --list-spacing: #{spacing.$md};
     }
 
     &-lg {
-      --list-spacing: #{spacing.$vertical-lg};
+      --list-spacing: #{spacing.$lg};
     }
 
     &-xl {
-      --list-spacing: #{spacing.$vertical-xl};
+      --list-spacing: #{spacing.$xl};
     }
   }
 }

@@ -25,16 +25,16 @@
 
   &:focus-visible {
     outline: 1px solid color.$blue;
-    outline-offset: spacing.$vertical-sm;
+    outline-offset: spacing.$sm;
   }
 
   &__icon {
     &--left {
-      margin-right: spacing.$horizontal-xs;
+      margin-right: spacing.$xs;
     }
 
     &--right {
-      margin-left: spacing.$horizontal-xs;
+      margin-left: spacing.$xs;
     }
   }
 

@@ -7,9 +7,9 @@
   display: flex;
 
   &__image {
-    margin-right: spacing.$horizontal;
-    padding: spacing.$vertical spacing.$horizontal;
-    width: calc(4em + #{spacing.$horizontal * 2});
+    margin-right: spacing.$md;
+    padding: spacing.$md;
+    width: calc(4em + #{spacing.$md * 2});
 
     svg {
       display: block;

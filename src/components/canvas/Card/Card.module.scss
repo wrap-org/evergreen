@@ -20,12 +20,12 @@
     color: skin.$link-color;
     float: right;
     font-size: font.$size-xl;
-    padding: spacing.$vertical spacing.$horizontal;
+    padding: spacing.$md;
   }
 
   &__header {
     border-bottom: 1px solid transparent;
-    padding: spacing.$vertical spacing.$horizontal;
+    padding: spacing.$md;
     transition: border-color transition.$duration transition.$timing;
 
     // when there's a card with only a header
@@ -43,7 +43,7 @@
 
   &__body {
     &--padded {
-      padding: spacing.$vertical spacing.$horizontal;
+      padding: spacing.$md;
     }
 
     &--border {
