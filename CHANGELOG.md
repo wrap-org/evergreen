@@ -1,3 +1,10 @@
+### [7.0.2](https://github.com/etchteam/mobius/compare/v7.0.1...v7.0.2) (2023-07-04)
+
+
+### Bug Fixes
+
+* checkbox width 100% ([b6ec084](https://github.com/etchteam/mobius/commit/b6ec084c17b03c47afd9794c45fa32b08d196677))
+
 ### [7.0.1](https://github.com/etchteam/mobius/compare/v7.0.0...v7.0.1) (2023-07-04)
 
 
