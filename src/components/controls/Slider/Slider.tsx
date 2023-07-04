@@ -73,6 +73,18 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
         }
       >
         <div className={styles.slider__input}>
+          <div
+            className={classNames(
+              styles.slider__track,
+              styles['slider__track--upper']
+            )}
+          ></div>
+          <div
+            className={classNames(
+              styles.slider__track,
+              styles['slider__track--lower']
+            )}
+          ></div>
           <input
             type="range"
             defaultValue={defaultVal}

@@ -28,15 +28,14 @@ fieldset {
   height: 2rem;
   margin-top: 0.25rem;
   position: relative;
-  transform: translateY(-50%);
   width: 2.25rem;
   z-index: 2;
 }
 
 @mixin track {
-  background: color.$teal;
   border-radius: 0.25rem;
   height: 0.5rem;
+  position: relative;
 }
 
 [type='range'] {
@@ -44,6 +43,7 @@ fieldset {
   background: transparent;
   cursor: pointer;
   height: 2rem;
+  position: relative;
   width: 100%;
 
   &::-webkit-slider-runnable-track {
@@ -56,9 +56,11 @@ fieldset {
 
   &::-webkit-slider-thumb {
     @include thumb;
+    transform: translateY(-50%);
   }
 
   &::-moz-range-thumb {
     @include thumb;
+    height: 1.9rem;
   }
 }

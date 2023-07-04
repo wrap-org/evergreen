@@ -7,23 +7,28 @@
     height: 2rem;
     overflow: hidden;
     position: relative;
+  }
 
-    &::after {
+  &__track {
+    border-radius: 0.25rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 0.75rem;
+
+    &--upper {
       background: color.$green;
-      border-radius: 0.25rem;
-      content: '';
-      display: block;
-      height: 0.5rem;
-      left: calc(
-        100% * (var(--slider-value) - var(--slider-min)) /
+      width: 100%;
+    }
+
+    &--lower {
+      background: color.$teal;
+      pointer-events: none;
+      right: calc(
+        100% * (var(--slider-max) - var(--slider-value)) /
           (var(--slider-max) - var(--slider-min))
       );
-      pointer-events: none;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       width: calc(
-        100% * (var(--slider-max) - var(--slider-value)) /
+        100% * (var(--slider-value) - var(--slider-min)) /
           (var(--slider-max) - var(--slider-min))
       );
     }
