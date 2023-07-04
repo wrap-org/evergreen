@@ -1,3 +1,10 @@
+### [7.0.1](https://github.com/etchteam/mobius/compare/v7.0.0...v7.0.1) (2023-07-04)
+
+
+### Bug Fixes
+
+* slider appearance in firefox ([a75df4f](https://github.com/etchteam/mobius/commit/a75df4f2c2602669b8e8e33a43aec96bb9323126))
+
 ## [7.0.0](https://github.com/etchteam/mobius/compare/v6.19.0...v7.0.0) (2023-06-23)
 
 
