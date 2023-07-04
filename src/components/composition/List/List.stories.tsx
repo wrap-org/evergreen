@@ -7,6 +7,7 @@ import Grid from 'components/composition/Grid/Grid';
 import Spacing from 'components/composition/Spacing/Spacing';
 import Icon from 'components/content/Icon/Icon';
 import Button from 'components/controls/Button/Button';
+import Checkbox from 'components/controls/Checkbox/Checkbox';
 
 export default {
   title: 'Composition/List',
@@ -65,4 +66,18 @@ export const Animated: ComponentStory<typeof List> = (args) => {
       </Grid>
     </>
   );
+};
+
+export const ListOfCheckboxes: ComponentStory<typeof List> = (args) => (
+  <List {...args}>
+    {[1, 2, 3, 4, 5].map((item) => (
+      <List.Item key={item}>
+        <Checkbox>{' * '.repeat(item)}</Checkbox>
+      </List.Item>
+    ))}
+  </List>
+);
+
+ListOfCheckboxes.args = {
+  spacing: 'sm',
 };
