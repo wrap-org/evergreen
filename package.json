@@ -20,8 +20,8 @@
     "release": "semantic-release"
   },
   "engines": {
-    "npm": ">=8.5.5",
-    "node": ">=16.15.0"
+    "npm": "^8 || ^9",
+    "node": "^16 || ^18"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
