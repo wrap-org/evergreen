@@ -7,6 +7,7 @@ pull_request_rules:
         - check-success=A11y tests
         - check-success=Linting & Unit Tests
         - check-success=SonarCloud Code Analysis
+        - check-success=chromatic
         - label!=wontfix
     actions:
       review:
@@ -20,6 +21,7 @@ pull_request_rules:
         - check-success=A11y tests
         - check-success=Linting & Unit Tests
         - check-success=SonarCloud Code Analysis
+        - check-success=chromatic
         - label!=wontfix
         - "#approved-reviews-by>=1"
     actions:
