@@ -17,7 +17,8 @@
     "commitlint": "commitlint",
     "pre-commit": "lint-staged",
     "prepare": "node ./scripts/install-husky.js && node ./scripts/export-components.js",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "engines": {
     "npm": "^8 || ^9",
@@ -64,6 +65,7 @@
     "@types/lodash": "4.14.189",
     "@types/react": "^18.0.17",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.24.1",
     "css-loader": "^6.7.1",
     "eslint": "^8.29.0",
     "glob": "8.0.3",
@@ -114,5 +116,7 @@
   "files": [
     "dist",
     "src"
-  ]
+  ],
+  "readme": "README.md",
+  "_id": "@etchteam/mobius@7.1.0"
 }
