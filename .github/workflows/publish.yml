@@ -11,7 +11,6 @@ jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
