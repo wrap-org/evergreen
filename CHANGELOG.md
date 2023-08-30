@@ -1,3 +1,17 @@
+## [7.2.0](https://github.com/etchteam/mobius/compare/v7.1.0...v7.2.0) (2023-08-30)
+
+
+### Features
+
+* add new checks to mergify ([6d795fa](https://github.com/etchteam/mobius/commit/6d795fa7328f2451a53614a26c9c811d7dd05b6a))
+* force npm token ([f831a43](https://github.com/etchteam/mobius/commit/f831a435b08cb75da13ff24f15f93144972f2a83))
+* remove invalid check, github handles this automagically ([0fcc78d](https://github.com/etchteam/mobius/commit/0fcc78d900e3802ca212d9eeb967f372640b2f6c))
+* remove legacy-peer-deps sticking plaster ([d943c93](https://github.com/etchteam/mobius/commit/d943c93d605f5e0562a846903c31b2ae2cb522ba))
+* run tests and linting on multiple node versions ([4a92205](https://github.com/etchteam/mobius/commit/4a92205cac52934ca0be75437c9255500e838272))
+* support node 18 ([ae60c1c](https://github.com/etchteam/mobius/commit/ae60c1c5d1071a3e3c081936cb5ad4cec2578f31))
+* upgrade postcss to fix peer dependency error ([d36bbae](https://github.com/etchteam/mobius/commit/d36bbae21c05fb9141dde35625017bd83143b49c))
+* use node 18 by default ([800c845](https://github.com/etchteam/mobius/commit/800c845e981f018a99ae6a774cd6fe0064223dab))
+
 ## [7.1.0](https://github.com/etchteam/mobius/compare/v7.0.2...v7.1.0) (2023-08-30)
 
 
