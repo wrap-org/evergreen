@@ -4,8 +4,10 @@ pull_request_rules:
     conditions:
       - and:
         - author~=^dependabot(|-preview)\[bot\]$
-        - check-success=A11y tests
-        - check-success=Linting & Unit Tests
+        - check-success=A11y tests (16)
+        - check-success=Linting & Unit Tests (16)
+        - check-success=A11y tests (18)
+        - check-success=Linting & Unit Tests (18)
         - check-success=SonarCloud Code Analysis
         - label!=wontfix
     actions:
@@ -17,8 +19,10 @@ pull_request_rules:
   - name: Auto-squash when all builds pass and the PR has been approved
     conditions:
       - and:
-        - check-success=A11y tests
-        - check-success=Linting & Unit Tests
+        - check-success=A11y tests (16)
+        - check-success=Linting & Unit Tests (16)
+        - check-success=A11y tests (18)
+        - check-success=Linting & Unit Tests (18)
         - check-success=SonarCloud Code Analysis
         - label!=wontfix
         - "#approved-reviews-by>=1"
