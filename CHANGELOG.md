@@ -1,3 +1,10 @@
+## [7.1.0](https://github.com/etchteam/mobius/compare/v7.0.2...v7.1.0) (2023-08-30)
+
+
+### Features
+
+* move config and add auto-approvals for security updates ([700287b](https://github.com/etchteam/mobius/commit/700287be056b9f129e74cb4d497cfd608654fe56))
+
 ### [7.0.2](https://github.com/etchteam/mobius/compare/v7.0.1...v7.0.2) (2023-07-04)
 
 
