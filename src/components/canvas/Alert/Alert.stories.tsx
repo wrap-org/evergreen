@@ -26,7 +26,7 @@ export function Default() {
                   <br />
                   <p>
                     Vivamus iaculis purus orci, ac mollis lectus porttitor et.
-                    Integer ac risus a orci pharetra suscipit.
+                    Integer ac risus a orci <a href="#">pharetra suscipit</a>.
                   </p>
                 </Grid.Item>
                 <Grid.Item xs={12} md="auto">
