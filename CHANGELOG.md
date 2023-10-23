@@ -1,3 +1,18 @@
+## [7.3.0](https://github.com/etchteam/mobius/compare/v7.2.0...v7.3.0) (2023-10-23)
+
+
+### Features
+
+* add chromatic ([1874e8d](https://github.com/etchteam/mobius/commit/1874e8dac57dedce5b0588c899c388e6cf6a5814))
+* add the info skin to bor skins ([71c49e4](https://github.com/etchteam/mobius/commit/71c49e4ebe55705f33504b00cb757797fbedb269))
+* revert adding link to alertr ([46c0bfb](https://github.com/etchteam/mobius/commit/46c0bfb3ac16cbebd15c96fdbd1dc87e4b326de5))
+
+
+### Bug Fixes
+
+* give chromatic the full git history ([ab33190](https://github.com/etchteam/mobius/commit/ab331905cbe417cc592d0c039fec5cf027156603))
+* install dependencies ([06f4574](https://github.com/etchteam/mobius/commit/06f457434c9b0a61b53a3719fd308b6816c2952f))
+
 ## [7.2.0](https://github.com/etchteam/mobius/compare/v7.1.0...v7.2.0) (2023-08-30)
 
 

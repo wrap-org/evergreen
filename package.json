@@ -1,6 +1,6 @@
 {
   "name": "@etchteam/mobius",
-  "version": "7.2.0",
+  "version": "7.3.0",
   "description": "WRAP's design system",
   "scripts": {
     "build": "node ./scripts/build.js",
@@ -117,6 +117,5 @@
     "dist",
     "src"
   ],
-  "readme": "README.md",
-  "_id": "@etchteam/mobius@7.1.0"
+  "readme": "README.md"
 }
