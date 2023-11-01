@@ -7,7 +7,7 @@ jobs:
   test:
     strategy:
       matrix:
-        version: [16, 18]
+        version: [18, 20]
     name: Linting & Unit Tests
     runs-on: ubuntu-latest
     steps:
