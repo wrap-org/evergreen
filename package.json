@@ -21,8 +21,8 @@
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "engines": {
-    "npm": "^8 || ^9",
-    "node": "^16 || ^18"
+    "npm": "^9 || ^10",
+    "node": "^18 || ^20"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
