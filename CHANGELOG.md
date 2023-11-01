@@ -1,3 +1,10 @@
+## [7.4.0](https://github.com/etchteam/mobius/compare/v7.3.0...v7.4.0) (2023-11-01)
+
+
+### Features
+
+* add support for node 20, remove node 16 ([74f6e27](https://github.com/etchteam/mobius/commit/74f6e276b15837f45651c9a6a6e8584e0f8329f0))
+
 ## [7.3.0](https://github.com/etchteam/mobius/compare/v7.2.0...v7.3.0) (2023-10-23)
 
 
