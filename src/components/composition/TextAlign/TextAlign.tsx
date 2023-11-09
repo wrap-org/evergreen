@@ -4,12 +4,12 @@ import React from 'react';
 import styles from './TextAlign.module.scss';
 
 export default function TextAlign({
-  align,
+  align = 'left',
   children,
-}: {
+}: Readonly<{
   align?: 'left' | 'right' | 'center';
   children?: React.ReactNode;
-}) {
+}>) {
   return (
     <div
       className={classNames(styles['text-align'], {
@@ -20,7 +20,3 @@ export default function TextAlign({
     </div>
   );
 }
-
-TextAlign.defaultProps = {
-  align: 'left',
-};

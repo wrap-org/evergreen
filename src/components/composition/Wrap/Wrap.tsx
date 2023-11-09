@@ -8,10 +8,10 @@ import styles from './Wrap.module.scss';
 function Wrap({
   size,
   children,
-}: {
+}: Readonly<{
   size?: Breakpoints | 'auto' | string;
   children?: React.ReactNode;
-}) {
+}>) {
   return (
     <div
       className={classNames(styles.wrap, {
@@ -22,9 +22,5 @@ function Wrap({
     </div>
   );
 }
-
-Wrap.defaultProps = {
-  size: undefined,
-};
 
 export default Wrap;

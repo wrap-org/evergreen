@@ -9,14 +9,10 @@ interface StreamDotProps {
   stream?: StreamType;
 }
 
-export default function StreamDot({ stream }: StreamDotProps) {
+export default function StreamDot({ stream }: Readonly<StreamDotProps>) {
   const classes = classnames(styles['stream-dot'], {
     [styles[`stream-dot--${stream}`]]: stream,
   });
 
   return <div className={classes} />;
 }
-
-StreamDot.defaultProps = {
-  stream: '',
-};

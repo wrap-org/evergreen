@@ -8,6 +8,7 @@ import {
   Container as ContainerType,
   getColourName,
   Colour,
+  Name,
 } from 'lib/container';
 
 export default function Container({
@@ -17,7 +18,7 @@ export default function Container({
   lidColour,
   frequency,
   cost,
-}: ContainerType) {
+}: Readonly<ContainerType & { name: Name; frequency: string }>) {
   return (
     <div className={styles.container}>
       <div className={styles.container__image}>
@@ -35,9 +36,3 @@ export default function Container({
     </div>
   );
 }
-
-Container.defaultProps = {
-  lidColour: undefined,
-  frequency: undefined,
-  cost: undefined,
-};

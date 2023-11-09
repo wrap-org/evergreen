@@ -23,8 +23,3 @@ export default function Alert({
     </div>
   );
 }
-
-Alert.defaultProps = {
-  type: 'neutral',
-  onClose: undefined,
-};

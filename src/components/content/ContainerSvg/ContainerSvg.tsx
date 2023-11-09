@@ -14,9 +14,9 @@ export interface ContainerSvgProps {
 
 function ContainerSvg({
   name,
-  lidColour,
-  bodyColour,
-  secondaryColour,
+  lidColour = 'blue',
+  bodyColour = 'blue',
+  secondaryColour = 'blueMuted',
 }: ContainerSvgProps) {
   const bodyClassName = classNames(styles['container-svg__body'], {
     [styles[`container-svg__body--colour-${bodyColour}`]]: bodyColour,
@@ -664,11 +664,5 @@ function ContainerSvg({
       return null;
   }
 }
-
-ContainerSvg.defaultProps = {
-  bodyColour: 'blue',
-  lidColour: 'blue',
-  secondaryColour: 'blueMuted',
-};
 
 export default ContainerSvg;

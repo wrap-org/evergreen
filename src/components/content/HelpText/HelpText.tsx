@@ -5,11 +5,11 @@ import styles from './HelpText.module.scss';
 
 export default function HelpText({
   children,
-  type,
-}: {
+  type = 'neutral',
+}: Readonly<{
   children?: React.ReactNode;
   type?: 'neutral' | 'positive' | 'negative';
-}) {
+}>) {
   return (
     <div
       className={classNames(styles['help-text'], {
@@ -20,7 +20,3 @@ export default function HelpText({
     </div>
   );
 }
-
-HelpText.defaultProps = {
-  type: 'neutral',
-};
