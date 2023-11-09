@@ -131,7 +131,7 @@ export const containerHasSecondary = (containerName: string): boolean =>
 export const containerHasTransparentColour = (containerName: string): boolean =>
   containersWithTransparentColour.includes(containerName.toLowerCase());
 
-export const getColourName = (colour: string) => {
+export const getColourName = (colour?: string) => {
   if (colour === 'no-lid') {
     return colour;
   }

@@ -5,19 +5,19 @@ import styles from './Enter.module.scss';
 
 export default function Enter({
   children,
-  type,
-  delay,
-  enter,
-  flex,
+  type = 'fade',
+  delay = '0s',
+  enter = true,
+  flex = false,
   fullWidth,
-}: {
+}: Readonly<{
   children?: React.ReactNode;
   type?: string;
   delay?: string;
   enter?: boolean;
   flex?: boolean;
   fullWidth?: boolean;
-}) {
+}>) {
   const cx = classNames(styles.enter, {
     [styles[`enter--${type}`]]: type,
     [styles['enter--enter']]: enter,
@@ -30,10 +30,3 @@ export default function Enter({
     </div>
   );
 }
-
-Enter.defaultProps = {
-  type: 'fade',
-  delay: '0s',
-  enter: true,
-  flex: false,
-};

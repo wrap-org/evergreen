@@ -12,10 +12,10 @@ interface CardBodyProps {
 
 export default function CardBody({
   children,
-  padded,
-  border,
-  hidden,
-}: CardBodyProps) {
+  padded = true,
+  border = false,
+  hidden = false,
+}: Readonly<CardBodyProps>) {
   return (
     <div
       className={classNames(styles.card__body, {
@@ -28,9 +28,3 @@ export default function CardBody({
     </div>
   );
 }
-
-CardBody.defaultProps = {
-  padded: true,
-  border: false,
-  hidden: false,
-};

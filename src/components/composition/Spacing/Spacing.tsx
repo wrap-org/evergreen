@@ -1,25 +1,27 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { Spacing as SpacingType } from '../../../types/spacing.type';
+
 import styles from './Spacing.module.scss';
 
 interface SpacingProps {
   children?: React.ReactNode;
   negative?: boolean;
-  top?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  left?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  bottom?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
-  right?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'fluid';
+  top?: SpacingType;
+  left?: SpacingType;
+  bottom?: SpacingType;
+  right?: SpacingType;
 }
 
 export default function Spacing({
   children,
-  negative,
+  negative = false,
   top,
   left,
   bottom,
   right,
-}: SpacingProps) {
+}: Readonly<SpacingProps>) {
   const cx = classNames(styles.spacing, {
     [styles[`spacing--top-${top}`]]: top,
     [styles[`spacing--left-${left}`]]: left,
@@ -29,12 +31,3 @@ export default function Spacing({
   });
   return <div className={cx}>{children}</div>;
 }
-
-Spacing.defaultProps = {
-  children: null,
-  top: undefined,
-  left: undefined,
-  right: undefined,
-  bottom: undefined,
-  negative: false,
-};
