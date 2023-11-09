@@ -1,3 +1,10 @@
+### [7.4.1](https://github.com/etchteam/mobius/compare/v7.4.0...v7.4.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* remove default props ([7df71c3](https://github.com/etchteam/mobius/commit/7df71c3a22712fffce13ce9a3d805f609fd05063))
+
 ## [7.4.0](https://github.com/etchteam/mobius/compare/v7.3.0...v7.4.0) (2023-11-01)
 
 
