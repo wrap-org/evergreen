@@ -1,3 +1,11 @@
+## [7.5.0](https://github.com/etchteam/mobius/compare/v7.4.1...v7.5.0) (2023-11-20)
+
+
+### Features
+
+* add license ([2995a1d](https://github.com/etchteam/mobius/commit/2995a1d8721c1e0c50fe8bae1372e2f284285542))
+* bind to sonarcloud [skip ci] ([40d23f0](https://github.com/etchteam/mobius/commit/40d23f0f9f34939fa7ff546c4dc12797d6b01b55))
+
 ### [7.4.1](https://github.com/etchteam/mobius/compare/v7.4.0...v7.4.1) (2023-11-09)
 
 
