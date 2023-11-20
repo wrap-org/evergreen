@@ -14,4 +14,8 @@
   // Ensure the git config matches our commit convention
   "git.inputValidationSubjectLength": 100,
   "git.inputValidationLength": 100,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "etchteam",
+    "projectKey": "etchteam_mobius"
+  },
 }
