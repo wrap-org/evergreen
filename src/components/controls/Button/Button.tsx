@@ -1,10 +1,15 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { ComponentType, ReactNode, forwardRef } from 'react';
 
 import styles from './Button.module.scss';
 
 interface ButtonProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
+  /**
+   * The component to render the button as.
+   * Useful for routing in frameworks like NextJS: `<Button as={Link} href="/">`
+   */
+  as?: ComponentType<any>;
   submit?: boolean;
   loading?: boolean;
   href?: string;
@@ -15,11 +20,13 @@ interface ButtonProps {
   [x: string]: unknown;
 }
 
-const Button = React.forwardRef<any, ButtonProps>(
+const Button = forwardRef<any, ButtonProps>(
   (
-    { children, loading, submit, type, href, icon, block, size, ...props },
+    { children, as, loading, submit, type, href, icon, block, size, ...props },
     ref
   ) => {
+    const CustomTag = as ?? (href ? 'a' : 'button');
+
     const baseProps = {
       className: classNames(styles.button, {
         [styles[`button--${type}`]]: !!type,
@@ -29,23 +36,15 @@ const Button = React.forwardRef<any, ButtonProps>(
         [styles['button--icon']]: icon,
         [styles[`button--${size}`]]: !!size,
       }),
-      disabled: loading || undefined,
+      disabled: loading ?? undefined,
       ref,
       ...props,
     };
 
-    if (href) {
-      return (
-        <a {...baseProps} href={href}>
-          {children}
-        </a>
-      );
-    }
-
     return (
-      <button {...baseProps} type={submit ? 'submit' : 'button'}>
+      <CustomTag {...baseProps} href={href} type={submit ? 'submit' : 'button'}>
         {children}
-      </button>
+      </CustomTag>
     );
   }
 );
