@@ -1,3 +1,11 @@
+## [7.6.0](https://github.com/etchteam/mobius/compare/v7.5.0...v7.6.0) (2024-01-05)
+
+
+### Features
+
+* render Button as a different component ([bf67777](https://github.com/etchteam/mobius/commit/bf677775d9fba0295f63d977707465cf3bac3ef3))
+* sonarcloud binding ([8dc8d82](https://github.com/etchteam/mobius/commit/8dc8d82c00536667c9a828a9fe4da8a766d6ffc4))
+
 ## [7.5.0](https://github.com/etchteam/mobius/compare/v7.4.1...v7.5.0) (2023-11-20)
 
 
