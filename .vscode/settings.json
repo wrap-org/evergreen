@@ -8,14 +8,14 @@
   "stylelint.validate": ["css", "scss"],
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
   },
   // Ensure the git config matches our commit convention
   "git.inputValidationSubjectLength": 100,
   "git.inputValidationLength": 100,
   "sonarlint.connectedMode.project": {
-    "connectionId": "etchteam",
+    "connectionId": "Etch",
     "projectKey": "etchteam_mobius"
   },
 }

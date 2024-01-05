@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import Button from './Button';
 
@@ -62,5 +62,27 @@ export function Block() {
       <br />
       <Button block="mobile">Button Block Mobile</Button>
     </>
+  );
+}
+
+function LinkExample({
+  children,
+  ...props
+}: PropsWithChildren<{ [key: string]: unknown }>) {
+  return (
+    <a {...props} aria-label="Not just any link, a LinkExample link">
+      {children}
+    </a>
+  );
+}
+
+/**
+ * Use the `as` prop to control which component the Button renders as.
+ */
+export function AsComponent() {
+  return (
+    <Button as={LinkExample} href="#" block>
+      Link button
+    </Button>
   );
 }
