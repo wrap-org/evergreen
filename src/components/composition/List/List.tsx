@@ -15,6 +15,7 @@ const List = ({
   const [parent] = useAutoAnimate();
   return (
     <ul
+      role="list"
       ref={parent}
       className={cx(styles.list, {
         [styles[`list--spacing-${spacing}`]]: spacing,
