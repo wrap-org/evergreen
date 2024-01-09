@@ -1,3 +1,11 @@
+### [7.6.1](https://github.com/etchteam/mobius/compare/v7.6.0...v7.6.1) (2024-01-09)
+
+
+### Bug Fixes
+
+* accessible lists ([fb6c001](https://github.com/etchteam/mobius/commit/fb6c001f7cb9d3154b0e1376aaa4c5c2923fe95f))
+* list item width ([29e6c77](https://github.com/etchteam/mobius/commit/29e6c77290d32a5adb28d3b154623c744080c13a))
+
 ## [7.6.0](https://github.com/etchteam/mobius/compare/v7.5.0...v7.6.0) (2024-01-05)
 
 
