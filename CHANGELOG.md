@@ -1,3 +1,10 @@
+## [7.7.0](https://github.com/etchteam/mobius/compare/v7.6.1...v7.7.0) (2024-01-11)
+
+
+### Features
+
+* configure dependabot so that it uses the correct prefix ([c4e602f](https://github.com/etchteam/mobius/commit/c4e602f3862f160d42103838ea2f44eda6afd81c))
+
 ### [7.6.1](https://github.com/etchteam/mobius/compare/v7.6.0...v7.6.1) (2024-01-09)
 
 
