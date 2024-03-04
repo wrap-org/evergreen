@@ -8,6 +8,7 @@ interface CardBodyProps {
   padded?: boolean;
   border?: boolean;
   hidden?: boolean;
+  muted?: boolean;
 }
 
 export default function CardBody({
@@ -15,6 +16,7 @@ export default function CardBody({
   padded = true,
   border = false,
   hidden = false,
+  muted = false,
 }: Readonly<CardBodyProps>) {
   return (
     <div
@@ -22,6 +24,7 @@ export default function CardBody({
         [styles['card__body--padded']]: padded,
         [styles['card__body--border']]: border,
         [styles['card__body--hidden']]: hidden,
+        [styles['card__body--muted']]: muted,
       })}
     >
       {children}
