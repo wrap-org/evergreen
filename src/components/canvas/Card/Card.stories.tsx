@@ -55,3 +55,22 @@ Arrow.args = {
     console.log('clicked');
   },
 };
+
+export const MutedBody = () => (
+  <Card>
+    <Card.Header>
+      <h2>Card title</h2>
+    </Card.Header>
+    <Card.Body muted>
+      Aliquam egestas mi quam, a tincidunt lectus faucibus euismod. Pellentesque
+      et metus nunc. Fusce ante arcu, mattis pretium semper ac, pretium vitae
+      velit. Donec vitae eros et arcu accumsan auctor at id ipsum. Aliquam
+      finibus, mi ac tincidunt blandit, purus elit ornare dui, nec dignissim mi
+      ante sit amet mauris. Nulla eget dui in mauris tempus tincidunt a eget
+      enim. Proin eu neque lorem. Sed quis tellus magna. Nunc scelerisque nisi
+      eget dictum laoreet. Nullam aliquam et massa id euismod. Interdum et
+      malesuada fames ac ante ipsum primis in faucibus. Nulla vehicula ornare
+      ligula nec rutrum. Maecenas convallis rutrum metus sed ultricies.
+    </Card.Body>
+  </Card>
+);
