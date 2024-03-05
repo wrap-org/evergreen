@@ -1,3 +1,20 @@
+## [7.8.0](https://github.com/etchteam/mobius/compare/v7.7.0...v7.8.0) (2024-03-05)
+
+
+### Features
+
+* add signature integrity checks ([64c3cac](https://github.com/etchteam/mobius/commit/64c3caca54b6a0c7e998bb076f8f24667804fb91))
+* muted prop on card body ([3e263c1](https://github.com/etchteam/mobius/commit/3e263c1d56509430bb405d8293ecdf827513a54b))
+* set workflow permissions ([0aad051](https://github.com/etchteam/mobius/commit/0aad0514e567ef61b2ea645b4c48858acbf8c0f4))
+* upgrade actions [skip release] ([98dee3b](https://github.com/etchteam/mobius/commit/98dee3b3e54f47392f75da6de2070d3bbd578af3))
+
+
+### Bug Fixes
+
+* bump ip from 2.0.0 to 2.0.1 ([81761a5](https://github.com/etchteam/mobius/commit/81761a59aab6cdbde3551714b1fa23c86388d105))
+* switch to PAT for publishing ([e2c20b0](https://github.com/etchteam/mobius/commit/e2c20b00fae8a9d2b16133b89c1282fb80e99e02))
+* use valid secrets ([333ea42](https://github.com/etchteam/mobius/commit/333ea428818b5cbaa6573d018ceced58c5c41b5c))
+
 ## [7.7.0](https://github.com/etchteam/mobius/compare/v7.6.1...v7.7.0) (2024-01-11)
 
 
