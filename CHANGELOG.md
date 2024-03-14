@@ -1,3 +1,10 @@
+### [7.8.2](https://github.com/etchteam/mobius/compare/v7.8.1...v7.8.2) (2024-03-14)
+
+
+### Bug Fixes
+
+* use display flex with card muted body ([fce69bd](https://github.com/etchteam/mobius/commit/fce69bd22c9f792be44b967244b4b55b1fc7ccf2))
+
 ### [7.8.1](https://github.com/etchteam/mobius/compare/v7.8.0...v7.8.1) (2024-03-14)
 
 
