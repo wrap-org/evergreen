@@ -97,4 +97,13 @@
   &__body--muted {
     background: skin.$background-muted;
   }
+
+  &:has(.card__body--muted) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__body--muted {
+    flex: 1;
+  }
 }
