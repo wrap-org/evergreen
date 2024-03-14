@@ -1,3 +1,10 @@
+### [7.8.1](https://github.com/etchteam/mobius/compare/v7.8.0...v7.8.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* card body muted prop release ([366168f](https://github.com/etchteam/mobius/commit/366168fbd1e22c24b1d616c511972157b73fe305))
+
 ## [7.8.0](https://github.com/etchteam/mobius/compare/v7.7.0...v7.8.0) (2024-03-05)
 
 
