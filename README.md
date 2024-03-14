@@ -16,7 +16,7 @@ npm install --save @etchteam/mobius
 
 # Usage
 
-Install the global CSS in your main app file;
+Install the global CSS in your main app file
 
 ```js
 import '@etchteam/mobius/src/styles/main.scss';
