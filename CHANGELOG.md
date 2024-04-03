@@ -1,3 +1,15 @@
+## [7.9.0](https://github.com/etchteam/mobius/compare/v7.8.2...v7.9.0) (2024-04-03)
+
+
+### Features
+
+* **Grid:** add wrap reverse ([3b7edf8](https://github.com/etchteam/mobius/commit/3b7edf87ad6f0ba22982d92e09099efd012a13c1))
+
+
+### Bug Fixes
+
+* update a11y dialog to silence react default props warnings ([33e9d73](https://github.com/etchteam/mobius/commit/33e9d730508fc06dbb94e854072415e6a5b44489))
+
 ### [7.8.2](https://github.com/etchteam/mobius/compare/v7.8.1...v7.8.2) (2024-03-14)
 
 
