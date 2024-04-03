@@ -1,7 +1,7 @@
-import A11yDialogInstance from 'a11y-dialog';
+import A11yDialogLib, { A11yDialogInstance } from 'a11y-dialog';
 import classnames from 'classnames';
-import React from 'react';
-import { A11yDialog, A11yDialogProps } from 'react-a11y-dialog';
+import React, { useRef } from 'react';
+import { A11yDialog, ReactA11yDialogProps } from 'react-a11y-dialog';
 
 import { Breakpoints } from '../../../types/breakpoints.type';
 
@@ -11,7 +11,8 @@ import Inner from './ModalInner';
 
 export type ModalInstance = A11yDialogInstance;
 
-interface ModalProps extends Pick<A11yDialogProps, 'id' | 'title' | 'role'> {
+interface ModalProps
+  extends Pick<ReactA11yDialogProps, 'id' | 'title' | 'role'> {
   children?: React.ReactNode;
   size?: Breakpoints | 'auto';
   /**
@@ -29,9 +30,8 @@ const Modal = React.forwardRef<any, ModalProps>(
       [styles[`modal__dialog--size-${size}`]]: size,
     });
 
-    const setupRef = (instance: ModalInstance) => {
-      if (typeof ref !== 'function' && ref) {
-        // eslint-disable-next-line no-param-reassign
+    const setupRef = (instance?: A11yDialogLib) => {
+      if (instance && ref && typeof ref !== 'function') {
         ref.current = instance;
 
         if (typeof onModalMounted === 'function') {
@@ -60,6 +60,6 @@ const Modal = React.forwardRef<any, ModalProps>(
 
 Modal.displayName = 'Modal';
 
-export const useModalRef = () => React.useRef<ModalInstance>();
+export const useModalRef = () => useRef<ModalInstance>();
 
 export default Object.assign({}, Modal, { Inner, Header });
