@@ -6,7 +6,7 @@ import Item from './GridItem';
 
 interface GridProps {
   children?: React.ReactNode;
-  wrap?: boolean;
+  wrap?: boolean | 'wrap-reverse';
   inset?: boolean;
   insetFluid?: boolean;
   insetVerticalFluid?: boolean;
@@ -30,7 +30,8 @@ const Grid = ({
   fullWidth,
 }: GridProps) => {
   const cx = classNames(styles.grid, {
-    [styles['grid--wrap']]: wrap,
+    [styles['grid--wrap']]: wrap === true,
+    [styles['grid--wrap-reverse']]: wrap === 'wrap-reverse',
     [styles['grid--inset']]: inset,
     [styles['grid--inset-fluid']]: insetFluid,
     [styles['grid--inset-vertical-fluid']]: insetVerticalFluid,
