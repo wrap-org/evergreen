@@ -1,3 +1,10 @@
+## [7.10.0](https://github.com/etchteam/mobius/compare/v7.9.0...v7.10.0) (2024-04-22)
+
+
+### Features
+
+* adjust BoR mobile font sizes ([8b748bd](https://github.com/etchteam/mobius/commit/8b748bd51d7c8c160e8510d572badd7a5e035acc))
+
 ## [7.9.0](https://github.com/etchteam/mobius/compare/v7.8.2...v7.9.0) (2024-04-03)
 
 
