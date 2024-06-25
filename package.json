@@ -116,5 +116,7 @@
     "dist",
     "src"
   ],
-  "readme": "README.md"
+  "readme": "README.md",
+  "license": "MIT",
+  "homepage": "https://mobius.wrap.ngo"
 }
