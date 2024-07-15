@@ -1,3 +1,10 @@
+## [7.12.0](https://github.com/etchteam/mobius/compare/v7.11.0...v7.12.0) (2024-07-15)
+
+
+### Features
+
+* allow any string key on HelpText component ([1c293a1](https://github.com/etchteam/mobius/commit/1c293a171da5664478a3c98b1416d7e844f2fcfd))
+
 ## [7.11.0](https://github.com/etchteam/mobius/compare/v7.10.0...v7.11.0) (2024-07-15)
 
 
