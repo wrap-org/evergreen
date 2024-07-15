@@ -1,3 +1,10 @@
+## [7.11.0](https://github.com/etchteam/mobius/compare/v7.10.0...v7.11.0) (2024-07-15)
+
+
+### Features
+
+* label as span tag ([cce02a8](https://github.com/etchteam/mobius/commit/cce02a8ecc8ee61e55d2124cd35ecc1a206575af))
+
 ## [7.10.0](https://github.com/etchteam/mobius/compare/v7.9.0...v7.10.0) (2024-04-22)
 
 
