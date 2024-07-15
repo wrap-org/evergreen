@@ -25,7 +25,9 @@ export function Checked() {
   return (
     <FormGroup horizontal>
       <FormGroup.Label>
-        <Label id="a-label">Label</Label>
+        <Label id="a-label" as="span">
+          Label
+        </Label>
       </FormGroup.Label>
       <FormGroup.Control>
         <div role="radiogroup" aria-labelledby="a-label">
