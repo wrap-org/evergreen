@@ -57,6 +57,7 @@ export const Negative = () => (
     <Input
       id="my-input-3"
       name="my-input-3"
+      aria-invalid="true"
       aria-describedby="my-input-3-helptext"
     />
     <HelpText id="my-input-3-helptext" type="negative">
