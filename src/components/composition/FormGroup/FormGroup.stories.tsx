@@ -46,7 +46,7 @@ export function Horizontal() {
 
       <FormGroup horizontal>
         <FormGroup.Label>
-          <Label id="my-input-two">
+          <Label id="my-input-two" as="span">
             Input label with a bigger list of form controls
           </Label>
         </FormGroup.Label>

@@ -70,10 +70,16 @@ export function Form() {
         <FormGroup>
           <Grid wrap>
             <Grid.Item xs={12} md={6}>
-              <Label htmlFor="multiple">Multiple sites</Label>
+              <Label htmlFor="multiple" as="span" id="sites-label">
+                Multiple sites
+              </Label>
             </Grid.Item>
             <Grid.Item xs={12} md={6}>
-              <div role="radiogroup" aria-label="Multiple sites" id="multiple">
+              <div
+                role="radiogroup"
+                aria-labelledby="sites-label"
+                id="multiple"
+              >
                 <Grid>
                   <Grid.Item xs={6}>
                     <Radio name="radio" id="yes">

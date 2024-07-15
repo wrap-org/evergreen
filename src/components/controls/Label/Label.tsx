@@ -7,7 +7,7 @@ interface LabelProps {
   children?: React.ReactNode;
   htmlFor?: string;
   hidden?: boolean;
-  as?: 'label' | 'legend';
+  as?: 'label' | 'legend' | 'span';
   type?: 'secondary';
   [index: string]: any;
 }
