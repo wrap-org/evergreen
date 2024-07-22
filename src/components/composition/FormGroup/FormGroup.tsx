@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import React from 'react';
-import { Collapse } from 'react-collapse';
 
 import styles from './FormGroup.module.scss';
 
@@ -18,12 +17,20 @@ const Info = ({
   controlId?: string;
   children?: React.ReactNode;
 }) => (
-  <div className={styles['form-group__info']}>
-    <Collapse isOpened={open}>
-      <div id={controlId} className={styles['form-group__info-inner']}>
-        {children}
-      </div>
-    </Collapse>
+  <div
+    id={controlId}
+    className={classnames(styles['form-group__info'], {
+      [styles['form-group__info--open']]: open,
+    })}
+    aria-hidden={!open}
+  >
+    <div
+      className={classnames(styles['form-group__info-inner'], {
+        [styles['form-group__info-inner--open']]: open,
+      })}
+    >
+      {children}
+    </div>
   </div>
 );
 
