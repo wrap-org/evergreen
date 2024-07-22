@@ -1,7 +1,6 @@
 import cx from 'classnames';
 import uniqueId from 'lodash/uniqueId';
 import React, { useState } from 'react';
-import { Collapse as ReactCollapse } from 'react-collapse';
 
 import styles from './Collapse.module.scss';
 
@@ -59,11 +58,14 @@ const Collapse = ({
           </Grid.Item>
         </Grid>
       </button>
-      <ReactCollapse isOpened={open}>
-        <div id={controlId} className={styles.collapse__content}>
-          {children}
-        </div>
-      </ReactCollapse>
+      <div
+        id={controlId}
+        className={cx(styles.collapse__collapsible, {
+          [styles['collapse__collapsible--open']]: open,
+        })}
+      >
+        <div className={styles.collapse__content}>{children}</div>
+      </div>
     </div>
   );
 };
