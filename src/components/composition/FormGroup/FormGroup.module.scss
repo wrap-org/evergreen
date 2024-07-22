@@ -2,6 +2,7 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
+@use '../../../styles/variables/transition';
 
 .form-group {
   &__label {
@@ -12,8 +13,27 @@
   }
 
   &__info {
+    content-visibility: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows transition.$duration transition.$timing,
+      content-visibility transition.$duration transition.$timing;
+    /* stylelint-disable-next-line property-no-unknown */
+    transition-behavior: allow-discrete;
+
+    &--open {
+      content-visibility: visible;
+      grid-template-rows: 1fr;
+    }
+
     &-inner {
-      margin-block-start: spacing.$md;
+      margin-block-start: 0;
+      overflow: hidden;
+      transition: margin-block-start transition.$duration transition.$timing;
+
+      &--open {
+        margin-block-start: spacing.$md;
+      }
     }
   }
 
