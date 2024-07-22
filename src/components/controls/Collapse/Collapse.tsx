@@ -63,6 +63,7 @@ const Collapse = ({
         className={cx(styles.collapse__collapsible, {
           [styles['collapse__collapsible--open']]: open,
         })}
+        aria-hidden={!open}
       >
         <div className={styles.collapse__content}>{children}</div>
       </div>
