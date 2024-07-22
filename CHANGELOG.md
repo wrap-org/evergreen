@@ -1,3 +1,11 @@
+### [7.12.1](https://github.com/etchteam/mobius/compare/v7.12.0...v7.12.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* hide focusable elements inside collapsed content ([7b6c5fe](https://github.com/etchteam/mobius/commit/7b6c5febfd1bb85ad80c029ba4ef85bbcf1697ca))
+* missing aria attribute ([983ff89](https://github.com/etchteam/mobius/commit/983ff896e3e40c361232d82617845c79b08db773))
+
 ## [7.12.0](https://github.com/etchteam/mobius/compare/v7.11.0...v7.12.0) (2024-07-15)
 
 
