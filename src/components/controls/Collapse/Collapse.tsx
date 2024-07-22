@@ -60,7 +60,9 @@ const Collapse = ({
         </Grid>
       </button>
       <ReactCollapse isOpened={open}>
-        <div id={controlId}>{children}</div>
+        <div id={controlId} className={styles.collapse__content}>
+          {children}
+        </div>
       </ReactCollapse>
     </div>
   );

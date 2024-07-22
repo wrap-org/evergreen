@@ -13,12 +13,7 @@
     width: 100%;
   }
 
-  // Focusable elements inside a collapsed section must be hidden
-  // https://dequeuniversity.com/rules/axe/4.1/aria-hidden-focus
-  :not(span)[aria-hidden='true'] {
-    [href],
-    :not([disabled]) {
-      display: none;
-    }
+  &__content {
+    overflow: hidden;
   }
 }

@@ -1,5 +1,17 @@
 @use '../variables/transition';
 
 .ReactCollapse--collapse {
-  transition: height transition.$duration transition.$timing;
+  content-visibility: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows transition.$duration transition.$timing,
+    content-visibility transition.$duration transition.$timing,
+    height transition.$duration transition.$timing;
+  /* stylelint-disable-next-line property-no-unknown */
+  transition-behavior: allow-discrete;
+
+  &[aria-hidden='false'] {
+    content-visibility: visible;
+    grid-template-rows: 1fr;
+  }
 }
