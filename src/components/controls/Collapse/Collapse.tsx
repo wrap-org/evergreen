@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import uniqueId from 'lodash/uniqueId';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import styles from './Collapse.module.scss';
 
@@ -33,7 +33,7 @@ const Collapse = ({
     onToggle?.(!open);
   };
 
-  const controlId = `collapse-control-${uniqueId()}`;
+  const controlId = useMemo(() => `collapse-control-${uniqueId()}`, []);
   const direction = align === 'right' ? 'row-reverse' : 'row';
 
   return (
