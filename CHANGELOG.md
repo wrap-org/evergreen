@@ -1,3 +1,10 @@
+### [7.12.2](https://github.com/etchteam/mobius/compare/v7.12.1...v7.12.2) (2024-07-23)
+
+
+### Bug Fixes
+
+* **collapse:** close animation and unique ids ([d8af8a5](https://github.com/etchteam/mobius/commit/d8af8a53ad8e7323170cb7b55dce9e2b0581f49c))
+
 ### [7.12.1](https://github.com/etchteam/mobius/compare/v7.12.0...v7.12.1) (2024-07-22)
 
 
