@@ -1,7 +1,9 @@
 import { Meta, Story } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import Collapse, { CollapseProps } from './Collapse';
+
+import Card from 'components/canvas/Card/Card';
 
 export default {
   title: 'Controls/Collapse',
@@ -40,3 +42,42 @@ export const DefaultOpen: Story = () => (
     </div>
   </Collapse>
 );
+
+DefaultOpen.parameters = {
+  docs: {
+    description: {
+      story:
+        'Set `defaultOpen` to `true` to have the collapse open from initial render.',
+    },
+  },
+};
+
+export const CollapseState: Story = () => {
+  const [open, setOpen] = useState(false);
+
+  const onToggle = function (open?: boolean) {
+    setOpen(open ?? false);
+  };
+
+  return (
+    <Card muted={!open} border={open} shadow={open}>
+      <Card.Body>
+        <Collapse onToggle={onToggle} headerLabel="Click me" align="right">
+          <div>
+            <p>
+              When the collapse is toggled the onToggle event handler is called
+            </p>
+          </div>
+        </Collapse>
+      </Card.Body>
+    </Card>
+  );
+};
+
+CollapseState.parameters = {
+  docs: {
+    description: {
+      story: 'Watch the `onToggle` event to detect the state of the collapse.',
+    },
+  },
+};
