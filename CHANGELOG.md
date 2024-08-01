@@ -1,3 +1,15 @@
+## [7.13.0](https://github.com/etchteam/mobius/compare/v7.12.2...v7.13.0) (2024-08-01)
+
+
+### Features
+
+* input focus state for BoR ([3c759bf](https://github.com/etchteam/mobius/commit/3c759bf69a161dc33bf44f68c98a33ca4276bfb7))
+
+
+### Bug Fixes
+
+* 1px offset for select focus outline ([bc593c4](https://github.com/etchteam/mobius/commit/bc593c44ddcc55ea9c2f503eabbdef4abd585703))
+
 ### [7.12.2](https://github.com/etchteam/mobius/compare/v7.12.1...v7.12.2) (2024-07-23)
 
 
