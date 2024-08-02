@@ -70,7 +70,7 @@
     "eslint": "^8.29.0",
     "glob": "8.0.3",
     "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "lint-staged": "15.2.7",
     "mini-css-extract-plugin": "2.7.7",
     "postcss": "^8.4.28",
     "prettier": "^3.3.3",
