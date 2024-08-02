@@ -82,7 +82,7 @@
     "rollup-plugin-postcss": "4.0.2",
     "sass": "^1.54.4",
     "sass-loader": "13.1.0",
-    "semantic-release": "19.0.5",
+    "semantic-release": "24.0.0",
     "style-loader": "^3.3.1",
     "stylelint": "^15.10.1",
     "ts-loader": "^9.3.1",
