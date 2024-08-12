@@ -38,28 +38,26 @@ Default.storyName = 'Checkbox';
 
 export function Checked() {
   return (
-    <fieldset>
-      <FormGroup horizontal>
-        <FormGroup.Label>
-          <Label as="legend">Label</Label>
-        </FormGroup.Label>
-        <FormGroup.Control>
-          <Grid wrap>
-            <Grid.Item xs={12}>
-              <Checkbox name="checkbox" forceChecked touched valid>
-                Checkbox label
-              </Checkbox>
-            </Grid.Item>
-            <Grid.Item xs={12}>
-              <Checkbox name="checkbox" touched valid>
-                A really long checkbox label that wraps onto another line if it
-                needs to
-              </Checkbox>
-            </Grid.Item>
-          </Grid>
-        </FormGroup.Control>
-      </FormGroup>
-    </fieldset>
+    <FormGroup horizontal as="fieldset">
+      <FormGroup.Label as="legend">
+        <Label as="span">Label</Label>
+      </FormGroup.Label>
+      <FormGroup.Control>
+        <Grid wrap>
+          <Grid.Item xs={12}>
+            <Checkbox name="checkbox" forceChecked touched valid>
+              Checkbox label
+            </Checkbox>
+          </Grid.Item>
+          <Grid.Item xs={12}>
+            <Checkbox name="checkbox" touched valid>
+              A really long checkbox label that wraps onto another line if it
+              needs to
+            </Checkbox>
+          </Grid.Item>
+        </Grid>
+      </FormGroup.Control>
+    </FormGroup>
   );
 }
 
