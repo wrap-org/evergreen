@@ -6,6 +6,7 @@ import styles from './FormGroup.module.scss';
 export interface FormGroupProps {
   children?: React.ReactNode;
   horizontal?: boolean;
+  as?: 'div' | 'fieldset';
 }
 
 const Info = ({
@@ -34,21 +35,34 @@ const Info = ({
   </div>
 );
 
-const Label = ({ children }: { children?: React.ReactNode }) => (
-  <div className={styles['form-group__label']}>{children}</div>
-);
+const Label = ({
+  children,
+  as,
+}: {
+  children?: React.ReactNode;
+  as?: 'div' | 'legend';
+}) => {
+  const Component = as ?? 'div';
+  return (
+    <Component className={styles['form-group__label']}>{children}</Component>
+  );
+};
 
 const Control = ({ children }: { children?: React.ReactNode }) => (
   <div className={styles['form-group__control']}>{children}</div>
 );
 
-const FormGroup = ({ children, horizontal }: FormGroupProps) => (
+const FormGroup = ({ children, horizontal, as }: FormGroupProps) => (
   <div
     className={classnames(styles['form-group'], {
       [styles['form-group--horizontal']]: horizontal,
     })}
   >
-    {children}
+    {as === 'fieldset' ? (
+      <fieldset className={styles['form-group__fieldset']}>{children}</fieldset>
+    ) : (
+      children
+    )}
   </div>
 );
 
