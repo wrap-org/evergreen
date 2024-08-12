@@ -9,6 +9,7 @@ import FormGroup from './FormGroup';
 
 import Alert from 'components/canvas/Alert/Alert';
 import Icon from 'components/content/Icon/Icon';
+import Checkbox from 'components/controls/Checkbox/Checkbox';
 import Input from 'components/controls/Input/Input';
 import Label from 'components/controls/Label/Label';
 import Radio from 'components/controls/Radio/Radio';
@@ -116,6 +117,48 @@ export function WithInfo() {
             <Alert>This is an info message</Alert>
           </Skin>
         </FormGroup.Info>
+      </FormGroup>
+    </>
+  );
+}
+
+export function AsFieldset() {
+  return (
+    <>
+      <FormGroup as="fieldset">
+        <FormGroup.Label as="legend">
+          <Label as="span">Legend</Label>
+        </FormGroup.Label>
+        <FormGroup.Control>
+          <Grid wrap>
+            {[1, 2, 3].map((option) => (
+              <Grid.Item xs={12} key={option}>
+                <Checkbox value={option} name="my-checkbox-input-1">
+                  Option {option}
+                </Checkbox>
+              </Grid.Item>
+            ))}
+          </Grid>
+        </FormGroup.Control>
+      </FormGroup>
+
+      <Spacing bottom="lg" />
+
+      <FormGroup as="fieldset" horizontal>
+        <FormGroup.Label as="legend">
+          <Label as="span">Legend</Label>
+        </FormGroup.Label>
+        <FormGroup.Control>
+          <Grid wrap>
+            {[1, 2, 3].map((option) => (
+              <Grid.Item xs={12} key={option}>
+                <Checkbox value={option} name="my-checkbox-input-2">
+                  Option {option}
+                </Checkbox>
+              </Grid.Item>
+            ))}
+          </Grid>
+        </FormGroup.Control>
       </FormGroup>
     </>
   );

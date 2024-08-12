@@ -16,7 +16,8 @@
     content-visibility: hidden;
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows transition.$duration transition.$timing,
+    transition:
+      grid-template-rows transition.$duration transition.$timing,
       content-visibility transition.$duration transition.$timing;
     /* stylelint-disable-next-line property-no-unknown */
     transition-behavior: allow-discrete;
@@ -35,6 +36,10 @@
         margin-block-start: spacing.$md;
       }
     }
+  }
+
+  &__fieldset {
+    display: contents;
   }
 
   &--horizontal {
