@@ -48,7 +48,9 @@ export type Name =
   | 'Single Food Caddy'
   | 'Single Wheeled Bin'
   | 'Single Reusable Sack'
-  | 'Single Carrier Bag';
+  | 'Single Carrier Bag'
+  | 'Bundle'
+  | 'Roll Cage';
 
 export interface Container {
   id?: number;

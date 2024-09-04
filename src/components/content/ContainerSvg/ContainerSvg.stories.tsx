@@ -66,6 +66,12 @@ export const Types = () => (
     <Grid.Item xs={12} md={3}>
       <ContainerSvg name="Trollibox" />
     </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Bundle" />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Roll Cage" />
+    </Grid.Item>
   </Grid>
 );
 
@@ -120,6 +126,12 @@ export const Coloured = () => (
         bodyColour="orange"
         secondaryColour="duckEgg"
       />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Bundle" bodyColour='brown' />
+    </Grid.Item>
+    <Grid.Item xs={12} md={3}>
+      <ContainerSvg name="Roll Cage" bodyColour='purple' />
     </Grid.Item>
   </Grid>
 );
