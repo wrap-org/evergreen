@@ -7,18 +7,18 @@ import { Sizes } from '../../../types/font.type';
 import styles from './Icon.module.scss';
 
 interface IconProps {
-  icon: string;
-  color?: Colors;
-  title?: string;
-  size?: Sizes | 'giant';
+  readonly icon: string;
+  readonly color?: Colors;
+  readonly title?: string;
+  readonly size?: Sizes | 'giant';
   /**
    * Whether to use https://icons.mono.company/ or a custom icon from the ./custom-icons
    */
-  type?: 'mono' | 'custom';
+  readonly type?: 'mono' | 'custom';
   /**
    * Align this icon to the text baseline (default true)
    */
-  baseline?: boolean;
+  readonly baseline?: boolean;
 }
 
 const defaultIcon = {

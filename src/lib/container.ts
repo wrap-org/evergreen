@@ -48,7 +48,9 @@ export type Name =
   | 'Single Food Caddy'
   | 'Single Wheeled Bin'
   | 'Single Reusable Sack'
-  | 'Single Carrier Bag';
+  | 'Single Carrier Bag'
+  | 'Bundle'
+  | 'Roll Cage';
 
 export interface Container {
   id?: number;
@@ -149,7 +151,7 @@ export const getColourOptions = (containerName) => {
 
 export function uniqueContainerName(
   { displayName, bodyColour, lidColour, frequency }: Container,
-  showFrequency = false
+  showFrequency = false,
 ) {
   const bodyColourName = upperFirst(getColourName(bodyColour as string));
   const frequencyName = showFrequency ? ` ‒ ${frequency?.name}` : '';

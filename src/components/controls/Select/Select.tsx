@@ -8,7 +8,7 @@ import styles from './Select.module.scss';
 import Icon from 'components/content/Icon/Icon';
 
 interface SelectProps extends FormControl {
-  children?: React.ReactNode;
+  readonly children?: React.ReactNode;
 }
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
@@ -33,7 +33,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         <Icon icon="chevron-down" />
       </div>
     </div>
-  )
+  ),
 );
 
 Select.displayName = 'Select';

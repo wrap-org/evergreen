@@ -6,16 +6,16 @@ import { FormControl } from '../../../types/form-control.type';
 import styles from './Radio.module.scss';
 
 interface RadioProps extends FormControl {
-  checked?: boolean;
-  children?: React.ReactNode;
+  readonly checked?: boolean;
+  readonly children?: React.ReactNode;
   /**
    * onRadioChange is added as a custom change handler because the standard
    * react-hook-form {...register(name, { onChange })} handler will trigger
    * the onChange event for the last radio in the DOM with the registered name
    * instead of the onChange for this radio!
    */
-  onRadioChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly onRadioChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
@@ -31,7 +31,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
       onChange,
       ...props
     },
-    forwardedRef
+    forwardedRef,
   ) => (
     <label
       className={classNames(styles.radio, {
@@ -59,7 +59,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
       </span>
       <span className={styles.radio__content}>{children}</span>
     </label>
-  )
+  ),
 );
 
 Radio.displayName = 'Radio';

@@ -8,12 +8,12 @@ import styles from './TextButton.module.scss';
 import Icon from 'components/content/Icon/Icon';
 
 interface TextButtonProps {
-  children?: React.ReactNode;
-  icon?: string;
-  iconRight?: boolean;
-  size?: 'sm';
-  decorate?: boolean;
-  weight?: Weights;
+  readonly children?: React.ReactNode;
+  readonly icon?: string;
+  readonly iconRight?: boolean;
+  readonly size?: 'sm';
+  readonly decorate?: boolean;
+  readonly weight?: Weights;
   [key: string]: unknown;
 }
 
@@ -40,7 +40,7 @@ export default function TextButton({
         <span
           className={classNames(
             styles['text-button__icon'],
-            styles['text-button__icon--left']
+            styles['text-button__icon--left'],
           )}
         >
           <Icon icon={icon} />
@@ -51,7 +51,7 @@ export default function TextButton({
         <span
           className={classNames(
             styles['text-button__icon'],
-            styles['text-button__icon--right']
+            styles['text-button__icon--right'],
           )}
         >
           <Icon icon={icon} />

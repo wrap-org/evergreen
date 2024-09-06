@@ -18,8 +18,8 @@ export default function Skin({
   skin,
   children,
 }: {
-  skin: string;
-  children?: React.ReactNode;
+  readonly skin: string;
+  readonly children?: React.ReactNode;
 }) {
   return (
     <div

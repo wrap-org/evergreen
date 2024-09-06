@@ -9,16 +9,16 @@ import CardHeader from './CardHeader';
 import Icon from 'components/content/Icon/Icon';
 
 export interface CardProps {
-  children?: React.ReactNode;
-  border?: boolean;
-  href?: string;
-  onClick?: () => void;
-  id?: string;
-  arrow?: boolean;
-  shadow?: boolean;
-  control?: boolean;
-  muted?: boolean;
-  disabled?: boolean;
+  readonly children?: React.ReactNode;
+  readonly border?: boolean;
+  readonly href?: string;
+  readonly onClick?: () => void;
+  readonly id?: string;
+  readonly arrow?: boolean;
+  readonly shadow?: boolean;
+  readonly control?: boolean;
+  readonly muted?: boolean;
+  readonly disabled?: boolean;
   [x: string]: unknown;
 }
 

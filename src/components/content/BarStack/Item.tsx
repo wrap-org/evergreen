@@ -6,8 +6,8 @@ import { Colors } from '../../../types/colors.type';
 import styles from './BarStack.module.scss';
 
 export interface ItemProps {
-  color: Colors;
-  size: number;
+  readonly color: Colors;
+  readonly size: number;
 }
 
 const Item = ({ color, size }: ItemProps) => {

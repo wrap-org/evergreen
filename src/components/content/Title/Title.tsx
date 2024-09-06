@@ -4,9 +4,9 @@ import React from 'react';
 import styles from './Title.module.scss';
 
 export interface TitleProps {
-  children?: React.ReactNode;
-  as?: string;
-  size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+  readonly children?: React.ReactNode;
+  readonly as?: string;
+  readonly size?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 }
 
 const Title = ({ children, as = 'h1', size }: TitleProps) => {

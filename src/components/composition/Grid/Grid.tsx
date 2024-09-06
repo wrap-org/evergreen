@@ -5,16 +5,16 @@ import styles from './Grid.module.scss';
 import Item from './GridItem';
 
 interface GridProps {
-  children?: React.ReactNode;
-  wrap?: boolean | 'wrap-reverse';
-  inset?: boolean;
-  insetFluid?: boolean;
-  insetVerticalFluid?: boolean;
-  direction?: string;
-  justify?: string;
-  align?: string;
-  spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
-  fullWidth?: boolean;
+  readonly children?: React.ReactNode;
+  readonly wrap?: boolean | 'wrap-reverse';
+  readonly inset?: boolean;
+  readonly insetFluid?: boolean;
+  readonly insetVerticalFluid?: boolean;
+  readonly direction?: string;
+  readonly justify?: string;
+  readonly align?: string;
+  readonly spacing?: 'default' | 'xs' | 'sm' | 'lg' | 'xl' | 'none';
+  readonly fullWidth?: boolean;
 }
 
 const Grid = ({

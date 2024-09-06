@@ -6,7 +6,7 @@ function Legend({
   children,
   ...props
 }: {
-  children?: React.ReactNode;
+  readonly children?: React.ReactNode;
   [x: string]: any;
 }) {
   return (

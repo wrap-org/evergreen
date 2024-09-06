@@ -1,7 +1,23 @@
-$family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, Roboto,
-  Helvetica, Arial, sans-serif;
-$family-roboto: Roboto, Lato, -apple-system, system-ui, BlinkMacSystemFont,
-  Helvetica, Arial, sans-serif;
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+$family:
+  'Open Sans',
+  -apple-system,
+  system-ui,
+  BlinkMacSystemFont,
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif;
+$family-roboto:
+  Roboto,
+  Lato,
+  -apple-system,
+  system-ui,
+  BlinkMacSystemFont,
+  Helvetica,
+  Arial,
+  sans-serif;
+/* stylelint-enable scss/dollar-variable-colon-space-after */
 
 $line-height: 1.25;
 $line-height-sm: 1.125;

@@ -8,9 +8,9 @@ export default function LoadingImage({
   height,
   shape,
 }: {
-  width?: number;
-  height?: number;
-  shape?: '' | 'circle' | 'rounded';
+  readonly width?: number;
+  readonly height?: number;
+  readonly shape?: '' | 'circle' | 'rounded';
 }) {
   const cssVariables = (
     width && height

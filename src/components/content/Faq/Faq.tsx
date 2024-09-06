@@ -8,8 +8,8 @@ import Title from 'components/content/Title/Title';
 import Collapse from 'components/controls/Collapse/Collapse';
 
 interface FaqProps {
-  question: React.ReactNode;
-  children?: React.ReactNode;
+  readonly question: React.ReactNode;
+  readonly children?: React.ReactNode;
 }
 
 const Faq = ({ question, children }: FaqProps) => {

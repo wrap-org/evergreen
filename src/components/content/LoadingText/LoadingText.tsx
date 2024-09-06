@@ -6,8 +6,8 @@ export default function LoadingText({
   as,
   chars = 20,
 }: {
-  as?: 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
-  chars?: number;
+  readonly as?: 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+  readonly chars?: number;
 }) {
   const [characters, setCharacters] = useState('');
   const Tag = as ?? ('span' as keyof JSX.IntrinsicElements);
@@ -17,7 +17,7 @@ export default function LoadingText({
 
     const result = Array.from(Array(chars))
       .map(() =>
-        legalChars.charAt(Math.floor(Math.random() * legalChars.length))
+        legalChars.charAt(Math.floor(Math.random() * legalChars.length)),
       )
       .join('');
 

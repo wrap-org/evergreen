@@ -7,14 +7,14 @@ import styles from './Slider.module.scss';
 import Label from './SliderLabel';
 
 export interface SliderProps extends FormControl {
-  children?: React.ReactNode;
-  onChange?: (
+  readonly children?: React.ReactNode;
+  readonly onChange?: (
     event: React.ChangeEvent<HTMLInputElement>,
-    values: { lowerValue: number; upperValue: number }
+    values: { lowerValue: number; upperValue: number },
   ) => void;
-  defaultValue?: number;
-  minValue?: number;
-  maxValue?: number;
+  readonly defaultValue?: number;
+  readonly minValue?: number;
+  readonly maxValue?: number;
 }
 
 export interface SliderComponent
@@ -35,7 +35,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
       disabled,
       ...props
     },
-    ref
+    ref,
   ) => {
     const defaultVal =
       defaultValue ??
@@ -76,13 +76,13 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
           <div
             className={classNames(
               styles.slider__track,
-              styles['slider__track--upper']
+              styles['slider__track--upper'],
             )}
           ></div>
           <div
             className={classNames(
               styles.slider__track,
-              styles['slider__track--lower']
+              styles['slider__track--lower'],
             )}
           ></div>
           <input
@@ -99,7 +99,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
         <div className={styles.slider__labels}>{childrenWithValues}</div>
       </div>
     );
-  }
+  },
 );
 
 Slider.displayName = 'Slider';

@@ -8,9 +8,9 @@ export default function Alert({
   children,
   onClose,
 }: {
-  skin?: string;
-  children?: React.ReactNode;
-  onClose?: () => void;
+  readonly skin?: string;
+  readonly children?: React.ReactNode;
+  readonly onClose?: () => void;
 }) {
   return (
     <div className={styles.alert} role="alert">

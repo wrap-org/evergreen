@@ -4,9 +4,9 @@ import React from 'react';
 import styles from './FormGroup.module.scss';
 
 export interface FormGroupProps {
-  children?: React.ReactNode;
-  horizontal?: boolean;
-  as?: 'div' | 'fieldset';
+  readonly children?: React.ReactNode;
+  readonly horizontal?: boolean;
+  readonly as?: 'div' | 'fieldset';
 }
 
 const Info = ({
@@ -14,9 +14,9 @@ const Info = ({
   controlId,
   children,
 }: {
-  open?: boolean;
-  controlId?: string;
-  children?: React.ReactNode;
+  readonly open?: boolean;
+  readonly controlId?: string;
+  readonly children?: React.ReactNode;
 }) => (
   <div
     id={controlId}
@@ -39,8 +39,8 @@ const Label = ({
   children,
   as,
 }: {
-  children?: React.ReactNode;
-  as?: 'div' | 'legend';
+  readonly children?: React.ReactNode;
+  readonly as?: 'div' | 'legend';
 }) => {
   const Component = as ?? 'div';
   return (
@@ -48,7 +48,7 @@ const Label = ({
   );
 };
 
-const Control = ({ children }: { children?: React.ReactNode }) => (
+const Control = ({ children }: { readonly children?: React.ReactNode }) => (
   <div className={styles['form-group__control']}>{children}</div>
 );
 
