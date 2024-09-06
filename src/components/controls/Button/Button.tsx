@@ -4,26 +4,26 @@ import React, { ComponentType, ReactNode, forwardRef } from 'react';
 import styles from './Button.module.scss';
 
 interface ButtonProps {
-  children?: ReactNode;
+  readonly children?: ReactNode;
   /**
    * The component to render the button as.
    * Useful for routing in frameworks like NextJS: `<Button as={Link} href="/">`
    */
-  as?: ComponentType<any>;
-  submit?: boolean;
-  loading?: boolean;
-  href?: string;
-  type?: 'primary' | 'secondary' | 'positive' | 'negative';
-  icon?: boolean;
-  block?: boolean | 'mobile';
-  size?: string;
+  readonly as?: ComponentType<any>;
+  readonly submit?: boolean;
+  readonly loading?: boolean;
+  readonly href?: string;
+  readonly type?: 'primary' | 'secondary' | 'positive' | 'negative';
+  readonly icon?: boolean;
+  readonly block?: boolean | 'mobile';
+  readonly size?: string;
   [x: string]: unknown;
 }
 
 const Button = forwardRef<any, ButtonProps>(
   (
     { children, as, loading, submit, type, href, icon, block, size, ...props },
-    ref
+    ref,
   ) => {
     const CustomTag = as ?? (href ? 'a' : 'button');
 
@@ -46,7 +46,7 @@ const Button = forwardRef<any, ButtonProps>(
         {children}
       </CustomTag>
     );
-  }
+  },
 );
 
 Button.displayName = 'Button';

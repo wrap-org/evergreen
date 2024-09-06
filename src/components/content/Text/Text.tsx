@@ -7,15 +7,25 @@ import { Sizes, Weights } from '../../../types/font.type';
 import styles from './Text.module.scss';
 
 export interface TextProps {
-  children?: React.ReactNode;
-  as?: 'div' | 'span' | 'p' | 'a' | 'strong' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
-  align?: 'left' | 'center' | 'right';
-  display?: 'inline-block' | 'inline' | 'block';
-  weight?: Weights;
-  size?: Sizes;
-  color?: Colors;
-  flush?: boolean;
-  transform?: string;
+  readonly children?: React.ReactNode;
+  readonly as?:
+    | 'div'
+    | 'span'
+    | 'p'
+    | 'a'
+    | 'strong'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5';
+  readonly align?: 'left' | 'center' | 'right';
+  readonly display?: 'inline-block' | 'inline' | 'block';
+  readonly weight?: Weights;
+  readonly size?: Sizes;
+  readonly color?: Colors;
+  readonly flush?: boolean;
+  readonly transform?: string;
   [key: string]: any;
 }
 

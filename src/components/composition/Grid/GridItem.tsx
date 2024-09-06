@@ -4,21 +4,21 @@ import React from 'react';
 import styles from './Grid.module.scss';
 
 export interface GridItemProps {
-  children?: React.ReactNode;
-  grow?: boolean;
-  shrink?: boolean;
-  align?: string;
-  xs?: number | 'auto';
-  sm?: number | 'auto';
-  md?: number | 'auto';
-  lg?: number | 'auto';
-  xl?: number | 'auto';
-  xxl?: number | 'auto';
-  xxxl?: number | 'auto';
-  max?: number | 'auto';
-  desktop?: number | 'auto';
-  flex?: boolean;
-  order?: {
+  readonly children?: React.ReactNode;
+  readonly grow?: boolean;
+  readonly shrink?: boolean;
+  readonly align?: string;
+  readonly xs?: number | 'auto';
+  readonly sm?: number | 'auto';
+  readonly md?: number | 'auto';
+  readonly lg?: number | 'auto';
+  readonly xl?: number | 'auto';
+  readonly xxl?: number | 'auto';
+  readonly xxxl?: number | 'auto';
+  readonly max?: number | 'auto';
+  readonly desktop?: number | 'auto';
+  readonly flex?: boolean;
+  readonly order?: {
     xs?: number;
     sm?: number;
     md?: number;

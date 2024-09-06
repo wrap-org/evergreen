@@ -7,8 +7,8 @@ export default function LoadingButton({
   size,
   block,
 }: {
-  size?: string;
-  block?: boolean | 'mobile';
+  readonly size?: string;
+  readonly block?: boolean | 'mobile';
 }) {
   return (
     <button

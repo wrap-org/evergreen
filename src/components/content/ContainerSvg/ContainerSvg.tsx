@@ -6,10 +6,10 @@ import styles from './ContainerSvg.module.scss';
 import { Colour, Name } from 'lib/container';
 
 export interface ContainerSvgProps {
-  name: Name;
-  lidColour?: Colour | 'no-lid';
-  bodyColour?: Colour;
-  secondaryColour?: Colour;
+  readonly name: Name;
+  readonly lidColour?: Colour | 'no-lid';
+  readonly bodyColour?: Colour;
+  readonly secondaryColour?: Colour;
 }
 
 function ContainerSvg({

@@ -6,7 +6,7 @@ import styles from './Dropdown.module.scss';
 export default function DropdownContent({
   children,
 }: {
-  children?: React.ReactNode;
+  readonly children?: React.ReactNode;
 }) {
   return <div className={styles.dropdown__content}>{children}</div>;
 }

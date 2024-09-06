@@ -4,12 +4,12 @@ import React from 'react';
 import styles from './Menubar.module.scss';
 
 export interface MenuBarTabProps {
-  children?: React.ReactNode;
-  active?: boolean;
-  disabled?: boolean;
+  readonly children?: React.ReactNode;
+  readonly active?: boolean;
+  readonly disabled?: boolean;
 }
 
-const MenubarTabs = ({ children }: { children?: React.ReactNode }) => (
+const MenubarTabs = ({ children }: { readonly children?: React.ReactNode }) => (
   <div className={styles.menubar__inner}>
     <ul className={styles.menubar__tabs}>{children}</ul>
   </div>
@@ -26,13 +26,13 @@ const MenubarTab = ({ children, active, disabled }: MenuBarTabProps) => (
   </li>
 );
 
-const MenubarBack = ({ children }: { children?: React.ReactNode }) => (
+const MenubarBack = ({ children }: { readonly children?: React.ReactNode }) => (
   <div className={styles.menubar__back}>
     <span className={styles['menubar__back-link']}>{children}</span>
   </div>
 );
 
-const Menubar = ({ children }: { children?: React.ReactNode }) => (
+const Menubar = ({ children }: { readonly children?: React.ReactNode }) => (
   <nav className={styles.menubar}>{children}</nav>
 );
 

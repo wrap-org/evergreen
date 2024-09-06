@@ -5,7 +5,7 @@ import AppFooter from './AppFooter';
 import AppHeader from './AppHeader';
 import AppMain from './AppMain';
 
-const App = ({ children }: { children?: React.ReactNode }) => (
+const App = ({ children }: { readonly children?: React.ReactNode }) => (
   <div className={styles.app}>{children}</div>
 );
 

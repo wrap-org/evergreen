@@ -6,8 +6,8 @@ import { FormControl } from '../../../types/form-control.type';
 import styles from './Input.module.scss';
 
 interface InputProps extends FormControl {
-  prefix?: React.ReactNode | string;
-  suffix?: React.ReactNode | string;
+  readonly prefix?: React.ReactNode | string;
+  readonly suffix?: React.ReactNode | string;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
@@ -29,7 +29,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       />
       {suffix && <div className={styles.input__suffix}>{suffix}</div>}
     </div>
-  )
+  ),
 );
 
 Input.displayName = 'Input';

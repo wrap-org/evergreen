@@ -13,18 +13,20 @@ export type ModalInstance = A11yDialogInstance;
 
 interface ModalProps
   extends Pick<ReactA11yDialogProps, 'id' | 'title' | 'role'> {
-  children?: React.ReactNode;
-  size?: Breakpoints | 'auto';
+  readonly children?: React.ReactNode;
+  readonly size?: Breakpoints | 'auto';
   /**
    * Called when the modal has mounted and the ref has been setup
    */
-  onModalMounted?: (modalRef: React.MutableRefObject<ModalInstance>) => void;
+  readonly onModalMounted?: (
+    modalRef: React.MutableRefObject<ModalInstance>,
+  ) => void;
 }
 
 const Modal = React.forwardRef<any, ModalProps>(
   (
     { children, size = 'auto', onModalMounted, ...a11yDialogProps },
-    ref: React.ForwardedRef<ModalInstance>
+    ref: React.ForwardedRef<ModalInstance>,
   ) => {
     const dialogClasses = classnames(styles.modal__dialog, {
       [styles[`modal__dialog--size-${size}`]]: size,
@@ -55,7 +57,7 @@ const Modal = React.forwardRef<any, ModalProps>(
         {children}
       </A11yDialog>
     );
-  }
+  },
 );
 
 Modal.displayName = 'Modal';

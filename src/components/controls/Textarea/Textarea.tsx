@@ -23,7 +23,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, FormControl>(
         ref={ref}
       />
     </div>
-  )
+  ),
 );
 
 Textarea.displayName = 'Textarea';

@@ -18,18 +18,18 @@ function importAll(r) {
 }
 
 const icons = importAll(
-  require.context('../../../../node_modules/mono-icons/svg/', true, /\.svg$/)
+  require.context('../../../../node_modules/mono-icons/svg/', true, /\.svg$/),
 );
 const customIconNames = importAll(
-  require.context('./custom-icons/', true, /\.svg$/)
+  require.context('./custom-icons/', true, /\.svg$/),
 );
 
 const Template = ({
   iconNames,
   type,
 }: {
-  iconNames: string[];
-  type?: 'mono' | 'custom';
+  readonly iconNames: string[];
+  readonly type?: 'mono' | 'custom';
 }) => (
   <Grid wrap>
     {iconNames.map((icon) => (

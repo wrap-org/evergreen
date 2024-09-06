@@ -9,11 +9,11 @@ import Icon from 'components/content/Icon/Icon';
 import useCombinedRefs from 'lib/hooks/combined-refs';
 
 interface CheckboxProps extends FormControl {
-  defaultChecked?: boolean;
-  forceChecked?: boolean;
-  type?: 'default' | 'list' | 'input';
-  children?: React.ReactNode;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly defaultChecked?: boolean;
+  readonly forceChecked?: boolean;
+  readonly type?: 'default' | 'list' | 'input';
+  readonly children?: React.ReactNode;
+  readonly onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
@@ -30,7 +30,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       onChange,
       ...props
     }: CheckboxProps,
-    forwardedRef: any
+    forwardedRef: any,
   ) => {
     const [checked, setChecked] = useState<boolean>(defaultChecked);
     const innerRef = useRef(null);
@@ -74,7 +74,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         <span className={styles.checkbox__content}>{children}</span>
       </label>
     );
-  }
+  },
 );
 
 Checkbox.displayName = 'Checkbox';

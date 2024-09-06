@@ -5,8 +5,8 @@ import Icon from 'components/content/Icon/Icon';
 import Button from 'components/controls/Button/Button';
 
 export interface HeaderProps {
-  children?: React.ReactNode;
-  onClose: (event: Event) => void;
+  readonly children?: React.ReactNode;
+  readonly onClose: (event: Event) => void;
 }
 
 const ModalHeader = ({ onClose, children }: HeaderProps) => (

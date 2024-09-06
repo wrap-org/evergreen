@@ -9,7 +9,7 @@ import LoadingText from '../LoadingText/LoadingText';
 import styles from './LoadingFormGroup.module.scss';
 
 interface LoadingFormGroupProps extends FormGroupProps {
-  chars?: number;
+  readonly chars?: number;
 }
 
 export default function LoadingFormGroup({

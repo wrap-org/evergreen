@@ -5,9 +5,9 @@ import Content from './Content';
 import styles from './Dropdown.module.scss';
 
 export interface DropdownProps {
-  open?: boolean;
-  onClickAway?: () => void;
-  children?: React.ReactNode;
+  readonly open?: boolean;
+  readonly onClickAway?: () => void;
+  readonly children?: React.ReactNode;
 }
 
 const Dropdown = ({ open, onClickAway, children }: DropdownProps) => {

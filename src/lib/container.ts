@@ -151,7 +151,7 @@ export const getColourOptions = (containerName) => {
 
 export function uniqueContainerName(
   { displayName, bodyColour, lidColour, frequency }: Container,
-  showFrequency = false
+  showFrequency = false,
 ) {
   const bodyColourName = upperFirst(getColourName(bodyColour as string));
   const frequencyName = showFrequency ? ` ‒ ${frequency?.name}` : '';

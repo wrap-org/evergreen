@@ -128,10 +128,10 @@ export const Coloured = () => (
       />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Bundle" bodyColour='brown' />
+      <ContainerSvg name="Bundle" bodyColour="brown" />
     </Grid.Item>
     <Grid.Item xs={12} md={3}>
-      <ContainerSvg name="Roll Cage" bodyColour='purple' />
+      <ContainerSvg name="Roll Cage" bodyColour="purple" />
     </Grid.Item>
   </Grid>
 );

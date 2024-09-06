@@ -4,12 +4,12 @@ import React from 'react';
 import styles from './Slider.module.scss';
 
 export interface SliderLabelProps {
-  children?: React.ReactNode;
-  position: 'upper' | 'lower';
-  value?: number;
-  maxValue?: number;
-  showValue?: boolean;
-  asPercentage?: boolean;
+  readonly children?: React.ReactNode;
+  readonly position: 'upper' | 'lower';
+  readonly value?: number;
+  readonly maxValue?: number;
+  readonly showValue?: boolean;
+  readonly asPercentage?: boolean;
 }
 const formatPercentage = (value: number, maxValue: number) => {
   return `${((value / maxValue) * 100).toFixed(0)}%`;

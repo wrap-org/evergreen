@@ -26,13 +26,13 @@ export enum Format {
 }
 
 interface DatepickerProps extends FormControl {
-  value?: string;
-  onChange?: (value: string) => void;
-  type?: 'date' | 'day' | 'month' | 'year';
-  fromMonth?: Date;
-  toMonth?: Date;
-  fromYear?: number;
-  toYear?: number;
+  readonly value?: string;
+  readonly onChange?: (value: string) => void;
+  readonly type?: 'date' | 'day' | 'month' | 'year';
+  readonly fromMonth?: Date;
+  readonly toMonth?: Date;
+  readonly fromYear?: number;
+  readonly toYear?: number;
 }
 
 const Datepicker = React.forwardRef<HTMLInputElement, DatepickerProps>(
@@ -51,12 +51,12 @@ const Datepicker = React.forwardRef<HTMLInputElement, DatepickerProps>(
       toMonth,
       ...props
     },
-    ref
+    ref,
   ) => {
     const [selected, setSelected] = useState<Date>();
     const [isPopperOpen, setIsPopperOpen] = useState<boolean>(false);
     const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(
-      null
+      null,
     );
     const popperRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
@@ -182,7 +182,7 @@ const Datepicker = React.forwardRef<HTMLInputElement, DatepickerProps>(
         )}
       </>
     );
-  }
+  },
 );
 
 Datepicker.displayName = 'Datepicker';

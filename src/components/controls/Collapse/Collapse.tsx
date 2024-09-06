@@ -8,13 +8,13 @@ import Grid from 'components/composition/Grid/Grid';
 import Icon from 'components/content/Icon/Icon';
 
 export interface CollapseProps {
-  children?: React.ReactNode;
-  headerLabel: React.ReactNode;
-  align?: 'left' | 'right';
-  iconOpen?: string;
-  iconClosed?: string;
-  onToggle?: (open?: boolean) => void;
-  defaultOpen?: boolean;
+  readonly children?: React.ReactNode;
+  readonly headerLabel: React.ReactNode;
+  readonly align?: 'left' | 'right';
+  readonly iconOpen?: string;
+  readonly iconClosed?: string;
+  readonly onToggle?: (open?: boolean) => void;
+  readonly defaultOpen?: boolean;
 }
 
 const Collapse = ({

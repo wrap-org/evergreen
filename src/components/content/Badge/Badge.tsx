@@ -6,11 +6,11 @@ import { Sizes } from '../../../types/font.type';
 import styles from './Badge.module.scss';
 
 export interface BadgeProps {
-  children?: React.ReactNode;
-  size?: Sizes;
-  rounded?: boolean;
-  muted?: boolean;
-  inverse?: boolean;
+  readonly children?: React.ReactNode;
+  readonly size?: Sizes;
+  readonly rounded?: boolean;
+  readonly muted?: boolean;
+  readonly inverse?: boolean;
 }
 
 const Badge = ({
