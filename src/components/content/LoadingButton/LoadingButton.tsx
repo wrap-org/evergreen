@@ -19,6 +19,7 @@ export default function LoadingButton({
         [styles[`loading-button--block-mobile`]]: block === 'mobile',
       })}
       aria-hidden="true"
+      tabIndex={-1}
       disabled
     >
       <span className={styles['loading-button__text']}>Button text</span>

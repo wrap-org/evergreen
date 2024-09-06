@@ -30,6 +30,7 @@ export default function LoadingFormGroup({
               type="text"
               className={styles['loading-form-group__control-input']}
               aria-hidden="true"
+              tabIndex={-1}
               disabled
             />
           </div>
