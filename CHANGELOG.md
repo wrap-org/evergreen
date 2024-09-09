@@ -1,3 +1,9 @@
+## [7.14.1](https://github.com/etchteam/mobius/compare/v7.14.0...v7.14.1) (2024-09-09)
+
+### Bug Fixes
+
+* add viewboxes to the bundle and roll cage svgs ([8b11a80](https://github.com/etchteam/mobius/commit/8b11a805bcd14eec3e40599e1a2d10e90e8ca965))
+
 ## [7.14.0](https://github.com/etchteam/mobius/compare/v7.13.0...v7.14.0) (2024-09-09)
 
 ### Features
