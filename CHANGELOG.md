@@ -1,3 +1,29 @@
+## [7.14.0](https://github.com/etchteam/mobius/compare/v7.13.0...v7.14.0) (2024-09-09)
+
+### Features
+
+* add new container images ([451be32](https://github.com/etchteam/mobius/commit/451be32af35acda7830b9a82a05cb2a89bfe6b17))
+* formgroup as fieldset ([ba9efb3](https://github.com/etchteam/mobius/commit/ba9efb3b72578e08186f284a585708f33e6912a2))
+* update peer dependencies ([6fe4ec7](https://github.com/etchteam/mobius/commit/6fe4ec7451466c6f8d0be9c866e8e56e2fe63ba2))
+* upgrade prettier ([8628957](https://github.com/etchteam/mobius/commit/8628957c8c5bb90080df1fcea3a1c77698715f51))
+
+### Bug Fixes
+
+* bump @popperjs/core from 2.11.6 to 2.11.8 ([a313393](https://github.com/etchteam/mobius/commit/a313393dcabd99ca3ea2457de1c8d98680b59f9e))
+* bump classnames from 2.3.2 to 2.5.1 ([e0f3c8b](https://github.com/etchteam/mobius/commit/e0f3c8b095433a8e7628995e75327aab9c1a66d6))
+* bump date-fns from 2.29.3 to 3.6.0 ([0e6b10f](https://github.com/etchteam/mobius/commit/0e6b10f3be802dae88106109a9fac214656fc791))
+* bump react-day-picker from 8.4.1 to 9.0.6 ([7a2094a](https://github.com/etchteam/mobius/commit/7a2094a472bb9233a179bdb44e742e04179ad528))
+* bump react-day-picker from 9.0.6 to 9.0.7 ([372460d](https://github.com/etchteam/mobius/commit/372460d4e4f361a2d2976881a8c3564d2b468ab9))
+* ensure that hidden elements are not focusable ([32629fa](https://github.com/etchteam/mobius/commit/32629fa559e669ab602ebcc1e47965e38dfdf4dc))
+* install latest eslint version ([f59bd19](https://github.com/etchteam/mobius/commit/f59bd19ed30e20ef1d337bb28366c202b3545632))
+* install latest eslint version ([9e3b881](https://github.com/etchteam/mobius/commit/9e3b8818964c3648ba3dd973e07d0a974910a180))
+* remove role of list from list, as it is already a list ([24c428f](https://github.com/etchteam/mobius/commit/24c428f8edf9bba4db454d416737c09fe28ee0ab))
+* revert @storybook/addon-docs to 6.5.13 ([fbdc5a8](https://github.com/etchteam/mobius/commit/fbdc5a8859f53979788eb138fb500a6cff02f8bb))
+* revert prettier to 2.8.1 ([53e3a98](https://github.com/etchteam/mobius/commit/53e3a98d390ba62faeff451085352fea1526b255))
+* revert stylelint to v15 ([8776ec2](https://github.com/etchteam/mobius/commit/8776ec2dfdbcf572b12615ee19da2d6ac35d0f2a))
+* update and override dependencies to workaround a semantic release bug ([d5ca9e5](https://github.com/etchteam/mobius/commit/d5ca9e55b849c53468a11069dc2ad091833c2fc6))
+* use latest node lts ([7c8fbf9](https://github.com/etchteam/mobius/commit/7c8fbf93b7fb4921330e1dfdbb6fac3a5a08d76b))
+
 ## [7.13.0](https://github.com/etchteam/mobius/compare/v7.12.2...v7.13.0) (2024-08-01)
 
 
