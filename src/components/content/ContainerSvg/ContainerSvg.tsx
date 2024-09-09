@@ -666,6 +666,7 @@ function ContainerSvg({
           className={styles['container-svg']}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
+          viewBox="0 0 128 126"
         >
           <path
             className={bodyClassName}
@@ -688,6 +689,7 @@ function ContainerSvg({
           className={styles['container-svg']}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
+          viewBox="0 0 90 150"
         >
           <path
             fill="#4D6B87"
