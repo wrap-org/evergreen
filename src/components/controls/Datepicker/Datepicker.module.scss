@@ -1,6 +1,5 @@
 @use 'sass:math';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
 @use '../../../styles/variables/color';
 @use '../../../styles/mixins/forms';
 
@@ -8,17 +7,17 @@
   @include forms.input;
 
   &__button {
-    background: input.$background;
+    background: var(--input-background);
     border: 0 none;
-    border-bottom-left-radius: input.$border-radius;
-    border-right: 1px solid input.$border;
-    border-top-left-radius: input.$border-radius;
+    border-bottom-left-radius: var(--input-border-radius);
+    border-right: 1px solid var(--input-border);
+    border-top-left-radius: var(--input-border-radius);
     color: color.$blue-dark;
     cursor: pointer;
     font-size: font.$size-xl;
     line-height: 1.75;
-    padding: 0 math.div(input.$padding-horizontal, 2) 0
-      math.div(input.$padding-horizontal, 2);
+    padding: 0 calc(var(--input-padding-horizontal) / 2) 0
+      calc(var(--input-padding-horizontal) / 2);
     transition:
       background var(--mobius-transition),
       border-color var(--mobius-transition);
@@ -26,7 +25,7 @@
     &:hover,
     &:focus {
       background: color.$white;
-      border-color: input.$border-hover;
+      border-color: var(--input-border-hover);
     }
   }
 
@@ -46,8 +45,8 @@
     --rdp-outline: 2px solid var(--rdp-accent-color);
 
     background: color.$white;
-    border: 1px solid input.$border;
-    border-radius: input.$border-radius;
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-border-radius);
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
     margin-top: var(--mobius-spacing-sm);
     padding: var(--mobius-spacing-md);
@@ -85,7 +84,7 @@
     }
 
     &-day {
-      border-radius: input.$border-radius;
+      border-radius: var(--input-border-radius);
       color: color.$blue-darkest;
       font-size: font.$size-sm;
       height: var(--rdp-cell-size);
@@ -109,7 +108,7 @@
 
     &-nav-button {
       align-items: center;
-      border-radius: input.$border-radius;
+      border-radius: var(--input-border-radius);
       color: color.$blue;
       display: inline-flex;
       height: 1.65rem;

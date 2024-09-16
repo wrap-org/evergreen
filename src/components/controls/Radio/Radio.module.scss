@@ -1,4 +1,3 @@
-@use '../../../styles/variables/input';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 @use '../../../styles/variables/color';
@@ -8,7 +7,7 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
 .radio {
   @include forms.input;
   @include forms.input-padding;
-  border-radius: input.$checkradio-border-radius;
+  border-radius: var(--input-checkradio-border-radius);
   cursor: pointer;
 
   &--checked {

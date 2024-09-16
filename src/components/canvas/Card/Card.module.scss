@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
 
 .card {
   background: var(--skin-background);
@@ -83,7 +82,7 @@
   &--control {
     background: var(--input-background);
     border: 1px solid var(--input-border);
-    border-radius: input.$border-radius;
+    border-radius: var(--input-border-radius);
   }
 
   &--disabled {

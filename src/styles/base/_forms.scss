@@ -1,14 +1,23 @@
 @use '../variables/color';
-@use '../variables/input';
 
 :root {
-  --input-background: #{color.$blue-lightest};
-  --input-background-focus: #{color.$white};
-  --input-border: #{color.$blue-light};
-  --input-border-hover: var(--link-color);
-  --input-color: var(--skin-color-light);
-  --input-checked: #{color.$blue};
-  --input-checkradio-border-radius: 0.25rem;
+  --input-background: var(--mobius-input-background);
+  --input-background-focus: var(--mobius-input-background-focus);
+
+  --input-border: var(--mobius-input-border);
+  --input-border-hover: var(--mobius-input-border-hover);
+  --input-border-radius: var(--mobius-input-border-radius);
+
+  --input-color: var(--mobius-input-color);
+
+  --input-checked: var(--mobius-input-checked);
+  --input-checkradio-border-radius: var(
+    --mobius-input-checkradio-border-radius
+  );
+
+  --input-padding-vertical: var(--mobius-input-padding-vertical);
+  --input-padding-horizontal: var(--mobius-input-padding-horizontal);
+  --input-padding: var(--mobius-input-padding);
 }
 
 fieldset {

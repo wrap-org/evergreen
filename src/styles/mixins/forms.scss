@@ -1,11 +1,10 @@
 @use '../variables/color';
 @use '../variables/font';
-@use '../variables/input';
 
 @mixin input() {
   background: var(--input-background);
   border: 1px solid var(--input-border);
-  border-radius: input.$border-radius;
+  border-radius: var(--input-border-radius);
   color: var(--input-color);
   display: flex;
   line-height: 1.75;
@@ -42,14 +41,14 @@
   &--approved,
   &--declined {
     &::before {
-      border-bottom-left-radius: input.$border-radius;
-      border-top-left-radius: input.$border-radius;
+      border-bottom-left-radius: var(--input-border-radius);
+      border-top-left-radius: var(--input-border-radius);
     }
   }
 }
 
 @mixin input-disabled() {
-  background: input.$background;
+  background: var(--input-background);
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
@@ -74,13 +73,13 @@
 
 @mixin input-padding() {
   min-height: var(--mobius-spacing-thumb);
-  padding: input.$padding;
+  padding: var(--input-padding);
 }
 
 // Radios/checkboxes
 @mixin checked() {
   background: color.$white;
-  color: input.$checked;
+  color: var(--input-checked);
 }
 
 @mixin indicator() {

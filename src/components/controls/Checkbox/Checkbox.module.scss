@@ -1,5 +1,4 @@
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/input';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 
@@ -67,7 +66,7 @@
   &--type-input {
     @include forms.input;
     @include forms.input-padding;
-    border-radius: input.$checkradio-border-radius;
+    border-radius: var(--input-checkradio-border-radius);
   }
 
   &--type-list {

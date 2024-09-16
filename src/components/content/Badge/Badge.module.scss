@@ -1,6 +1,5 @@
 @use 'sass:math';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
 
 .badge {
   background: var(--skin-background);
@@ -32,6 +31,6 @@
   }
 
   &--rounded {
-    border-radius: input.$border-radius;
+    border-radius: var(--input-border-radius);
   }
 }

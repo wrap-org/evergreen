@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
 @use '../../../styles/mixins/forms';
 
 .select {
@@ -13,7 +12,7 @@
     max-width: 100%;
     overflow: hidden;
     padding-right: calc(
-      var(--mobius-spacing-thumb) + #{input.$padding-horizontal}
+      var(--mobius-spacing-thumb) + var(--input-padding-horizontal)
     );
     text-overflow: ellipsis;
 
@@ -26,7 +25,7 @@
     align-items: center;
     background: var(--input-background);
     border-left: 1px solid var(--input-border);
-    border-radius: 0 input.$border-radius input.$border-radius 0;
+    border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
     bottom: 0;
     color: var(--skin-link-color);
     display: flex;
