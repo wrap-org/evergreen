@@ -2,7 +2,6 @@
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/input';
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
 
 .date-picker {
@@ -21,8 +20,8 @@
     padding: 0 math.div(input.$padding-horizontal, 2) 0
       math.div(input.$padding-horizontal, 2);
     transition:
-      background transition.$duration transition.$timing,
-      border-color transition.$duration transition.$timing;
+      background var(--mobius-transition),
+      border-color var(--mobius-transition);
 
     &:hover,
     &:focus {
@@ -91,7 +90,7 @@
       font-size: font.$size-sm;
       height: var(--rdp-cell-size);
       text-align: center;
-      transition: background transition.$duration transition.$timing;
+      transition: background var(--mobius-transition);
       width: var(--rdp-cell-size);
 
       &:focus {

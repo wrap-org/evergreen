@@ -1,4 +1,3 @@
-@use '../../../styles/variables/transition';
 $enter-transition-duration: 0.5s;
 $enter-transition-timing: ease-in-out;
 
@@ -85,7 +84,7 @@ $enter-transition-timing: ease-in-out;
 
     &.enter--enter {
       animation-name: enter-boing;
-      animation-timing-function: transition.$timing-boing;
+      animation-timing-function: var(--mobius-transition-timing-boing);
     }
   }
 

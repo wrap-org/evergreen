@@ -1,6 +1,4 @@
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/transition';
 
 .dropdown {
   display: inline-block;
@@ -19,8 +17,8 @@
     top: 100%;
     transform: translateY(-0.25em);
     transition:
-      opacity transition.$duration transition.$timing,
-      transform transition.$duration transition.$timing;
+      opacity var(--mobius-transition),
+      transform var(--mobius-transition);
   }
 
   &--open {

@@ -1,5 +1,3 @@
-@use '../../../styles/variables/transition';
-
 .collapse {
   &__button {
     appearance: none;
@@ -20,8 +18,8 @@
     display: grid;
     grid-template-rows: 0fr;
     transition:
-      grid-template-rows transition.$duration transition.$timing,
-      content-visibility transition.$duration transition.$timing allow-discrete;
+      grid-template-rows var(--mobius-transition),
+      content-visibility var(--mobius-transition) allow-discrete;
 
     &--open {
       content-visibility: visible;

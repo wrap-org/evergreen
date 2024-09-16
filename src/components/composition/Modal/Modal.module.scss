@@ -3,7 +3,6 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/transition';
 @use '../../../styles/mixins/screen-reader';
 
 @keyframes fade-in {
@@ -37,13 +36,15 @@
   }
 
   &__overlay {
-    animation: fade-in transition.$duration both transition.$timing;
+    animation: fade-in var(--mobius-transition-duration) both
+      var(--mobius-transition-timing);
     background-color: sassColor.scale(color.$blue-lightest, $alpha: -65%);
   }
 
   &__dialog {
-    animation: fade-in-scale transition.$duration
-      math.div(transition.$duration, 2) both transition.$timing;
+    animation: fade-in-scale var(--mobius-transition-duration)
+      math.div(var(--mobius-transition-duration), 2) both
+      var(--mobius-transition-timing);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
     max-height: 100vh;

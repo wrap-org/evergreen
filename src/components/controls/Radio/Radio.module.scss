@@ -1,5 +1,4 @@
 @use '../../../styles/variables/input';
-@use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 @use '../../../styles/variables/color';
@@ -45,8 +44,9 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
     opacity: 0;
     transform: scale(0.8);
     transition:
-      opacity transition.$duration transition.$timing,
-      transform transition.$duration-boing transition.$timing-boing;
+      opacity var(--mobius-transition),
+      transform var(--mobius-transition-duration-boing)
+        var(--mobius-transition-timing-boing);
     width: $radio-dot-size;
 
     .radio--checked & {

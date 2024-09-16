@@ -1,7 +1,6 @@
 @use '../variables/color';
 @use '../variables/font';
 @use '../variables/input';
-@use '../variables/transition';
 
 @mixin input() {
   background: var(--input-background);
@@ -12,8 +11,8 @@
   line-height: 1.75;
   position: relative;
   transition:
-    border-color transition.$duration transition.$timing,
-    background-color transition.$duration transition.$timing;
+    border-color var(--mobius-transition),
+    background-color var(--mobius-transition);
 
   &:hover,
   &:focus-within {
@@ -95,9 +94,9 @@
   margin-top: var(--mobius-spacing-xs);
   position: relative;
   transition:
-    background transition.$duration transition.$timing,
-    border-color transition.$duration transition.$timing,
-    color transition.$duration transition.$timing;
+    background var(--mobius-transition),
+    border-color var(--mobius-transition),
+    color var(--mobius-transition);
   width: font.$size-lg;
 }
 

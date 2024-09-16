@@ -1,13 +1,12 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/transition';
 @use '../../../styles/variables/breakpoint';
 
 $menubar-highlight-width: 4px;
 
 @mixin menubar-link {
   color: var(--skin-link-color);
-  transition: background transition.$duration transition.$timing;
+  transition: background var(--mobius-transition);
 
   &:hover,
   &:active {
@@ -66,8 +65,8 @@ $menubar-highlight-width: 4px;
         position: absolute;
         top: 0;
         transition:
-          opacity transition.$duration transition.$timing,
-          height transition.$duration transition.$timing;
+          opacity var(--mobius-transition),
+          height var(--mobius-transition);
         width: 100%;
       }
 

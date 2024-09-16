@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/transition';
 @use '../../../styles/variables/input';
 
 .card {
@@ -10,9 +9,9 @@
   color: var(--skin-color);
   display: block;
   transition:
-    background-color transition.$duration transition.$timing,
-    color transition.$duration transition.$timing,
-    border-color transition.$duration transition.$timing;
+    background-color var(--mobius-transition),
+    color var(--mobius-transition),
+    border-color var(--mobius-transition);
   width: 100%;
 
   &__arrow {
@@ -25,7 +24,7 @@
   &__header {
     border-bottom: 1px solid transparent;
     padding: var(--mobius-spacing-md);
-    transition: border-color transition.$duration transition.$timing;
+    transition: border-color var(--mobius-transition);
 
     // when there's a card with only a header
     &:last-child {

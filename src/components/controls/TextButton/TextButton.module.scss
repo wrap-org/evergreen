@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/transition';
 
 .text-button {
   appearance: none;
@@ -10,8 +9,8 @@
   cursor: pointer;
   padding: 0;
   transition:
-    opacity transition.$duration transition.$timing,
-    color transition.$duration transition.$timing;
+    opacity var(--mobius-transition),
+    color var(--mobius-transition);
 
   &[disabled] {
     color: color.$blue-dark;
