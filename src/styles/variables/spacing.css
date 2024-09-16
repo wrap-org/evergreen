@@ -1,0 +1,15 @@
+:root {
+  --spacing-thumb: var(--mobius-spacing-thumb);
+
+  --spacing-xs: var(--mobius-spacing-xs);
+  --spacing-sm: var(--mobius-spacing-sm);
+  --spacing-md: var(--mobius-spacing-md);
+  --spacing-lg: var(--mobius-spacing-lg);
+  --spacing-xl: var(--mobius-spacing-xl);
+
+  --spacing-fluid: var(--mobius-spacing-fluid);
+  --spacing-fluid-lg: var(--mobius-spacing-fluid-lg);
+  --spacing-fluid-sm: var(--mobius-spacing-fluid-sm);
+
+  --spacing-root: var(--mobius-spacing-root);
+}

@@ -1,0 +1,8 @@
+:root {
+  --transition-duration: var(--mobius-transition-duration);
+  --transition-timing: var(--mobius-transition-timing);
+  --transition: var(--mobius-transition);
+
+  --transition-duration-boing: var(--mobius-transition-duration-boing);
+  --transition-timing-boing: var(--mobius-transition-timing-boing);
+}
