@@ -1,7 +1,6 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/mixins/forms';
 
 .select {
@@ -13,7 +12,9 @@
     @include forms.input-padding;
     max-width: 100%;
     overflow: hidden;
-    padding-right: calc(#{spacing.$thumb} + #{input.$padding-horizontal});
+    padding-right: calc(
+      var(--mobius-spacing-thumb) + #{input.$padding-horizontal}
+    );
     text-overflow: ellipsis;
 
     &[disabled] {
@@ -31,8 +32,8 @@
     display: flex;
     font-size: font.$size-xl;
     justify-content: center;
-    min-width: spacing.$thumb;
-    padding: 0 spacing.$sm;
+    min-width: var(--mobius-spacing-thumb);
+    padding: 0 var(--mobius-spacing-sm);
     pointer-events: none;
     position: absolute;
     right: 0;

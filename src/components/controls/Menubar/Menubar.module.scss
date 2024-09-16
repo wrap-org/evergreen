@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/transition';
 @use '../../../styles/variables/breakpoint';
 
@@ -36,7 +35,7 @@ $menubar-highlight-width: 4px;
     width: 100%;
 
     @media (min-width: breakpoint.$tablet) {
-      padding: 0 spacing.$md;
+      padding: 0 var(--mobius-spacing-md);
     }
   }
 
@@ -84,8 +83,8 @@ $menubar-highlight-width: 4px;
         font-size: font.$size-sm;
         font-weight: font.$weight-bold;
         justify-content: center;
-        min-height: spacing.$thumb;
-        padding: spacing.$md;
+        min-height: var(--mobius-spacing-thumb);
+        padding: var(--mobius-spacing-md);
         text-align: center;
       }
     }
@@ -126,8 +125,8 @@ $menubar-highlight-width: 4px;
       display: block;
       font-size: font.$size-sm;
       font-weight: font.$weight-bold;
-      min-height: spacing.$thumb;
-      padding: spacing.$md;
+      min-height: var(--mobius-spacing-thumb);
+      padding: var(--mobius-spacing-md);
     }
   }
 }

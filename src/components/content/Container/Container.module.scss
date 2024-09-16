@@ -1,5 +1,4 @@
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
 
 .container {
   align-items: center;
@@ -7,9 +6,9 @@
   display: flex;
 
   &__image {
-    margin-right: spacing.$md;
-    padding: spacing.$md;
-    width: calc(4em + #{spacing.$md * 2});
+    margin-right: var(--mobius-spacing-md);
+    padding: var(--mobius-spacing-md);
+    width: calc(4em + var(--mobius-spacing-md) * 2);
 
     svg {
       display: block;

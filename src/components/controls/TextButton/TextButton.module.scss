@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/transition';
 
 .text-button {
@@ -26,16 +25,16 @@
 
   &:focus-visible {
     outline: 1px solid color.$blue;
-    outline-offset: spacing.$sm;
+    outline-offset: var(--mobius-spacing-sm);
   }
 
   &__icon {
     &--left {
-      margin-right: spacing.$xs;
+      margin-right: var(--mobius-spacing-xs);
     }
 
     &--right {
-      margin-left: spacing.$xs;
+      margin-left: var(--mobius-spacing-xs);
     }
   }
 

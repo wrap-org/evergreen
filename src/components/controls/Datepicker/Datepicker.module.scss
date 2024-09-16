@@ -1,7 +1,6 @@
 @use 'sass:math';
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
@@ -51,14 +50,14 @@
     border: 1px solid input.$border;
     border-radius: input.$border-radius;
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
-    margin-top: spacing.$sm;
-    padding: spacing.$md;
+    margin-top: var(--mobius-spacing-sm);
+    padding: var(--mobius-spacing-md);
 
     &-caption {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 spacing.$sm spacing.$sm;
+      padding: 0 var(--mobius-spacing-sm) var(--mobius-spacing-sm);
       text-align: left;
     }
 
@@ -83,7 +82,7 @@
     }
 
     &-cell {
-      padding: spacing.$xs spacing.$xs;
+      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
     }
 
     &-day {
@@ -116,7 +115,7 @@
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
-      padding: spacing.$xs spacing.$xs;
+      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
       width: 1.65rem;
 
       &:focus {
@@ -127,14 +126,14 @@
     &-dropdown-month {
       align-items: center;
       display: inline-flex;
-      margin-right: spacing.$md;
+      margin-right: var(--mobius-spacing-md);
       position: relative;
     }
 
     &-dropdown-icon {
       color: color.$blue;
       height: font.$size-sm;
-      margin: -1px 0 0 spacing.$xs;
+      margin: -1px 0 0 var(--mobius-spacing-xs);
       width: font.$size-sm;
     }
   }

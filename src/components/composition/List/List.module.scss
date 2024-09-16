@@ -1,4 +1,3 @@
-@use '../../../styles//variables/spacing';
 @use '../../../styles/mixins/list';
 
 .list {
@@ -14,23 +13,23 @@
     }
 
     &-xs {
-      --list-spacing: #{spacing.$xs};
+      --list-spacing: var(--mobius-spacing-xs);
     }
 
     &-sm {
-      --list-spacing: #{spacing.$sm};
+      --list-spacing: var(--mobius-spacing-sm);
     }
 
     &-md {
-      --list-spacing: #{spacing.$md};
+      --list-spacing: var(--mobius-spacing-md);
     }
 
     &-lg {
-      --list-spacing: #{spacing.$lg};
+      --list-spacing: var(--mobius-spacing-lg);
     }
 
     &-xl {
-      --list-spacing: #{spacing.$xl};
+      --list-spacing: var(--mobius-spacing-xl);
     }
   }
 }

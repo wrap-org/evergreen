@@ -1,11 +1,10 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 
 .help-text {
   color: color.$blue-dark;
   font-size: font.$size-sm;
-  padding-top: spacing.$sm;
+  padding-top: var(--mobius-spacing-sm);
 
   &--positive {
     color: color.$positive;

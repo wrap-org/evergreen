@@ -1,12 +1,11 @@
 @use 'sass:math';
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
 @use '../../../styles/variables/transition';
 
 .form-group {
   &__label {
-    column-gap: spacing.$sm;
+    column-gap: var(--mobius-spacing-sm);
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 1fr auto;
@@ -33,7 +32,7 @@
       transition: margin-block-start transition.$duration transition.$timing;
 
       &--open {
-        margin-block-start: spacing.$md;
+        margin-block-start: var(--mobius-spacing-md);
       }
     }
   }
@@ -44,7 +43,7 @@
 
   &--horizontal {
     @media (min-width: breakpoint.$tablet) {
-      column-gap: spacing.$md;
+      column-gap: var(--mobius-spacing-md);
       display: grid;
       grid-template-columns: 1fr 1fr;
 

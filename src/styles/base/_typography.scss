@@ -1,6 +1,5 @@
 @use '../variables/color';
 @use '../variables/font';
-@use '../variables/spacing';
 @use '../mixins/title';
 
 :root {
@@ -45,7 +44,7 @@ h4 {
 
 p {
   line-height: font.$line-height-lg;
-  margin-bottom: spacing.$sm;
+  margin-bottom: var(--mobius-spacing-sm);
   margin-top: 0;
 
   &:last-child {

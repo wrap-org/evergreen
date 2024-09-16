@@ -1,13 +1,12 @@
 @use 'sass:math';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/input';
 
 .badge {
   background: var(--skin-background);
   color: var(--skin-color);
   display: inline-block;
-  padding: (math.div(spacing.$xs, 2)) spacing.$sm;
+  padding: calc(var(--mobius-spacing-xs) / 2) var(--mobius-spacing-sm);
 
   &--muted {
     background: var(--skin-background-muted);

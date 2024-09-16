@@ -2,7 +2,6 @@
 @use 'sass:math';
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
 @use '../../../styles/variables/transition';
 @use '../../../styles/mixins/screen-reader';
@@ -69,6 +68,6 @@
   }
 
   &__inner {
-    padding: spacing.$fluid-sm spacing.$fluid-sm;
+    padding: var(--mobius-spacing-fluid-sm) var(--mobius-spacing-fluid-sm);
   }
 }

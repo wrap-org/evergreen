@@ -1,5 +1,4 @@
 @use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/mixins/loading';
 @use '../../../styles/mixins/button';
 
@@ -14,7 +13,8 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(#{spacing.$xs} - var(--button-border-width)) spacing.$sm;
+    padding: calc(var(--mobius-spacing-xs) - var(--mobius-button-border-width))
+      var(--mobius-spacing-sm);
   }
 
   &--block {

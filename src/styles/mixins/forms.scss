@@ -1,7 +1,6 @@
 @use '../variables/color';
 @use '../variables/font';
 @use '../variables/input';
-@use '../variables/spacing';
 @use '../variables/transition';
 
 @mixin input() {
@@ -75,7 +74,7 @@
 }
 
 @mixin input-padding() {
-  min-height: spacing.$thumb;
+  min-height: var(--mobius-spacing-thumb);
   padding: input.$padding;
 }
 
@@ -92,8 +91,8 @@
   flex-shrink: 0;
   height: font.$size-lg;
   justify-content: center;
-  margin-right: spacing.$sm;
-  margin-top: spacing.$xs;
+  margin-right: var(--mobius-spacing-sm);
+  margin-top: var(--mobius-spacing-xs);
   position: relative;
   transition:
     background transition.$duration transition.$timing,
@@ -108,5 +107,5 @@
   display: flex;
   font-size: font.$size-base;
   font-weight: font.$weight-bold;
-  min-height: spacing.$thumb;
+  min-height: var(--mobius-spacing-thumb);
 }

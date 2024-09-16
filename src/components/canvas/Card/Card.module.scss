@@ -1,6 +1,5 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/transition';
 @use '../../../styles/variables/input';
 
@@ -20,12 +19,12 @@
     color: var(--skin-link-color);
     float: right;
     font-size: font.$size-xl;
-    padding: spacing.$md;
+    padding: var(--mobius-spacing-md);
   }
 
   &__header {
     border-bottom: 1px solid transparent;
-    padding: spacing.$md;
+    padding: var(--mobius-spacing-md);
     transition: border-color transition.$duration transition.$timing;
 
     // when there's a card with only a header
@@ -43,7 +42,7 @@
 
   &__body {
     &--padded {
-      padding: spacing.$md;
+      padding: var(--mobius-spacing-md);
     }
 
     &--border {

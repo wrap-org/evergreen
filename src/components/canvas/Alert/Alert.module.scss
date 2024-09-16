@@ -1,10 +1,8 @@
-@use '../../../styles/variables/spacing';
-
 .alert {
   background: var(--skin-background);
   border-radius: 0.25em;
   color: var(--skin-color);
-  padding: spacing.$md;
+  padding: var(--mobius-spacing-md);
 
   &__close {
     background: none;

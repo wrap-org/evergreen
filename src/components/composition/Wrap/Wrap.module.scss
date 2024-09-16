@@ -1,10 +1,9 @@
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
 
 .wrap {
   margin: 0 auto;
   max-width: 90em; // 1440px
-  padding: 0 spacing.$md;
+  padding: 0 var(--mobius-spacing-md);
   width: 100%;
 
   @each $key, $bp in breakpoint.$map {
