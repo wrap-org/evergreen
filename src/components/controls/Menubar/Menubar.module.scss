@@ -3,12 +3,11 @@
 @use '../../../styles/variables/spacing';
 @use '../../../styles/variables/transition';
 @use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/skin';
 
 $menubar-highlight-width: 4px;
 
 @mixin menubar-link {
-  color: skin.$link-color;
+  color: var(--skin-link-color);
   transition: background transition.$duration transition.$timing;
 
   &:hover,
@@ -17,12 +16,12 @@ $menubar-highlight-width: 4px;
   }
 
   &:hover {
-    background: skin.$background;
+    background: var(--skin-background);
   }
 }
 
 .menubar {
-  background: skin.$background-muted;
+  background: var(--skin-background-muted);
 
   @media (min-width: breakpoint.$tablet) {
     align-items: center;
@@ -114,7 +113,7 @@ $menubar-highlight-width: 4px;
       }
 
       a {
-        background: skin.$background;
+        background: var(--skin-background);
         color: color.$positive;
         cursor: default;
       }

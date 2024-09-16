@@ -1,7 +1,6 @@
 @use '../variables/color';
 @use '../variables/font';
 @use '../variables/spacing';
-@use '../variables/skin';
 @use '../mixins/title';
 
 :root {
@@ -55,12 +54,12 @@ p {
 }
 
 a {
-  color: skin.$link-color;
+  color: var(--skin-link-color);
   font-weight: var(--link-font-weight);
-  text-decoration: skin.$link-text-decoration;
+  text-decoration: var(--skin-link-text-decoration);
 
   &:hover {
-    text-decoration: skin.$link-text-decoration-hover;
+    text-decoration: var(--skin-link-text-decoration-hover);
   }
 }
 

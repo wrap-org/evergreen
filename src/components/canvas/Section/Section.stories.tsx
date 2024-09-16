@@ -52,7 +52,12 @@ export function Default() {
                 </p>
                 <Grid wrap>
                   <Grid.Item xs={12} sm="auto">
-                    <Button block="mobile">Button text</Button>
+                    <Button
+                      type={skin === 'dark' ? 'inverse' : undefined}
+                      block="mobile"
+                    >
+                      Button text
+                    </Button>
                   </Grid.Item>
                   <Grid.Item xs={12} sm="auto">
                     <Button type="primary" block="mobile">

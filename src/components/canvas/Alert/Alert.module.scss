@@ -1,11 +1,9 @@
-@use '../../../styles/variables/color';
 @use '../../../styles/variables/spacing';
-@use '../../../styles/variables/skin';
 
 .alert {
-  background: skin.$background;
+  background: var(--skin-background);
   border-radius: 0.25em;
-  color: skin.$color;
+  color: var(--skin-color);
   padding: spacing.$md;
 
   &__close {
