@@ -1,5 +1,3 @@
-@use '../variables/color';
-
 :root {
   $skins: light, dark, info, neutral, positive, negative, attention;
 
@@ -20,4 +18,16 @@
       --mobius-skin-link-text-decoration-hover-#{$skin}
     );
   }
+
+  --skin-background: var(--skin-background-light);
+  --skin-background-muted: var(--skin-background-muted-light);
+  --skin-border-color: var(--skin-border-color-light);
+  --skin-color: var(--skin-color-light);
+  --skin-color-muted: var(--skin-color-muted-light);
+  --skin-heading-color: var(--skin-heading-color-light);
+  --skin-link-color: var(--skin-link-color-light);
+  --skin-link-text-decoration: var(--skin-link-text-decoration-light);
+  --skin-link-text-decoration-hover: var(
+    --skin-link-text-decoration-hover-light
+  );
 }
