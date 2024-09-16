@@ -1,7 +1,10 @@
 @use '~normalize.css/normalize';
 @use '~@etchteam/mobius-variables/dist';
 
-@use 'base/buttons';
+@use 'variables/button';
+@use 'variables/spacing';
+@use 'variables/transition';
+
 @use 'base/skins';
 @use 'base/scaffolding';
 @use 'base/typography';

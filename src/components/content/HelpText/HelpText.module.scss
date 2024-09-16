@@ -4,7 +4,7 @@
 .help-text {
   color: color.$blue-dark;
   font-size: font.$size-sm;
-  padding-top: var(--mobius-spacing-sm);
+  padding-top: var(--spacing-sm);
 
   &--positive {
     color: color.$positive;

@@ -4,7 +4,7 @@
 
 .form-group {
   &__label {
-    column-gap: var(--mobius-spacing-sm);
+    column-gap: var(--spacing-sm);
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 1fr auto;
@@ -15,8 +15,8 @@
     display: grid;
     grid-template-rows: 0fr;
     transition:
-      grid-template-rows var(--mobius-transition),
-      content-visibility var(--mobius-transition);
+      grid-template-rows var(--transition),
+      content-visibility var(--transition);
     /* stylelint-disable-next-line property-no-unknown */
     transition-behavior: allow-discrete;
 
@@ -28,10 +28,10 @@
     &-inner {
       margin-block-start: 0;
       overflow: hidden;
-      transition: margin-block-start var(--mobius-transition);
+      transition: margin-block-start var(--transition);
 
       &--open {
-        margin-block-start: var(--mobius-spacing-md);
+        margin-block-start: var(--spacing-md);
       }
     }
   }
@@ -42,7 +42,7 @@
 
   &--horizontal {
     @media (min-width: breakpoint.$tablet) {
-      column-gap: var(--mobius-spacing-md);
+      column-gap: var(--spacing-md);
       display: grid;
       grid-template-columns: 1fr 1fr;
 

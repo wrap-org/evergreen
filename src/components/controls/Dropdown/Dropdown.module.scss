@@ -17,8 +17,8 @@
     top: 100%;
     transform: translateY(-0.25em);
     transition:
-      opacity var(--mobius-transition),
-      transform var(--mobius-transition);
+      opacity var(--transition),
+      transform var(--transition);
   }
 
   &--open {

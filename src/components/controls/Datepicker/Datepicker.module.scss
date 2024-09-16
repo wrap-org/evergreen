@@ -19,8 +19,8 @@
     padding: 0 calc(var(--input-padding-horizontal) / 2) 0
       calc(var(--input-padding-horizontal) / 2);
     transition:
-      background var(--mobius-transition),
-      border-color var(--mobius-transition);
+      background var(--transition),
+      border-color var(--transition);
 
     &:hover,
     &:focus {
@@ -48,14 +48,14 @@
     border: 1px solid var(--input-border);
     border-radius: var(--input-border-radius);
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
-    margin-top: var(--mobius-spacing-sm);
-    padding: var(--mobius-spacing-md);
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-md);
 
     &-caption {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 var(--mobius-spacing-sm) var(--mobius-spacing-sm);
+      padding: 0 var(--spacing-sm) var(--spacing-sm);
       text-align: left;
     }
 
@@ -80,7 +80,7 @@
     }
 
     &-cell {
-      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
+      padding: var(--spacing-xs) var(--spacing-xs);
     }
 
     &-day {
@@ -89,7 +89,7 @@
       font-size: font.$size-sm;
       height: var(--rdp-cell-size);
       text-align: center;
-      transition: background var(--mobius-transition);
+      transition: background var(--transition);
       width: var(--rdp-cell-size);
 
       &:focus {
@@ -113,7 +113,7 @@
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
-      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
+      padding: var(--spacing-xs) var(--spacing-xs);
       width: 1.65rem;
 
       &:focus {
@@ -124,14 +124,14 @@
     &-dropdown-month {
       align-items: center;
       display: inline-flex;
-      margin-right: var(--mobius-spacing-md);
+      margin-right: var(--spacing-md);
       position: relative;
     }
 
     &-dropdown-icon {
       color: color.$blue;
       height: font.$size-sm;
-      margin: -1px 0 0 var(--mobius-spacing-xs);
+      margin: -1px 0 0 var(--spacing-xs);
       width: font.$size-sm;
     }
   }

@@ -10,8 +10,8 @@
   line-height: 1.75;
   position: relative;
   transition:
-    border-color var(--mobius-transition),
-    background-color var(--mobius-transition);
+    border-color var(--transition),
+    background-color var(--transition);
 
   &:hover,
   &:focus-within {
@@ -72,7 +72,7 @@
 }
 
 @mixin input-padding() {
-  min-height: var(--mobius-spacing-thumb);
+  min-height: var(--spacing-thumb);
   padding: var(--input-padding);
 }
 
@@ -89,13 +89,13 @@
   flex-shrink: 0;
   height: font.$size-lg;
   justify-content: center;
-  margin-right: var(--mobius-spacing-sm);
-  margin-top: var(--mobius-spacing-xs);
+  margin-right: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
   position: relative;
   transition:
-    background var(--mobius-transition),
-    border-color var(--mobius-transition),
-    color var(--mobius-transition);
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
   width: font.$size-lg;
 }
 
@@ -105,5 +105,5 @@
   display: flex;
   font-size: font.$size-base;
   font-weight: font.$weight-bold;
-  min-height: var(--mobius-spacing-thumb);
+  min-height: var(--spacing-thumb);
 }

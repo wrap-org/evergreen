@@ -18,8 +18,8 @@
     display: grid;
     grid-template-rows: 0fr;
     transition:
-      grid-template-rows var(--mobius-transition),
-      content-visibility var(--mobius-transition) allow-discrete;
+      grid-template-rows var(--transition),
+      content-visibility var(--transition) allow-discrete;
 
     &--open {
       content-visibility: visible;

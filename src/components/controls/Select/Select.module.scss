@@ -11,9 +11,7 @@
     @include forms.input-padding;
     max-width: 100%;
     overflow: hidden;
-    padding-right: calc(
-      var(--mobius-spacing-thumb) + var(--input-padding-horizontal)
-    );
+    padding-right: calc(var(--spacing-thumb) + var(--input-padding-horizontal));
     text-overflow: ellipsis;
 
     &[disabled] {
@@ -31,8 +29,8 @@
     display: flex;
     font-size: font.$size-xl;
     justify-content: center;
-    min-width: var(--mobius-spacing-thumb);
-    padding: 0 var(--mobius-spacing-sm);
+    min-width: var(--spacing-thumb);
+    padding: 0 var(--spacing-sm);
     pointer-events: none;
     position: absolute;
     right: 0;

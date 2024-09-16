@@ -9,8 +9,8 @@
   cursor: pointer;
   padding: 0;
   transition:
-    opacity var(--mobius-transition),
-    color var(--mobius-transition);
+    opacity var(--transition),
+    color var(--transition);
 
   &[disabled] {
     color: color.$blue-dark;
@@ -24,16 +24,16 @@
 
   &:focus-visible {
     outline: 1px solid color.$blue;
-    outline-offset: var(--mobius-spacing-sm);
+    outline-offset: var(--spacing-sm);
   }
 
   &__icon {
     &--left {
-      margin-right: var(--mobius-spacing-xs);
+      margin-right: var(--spacing-xs);
     }
 
     &--right {
-      margin-left: var(--mobius-spacing-xs);
+      margin-left: var(--spacing-xs);
     }
   }
 

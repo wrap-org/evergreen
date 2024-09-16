@@ -84,7 +84,7 @@ $enter-transition-timing: ease-in-out;
 
     &.enter--enter {
       animation-name: enter-boing;
-      animation-timing-function: var(--mobius-transition-timing-boing);
+      animation-timing-function: var(--transition-timing-boing);
     }
   }
 

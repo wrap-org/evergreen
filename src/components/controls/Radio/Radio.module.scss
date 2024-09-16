@@ -43,9 +43,8 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
     opacity: 0;
     transform: scale(0.8);
     transition:
-      opacity var(--mobius-transition),
-      transform var(--mobius-transition-duration-boing)
-        var(--mobius-transition-timing-boing);
+      opacity var(--transition),
+      transform var(--transition-duration-boing) var(--transition-timing-boing);
     width: $radio-dot-size;
 
     .radio--checked & {

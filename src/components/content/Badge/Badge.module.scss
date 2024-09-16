@@ -5,7 +5,7 @@
   background: var(--skin-background);
   color: var(--skin-color);
   display: inline-block;
-  padding: calc(var(--mobius-spacing-xs) / 2) var(--mobius-spacing-sm);
+  padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
 
   &--muted {
     background: var(--skin-background-muted);

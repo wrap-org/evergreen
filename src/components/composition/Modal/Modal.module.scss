@@ -36,15 +36,13 @@
   }
 
   &__overlay {
-    animation: fade-in var(--mobius-transition-duration) both
-      var(--mobius-transition-timing);
+    animation: fade-in var(--transition-duration) both var(--transition-timing);
     background-color: sassColor.scale(color.$blue-lightest, $alpha: -65%);
   }
 
   &__dialog {
-    animation: fade-in-scale var(--mobius-transition-duration)
-      math.div(var(--mobius-transition-duration), 2) both
-      var(--mobius-transition-timing);
+    animation: fade-in-scale var(--transition-duration)
+      math.div(var(--transition-duration), 2) both var(--transition-timing);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: auto;
     max-height: 100vh;
@@ -69,6 +67,6 @@
   }
 
   &__inner {
-    padding: var(--mobius-spacing-fluid-sm) var(--mobius-spacing-fluid-sm);
+    padding: var(--spacing-fluid-sm) var(--spacing-fluid-sm);
   }
 }

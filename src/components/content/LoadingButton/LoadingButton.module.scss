@@ -13,8 +13,8 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(var(--mobius-spacing-xs) - var(--mobius-button-border-width))
-      var(--mobius-spacing-sm);
+    padding: calc(var(--spacing-xs) - var(--button-border-width))
+      var(--spacing-sm);
   }
 
   &--block {

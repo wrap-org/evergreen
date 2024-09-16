@@ -4,26 +4,26 @@
 .card {
   background: var(--skin-background);
   border: 1px solid transparent;
-  border-radius: var(--card-border-radius, 0);
+  border-radius: var(--card-border-radius);
   color: var(--skin-color);
   display: block;
   transition:
-    background-color var(--mobius-transition),
-    color var(--mobius-transition),
-    border-color var(--mobius-transition);
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition);
   width: 100%;
 
   &__arrow {
     color: var(--skin-link-color);
     float: right;
     font-size: font.$size-xl;
-    padding: var(--mobius-spacing-md);
+    padding: var(--spacing-md);
   }
 
   &__header {
     border-bottom: 1px solid transparent;
-    padding: var(--mobius-spacing-md);
-    transition: border-color var(--mobius-transition);
+    padding: var(--spacing-md);
+    transition: border-color var(--transition);
 
     // when there's a card with only a header
     &:last-child {
@@ -40,7 +40,7 @@
 
   &__body {
     &--padded {
-      padding: var(--mobius-spacing-md);
+      padding: var(--spacing-md);
     }
 
     &--border {

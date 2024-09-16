@@ -8,7 +8,7 @@
   width: 100%;
 
   + .checkbox {
-    margin-top: var(--mobius-spacing-sm);
+    margin-top: var(--spacing-sm);
   }
 
   &__input {
@@ -29,9 +29,8 @@
     opacity: 0;
     transform: scale(0.9);
     transition:
-      opacity var(--mobius-transition),
-      transform var(--mobius-transition-duration-boing)
-        var(--mobius-transition-timing-boing);
+      opacity var(--transition),
+      transform var(--transition-duration-boing) var(--transition-timing-boing);
 
     .checkbox--checked & {
       color: color.$white;
