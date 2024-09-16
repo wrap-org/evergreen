@@ -11,9 +11,9 @@
   text-align: center;
   text-decoration: none;
   transition:
-    opacity var(--transition),
     background var(--transition),
     border-color var(--transition),
+    color var(--transition),
     filter var(--transition);
   user-select: none;
 
@@ -41,5 +41,6 @@
 
   &:focus-within {
     background: var(--button-background-focus);
+    color: var(--button-color-focus);
   }
 }

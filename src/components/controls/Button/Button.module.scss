@@ -20,8 +20,9 @@
 
   &--loading,
   &[disabled] {
-    filter: grayscale(0.5);
-    opacity: 0.75;
+    background: var(--button-background-disabled);
+    border-color: var(--button-border-color-disabled);
+    color: var(--button-color-disabled);
     pointer-events: none;
   }
 
@@ -70,6 +71,14 @@
       &:focus-within {
         background: var(--button-background-focus-#{$type});
         border-color: var(--button-border-color-focus-#{$type});
+        color: var(--button-color-focus-#{$type});
+      }
+
+      &.button--loading,
+      &[disabled] {
+        background: var(--button-background-disabled-#{$type});
+        border-color: var(--button-border-color-disabled-#{$type});
+        color: var(--button-color-disabled-#{$type});
       }
     }
   }
