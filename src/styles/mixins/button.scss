@@ -1,30 +1,21 @@
-@use '../variables/color';
-@use '../variables/font';
-@use '../variables/spacing';
-@use '../variables/transition';
-
 @mixin base {
   appearance: none;
-  border: var(--button-border-width) solid transparent;
+  border: var(--mobius-button-border-width) solid transparent;
   cursor: pointer;
   display: inline-block;
   line-height: 1.75;
-  min-height: spacing.$thumb;
+  min-height: var(--mobius-spacing-thumb);
   min-width: 6.5em;
-  padding: calc(#{spacing.$sm} - var(--button-border-width)) spacing.$md;
+  padding: calc(var(--mobius-spacing-sm) - var(--mobius-button-border-width))
+    var(--mobius-spacing-md);
   text-align: center;
   text-decoration: none;
   transition:
-    opacity transition.$duration transition.$timing,
-    background transition.$duration transition.$timing,
-    border-color transition.$duration transition.$timing,
-    filter transition.$duration transition.$timing;
+    opacity var(--mobius-transition),
+    background var(--mobius-transition),
+    border-color var(--mobius-transition),
+    filter var(--mobius-transition);
   user-select: none;
-
-  &:hover {
-    filter: brightness(0.9) saturate(1.025) contrast(1.5);
-    text-decoration: none;
-  }
 
   &:active {
     filter: brightness(0.85) saturate(1.025) contrast(1.5);
@@ -33,9 +24,22 @@
 
 @mixin default {
   @include base;
-  background: var(--button-background);
-  border-radius: var(--button-border-radius);
-  color: var(--button-color);
+  background: var(--mobius-button-background);
+  border-radius: var(--mobius-button-border-radius);
+  color: var(--mobius-button-color);
   cursor: pointer;
-  font-weight: font.$weight-bold;
+  font-weight: var(--mobius-font-weight-bold);
+
+  &:hover {
+    background: var(--mobius-button-background-hover);
+    color: var(--mobius-button-color-hover);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-within {
+    background: var(--mobius-button-background-focus);
+  }
 }

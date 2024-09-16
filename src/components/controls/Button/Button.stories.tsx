@@ -3,6 +3,9 @@ import React, { PropsWithChildren } from 'react';
 
 import Button from './Button';
 
+import Section from 'components/canvas/Section/Section';
+import Skin from 'components/composition/Skin/Skin';
+import Spacing from 'components/composition/Spacing/Spacing';
 import Icon from 'components/content/Icon/Icon';
 
 export default {
@@ -13,7 +16,8 @@ export default {
 export function Types() {
   return (
     <>
-      <Button>Button</Button> <Button type="primary">Button</Button>{' '}
+      <Button>Button</Button>
+      <Button type="primary">Button</Button>{' '}
       <Button type="secondary">Button</Button>{' '}
       <Button type="positive">Button</Button>{' '}
       <Button type="negative">Button</Button>{' '}
@@ -21,6 +25,25 @@ export function Types() {
         <Icon icon="edit" title="Moderate" />
       </Button>
     </>
+  );
+}
+
+export function DarkMode() {
+  return (
+    <Skin skin="dark">
+      <Section>
+        <Spacing bottom="md" top="md">
+          <Button type="inverse">Button</Button>
+          <Button type="primary">Button</Button>{' '}
+          <Button type="secondary">Button</Button>{' '}
+          <Button type="positive">Button</Button>{' '}
+          <Button type="negative">Button</Button>{' '}
+          <Button type="primary" icon>
+            <Icon icon="edit" title="Moderate" />
+          </Button>
+        </Spacing>
+      </Section>
+    </Skin>
   );
 }
 
