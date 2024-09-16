@@ -1,4 +1,5 @@
 @use '../../../styles/mixins/button';
+@use '../../../styles/variables/breakpoint';
 
 .button {
   $types: primary, secondary, positive, negative, inverse;
@@ -42,7 +43,7 @@
       display: block;
       width: 100%;
 
-      @media (min-width: var(--mobius-breakpoint-md)) {
+      @media (min-width: breakpoint.$md) {
         display: inline-block;
         width: auto;
       }
