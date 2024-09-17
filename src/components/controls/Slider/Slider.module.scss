@@ -3,24 +3,25 @@
 
 .slider {
   &__input {
-    height: 2rem;
+    height: var(--spacing-thumb);
     overflow: hidden;
     position: relative;
   }
 
   &__track {
-    border-radius: 0.25rem;
-    height: 0.5rem;
+    border: 1px solid var(--input-color);
+    border-radius: 0.5rem;
+    height: 1rem;
     position: absolute;
-    top: 0.75rem;
+    top: calc((var(--spacing-thumb) - 1rem) / 2);
 
     &--upper {
-      background: var(--color-positive);
+      background: var(--mobius-color-lime);
       width: 100%;
     }
 
     &--lower {
-      background: var(--color-body-muted);
+      background: var(--mobius-color-forest-75);
       pointer-events: none;
       right: calc(
         100% * (var(--slider-max) - var(--slider-value)) /
@@ -52,6 +53,21 @@
   }
 
   &--disabled {
-    @include forms.input-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    .slider {
+      &__track {
+        border-color: var(--mobius-color-forest-50);
+      }
+
+      &__track--lower {
+        background: var(--mobius-color-forest-25);
+      }
+
+      &__track--upper {
+        background: var(--mobius-color-lime-25);
+      }
+    }
   }
 }
