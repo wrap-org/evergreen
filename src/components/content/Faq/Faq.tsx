@@ -22,7 +22,7 @@ const Faq = ({ question, children }: FaqProps) => {
       itemProp="mainEntity"
       itemType="https://schema.org/Question"
     >
-      <Card muted={!open} border={open} shadow={open}>
+      <Card muted={!open} border shadow={open}>
         <Card.Body>
           <Collapse
             onToggle={setOpen}

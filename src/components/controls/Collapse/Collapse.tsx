@@ -21,8 +21,8 @@ const Collapse = ({
   children,
   headerLabel,
   align = 'left',
-  iconOpen = 'chevron-up',
-  iconClosed = 'chevron-down',
+  iconOpen = 'close',
+  iconClosed = 'add',
   onToggle,
   defaultOpen = false,
 }: CollapseProps) => {

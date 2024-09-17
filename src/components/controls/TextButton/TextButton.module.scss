@@ -17,6 +17,10 @@
     opacity: 0.5;
   }
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &:focus {
     outline: none;
   }

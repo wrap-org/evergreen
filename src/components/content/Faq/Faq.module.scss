@@ -1,5 +1,15 @@
 .faq {
+  --card-border-radius: 0.25rem;
   width: 100%;
+
+  &:hover {
+    --skin-border-color: var(--skin-link-color-hover);
+  }
+
+  &:focus-within {
+    --skin-border-color: var(--skin-link-color-focus);
+    outline: none;
+  }
 
   &__content {
     padding-top: var(--spacing-md);

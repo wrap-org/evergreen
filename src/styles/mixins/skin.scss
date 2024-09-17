@@ -6,6 +6,8 @@
   --skin-color-muted: var(--mobius-skin-color-muted-#{$type});
   --skin-heading-color: var(--mobius-skin-heading-color-#{$type});
   --skin-link-color: var(--mobius-skin-link-color-#{$type});
+  --skin-link-color-hover: var(--mobius-skin-link-color-hover-#{$type});
+  --skin-link-color-focus: var(--mobius-skin-link-color-focus-#{$type});
   --skin-link-text-decoration: var(--mobius-skin-link-text-decoration-#{$type});
   --skin-link-text-decoration-hover: var(
     --mobius-skin-link-text-decoration-hover-#{$type}
