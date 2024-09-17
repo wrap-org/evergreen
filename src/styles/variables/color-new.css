@@ -7,8 +7,12 @@
   --color-accent: var(--mobius-color-accent);
   --color-link: var(--mobius-color-link);
 
+  --color-neutral: var(--mobius-color-neutral);
+  --color-neutral-light: var(--mobius-color-neutral-light);
   --color-positive: var(--mobius-color-positive);
+  --color-positive-light: var(--mobius-color-positive-light);
   --color-negative: var(--mobius-color-negative);
+  --color-negative-light: var(--mobius-color-negative-light);
 
   --color-no-stream: var(--mobius-color-no-stream);
   --color-dry-stream: var(--mobius-color-dry-stream);
