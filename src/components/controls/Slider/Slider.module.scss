@@ -15,12 +15,12 @@
     top: 0.75rem;
 
     &--upper {
-      background: color.$green;
+      background: var(--color-positive);
       width: 100%;
     }
 
     &--lower {
-      background: color.$teal;
+      background: var(--color-body-muted);
       pointer-events: none;
       right: calc(
         100% * (var(--slider-max) - var(--slider-value)) /
@@ -40,17 +40,13 @@
   }
 
   &__label {
+    color: var(--color-black);
     display: block;
     font-weight: var(--font-weight-bold);
     min-width: 0;
     padding: 0;
 
-    &--lower {
-      color: color.$teal;
-    }
-
     &--upper {
-      color: color.$green;
       justify-self: flex-end;
     }
   }

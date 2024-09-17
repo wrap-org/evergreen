@@ -1,8 +1,6 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/breakpoint';
 
-$menubar-highlight-width: 4px;
-
 @mixin menubar-link {
   color: var(--skin-link-color);
   transition: background var(--transition);
@@ -18,6 +16,8 @@ $menubar-highlight-width: 4px;
 }
 
 .menubar {
+  --menubar-highlight-width: 4px;
+
   background: var(--skin-background-muted);
 
   @media (min-width: breakpoint.$tablet) {
@@ -68,7 +68,7 @@ $menubar-highlight-width: 4px;
       }
 
       &:hover::before {
-        height: $menubar-highlight-width;
+        height: var(--menubar-highlight-width);
         opacity: 0.5;
       }
 
@@ -103,7 +103,7 @@ $menubar-highlight-width: 4px;
 
     &--active &-inner {
       &::before {
-        height: $menubar-highlight-width;
+        height: var(--menubar-highlight-width);
         opacity: 1;
       }
 

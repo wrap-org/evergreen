@@ -1,9 +1,9 @@
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 
-$radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
-
 .radio {
+  --radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
+
   @include forms.input;
   @include forms.input-padding;
   border-radius: var(--input-checkradio-border-radius);
@@ -38,13 +38,13 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
     background: currentColor;
     border-radius: 100%;
     display: block;
-    height: $radio-dot-size;
+    height: var(--radio-dot-size);
     opacity: 0;
     transform: scale(0.8);
     transition:
       opacity var(--transition),
       transform var(--transition-duration-boing) var(--transition-timing-boing);
-    width: $radio-dot-size;
+    width: var(--radio-dot-size);
 
     .radio--checked & {
       opacity: 1;

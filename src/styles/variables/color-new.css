@@ -3,6 +3,7 @@
   --color-black: var(--mobius-color-black);
 
   --color-body: var(--mobius-color-body);
+  --color-body-muted: var(--mobius-color-body-muted);
   --color-background: var(--mobius-color-background);
   --color-accent: var(--mobius-color-accent);
   --color-link: var(--mobius-color-link);
