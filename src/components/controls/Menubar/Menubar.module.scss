@@ -55,7 +55,7 @@ $menubar-highlight-width: 4px;
 
     &-inner {
       &::before {
-        background: color.$positive;
+        background: var(--color-positive);
         content: '';
         display: block;
         height: 4px;
@@ -92,12 +92,12 @@ $menubar-highlight-width: 4px;
       }
 
       a {
-        color: color.$body;
+        color: var(--color-body);
         cursor: default;
         pointer-events: none;
 
         &:hover {
-          background: color.$blue-lightest;
+          background: var(--color-accent);
         }
       }
     }
@@ -110,7 +110,7 @@ $menubar-highlight-width: 4px;
 
       a {
         background: var(--skin-background);
-        color: color.$positive;
+        color: var(--color-positive);
         cursor: default;
       }
     }

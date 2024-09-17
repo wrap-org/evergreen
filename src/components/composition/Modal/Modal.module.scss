@@ -1,6 +1,4 @@
-@use 'sass:color' as sassColor;
 @use 'sass:math';
-@use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 @use '../../../styles/variables/breakpoint';
 @use '../../../styles/mixins/screen-reader';
@@ -37,7 +35,8 @@
 
   &__overlay {
     animation: fade-in var(--transition-duration) both var(--transition-timing);
-    background-color: sassColor.scale(color.$blue-lightest, $alpha: -65%);
+    background-color: var(--color-background);
+    opacity: 0.65;
   }
 
   &__dialog {

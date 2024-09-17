@@ -1,8 +1,6 @@
-@use '../../../styles/variables/color';
-
 .container {
   align-items: center;
-  background: color.$white;
+  background: var(--color-white);
   display: flex;
 
   &__image {

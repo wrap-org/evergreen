@@ -4,7 +4,7 @@ $bar-stack-border-radius: 0.25rem;
 $bar-stack-item-height: 1.5rem;
 
 .bar-stack {
-  background: color.$blue-lightest;
+  background: var(--color-background);
   border-radius: $bar-stack-border-radius;
   display: flex;
   overflow: hidden;

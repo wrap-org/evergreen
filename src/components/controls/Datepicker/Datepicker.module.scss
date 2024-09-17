@@ -24,7 +24,7 @@
 
     &:hover,
     &:focus {
-      background: color.$white;
+      background: var(--color-white);
       border-color: var(--input-border-hover);
     }
   }
@@ -44,7 +44,7 @@
     --rdp-background-color: #{color.$blue-light}; // hover color
     --rdp-outline: 2px solid var(--rdp-accent-color);
 
-    background: color.$white;
+    background: var(--color-white);
     border: 1px solid var(--input-border);
     border-radius: var(--input-border-radius);
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
@@ -102,7 +102,7 @@
       &:hover,
       &:focus {
         background: color.$blue !important;
-        color: color.$white !important;
+        color: var(--color-white) !important;
       }
     }
 

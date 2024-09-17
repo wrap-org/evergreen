@@ -27,7 +27,7 @@ $icon-size-giant: 3.5em;
   }
 
   &--accent {
-    color: color.$yellow;
+    color: var(--color-accent);
   }
 
   &--baseline {

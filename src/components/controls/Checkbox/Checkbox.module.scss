@@ -1,4 +1,3 @@
-@use '../../../styles/variables/color';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 
@@ -33,7 +32,7 @@
       transform var(--transition-duration-boing) var(--transition-timing-boing);
 
     .checkbox--checked & {
-      color: color.$white;
+      color: var(--color-white);
       opacity: 1;
       transform: none;
     }
@@ -54,7 +53,7 @@
     }
 
     &.checkbox--invalid .checkbox__indicator {
-      border-color: color.$negative;
+      border-color: var(--color-negative);
     }
 
     &.checkbox--disabled {
@@ -69,7 +68,7 @@
   }
 
   &--type-list {
-    background: color.$white;
+    background: var(--color-white);
     border-radius: 0;
 
     + .checkbox {

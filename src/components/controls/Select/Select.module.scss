@@ -1,4 +1,3 @@
-@use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 @use '../../../styles/mixins/forms';
 
@@ -21,7 +20,7 @@
 
   &__affix {
     align-items: center;
-    background: var(--input-background);
+    background: var(--input-background-disabled);
     border-left: 1px solid var(--input-border);
     border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
     bottom: 0;

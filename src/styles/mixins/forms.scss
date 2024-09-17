@@ -13,13 +13,13 @@
     border-color var(--transition),
     background-color var(--transition);
 
-  &:hover,
-  &:focus-within {
+  &:hover {
     border-color: var(--input-border-hover);
   }
 
   &:focus-within {
     background: var(--input-background-focus);
+    border-color: var(--input-border-focus);
     outline-color: var(
       --input-outline-color-focus-webkit,
       --input-outline-color-focus
@@ -30,11 +30,11 @@
   }
 
   &--valid {
-    border-color: color.$positive;
+    border-color: var(--color-positive);
   }
 
   &--invalid {
-    border-color: color.$negative;
+    border-color: var(--color-negative);
   }
 
   &--pending,
@@ -48,9 +48,9 @@
 }
 
 @mixin input-disabled() {
-  background: var(--input-background);
+  background: var(--input-background-disabled);
+  color: var(--input-color-disabled);
   cursor: not-allowed;
-  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -78,7 +78,7 @@
 
 // Radios/checkboxes
 @mixin checked() {
-  background: color.$white;
+  background: var(--color-white);
   color: var(--input-checked);
 }
 
@@ -101,7 +101,7 @@
 
 @mixin label() {
   align-items: center;
-  color: color.$blue-darkest;
+  color: var(--color-body);
   display: flex;
   font-size: font.$size-base;
   font-weight: font.$weight-bold;

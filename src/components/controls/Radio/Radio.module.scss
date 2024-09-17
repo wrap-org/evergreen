@@ -1,6 +1,5 @@
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
-@use '../../../styles/variables/color';
 
 $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
 
@@ -23,7 +22,7 @@ $radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
   }
 
   &--valid.radio--checked {
-    border-color: color.$positive;
+    border-color: var(--color-positive);
   }
 
   &__input {

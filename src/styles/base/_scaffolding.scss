@@ -1,5 +1,4 @@
 @use '../variables/font';
-@use '../variables/color';
 
 * {
   box-sizing: border-box;
@@ -26,5 +25,5 @@ img {
 
 hr {
   border: 0 none;
-  border-bottom: 1px solid color.$blue-light;
+  border-bottom: 1px solid var(--skin-border-color);
 }
