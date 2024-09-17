@@ -1,0 +1,18 @@
+:root {
+  --color-white: var(--mobius-color-white);
+  --color-black: var(--mobius-color-black);
+
+  --color-body: var(--mobius-color-body);
+  --color-background: var(--mobius-color-background);
+  --color-accent: var(--mobius-color-accent);
+  --color-link: var(--mobius-color-link);
+
+  --color-positive: var(--mobius-color-positive);
+  --color-negative: var(--mobius-color-negative);
+
+  --color-no-stream: var(--mobius-color-no-stream);
+  --color-dry-stream: var(--mobius-color-dry-stream);
+  --color-residual-stream: var(--mobius-color-residual-stream);
+  --color-food-stream: var(--mobius-color-food-stream);
+  --color-garden-stream: var(--mobius-color-garden-stream);
+}
