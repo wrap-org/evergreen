@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Marr Sans Cond Web';
+  src:
+    url('MarrSansCondensed-MediumItalic-Web.woff2') format('woff2'),
+    url('MarrSansCondensed-MediumItalic-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+.MarrSansCondensed-MediumItalic-Web {
+  font-family: 'Marr Sans Cond Web';
+  font-weight: 500;
+  font-style: italic;
+}

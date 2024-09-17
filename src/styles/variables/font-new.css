@@ -1,5 +1,6 @@
 :root {
   --font-family: var(--mobius-font-family);
+  --font-family-heading: 'Marr Sans Cond Web';
 
   --font-line-height: var(--mobius-font-line-height);
   --font-line-height-sm: var(--mobius-font-line-height-sm);
