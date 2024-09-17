@@ -1,4 +1,3 @@
-@use '../../../styles/variables/font';
 @use '../../../styles/mixins/forms';
 
 .input {
@@ -7,8 +6,8 @@
   &__prefix,
   &__suffix {
     align-self: center;
-    font-weight: font.$weight-bold;
-    line-height: font.$line-height;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-line-height);
   }
 
   &__prefix {

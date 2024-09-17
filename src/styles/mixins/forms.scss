@@ -1,5 +1,4 @@
 @use '../variables/color';
-@use '../variables/font';
 
 @mixin input() {
   background: var(--input-background);
@@ -63,7 +62,7 @@
   border: 0 none;
   color: inherit;
   display: block;
-  line-height: font.$line-height;
+  line-height: var(--font-line-height);
   width: 100%;
 
   &:focus {
@@ -87,7 +86,7 @@
   border: 2px solid currentColor;
   display: inline-flex;
   flex-shrink: 0;
-  height: font.$size-lg;
+  height: var(--font-size-lg);
   justify-content: center;
   margin-right: var(--spacing-sm);
   margin-top: var(--spacing-xs);
@@ -96,14 +95,14 @@
     background var(--transition),
     border-color var(--transition),
     color var(--transition);
-  width: font.$size-lg;
+  width: var(--font-size-lg);
 }
 
 @mixin label() {
   align-items: center;
   color: var(--skin-color);
   display: flex;
-  font-size: font.$size-base;
-  font-weight: font.$weight-bold;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
   min-height: var(--spacing-thumb);
 }

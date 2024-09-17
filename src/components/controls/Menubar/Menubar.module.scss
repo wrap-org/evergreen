@@ -1,5 +1,4 @@
 @use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
 @use '../../../styles/variables/breakpoint';
 
 $menubar-highlight-width: 4px;
@@ -77,8 +76,8 @@ $menubar-highlight-width: 4px;
         @include menubar-link;
         align-items: center;
         display: flex;
-        font-size: font.$size-sm;
-        font-weight: font.$weight-bold;
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
         justify-content: center;
         min-height: var(--spacing-thumb);
         padding: var(--spacing-md);
@@ -120,8 +119,8 @@ $menubar-highlight-width: 4px;
     a {
       @include menubar-link;
       display: block;
-      font-size: font.$size-sm;
-      font-weight: font.$weight-bold;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
       min-height: var(--spacing-thumb);
       padding: var(--spacing-md);
     }

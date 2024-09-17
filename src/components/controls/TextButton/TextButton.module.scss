@@ -37,7 +37,7 @@
   }
 
   &--size-sm {
-    font-size: font.$size-sm;
+    font-size: var(--font-size-sm);
   }
 
   &--decorate {

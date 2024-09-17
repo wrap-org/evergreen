@@ -1,5 +1,4 @@
 @use '../../../styles/variables/color.scss';
-@use '../../../styles/variables/font.scss';
 @use '../../../styles/mixins/forms';
 
 .slider {
@@ -42,7 +41,7 @@
 
   &__label {
     display: block;
-    font-weight: font.$weight-bold;
+    font-weight: var(--font-weight-bold);
     min-width: 0;
     padding: 0;
 

@@ -1,8 +1,6 @@
-@use '../../../styles/variables/font';
-
 .help-text {
   color: var(--color-body);
-  font-size: font.$size-sm;
+  font-size: var(--font-size-sm);
   padding-top: var(--spacing-sm);
 
   &--positive {

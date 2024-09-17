@@ -1,16 +1,14 @@
-@use '../variables/font';
-
 @mixin title {
   color: var(--skin-heading-color);
   font-family: var(--font-family-heading);
   font-weight: var(--heading-font-weight, 700);
   letter-spacing: -0.025em;
-  line-height: font.$line-height-sm;
+  line-height: var(--font-line-height-sm);
   margin-bottom: var(--spacing-xs);
   margin-top: 0;
 
   b,
   strong {
-    font-weight: font.$weight-black;
+    font-weight: var(--font-weight-black);
   }
 }
