@@ -1,4 +1,4 @@
-@use '~@etchteam/mobius-tokens/src/tokens/breakpoint';
+@use '~@etchteam/mobius-tokens/dist/breakpoint';
 
 $xs: breakpoint.$mobius-breakpoint-xs;
 $sm: breakpoint.$mobius-breakpoint-sm;
