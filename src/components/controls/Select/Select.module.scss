@@ -1,6 +1,8 @@
 @use '../../../styles/mixins/forms';
 
 .select {
+  --select-border-color: var(--input-border);
+
   @include forms.input;
   cursor: pointer;
 
@@ -19,8 +21,7 @@
 
   &__affix {
     align-items: center;
-    background: var(--input-background-disabled);
-    border-left: 1px solid var(--input-border);
+    border-left: 1px solid var(--select-border-color);
     border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
     bottom: 0;
     color: var(--skin-link-color);
@@ -33,13 +34,27 @@
     position: absolute;
     right: 0;
     top: 0;
+    transition: border-color var(--transition);
   }
 
   &--disabled {
     @include forms.input-disabled;
   }
 
+  &--valid {
+    --select-border-color: var(--color-positive);
+  }
+
+  &--invalid {
+    --select-border-color: var(--color-negative);
+  }
+
+  &:hover {
+    --select-border-color: var(--input-border-hover);
+  }
+
   &:focus-within {
     --input-outline-offset-focus: 1px;
+    --select-border-color: var(--input-border-focus);
   }
 }
