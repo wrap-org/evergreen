@@ -2,7 +2,7 @@
 @use '../../../styles/mixins/screen-reader';
 
 .radio {
-  --radio-dot-size: 12px; // This has to be px to avoid sub-px rendering issues
+  --radio-dot-size: 10px; // This has to be px to avoid sub-px rendering issues
 
   @include forms.input;
   @include forms.input-padding;

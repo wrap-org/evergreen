@@ -34,6 +34,6 @@
 
   // This is obsolete now that all badges are rounded. TODO: Remove this
   &--rounded {
-    border-radius: var(--input-border-radius);
+    border-radius: var(--radius-lg);
   }
 }

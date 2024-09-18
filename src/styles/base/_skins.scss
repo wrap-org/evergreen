@@ -6,10 +6,16 @@
     --skin-background-muted-#{$skin}: var(
       --mobius-skin-background-muted-#{$skin}
     );
+
     --skin-border-color-#{$skin}: var(--mobius-skin-border-color-#{$skin});
+    --skin-border-color-muted-#{$skin}: var(
+      --mobius-skin-border-color-muted-#{$skin}
+    );
+
     --skin-color-#{$skin}: var(--mobius-skin-color-#{$skin});
     --skin-color-muted-#{$skin}: var(--mobius-skin-color-muted-#{$skin});
     --skin-heading-color-#{$skin}: var(--mobius-skin-heading-color-#{$skin});
+
     --skin-link-color-#{$skin}: var(--mobius-skin-link-color-#{$skin});
     --skin-link-color-hover-#{$skin}: var(
       --mobius-skin-link-color-hover-#{$skin}
@@ -28,6 +34,7 @@
   --skin-background: var(--skin-background-light);
   --skin-background-muted: var(--skin-background-muted-light);
   --skin-border-color: var(--skin-border-color-light);
+  --skin-border-color-muted: var(--skin-border-color-muted-light);
   --skin-color: var(--skin-color-light);
   --skin-color-muted: var(--skin-color-muted-light);
   --skin-heading-color: var(--skin-heading-color-light);

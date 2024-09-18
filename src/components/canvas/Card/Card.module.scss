@@ -1,4 +1,6 @@
 .card {
+  --card-border-color: var(--skin-border-color);
+
   background: var(--skin-background);
   border: 1px solid transparent;
   border-radius: var(--card-border-radius);
@@ -41,7 +43,7 @@
     }
 
     &--border {
-      border-top: 1px solid var(--skin-border-color);
+      border-top: 1px solid var(--card-border-color);
     }
 
     &--hidden {
@@ -50,14 +52,14 @@
   }
 
   &--border {
-    border-color: var(--skin-border-color);
+    border-color: var(--card-border-color);
 
     .card__header {
-      border-bottom-color: var(--skin-border-color);
+      border-bottom-color: var(--card-border-color);
     }
 
     .card__body:not(.card__body--hidden) + .card__body {
-      border-top: 1px solid var(--skin-border-color);
+      border-top: 1px solid var(--card-border-color);
     }
   }
 
@@ -89,6 +91,7 @@
 
   &--muted,
   &__body--muted {
+    --card-border-color: var(--skin-border-color-muted);
     background: var(--skin-background-muted);
   }
 
