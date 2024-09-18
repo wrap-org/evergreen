@@ -1,6 +1,7 @@
 @use '~normalize.css/normalize';
 @use '~@etchteam/mobius-tokens/dist';
 
+@use 'variables/breakpoint';
 @use 'variables/color';
 @use 'variables/font';
 @use 'variables/radius';
