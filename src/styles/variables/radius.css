@@ -1,0 +1,6 @@
+:root {
+  --radius-none: var(--mobius-radius-none);
+  --radius-sm: var(--mobius-radius-sm);
+  --radius-md: var(--mobius-radius-md);
+  --radius-lg: var(--mobius-radius-lg);
+}
