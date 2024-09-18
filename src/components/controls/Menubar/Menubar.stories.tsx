@@ -32,17 +32,17 @@ export default {
 export const FourTabs: StoryFn = (args) => (
   <Menubar {...args}>
     <Menubar.Tabs>
-      <Menubar.Tab>
+      <Menubar.Tab completed>
         <a href="#">Service</a>
       </Menubar.Tab>
       <Menubar.Tab active>
         <a href="#">Economic</a>
       </Menubar.Tab>
-      <Menubar.Tab disabled>
+      <Menubar.Tab>
         <a href="#">Environmental</a>
       </Menubar.Tab>
       <Menubar.Tab disabled>
-        <a href="#">Technical</a>
+        <span>Technical</span>
       </Menubar.Tab>
     </Menubar.Tabs>
   </Menubar>
@@ -55,7 +55,7 @@ export const TwoTabs: StoryFn = () => (
         <a href="#">Collection</a>
       </Menubar.Tab>
       <Menubar.Tab disabled>
-        <a href="#">Disposal</a>
+        <span>Disposal</span>
       </Menubar.Tab>
     </Menubar.Tabs>
   </Menubar>
@@ -72,7 +72,7 @@ export const WithBackButton = () => (
       <Menubar.Tab active>
         <a href="#">Collection</a>
       </Menubar.Tab>
-      <Menubar.Tab disabled>
+      <Menubar.Tab>
         <a href="#">Disposal</a>
       </Menubar.Tab>
     </Menubar.Tabs>
