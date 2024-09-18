@@ -3,6 +3,7 @@
 
 .badge {
   background: var(--skin-background);
+  border-radius: var(--radius-lg);
   color: var(--skin-color);
   display: inline-block;
   padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
@@ -30,6 +31,7 @@
     }
   }
 
+  // This is obsolete now that all badges are rounded. TODO: Remove this
   &--rounded {
     border-radius: var(--input-border-radius);
   }

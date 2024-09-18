@@ -10,7 +10,7 @@
 
   &__track {
     border: 1px solid var(--input-color);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     height: 1rem;
     position: absolute;
     top: calc((var(--spacing-thumb) - 1rem) / 2);

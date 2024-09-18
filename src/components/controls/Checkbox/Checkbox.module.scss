@@ -17,7 +17,7 @@
   &__indicator {
     @include forms.indicator;
     align-self: flex-start;
-    border-radius: 0.125em;
+    border-radius: var(--radius-xs);
 
     .checkbox--checked & {
       background: currentColor;

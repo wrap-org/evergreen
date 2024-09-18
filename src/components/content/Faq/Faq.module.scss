@@ -1,5 +1,5 @@
 .faq {
-  --card-border-radius: 0.25rem;
+  --card-border-radius: var(--radius-sm);
   width: 100%;
 
   &:hover {

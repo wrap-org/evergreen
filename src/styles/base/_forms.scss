@@ -27,7 +27,7 @@ fieldset {
 }
 
 @mixin track {
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   height: 1rem;
   position: relative;
 }
