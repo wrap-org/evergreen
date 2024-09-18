@@ -2,7 +2,7 @@
 @use '../../../styles/variables/breakpoint';
 
 .button {
-  $types: primary, secondary, positive, negative, inverse;
+  $types: primary, secondary, positive, negative;
   @include button.default;
   border-color: var(--button-border-color);
 

@@ -6,7 +6,8 @@
   border-radius: var(--radius-lg);
   color: var(--skin-color);
   display: inline-block;
-  padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-sm) calc(var(--spacing-sm) * 1.5);
 
   &--muted {
     background: var(--skin-background-muted);

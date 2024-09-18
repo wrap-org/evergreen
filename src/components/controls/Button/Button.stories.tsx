@@ -33,7 +33,7 @@ export function DarkMode() {
     <Skin skin="dark">
       <Section>
         <Spacing bottom="md" top="md">
-          <Button type="inverse">Button</Button>
+          <Button>Button</Button>
           <Button type="primary">Button</Button>{' '}
           <Button type="secondary">Button</Button>{' '}
           <Button type="positive">Button</Button>{' '}

@@ -13,7 +13,7 @@ interface ButtonProps {
   readonly submit?: boolean;
   readonly loading?: boolean;
   readonly href?: string;
-  readonly type?: 'primary' | 'secondary' | 'positive' | 'negative' | 'inverse';
+  readonly type?: 'primary' | 'secondary' | 'positive' | 'negative';
   readonly icon?: boolean;
   readonly block?: boolean | 'mobile';
   readonly size?: string;
