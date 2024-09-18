@@ -1,5 +1,5 @@
 :root {
-  $skins: light, dark, info, neutral, positive, negative, attention;
+  $skins: light, dark, info, attention, positive, negative, neutral;
 
   @each $skin in $skins {
     --skin-background-#{$skin}: var(--mobius-skin-background-#{$skin});
