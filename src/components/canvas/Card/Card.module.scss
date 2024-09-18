@@ -13,7 +13,6 @@
   width: 100%;
 
   &__arrow {
-    color: var(--skin-link-color);
     float: right;
     font-size: var(--font-size-xl);
     padding: var(--spacing-md);
@@ -69,8 +68,13 @@
     text-decoration: none;
 
     &:hover {
-      border-color: var(--skin-link-color);
+      border-color: var(--input-border-hover);
       text-decoration: none;
+    }
+
+    &:focus {
+      border-color: var(--input-border-focus);
+      outline: none;
     }
   }
 

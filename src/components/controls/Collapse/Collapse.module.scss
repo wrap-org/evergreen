@@ -1,4 +1,6 @@
 .collapse {
+  padding: var(--spacing-sm) var(--spacing-md);
+
   &__button {
     appearance: none;
     background: none;
@@ -12,7 +14,9 @@
     text-align: left;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
+      outline: none;
       text-decoration: underline;
     }
   }
@@ -33,5 +37,12 @@
 
   &__content {
     overflow: hidden;
+  }
+
+  &--text-decoration-none {
+    .collapse__button:hover,
+    .collapse__button:focus {
+      text-decoration: none;
+    }
   }
 }

@@ -22,9 +22,11 @@ const Faq = ({ question, children }: FaqProps) => {
       itemProp="mainEntity"
       itemType="https://schema.org/Question"
     >
-      <Card muted={!open} border shadow={open}>
-        <Card.Body>
+      {/* Use an empty onClick function to activate clickable card styles */}
+      <Card muted={!open} border shadow={open} onClick={() => {}}>
+        <Card.Body padded={false}>
           <Collapse
+            textDecoration="none"
             onToggle={setOpen}
             headerLabel={
               <Title as="h3" size="h4">
