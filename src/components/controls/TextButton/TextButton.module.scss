@@ -4,9 +4,10 @@
   appearance: none;
   background: none;
   border: 0 none;
+  border-radius: var(--radius-sm);
   color: var(--skin-link-color);
   cursor: pointer;
-  padding: 0;
+  padding: var(--spacing-sm) 0;
   transition:
     opacity var(--transition),
     color var(--transition);
@@ -23,11 +24,7 @@
 
   &:focus {
     outline: none;
-  }
-
-  &:focus-visible {
-    outline: 1px solid var(--button-border-color-focus);
-    outline-offset: var(--spacing-sm);
+    text-decoration: underline;
   }
 
   &__icon {
@@ -48,6 +45,11 @@
     text-decoration: underline;
 
     &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      background: var(--skin-border-color);
       text-decoration: none;
     }
   }
