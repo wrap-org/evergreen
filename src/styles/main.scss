@@ -1,14 +1,14 @@
 @use '~normalize.css/normalize';
 @use '~@etchteam/mobius-variables/dist';
 
-@use 'variables/color-new';
-@use 'variables/font-new';
-@use 'variables/input';
-@use 'variables/button';
+@use 'variables/color';
+@use 'variables/font';
 @use 'variables/spacing';
 @use 'variables/transition';
 
-@use 'base/fonts';
+@use 'variables/input';
+@use 'variables/button';
+
 @use 'base/skins';
 @use 'base/scaffolding';
 @use 'base/typography';

@@ -1,9 +1,6 @@
+// Old colours that haven't been swapped out yet. TODO
 $white: #fff;
-
-$blue-lightest: #f4f7f9;
 $blue-light: #d7e7f5;
-$blue: #1579c6;
-$blue-dark: #4d6b87;
 $blue-darkest: #05224b;
 $blue-2: #2d9cdb;
 
@@ -32,51 +29,56 @@ $harp: #ebf5f1;
 $duck-egg: #89c1ab;
 $citrus: #c7d56b;
 
-$body: $blue-dark;
-$background: $grey-light;
-$accent: $yellow;
-$link: $blue;
-
-$positive: $green;
-$negative: $maroon;
-
-// streams
-$dry-stream: $blue;
-$residual-stream: $magenta;
-$food-stream: $maroon;
-$garden-stream: $green;
-
 $colors: (
-  'white': $white,
-  'blue-lightest': $blue-lightest,
-  'blue-light': $blue-light,
-  'blue': $blue,
-  'blue-dark': $blue-dark,
-  'blue-darkest': $blue-darkest,
-  'blue-2': $blue-2,
-  'teal': $teal,
-  'grey-light': $grey-light,
-  'yellow': $yellow,
-  'yellow-light': $yellow-light,
-  'orange': $orange,
-  'purple': $purple,
-  'green': $green,
-  'green-light': $green-light,
-  'green-3': $green-3,
-  'maroon': $maroon,
-  'magenta': $magenta,
-  'red': $red,
-  'harp': $harp,
-  'duck-egg': $duck-egg,
-  'citrus': $citrus,
-  'body': $body,
-  'background': $background,
-  'accent': $accent,
-  'link': $link,
-  'positive': $positive,
-  'negative': $negative,
-  'dry-stream': $dry-stream,
-  'residual-stream': $residual-stream,
-  'food-stream': $food-stream,
-  'garden-stream': $garden-stream,
+  'forest': var(--mobius-color-forest),
+  'forest-75': var(--mobius-color-forest-75),
+  'forest-50': var(--mobius-color-forest-50),
+  'forest-25': var(--mobius-color-forest-25),
+  'earth': var(--mobius-color-earth),
+  'earth-75': var(--mobius-color-earth-75),
+  'earth-50': var(--mobius-color-earth-50),
+  'earth-25': var(--mobius-color-earth-25),
+  'sand': var(--mobius-color-sand),
+  'sand-75': var(--mobius-color-sand-75),
+  'sand-50': var(--mobius-color-sand-50),
+  'sand-25': var(--mobius-color-sand-25),
+  'lime': var(--mobius-color-lime),
+  'lime-75': var(--mobius-color-lime-75),
+  'lime-50': var(--mobius-color-lime-50),
+  'lime-25': var(--mobius-color-lime-25),
+  'sky': var(--mobius-color-sky),
+  'sky-75': var(--mobius-color-sky-75),
+  'sky-50': var(--mobius-color-sky-50),
+  'sky-25': var(--mobius-color-sky-25),
+  'rose': var(--mobius-color-rose),
+  'rose-75': var(--mobius-color-rose-75),
+  'rose-50': var(--mobius-color-rose-50),
+  'rose-25': var(--mobius-color-rose-25),
+  'cloud': var(--mobius-color-cloud),
+  'cloud-75': var(--mobius-color-cloud-75),
+  'coal': var(--mobius-color-coal),
+  'steel': var(--mobius-color-steel),
+  'lemon': var(--mobius-color-lemon),
+  'orange': var(--mobius-color-orange),
+  'lilac': var(--mobius-color-lilac),
+  'violet': var(--mobius-color-violet),
+  'white': var(--mobius-color-white),
+  'black': var(--mobius-color-black),
+  'body': var(--mobius-color-body),
+  'body-muted': var(--mobius-color-body-muted),
+  'background': var(--mobius-color-background),
+  'background-muted': var(--mobius-color-background-muted),
+  'accent': var(--mobius-color-accent),
+  'link': var(--mobius-color-link),
+  'neutral': var(--mobius-color-neutral),
+  'neutral-light': var(--mobius-color-neutral-light),
+  'positive': var(--mobius-color-positive),
+  'positive-light': var(--mobius-color-positive-light),
+  'negative': var(--mobius-color-negative),
+  'negative-light': var(--mobius-color-negative-light),
+  'no-stream': var(--mobius-color-no-stream),
+  'dry-stream': var(--mobius-color-dry-stream),
+  'residual-stream': var(--mobius-color-residual-stream),
+  'food-stream': var(--mobius-color-food-stream),
+  'garden-stream': var(--mobius-color-garden-stream),
 );
