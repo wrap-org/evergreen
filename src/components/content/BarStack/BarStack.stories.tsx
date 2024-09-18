@@ -22,3 +22,13 @@ export const Default = () => {
 };
 
 Default.storyName = 'Bar Stack';
+
+export const Compact = () => {
+  return (
+    <BarStack compact>
+      <BarStack.Item color="dry-stream" size={25} />
+      <BarStack.Item color="residual-stream" size={25} />
+      <BarStack.Item color="food-stream" size={25} />
+    </BarStack>
+  );
+};

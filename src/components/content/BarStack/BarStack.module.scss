@@ -3,6 +3,7 @@
 .bar-stack {
   --bar-stack-border-radius: var(--radius-sm);
   --bar-stack-item-height: 1.5rem;
+  --bar-stack-item-height-compact: 0.5rem;
   --bar-stack-background: var(--mobius-color-forest-25);
 
   background: var(--bar-stack-background);
@@ -25,6 +26,12 @@
           background: $color;
         }
       }
+    }
+  }
+
+  &--compact {
+    .bar-stack__item {
+      height: var(--bar-stack-item-height-compact);
     }
   }
 }
