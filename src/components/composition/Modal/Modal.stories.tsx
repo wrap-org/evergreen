@@ -46,7 +46,7 @@ export const Default = () => {
           <Card.Body>
             <Modal.Inner>
               <Grid justify="flex-end">
-                <Grid.Item xs={12} md={6}>
+                <Grid.Item xs={12} sm={4} md={3}>
                   <Button
                     type="secondary"
                     onClick={() => modalRef.current?.hide()}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Grid from 'components/composition/Grid/Grid';
 import Icon from 'components/content/Icon/Icon';
-import Button from 'components/controls/Button/Button';
+import TextButton from 'components/controls/TextButton/TextButton';
 
 export interface HeaderProps {
   readonly children?: React.ReactNode;
@@ -10,14 +10,14 @@ export interface HeaderProps {
 }
 
 const ModalHeader = ({ onClose, children }: HeaderProps) => (
-  <Grid>
+  <Grid align="center">
     <Grid.Item shrink grow>
       {children}
     </Grid.Item>
     <Grid.Item>
-      <Button aria-label="Close dialog" onClick={onClose} icon>
-        <Icon icon="close" />
-      </Button>
+      <TextButton aria-label="Close dialog" onClick={onClose}>
+        <Icon icon="close" size="xl" />
+      </TextButton>
     </Grid.Item>
   </Grid>
 );
