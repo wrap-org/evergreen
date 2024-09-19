@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ReactNode } from 'react';
+import React from 'react';
 
 import styles from './BarStack.module.scss';
 import Item from './Item';
@@ -9,7 +9,7 @@ const BarStack = ({
   compact = false,
   width = 100,
 }: {
-  readonly children: ReactNode;
+  readonly children?: React.ReactNode;
   readonly compact?: boolean;
   readonly width?: number;
 }) => (

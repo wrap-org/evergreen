@@ -1,5 +1,3 @@
-@use '../variables/color';
-
 @mixin input() {
   background: var(--input-background);
   border: 1px solid var(--input-border);
