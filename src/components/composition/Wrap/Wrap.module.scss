@@ -24,5 +24,9 @@ $spacings: xs, sm, md, lg, xl, fluid, fluid-lg;
         padding-inline: var(--spacing-#{$spacing});
       }
     }
+
+    &-none {
+      padding-inline: 0;
+    }
   }
 }

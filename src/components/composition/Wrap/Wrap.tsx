@@ -12,7 +12,7 @@ function Wrap({
   children,
 }: Readonly<{
   size?: Breakpoints | 'auto' | string;
-  gutter?: SpacingType;
+  gutter?: SpacingType | 'none';
   children?: React.ReactNode;
 }>) {
   return (
