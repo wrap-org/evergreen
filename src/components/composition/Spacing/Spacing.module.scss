@@ -23,6 +23,10 @@
     &-fluid {
       margin-top: var(--spacing-fluid);
     }
+
+    &-fluid-lg {
+      margin-top: var(--spacing-fluid-lg);
+    }
   }
 
   &--left {
@@ -48,6 +52,10 @@
 
     &-fluid {
       margin-left: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-left: var(--spacing-fluid-lg);
     }
   }
 
@@ -75,6 +83,10 @@
     &-fluid {
       margin-bottom: var(--spacing-fluid);
     }
+
+    &-fluid-lg {
+      margin-bottom: var(--spacing-fluid-lg);
+    }
   }
 
   &--right {
@@ -100,6 +112,10 @@
 
     &-fluid {
       margin-right: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-right: var(--spacing-fluid-lg);
     }
   }
 
@@ -130,6 +146,10 @@
         &-fluid {
           margin-top: calc(-1 * var(--spacing-fluid));
         }
+
+        &-fluid-lg {
+          margin-top: calc(-1 * var(--spacing-fluid-lg));
+        }
       }
 
       &--left {
@@ -155,6 +175,10 @@
 
         &-fluid {
           margin-left: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-left: calc(-1 * var(--spacing-fluid-lg));
         }
       }
 
@@ -182,6 +206,10 @@
         &-fluid {
           margin-bottom: calc(-1 * var(--spacing-fluid));
         }
+
+        &-fluid-lg {
+          margin-bottom: calc(-1 * var(--spacing-fluid-lg));
+        }
       }
 
       &--right {
@@ -206,7 +234,11 @@
         }
 
         &-fluid {
-          margin-left: calc(-1 * var(--spacing-fluid));
+          margin-right: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-right: calc(-1 * var(--spacing-fluid-lg));
         }
       }
     }
