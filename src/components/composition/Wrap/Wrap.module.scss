@@ -1,5 +1,7 @@
 @use '../../../styles/variables/breakpoint';
 
+$spacings: xs, sm, md, lg, xl, fluid, fluid-lg;
+
 .wrap {
   margin: 0 auto;
   max-width: 90em; // 1440px
@@ -14,5 +16,13 @@
 
   &--auto {
     max-width: none;
+  }
+
+  &--gutter {
+    @each $spacing in $spacings {
+      &-#{$spacing} {
+        padding-inline: var(--spacing-#{$spacing});
+      }
+    }
   }
 }
