@@ -1,10 +1,9 @@
 @use 'sass:math';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/variables/breakpoint';
 
 .grid {
   display: flex;
-  margin: (-#{math.div(spacing.$md, 2)}) (-#{math.div(spacing.$md, 2)});
+  margin: calc(var(--spacing-md) / -2) calc(var(--spacing-md) / -2);
 
   // Wrap
   &--wrap {
@@ -18,15 +17,15 @@
   // Inset
   &--inset {
     margin: 0;
-    padding: math.div(spacing.$md, 2) math.div(spacing.$md, 2);
+    padding: calc(var(--spacing-md) / 2) calc(var(--spacing-md) / 2);
   }
 
   &--inset-fluid {
-    padding: spacing.$fluid-sm 0;
+    padding: var(--spacing-fluid-sm) 0;
   }
 
   &--inset-vertical-fluid {
-    padding: spacing.$fluid-sm 0;
+    padding: var(--spacing-fluid-sm) 0;
   }
 
   // Direction
@@ -103,7 +102,7 @@
   &__item {
     flex: 0 0 auto;
     min-width: 0;
-    padding: (math.div(spacing.$md, 2)) (math.div(spacing.$md, 2));
+    padding: calc(var(--spacing-md) / 2) calc(var(--spacing-md) / 2);
 
     &--grow {
       flex-grow: 1;
@@ -168,34 +167,34 @@
   // Spacing
   &--spacing {
     &-xs {
-      margin: (-#{math.div(spacing.$xs, 2)}) (-#{math.div(spacing.$xs, 2)});
+      margin: calc(var(--spacing-xs) / -2) calc(var(--spacing-xs) / -2);
 
       > .grid__item {
-        padding: (math.div(spacing.$xs, 2)) (math.div(spacing.$xs, 2));
+        padding: calc(var(--spacing-xs) / 2) calc(var(--spacing-xs) / 2);
       }
     }
 
     &-sm {
-      margin: (-#{math.div(spacing.$sm, 2)}) (-#{math.div(spacing.$sm, 2)});
+      margin: calc(var(--spacing-sm) / -2) calc(var(--spacing-sm) / -2);
 
       > .grid__item {
-        padding: (math.div(spacing.$sm, 2)) (math.div(spacing.$sm, 2));
+        padding: calc(var(--spacing-sm) / 2) calc(var(--spacing-sm) / 2);
       }
     }
 
     &-lg {
-      margin: (-#{math.div(spacing.$lg, 2)}) (-#{math.div(spacing.$lg, 2)});
+      margin: calc(var(--spacing-lg) / -2) calc(var(--spacing-lg) / -2);
 
       > .grid__item {
-        padding: (math.div(spacing.$lg, 2)) (math.div(spacing.$lg, 2));
+        padding: calc(var(--spacing-lg) / 2) calc(var(--spacing-lg) / 2);
       }
     }
 
     &-xl {
-      margin: (-#{math.div(spacing.$xl, 2)}) (-#{math.div(spacing.$xl, 2)});
+      margin: calc(var(--spacing-xl) / -2) calc(var(--spacing-xl) / -2);
 
       > .grid__item {
-        padding: (math.div(spacing.$xl, 2)) (math.div(spacing.$xl, 2));
+        padding: calc(var(--spacing-xl) / 2) calc(var(--spacing-xl) / 2);
       }
     }
 

@@ -1,6 +1,6 @@
-@use '../../../styles/variables/font';
-
 .eyebrow {
-  font-size: font.$size-base;
+  color: var(--color-body-muted);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-base);
   text-transform: uppercase;
 }

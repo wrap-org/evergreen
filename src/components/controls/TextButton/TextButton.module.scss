@@ -1,52 +1,55 @@
-@use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/transition';
 
 .text-button {
   appearance: none;
   background: none;
   border: 0 none;
+  border-radius: var(--radius-sm);
   color: var(--skin-link-color);
   cursor: pointer;
-  padding: 0;
+  padding: var(--spacing-sm) 0;
   transition:
-    opacity transition.$duration transition.$timing,
-    color transition.$duration transition.$timing;
+    opacity var(--transition),
+    color var(--transition);
 
   &[disabled] {
-    color: color.$blue-dark;
+    color: var(--button-color-disabled);
     cursor: not-allowed;
     opacity: 0.5;
   }
 
-  &:focus {
-    outline: none;
+  &:hover {
+    text-decoration: underline;
   }
 
-  &:focus-visible {
-    outline: 1px solid color.$blue;
-    outline-offset: spacing.$sm;
+  &:focus {
+    outline: none;
+    text-decoration: underline;
   }
 
   &__icon {
     &--left {
-      margin-right: spacing.$xs;
+      margin-right: var(--spacing-xs);
     }
 
     &--right {
-      margin-left: spacing.$xs;
+      margin-left: var(--spacing-xs);
     }
   }
 
   &--size-sm {
-    font-size: font.$size-sm;
+    font-size: var(--font-size-sm);
   }
 
   &--decorate {
     text-decoration: underline;
 
     &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      background: var(--skin-border-color);
       text-decoration: none;
     }
   }

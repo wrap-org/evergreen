@@ -1,7 +1,3 @@
-@use '../../../styles/variables/transition';
-$enter-transition-duration: 0.5s;
-$enter-transition-timing: ease-in-out;
-
 @keyframes enter-fade {
   0% {
     opacity: 0;
@@ -49,10 +45,13 @@ $enter-transition-timing: ease-in-out;
 }
 
 .enter {
-  animation-duration: $enter-transition-duration;
+  --enter-transition-duration: 0.5s;
+  --enter-transition-timing: ease-in-out;
+
+  animation-duration: var(--enter-transition-duration);
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-timing-function: $enter-transition-timing;
+  animation-timing-function: var(--enter-transition-timing);
   position: relative;
   z-index: 1;
 
@@ -85,7 +84,7 @@ $enter-transition-timing: ease-in-out;
 
     &.enter--enter {
       animation-name: enter-boing;
-      animation-timing-function: transition.$timing-boing;
+      animation-timing-function: var(--transition-timing-boing);
     }
   }
 

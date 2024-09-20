@@ -1,17 +1,15 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-
 .help-text {
-  color: color.$blue-dark;
-  font-size: font.$size-sm;
-  padding-top: spacing.$sm;
+  background-color: var(--color-neutral-light);
+  color: var(--color-body);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
 
   &--positive {
-    color: color.$positive;
+    background: var(--color-positive-light);
   }
 
   &--negative {
-    color: color.$negative;
+    background: var(--color-negative-light);
   }
 }

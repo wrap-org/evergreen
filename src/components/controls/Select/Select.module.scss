@@ -1,10 +1,8 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/mixins/forms';
 
 .select {
+  --select-border-color: var(--input-border);
+
   @include forms.input;
   cursor: pointer;
 
@@ -13,7 +11,7 @@
     @include forms.input-padding;
     max-width: 100%;
     overflow: hidden;
-    padding-right: calc(#{spacing.$thumb} + #{input.$padding-horizontal});
+    padding-right: calc(var(--spacing-thumb) + var(--input-padding-horizontal));
     text-overflow: ellipsis;
 
     &[disabled] {
@@ -23,27 +21,39 @@
 
   &__affix {
     align-items: center;
-    background: var(--input-background);
-    border-left: 1px solid var(--input-border);
-    border-radius: 0 input.$border-radius input.$border-radius 0;
+    border-left: 1px solid var(--select-border-color);
+    border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
     bottom: 0;
-    color: var(--skin-link-color);
     display: flex;
-    font-size: font.$size-xl;
+    font-size: var(--font-size-xl);
     justify-content: center;
-    min-width: spacing.$thumb;
-    padding: 0 spacing.$sm;
+    min-width: var(--spacing-thumb);
+    padding: 0 var(--spacing-sm);
     pointer-events: none;
     position: absolute;
     right: 0;
     top: 0;
+    transition: border-color var(--transition);
   }
 
   &--disabled {
     @include forms.input-disabled;
   }
 
+  &--valid {
+    --select-border-color: var(--color-positive);
+  }
+
+  &--invalid {
+    --select-border-color: var(--color-negative);
+  }
+
+  &:hover {
+    --select-border-color: var(--input-border-hover);
+  }
+
   &:focus-within {
     --input-outline-offset-focus: 1px;
+    --select-border-color: var(--input-border-focus);
   }
 }

@@ -1,29 +1,22 @@
-@use '../variables/color';
-@use '../variables/font';
-@use '../variables/input';
-@use '../variables/skin';
-@use '../variables/spacing';
-@use '../variables/transition';
-
 @mixin input() {
   background: var(--input-background);
   border: 1px solid var(--input-border);
-  border-radius: input.$border-radius;
+  border-radius: var(--input-border-radius);
   color: var(--input-color);
   display: flex;
   line-height: 1.75;
   position: relative;
   transition:
-    border-color transition.$duration transition.$timing,
-    background-color transition.$duration transition.$timing;
+    border-color var(--transition),
+    background-color var(--transition);
 
-  &:hover,
-  &:focus-within {
+  &:hover {
     border-color: var(--input-border-hover);
   }
 
   &:focus-within {
     background: var(--input-background-focus);
+    border-color: var(--input-border-focus);
     outline-color: var(
       --input-outline-color-focus-webkit,
       --input-outline-color-focus
@@ -34,27 +27,27 @@
   }
 
   &--valid {
-    border-color: color.$positive;
+    border-color: var(--color-positive);
   }
 
   &--invalid {
-    border-color: color.$negative;
+    border-color: var(--color-negative);
   }
 
   &--pending,
   &--approved,
   &--declined {
     &::before {
-      border-bottom-left-radius: input.$border-radius;
-      border-top-left-radius: input.$border-radius;
+      border-bottom-left-radius: var(--input-border-radius);
+      border-top-left-radius: var(--input-border-radius);
     }
   }
 }
 
 @mixin input-disabled() {
-  background: input.$background;
+  background: var(--input-background-disabled);
+  color: var(--input-color-disabled);
   cursor: not-allowed;
-  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -67,7 +60,7 @@
   border: 0 none;
   color: inherit;
   display: block;
-  line-height: font.$line-height;
+  line-height: var(--font-line-height);
   width: 100%;
 
   &:focus {
@@ -76,14 +69,14 @@
 }
 
 @mixin input-padding() {
-  min-height: spacing.$thumb;
-  padding: input.$padding;
+  min-height: var(--spacing-thumb);
+  padding: var(--input-padding);
 }
 
 // Radios/checkboxes
 @mixin checked() {
-  background: color.$white;
-  color: input.$checked;
+  background: var(--color-white);
+  color: var(--input-checked);
 }
 
 @mixin indicator() {
@@ -91,23 +84,23 @@
   border: 2px solid currentColor;
   display: inline-flex;
   flex-shrink: 0;
-  height: font.$size-lg;
+  height: var(--font-size-lg);
   justify-content: center;
-  margin-right: spacing.$sm;
-  margin-top: spacing.$xs;
+  margin-right: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
   position: relative;
   transition:
-    background transition.$duration transition.$timing,
-    border-color transition.$duration transition.$timing,
-    color transition.$duration transition.$timing;
-  width: font.$size-lg;
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+  width: var(--font-size-lg);
 }
 
 @mixin label() {
   align-items: center;
-  color: color.$blue-darkest;
+  color: var(--skin-color);
   display: flex;
-  font-size: font.$size-base;
-  font-weight: font.$weight-bold;
-  min-height: spacing.$thumb;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  min-height: var(--spacing-thumb);
 }

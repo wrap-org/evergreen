@@ -1,7 +1,3 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/transition';
-@use '../../../styles/variables/input';
 @use '../../../styles/mixins/forms';
 @use '../../../styles/mixins/screen-reader';
 
@@ -11,7 +7,7 @@
   width: 100%;
 
   + .checkbox {
-    margin-top: spacing.$sm;
+    margin-top: var(--spacing-sm);
   }
 
   &__input {
@@ -21,7 +17,7 @@
   &__indicator {
     @include forms.indicator;
     align-self: flex-start;
-    border-radius: 0.125em;
+    border-radius: var(--radius-xs);
 
     .checkbox--checked & {
       background: currentColor;
@@ -32,11 +28,11 @@
     opacity: 0;
     transform: scale(0.9);
     transition:
-      opacity transition.$duration transition.$timing,
-      transform transition.$duration-boing transition.$timing-boing;
+      opacity var(--transition),
+      transform var(--transition-duration-boing) var(--transition-timing-boing);
 
     .checkbox--checked & {
-      color: color.$white;
+      color: var(--color-white);
       opacity: 1;
       transform: none;
     }
@@ -57,7 +53,7 @@
     }
 
     &.checkbox--invalid .checkbox__indicator {
-      border-color: color.$negative;
+      border-color: var(--color-negative);
     }
 
     &.checkbox--disabled {
@@ -68,11 +64,11 @@
   &--type-input {
     @include forms.input;
     @include forms.input-padding;
-    border-radius: input.$checkradio-border-radius;
+    border-radius: var(--input-checkradio-border-radius);
   }
 
   &--type-list {
-    background: color.$white;
+    background: var(--color-white);
     border-radius: 0;
 
     + .checkbox {

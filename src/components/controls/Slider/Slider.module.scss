@@ -1,27 +1,27 @@
 @use '../../../styles/variables/color.scss';
-@use '../../../styles/variables/font.scss';
 @use '../../../styles/mixins/forms';
 
 .slider {
   &__input {
-    height: 2rem;
+    height: var(--spacing-thumb);
     overflow: hidden;
     position: relative;
   }
 
   &__track {
-    border-radius: 0.25rem;
-    height: 0.5rem;
+    border: 1px solid var(--input-color);
+    border-radius: var(--radius-md);
+    height: 1rem;
     position: absolute;
-    top: 0.75rem;
+    top: calc((var(--spacing-thumb) - 1rem) / 2);
 
     &--upper {
-      background: color.$green;
+      background: var(--mobius-color-lime);
       width: 100%;
     }
 
     &--lower {
-      background: color.$teal;
+      background: var(--mobius-color-forest-75);
       pointer-events: none;
       right: calc(
         100% * (var(--slider-max) - var(--slider-value)) /
@@ -42,21 +42,31 @@
 
   &__label {
     display: block;
-    font-weight: font.$weight-bold;
+    font-weight: var(--font-weight-bold);
     min-width: 0;
     padding: 0;
 
-    &--lower {
-      color: color.$teal;
-    }
-
     &--upper {
-      color: color.$green;
       justify-self: flex-end;
     }
   }
 
   &--disabled {
-    @include forms.input-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    .slider {
+      &__track {
+        border-color: var(--mobius-color-forest-50);
+      }
+
+      &__track--lower {
+        background: var(--mobius-color-forest-25);
+      }
+
+      &__track--upper {
+        background: var(--mobius-color-lime-25);
+      }
+    }
   }
 }

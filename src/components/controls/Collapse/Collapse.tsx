@@ -13,6 +13,7 @@ export interface CollapseProps {
   readonly align?: 'left' | 'right';
   readonly iconOpen?: string;
   readonly iconClosed?: string;
+  readonly textDecoration?: 'hover' | 'none';
   readonly onToggle?: (open?: boolean) => void;
   readonly defaultOpen?: boolean;
 }
@@ -21,8 +22,9 @@ const Collapse = ({
   children,
   headerLabel,
   align = 'left',
-  iconOpen = 'chevron-up',
-  iconClosed = 'chevron-down',
+  iconOpen = 'close',
+  iconClosed = 'add',
+  textDecoration = 'hover',
   onToggle,
   defaultOpen = false,
 }: CollapseProps) => {
@@ -40,6 +42,7 @@ const Collapse = ({
     <div
       className={cx(styles.collapse, {
         [styles['collapse--right']]: align === 'right',
+        [styles['collapse--text-decoration-none']]: textDecoration === 'none',
       })}
     >
       <button

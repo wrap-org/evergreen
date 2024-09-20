@@ -1,107 +1,121 @@
-@use '../../../styles/variables/spacing';
-
 .spacing {
   &--top {
     &-xs {
-      margin-top: spacing.$xs;
+      margin-top: var(--spacing-xs);
     }
 
     &-sm {
-      margin-top: spacing.$sm;
+      margin-top: var(--spacing-sm);
     }
 
     &-md {
-      margin-top: spacing.$md;
+      margin-top: var(--spacing-md);
     }
 
     &-lg {
-      margin-top: spacing.$lg;
+      margin-top: var(--spacing-lg);
     }
 
     &-xl {
-      margin-top: spacing.$xl;
+      margin-top: var(--spacing-xl);
     }
 
     &-fluid {
-      margin-top: spacing.$fluid;
+      margin-top: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-top: var(--spacing-fluid-lg);
     }
   }
 
   &--left {
     &-xs {
-      margin-left: spacing.$xs;
+      margin-left: var(--spacing-xs);
     }
 
     &-sm {
-      margin-left: spacing.$sm;
+      margin-left: var(--spacing-sm);
     }
 
     &-md {
-      margin-left: spacing.$md;
+      margin-left: var(--spacing-md);
     }
 
     &-lg {
-      margin-left: spacing.$lg;
+      margin-left: var(--spacing-lg);
     }
 
     &-xl {
-      margin-left: spacing.$xl;
+      margin-left: var(--spacing-xl);
     }
 
     &-fluid {
-      margin-left: spacing.$fluid;
+      margin-left: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-left: var(--spacing-fluid-lg);
     }
   }
 
   &--bottom {
     &-xs {
-      margin-bottom: spacing.$xs;
+      margin-bottom: var(--spacing-xs);
     }
 
     &-sm {
-      margin-bottom: spacing.$sm;
+      margin-bottom: var(--spacing-sm);
     }
 
     &-md {
-      margin-bottom: spacing.$md;
+      margin-bottom: var(--spacing-md);
     }
 
     &-lg {
-      margin-bottom: spacing.$lg;
+      margin-bottom: var(--spacing-lg);
     }
 
     &-xl {
-      margin-bottom: spacing.$xl;
+      margin-bottom: var(--spacing-xl);
     }
 
     &-fluid {
-      margin-bottom: spacing.$fluid;
+      margin-bottom: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-bottom: var(--spacing-fluid-lg);
     }
   }
 
   &--right {
     &-xs {
-      margin-right: spacing.$xs;
+      margin-right: var(--spacing-xs);
     }
 
     &-sm {
-      margin-right: spacing.$sm;
+      margin-right: var(--spacing-sm);
     }
 
     &-md {
-      margin-right: spacing.$md;
+      margin-right: var(--spacing-md);
     }
 
     &-lg {
-      margin-right: spacing.$lg;
+      margin-right: var(--spacing-lg);
     }
 
     &-xl {
-      margin-right: spacing.$xl;
+      margin-right: var(--spacing-xl);
     }
 
-    &-right {
-      margin-left: spacing.$fluid;
+    &-fluid {
+      margin-right: var(--spacing-fluid);
+    }
+
+    &-fluid-lg {
+      margin-right: var(--spacing-fluid-lg);
     }
   }
 
@@ -110,105 +124,121 @@
     &.spacing {
       &--top {
         &-xs {
-          margin-top: -(spacing.$xs);
+          margin-top: calc(-1 * var(--spacing-xs));
         }
 
         &-sm {
-          margin-top: -(spacing.$sm);
+          margin-top: calc(-1 * var(--spacing-sm));
         }
 
         &-md {
-          margin-top: -(spacing.$md);
+          margin-top: calc(-1 * var(--spacing-md));
         }
 
         &-lg {
-          margin-top: -(spacing.$lg);
+          margin-top: calc(-1 * var(--spacing-lg));
         }
 
         &-xl {
-          margin-top: -(spacing.$xl);
+          margin-top: calc(-1 * var(--spacing-xl));
         }
 
         &-fluid {
-          margin-top: -(spacing.$fluid);
+          margin-top: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-top: calc(-1 * var(--spacing-fluid-lg));
         }
       }
 
       &--left {
         &-xs {
-          margin-left: -(spacing.$xs);
+          margin-left: calc(-1 * var(--spacing-xs));
         }
 
         &-sm {
-          margin-left: -(spacing.$sm);
+          margin-left: calc(-1 * var(--spacing-sm));
         }
 
         &-md {
-          margin-left: -(spacing.$md);
+          margin-left: calc(-1 * var(--spacing-md));
         }
 
         &-lg {
-          margin-left: -(spacing.$lg);
+          margin-left: calc(-1 * var(--spacing-lg));
         }
 
         &-xl {
-          margin-left: -(spacing.$xl);
+          margin-left: calc(-1 * var(--spacing-xl));
         }
 
         &-fluid {
-          margin-left: -(spacing.$fluid);
+          margin-left: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-left: calc(-1 * var(--spacing-fluid-lg));
         }
       }
 
       &--bottom {
         &-xs {
-          margin-bottom: -(spacing.$xs);
+          margin-bottom: calc(-1 * var(--spacing-xs));
         }
 
         &-sm {
-          margin-bottom: -(spacing.$sm);
+          margin-bottom: calc(-1 * var(--spacing-sm));
         }
 
         &-md {
-          margin-bottom: -(spacing.$md);
+          margin-bottom: calc(-1 * var(--spacing-md));
         }
 
         &-lg {
-          margin-bottom: -(spacing.$lg);
+          margin-bottom: calc(-1 * var(--spacing-lg));
         }
 
         &-xl {
-          margin-bottom: -(spacing.$xl);
+          margin-bottom: calc(-1 * var(--spacing-xl));
         }
 
         &-fluid {
-          margin-bottom: -(spacing.$fluid);
+          margin-bottom: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-bottom: calc(-1 * var(--spacing-fluid-lg));
         }
       }
 
       &--right {
         &-xs {
-          margin-right: -(spacing.$xs);
+          margin-right: calc(-1 * var(--spacing-xs));
         }
 
         &-sm {
-          margin-right: -(spacing.$sm);
+          margin-right: calc(-1 * var(--spacing-sm));
         }
 
         &-md {
-          margin-right: -(spacing.$md);
+          margin-right: calc(-1 * var(--spacing-md));
         }
 
         &-lg {
-          margin-right: -(spacing.$lg);
+          margin-right: calc(-1 * var(--spacing-lg));
         }
 
         &-xl {
-          margin-right: -(spacing.$xl);
+          margin-right: calc(-1 * var(--spacing-xl));
         }
 
-        &-right {
-          margin-left: -(spacing.$fluid);
+        &-fluid {
+          margin-right: calc(-1 * var(--spacing-fluid));
+        }
+
+        &-fluid-lg {
+          margin-right: calc(-1 * var(--spacing-fluid-lg));
         }
       }
     }

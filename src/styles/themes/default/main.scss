@@ -1,6 +1,5 @@
-@use '../../variables/color';
 @use '../../mixins/skin';
 
-$skins: light, dark, info, neutral, positive, negative, attention;
+$skins: light, dark, info, attention, neutral, positive, negative;
 
 @include skin.create-skins($skins);

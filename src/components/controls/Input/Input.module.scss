@@ -1,7 +1,3 @@
-@use 'sass:math';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
 @use '../../../styles/mixins/forms';
 
 .input {
@@ -10,18 +6,18 @@
   &__prefix,
   &__suffix {
     align-self: center;
-    font-weight: font.$weight-bold;
-    line-height: font.$line-height;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-line-height);
   }
 
   &__prefix {
-    margin-right: -(math.div(input.$padding-horizontal, 2));
-    padding: 0 0 0 input.$padding-horizontal;
+    margin-right: calc(var(--input-padding-horizontal) / -2);
+    padding: 0 0 0 var(--input-padding-horizontal);
   }
 
   &__suffix {
-    margin-left: -(math.div(input.$padding-horizontal, 2));
-    padding: 0 input.$padding-horizontal 0 0;
+    margin-left: calc(var(--input-padding-horizontal) / -2);
+    padding: 0 var(--input-padding-horizontal) 0 0;
   }
 
   &__input {

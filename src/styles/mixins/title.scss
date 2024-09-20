@@ -1,17 +1,13 @@
-@use '../variables/font';
-@use '../variables/skin';
-@use '../variables/spacing';
-
 @mixin title {
-  color: skin.$heading-color;
+  color: var(--skin-heading-color);
   font-weight: var(--heading-font-weight, 700);
   letter-spacing: -0.025em;
-  line-height: font.$line-height-sm;
-  margin-bottom: spacing.$xs;
+  line-height: var(--font-line-height-sm);
+  margin-bottom: var(--spacing-xs);
   margin-top: 0;
 
   b,
   strong {
-    font-weight: font.$weight-black;
+    font-weight: var(--font-weight-black);
   }
 }

@@ -1,9 +1,9 @@
 @use '../../../styles/variables/color';
 @use '../../../styles/variables/font';
 
-$icon-size-giant: 3.5em;
-
 .icon {
+  --icon-size-giant: 3.5em;
+
   display: inline-block;
   height: 1em;
   vertical-align: middle;
@@ -27,7 +27,7 @@ $icon-size-giant: 3.5em;
   }
 
   &--accent {
-    color: color.$yellow;
+    color: var(--color-accent);
   }
 
   &--baseline {
@@ -44,6 +44,6 @@ $icon-size-giant: 3.5em;
   }
 
   &--giant {
-    font-size: $icon-size-giant;
+    font-size: var(--icon-size-giant);
   }
 }

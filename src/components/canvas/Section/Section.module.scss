@@ -1,8 +1,5 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/skin';
-
 .section {
-  background: skin.$background;
-  color: skin.$color;
+  background: var(--skin-background);
+  color: var(--skin-color);
   overflow: hidden;
 }

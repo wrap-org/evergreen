@@ -1,28 +1,7 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/transition';
 @use '../../../styles/variables/breakpoint';
-@use '../../../styles/variables/skin';
-
-$menubar-highlight-width: 4px;
-
-@mixin menubar-link {
-  color: skin.$link-color;
-  transition: background transition.$duration transition.$timing;
-
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
-  &:hover {
-    background: skin.$background;
-  }
-}
 
 .menubar {
-  background: skin.$background-muted;
+  background: var(--skin-background);
 
   @media (min-width: breakpoint.$tablet) {
     align-items: center;
@@ -37,7 +16,7 @@ $menubar-highlight-width: 4px;
     width: 100%;
 
     @media (min-width: breakpoint.$tablet) {
-      padding: 0 spacing.$md;
+      padding: 0 var(--spacing-md);
     }
   }
 
@@ -52,83 +31,90 @@ $menubar-highlight-width: 4px;
   }
 
   &__tab {
+    --tab-background: var(--skin-background);
+    --tab-highlight-color: var(--skin-color);
+    --tab-highlight-width: 4px;
+
     display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
     min-width: 25%;
     position: relative;
 
+    a {
+      color: var(--skin-background-muted-dark);
+      text-decoration: none;
+      transition: background var(--transition) color var(--transition);
+
+      &:hover,
+      &:focus {
+        color: var(--skin-color);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     &-inner {
       &::before {
-        background: color.$positive;
+        background: var(--tab-highlight-color);
         content: '';
         display: block;
-        height: 4px;
-        height: 0;
+        height: var(--tab-highlight-width);
         left: 0;
         opacity: 0;
         position: absolute;
         top: 0;
-        transition:
-          opacity transition.$duration transition.$timing,
-          height transition.$duration transition.$timing;
+        transition: opacity var(--transition) height var(--transition);
         width: 100%;
       }
 
-      &:hover::before {
-        height: $menubar-highlight-width;
-        opacity: 0.5;
-      }
-
-      a {
-        @include menubar-link;
-        align-items: center;
-        display: flex;
-        font-size: font.$size-sm;
-        font-weight: font.$weight-bold;
-        justify-content: center;
-        min-height: spacing.$thumb;
-        padding: spacing.$md;
-        text-align: center;
-      }
-    }
-
-    &--disabled &-inner {
-      &:hover::before {
-        height: 0;
-      }
-
-      a {
-        color: color.$body;
-        cursor: default;
-        pointer-events: none;
-
-        &:hover {
-          background: color.$blue-lightest;
-        }
-      }
+      align-items: center;
+      color: var(--skin-background-muted-dark);
+      display: flex;
+      justify-content: center;
+      min-height: var(--spacing-thumb);
+      padding: var(--spacing-md);
+      text-align: center;
     }
 
     &--active &-inner {
       &::before {
-        height: $menubar-highlight-width;
         opacity: 1;
       }
 
+      background: var(--input-background-disabled);
+      color: var(--color-body);
+
       a {
-        background: skin.$background;
-        color: color.$positive;
-        cursor: default;
+        color: var(--color-body);
       }
+    }
+
+    &--completed &-inner {
+      &::before {
+        --tab-highlight-color: var(--color-positive);
+        opacity: 1;
+      }
+    }
+
+    &-inner:focus-within::before {
+      --tab-highlight-color: var(--input-border-hover);
+      opacity: 1;
+    }
+
+    &--disabled &-inner {
+      color: var(--button-color-disabled);
     }
   }
 
   &__back {
     a {
-      @include menubar-link;
       display: block;
-      font-size: font.$size-sm;
-      font-weight: font.$weight-bold;
-      min-height: spacing.$thumb;
-      padding: spacing.$md;
+      min-height: var(--spacing-thumb);
+      padding: var(--spacing-md);
+      text-decoration: none;
     }
   }
 }

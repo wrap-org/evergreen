@@ -1,27 +1,26 @@
 @use 'sass:math';
 @use '../../../styles/variables/font';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/skin';
 
 .badge {
-  background: skin.$background;
-  color: skin.$color;
+  background: var(--skin-background);
+  border-radius: var(--radius-lg);
+  color: var(--skin-color);
   display: inline-block;
-  padding: (math.div(spacing.$xs, 2)) spacing.$sm;
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-sm) calc(var(--spacing-sm) * 1.5);
 
   &--muted {
-    background: skin.$background-muted;
-    color: skin.$color-muted;
+    background: var(--skin-background-muted);
+    color: var(--skin-color-muted);
   }
 
   &--inverse {
-    background: skin.$color;
-    color: skin.$background;
+    background: var(--skin-color);
+    color: var(--skin-background);
 
     &.badge--muted {
-      background-color: skin.$color-muted;
-      color: skin.$background-muted;
+      background-color: var(--skin-color-muted);
+      color: var(--skin-background-muted);
     }
   }
 
@@ -33,7 +32,8 @@
     }
   }
 
+  // This is obsolete now that all badges are rounded. TODO: Remove this
   &--rounded {
-    border-radius: input.$border-radius;
+    border-radius: var(--radius-lg);
   }
 }

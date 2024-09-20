@@ -8,36 +8,36 @@ addons.setConfig({
     base: 'light',
     backgroundHoverable: '#fff',
 
-    colorPrimary: '#05224b',
-    colorSecondary: '#2d9cdb',
+    colorPrimary: '#0b301a',
+    colorSecondary: '#a9ad94',
 
     // UI
     appBg: '#fff',
     appContentBg: '#fff',
-    appBorderColor: '#eceff2',
+    appBorderColor: '#c2cbc6',
     appBorderRadius: 3,
 
     // Typography
-    fontBase: 'Open Sans, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+    fontBase: "Inter, sans-serif",
     fontCode: 'monospace',
 
     // Text colors
-    textColor: '#4d6b87',
+    textColor: '#0b301a',
     textInverseColor: 'rgba(255,255,255,0.8)',
 
     // Toolbar default and active colors
     barTextColor: '#fff',
     barSelectedColor: '#fff',
-    barBg: '#05224b',
+    barBg: '#0b301a',
 
     // Form colors
     inputBg: '#fff',
-    inputBorder: '#eceff2',
-    inputTextColor: '#4d6b87',
-    inputBorderRadius: 3,
+    inputBorder: '#c2cbc6',
+    inputTextColor: '#0b301a',
+    inputBorderRadius: '0.25rem',
 
     brandTitle: 'Mobius',
-    brandUrl: 'https://wrap.org.uk/',
+    brandUrl: 'https://wrap.ngo/',
     brandImage: '/logo-horizontal.png',
   }),
 });

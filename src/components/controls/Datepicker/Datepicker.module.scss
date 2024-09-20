@@ -1,34 +1,28 @@
-@use 'sass:math';
-@use '../../../styles/variables/font';
-@use '../../../styles/variables/input';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/transition';
 @use '../../../styles/mixins/forms';
 
 .date-picker {
   @include forms.input;
 
   &__button {
-    background: input.$background;
+    background: var(--input-background);
     border: 0 none;
-    border-bottom-left-radius: input.$border-radius;
-    border-right: 1px solid input.$border;
-    border-top-left-radius: input.$border-radius;
-    color: color.$blue-dark;
+    border-bottom-left-radius: var(--input-border-radius);
+    border-right: 1px solid var(--input-border);
+    border-top-left-radius: var(--input-border-radius);
+    color: var(--input-color);
     cursor: pointer;
-    font-size: font.$size-xl;
+    font-size: var(--font-size-xl);
     line-height: 1.75;
-    padding: 0 math.div(input.$padding-horizontal, 2) 0
-      math.div(input.$padding-horizontal, 2);
+    padding: 0 calc(var(--input-padding-horizontal) / 2) 0
+      calc(var(--input-padding-horizontal) / 2);
     transition:
-      background transition.$duration transition.$timing,
-      border-color transition.$duration transition.$timing;
+      background var(--transition),
+      border-color var(--transition);
 
     &:hover,
     &:focus {
-      background: color.$white;
-      border-color: input.$border-hover;
+      background: var(--input-background-focus);
+      border-color: var(--input-border-hover);
     }
   }
 
@@ -43,38 +37,38 @@
 
   &__daypicker {
     --rdp-cell-size: 2rem;
-    --rdp-accent-color: #{color.$blue};
-    --rdp-background-color: #{color.$blue-light}; // hover color
+    --rdp-accent-color: var(--color-link);
+    --rdp-background-color: var(--input-border-hover); // hover color
     --rdp-outline: 2px solid var(--rdp-accent-color);
 
-    background: color.$white;
-    border: 1px solid input.$border;
-    border-radius: input.$border-radius;
+    background: var(--color-white);
+    border: 1px solid var(--input-border);
+    border-radius: var(--input-border-radius);
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
-    margin-top: spacing.$sm;
-    padding: spacing.$md;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-md);
 
     &-caption {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 spacing.$sm spacing.$sm;
+      padding: 0 var(--spacing-sm) var(--spacing-sm);
       text-align: left;
     }
 
     &-caption-label {
-      color: color.$blue-dark;
-      font-size: font.$size-sm;
-      font-weight: font.$weight-bold;
+      color: var(--color-link);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
       margin: 0;
       padding: 0;
       text-transform: uppercase;
     }
 
     &-head-cell {
-      color: color.$blue-dark;
-      font-size: font.$size-sm;
-      font-weight: font.$weight-base;
+      color: var(--color-body);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-base);
       height: var(--rdp-cell-size);
       padding: 0;
       text-align: center;
@@ -83,16 +77,16 @@
     }
 
     &-cell {
-      padding: spacing.$xs spacing.$xs;
+      padding: var(--spacing-xs) var(--spacing-xs);
     }
 
     &-day {
-      border-radius: input.$border-radius;
-      color: color.$blue-darkest;
-      font-size: font.$size-sm;
+      border-radius: var(--input-border-radius);
+      color: var(--color-body);
+      font-size: var(--font-size-sm);
       height: var(--rdp-cell-size);
       text-align: center;
-      transition: background transition.$duration transition.$timing;
+      transition: background var(--transition);
       width: var(--rdp-cell-size);
 
       &:focus {
@@ -104,19 +98,18 @@
       &,
       &:hover,
       &:focus {
-        background: color.$blue !important;
-        color: color.$white !important;
+        background: var(--color-neutral-light) !important;
       }
     }
 
     &-nav-button {
       align-items: center;
-      border-radius: input.$border-radius;
-      color: color.$blue;
+      border-radius: var(--input-border-radius);
+      color: var(--color-body);
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
-      padding: spacing.$xs spacing.$xs;
+      padding: var(--spacing-xs) var(--spacing-xs);
       width: 1.65rem;
 
       &:focus {
@@ -127,15 +120,15 @@
     &-dropdown-month {
       align-items: center;
       display: inline-flex;
-      margin-right: spacing.$md;
+      margin-right: var(--spacing-md);
       position: relative;
     }
 
     &-dropdown-icon {
-      color: color.$blue;
-      height: font.$size-sm;
-      margin: -1px 0 0 spacing.$xs;
-      width: font.$size-sm;
+      color: var(--color-body);
+      height: var(--font-size-sm);
+      margin: -1px 0 0 var(--spacing-xs);
+      width: var(--font-size-sm);
     }
   }
 

@@ -1,13 +1,15 @@
-$xs: 0;
-$sm: 30rem; // 480
-$md: 37.5rem; // 600
-$lg: 48rem; // 768
-$xl: 64rem; // 1024
-$xxl: 80rem; // 1280
-$xxxl: 90rem; // 1440
-$tablet: $lg;
-$desktop: $xl;
-$max: 90rem; // 1440
+@use '~@etchteam/mobius-tokens/dist/breakpoint';
+
+$xs: breakpoint.$mobius-breakpoint-xs;
+$sm: breakpoint.$mobius-breakpoint-sm;
+$md: breakpoint.$mobius-breakpoint-md;
+$lg: breakpoint.$mobius-breakpoint-lg;
+$xl: breakpoint.$mobius-breakpoint-xl;
+$xxl: breakpoint.$mobius-breakpoint-xxl;
+$xxxl: breakpoint.$mobius-breakpoint-xxxl;
+$tablet: breakpoint.$mobius-breakpoint-tablet;
+$desktop: breakpoint.$mobius-breakpoint-desktop;
+$max: breakpoint.$mobius-breakpoint-max;
 
 $map: (
   xs: $xs,

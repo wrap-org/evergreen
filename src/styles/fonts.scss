@@ -1,0 +1,25 @@
+// Set a default font path which works for dependants (this gets overridden by the Storybook SASS so it resolves correctly)
+$mobius-font-path: '~@etchteam/mobius/src/assets/fonts' !default;
+
+// Optional font import
+@font-face {
+  font-display: swap;
+  font-family: 'Marr Sans Cond Web';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('#{$mobius-font-path}/MarrSansCondensed-Regular-Web.woff')
+      format('woff'),
+    url('#{$mobius-font-path}/MarrSansCondensed-Regular-Web.woff2')
+      format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Marr Sans Cond Web';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('#{$mobius-font-path}/MarrSansCondensed-Bold-Web.woff') format('woff'),
+    url('#{$mobius-font-path}/MarrSansCondensed-Bold-Web.woff2') format('woff2');
+}

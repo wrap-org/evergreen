@@ -1,9 +1,9 @@
-@use '../../../styles/variables/spacing';
-
 .faq {
+  --card-border-radius: var(--radius-sm);
+
   width: 100%;
 
   &__content {
-    padding-top: spacing.$md;
+    padding-top: var(--spacing-md);
   }
 }

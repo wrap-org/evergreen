@@ -5,10 +5,10 @@ export const skins = ['light', 'dark'];
 
 export const emphasisSkins = [
   'info',
-  'neutral',
+  'attention',
   'positive',
   'negative',
-  'attention',
+  'neutral',
 ];
 
 // This component uses non-module CSS

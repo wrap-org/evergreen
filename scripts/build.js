@@ -39,6 +39,10 @@ const inputOptions = {
           src: 'src/components/content/Icon/custom-icons/**/*',
           dest: 'dist/custom-icons',
         },
+        {
+          src: 'src/assets/fonts/**/*',
+          dest: 'dist/fonts',
+        },
       ],
     }),
   ],

@@ -1,14 +1,10 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
-@use '../../../styles/variables/transition';
-
 .dropdown {
   display: inline-block;
   position: relative;
   vertical-align: middle;
 
   &__content {
-    background: color.$white;
+    background: var(--color-white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     left: auto;
     min-width: 8em;
@@ -19,8 +15,8 @@
     top: 100%;
     transform: translateY(-0.25em);
     transition:
-      opacity transition.$duration transition.$timing,
-      transform transition.$duration transition.$timing;
+      opacity var(--transition),
+      transform var(--transition);
   }
 
   &--open {

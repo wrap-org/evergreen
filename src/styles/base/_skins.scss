@@ -1,79 +1,34 @@
-@use '../variables/color';
-
 :root {
-  --skin-background-light: #{color.$white};
-  --skin-background-muted-light: #{color.$blue-lightest};
-  --skin-border-color-light: #{color.$blue-light};
-  --skin-color-light: #{color.$body};
-  --skin-color-muted-light: #{color.$body};
-  --skin-heading-color-light: #{color.$blue-darkest};
-  --skin-link-color-light: #{color.$link};
-  --skin-link-text-decoration-light: none;
-  --skin-link-text-decoration-hover-light: underline;
+  $skins: light, dark, info, attention, positive, negative, neutral;
 
-  --skin-background-dark: #{color.$blue-darkest};
-  --skin-background-muted-dark: #{color.$blue-darkest};
-  --skin-border-color-dark: transparent;
-  --skin-color-dark: #{color.$white};
-  --skin-color-muted-dark: #{color.$blue-lightest};
-  --skin-heading-color-dark: #{color.$white};
-  --skin-link-color-dark: #{color.$white};
-  --skin-link-text-decoration-dark: underline;
-  --skin-link-text-decoration-hover-dark: underline;
+  @each $skin in $skins {
+    --skin-background-#{$skin}: var(--mobius-skin-background-#{$skin});
+    --skin-background-muted-#{$skin}: var(
+      --mobius-skin-background-muted-#{$skin}
+    );
 
-  --skin-background-info: #{color.$blue-light};
-  --skin-background-muted-info: #{color.$blue-lightest};
-  --skin-border-color-info: #{color.$blue-light};
-  --skin-color-info: #{color.$blue-darkest};
-  --skin-color-muted-info: #{color.$body};
-  --skin-heading-color-info: #{color.$blue-darkest};
-  --skin-link-color-info: #{color.$link};
-  --skin-link-text-decoration-info: none;
-  --skin-link-text-decoration-hover-info: underline;
+    --skin-border-color-#{$skin}: var(--mobius-skin-border-color-#{$skin});
+    --skin-border-color-muted-#{$skin}: var(
+      --mobius-skin-border-color-muted-#{$skin}
+    );
 
-  --skin-background-neutral: #{color.$blue};
-  --skin-background-muted-neutral: #{color.$blue-lightest};
-  --skin-border-color-neutral: #{color.$blue};
-  --skin-color-neutral: #{color.$white};
-  --skin-color-muted-neutral: #{color.$blue-dark};
-  --skin-heading-color-neutral: #{color.$white};
-  --skin-link-color-neutral: #{color.$white};
-  --skin-link-text-decoration-neutral: underline;
-  --skin-link-text-decoration-hover-neutral: underline;
+    --skin-color-#{$skin}: var(--mobius-skin-color-#{$skin});
+    --skin-color-muted-#{$skin}: var(--mobius-skin-color-muted-#{$skin});
+    --skin-heading-color-#{$skin}: var(--mobius-skin-heading-color-#{$skin});
 
-  --skin-background-positive: #{color.$green};
-  --skin-background-muted-positive: #{color.$blue-lightest};
-  --skin-border-color-positive: #{color.$green};
-  --skin-color-positive: #{color.$white};
-  --skin-color-muted-positive: #{color.$blue-dark};
-  --skin-heading-color-positive: #{color.$white};
-  --skin-link-color-positive: #{color.$white};
-  --skin-link-text-decoration-positive: underline;
-  --skin-link-text-decoration-hover-positive: underline;
-
-  --skin-background-negative: #{color.$maroon};
-  --skin-background-muted-negative: #{color.$blue-lightest};
-  --skin-border-color-negative: #{color.$maroon};
-  --skin-color-negative: #{color.$white};
-  --skin-color-muted-negative: #{color.$blue-dark};
-  --skin-heading-color-negative: #{color.$white};
-  --skin-link-color-negative: #{color.$white};
-  --skin-link-text-decoration-negative: underline;
-  --skin-link-text-decoration-hover-negative: underline;
-
-  --skin-background-attention: #{color.$yellow};
-  --skin-background-muted-attention: #{color.$blue-lightest};
-  --skin-border-color-attention: #{color.$yellow};
-  --skin-color-attention: #{color.$blue-darkest};
-  --skin-color-muted-attention: #{color.$blue-dark};
-  --skin-heading-color-attention: #{color.$blue-darkest};
-  --skin-link-color-attention: #{color.$blue};
-  --skin-linktext-decoration-attention: underline;
-  --skin-linktext-decoration-hover-attention: underline;
+    --skin-link-color-#{$skin}: var(--mobius-skin-link-color-#{$skin});
+    --skin-link-text-decoration-#{$skin}: var(
+      --mobius-skin-link-text-decoration-#{$skin}
+    );
+    --skin-link-text-decoration-hover-#{$skin}: var(
+      --mobius-skin-link-text-decoration-hover-#{$skin}
+    );
+  }
 
   --skin-background: var(--skin-background-light);
   --skin-background-muted: var(--skin-background-muted-light);
   --skin-border-color: var(--skin-border-color-light);
+  --skin-border-color-muted: var(--skin-border-color-muted-light);
   --skin-color: var(--skin-color-light);
   --skin-color-muted: var(--skin-color-muted-light);
   --skin-heading-color: var(--skin-heading-color-light);

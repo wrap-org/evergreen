@@ -1,15 +1,12 @@
-@use '../../../styles/variables/color';
-@use '../../../styles/variables/spacing';
-
 .container {
   align-items: center;
-  background: color.$white;
+  background: var(--color-white);
   display: flex;
 
   &__image {
-    margin-right: spacing.$md;
-    padding: spacing.$md;
-    width: calc(4em + #{spacing.$md * 2});
+    margin-right: var(--spacing-md);
+    padding: var(--spacing-md);
+    width: calc(4em + var(--spacing-md) * 2);
 
     svg {
       display: block;
@@ -20,6 +17,8 @@
   }
 
   &__title {
-    font-size: 1rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    text-transform: none;
   }
 }

@@ -7,6 +7,7 @@ export interface MenuBarTabProps {
   readonly children?: React.ReactNode;
   readonly active?: boolean;
   readonly disabled?: boolean;
+  readonly completed?: boolean;
 }
 
 const MenubarTabs = ({ children }: { readonly children?: React.ReactNode }) => (
@@ -15,11 +16,17 @@ const MenubarTabs = ({ children }: { readonly children?: React.ReactNode }) => (
   </div>
 );
 
-const MenubarTab = ({ children, active, disabled }: MenuBarTabProps) => (
+const MenubarTab = ({
+  children,
+  active,
+  disabled,
+  completed,
+}: MenuBarTabProps) => (
   <li
     className={classNames(styles.menubar__tab, {
       [styles['menubar__tab--active']]: active,
       [styles['menubar__tab--disabled']]: disabled,
+      [styles['menubar__tab--completed']]: completed,
     })}
   >
     <div className={styles['menubar__tab-inner']}>{children}</div>
