@@ -1,3 +1,10 @@
+## [7.15.1](https://github.com/etchteam/mobius/compare/v7.15.0...v7.15.1) (2024-09-20)
+
+### Bug Fixes
+
+* allow cost to be a string ([a1e6e30](https://github.com/etchteam/mobius/commit/a1e6e30ed95e9bbec99be8220a4f758023880516))
+* make frequency optional ([538d267](https://github.com/etchteam/mobius/commit/538d2672e66a1942af1ffb7359470f4c851eb30e))
+
 ## [7.15.0](https://github.com/etchteam/mobius/compare/v7.14.1...v7.15.0) (2024-09-20)
 
 ### Features
