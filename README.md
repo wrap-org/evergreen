@@ -21,6 +21,9 @@ Install the global CSS in your main app file
 ```js
 import '@etchteam/mobius/src/styles/main.scss';
 import '@etchteam/mobius/components.css';
+
+// Optional font face
+import '@etchteam/mobius/src/styles/fonts.scss';
 ```
 
 Import a theme file
