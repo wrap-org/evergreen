@@ -18,7 +18,7 @@ export default function Container({
   lidColour,
   frequency,
   cost,
-}: Readonly<ContainerType & { name: Name; frequency: string }>) {
+}: Readonly<ContainerType & { name: Name; frequency?: string }>) {
   return (
     <div className={styles.container}>
       <div className={styles.container__image}>
