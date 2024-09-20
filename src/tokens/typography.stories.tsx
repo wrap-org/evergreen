@@ -62,5 +62,13 @@ export const Typography = () => (
       <span>h4</span>
       <h4>The future is in our hands to shape.</h4>
     </Spacing>
+    <Spacing bottom="md">
+      <span>h5</span>
+      <h5>The future is in our hands to shape.</h5>
+    </Spacing>
+    <Spacing bottom="md">
+      <span>h6</span>
+      <h6>The future is in our hands to shape.</h6>
+    </Spacing>
   </>
 );

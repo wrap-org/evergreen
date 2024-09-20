@@ -19,4 +19,13 @@
   &--h4 {
     font-size: var(--font-size-h4);
   }
+
+  &--family-default {
+    font-family: var(--font-family);
+    text-transform: none;
+  }
+
+  &--family-heading {
+    font-family: var(--font-family-heading);
+  }
 }

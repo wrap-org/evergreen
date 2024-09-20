@@ -29,7 +29,7 @@ const Faq = ({ question, children }: FaqProps) => {
             textDecoration="none"
             onToggle={setOpen}
             headerLabel={
-              <Title as="h3" size="h4">
+              <Title as="h3" size="h4" family="default">
                 <span itemProp="name">{question}</span>
               </Title>
             }
