@@ -61,8 +61,8 @@ export interface Container {
   secondaryColour?: string;
   frequency?: { id: number; name: string };
   materials?: { id: number; name?: string }[];
-  cost?: number;
-  [index: string]: any;
+  cost?: number | string;
+  [index: string]: unknown;
 }
 
 export const colourOptions: { value: string; name: Colour; label: string }[] = [
