@@ -1,3 +1,9 @@
+## [7.16.1](https://github.com/etchteam/mobius/compare/v7.16.0...v7.16.1) (2024-09-23)
+
+### Bug Fixes
+
+* faq click a11y ([96b7c96](https://github.com/etchteam/mobius/commit/96b7c961c3ec6b5ef8bcac497f5dc45b51751220))
+
 ## [7.16.0](https://github.com/etchteam/mobius/compare/v7.15.1...v7.16.0) (2024-09-23)
 
 ### Features
