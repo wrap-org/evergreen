@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import styles from './Faq.module.scss';
 
-import Card from 'components/canvas/Card/Card';
 import Title from 'components/content/Title/Title';
 import Collapse from 'components/controls/Collapse/Collapse';
 
@@ -22,30 +21,25 @@ const Faq = ({ question, children }: FaqProps) => {
       itemProp="mainEntity"
       itemType="https://schema.org/Question"
     >
-      {/* Use an empty onClick function to activate clickable card styles */}
-      <Card muted={!open} border shadow={open} onClick={() => {}}>
-        <Card.Body padded={false}>
-          <Collapse
-            textDecoration="none"
-            onToggle={setOpen}
-            headerLabel={
-              <Title as="h3" size="h4" family="default">
-                <span itemProp="name">{question}</span>
-              </Title>
-            }
-            align="right"
-          >
-            <div
-              className={styles.faq__content}
-              itemScope
-              itemProp="acceptedAnswer"
-              itemType="https://schema.org/Answer"
-            >
-              {children}
-            </div>
-          </Collapse>
-        </Card.Body>
-      </Card>
+      <Collapse
+        textDecoration="none"
+        onToggle={setOpen}
+        headerLabel={
+          <Title as="h3" size="h4" family="default">
+            <span itemProp="name">{question}</span>
+          </Title>
+        }
+        align="right"
+      >
+        <div
+          className={styles.faq__content}
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          {children}
+        </div>
+      </Collapse>
     </div>
   );
 };

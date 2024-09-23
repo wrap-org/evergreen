@@ -1,3 +1,9 @@
+## [7.16.0](https://github.com/etchteam/mobius/compare/v7.15.1...v7.16.0) (2024-09-23)
+
+### Features
+
+* update tokens to get latest fonts ([63158a4](https://github.com/etchteam/mobius/commit/63158a49a1e53c24688d66a78654fc0b75b8d189))
+
 ## [7.15.1](https://github.com/etchteam/mobius/compare/v7.15.0...v7.15.1) (2024-09-20)
 
 ### Bug Fixes
