@@ -1,3 +1,10 @@
+## [7.16.2](https://github.com/etchteam/mobius/compare/v7.16.1...v7.16.2) (2024-09-23)
+
+### Bug Fixes
+
+* add missing text sizes ([27a8613](https://github.com/etchteam/mobius/commit/27a8613e10409c78b3b2c4659135e90330402505))
+* heading styles ([e18e2d3](https://github.com/etchteam/mobius/commit/e18e2d36c5c0c7b0c8c24e20a3841404286e8c0b))
+
 ## [7.16.1](https://github.com/etchteam/mobius/compare/v7.16.0...v7.16.1) (2024-09-23)
 
 ### Bug Fixes
