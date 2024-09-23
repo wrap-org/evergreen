@@ -20,11 +20,26 @@ export default {
   },
 } as Meta;
 
+export const TextStory = (args: TextProps) => (
+  <Text {...args}>The future is in our hands to shape.</Text>
+);
+
+TextStory.args = {
+  as: 'span',
+  size: 'base',
+};
+
+TextStory.storyName = 'Text';
+
 export const Sizes = () => {
   const sizes: TextProps['size'][] = [
+    'base',
     'h1',
     'h2',
     'h3',
+    'h4',
+    'h5',
+    'h6',
     'xl',
     'lg',
     'md',
