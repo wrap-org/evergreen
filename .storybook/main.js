@@ -50,5 +50,15 @@ module.exports = {
     })
 
     return config;
-  }
+  },
+  previewHead: (head) => (`
+    ${head}
+    ${process.env.NODE_ENV === 'production' ? `
+      <script
+        defer
+        src="https://eu.umami.is/script.js"
+        data-website-id="270a6507-0235-449a-93bd-5523021ac817"
+      ></script>
+    ` : ''}
+  `),
 }
