@@ -19,3 +19,5 @@ export const parameters = {
 export const decorators = [
   cssVariablesTheme,
 ]
+
+export const tags = ['autodocs'];

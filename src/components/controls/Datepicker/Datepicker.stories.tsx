@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 
