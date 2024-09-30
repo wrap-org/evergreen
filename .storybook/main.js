@@ -3,17 +3,22 @@ const path = require('path');
 module.exports = {
   'stories': ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   'addons': [{
-    name: '@storybook/preset-scss',
-    options: {
-      cssLoaderOptions: {
-        modules: {
-          auto: true,
-          localIdentName: '[name]__[local]--[hash:base64:5]',
-        },
+      name: '@storybook/preset-scss',
+      options: {
+        cssLoaderOptions: {
+          modules: {
+            auto: true,
+            localIdentName: '[name]__[local]--[hash:base64:5]',
+          },
 
+        }
       }
-    }
-  }, '@storybook/addon-a11y', '@storybook/addon-docs', '@etchteam/storybook-addon-css-variables-theme', '@storybook/addon-webpack5-compiler-babel'],
+    },
+    '@storybook/addon-a11y',
+    '@storybook/addon-docs',
+    '@etchteam/storybook-addon-css-variables-theme',
+    '@storybook/addon-webpack5-compiler-babel'
+  ],
   'framework': {
     name: '@storybook/react-webpack5',
     options: {}
