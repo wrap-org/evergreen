@@ -1,8 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  'stories': ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  'addons': [{
+  'stories': [
+    '../src/docs/**/*.mdx',
+    '../src/**/*.stories.mdx',
+    '../src/**/*.stories.@(js|jsx|ts|tsx)'
+  ],
+  'addons': [
+    {
       name: '@storybook/preset-scss',
       options: {
         cssLoaderOptions: {
