@@ -5,7 +5,7 @@
 
   &__content {
     background: var(--color-white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     left: auto;
     min-width: 8em;
     opacity: 0;

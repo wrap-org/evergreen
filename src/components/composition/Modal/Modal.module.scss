@@ -42,7 +42,7 @@
   &__dialog {
     animation: fade-in-scale var(--transition-duration)
       math.div(var(--transition-duration), 2) both var(--transition-timing);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     margin: auto;
     max-height: 100vh;
     max-width: 100%;

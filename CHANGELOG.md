@@ -1,3 +1,9 @@
+## [7.17.0](https://github.com/etchteam/mobius/compare/v7.16.2...v7.17.0) (2024-09-26)
+
+### Features
+
+* latest mobius tokens ([9a642b9](https://github.com/etchteam/mobius/commit/9a642b98f748a8ad9ab9a4980b701fc7580058ec))
+
 ## [7.16.2](https://github.com/etchteam/mobius/compare/v7.16.1...v7.16.2) (2024-09-23)
 
 ### Bug Fixes
