@@ -16,6 +16,7 @@ export interface CollapseProps {
   readonly textDecoration?: 'hover' | 'none';
   readonly onToggle?: (open?: boolean) => void;
   readonly defaultOpen?: boolean;
+  readonly padded?: boolean;
 }
 
 const Collapse = ({
@@ -27,6 +28,7 @@ const Collapse = ({
   textDecoration = 'hover',
   onToggle,
   defaultOpen = false,
+  padded = true,
 }: CollapseProps) => {
   const [open, setOpen] = useState(defaultOpen);
 
@@ -42,6 +44,7 @@ const Collapse = ({
     <div
       className={cx(styles.collapse, {
         [styles['collapse--right']]: align === 'right',
+        [styles['collapse--padded']]: padded,
         [styles['collapse--text-decoration-none']]: textDecoration === 'none',
       })}
     >
