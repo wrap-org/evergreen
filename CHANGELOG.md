@@ -1,3 +1,9 @@
+## [7.18.0](https://github.com/etchteam/mobius/compare/v7.17.0...v7.18.0) (2024-10-30)
+
+### Features
+
+* add padding prop to collapse ([ca70a95](https://github.com/etchteam/mobius/commit/ca70a959672c1b3b62f73fbc96dba49f194efb9a))
+
 ## [7.17.0](https://github.com/etchteam/mobius/compare/v7.16.2...v7.17.0) (2024-09-26)
 
 ### Features
