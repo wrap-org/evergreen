@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import React, { Component, ComponentType } from 'react';
 
 import styles from './Card.module.scss';
 import CardBody from './CardBody';
@@ -9,38 +9,44 @@ import CardHeader from './CardHeader';
 import Icon from 'components/content/Icon/Icon';
 
 export interface CardProps {
-  readonly children?: React.ReactNode;
-  readonly border?: boolean;
-  readonly href?: string;
-  readonly onClick?: () => void;
-  readonly id?: string;
   readonly arrow?: boolean;
-  readonly shadow?: boolean;
+  /**
+   * The component to render the button as.
+   * Useful for routing in frameworks like NextJS: `<Card as={Link} href="/">`
+   */
+  readonly as?: ComponentType<any>;
+  readonly border?: boolean;
+  readonly children?: React.ReactNode;
   readonly control?: boolean;
-  readonly muted?: boolean;
   readonly disabled?: boolean;
+  readonly href?: string;
+  readonly id?: string;
+  readonly muted?: boolean;
+  readonly onClick?: () => void;
+  readonly shadow?: boolean;
   [x: string]: unknown;
 }
 
 class Card extends Component<CardProps> {
-  static Header: typeof CardHeader;
-  static Body: typeof CardBody;
+  static readonly Header: typeof CardHeader = CardHeader;
+  static readonly Body: typeof CardBody = CardBody;
 
   render() {
     const {
-      children,
-      border,
-      href,
-      onClick,
       arrow,
-      id,
-      shadow,
-      disabled,
+      as,
+      border,
+      children,
       control,
+      disabled,
+      href,
+      id,
       muted,
+      onClick,
+      shadow,
     } = this.props;
 
-    const CardElement = href ? 'a' : 'div';
+    const CardElement = as ?? (href ? 'a' : 'div');
 
     const handleKeyDown = (event: React.KeyboardEvent) => {
       if (event.key === 'Enter' && onClick) {
@@ -75,8 +81,5 @@ class Card extends Component<CardProps> {
     );
   }
 }
-
-Card.Header = CardHeader;
-Card.Body = CardBody;
 
 export default Card;
