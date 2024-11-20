@@ -1,3 +1,9 @@
+## [7.19.0](https://github.com/etchteam/mobius/compare/v7.18.0...v7.19.0) (2024-11-20)
+
+### Features
+
+* allow passing component to card ([d3a1050](https://github.com/etchteam/mobius/commit/d3a1050d40b34b2f8064c64e9ff90c3bc872fea5))
+
 ## [7.18.0](https://github.com/etchteam/mobius/compare/v7.17.0...v7.18.0) (2024-10-30)
 
 ### Features
