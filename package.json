@@ -22,7 +22,7 @@
   },
   "engines": {
     "npm": "^9 || ^10",
-    "node": "^18 || ^20"
+    "node": "^18 || ^20 || ^22"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -86,7 +86,7 @@
     "rollup-plugin-postcss": "4.0.2",
     "sass": "^1.54.4",
     "sass-loader": "13.1.0",
-    "semantic-release": "^24.1.0",
+    "semantic-release": "^23.1.1",
     "style-loader": "^3.3.1",
     "stylelint": "^15.10.1",
     "ts-loader": "^9.3.1",
@@ -112,9 +112,6 @@
     "react-minimal-pie-chart": "^8.4.0",
     "react-popper": "^2.3.0",
     "react-textarea-autosize": "^8.3.3"
-  },
-  "overrides": {
-    "conventional-changelog-conventionalcommits": ">= 8.0.0"
   },
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
