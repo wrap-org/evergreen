@@ -11,6 +11,15 @@ export const emphasisSkins = [
   'neutral',
 ];
 
+export type Skin =
+  | 'light'
+  | 'dark'
+  | 'info'
+  | 'attention'
+  | 'positive'
+  | 'negative'
+  | 'neutral';
+
 // This component uses non-module CSS
 // so that we can define skins at the
 // brand/theme level.
@@ -18,7 +27,7 @@ export default function Skin({
   skin,
   children,
 }: {
-  readonly skin: string;
+  readonly skin: Skin;
   readonly children?: React.ReactNode;
 }) {
   return (
