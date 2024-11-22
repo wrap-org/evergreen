@@ -8,7 +8,6 @@ export default function Alert({
   children,
   onClose,
 }: {
-  readonly skin?: string;
   readonly children?: React.ReactNode;
   readonly onClose?: () => void;
 }) {
