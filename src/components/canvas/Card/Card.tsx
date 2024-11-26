@@ -44,6 +44,7 @@ class Card extends Component<CardProps> {
       muted,
       onClick,
       shadow,
+      ...props
     } = this.props;
 
     const CardElement = as ?? (href ? 'a' : 'div');
@@ -70,6 +71,7 @@ class Card extends Component<CardProps> {
         onKeyDown={handleKeyDown}
         role={onClick ? 'button' : undefined}
         id={id}
+        {...props}
       >
         {arrow && (
           <div className={styles.card__arrow}>
