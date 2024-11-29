@@ -1,3 +1,23 @@
+## [8.0.0](https://github.com/etchteam/mobius/compare/v7.19.0...v8.0.0) (2024-11-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop unused property
+
+### Features
+
+* add Skin type for better devex ([7f4cfb5](https://github.com/etchteam/mobius/commit/7f4cfb5aa81c71e7aeb326edcd2dc3dbc7d1ff2d))
+* card additional props ([8f1e861](https://github.com/etchteam/mobius/commit/8f1e861c2d7b7fd7f0d60ddc5b8b0e6dac5d827e))
+* drop unused property ([6a23974](https://github.com/etchteam/mobius/commit/6a239749fbd175476dd24849a2a75d2aa8dfe4ea))
+* support node 22. Closes [#288](https://github.com/etchteam/mobius/issues/288) ([fa51d7c](https://github.com/etchteam/mobius/commit/fa51d7c68ef13c11812c435f07cc3c19c110e6bb))
+
+
+### Bug Fixes
+
+* directly install failing dependency ([e204269](https://github.com/etchteam/mobius/commit/e204269a361aa59e467b1224bfa938a7c75bd6a6))
+* downgrade package ([49ed283](https://github.com/etchteam/mobius/commit/49ed283046184e5e03c6b74026a5925d2ed96100))
+
 ## [7.19.0](https://github.com/etchteam/mobius/compare/v7.18.0...v7.19.0) (2024-11-20)
 
 ### Features
