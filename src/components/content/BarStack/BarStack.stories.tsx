@@ -27,9 +27,9 @@ Default.storyName = 'Bar Stack';
 export const Compact = () => {
   return (
     <BarStack compact>
-      <BarStack.Item color="dry-stream" size={25} />
-      <BarStack.Item color="residual-stream" size={25} />
-      <BarStack.Item color="organic-stream" size={25} />
+      <BarStack.Item color="dry-stream" size={20} />
+      <BarStack.Item color="residual-stream" size={20} />
+      <BarStack.Item color="organic-stream" size={20} />
     </BarStack>
   );
 };
