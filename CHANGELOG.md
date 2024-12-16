@@ -1,3 +1,15 @@
+## [8.2.0](https://github.com/etchteam/mobius/compare/v8.1.0...v8.2.0) (2024-12-16)
+
+
+### Features
+
+* add organic stream type ([633fdf2](https://github.com/etchteam/mobius/commit/633fdf27e0f273d8ad3ccecfb973f402b4023d69))
+
+
+### Bug Fixes
+
+* install mobius tokens from right place ([6df5e6e](https://github.com/etchteam/mobius/commit/6df5e6e611136c4bfcdaa25e6f909f8507e9a54a))
+
 ## [8.1.0](https://github.com/etchteam/mobius/compare/v8.0.0...v8.1.0) (2024-12-16)
 
 
