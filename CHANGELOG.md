@@ -1,3 +1,10 @@
+## [8.1.0](https://github.com/etchteam/mobius/compare/v8.0.0...v8.1.0) (2024-12-16)
+
+
+### Features
+
+* add loading spinner component ([5dc4df7](https://github.com/etchteam/mobius/commit/5dc4df7d25395f119e57e91a4925632069d3554e))
+
 ## [8.0.0](https://github.com/etchteam/mobius/compare/v7.19.0...v8.0.0) (2024-11-29)
 
 
