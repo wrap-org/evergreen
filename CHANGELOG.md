@@ -1,3 +1,10 @@
+## [8.3.0](https://github.com/etchteam/mobius/compare/v8.2.0...v8.3.0) (2025-01-07)
+
+
+### Features
+
+* migrate vehicle svg component from eteep ([4bd2b0b](https://github.com/etchteam/mobius/commit/4bd2b0b9198e78b0ab61d11775f4a870ae5575ad))
+
 ## [8.2.0](https://github.com/etchteam/mobius/compare/v8.1.0...v8.2.0) (2024-12-16)
 
 
