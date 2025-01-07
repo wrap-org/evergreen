@@ -1,0 +1,13 @@
+@use '../../../styles/variables/color.scss';
+
+.vehicle-svg {
+  @each $colorName, $color in color.$colors {
+    &.vehicle-svg--color-#{$colorName} {
+      fill: $color;
+    }
+  }
+
+  &.vehicle-svg--color-transparent {
+    stroke: var(--color-forest);
+  }
+}
