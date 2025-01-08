@@ -23,7 +23,13 @@ export type Colour =
   | 'maroon'
   | 'purple'
   | 'duckEgg'
-  | 'transparent';
+  | 'transparent'
+  | 'no-stream'
+  | 'dry-stream'
+  | 'residual-stream'
+  | 'food-stream'
+  | 'garden-stream'
+  | 'organic-stream';
 
 export type Name =
   | 'Box'
