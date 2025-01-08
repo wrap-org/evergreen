@@ -1,3 +1,10 @@
+## [8.4.0](https://github.com/etchteam/mobius/compare/v8.3.0...v8.4.0) (2025-01-08)
+
+
+### Features
+
+* add stream colors to ContainerSvg ([ffdd1da](https://github.com/etchteam/mobius/commit/ffdd1da32044cf3fe249a828e6984caaa3bacbc1))
+
 ## [8.3.0](https://github.com/etchteam/mobius/compare/v8.2.0...v8.3.0) (2025-01-07)
 
 
