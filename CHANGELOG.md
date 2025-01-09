@@ -1,3 +1,10 @@
+## [8.5.0](https://github.com/etchteam/mobius/compare/v8.4.0...v8.5.0) (2025-01-09)
+
+
+### Features
+
+* add transition for bar stack item height ([d2abdf0](https://github.com/etchteam/mobius/commit/d2abdf096a2911f53862d2cbc20a8007cc300166))
+
 ## [8.4.0](https://github.com/etchteam/mobius/compare/v8.3.0...v8.4.0) (2025-01-08)
 
 
