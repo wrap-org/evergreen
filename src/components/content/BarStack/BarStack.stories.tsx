@@ -11,9 +11,13 @@ export default {
   },
 } as Meta;
 
-export const Default = () => {
+export const Default = (args: {
+  readonly children?: React.ReactNode;
+  readonly compact?: boolean;
+  readonly width?: number;
+}) => {
   return (
-    <BarStack>
+    <BarStack {...args}>
       <BarStack.Item color="dry-stream" size={20} />
       <BarStack.Item color="residual-stream" size={20} />
       <BarStack.Item color="food-stream" size={20} />
@@ -23,6 +27,11 @@ export const Default = () => {
 };
 
 Default.storyName = 'Bar Stack';
+
+Default.args = {
+  compact: false,
+  width: 100,
+};
 
 export const Compact = () => {
   return (
