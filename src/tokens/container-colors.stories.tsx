@@ -4,7 +4,6 @@ import React from 'react';
 
 import Card from '../components/canvas/Card/Card';
 import Grid from '../components/composition/Grid/Grid';
-import Text from '../components/content/Text/Text';
 
 import colors from './container-colors.module.scss';
 
@@ -24,9 +23,9 @@ export const ContainerColors = () => (
             }}
           />
           <Card.Body>
-            <Text as="div" align="center" size="h3" title={color}>
-              <span title={color}>{key}</span>
-            </Text>
+            <div className="m-text-align-center m-text-size-h3" title={color}>
+              {key}
+            </div>
           </Card.Body>
         </Card>
       </Grid.Item>

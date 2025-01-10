@@ -1,12 +1,139 @@
 import { Meta } from '@storybook/react';
+import classNames from 'classnames';
 import React from 'react';
 
-import Text, { TextProps } from './Text';
+const alignments = ['left', 'center', 'right'];
+
+const colors = [
+  'forest',
+  'forest-75',
+  'forest-50',
+  'forest-25',
+  'earth',
+  'earth-75',
+  'earth-50',
+  'earth-25',
+  'sand',
+  'sand-75',
+  'sand-50',
+  'sand-25',
+  'lime',
+  'lime-75',
+  'lime-50',
+  'lime-25',
+  'sky',
+  'sky-75',
+  'sky-50',
+  'sky-25',
+  'rose',
+  'rose-75',
+  'rose-50',
+  'rose-25',
+  'cloud',
+  'cloud-75',
+  'steel',
+  'coal',
+  'lemon',
+  'orange',
+  'lilac',
+  'violet',
+  'body',
+  'body-muted',
+  'background',
+  'background-muted',
+  'link',
+  'neutral',
+  'neutral-light',
+  'positive',
+  'positive-light',
+  'negative',
+  'negative-light',
+  'no-stream',
+  'dry-stream',
+  'food-stream',
+  'garden-stream',
+  'organic-stream',
+  'residual-stream',
+];
+
+const sizes = [
+  'base',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'xl',
+  'lg',
+  'md',
+  'sm',
+  'xs',
+];
+
+const transforms = ['uppercase', 'lowercase', 'capitalize'];
+
+const weights = ['base', 'light', 'bold', 'black'];
 
 export default {
   title: 'Content/Text',
-  component: Text,
+  argTypes: {
+    as: {
+      control: {
+        type: 'select',
+      },
+      options: [
+        'div',
+        'span',
+        'p',
+        'a',
+        'strong',
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+      ],
+    },
+    align: {
+      control: {
+        type: 'radio',
+      },
+      options: alignments,
+    },
+    color: {
+      control: {
+        type: 'select',
+      },
+      options: colors,
+    },
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: sizes,
+    },
+    transform: {
+      control: {
+        type: 'radio',
+      },
+      options: transforms,
+    },
+    weight: {
+      control: {
+        type: 'select',
+      },
+      options: weights,
+    },
+  },
   parameters: {
+    docs: {
+      description: {
+        component:
+          'A set of utility classes that can be added to any component or element to alter the text style.',
+      },
+    },
     a11y: {
       config: {
         rules: [
@@ -20,161 +147,70 @@ export default {
   },
 } as Meta;
 
-export const TextStory = (args: TextProps) => (
-  <Text {...args}>The future is in our hands to shape.</Text>
-);
+export const Text = (args) => {
+  const { as, ...rest } = args;
 
-TextStory.args = {
-  as: 'span',
-  size: 'base',
+  const cxObj = {};
+
+  Object.keys(rest).forEach((key) => {
+    if (rest[key]) {
+      cxObj[`m-text-${key}-${rest[key]}`] = true;
+    }
+  });
+
+  const cx = classNames(cxObj);
+
+  const Element = as ?? 'span';
+
+  return <Element className={cx}>The future is in our hands to shape.</Element>;
 };
 
-TextStory.storyName = 'Text';
+Text.args = {};
 
 export const Sizes = () => {
-  const sizes: TextProps['size'][] = [
-    'base',
-    'h1',
-    'h2',
-    'h3',
-    'h4',
-    'h5',
-    'h6',
-    'xl',
-    'lg',
-    'md',
-    'sm',
-    'xs',
-  ];
-
   return (
     <>
       {sizes.map((size) => (
-        <div key={size}>
-          <Text size={size}>{size}</Text>
-        </div>
+        <p key={size} className={`m-text-size-${size}`}>
+          This text is size {size}
+        </p>
       ))}
     </>
   );
 };
 
 export const Colors = () => {
-  const colors: TextProps['color'][] = [
-    'forest',
-    'forest-75',
-    'forest-50',
-    'forest-25',
-    'earth',
-    'earth-75',
-    'earth-50',
-    'earth-25',
-    'sand',
-    'sand-75',
-    'sand-50',
-    'sand-25',
-    'lime',
-    'lime-75',
-    'lime-50',
-    'lime-25',
-    'sky',
-    'sky-75',
-    'sky-50',
-    'sky-25',
-    'rose',
-    'rose-75',
-    'rose-50',
-    'rose-25',
-    'cloud',
-    'cloud-75',
-    'steel',
-    'coal',
-    'lemon',
-    'orange',
-    'lilac',
-    'violet',
-    'body',
-    'body-muted',
-    'background',
-    'background-muted',
-    'link',
-    'neutral',
-    'neutral-light',
-    'positive',
-    'positive-light',
-    'negative',
-    'negative-light',
-    'no-stream',
-    'dry-stream',
-    'food-stream',
-    'garden-stream',
-    'organic-stream',
-    'residual-stream',
-  ];
-
   return (
     <>
       {colors.map((color) => (
-        <div key={color}>
-          <Text color={color}>{color}</Text>
-        </div>
+        <p key={color} className={`m-text-color-${color}`}>
+          {color}
+        </p>
       ))}
     </>
   );
 };
 
 export const Weights = () => {
-  const weights: TextProps['weight'][] = ['base', 'light', 'bold', 'black'];
-
   return (
     <>
       {weights.map((weight) => (
-        <div key={weight}>
-          <Text weight={weight}>{weight}</Text>
-        </div>
+        <p key={weight} className={`m-text-weight-${weight}`}>
+          This text is weighted {weight}.
+        </p>
       ))}
     </>
   );
 };
 
 export const Align = () => {
-  const alignments: TextProps['align'][] = ['center', 'left', 'right'];
-
   return (
     <>
       {alignments.map((alignment) => (
-        <div key={alignment}>
-          <Text display="block" align={alignment}>
-            {alignment}
-          </Text>
-        </div>
+        <p key={alignment} className={`m-text-align-${alignment}`}>
+          This text is {alignment} aligned.
+        </p>
       ))}
     </>
   );
 };
-
-export const DifferentHtmlElements = () => (
-  <>
-    <Text as="p">
-      Text can use typography based HTML elements through the `as` prop
-    </Text>
-    <Text as="h2">It will inherit the styles of the base HTML element</Text>
-  </>
-);
-
-export const Flush = () => (
-  <>
-    <Text as="h2" flush>
-      The `flush` prop removes outer margin/padding from the base HTML element
-    </Text>
-    <p>Like this.</p>
-  </>
-);
-
-export const Display = () => (
-  <>
-    <Text as="h2" display="inline">
-      The `display` prop alters the display css property of the element
-    </Text>{' '}
-    <span>Like this.</span>
-  </>
-);
