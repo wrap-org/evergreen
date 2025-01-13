@@ -5,7 +5,6 @@ import Wrap from './Wrap';
 
 import Card from 'components/canvas/Card/Card';
 import Spacing from 'components/composition/Spacing/Spacing';
-import TextAlign from 'components/composition/TextAlign/TextAlign';
 
 export default {
   title: 'Composition/Wrap',
@@ -22,7 +21,9 @@ export function Default() {
           <Wrap size={size}>
             <Card border>
               <Card.Body>
-                <TextAlign align="center">Limit width of the content</TextAlign>
+                <div className="m-text-align-center">
+                  Limit width of the content
+                </div>
               </Card.Body>
             </Card>
           </Wrap>

@@ -1,8 +1,6 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import Text from '../Text/Text';
-
 import Badge, { BadgeProps } from './Badge';
 
 import Grid from 'components/composition/Grid/Grid';
@@ -19,7 +17,7 @@ export const Default = (args: BadgeProps) => (
       <Skin skin={skin} key={skin}>
         <Grid.Item xs={3}>
           <Badge {...args}>
-            <Text transform="capitalize">{skin}</Text>
+            <span className="m-text-transform-capitalize">{skin}</span>
           </Badge>
         </Grid.Item>
       </Skin>
