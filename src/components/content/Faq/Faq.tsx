@@ -24,8 +24,8 @@ const Faq = ({ question, children }: FaqProps) => {
         textDecoration="none"
         onToggle={setOpen}
         headerLabel={
-          <span className="m-text-size-h4 m-text-weight-bold">
-            <span itemProp="name">{question}</span>
+          <span className="m-text-size-h4 m-text-weight-bold" itemProp="name">
+            {question}
           </span>
         }
         align="right"
