@@ -7,7 +7,7 @@ import Grid from 'components/composition/Grid/Grid';
 import Skin, { skins } from 'components/composition/Skin/Skin';
 
 export default {
-  title: 'Canvas/Card',
+  title: 'Components/Canvas/Card',
   component: Card,
 } as ComponentMeta<typeof Card>;
 

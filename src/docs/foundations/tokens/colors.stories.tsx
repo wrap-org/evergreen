@@ -2,16 +2,16 @@ import { Meta } from '@storybook/react';
 import map from 'lodash/map';
 import React from 'react';
 
-import Card from '../components/canvas/Card/Card';
-import Grid from '../components/composition/Grid/Grid';
+import Card from '../../../components/canvas/Card/Card';
+import Grid from '../../../components/composition/Grid/Grid';
 
-import colors from './container-colors.module.scss';
+import colors from './colors.module.scss';
 
 export default {
-  title: 'Tokens/Container Colors',
+  title: 'Foundations/Tokens/Colors',
 } as Meta;
 
-export const ContainerColors = () => (
+export const Colors = () => (
   <Grid wrap>
     {map(colors, (color, key) => (
       <Grid.Item key={key} xs={12} sm={6} md={4} lg={3}>

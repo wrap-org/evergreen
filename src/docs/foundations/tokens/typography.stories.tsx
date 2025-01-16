@@ -1,10 +1,10 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import Spacing from '../components/composition/Spacing/Spacing';
+import Spacing from '../../../components/composition/Spacing/Spacing';
 
 export default {
-  title: 'Tokens/Typography',
+  title: 'Foundations/Tokens/Typography',
 } as Meta;
 
 export const Typography = () => (

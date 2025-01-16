@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta } from '@storybook/react';
 import React from 'react';
 
 import Section from './Section';
@@ -10,7 +10,7 @@ import Wrap from 'components/composition/Wrap/Wrap';
 import Button from 'components/controls/Button/Button';
 
 export default {
-  title: 'Canvas/Section',
+  title: 'Components/Canvas/Section',
   component: Section,
   parameters: {
     layout: 'fullscreen',
