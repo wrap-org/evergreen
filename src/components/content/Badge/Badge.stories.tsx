@@ -7,7 +7,7 @@ import Grid from 'components/composition/Grid/Grid';
 import Skin, { emphasisSkins, skins } from 'components/composition/Skin/Skin';
 
 export default {
-  title: 'Content/Badge',
+  title: 'Components/Content/Badge',
   component: Badge,
 } as Meta;
 

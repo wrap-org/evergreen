@@ -7,7 +7,7 @@ import Card from 'components/canvas/Card/Card';
 import Grid from 'components/composition/Grid/Grid';
 
 export default {
-  title: 'Content/Icon',
+  title: 'Components/Content/Icon',
   component: Icon,
 } as Meta;
 

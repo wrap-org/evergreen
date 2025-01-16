@@ -10,7 +10,7 @@ import Spacing from 'components/composition/Spacing/Spacing';
 import Button from 'components/controls/Button/Button';
 
 export default {
-  title: 'Composition/Skin',
+  title: 'Components/Composition/Skin',
   component: Skin,
   parameters: {
     layout: 'fullscreen',

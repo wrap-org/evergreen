@@ -27,6 +27,19 @@ export const parameters = {
     },
     defaultTheme: 'Default',
   },
+  options: {
+    storySort: {
+      order: [
+        'Geting Started',
+        'Migration',
+        'Support',
+        'Showroom',
+        'Foundations',
+        'Components',
+        'Recipes',
+      ],
+    },
+  },
   docs: {
     page: ({ of }) => {
       const resolvedOf = useOf(of || 'story', ['story', 'meta']);

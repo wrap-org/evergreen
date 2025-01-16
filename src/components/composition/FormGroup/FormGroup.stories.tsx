@@ -16,7 +16,7 @@ import Radio from 'components/controls/Radio/Radio';
 import TextButton from 'components/controls/TextButton/TextButton';
 
 export default {
-  title: 'Composition/Form group',
+  title: 'Components/Composition/Form group',
   component: FormGroup,
 } as Meta;
 

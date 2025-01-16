@@ -9,7 +9,7 @@ import Spacing from 'components/composition/Spacing/Spacing';
 import Button from 'components/controls/Button/Button';
 
 export default {
-  title: 'Canvas/Alert',
+  title: 'Components/Canvas/Alert',
   component: Alert,
 } as Meta;
 

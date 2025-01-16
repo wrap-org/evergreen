@@ -7,7 +7,7 @@ import Card from 'components/canvas/Card/Card';
 import Spacing from 'components/composition/Spacing/Spacing';
 
 export default {
-  title: 'Composition/Wrap',
+  title: 'Components/Composition/Wrap',
   component: Wrap,
 } as Meta;
 

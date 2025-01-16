@@ -9,7 +9,7 @@ import Spacing from 'components/composition/Spacing/Spacing';
 import Icon from 'components/content/Icon/Icon';
 
 export default {
-  title: 'Controls/Button',
+  title: 'Components/Controls/Button',
   component: Button,
 } as Meta;
 
