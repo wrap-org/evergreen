@@ -76,7 +76,7 @@ const transforms = ['uppercase', 'lowercase', 'capitalize'];
 const weights = ['base', 'light', 'bold', 'black'];
 
 export default {
-  title: 'Components/Content/Text',
+  title: 'Foundations/Utilities/Text',
   argTypes: {
     as: {
       control: {
