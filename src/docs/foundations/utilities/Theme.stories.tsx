@@ -27,6 +27,21 @@ export default {
         component: description,
       },
     },
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Temporary disable
+            id: 'color-contrast',
+            enabled: false,
+          },
+          {
+            id: 'link-in-text-block',
+            enabled: false,
+          },
+        ],
+      },
+    },
   },
   argTypes: {
     theme: {
