@@ -4,25 +4,31 @@ import React from 'react';
 import Badge, { BadgeProps } from './Badge';
 
 import Grid from 'components/composition/Grid/Grid';
-import Skin, { emphasisSkins, skins } from 'components/composition/Skin/Skin';
+import { emphasis } from 'lib/theme';
 
 export default {
   title: 'Components/Content/Badge',
   component: Badge,
+  parameters: {
+    docs: {
+      theming: true,
+    },
+  },
 } as Meta;
 
 export const Default = (args: BadgeProps) => (
-  <>
-    {[...skins, ...emphasisSkins].map((skin) => (
-      <Skin skin={skin} key={skin}>
-        <Grid.Item xs={3}>
-          <Badge {...args}>
-            <span className="m-text-transform-capitalize">{skin}</span>
-          </Badge>
-        </Grid.Item>
-      </Skin>
+  <Grid wrap>
+    {emphasis.map((theme) => (
+      <Grid.Item key={theme}>
+        <Badge
+          className={`m-theme-${theme} m-text-transform-capitalize`}
+          {...args}
+        >
+          {theme}
+        </Badge>
+      </Grid.Item>
     ))}
-  </>
+  </Grid>
 );
 
 Default.storyName = 'Badge';
