@@ -1,0 +1,24 @@
+$directions: top, left, bottom, right;
+$sizes: xs, sm, md, lg, xl, fluid, fluid-lg;
+
+[class*='m-spacing'] {
+  --_spacing-positive: 1;
+}
+
+[class*='m-spacing-negative'] {
+  --_spacing-positive: -1;
+}
+
+.m-spacing {
+  @each $direction in $directions {
+    &-#{$direction} {
+      @each $size in $sizes {
+        &-#{$size} {
+          margin-#{$direction}: calc(
+            var(--_spacing-positive) * var(--spacing-#{$size})
+          );
+        }
+      }
+    }
+  }
+}
