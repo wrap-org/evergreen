@@ -4,7 +4,6 @@ import React, { PropsWithChildren } from 'react';
 import Button from './Button';
 
 import Section from 'components/canvas/Section/Section';
-import Spacing from 'components/composition/Spacing/Spacing';
 import Icon from 'components/content/Icon/Icon';
 
 export default {
@@ -30,7 +29,7 @@ export function Types() {
 export function DarkMode() {
   return (
     <Section className="m-theme-dark">
-      <Spacing bottom="md" top="md">
+      <div className="m-spacing-top-md m-spacing-bottom-md">
         <Button>Button</Button>
         <Button type="primary">Button</Button>{' '}
         <Button type="secondary">Button</Button>{' '}
@@ -39,7 +38,7 @@ export function DarkMode() {
         <Button type="primary" icon>
           <Icon icon="edit" title="Moderate" />
         </Button>
-      </Spacing>
+      </div>
     </Section>
   );
 }

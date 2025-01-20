@@ -2,7 +2,6 @@ import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
 import Grid from '../Grid/Grid';
-import Spacing from '../Spacing/Spacing';
 
 import FormGroup from './FormGroup';
 
@@ -33,7 +32,7 @@ Default.storyName = 'Form group';
 export function Horizontal() {
   return (
     <>
-      <FormGroup horizontal>
+      <FormGroup horizontal className="m-spacing-bottom-lg">
         <FormGroup.Label>
           <Label htmlFor="my-input">Input label</Label>
         </FormGroup.Label>
@@ -41,8 +40,6 @@ export function Horizontal() {
           <Input id="my-input" name="my-input" />
         </FormGroup.Control>
       </FormGroup>
-
-      <Spacing bottom="lg" />
 
       <FormGroup horizontal>
         <FormGroup.Label>
@@ -74,7 +71,7 @@ export function WithInfo() {
 
   return (
     <>
-      <FormGroup>
+      <FormGroup className="m-spacing-bottom-lg">
         <FormGroup.Label>
           <Label htmlFor="my-input-one">Input label</Label>
           <TextButton
@@ -92,8 +89,6 @@ export function WithInfo() {
           <Alert className="m-theme-info">This is an info message</Alert>
         </FormGroup.Info>
       </FormGroup>
-
-      <Spacing bottom="lg" />
 
       <FormGroup horizontal>
         <FormGroup.Label>
@@ -120,7 +115,7 @@ export function WithInfo() {
 export function AsFieldset() {
   return (
     <>
-      <FormGroup as="fieldset">
+      <FormGroup as="fieldset" className="m-spacing-bottom-lg">
         <FormGroup.Label as="legend">
           <Label as="span">Legend</Label>
         </FormGroup.Label>
@@ -136,8 +131,6 @@ export function AsFieldset() {
           </Grid>
         </FormGroup.Control>
       </FormGroup>
-
-      <Spacing bottom="lg" />
 
       <FormGroup as="fieldset" horizontal>
         <FormGroup.Label as="legend">

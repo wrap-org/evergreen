@@ -5,7 +5,6 @@ import Enter from './Enter';
 
 import Card from 'components/canvas/Card/Card';
 import Grid from 'components/composition/Grid/Grid';
-import Spacing from 'components/composition/Spacing/Spacing';
 import Button from 'components/controls/Button/Button';
 
 export default {
@@ -40,17 +39,14 @@ const Template: ComponentStory<typeof Enter> = (args) => {
                 <h2>Card title</h2>
               </Card.Header>
               <Card.Body>
-                <Spacing bottom="md">
-                  <p>
-                    Aliquam egestas mi quam, a tincidunt lectus faucibus
-                    euismod. Pellentesque et metus nunc. Fusce ante arcu, mattis
-                    pretium semper ac, pretium vitae velit. Donec vitae eros et
-                    arcu accumsan auctor at id ipsum. Aliquam finibus, mi ac
-                    tincidunt blandit, purus elit ornare dui, nec dignissim mi
-                    ante sit amet mauris. Nulla eget dui in mauris tempus
-                    tincidunt a eget enim.
-                  </p>
-                </Spacing>
+                <p className="m-spacing-bottom-md">
+                  Aliquam egestas mi quam, a tincidunt lectus faucibus euismod.
+                  Pellentesque et metus nunc. Fusce ante arcu, mattis pretium
+                  semper ac, pretium vitae velit. Donec vitae eros et arcu
+                  accumsan auctor at id ipsum. Aliquam finibus, mi ac tincidunt
+                  blandit, purus elit ornare dui, nec dignissim mi ante sit amet
+                  mauris. Nulla eget dui in mauris tempus tincidunt a eget enim.
+                </p>
                 <Button block="mobile">Button text</Button>
               </Card.Body>
             </Card>
