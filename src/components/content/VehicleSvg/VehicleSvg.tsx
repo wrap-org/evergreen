@@ -12,7 +12,7 @@ export interface VehicleSvgProps {
 
 function VehicleSvg({ name, color = 'no-stream' }: VehicleSvgProps) {
   const className = classNames(styles['vehicle-svg'], {
-    [styles[`vehicle-svg--color-${color}`]]: color,
+    [styles[`vehicle-svg--mobius-color-${color}`]]: color,
   });
 
   switch (name) {

@@ -1,5 +1,5 @@
 .stream-dot {
-  background: var(--color-no-stream);
+  background: var(--mobius-color-no-stream);
   border-radius: 50%;
   display: inline-block;
   height: 1em;
@@ -9,22 +9,22 @@
   width: 1em;
 
   &--dry {
-    background: var(--color-dry-stream);
+    background: var(--mobius-color-dry-stream);
   }
 
   &--residual {
-    background: var(--color-residual-stream);
+    background: var(--mobius-color-residual-stream);
   }
 
   &--food {
-    background: var(--color-food-stream);
+    background: var(--mobius-color-food-stream);
   }
 
   &--garden {
-    background: var(--color-garden-stream);
+    background: var(--mobius-color-garden-stream);
   }
 
   &--organic {
-    background: var(--color-organic-stream);
+    background: var(--mobius-color-organic-stream);
   }
 }

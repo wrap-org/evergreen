@@ -1,121 +1,121 @@
 .spacing {
   &--top {
     &-xs {
-      margin-top: var(--spacing-xs);
+      margin-top: var(--mobius-spacing-xs);
     }
 
     &-sm {
-      margin-top: var(--spacing-sm);
+      margin-top: var(--mobius-spacing-sm);
     }
 
     &-md {
-      margin-top: var(--spacing-md);
+      margin-top: var(--mobius-spacing-md);
     }
 
     &-lg {
-      margin-top: var(--spacing-lg);
+      margin-top: var(--mobius-spacing-lg);
     }
 
     &-xl {
-      margin-top: var(--spacing-xl);
+      margin-top: var(--mobius-spacing-xl);
     }
 
     &-fluid {
-      margin-top: var(--spacing-fluid);
+      margin-top: var(--mobius-spacing-fluid);
     }
 
     &-fluid-lg {
-      margin-top: var(--spacing-fluid-lg);
+      margin-top: var(--mobius-spacing-fluid-lg);
     }
   }
 
   &--left {
     &-xs {
-      margin-left: var(--spacing-xs);
+      margin-left: var(--mobius-spacing-xs);
     }
 
     &-sm {
-      margin-left: var(--spacing-sm);
+      margin-left: var(--mobius-spacing-sm);
     }
 
     &-md {
-      margin-left: var(--spacing-md);
+      margin-left: var(--mobius-spacing-md);
     }
 
     &-lg {
-      margin-left: var(--spacing-lg);
+      margin-left: var(--mobius-spacing-lg);
     }
 
     &-xl {
-      margin-left: var(--spacing-xl);
+      margin-left: var(--mobius-spacing-xl);
     }
 
     &-fluid {
-      margin-left: var(--spacing-fluid);
+      margin-left: var(--mobius-spacing-fluid);
     }
 
     &-fluid-lg {
-      margin-left: var(--spacing-fluid-lg);
+      margin-left: var(--mobius-spacing-fluid-lg);
     }
   }
 
   &--bottom {
     &-xs {
-      margin-bottom: var(--spacing-xs);
+      margin-bottom: var(--mobius-spacing-xs);
     }
 
     &-sm {
-      margin-bottom: var(--spacing-sm);
+      margin-bottom: var(--mobius-spacing-sm);
     }
 
     &-md {
-      margin-bottom: var(--spacing-md);
+      margin-bottom: var(--mobius-spacing-md);
     }
 
     &-lg {
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: var(--mobius-spacing-lg);
     }
 
     &-xl {
-      margin-bottom: var(--spacing-xl);
+      margin-bottom: var(--mobius-spacing-xl);
     }
 
     &-fluid {
-      margin-bottom: var(--spacing-fluid);
+      margin-bottom: var(--mobius-spacing-fluid);
     }
 
     &-fluid-lg {
-      margin-bottom: var(--spacing-fluid-lg);
+      margin-bottom: var(--mobius-spacing-fluid-lg);
     }
   }
 
   &--right {
     &-xs {
-      margin-right: var(--spacing-xs);
+      margin-right: var(--mobius-spacing-xs);
     }
 
     &-sm {
-      margin-right: var(--spacing-sm);
+      margin-right: var(--mobius-spacing-sm);
     }
 
     &-md {
-      margin-right: var(--spacing-md);
+      margin-right: var(--mobius-spacing-md);
     }
 
     &-lg {
-      margin-right: var(--spacing-lg);
+      margin-right: var(--mobius-spacing-lg);
     }
 
     &-xl {
-      margin-right: var(--spacing-xl);
+      margin-right: var(--mobius-spacing-xl);
     }
 
     &-fluid {
-      margin-right: var(--spacing-fluid);
+      margin-right: var(--mobius-spacing-fluid);
     }
 
     &-fluid-lg {
-      margin-right: var(--spacing-fluid-lg);
+      margin-right: var(--mobius-spacing-fluid-lg);
     }
   }
 
@@ -124,121 +124,121 @@
     &.spacing {
       &--top {
         &-xs {
-          margin-top: calc(-1 * var(--spacing-xs));
+          margin-top: calc(-1 * var(--mobius-spacing-xs));
         }
 
         &-sm {
-          margin-top: calc(-1 * var(--spacing-sm));
+          margin-top: calc(-1 * var(--mobius-spacing-sm));
         }
 
         &-md {
-          margin-top: calc(-1 * var(--spacing-md));
+          margin-top: calc(-1 * var(--mobius-spacing-md));
         }
 
         &-lg {
-          margin-top: calc(-1 * var(--spacing-lg));
+          margin-top: calc(-1 * var(--mobius-spacing-lg));
         }
 
         &-xl {
-          margin-top: calc(-1 * var(--spacing-xl));
+          margin-top: calc(-1 * var(--mobius-spacing-xl));
         }
 
         &-fluid {
-          margin-top: calc(-1 * var(--spacing-fluid));
+          margin-top: calc(-1 * var(--mobius-spacing-fluid));
         }
 
         &-fluid-lg {
-          margin-top: calc(-1 * var(--spacing-fluid-lg));
+          margin-top: calc(-1 * var(--mobius-spacing-fluid-lg));
         }
       }
 
       &--left {
         &-xs {
-          margin-left: calc(-1 * var(--spacing-xs));
+          margin-left: calc(-1 * var(--mobius-spacing-xs));
         }
 
         &-sm {
-          margin-left: calc(-1 * var(--spacing-sm));
+          margin-left: calc(-1 * var(--mobius-spacing-sm));
         }
 
         &-md {
-          margin-left: calc(-1 * var(--spacing-md));
+          margin-left: calc(-1 * var(--mobius-spacing-md));
         }
 
         &-lg {
-          margin-left: calc(-1 * var(--spacing-lg));
+          margin-left: calc(-1 * var(--mobius-spacing-lg));
         }
 
         &-xl {
-          margin-left: calc(-1 * var(--spacing-xl));
+          margin-left: calc(-1 * var(--mobius-spacing-xl));
         }
 
         &-fluid {
-          margin-left: calc(-1 * var(--spacing-fluid));
+          margin-left: calc(-1 * var(--mobius-spacing-fluid));
         }
 
         &-fluid-lg {
-          margin-left: calc(-1 * var(--spacing-fluid-lg));
+          margin-left: calc(-1 * var(--mobius-spacing-fluid-lg));
         }
       }
 
       &--bottom {
         &-xs {
-          margin-bottom: calc(-1 * var(--spacing-xs));
+          margin-bottom: calc(-1 * var(--mobius-spacing-xs));
         }
 
         &-sm {
-          margin-bottom: calc(-1 * var(--spacing-sm));
+          margin-bottom: calc(-1 * var(--mobius-spacing-sm));
         }
 
         &-md {
-          margin-bottom: calc(-1 * var(--spacing-md));
+          margin-bottom: calc(-1 * var(--mobius-spacing-md));
         }
 
         &-lg {
-          margin-bottom: calc(-1 * var(--spacing-lg));
+          margin-bottom: calc(-1 * var(--mobius-spacing-lg));
         }
 
         &-xl {
-          margin-bottom: calc(-1 * var(--spacing-xl));
+          margin-bottom: calc(-1 * var(--mobius-spacing-xl));
         }
 
         &-fluid {
-          margin-bottom: calc(-1 * var(--spacing-fluid));
+          margin-bottom: calc(-1 * var(--mobius-spacing-fluid));
         }
 
         &-fluid-lg {
-          margin-bottom: calc(-1 * var(--spacing-fluid-lg));
+          margin-bottom: calc(-1 * var(--mobius-spacing-fluid-lg));
         }
       }
 
       &--right {
         &-xs {
-          margin-right: calc(-1 * var(--spacing-xs));
+          margin-right: calc(-1 * var(--mobius-spacing-xs));
         }
 
         &-sm {
-          margin-right: calc(-1 * var(--spacing-sm));
+          margin-right: calc(-1 * var(--mobius-spacing-sm));
         }
 
         &-md {
-          margin-right: calc(-1 * var(--spacing-md));
+          margin-right: calc(-1 * var(--mobius-spacing-md));
         }
 
         &-lg {
-          margin-right: calc(-1 * var(--spacing-lg));
+          margin-right: calc(-1 * var(--mobius-spacing-lg));
         }
 
         &-xl {
-          margin-right: calc(-1 * var(--spacing-xl));
+          margin-right: calc(-1 * var(--mobius-spacing-xl));
         }
 
         &-fluid {
-          margin-right: calc(-1 * var(--spacing-fluid));
+          margin-right: calc(-1 * var(--mobius-spacing-fluid));
         }
 
         &-fluid-lg {
-          margin-right: calc(-1 * var(--spacing-fluid-lg));
+          margin-right: calc(-1 * var(--mobius-spacing-fluid-lg));
         }
       }
     }

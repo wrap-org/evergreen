@@ -17,7 +17,7 @@ const List = ({
     <ul
       ref={parent}
       className={cx(styles.list, {
-        [styles[`list--spacing-${spacing}`]]: spacing,
+        [styles[`list--mobius-spacing-${spacing}`]]: spacing,
       })}
     >
       {children}

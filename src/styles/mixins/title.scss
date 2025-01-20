@@ -1,12 +1,12 @@
 @mixin title {
-  color: var(--theme-heading-color);
-  font-weight: var(--heading-font-weight, var(--font-weight-bold));
-  line-height: var(--font-line-height-sm);
-  margin-bottom: var(--spacing-xs);
+  color: var(--mobius-skin-heading-color);
+  font-weight: var(--heading-font-weight, var(--mobius-font-weight-bold));
+  line-height: var(--mobius-font-line-height-sm);
+  margin-bottom: var(--mobius-spacing-xs);
   margin-top: 0;
 
   b,
   strong {
-    font-weight: var(--font-weight-black);
+    font-weight: var(--mobius-font-weight-black);
   }
 }

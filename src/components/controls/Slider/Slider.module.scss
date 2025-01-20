@@ -3,17 +3,17 @@
 
 .slider {
   &__input {
-    height: var(--spacing-thumb);
+    height: var(--mobius-spacing-thumb);
     overflow: hidden;
     position: relative;
   }
 
   &__track {
-    border: 1px solid var(--input-color);
-    border-radius: var(--radius-md);
+    border: 1px solid var(--mobius-input-color);
+    border-radius: var(--mobius-radius-md);
     height: 1rem;
     position: absolute;
-    top: calc((var(--spacing-thumb) - 1rem) / 2);
+    top: calc((var(--mobius-spacing-thumb) - 1rem) / 2);
 
     &--upper {
       background: var(--mobius-color-lime);
@@ -42,7 +42,7 @@
 
   &__label {
     display: block;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--mobius-font-weight-bold);
     min-width: 0;
     padding: 0;
 

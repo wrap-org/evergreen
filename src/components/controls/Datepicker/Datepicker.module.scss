@@ -4,25 +4,25 @@
   @include forms.input;
 
   &__button {
-    background: var(--input-background);
+    background: var(--mobius-input-background);
     border: 0 none;
-    border-bottom-left-radius: var(--input-border-radius);
-    border-right: 1px solid var(--input-border);
-    border-top-left-radius: var(--input-border-radius);
-    color: var(--input-color);
+    border-bottom-left-radius: var(--mobius-input-border-radius);
+    border-right: 1px solid var(--mobius-input-border);
+    border-top-left-radius: var(--mobius-input-border-radius);
+    color: var(--mobius-input-color);
     cursor: pointer;
-    font-size: var(--font-size-xl);
+    font-size: var(--mobius-font-size-xl);
     line-height: 1.75;
-    padding: 0 calc(var(--input-padding-horizontal) / 2) 0
-      calc(var(--input-padding-horizontal) / 2);
+    padding: 0 calc(var(--mobius-input-padding-horizontal) / 2) 0
+      calc(var(--mobius-input-padding-horizontal) / 2);
     transition:
-      background var(--transition),
-      border-color var(--transition);
+      background var(--mobius-transition),
+      border-color var(--mobius-transition);
 
     &:hover,
     &:focus {
-      background: var(--input-background-focus);
-      border-color: var(--input-border-hover);
+      background: var(--mobius-input-background-focus);
+      border-color: var(--mobius-input-border-hover);
     }
   }
 
@@ -37,38 +37,38 @@
 
   &__daypicker {
     --rdp-cell-size: 2rem;
-    --rdp-accent-color: var(--color-link);
-    --rdp-background-color: var(--input-border-hover); // hover color
+    --rdp-accent-color: var(--mobius-color-link);
+    --rdp-background-color: var(--mobius-input-border-hover); // hover color
     --rdp-outline: 2px solid var(--rdp-accent-color);
 
-    background: var(--color-white);
-    border: 1px solid var(--input-border);
-    border-radius: var(--input-border-radius);
+    background: var(--mobius-color-white);
+    border: 1px solid var(--mobius-input-border);
+    border-radius: var(--mobius-input-border-radius);
     box-shadow: 0 2px 5px rgb(0 0 0 / 15%);
-    margin-top: var(--spacing-sm);
-    padding: var(--spacing-md);
+    margin-top: var(--mobius-spacing-sm);
+    padding: var(--mobius-spacing-md);
 
     &-caption {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0 var(--spacing-sm) var(--spacing-sm);
+      padding: 0 var(--mobius-spacing-sm) var(--mobius-spacing-sm);
       text-align: left;
     }
 
     &-caption-label {
-      color: var(--color-link);
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-bold);
+      color: var(--mobius-color-link);
+      font-size: var(--mobius-font-size-sm);
+      font-weight: var(--mobius-font-weight-bold);
       margin: 0;
       padding: 0;
       text-transform: uppercase;
     }
 
     &-head-cell {
-      color: var(--color-body);
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-base);
+      color: var(--mobius-color-body);
+      font-size: var(--mobius-font-size-sm);
+      font-weight: var(--mobius-font-weight-base);
       height: var(--rdp-cell-size);
       padding: 0;
       text-align: center;
@@ -77,16 +77,16 @@
     }
 
     &-cell {
-      padding: var(--spacing-xs) var(--spacing-xs);
+      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
     }
 
     &-day {
-      border-radius: var(--input-border-radius);
-      color: var(--color-body);
-      font-size: var(--font-size-sm);
+      border-radius: var(--mobius-input-border-radius);
+      color: var(--mobius-color-body);
+      font-size: var(--mobius-font-size-sm);
       height: var(--rdp-cell-size);
       text-align: center;
-      transition: background var(--transition);
+      transition: background var(--mobius-transition);
       width: var(--rdp-cell-size);
 
       &:focus {
@@ -98,18 +98,18 @@
       &,
       &:hover,
       &:focus {
-        background: var(--color-neutral-light) !important;
+        background: var(--mobius-color-neutral-light) !important;
       }
     }
 
     &-nav-button {
       align-items: center;
-      border-radius: var(--input-border-radius);
-      color: var(--color-body);
+      border-radius: var(--mobius-input-border-radius);
+      color: var(--mobius-color-body);
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
-      padding: var(--spacing-xs) var(--spacing-xs);
+      padding: var(--mobius-spacing-xs) var(--mobius-spacing-xs);
       width: 1.65rem;
 
       &:focus {
@@ -120,15 +120,15 @@
     &-dropdown-month {
       align-items: center;
       display: inline-flex;
-      margin-right: var(--spacing-md);
+      margin-right: var(--mobius-spacing-md);
       position: relative;
     }
 
     &-dropdown-icon {
-      color: var(--color-body);
-      height: var(--font-size-sm);
-      margin: -1px 0 0 var(--spacing-xs);
-      width: var(--font-size-sm);
+      color: var(--mobius-color-body);
+      height: var(--mobius-font-size-sm);
+      margin: -1px 0 0 var(--mobius-spacing-xs);
+      width: var(--mobius-font-size-sm);
     }
   }
 

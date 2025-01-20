@@ -3,7 +3,8 @@
 
 .grid {
   display: flex;
-  margin: calc(var(--spacing-md) / -2) calc(var(--spacing-md) / -2);
+  margin: calc(var(--mobius-spacing-md) / -2)
+    calc(var(--mobius-spacing-md) / -2);
 
   // Wrap
   &--wrap {
@@ -17,15 +18,16 @@
   // Inset
   &--inset {
     margin: 0;
-    padding: calc(var(--spacing-md) / 2) calc(var(--spacing-md) / 2);
+    padding: calc(var(--mobius-spacing-md) / 2)
+      calc(var(--mobius-spacing-md) / 2);
   }
 
   &--inset-fluid {
-    padding: var(--spacing-fluid-sm) 0;
+    padding: var(--mobius-spacing-fluid-sm) 0;
   }
 
   &--inset-vertical-fluid {
-    padding: var(--spacing-fluid-sm) 0;
+    padding: var(--mobius-spacing-fluid-sm) 0;
   }
 
   // Direction
@@ -102,7 +104,8 @@
   &__item {
     flex: 0 0 auto;
     min-width: 0;
-    padding: calc(var(--spacing-md) / 2) calc(var(--spacing-md) / 2);
+    padding: calc(var(--mobius-spacing-md) / 2)
+      calc(var(--mobius-spacing-md) / 2);
 
     &--grow {
       flex-grow: 1;
@@ -165,36 +168,44 @@
   }
 
   // Spacing
-  &--spacing {
+  &--mobius-spacing {
     &-xs {
-      margin: calc(var(--spacing-xs) / -2) calc(var(--spacing-xs) / -2);
+      margin: calc(var(--mobius-spacing-xs) / -2)
+        calc(var(--mobius-spacing-xs) / -2);
 
       > .grid__item {
-        padding: calc(var(--spacing-xs) / 2) calc(var(--spacing-xs) / 2);
+        padding: calc(var(--mobius-spacing-xs) / 2)
+          calc(var(--mobius-spacing-xs) / 2);
       }
     }
 
     &-sm {
-      margin: calc(var(--spacing-sm) / -2) calc(var(--spacing-sm) / -2);
+      margin: calc(var(--mobius-spacing-sm) / -2)
+        calc(var(--mobius-spacing-sm) / -2);
 
       > .grid__item {
-        padding: calc(var(--spacing-sm) / 2) calc(var(--spacing-sm) / 2);
+        padding: calc(var(--mobius-spacing-sm) / 2)
+          calc(var(--mobius-spacing-sm) / 2);
       }
     }
 
     &-lg {
-      margin: calc(var(--spacing-lg) / -2) calc(var(--spacing-lg) / -2);
+      margin: calc(var(--mobius-spacing-lg) / -2)
+        calc(var(--mobius-spacing-lg) / -2);
 
       > .grid__item {
-        padding: calc(var(--spacing-lg) / 2) calc(var(--spacing-lg) / 2);
+        padding: calc(var(--mobius-spacing-lg) / 2)
+          calc(var(--mobius-spacing-lg) / 2);
       }
     }
 
     &-xl {
-      margin: calc(var(--spacing-xl) / -2) calc(var(--spacing-xl) / -2);
+      margin: calc(var(--mobius-spacing-xl) / -2)
+        calc(var(--mobius-spacing-xl) / -2);
 
       > .grid__item {
-        padding: calc(var(--spacing-xl) / 2) calc(var(--spacing-xl) / 2);
+        padding: calc(var(--mobius-spacing-xl) / 2)
+          calc(var(--mobius-spacing-xl) / 2);
       }
     }
 

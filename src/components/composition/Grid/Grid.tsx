@@ -38,7 +38,7 @@ const Grid = ({
     [styles[`grid--${direction}`]]: direction,
     [styles[`grid--justify-${justify}`]]: justify,
     [styles[`grid--align-${align}`]]: align,
-    [styles[`grid--spacing-${spacing}`]]: spacing !== 'default',
+    [styles[`grid--mobius-spacing-${spacing}`]]: spacing !== 'default',
     [styles['grid--full-width']]: fullWidth,
   });
 

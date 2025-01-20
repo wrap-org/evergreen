@@ -1,18 +1,6 @@
 @use '~normalize.css/normalize';
 @use '~@etchteam/mobius-tokens/dist';
 
-@use 'variables/breakpoint';
-@use 'variables/color';
-@use 'variables/font';
-@use 'variables/radius';
-@use 'variables/shadow';
-@use 'variables/spacing';
-@use 'variables/themes';
-@use 'variables/transition';
-
-@use 'variables/input';
-@use 'variables/button';
-
 @use 'base/scaffolding';
 @use 'base/typography';
 @use 'base/forms';

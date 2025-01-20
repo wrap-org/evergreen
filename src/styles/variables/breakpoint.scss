@@ -1,25 +1,14 @@
 @use '~@etchteam/mobius-tokens/dist/breakpoint';
 
-$xs: breakpoint.$mobius-breakpoint-xs;
-$sm: breakpoint.$mobius-breakpoint-sm;
-$md: breakpoint.$mobius-breakpoint-md;
-$lg: breakpoint.$mobius-breakpoint-lg;
-$xl: breakpoint.$mobius-breakpoint-xl;
-$xxl: breakpoint.$mobius-breakpoint-xxl;
-$xxxl: breakpoint.$mobius-breakpoint-xxxl;
-$tablet: breakpoint.$mobius-breakpoint-tablet;
-$desktop: breakpoint.$mobius-breakpoint-desktop;
-$max: breakpoint.$mobius-breakpoint-max;
-
 $map: (
-  xs: $xs,
-  sm: $sm,
-  md: $md,
-  lg: $lg,
-  xl: $xl,
-  xxl: $xxl,
-  xxxl: $xxxl,
-  tablet: $tablet,
-  desktop: $desktop,
-  max: $max,
+  xs: breakpoint.$mobius-breakpoint-xs,
+  sm: breakpoint.$mobius-breakpoint-sm,
+  md: breakpoint.$mobius-breakpoint-md,
+  lg: breakpoint.$mobius-breakpoint-lg,
+  xl: breakpoint.$mobius-breakpoint-xl,
+  xxl: breakpoint.$mobius-breakpoint-xxl,
+  xxxl: breakpoint.$mobius-breakpoint-xxxl,
+  tablet: breakpoint.$mobius-breakpoint-tablet,
+  desktop: breakpoint.$mobius-breakpoint-desktop,
+  max: breakpoint.$mobius-breakpoint-max,
 );

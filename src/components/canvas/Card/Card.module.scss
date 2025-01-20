@@ -1,27 +1,27 @@
 .card {
-  --card-border-color: var(--theme-border-color);
+  --card-border-color: var(--mobius-skin-border-color);
 
-  background: var(--theme-background);
+  background: var(--mobius-skin-background);
   border: 1px solid transparent;
   border-radius: var(--card-border-radius);
-  color: var(--theme-color);
+  color: var(--mobius-skin-color);
   display: block;
   transition:
-    background-color var(--transition),
-    color var(--transition),
-    border-color var(--transition);
+    background-color var(--mobius-transition),
+    color var(--mobius-transition),
+    border-color var(--mobius-transition);
   width: 100%;
 
   &__arrow {
     float: right;
-    font-size: var(--font-size-xl);
-    padding: var(--spacing-md);
+    font-size: var(--mobius-font-size-xl);
+    padding: var(--mobius-spacing-md);
   }
 
   &__header {
     border-bottom: 1px solid transparent;
-    padding: var(--spacing-md);
-    transition: border-color var(--transition);
+    padding: var(--mobius-spacing-md);
+    transition: border-color var(--mobius-transition);
 
     // when there's a card with only a header
     &:last-child {
@@ -38,7 +38,7 @@
 
   &__body {
     &--padded {
-      padding: var(--spacing-md);
+      padding: var(--mobius-spacing-md);
     }
 
     &--border {
@@ -68,35 +68,35 @@
     text-decoration: none;
 
     &:hover {
-      border-color: var(--input-border-hover);
+      border-color: var(--mobius-input-border-hover);
       text-decoration: none;
     }
 
     &:focus {
-      border-color: var(--input-border-focus);
+      border-color: var(--mobius-input-border-focus);
       outline: none;
     }
   }
 
-  &--shadow {
-    box-shadow: var(--shadow);
+  &--mobius-shadow {
+    box-shadow: var(--mobius-shadow);
   }
 
   &--control {
-    background: var(--input-background);
-    border: 1px solid var(--input-border);
-    border-radius: var(--input-border-radius);
+    background: var(--mobius-input-background);
+    border: 1px solid var(--mobius-input-border);
+    border-radius: var(--mobius-input-border-radius);
   }
 
   &--disabled {
-    background: var(--theme-background-muted);
+    background: var(--mobius-skin-background-muted);
     pointer-events: none;
   }
 
   &--muted,
   &__body--muted {
-    --card-border-color: var(--theme-border-color-muted);
-    background: var(--theme-background-muted);
+    --card-border-color: var(--mobius-skin-border-color-muted);
+    background: var(--mobius-skin-background-muted);
   }
 
   &:has(.card__body--muted) {

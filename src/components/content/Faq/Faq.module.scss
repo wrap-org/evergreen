@@ -1,28 +1,28 @@
 .faq {
-  background: var(--theme-background-muted);
-  border: 1px solid var(--theme-border-color-muted);
-  border-radius: var(--radius-sm);
+  background: var(--mobius-skin-background-muted);
+  border: 1px solid var(--mobius-skin-border-color-muted);
+  border-radius: var(--mobius-radius-sm);
   transition:
-    background-color var(--transition),
-    color var(--transition),
-    border-color var(--transition);
+    background-color var(--mobius-transition),
+    color var(--mobius-transition),
+    border-color var(--mobius-transition);
   width: 100%;
 
   &--open {
-    background: var(--theme-background);
-    border-color: var(--theme-border-color);
-    box-shadow: var(--shadow);
+    background: var(--mobius-skin-background);
+    border-color: var(--mobius-skin-border-color);
+    box-shadow: var(--mobius-shadow);
   }
 
   &__content {
-    padding-top: var(--spacing-md);
+    padding-top: var(--mobius-spacing-md);
   }
 
   &:hover {
-    border-color: var(--input-border-hover);
+    border-color: var(--mobius-input-border-hover);
   }
 
   &:focus-within {
-    border-color: var(--input-border-focus);
+    border-color: var(--mobius-input-border-focus);
   }
 }

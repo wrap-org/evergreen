@@ -12,7 +12,7 @@ export interface ItemProps {
 
 const Item = ({ color, size }: ItemProps) => {
   const classes = classnames(styles['bar-stack__item'], {
-    [styles[`bar-stack__item--color-${color}`]]: color,
+    [styles[`bar-stack__item--mobius-color-${color}`]]: color,
   });
 
   return <div className={classes} style={{ width: `${size}%` }} />;

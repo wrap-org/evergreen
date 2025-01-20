@@ -24,8 +24,8 @@
     display: grid;
     grid-template-rows: 0fr;
     transition:
-      grid-template-rows var(--transition),
-      content-visibility var(--transition) allow-discrete;
+      grid-template-rows var(--mobius-transition),
+      content-visibility var(--mobius-transition) allow-discrete;
 
     &--open {
       content-visibility: visible;
@@ -38,7 +38,7 @@
   }
 
   &--padded {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--mobius-spacing-sm) var(--mobius-spacing-md);
   }
 
   &--text-decoration-none {
