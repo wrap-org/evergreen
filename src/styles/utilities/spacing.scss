@@ -1,0 +1,14 @@
+$directions: top, left, bottom, right;
+$sizes: xs, sm, md, lg, xl, fluid, fluid-lg;
+
+.m-spacing {
+  @each $direction in $directions {
+    &-#{$direction} {
+      @each $size in $sizes {
+        &-#{$size} {
+          margin-#{$direction}: var(--spacing-#{$size});
+        }
+      }
+    }
+  }
+}
