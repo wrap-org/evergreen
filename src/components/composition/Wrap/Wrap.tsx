@@ -9,10 +9,12 @@ import styles from './Wrap.module.scss';
 function Wrap({
   size,
   gutter,
+  className,
   children,
 }: Readonly<{
   size?: Breakpoints | 'auto' | string;
   gutter?: SpacingType | 'none';
+  className?: string;
   children?: React.ReactNode;
 }>) {
   return (
@@ -20,6 +22,7 @@ function Wrap({
       className={classNames(styles.wrap, {
         [styles[`wrap--${size}`]]: size,
         [styles[`wrap--gutter-${gutter}`]]: gutter,
+        [`${className}`]: className,
       })}
     >
       {children}

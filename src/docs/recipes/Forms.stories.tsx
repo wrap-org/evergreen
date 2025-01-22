@@ -2,7 +2,6 @@ import React from 'react';
 
 import FormGroup from 'components/composition/FormGroup/FormGroup';
 import Grid from 'components/composition/Grid/Grid';
-import Spacing from 'components/composition/Spacing/Spacing';
 import Wrap from 'components/composition/Wrap/Wrap';
 import Icon from 'components/content/Icon/Icon';
 import Button from 'components/controls/Button/Button';
@@ -42,8 +41,8 @@ export function Form() {
             future.
           </Grid.Item>
         </Grid>
-        <Spacing bottom="lg" />
-        <FormGroup>
+        <div className="m-spacing-bottom-lg" />
+        <FormGroup className="m-spacing-bottom-md">
           <Grid wrap>
             <Grid.Item xs={12} md={6}>
               <Label htmlFor="sector">Sector</Label>
@@ -53,8 +52,7 @@ export function Form() {
             </Grid.Item>
           </Grid>
         </FormGroup>
-        <Spacing bottom="md" />
-        <FormGroup>
+        <FormGroup className="m-spacing-bottom-md">
           <Grid wrap>
             <Grid.Item xs={12} md={6}>
               <Label htmlFor="region">Region</Label>
@@ -66,8 +64,7 @@ export function Form() {
             </Grid.Item>
           </Grid>
         </FormGroup>
-        <Spacing bottom="md" />
-        <FormGroup>
+        <FormGroup className="m-spacing-bottom-lg">
           <Grid wrap>
             <Grid.Item xs={12} md={6}>
               <Label htmlFor="multiple" as="span" id="sites-label">
@@ -96,7 +93,6 @@ export function Form() {
             </Grid.Item>
           </Grid>
         </FormGroup>
-        <Spacing bottom="lg" />
         <Grid direction="row-reverse">
           <Grid.Item xs={6}>
             <Button type="primary" block>

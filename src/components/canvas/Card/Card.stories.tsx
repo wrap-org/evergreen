@@ -61,7 +61,7 @@ Arrow.args = {
 
 export const MutedBody = () => (
   <Grid>
-    {themes.map((theme) => (
+    {base.map((theme) => (
       <Grid.Item key={theme} xs={12} md={4} flex>
         <Card border className={`m-theme-${theme}`}>
           <Card.Header>

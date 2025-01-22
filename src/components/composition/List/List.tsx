@@ -7,9 +7,11 @@ import Item from './ListItem';
 
 const List = ({
   children,
+  className,
   spacing = 'md',
 }: {
   readonly children?: React.ReactNode;
+  readonly className?: string;
   readonly spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'none';
 }) => {
   const [parent] = useAutoAnimate();
@@ -17,7 +19,8 @@ const List = ({
     <ul
       ref={parent}
       className={cx(styles.list, {
-        [styles[`list--mobius-spacing-${spacing}`]]: spacing,
+        [styles[`list--spacing-${spacing}`]]: spacing,
+        [`${className}`]: className,
       })}
     >
       {children}

@@ -2,7 +2,6 @@ import React from 'react';
 
 import Section from 'components/canvas/Section/Section';
 import Grid from 'components/composition/Grid/Grid';
-import Spacing from 'components/composition/Spacing/Spacing';
 import Wrap from 'components/composition/Wrap/Wrap';
 import Button from 'components/controls/Button/Button';
 import { base, emphasis, themes } from 'lib/theme';
@@ -55,10 +54,9 @@ export default {
 
 const ThemedSection = ({ theme }) => (
   <Section className={`m-theme-${theme}`}>
-    <Spacing bottom="fluid" />
-    <Wrap size="md">
+    <Wrap size="md" className="m-spacing-top-fluid m-spacing-bottom-fluid">
       <h1>{theme} theme</h1>
-      <p>
+      <p className="m-spacing-bottom-md">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
         <a href="https://wrap.ngo">faucibus euismod</a>. Pellentesque et metus
         nunc. Fusce ante arcu, mattis pretium semper ac, pretium vitae velit.
@@ -66,7 +64,7 @@ const ThemedSection = ({ theme }) => (
         mi ac tincidunt blandit, purus elit ornare dui, nec dignissim mi ante
         sit amet mauris.
       </p>
-      <Spacing bottom="md" />
+
       <Grid>
         <Grid.Item xs={12} sm="auto">
           <Button type="primary" block="mobile">
@@ -78,7 +76,6 @@ const ThemedSection = ({ theme }) => (
         </Grid.Item>
       </Grid>
     </Wrap>
-    <Spacing bottom="fluid" />
   </Section>
 );
 

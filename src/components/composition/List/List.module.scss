@@ -7,7 +7,7 @@
     @include list.item;
   }
 
-  &--mobius-spacing {
+  &--spacing {
     &-none {
       --list-spacing: 0;
     }

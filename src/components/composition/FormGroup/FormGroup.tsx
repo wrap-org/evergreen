@@ -6,6 +6,7 @@ import styles from './FormGroup.module.scss';
 export interface FormGroupProps {
   readonly children?: React.ReactNode;
   readonly horizontal?: boolean;
+  readonly className?: string;
   readonly as?: 'div' | 'fieldset';
 }
 
@@ -52,10 +53,11 @@ const Control = ({ children }: { readonly children?: React.ReactNode }) => (
   <div className={styles['form-group__control']}>{children}</div>
 );
 
-const FormGroup = ({ children, horizontal, as }: FormGroupProps) => (
+const FormGroup = ({ children, horizontal, className, as }: FormGroupProps) => (
   <div
     className={classnames(styles['form-group'], {
       [styles['form-group--horizontal']]: horizontal,
+      [`${className}`]: className,
     })}
   >
     {as === 'fieldset' ? (

@@ -62,7 +62,7 @@ class Card extends Component<CardProps> {
         className={classNames(styles.card, {
           [styles['card--border']]: border,
           [styles['card--clickable']]: href || onClick,
-          [styles['card--mobius-shadow']]: shadow,
+          [styles['card--shadow']]: shadow,
           [styles['card--disabled']]: disabled,
           [styles['card--control']]: control,
           [styles['card--muted']]: muted,

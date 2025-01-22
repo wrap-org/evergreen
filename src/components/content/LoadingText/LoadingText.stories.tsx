@@ -3,8 +3,6 @@ import React from 'react';
 
 import LoadingText from './LoadingText';
 
-import Spacing from 'components/composition/Spacing/Spacing';
-
 export default {
   title: 'Components/Content/Loading Text',
   component: LoadingText,
@@ -25,9 +23,9 @@ export default {
 export const Default = () => (
   <>
     <LoadingText chars={350} />
-    <Spacing bottom="md" />
+    <div className="m-spacing-bottom-md" />
     <LoadingText chars={50} as="h2" />
-    <Spacing bottom="md" />
+    <div className="m-spacing-bottom-md" />
     <LoadingText chars={20} as="p" />
   </>
 );
