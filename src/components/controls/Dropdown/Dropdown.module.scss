@@ -4,8 +4,8 @@
   vertical-align: middle;
 
   &__content {
-    background: var(--color-white);
-    box-shadow: var(--shadow);
+    background: var(--mobius-color-white);
+    box-shadow: var(--mobius-shadow);
     left: auto;
     min-width: 8em;
     opacity: 0;
@@ -15,8 +15,8 @@
     top: 100%;
     transform: translateY(-0.25em);
     transition:
-      opacity var(--transition),
-      transform var(--transition);
+      opacity var(--mobius-transition),
+      transform var(--mobius-transition);
   }
 
   &--open {

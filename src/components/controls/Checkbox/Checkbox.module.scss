@@ -7,7 +7,7 @@
   width: 100%;
 
   + .checkbox {
-    margin-top: var(--spacing-sm);
+    margin-top: var(--mobius-spacing-sm);
   }
 
   &__input {
@@ -17,7 +17,7 @@
   &__indicator {
     @include forms.indicator;
     align-self: flex-start;
-    border-radius: var(--radius-xs);
+    border-radius: var(--mobius-radius-xs);
 
     .checkbox--checked & {
       background: currentColor;
@@ -28,11 +28,12 @@
     opacity: 0;
     transform: scale(0.9);
     transition:
-      opacity var(--transition),
-      transform var(--transition-duration-boing) var(--transition-timing-boing);
+      opacity var(--mobius-transition),
+      transform var(--mobius-transition-duration-boing)
+        var(--mobius-transition-timing-boing);
 
     .checkbox--checked & {
-      color: var(--color-white);
+      color: var(--mobius-color-white);
       opacity: 1;
       transform: none;
     }
@@ -44,16 +45,16 @@
     .checkbox__indicator {
       &:hover,
       &:focus-within {
-        border-color: var(--input-border-hover);
+        border-color: var(--mobius-input-border-hover);
       }
 
       &:focus-within {
-        background: var(--input-background-focus);
+        background: var(--mobius-input-background-focus);
       }
     }
 
     &.checkbox--invalid .checkbox__indicator {
-      border-color: var(--color-negative);
+      border-color: var(--mobius-color-negative);
     }
 
     &.checkbox--disabled {
@@ -64,11 +65,11 @@
   &--type-input {
     @include forms.input;
     @include forms.input-padding;
-    border-radius: var(--input-checkradio-border-radius);
+    border-radius: var(--mobius-input-checkradio-border-radius);
   }
 
   &--type-list {
-    background: var(--color-white);
+    background: var(--mobius-color-white);
     border-radius: 0;
 
     + .checkbox {

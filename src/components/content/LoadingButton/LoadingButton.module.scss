@@ -1,4 +1,4 @@
-@use '../../../styles/variables/breakpoint';
+@use '~@etchteam/mobius-tokens/dist/breakpoint';
 @use '../../../styles/mixins/loading';
 @use '../../../styles/mixins/button';
 
@@ -13,8 +13,8 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(var(--spacing-xs) - var(--button-border-width))
-      var(--spacing-sm);
+    padding: calc(var(--mobius-spacing-xs) - var(--mobius-button-border-width))
+      var(--mobius-spacing-sm);
   }
 
   &--block {
@@ -25,7 +25,7 @@
       display: block;
       width: 100%;
 
-      @media (min-width: breakpoint.$md) {
+      @media (min-width: breakpoint.$mobius-breakpoint-md) {
         display: inline-block;
         width: auto;
       }

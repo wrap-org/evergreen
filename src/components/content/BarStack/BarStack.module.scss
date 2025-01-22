@@ -1,7 +1,7 @@
 @use '../../../styles/variables/color';
 
 .bar-stack {
-  --bar-stack-border-radius: var(--radius-sm);
+  --bar-stack-border-radius: var(--mobius-radius-sm);
   --bar-stack-item-height: 1.5rem;
   --bar-stack-item-height-compact: 0.5rem;
   --bar-stack-background: var(--mobius-color-forest-25);
@@ -14,7 +14,7 @@
 
   &__item {
     height: var(--bar-stack-item-height);
-    transition: height var(--transition);
+    transition: height var(--mobius-transition);
 
     &:last-child {
       border-bottom-right-radius: var(--bar-stack-border-radius);

@@ -34,15 +34,17 @@
   }
 
   &__overlay {
-    animation: fade-in var(--transition-duration) both var(--transition-timing);
-    background-color: var(--color-background);
+    animation: fade-in var(--mobius-transition-duration) both
+      var(--mobius-transition-timing);
+    background-color: var(--mobius-color-background);
     opacity: 0.65;
   }
 
   &__dialog {
-    animation: fade-in-scale var(--transition-duration)
-      math.div(var(--transition-duration), 2) both var(--transition-timing);
-    box-shadow: var(--shadow);
+    animation: fade-in-scale var(--mobius-transition-duration)
+      math.div(var(--mobius-transition-duration), 2) both
+      var(--mobius-transition-timing);
+    box-shadow: var(--mobius-shadow);
     margin: auto;
     max-height: 100vh;
     max-width: 100%;
@@ -66,6 +68,6 @@
   }
 
   &__inner {
-    padding: var(--spacing-fluid-sm) var(--spacing-fluid-sm);
+    padding: var(--mobius-spacing-fluid-sm) var(--mobius-spacing-fluid-sm);
   }
 }

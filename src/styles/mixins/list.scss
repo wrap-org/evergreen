@@ -1,5 +1,5 @@
 @mixin default() {
-  --list-spacing: var(--spacing-md);
+  --list-spacing: var(--mobius-spacing-md);
   list-style: none;
   margin: calc(var(--list-spacing) * -1) 0;
   padding: 0;
@@ -10,7 +10,7 @@
   padding: var(--list-spacing) 0;
 
   &-icon {
-    margin-right: var(--spacing-sm);
+    margin-right: var(--mobius-spacing-sm);
   }
 
   &-content {

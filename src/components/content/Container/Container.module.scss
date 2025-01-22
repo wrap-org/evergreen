@@ -1,12 +1,12 @@
 .container {
   align-items: center;
-  background: var(--color-white);
+  background: var(--mobius-color-white);
   display: flex;
 
   &__image {
-    margin-right: var(--spacing-md);
-    padding: var(--spacing-md);
-    width: calc(4em + var(--spacing-md) * 2);
+    margin-right: var(--mobius-spacing-md);
+    padding: var(--mobius-spacing-md);
+    width: calc(4em + var(--mobius-spacing-md) * 2);
 
     svg {
       display: block;
@@ -17,8 +17,8 @@
   }
 
   &__title {
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
+    font-family: var(--mobius-font-family);
+    font-size: var(--mobius-font-size-base);
     text-transform: none;
   }
 }

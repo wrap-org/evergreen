@@ -2,25 +2,25 @@
 @use '../../../styles/variables/font';
 
 .badge {
-  background: var(--theme-background);
-  border-radius: var(--radius-lg);
-  color: var(--theme-color);
+  background: var(--mobius-skin-background);
+  border-radius: var(--mobius-radius-lg);
+  color: var(--mobius-skin-color);
   display: inline-block;
-  font-weight: var(--font-weight-bold);
-  padding: var(--spacing-sm) calc(var(--spacing-sm) * 1.5);
+  font-weight: var(--mobius-font-weight-bold);
+  padding: var(--mobius-spacing-sm) calc(var(--mobius-spacing-sm) * 1.5);
 
   &--muted {
-    background: var(--theme-background-muted);
-    color: var(--theme-color-muted);
+    background: var(--mobius-skin-background-muted);
+    color: var(--mobius-skin-color-muted);
   }
 
   &--inverse {
-    background: var(--theme-color);
-    color: var(--theme-background);
+    background: var(--mobius-skin-color);
+    color: var(--mobius-skin-background);
 
     &.badge--muted {
-      background-color: var(--theme-color-muted);
-      color: var(--theme-background-muted);
+      background-color: var(--mobius-skin-color-muted);
+      color: var(--mobius-skin-background-muted);
     }
   }
 
@@ -34,6 +34,6 @@
 
   // This is obsolete now that all badges are rounded. TODO: Remove this
   &--rounded {
-    border-radius: var(--radius-lg);
+    border-radius: var(--mobius-radius-lg);
   }
 }

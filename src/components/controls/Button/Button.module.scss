@@ -1,17 +1,17 @@
 @use '../../../styles/mixins/button';
-@use '../../../styles/variables/breakpoint';
+@use '~@etchteam/mobius-tokens/dist/breakpoint';
 
 .button {
   $types: primary, secondary, positive, negative;
   @include button.default;
-  border-color: var(--button-border-color);
+  border-color: var(--mobius-button-border-color);
 
   &:hover {
-    border-color: var(--button-border-color-hover);
+    border-color: var(--mobius-button-border-color-hover);
   }
 
   &:focus {
-    border-color: var(--button-border-color-focus);
+    border-color: var(--mobius-button-border-color-focus);
   }
 
   &:active {
@@ -21,18 +21,18 @@
 
   &--loading,
   &[disabled] {
-    background: var(--button-background-disabled);
-    border-color: var(--button-border-color-disabled);
-    color: var(--button-color-disabled);
+    background: var(--mobius-button-background-disabled);
+    border-color: var(--mobius-button-border-color-disabled);
+    color: var(--mobius-button-color-disabled);
     pointer-events: none;
   }
 
   &--icon {
     aspect-ratio: 1;
-    line-height: var(--font-line-height);
+    line-height: var(--mobius-font-line-height);
     min-height: 0;
     min-width: 0;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--mobius-spacing-xs) var(--mobius-spacing-sm);
   }
 
   &--block {
@@ -43,7 +43,7 @@
       display: block;
       width: 100%;
 
-      @media (min-width: breakpoint.$md) {
+      @media (min-width: breakpoint.$mobius-breakpoint-md) {
         display: inline-block;
         width: auto;
       }
@@ -53,33 +53,33 @@
   &--small {
     min-height: 2.25rem;
     min-width: 5.5rem;
-    padding: calc(var(--spacing-xs) - var(--button-border-width))
-      var(--spacing-sm);
+    padding: calc(var(--mobius-spacing-xs) - var(--mobius-button-border-width))
+      var(--mobius-spacing-sm);
   }
 
   @each $type in $types {
     &--#{$type} {
-      background: var(--button-background-#{$type});
-      border-color: var(--button-border-color-#{$type});
-      color: var(--button-color-#{$type});
+      background: var(--mobius-button-background-#{$type});
+      border-color: var(--mobius-button-border-color-#{$type});
+      color: var(--mobius-button-color-#{$type});
 
       &:hover {
-        background: var(--button-background-hover-#{$type});
-        border-color: var(--button-border-color-hover-#{$type});
-        color: var(--button-color-hover-#{$type});
+        background: var(--mobius-button-background-hover-#{$type});
+        border-color: var(--mobius-button-border-color-hover-#{$type});
+        color: var(--mobius-button-color-hover-#{$type});
       }
 
       &:focus-within {
-        background: var(--button-background-focus-#{$type});
-        border-color: var(--button-border-color-focus-#{$type});
-        color: var(--button-color-focus-#{$type});
+        background: var(--mobius-button-background-focus-#{$type});
+        border-color: var(--mobius-button-border-color-focus-#{$type});
+        color: var(--mobius-button-color-focus-#{$type});
       }
 
       &.button--loading,
       &[disabled] {
-        background: var(--button-background-disabled-#{$type});
-        border-color: var(--button-border-color-disabled-#{$type});
-        color: var(--button-color-disabled-#{$type});
+        background: var(--mobius-button-background-disabled-#{$type});
+        border-color: var(--mobius-button-border-color-disabled-#{$type});
+        color: var(--mobius-button-color-disabled-#{$type});
       }
     }
   }
