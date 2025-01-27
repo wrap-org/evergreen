@@ -1,7 +1,0 @@
-@use '../../../styles/variables/breakpoint';
-
-:export {
-  @each $name, $bp in breakpoint.$map {
-    #{$name}: $bp;
-  }
-}

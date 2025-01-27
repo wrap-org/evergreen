@@ -1,0 +1,17 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { colorGroups } from './lib/colors';
+
+<Meta title="Foundations/Tokens/Colors" />
+
+# Colors
+
+<ColorPalette>
+  {colorGroups.map((group) => (
+    <ColorItem
+      key={group.name}
+      title={group.name}
+      subtitle={group.subtitle}
+      colors={group.colors}
+    />
+  ))}
+</ColorPalette>

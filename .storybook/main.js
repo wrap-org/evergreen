@@ -50,6 +50,19 @@ module.exports = {
       type: 'asset/resource',
     })
 
+    // Allow raw CSS imports
+    // https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
+    const cssLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test('.css')
+    );
+
+    cssLoaderRule.resourceQuery = { not: [/raw/] }
+
+    config.module.rules.push({
+      resourceQuery: /raw/,
+      type: 'asset/source',
+    })
+
     return config;
   },
   previewHead: (head) => (`
