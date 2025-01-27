@@ -12,7 +12,6 @@ export default function Tokens({
 }) {
   const regex = new RegExp(`--mobius-${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
   const tokensArray = allTokens.match(regex);
-  console.log(tokensArray);
   const tokens = tokensArray?.map((token) => {
     const [key, value] = token.replace(';', '').split(': ');
     return {
