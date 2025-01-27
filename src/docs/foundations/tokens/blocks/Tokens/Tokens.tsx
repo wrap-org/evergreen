@@ -1,9 +1,7 @@
+import allTokens from '@etchteam/mobius-tokens/dist/index.css?raw';
 import React from 'react';
 
 import styles from './Tokens.module.scss';
-
-// eslint-disable-next-line import/no-unresolved
-import allTokens from '!!raw-loader!@etchteam/mobius-tokens/dist/index.css';
 
 export default function Tokens({
   collection,

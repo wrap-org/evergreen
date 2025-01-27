@@ -1,8 +1,6 @@
+import tokens from '@etchteam/mobius-tokens/dist/index.css?raw';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
-
-// eslint-disable-next-line import/no-unresolved
-import tokens from '!!raw-loader!@etchteam/mobius-tokens/dist/index.css';
 
 export interface Dictionary<T> {
   [index: string]: T;
