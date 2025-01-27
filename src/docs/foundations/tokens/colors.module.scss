@@ -1,7 +1,0 @@
-@use '../../../styles/variables/color';
-
-:export {
-  @each $name, $color in color.$colors {
-    #{$name}: $color;
-  }
-}

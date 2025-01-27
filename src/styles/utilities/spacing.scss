@@ -6,7 +6,7 @@ $sizes: xs, sm, md, lg, xl, fluid, fluid-lg;
     &-#{$direction} {
       @each $size in $sizes {
         &-#{$size} {
-          margin-#{$direction}: var(--spacing-#{$size});
+          margin-#{$direction}: var(--mobius-spacing-#{$size});
         }
       }
     }

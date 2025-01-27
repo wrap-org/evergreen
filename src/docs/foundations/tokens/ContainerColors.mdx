@@ -1,0 +1,17 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { containerColorGroups } from './lib/colors';
+
+<Meta title="Foundations/Tokens/Container Colors" />
+
+# Container colors
+
+<ColorPalette>
+  {containerColorGroups.map((group) => (
+    <ColorItem
+      key={group.name}
+      title={group.name}
+      subtitle={group.subtitle}
+      colors={group.colors}
+    />
+  ))}
+</ColorPalette>
