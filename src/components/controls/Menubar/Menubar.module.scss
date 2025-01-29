@@ -1,7 +1,13 @@
 @use '~@etchteam/mobius-tokens/dist/breakpoint';
 
 .menubar {
-  background: var(--mobius-skin-background);
+  --tab-background: var(--mobius-skin-background);
+  --tab-background-active: var(--mobius-input-background-disabled);
+  --tab-color-active: var(--mobius-color-body);
+  --tab-highlight-color: var(--mobius-skin-color);
+  --tab-highlight-width: 4px;
+
+  background: var(--tab-background);
 
   @media (min-width: breakpoint.$mobius-breakpoint-tablet) {
     align-items: center;
@@ -32,10 +38,6 @@
   }
 
   &__tab {
-    --tab-background: var(--mobius-skin-background);
-    --tab-highlight-color: var(--mobius-skin-color);
-    --tab-highlight-width: 4px;
-
     display: block;
     font-size: var(--mobius-font-size-sm);
     font-weight: var(--mobius-font-weight-bold);
@@ -43,7 +45,7 @@
     position: relative;
 
     a {
-      color: var(--mobius-skin-background-muted-dark);
+      color: color-mix(in srgb, var(--mobius-skin-color) 75%, transparent 25%);
       text-decoration: none;
       transition: background var(--mobius-transition) color
         var(--mobius-transition);
@@ -74,7 +76,6 @@
       }
 
       align-items: center;
-      color: var(--mobius-skin-background-muted-dark);
       display: flex;
       justify-content: center;
       min-height: var(--mobius-spacing-thumb);
@@ -87,11 +88,11 @@
         opacity: 1;
       }
 
-      background: var(--mobius-input-background-disabled);
-      color: var(--mobius-color-body);
+      background: var(--tab-background-active);
+      color: var(--tab-color-active);
 
       a {
-        color: var(--mobius-color-body);
+        color: var(--tab-color-active);
       }
     }
 
@@ -119,5 +120,11 @@
       padding: var(--mobius-spacing-md);
       text-decoration: none;
     }
+  }
+
+  &--transparent {
+    --tab-background: transparent;
+    --tab-background-active: var(--mobius-skin-background);
+    --tab-color-active: car(--mobius-skin-color);
   }
 }
