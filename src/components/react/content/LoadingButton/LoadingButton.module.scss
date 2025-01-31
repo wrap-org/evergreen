@@ -1,0 +1,34 @@
+@use '~@etchteam/mobius-tokens/dist/breakpoint';
+@use '../../../../styles/mixins/loading';
+@use '../../../../styles/mixins/button';
+
+.loading-button {
+  @include button.base;
+  @include loading.pulse;
+
+  &__text {
+    visibility: hidden;
+  }
+
+  &--small {
+    min-height: 2.25rem;
+    min-width: 5.5rem;
+    padding: calc(var(--mobius-spacing-xs) - var(--mobius-button-border-width))
+      var(--mobius-spacing-sm);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+
+    &-mobile {
+      display: block;
+      width: 100%;
+
+      @media (min-width: breakpoint.$mobius-breakpoint-md) {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}

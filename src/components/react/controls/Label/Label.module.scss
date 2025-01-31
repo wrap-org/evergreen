@@ -1,0 +1,16 @@
+@use '../../../../styles/mixins/screen-reader';
+@use '../../../../styles/mixins/forms';
+
+.label {
+  @include forms.label;
+
+  &--hidden {
+    @include screen-reader.sr-only;
+  }
+
+  &--type-secondary {
+    align-items: flex-start;
+    font-weight: normal;
+    min-height: var(--mobius-spacing-lg);
+  }
+}
