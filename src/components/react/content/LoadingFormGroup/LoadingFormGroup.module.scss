@@ -1,0 +1,13 @@
+@use '../../../../styles/mixins/loading';
+@use '../../../../styles/mixins/forms';
+
+.loading-form-group {
+  &__control {
+    @include loading.pulse;
+
+    &-input {
+      @include forms.input;
+      visibility: hidden;
+    }
+  }
+}

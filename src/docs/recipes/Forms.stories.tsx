@@ -1,14 +1,14 @@
 import React from 'react';
 
-import FormGroup from 'components/composition/FormGroup/FormGroup';
-import Grid from 'components/composition/Grid/Grid';
-import Wrap from 'components/composition/Wrap/Wrap';
-import Icon from 'components/content/Icon/Icon';
-import Button from 'components/controls/Button/Button';
-import Input from 'components/controls/Input/Input';
-import Label from 'components/controls/Label/Label';
-import Radio from 'components/controls/Radio/Radio';
-import Select from 'components/controls/Select/Select';
+import FormGroup from 'components/react/composition/FormGroup/FormGroup';
+import Grid from 'components/react/composition/Grid/Grid';
+import Wrap from 'components/react/composition/Wrap/Wrap';
+import Icon from 'components/react/content/Icon/Icon';
+import Button from 'components/react/controls/Button/Button';
+import Input from 'components/react/controls/Input/Input';
+import Label from 'components/react/controls/Label/Label';
+import Radio from 'components/react/controls/Radio/Radio';
+import Select from 'components/react/controls/Select/Select';
 
 export default {
   title: 'Recipes/Forms',

@@ -1,0 +1,32 @@
+@use '../../../../styles/variables/breakpoint';
+
+$spacings: xs, sm, md, lg, xl, fluid, fluid-lg;
+
+.wrap {
+  margin-inline: auto;
+  max-width: 90em; // 1440px
+  padding: 0 var(--mobius-spacing-md);
+  width: 100%;
+
+  @each $key, $bp in breakpoint.$map {
+    &--#{$key} {
+      max-width: $bp;
+    }
+  }
+
+  &--auto {
+    max-width: none;
+  }
+
+  &--gutter {
+    @each $spacing in $spacings {
+      &-#{$spacing} {
+        padding-inline: var(--mobius-spacing-#{$spacing});
+      }
+    }
+
+    &-none {
+      padding-inline: 0;
+    }
+  }
+}

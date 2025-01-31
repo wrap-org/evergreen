@@ -1,0 +1,62 @@
+@use '../../../../styles/mixins/forms';
+
+.select {
+  --select-border-color: var(--mobius-input-border);
+
+  @include forms.input;
+  cursor: pointer;
+
+  &__select {
+    @include forms.ninja-input;
+    @include forms.input-padding;
+    max-width: 100%;
+    overflow: hidden;
+    padding-right: calc(
+      var(--mobius-spacing-thumb) + var(--mobius-input-padding-horizontal)
+    );
+    text-overflow: ellipsis;
+
+    &[disabled] {
+      opacity: 1;
+    }
+  }
+
+  &__affix {
+    align-items: center;
+    border-left: 1px solid var(--select-border-color);
+    border-radius: 0 var(--mobius-input-border-radius)
+      var(--mobius-input-border-radius) 0;
+    bottom: 0;
+    display: flex;
+    font-size: var(--mobius-font-size-xl);
+    justify-content: center;
+    min-width: var(--mobius-spacing-thumb);
+    padding: 0 var(--mobius-spacing-sm);
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: border-color var(--mobius-transition);
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+
+  &--valid {
+    --select-border-color: var(--mobius-color-positive);
+  }
+
+  &--invalid {
+    --select-border-color: var(--mobius-color-negative);
+  }
+
+  &:hover {
+    --select-border-color: var(--mobius-input-border-hover);
+  }
+
+  &:focus-within {
+    --mobius-input-outline-offset-focus: 1px;
+    --select-border-color: var(--mobius-input-border-focus);
+  }
+}

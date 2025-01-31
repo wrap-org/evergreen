@@ -8,9 +8,9 @@ import {
   useOf,
   Description,
 } from '@storybook/blocks';
-import Button from 'components/controls/Button/Button'
-import Grid from 'components/composition/Grid/Grid'
-import Badge from 'components/content/Badge/Badge'
+import Button from 'components/react/controls/Button/Button'
+import Grid from 'components/react/composition/Grid/Grid'
+import Badge from 'components/react/content/Badge/Badge'
 
 import './styles.scss'
 

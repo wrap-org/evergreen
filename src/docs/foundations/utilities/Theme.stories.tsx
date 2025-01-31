@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Section from 'components/canvas/Section/Section';
-import Grid from 'components/composition/Grid/Grid';
-import Wrap from 'components/composition/Wrap/Wrap';
-import Button from 'components/controls/Button/Button';
+import Section from 'components/react/canvas/Section/Section';
+import Grid from 'components/react/composition/Grid/Grid';
+import Wrap from 'components/react/composition/Wrap/Wrap';
+import Button from 'components/react/controls/Button/Button';
 import { base, emphasis, themes } from 'lib/theme';
 
 const description = `

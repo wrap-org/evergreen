@@ -1,0 +1,35 @@
+@use '../../../../styles/mixins/list';
+
+.list {
+  @include list.default;
+
+  &__item {
+    @include list.item;
+  }
+
+  &--spacing {
+    &-none {
+      --list-spacing: 0;
+    }
+
+    &-xs {
+      --list-spacing: var(--mobius-spacing-xs);
+    }
+
+    &-sm {
+      --list-spacing: var(--mobius-spacing-sm);
+    }
+
+    &-md {
+      --list-spacing: var(--mobius-spacing-md);
+    }
+
+    &-lg {
+      --list-spacing: var(--mobius-spacing-lg);
+    }
+
+    &-xl {
+      --list-spacing: var(--mobius-spacing-xl);
+    }
+  }
+}

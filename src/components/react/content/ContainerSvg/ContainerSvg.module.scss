@@ -1,0 +1,20 @@
+@use '../../../../styles/variables/container';
+@use '../../../../styles/variables/color.scss';
+
+.container-svg {
+  &__lid,
+  &__body,
+  &__secondary {
+    @each $colorName, $color in container.$colors {
+      &.container-svg__lid--colour-#{$colorName},
+      &.container-svg__body--colour-#{$colorName},
+      &.container-svg__secondary--colour-#{$colorName} {
+        fill: $color;
+      }
+    }
+
+    &.container-svg__body--colour-transparent {
+      stroke: var(--mobius-color-black);
+    }
+  }
+}

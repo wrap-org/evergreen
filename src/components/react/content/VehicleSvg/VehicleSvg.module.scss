@@ -1,0 +1,13 @@
+@use '../../../../styles/variables/color.scss';
+
+.vehicle-svg {
+  @each $colorName, $color in color.$colors {
+    &.vehicle-svg--mobius-color-#{$colorName} {
+      fill: $color;
+    }
+  }
+
+  &.vehicle-svg--mobius-color-transparent {
+    stroke: var(--mobius-color-forest);
+  }
+}

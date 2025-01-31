@@ -1,0 +1,31 @@
+@use '../../../../styles/mixins/forms';
+
+.input {
+  @include forms.input;
+
+  &__prefix,
+  &__suffix {
+    align-self: center;
+    font-weight: var(--mobius-font-weight-bold);
+    line-height: var(--mobius-font-line-height);
+  }
+
+  &__prefix {
+    margin-right: calc(var(--mobius-input-padding-horizontal) / -2);
+    padding: 0 0 0 var(--mobius-input-padding-horizontal);
+  }
+
+  &__suffix {
+    margin-left: calc(var(--mobius-input-padding-horizontal) / -2);
+    padding: 0 var(--mobius-input-padding-horizontal) 0 0;
+  }
+
+  &__input {
+    @include forms.ninja-input;
+    @include forms.input-padding;
+  }
+
+  &--disabled {
+    @include forms.input-disabled;
+  }
+}
