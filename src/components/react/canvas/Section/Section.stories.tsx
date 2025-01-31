@@ -4,7 +4,6 @@ import React from 'react';
 import Section from './Section';
 
 import Grid from 'components/react/composition/Grid/Grid';
-import Wrap from 'components/react/composition/Wrap/Wrap';
 import Button from 'components/react/controls/Button/Button';
 import { base } from 'lib/theme';
 
@@ -39,7 +38,7 @@ export function Default() {
     <>
       {base.map((theme) => (
         <Section className={`m-theme-${theme}`} key={theme}>
-          <Wrap
+          <evg-wrap
             size="lg"
             className="m-spacing-top-fluid m-spacing-bottom-fluid"
           >
@@ -62,7 +61,7 @@ export function Default() {
                 </Button>
               </Grid.Item>
             </Grid>
-          </Wrap>
+          </evg-wrap>
         </Section>
       ))}
     </>

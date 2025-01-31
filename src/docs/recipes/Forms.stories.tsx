@@ -2,7 +2,6 @@ import React from 'react';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
 import Grid from 'components/react/composition/Grid/Grid';
-import Wrap from 'components/react/composition/Wrap/Wrap';
 import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 import Input from 'components/react/controls/Input/Input';
@@ -29,7 +28,7 @@ export default {
 
 export function Form() {
   return (
-    <Wrap size="lg">
+    <evg-wrap size="lg">
       <form>
         <h2>About your business</h2>
         <Grid spacing="xs">
@@ -104,6 +103,6 @@ export function Form() {
           </Grid.Item>
         </Grid>
       </form>
-    </Wrap>
+    </evg-wrap>
   );
 }

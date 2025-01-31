@@ -8,3 +8,5 @@
 @use 'utilities/spacing' as spacingUtilities;
 @use 'utilities/text' as textUtilities;
 @use 'utilities/theme' as themeUtilities;
+
+@use '../components/composition/Wrap/Wrap';

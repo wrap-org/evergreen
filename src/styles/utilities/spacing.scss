@@ -1,10 +1,11 @@
+@use '../variables/spacing';
+
 $directions: top, left, bottom, right;
-$sizes: xs, sm, md, lg, xl, fluid, fluid-lg;
 
 .m-spacing {
   @each $direction in $directions {
     &-#{$direction} {
-      @each $size in $sizes {
+      @each $size in spacing.$sizes {
         &-#{$size} {
           margin-#{$direction}: var(--mobius-spacing-#{$size});
         }

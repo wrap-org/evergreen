@@ -12,6 +12,8 @@ import Button from 'components/react/controls/Button/Button'
 import Grid from 'components/react/composition/Grid/Grid'
 import Badge from 'components/react/content/Badge/Badge'
 
+import '../src/docs/components/Placeholder/Placeholder.scss'
+
 import './styles.scss'
 
 export const parameters = {

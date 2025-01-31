@@ -1,0 +1,30 @@
+@use '../../../styles/variables/breakpoint';
+@use '../../../styles/variables/spacing';
+
+evg-wrap {
+  display: block;
+  margin-inline: auto;
+  max-width: 90em; /* 1440px */
+  padding: 0 var(--mobius-spacing-md);
+  width: 100%;
+
+  @each $key, $bp in breakpoint.$map {
+    &[size='#{$key}'] {
+      max-width: $bp;
+    }
+  }
+
+  &[size='auto'] {
+    max-width: none;
+  }
+
+  @each $size in spacing.$sizes {
+    &[gutter='#{$size}'] {
+      padding-inline: var(--mobius-spacing-#{$size});
+    }
+  }
+
+  &[gutter='none'] {
+    padding-inline: 0;
+  }
+}
