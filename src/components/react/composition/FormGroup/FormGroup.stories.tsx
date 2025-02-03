@@ -1,8 +1,6 @@
 import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-import Grid from '../Grid/Grid';
-
 import FormGroup from './FormGroup';
 
 import Alert from 'components/react/canvas/Alert/Alert';
@@ -49,15 +47,15 @@ export function Horizontal() {
         </FormGroup.Label>
         <FormGroup.Control>
           <div role="radiogroup" aria-labelledby="my-input-two">
-            <Grid wrap>
+            <evg-grid wrap="wrap">
               {[1, 2, 3, 4].map((option) => (
-                <Grid.Item xs={12} key={option}>
+                <evg-grid-item small-mobile="12" key={option}>
                   <Radio value={option} name="my-radio-input">
                     Option {option}
                   </Radio>
-                </Grid.Item>
+                </evg-grid-item>
               ))}
-            </Grid>
+            </evg-grid>
           </div>
         </FormGroup.Control>
       </FormGroup>
@@ -120,15 +118,15 @@ export function AsFieldset() {
           <Label as="span">Legend</Label>
         </FormGroup.Label>
         <FormGroup.Control>
-          <Grid wrap>
+          <evg-grid wrap="wrap">
             {[1, 2, 3].map((option) => (
-              <Grid.Item xs={12} key={option}>
+              <evg-grid-item small-mobile="12" key={option}>
                 <Checkbox value={option} name="my-checkbox-input-1">
                   Option {option}
                 </Checkbox>
-              </Grid.Item>
+              </evg-grid-item>
             ))}
-          </Grid>
+          </evg-grid>
         </FormGroup.Control>
       </FormGroup>
 
@@ -137,15 +135,15 @@ export function AsFieldset() {
           <Label as="span">Legend</Label>
         </FormGroup.Label>
         <FormGroup.Control>
-          <Grid wrap>
+          <evg-grid wrap="wrap">
             {[1, 2, 3].map((option) => (
-              <Grid.Item xs={12} key={option}>
+              <evg-grid-item small-mobile="12" key={option}>
                 <Checkbox value={option} name="my-checkbox-input-2">
                   Option {option}
                 </Checkbox>
-              </Grid.Item>
+              </evg-grid-item>
             ))}
-          </Grid>
+          </evg-grid>
         </FormGroup.Control>
       </FormGroup>
     </>

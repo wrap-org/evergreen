@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import List from './List';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 import Checkbox from 'components/react/controls/Checkbox/Checkbox';
@@ -52,16 +51,16 @@ export const Animated: StoryFn<typeof List> = (args) => {
           </List.Item>
         ))}
       </List>
-      <Grid>
-        <Grid.Item>
+      <evg-grid>
+        <evg-grid-item>
           <Button onClick={remove}>Remove item</Button>
-        </Grid.Item>
-        <Grid.Item>
+        </evg-grid-item>
+        <evg-grid-item>
           <Button type="primary" onClick={add}>
             Add item
           </Button>
-        </Grid.Item>
-      </Grid>
+        </evg-grid-item>
+      </evg-grid>
     </>
   );
 };

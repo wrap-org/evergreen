@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import React, { useRef } from 'react';
 import { A11yDialog, ReactA11yDialogProps } from 'react-a11y-dialog';
 
-import { Breakpoints } from '../../../../types/breakpoints.type';
+import { Sizes } from '../../../../types/size.type';
 
 import styles from './Modal.module.scss';
 import Header from './ModalHeader';
@@ -14,7 +14,7 @@ export type ModalInstance = A11yDialogInstance;
 interface ModalProps
   extends Pick<ReactA11yDialogProps, 'id' | 'title' | 'role'> {
   readonly children?: React.ReactNode;
-  readonly size?: Breakpoints | 'auto';
+  readonly size?: Sizes | 'auto';
   /**
    * Called when the modal has mounted and the ref has been setup
    */

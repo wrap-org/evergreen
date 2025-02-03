@@ -1,8 +1,6 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import Grid from '../Grid/Grid';
-
 import Modal, { useModalRef } from './Modal';
 
 import Card from 'components/react/canvas/Card/Card';
@@ -45,8 +43,12 @@ export const Default = () => {
           </Card.Body>
           <Card.Body>
             <Modal.Inner>
-              <Grid justify="flex-end">
-                <Grid.Item xs={12} sm={4} md={3}>
+              <evg-grid justify-content="flex-end">
+                <evg-grid-item
+                  small-mobile="12"
+                  large-mobile="4"
+                  small-tablet="3"
+                >
                   <Button
                     type="secondary"
                     onClick={() => modalRef.current?.hide()}
@@ -54,8 +56,8 @@ export const Default = () => {
                   >
                     Cancel
                   </Button>
-                </Grid.Item>
-              </Grid>
+                </evg-grid-item>
+              </evg-grid>
             </Modal.Inner>
           </Card.Body>
         </Card>

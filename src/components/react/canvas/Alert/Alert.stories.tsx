@@ -3,7 +3,6 @@ import React from 'react';
 
 import Alert from './Alert';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import Button from 'components/react/controls/Button/Button';
 import { emphasis } from 'lib/theme';
 
@@ -22,19 +21,19 @@ export function Default() {
     <>
       {emphasis.map((theme) => (
         <Alert className={`m-theme-${theme} m-spacing-bottom-md`} key={theme}>
-          <Grid wrap>
-            <Grid.Item grow shrink>
+          <evg-grid wrap="wrap">
+            <evg-grid-item grow shrink>
               <strong>Alert title</strong>
               <br />
               <p>
                 Vivamus iaculis purus orci, ac mollis lectus porttitor et.
                 Integer ac risus a orci pharetra suscipit.
               </p>
-            </Grid.Item>
-            <Grid.Item xs={12} md="auto">
+            </evg-grid-item>
+            <evg-grid-item small-mobile="12" small-tablet="auto">
               <Button block="mobile">Button text</Button>
-            </Grid.Item>
-          </Grid>
+            </evg-grid-item>
+          </evg-grid>
         </Alert>
       ))}
     </>

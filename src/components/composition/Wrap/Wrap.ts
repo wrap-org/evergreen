@@ -1,9 +1,9 @@
-import { Breakpoints } from '../../../types/breakpoints.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { Sizes } from '../../../types/size.type';
 import { Spacing } from '../../../types/spacing.type';
 
 export interface WrapAttributes {
-  size?: Breakpoints | 'auto';
+  size?: Sizes | 'auto';
   gutter?: Spacing | 'none';
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Section from 'components/react/canvas/Section/Section';
-import Grid from 'components/react/composition/Grid/Grid';
 import Button from 'components/react/controls/Button/Button';
 import { base, emphasis, themes } from 'lib/theme';
 
@@ -64,16 +63,16 @@ const ThemedSection = ({ theme }) => (
         sit amet mauris.
       </p>
 
-      <Grid>
-        <Grid.Item xs={12} sm="auto">
+      <evg-grid>
+        <evg-grid-item small-mobile="12" sm="auto">
           <Button type="primary" block="mobile">
             Button text
           </Button>
-        </Grid.Item>
-        <Grid.Item xs={12} sm="auto">
+        </evg-grid-item>
+        <evg-grid-item small-mobile="12" sm="auto">
           <Button block="mobile">Button text</Button>
-        </Grid.Item>
-      </Grid>
+        </evg-grid-item>
+      </evg-grid>
     </evg-wrap>
   </Section>
 );

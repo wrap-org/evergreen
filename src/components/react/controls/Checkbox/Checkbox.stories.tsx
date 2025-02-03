@@ -6,7 +6,6 @@ import Label from '../Label/Label';
 import Checkbox from './Checkbox';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Grid from 'components/react/composition/Grid/Grid';
 
 export default {
   title: 'React/Components/Controls/Checkbox',
@@ -43,19 +42,19 @@ export function Checked() {
         <Label as="span">Label</Label>
       </FormGroup.Label>
       <FormGroup.Control>
-        <Grid wrap>
-          <Grid.Item xs={12}>
+        <evg-grid wrap="wrap">
+          <evg-grid-item small-mobile="12">
             <Checkbox name="checkbox" forceChecked touched valid>
               Checkbox label
             </Checkbox>
-          </Grid.Item>
-          <Grid.Item xs={12}>
+          </evg-grid-item>
+          <evg-grid-item small-mobile="12">
             <Checkbox name="checkbox" touched valid>
               A really long checkbox label that wraps onto another line if it
               needs to
             </Checkbox>
-          </Grid.Item>
-        </Grid>
+          </evg-grid-item>
+        </evg-grid>
       </FormGroup.Control>
     </FormGroup>
   );
@@ -71,17 +70,17 @@ export function TypeInput() {
 
 export function TypeList() {
   return (
-    <Grid wrap>
-      <Grid.Item xs={12}>
+    <evg-grid wrap="wrap">
+      <evg-grid-item small-mobile="12">
         <Checkbox name="checkbox" type="list">
           Checkbox label
         </Checkbox>
-      </Grid.Item>
-      <Grid.Item xs={12}>
+      </evg-grid-item>
+      <evg-grid-item small-mobile="12">
         <Checkbox name="checkbox" type="list">
           Checkbox label
         </Checkbox>
-      </Grid.Item>
-    </Grid>
+      </evg-grid-item>
+    </evg-grid>
   );
 }

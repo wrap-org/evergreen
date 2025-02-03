@@ -1,19 +1,19 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { Breakpoints } from '../../../types/breakpoints.type';
+import { Sizes } from '../../../types/size.type';
 import { Spacing } from '../../../types/spacing.type';
 
-const sizes: (Breakpoints | 'auto')[] = [
+const sizes: (Sizes | 'auto')[] = [
+  'xxs',
+  'xs',
   'sm',
   'md',
   'lg',
   'xl',
   'xxl',
   'xxxl',
-  'tablet',
-  'desktop',
-  'max',
+  'xxxl',
   'auto',
 ];
 
@@ -70,7 +70,7 @@ Wrap.args = {
   gutter: 'md',
 };
 
-export const Sizes = () => {
+export const SizesStory = () => {
   return (
     <>
       {sizes.map((size) => (
@@ -81,3 +81,5 @@ export const Sizes = () => {
     </>
   );
 };
+
+SizesStory.storyName = 'Sizes';

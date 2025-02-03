@@ -1,4 +1,5 @@
-@use '../../../styles/variables/breakpoint';
+@use 'sass:map';
+@use '../../../styles/variables/size';
 @use '../../../styles/variables/spacing';
 
 evg-wrap {
@@ -8,9 +9,10 @@ evg-wrap {
   padding: 0 var(--mobius-spacing-md);
   width: 100%;
 
-  @each $key, $bp in breakpoint.$map {
+  @each $key, $size in size.$map {
+    $value: map.get($size, 'value');
     &[size='#{$key}'] {
-      max-width: $bp;
+      max-width: $value;
     }
   }
 

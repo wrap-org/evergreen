@@ -4,7 +4,6 @@ import React, { useMemo, useState } from 'react';
 
 import styles from './Collapse.module.scss';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import Icon from 'components/react/content/Icon/Icon';
 
 export interface CollapseProps {
@@ -55,14 +54,14 @@ const Collapse = ({
         aria-controls={controlId}
         aria-expanded={open}
       >
-        <Grid direction={direction} spacing="sm">
-          <Grid.Item>
+        <evg-grid direction={direction} gap="sm">
+          <evg-grid-item>
             <Icon icon={open ? iconOpen : iconClosed} size="lg" />
-          </Grid.Item>
-          <Grid.Item grow shrink>
+          </evg-grid-item>
+          <evg-grid-item grow shrink>
             {headerLabel}
-          </Grid.Item>
-        </Grid>
+          </evg-grid-item>
+        </evg-grid>
       </button>
       <div
         id={controlId}

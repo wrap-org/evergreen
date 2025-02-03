@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../../../styles/variables/size';
+
+evg-grid-item {
+  display: block;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: calc(var(--evg-grid-gap) / 2);
+
+  &[grow] {
+    flex-grow: 1;
+  }
+
+  &[shrink] {
+    flex-shrink: 1;
+  }
+
+  &[fill] {
+    display: grid;
+  }
+
+  /*
+    The conversion of attribute value to css variable can be removed once
+    attr type-or-unit is supported https://caniuse.com/mdn-css_types_attr_type-or-unit
+  */
+  @each $key, $size in size.$map {
+    $value: map.get($size, 'value');
+    $name: map.get($size, 'name');
+    @media (width >= #{$value}) {
+      @for $i from 1 through 12 {
+        &[#{$name}='#{$i}'] {
+          --evg-#{$name}-cols: #{$i};
+        }
+      }
+
+      &[#{$name}] {
+        width: calc(var(--evg-#{$name}-cols) * 100% / 12);
+      }
+
+      &[#{$name}='auto'] {
+        width: auto;
+      }
+    }
+  }
+}
