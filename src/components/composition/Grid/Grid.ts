@@ -2,7 +2,7 @@ import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface GridAttributes {
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
-  inline?: string | boolean;
+  inline?: 'true' | 'false' | boolean;
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   justifyContent?:
     | 'flex-start'

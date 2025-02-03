@@ -16,12 +16,12 @@ type Column =
   | '12';
 
 export interface GridItemAttributes {
-  grow?: string | boolean;
-  shrink?: string | boolean;
+  grow?: 'true' | 'false' | boolean;
+  shrink?: 'true' | 'false' | boolean;
   /**
    * Applies display grid so that children fill the height and width of the grid item
    */
-  fill?: string | boolean;
+  fill?: 'true' | 'false' | boolean;
   smallMobile?: Column;
   mobile?: Column;
   largeMobile?: Column;
