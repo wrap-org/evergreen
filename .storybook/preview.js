@@ -9,8 +9,9 @@ import {
   Description,
 } from '@storybook/blocks';
 import Button from 'components/react/controls/Button/Button'
-import Grid from 'components/react/composition/Grid/Grid'
 import Badge from 'components/react/content/Badge/Badge'
+
+import '../src/docs/components/Placeholder/Placeholder.scss'
 
 import './styles.scss'
 
@@ -53,8 +54,8 @@ export const parameters = {
           <h2>Help us improve this component</h2>
 
           <div className="sb-unstyled m-spacing-bottom-lg m-spacing-top-lg">
-            <Grid>
-              <Grid.Item>
+            <evg-grid>
+              <evg-grid-item>
                 <Button
                   href={`https://github.com/etchteam/mobius/issues/new?labels=bug&template=bug_report.md&title=${name}+bug+report`}
                   target="_blank"
@@ -62,8 +63,8 @@ export const parameters = {
                 >
                   Report a bug
                 </Button>
-              </Grid.Item>
-              <Grid.Item>
+              </evg-grid-item>
+              <evg-grid-item>
                 <Button
                   href={`https://github.com/etchteam/mobius/issues/new?labels=enhancement&template=feature_request.md&title=${name}+new+feature`}
                   target="_blank"
@@ -71,8 +72,8 @@ export const parameters = {
                 >
                   Request a feature
                 </Button>
-              </Grid.Item>
-            </Grid>
+              </evg-grid-item>
+            </evg-grid>
           </div>
 
           <h2>Need help?</h2>

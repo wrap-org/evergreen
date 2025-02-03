@@ -3,7 +3,6 @@ import React from 'react';
 
 import Badge, { BadgeProps } from './Badge';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import { emphasis } from 'lib/theme';
 
 export default {
@@ -17,18 +16,18 @@ export default {
 } as Meta;
 
 export const Default = (args: BadgeProps) => (
-  <Grid wrap>
+  <evg-grid wrap="wrap">
     {emphasis.map((theme) => (
-      <Grid.Item key={theme}>
+      <evg-grid-item key={theme}>
         <Badge
           className={`m-theme-${theme} m-text-transform-capitalize`}
           {...args}
         >
           {theme}
         </Badge>
-      </Grid.Item>
+      </evg-grid-item>
     ))}
-  </Grid>
+  </evg-grid>
 );
 
 Default.storyName = 'Badge';

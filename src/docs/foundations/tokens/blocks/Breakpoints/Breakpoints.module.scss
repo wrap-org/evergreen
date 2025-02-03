@@ -1,18 +1,5 @@
 @use 'sass:map';
-@use '~@etchteam/mobius-tokens/dist/breakpoint';
-
-$breakpoints: (
-  'xs': breakpoint.$mobius-breakpoint-xs,
-  'sm': breakpoint.$mobius-breakpoint-sm,
-  'md': breakpoint.$mobius-breakpoint-md,
-  'lg': breakpoint.$mobius-breakpoint-lg,
-  'xl': breakpoint.$mobius-breakpoint-xl,
-  'xxl': breakpoint.$mobius-breakpoint-xxl,
-  'xxxl': breakpoint.$mobius-breakpoint-xxxl,
-  'tablet': breakpoint.$mobius-breakpoint-tablet,
-  'desktop': breakpoint.$mobius-breakpoint-desktop,
-  'max': breakpoint.$mobius-breakpoint-max,
-);
+@use '../../../../../styles/variables/size';
 
 .breakpoints {
   &__item {
@@ -23,12 +10,14 @@ $breakpoints: (
     padding: var(--mobius-spacing-sm);
     white-space: nowrap;
 
-    @each $breakpoint, $value in $breakpoints {
+    @each $breakpoint, $size in size.$map {
+      $value: map.get($size, 'value');
+      $name: map.get($size, 'name');
       &--#{$breakpoint} {
         --token-preview: #{$value};
 
         .breakpoints__text::after {
-          content: ': #{$value}';
+          content: ' (#{$name}): #{$value}';
         }
       }
     }

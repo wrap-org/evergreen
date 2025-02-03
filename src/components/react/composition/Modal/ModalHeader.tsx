@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import Icon from 'components/react/content/Icon/Icon';
 import TextButton from 'components/react/controls/TextButton/TextButton';
 
@@ -10,16 +9,16 @@ export interface HeaderProps {
 }
 
 const ModalHeader = ({ onClose, children }: HeaderProps) => (
-  <Grid align="center">
-    <Grid.Item shrink grow>
+  <evg-grid align-items="center">
+    <evg-grid-item shrink grow>
       {children}
-    </Grid.Item>
-    <Grid.Item>
+    </evg-grid-item>
+    <evg-grid-item>
       <TextButton aria-label="Close dialog" onClick={onClose}>
         <Icon icon="close" size="xl" />
       </TextButton>
-    </Grid.Item>
-  </Grid>
+    </evg-grid-item>
+  </evg-grid>
 );
 
 export default ModalHeader;

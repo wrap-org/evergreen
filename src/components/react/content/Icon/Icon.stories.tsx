@@ -4,7 +4,6 @@ import React from 'react';
 import Icon from './Icon';
 
 import Card from 'components/react/canvas/Card/Card';
-import Grid from 'components/react/composition/Grid/Grid';
 
 export default {
   title: 'React/Components/Content/Icon',
@@ -33,9 +32,15 @@ const Template = ({
   readonly iconNames: string[];
   readonly type?: 'mono' | 'custom';
 }) => (
-  <Grid wrap>
+  <evg-grid wrap="wrap">
     {iconNames.map((icon) => (
-      <Grid.Item xs={6} sm={3} md={2} flex key={icon}>
+      <evg-grid-item
+        small-mobile="6"
+        large-mobile="3"
+        small-tablet="2"
+        fill
+        key={icon}
+      >
         <Card border>
           <Card.Body>
             <div className="m-text-align-center">
@@ -47,9 +52,9 @@ const Template = ({
             </div>
           </Card.Body>
         </Card>
-      </Grid.Item>
+      </evg-grid-item>
     ))}
-  </Grid>
+  </evg-grid>
 );
 
 export const Default = () => <Template iconNames={icons} />;

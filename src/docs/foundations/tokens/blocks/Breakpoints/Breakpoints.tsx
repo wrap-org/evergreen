@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Breakpoints.module.scss';
 
 const breakpoints = [
+  'xxs',
   'xs',
   'sm',
   'md',
@@ -10,9 +11,7 @@ const breakpoints = [
   'xl',
   'xxl',
   'xxxl',
-  'tablet',
-  'desktop',
-  'max',
+  'xxxxl',
 ];
 
 export default function Breakpoints() {

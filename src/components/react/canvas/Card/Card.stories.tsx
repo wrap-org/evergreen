@@ -3,7 +3,6 @@ import React from 'react';
 
 import Card from './Card';
 
-import Grid from 'components/react/composition/Grid/Grid';
 import { base } from 'lib/theme';
 
 export default {
@@ -17,9 +16,9 @@ export default {
 } as Meta<typeof Card>;
 
 const Template: StoryFn<typeof Card> = (args) => (
-  <Grid wrap>
+  <evg-grid wrap="wrap">
     {base.map((theme) => (
-      <Grid.Item key={theme} xs={12} md={4}>
+      <evg-grid-item key={theme} small-mobile="12" small-tablet="4">
         <Card className={`m-theme-${theme}`} {...args}>
           <Card.Header>
             <h2>Card title</h2>
@@ -37,9 +36,9 @@ const Template: StoryFn<typeof Card> = (args) => (
             Maecenas convallis rutrum metus sed ultricies.
           </Card.Body>
         </Card>
-      </Grid.Item>
+      </evg-grid-item>
     ))}
-  </Grid>
+  </evg-grid>
 );
 
 export const Default = Template.bind({});
@@ -60,9 +59,9 @@ Arrow.args = {
 };
 
 export const MutedBody = () => (
-  <Grid>
+  <evg-grid>
     {base.map((theme) => (
-      <Grid.Item key={theme} xs={12} md={4} flex>
+      <evg-grid-item key={theme} small-mobile="12" small-tablet="4" fill>
         <Card border className={`m-theme-${theme}`}>
           <Card.Header>
             <h2>Card title</h2>
@@ -77,7 +76,7 @@ export const MutedBody = () => (
             tellus magna. Nunc scelerisque nisi eget dictum laoreet.
           </Card.Body>
         </Card>
-      </Grid.Item>
+      </evg-grid-item>
     ))}
-  </Grid>
+  </evg-grid>
 );

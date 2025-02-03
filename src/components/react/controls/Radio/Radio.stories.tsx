@@ -6,7 +6,6 @@ import Label from '../Label/Label';
 import Radio from './Radio';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Grid from 'components/react/composition/Grid/Grid';
 
 export default {
   title: 'React/Components/Controls/Radio',
@@ -31,19 +30,19 @@ export function Checked() {
       </FormGroup.Label>
       <FormGroup.Control>
         <div role="radiogroup" aria-labelledby="a-label">
-          <Grid wrap>
-            <Grid.Item xs={12}>
+          <evg-grid wrap="wrap">
+            <evg-grid-item small-mobile="12">
               <Radio name="Radio" checked touched valid>
                 Radio label
               </Radio>
-            </Grid.Item>
-            <Grid.Item xs={12}>
+            </evg-grid-item>
+            <evg-grid-item small-mobile="12">
               <Radio name="Radio" touched valid>
                 A really long radio label that wraps onto another line if it
                 needs to
               </Radio>
-            </Grid.Item>
-          </Grid>
+            </evg-grid-item>
+          </evg-grid>
         </div>
       </FormGroup.Control>
     </FormGroup>

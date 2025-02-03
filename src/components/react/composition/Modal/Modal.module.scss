@@ -1,6 +1,7 @@
+@use 'sass:map';
 @use 'sass:math';
 @use '../../../../styles/variables/font';
-@use '../../../../styles/variables/breakpoint';
+@use '../../../../styles/variables/size';
 @use '../../../../styles/mixins/screen-reader';
 
 @keyframes fade-in {
@@ -52,9 +53,10 @@
     position: relative;
     z-index: 9;
 
-    @each $key, $bp in breakpoint.$map {
+    @each $key, $size in size.$map {
+      $value: map.get($size, 'value');
       &--size-#{$key} {
-        width: $bp;
+        width: $value;
       }
     }
 

@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Section from 'components/react/canvas/Section/Section';
-import Grid from 'components/react/composition/Grid/Grid';
-import Wrap from 'components/react/composition/Wrap/Wrap';
 import Button from 'components/react/controls/Button/Button';
 import { base, emphasis, themes } from 'lib/theme';
 
@@ -54,7 +52,7 @@ export default {
 
 const ThemedSection = ({ theme }) => (
   <Section className={`m-theme-${theme}`}>
-    <Wrap size="md" className="m-spacing-top-fluid m-spacing-bottom-fluid">
+    <evg-wrap size="md" className="m-spacing-top-fluid m-spacing-bottom-fluid">
       <h1>{theme} theme</h1>
       <p className="m-spacing-bottom-md">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
@@ -65,17 +63,17 @@ const ThemedSection = ({ theme }) => (
         sit amet mauris.
       </p>
 
-      <Grid>
-        <Grid.Item xs={12} sm="auto">
+      <evg-grid>
+        <evg-grid-item small-mobile="12" sm="auto">
           <Button type="primary" block="mobile">
             Button text
           </Button>
-        </Grid.Item>
-        <Grid.Item xs={12} sm="auto">
+        </evg-grid-item>
+        <evg-grid-item small-mobile="12" sm="auto">
           <Button block="mobile">Button text</Button>
-        </Grid.Item>
-      </Grid>
-    </Wrap>
+        </evg-grid-item>
+      </evg-grid>
+    </evg-wrap>
   </Section>
 );
 

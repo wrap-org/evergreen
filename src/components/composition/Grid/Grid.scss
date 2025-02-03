@@ -1,0 +1,59 @@
+@use '../../../styles/variables/spacing';
+
+evg-grid {
+  --evg-grid-gap: var(--mobius-spacing-md);
+  display: flex;
+  margin: calc(var(--evg-grid-gap) * -0.5);
+
+  &[inline]:not([inline='false']) {
+    display: inline-flex;
+  }
+
+  /* wrap */
+  $wraps: wrap, wrap-reverse;
+
+  @each $wrap in $wraps {
+    &[wrap='#{$wrap}'] {
+      flex-wrap: #{$wrap};
+    }
+  }
+
+  /* direction */
+  $directions: row, row-reverse, column, column-reverse;
+
+  @each $direction in $directions {
+    &[direction='#{$direction}'] {
+      flex-direction: #{$direction};
+    }
+  }
+
+  /* justify-content */
+  $justify-contents: flex-start, flex-end, center, space-between, space-around,
+    space-evenly;
+
+  @each $justify-content in $justify-contents {
+    &[justify-content='#{$justify-content}'] {
+      justify-content: #{$justify-content};
+    }
+  }
+
+  /* align-items */
+  $align-items: stretch, flex-start, flex-end, center, baseline;
+
+  @each $align-item in $align-items {
+    &[align-items='#{$align-item}'] {
+      align-items: #{$align-item};
+    }
+  }
+
+  /* gap */
+  @each $size in spacing.$sizes {
+    &[gap='#{$size}'] {
+      --evg-grid-gap: var(--mobius-spacing-#{$size});
+    }
+  }
+
+  &[gap='none'] {
+    --evg-grid-gap: 0;
+  }
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Grid from 'components/react/composition/Grid/Grid';
-import Wrap from 'components/react/composition/Wrap/Wrap';
 import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 import Input from 'components/react/controls/Input/Input';
@@ -29,81 +27,81 @@ export default {
 
 export function Form() {
   return (
-    <Wrap size="lg">
+    <evg-wrap size="lg">
       <form>
         <h2>About your business</h2>
-        <Grid spacing="xs">
-          <Grid.Item>
+        <evg-grid gap="xs">
+          <evg-grid-item>
             <Icon color="positive" icon="circle-check" />
-          </Grid.Item>
-          <Grid.Item grow shrink>
+          </evg-grid-item>
+          <evg-grid-item grow shrink>
             Your selections have been saved in your browser to save you time in
             future.
-          </Grid.Item>
-        </Grid>
+          </evg-grid-item>
+        </evg-grid>
         <div className="m-spacing-bottom-lg" />
         <FormGroup className="m-spacing-bottom-md">
-          <Grid wrap>
-            <Grid.Item xs={12} md={6}>
+          <evg-grid wrap="wrap">
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="sector">Sector</Label>
-            </Grid.Item>
-            <Grid.Item xs={12} md={6}>
+            </evg-grid-item>
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <Input id="sector" placeholder="Sector" />
-            </Grid.Item>
-          </Grid>
+            </evg-grid-item>
+          </evg-grid>
         </FormGroup>
         <FormGroup className="m-spacing-bottom-md">
-          <Grid wrap>
-            <Grid.Item xs={12} md={6}>
+          <evg-grid wrap>
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="region">Region</Label>
-            </Grid.Item>
-            <Grid.Item xs={12} md={6}>
+            </evg-grid-item>
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <Select id="region">
                 <option>England</option>
               </Select>
-            </Grid.Item>
-          </Grid>
+            </evg-grid-item>
+          </evg-grid>
         </FormGroup>
         <FormGroup className="m-spacing-bottom-lg">
-          <Grid wrap>
-            <Grid.Item xs={12} md={6}>
+          <evg-grid wrap="wrap">
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="multiple" as="span" id="sites-label">
                 Multiple sites
               </Label>
-            </Grid.Item>
-            <Grid.Item xs={12} md={6}>
+            </evg-grid-item>
+            <evg-grid-item small-mobile="12" small-tablet="6">
               <div
                 role="radiogroup"
                 aria-labelledby="sites-label"
                 id="multiple"
               >
-                <Grid>
-                  <Grid.Item xs={6}>
+                <evg-grid>
+                  <evg-grid-item small-mobile="6">
                     <Radio name="radio" id="yes">
                       Yes
                     </Radio>
-                  </Grid.Item>
-                  <Grid.Item xs={6}>
+                  </evg-grid-item>
+                  <evg-grid-item small-mobile="6">
                     <Radio name="radio" id="no">
                       No
                     </Radio>
-                  </Grid.Item>
-                </Grid>
+                  </evg-grid-item>
+                </evg-grid>
               </div>
-            </Grid.Item>
-          </Grid>
+            </evg-grid-item>
+          </evg-grid>
         </FormGroup>
-        <Grid direction="row-reverse">
-          <Grid.Item xs={6}>
+        <evg-grid direction="row-reverse">
+          <evg-grid-item small-mobile="6">
             <Button type="primary" block>
               Save
             </Button>
-          </Grid.Item>
-          <Grid.Item xs={6}>
+          </evg-grid-item>
+          <evg-grid-item small-mobile="6">
             <Button block>Skip</Button>
-          </Grid.Item>
-        </Grid>
+          </evg-grid-item>
+        </evg-grid>
       </form>
-    </Wrap>
+    </evg-wrap>
   );
 }

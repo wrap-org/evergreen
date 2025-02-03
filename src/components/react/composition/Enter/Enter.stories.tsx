@@ -4,7 +4,6 @@ import React from 'react';
 import Enter from './Enter';
 
 import Card from 'components/react/canvas/Card/Card';
-import Grid from 'components/react/composition/Grid/Grid';
 import Button from 'components/react/controls/Button/Button';
 
 export default {
@@ -30,9 +29,9 @@ const Template: ComponentStory<typeof Enter> = (args) => {
   const delayValue = delay ? parseInt(delay, 10) : 1;
 
   return (
-    <Grid wrap>
+    <evg-grid wrap="wrap">
       {[0, 1, 2].map((item) => (
-        <Grid.Item key={item} xs={12} md={4}>
+        <evg-grid-item key={item} small-mobile="12" small-tablet="4">
           <Enter {...args} delay={`${delayValue * item * 0.2}s`}>
             <Card>
               <Card.Header>
@@ -51,9 +50,9 @@ const Template: ComponentStory<typeof Enter> = (args) => {
               </Card.Body>
             </Card>
           </Enter>
-        </Grid.Item>
+        </evg-grid-item>
       ))}
-    </Grid>
+    </evg-grid>
   );
 };
 

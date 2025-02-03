@@ -1,0 +1,38 @@
+$map: (
+  xxs: (
+    name: 'small-mobile',
+    value: 320px,
+  ),
+  xs: (
+    name: 'mobile',
+    value: 375px,
+  ),
+  sm: (
+    name: 'large-mobile',
+    value: 480px,
+  ),
+  md: (
+    name: 'small-tablet',
+    value: 600px,
+  ),
+  lg: (
+    name: 'tablet',
+    value: 768px,
+  ),
+  xl: (
+    name: 'large-tablet',
+    value: 1024px,
+  ),
+  xxl: (
+    name: 'small-desktop',
+    value: 1280px,
+  ),
+  xxxl: (
+    name: 'desktop',
+    value: 1440px,
+  ),
+  xxxxl: (
+    name: 'large-desktop',
+    value: 1920px,
+  ),
+);
