@@ -2,12 +2,12 @@
 
 .vehicle-svg {
   @each $colorName, $color in color.$colors {
-    &.vehicle-svg--mobius-color-#{$colorName} {
+    &.vehicle-svg--evg-color-#{$colorName} {
       fill: $color;
     }
   }
 
-  &.vehicle-svg--mobius-color-transparent {
-    stroke: var(--mobius-color-forest);
+  &.vehicle-svg--evg-color-transparent {
+    stroke: var(--evg-color-forest);
   }
 }

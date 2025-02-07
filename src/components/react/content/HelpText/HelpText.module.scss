@@ -1,15 +1,15 @@
 .help-text {
-  background-color: var(--mobius-color-neutral-light);
-  color: var(--mobius-color-body);
-  font-size: var(--mobius-font-size-sm);
-  margin-top: var(--mobius-spacing-sm);
-  padding: var(--mobius-spacing-sm) var(--mobius-spacing-md);
+  background-color: var(--evg-color-neutral-light);
+  color: var(--evg-color-body);
+  font-size: var(--evg-font-size-sm);
+  margin-top: var(--evg-spacing-sm);
+  padding: var(--evg-spacing-sm) var(--evg-spacing-md);
 
   &--positive {
-    background: var(--mobius-color-positive-light);
+    background: var(--evg-color-positive-light);
   }
 
   &--negative {
-    background: var(--mobius-color-negative-light);
+    background: var(--evg-color-negative-light);
   }
 }

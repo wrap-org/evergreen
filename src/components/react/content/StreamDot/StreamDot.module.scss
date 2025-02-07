@@ -1,5 +1,5 @@
 .stream-dot {
-  background: var(--mobius-color-no-stream);
+  background: var(--evg-color-no-stream);
   border-radius: 50%;
   display: inline-block;
   height: 1em;
@@ -9,22 +9,22 @@
   width: 1em;
 
   &--dry {
-    background: var(--mobius-color-dry-stream);
+    background: var(--evg-color-dry-stream);
   }
 
   &--residual {
-    background: var(--mobius-color-residual-stream);
+    background: var(--evg-color-residual-stream);
   }
 
   &--food {
-    background: var(--mobius-color-food-stream);
+    background: var(--evg-color-food-stream);
   }
 
   &--garden {
-    background: var(--mobius-color-garden-stream);
+    background: var(--evg-color-garden-stream);
   }
 
   &--organic {
-    background: var(--mobius-color-organic-stream);
+    background: var(--evg-color-organic-stream);
   }
 }

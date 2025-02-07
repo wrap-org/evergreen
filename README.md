@@ -1,17 +1,17 @@
 <h1 align="center">
-  <img width="300" src="https://mobius.wrap.ngo/logo.png" alt="Mobius design system">
+  <img width="300" src="https://evergreen.wrap.ngo/logo.png" alt="Evergreen design system">
   <br>
   <br>
 </h1>
 
 # Storybook docs
 
-[Live demo](https://mobius.wrap.ngo)
+[Live demo](https://evergreen.wrap.ngo)
 
 # Install
 
 ```bash
-npm install --save @etchteam/mobius
+npm install --save @wrap.ngo/evergreen
 ```
 
 # Usage
@@ -19,22 +19,22 @@ npm install --save @etchteam/mobius
 Install the global CSS in your main app file
 
 ```js
-import '@etchteam/mobius/src/styles/main.scss';
-import '@etchteam/mobius/components.css';
+import '@wrap.ngo/evergreen/src/styles/main.scss';
+import '@wrap.ngo/evergreen/components.css';
 
 // Optional font face
-import '@etchteam/mobius/src/styles/fonts.scss';
+import '@wrap.ngo/evergreen/src/styles/fonts.scss';
 ```
 
 Import a theme file
 
 ```js
-import '@etchteam/mobius/src/styles/themes/default/main.scss';
+import '@wrap.ngo/evergreen/src/styles/themes/default/main.scss';
 ```
 
 ```jsx
 import React from 'react';
-import { Button } from '@etchteam/mobius';
+import { Button } from '@wrap.ngo/evergreen';
 
 const MyComponent = () => (
   <Button

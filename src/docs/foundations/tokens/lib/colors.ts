@@ -1,4 +1,4 @@
-import tokens from '@etchteam/mobius-tokens/dist/index.css?raw';
+import tokens from '@wrap.ngo/tokens/dist/index.css?raw';
 import groupBy from 'lodash/groupBy';
 import map from 'lodash/map';
 
@@ -36,17 +36,14 @@ function formatColors(colors: string[], prefix) {
   );
 }
 
-function formatGroups(
-  groups: Dictionary<string[]>,
-  prefix = '--mobius-color-',
-) {
+function formatGroups(groups: Dictionary<string[]>, prefix = '--evg-color-') {
   return map(groups, (group, groupName) => ({
     name: groupName.charAt(0).toUpperCase() + groupName.slice(1).toLowerCase(),
     colors: formatColors(sortColors(group), prefix),
   }));
 }
 
-function groupColors(colors: string[], prefix = '--mobius-color-') {
+function groupColors(colors: string[], prefix = '--evg-color-') {
   const groups = groupBy(colors, (color) => {
     if (color.includes('-stream')) {
       return color.replace(prefix, '').replace('-', ' ');
@@ -58,15 +55,13 @@ function groupColors(colors: string[], prefix = '--mobius-color-') {
   return groups;
 }
 
-const palette = tokens.match(/--mobius-color-[a-z0-9-]+(?=: .*;)/g);
-const containers = tokens.match(
-  /--mobius-container-color-[a-z0-9-]+(?=: .*;)/g,
-);
+const palette = tokens.match(/--evg-color-[a-z0-9-]+(?=: .*;)/g);
+const containers = tokens.match(/--evg-container-color-[a-z0-9-]+(?=: .*;)/g);
 
 export const colorGroups = formatGroups(groupColors(palette));
 export const containerColorGroups = formatGroups(
-  groupColors(containers, '--mobius-container-color-'),
-  '--mobius-container-color-',
+  groupColors(containers, '--evg-container-color-'),
+  '--evg-container-color-',
 );
 
 export const skinColorGroups = [
@@ -87,11 +82,11 @@ export const skinColorGroups = [
 ].map((skin) => ({
   name: skin.charAt(0).toUpperCase() + skin.slice(1),
   colors: {
-    background: `var(--mobius-skin-background-${skin})`,
-    border: `var(--mobius-skin-border-color-${skin})`,
-    color: `var(--mobius-skin-color-${skin})`,
-    heading: `var(--mobius-skin-heading-color-${skin.replace('muted-', '')})`,
-    link: `var(--mobius-skin-link-color-${skin.replace('muted-', '')})`,
+    background: `var(--evg-skin-background-${skin})`,
+    border: `var(--evg-skin-border-color-${skin})`,
+    color: `var(--evg-skin-color-${skin})`,
+    heading: `var(--evg-skin-heading-color-${skin.replace('muted-', '')})`,
+    link: `var(--evg-skin-link-color-${skin.replace('muted-', '')})`,
   },
 }));
 
@@ -104,19 +99,19 @@ export const buttonColorGroups = [
 ].map((type) => ({
   name: type.charAt(0).toUpperCase() + type.slice(1),
   colors: {
-    background: `var(--mobius-button-background-${type})`,
-    'background hover': `var(--mobius-button-background-hover-${type})`,
-    'background focus': `var(--mobius-button-background-focus-${type})`,
-    'background disabled': `var(--mobius-button-background-disabled-${type})`,
+    background: `var(--evg-button-background-${type})`,
+    'background hover': `var(--evg-button-background-hover-${type})`,
+    'background focus': `var(--evg-button-background-focus-${type})`,
+    'background disabled': `var(--evg-button-background-disabled-${type})`,
 
-    border: `var(--mobius-button-border-color-${type})`,
-    'border hover': `var(--mobius-button-border-color-hover-${type})`,
-    'border focus': `var(--mobius-button-border-color-focus-${type})`,
-    'border disabled': `var(--mobius-button-border-color-disabled-${type})`,
+    border: `var(--evg-button-border-color-${type})`,
+    'border hover': `var(--evg-button-border-color-hover-${type})`,
+    'border focus': `var(--evg-button-border-color-focus-${type})`,
+    'border disabled': `var(--evg-button-border-color-disabled-${type})`,
 
-    color: `var(--mobius-button-color-${type})`,
-    'color hover': `var(--mobius-button-color-hover-${type})`,
-    'color focus': `var(--mobius-button-color-focus-${type})`,
-    'color disabled': `var(--mobius-button-color-disabled-${type})`,
+    color: `var(--evg-button-color-${type})`,
+    'color hover': `var(--evg-button-color-hover-${type})`,
+    'color focus': `var(--evg-button-color-focus-${type})`,
+    'color disabled': `var(--evg-button-color-disabled-${type})`,
   },
 }));

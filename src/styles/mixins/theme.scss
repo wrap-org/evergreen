@@ -1,18 +1,16 @@
 @mixin theme($type) {
-  --mobius-skin-background: var(--mobius-skin-background-#{$type});
-  --mobius-skin-background-muted: var(--mobius-skin-background-muted-#{$type});
-  --mobius-skin-border-color: var(--mobius-skin-border-color-#{$type});
-  --mobius-skin-border-color-muted: var(
-    --mobius-skin-border-color-muted-#{$type}
+  --evg-skin-background: var(--evg-skin-background-#{$type});
+  --evg-skin-background-muted: var(--evg-skin-background-muted-#{$type});
+  --evg-skin-border-color: var(--evg-skin-border-color-#{$type});
+  --evg-skin-border-color-muted: var(--evg-skin-border-color-muted-#{$type});
+  --evg-skin-color: var(--evg-skin-color-#{$type});
+  --evg-skin-color-muted: var(--evg-skin-color-muted-#{$type});
+  --evg-skin-heading-color: var(--evg-skin-heading-color-#{$type});
+  --evg-skin-link-color: var(--evg-skin-link-color-#{$type});
+  --evg-skin-link-text-decoration: var(
+    --evg-skin-link-text-decoration-#{$type}
   );
-  --mobius-skin-color: var(--mobius-skin-color-#{$type});
-  --mobius-skin-color-muted: var(--mobius-skin-color-muted-#{$type});
-  --mobius-skin-heading-color: var(--mobius-skin-heading-color-#{$type});
-  --mobius-skin-link-color: var(--mobius-skin-link-color-#{$type});
-  --mobius-skin-link-text-decoration: var(
-    --mobius-skin-link-text-decoration-#{$type}
-  );
-  --mobius-skin-link-text-decoration-hover: var(
-    --mobius-skin-link-text-decoration-hover-#{$type}
+  --evg-skin-link-text-decoration-hover: var(
+    --evg-skin-link-text-decoration-hover-#{$type}
   );
 }

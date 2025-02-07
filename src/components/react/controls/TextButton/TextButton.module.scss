@@ -4,16 +4,16 @@
   appearance: none;
   background: none;
   border: 0 none;
-  border-radius: var(--mobius-radius-sm);
-  color: var(--mobius-skin-link-color);
+  border-radius: var(--evg-radius-sm);
+  color: var(--evg-skin-link-color);
   cursor: pointer;
-  padding: var(--mobius-spacing-sm) 0;
+  padding: var(--evg-spacing-sm) 0;
   transition:
-    opacity var(--mobius-transition),
-    color var(--mobius-transition);
+    opacity var(--evg-transition),
+    color var(--evg-transition);
 
   &[disabled] {
-    color: var(--mobius-button-color-disabled);
+    color: var(--evg-button-color-disabled);
     cursor: not-allowed;
     opacity: 0.5;
   }
@@ -29,16 +29,16 @@
 
   &__icon {
     &--left {
-      margin-right: var(--mobius-spacing-xs);
+      margin-right: var(--evg-spacing-xs);
     }
 
     &--right {
-      margin-left: var(--mobius-spacing-xs);
+      margin-left: var(--evg-spacing-xs);
     }
   }
 
   &--size-sm {
-    font-size: var(--mobius-font-size-sm);
+    font-size: var(--evg-font-size-sm);
   }
 
   &--decorate {
@@ -49,7 +49,7 @@
     }
 
     &:focus {
-      background: var(--mobius-skin-border-color);
+      background: var(--evg-skin-border-color);
       text-decoration: none;
     }
   }

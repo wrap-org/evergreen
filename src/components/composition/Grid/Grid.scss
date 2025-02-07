@@ -1,7 +1,7 @@
 @use '../../../styles/variables/spacing';
 
 evg-grid {
-  --evg-grid-gap: var(--mobius-spacing-md);
+  --evg-grid-gap: var(--evg-spacing-md);
   display: flex;
   margin: calc(var(--evg-grid-gap) * -0.5);
 
@@ -49,7 +49,7 @@ evg-grid {
   /* gap */
   @each $size in spacing.$sizes {
     &[gap='#{$size}'] {
-      --evg-grid-gap: var(--mobius-spacing-#{$size});
+      --evg-grid-gap: var(--evg-spacing-#{$size});
     }
   }
 

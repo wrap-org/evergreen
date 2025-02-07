@@ -6,18 +6,18 @@
   &__prefix,
   &__suffix {
     align-self: center;
-    font-weight: var(--mobius-font-weight-bold);
-    line-height: var(--mobius-font-line-height);
+    font-weight: var(--evg-font-weight-bold);
+    line-height: var(--evg-font-line-height);
   }
 
   &__prefix {
-    margin-right: calc(var(--mobius-input-padding-horizontal) / -2);
-    padding: 0 0 0 var(--mobius-input-padding-horizontal);
+    margin-right: calc(var(--evg-input-padding-horizontal) / -2);
+    padding: 0 0 0 var(--evg-input-padding-horizontal);
   }
 
   &__suffix {
-    margin-left: calc(var(--mobius-input-padding-horizontal) / -2);
-    padding: 0 var(--mobius-input-padding-horizontal) 0 0;
+    margin-left: calc(var(--evg-input-padding-horizontal) / -2);
+    padding: 0 var(--evg-input-padding-horizontal) 0 0;
   }
 
   &__input {

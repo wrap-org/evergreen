@@ -7,7 +7,7 @@ $directions: top, left, bottom, right;
     &-#{$direction} {
       @each $size in spacing.$sizes {
         &-#{$size} {
-          margin-#{$direction}: var(--mobius-spacing-#{$size});
+          margin-#{$direction}: var(--evg-spacing-#{$size});
         }
       }
     }

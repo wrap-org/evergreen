@@ -1,28 +1,28 @@
 .faq {
-  background: var(--mobius-skin-background-muted);
-  border: 1px solid var(--mobius-skin-border-color-muted);
-  border-radius: var(--mobius-radius-sm);
+  background: var(--evg-skin-background-muted);
+  border: 1px solid var(--evg-skin-border-color-muted);
+  border-radius: var(--evg-radius-sm);
   transition:
-    background-color var(--mobius-transition),
-    color var(--mobius-transition),
-    border-color var(--mobius-transition);
+    background-color var(--evg-transition),
+    color var(--evg-transition),
+    border-color var(--evg-transition);
   width: 100%;
 
   &--open {
-    background: var(--mobius-skin-background);
-    border-color: var(--mobius-skin-border-color);
-    box-shadow: var(--mobius-shadow);
+    background: var(--evg-skin-background);
+    border-color: var(--evg-skin-border-color);
+    box-shadow: var(--evg-shadow);
   }
 
   &__content {
-    padding-top: var(--mobius-spacing-md);
+    padding-top: var(--evg-spacing-md);
   }
 
   &:hover {
-    border-color: var(--mobius-input-border-hover);
+    border-color: var(--evg-input-border-hover);
   }
 
   &:focus-within {
-    border-color: var(--mobius-input-border-focus);
+    border-color: var(--evg-input-border-focus);
   }
 }
