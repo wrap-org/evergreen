@@ -60,7 +60,9 @@ const Template: StoryFn = (args) => (
   <evg-grid {...args}>
     {[...Array(12).keys()].map((i) => (
       <evg-grid-item grow shrink key={i}>
-        <docs-placeholder class="m-text-align-center">{i + 1}</docs-placeholder>
+        <docs-placeholder class="evg-text-align-center">
+          {i + 1}
+        </docs-placeholder>
       </evg-grid-item>
     ))}
   </evg-grid>
@@ -79,7 +81,7 @@ Grid.args = {
 
 export const StretchOneSide = () => (
   <>
-    <evg-grid class="m-spacing-bottom-sm">
+    <evg-grid class="evg-spacing-bottom-sm">
       <evg-grid-item grow shrink>
         <docs-placeholder>Grow</docs-placeholder>
       </evg-grid-item>

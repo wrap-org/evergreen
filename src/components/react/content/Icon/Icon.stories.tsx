@@ -43,12 +43,12 @@ const Template = ({
       >
         <Card border>
           <Card.Body>
-            <div className="m-text-align-center">
-              <span className="m-text-size-xl">
+            <div className="evg-text-align-center">
+              <span className="evg-text-size-xl">
                 <Icon icon={icon} type={type} />
               </span>
               <br />
-              <span className="m-text-size-sm">{icon}</span>
+              <span className="evg-text-size-sm">{icon}</span>
             </div>
           </Card.Body>
         </Card>

@@ -9,6 +9,9 @@
 @use 'utilities/text' as textUtilities;
 @use 'utilities/theme' as themeUtilities;
 
+@use '../components/composition/App/App';
 @use '../components/composition/Grid/Grid';
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Wrap/Wrap';
+
+@use '../components/canvas/Section/Section';

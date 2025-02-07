@@ -44,7 +44,7 @@ export const Animated: StoryFn<typeof List> = (args) => {
 
   return (
     <>
-      <List {...args} className="m-spacing-bottom-md">
+      <List {...args} className="evg-spacing-bottom-md">
         {items.map((item) => (
           <List.Item key={item} icon={<Icon icon="favorite" />}>
             Icon List Item

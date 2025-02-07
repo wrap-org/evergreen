@@ -20,7 +20,7 @@ export const Default = (args: BadgeProps) => (
     {emphasis.map((theme) => (
       <evg-grid-item key={theme}>
         <Badge
-          className={`m-theme-${theme} m-text-transform-capitalize`}
+          className={`evg-theme-${theme} evg-text-transform-capitalize`}
           {...args}
         >
           {theme}

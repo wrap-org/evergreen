@@ -39,8 +39,8 @@ export function Form() {
             future.
           </evg-grid-item>
         </evg-grid>
-        <div className="m-spacing-bottom-lg" />
-        <FormGroup className="m-spacing-bottom-md">
+        <div className="evg-spacing-bottom-lg" />
+        <FormGroup className="evg-spacing-bottom-md">
           <evg-grid wrap="wrap">
             <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="sector">Sector</Label>
@@ -50,7 +50,7 @@ export function Form() {
             </evg-grid-item>
           </evg-grid>
         </FormGroup>
-        <FormGroup className="m-spacing-bottom-md">
+        <FormGroup className="evg-spacing-bottom-md">
           <evg-grid wrap>
             <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="region">Region</Label>
@@ -62,7 +62,7 @@ export function Form() {
             </evg-grid-item>
           </evg-grid>
         </FormGroup>
-        <FormGroup className="m-spacing-bottom-lg">
+        <FormGroup className="evg-spacing-bottom-lg">
           <evg-grid wrap="wrap">
             <evg-grid-item small-mobile="12" small-tablet="6">
               <Label htmlFor="multiple" as="span" id="sites-label">

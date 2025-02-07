@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Section from 'components/react/canvas/Section/Section';
 import Button from 'components/react/controls/Button/Button';
 import { base, emphasis, themes } from 'lib/theme';
 
@@ -9,7 +8,7 @@ const description = `
   enables a set of variables for display properties like background, text and border
   colours.
 
-  Themes can be applied to components by setting a theme utility class (\`m-theme-dark\`) on the
+  Themes can be applied to components by setting a theme utility class (\`evg-theme-dark\`) on the
   component or one of the parent elements.
 
   Components that support theming have a 'theme support' badge at the top of their docs page.
@@ -51,10 +50,10 @@ export default {
 };
 
 const ThemedSection = ({ theme }) => (
-  <Section className={`m-theme-${theme}`}>
-    <evg-wrap size="md" className="m-spacing-top-fluid m-spacing-bottom-fluid">
+  <evg-section class={`evg-theme-${theme}`} padding="fluid">
+    <evg-wrap size="md">
       <h1>{theme} theme</h1>
-      <p className="m-spacing-bottom-md">
+      <p className="evg-spacing-bottom-md">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
         <a href="https://wrap.ngo">faucibus euismod</a>. Pellentesque et metus
         nunc. Fusce ante arcu, mattis pretium semper ac, pretium vitae velit.
@@ -64,17 +63,17 @@ const ThemedSection = ({ theme }) => (
       </p>
 
       <evg-grid>
-        <evg-grid-item small-mobile="12" sm="auto">
+        <evg-grid-item small-mobile="12" mobile="auto">
           <Button type="primary" block="mobile">
             Button text
           </Button>
         </evg-grid-item>
-        <evg-grid-item small-mobile="12" sm="auto">
+        <evg-grid-item small-mobile="12" mobile="auto">
           <Button block="mobile">Button text</Button>
         </evg-grid-item>
       </evg-grid>
     </evg-wrap>
-  </Section>
+  </evg-section>
 );
 
 export const Theme = ({ theme }) => <ThemedSection theme={theme} />;

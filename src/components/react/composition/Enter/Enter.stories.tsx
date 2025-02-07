@@ -38,7 +38,7 @@ const Template: ComponentStory<typeof Enter> = (args) => {
                 <h2>Card title</h2>
               </Card.Header>
               <Card.Body>
-                <p className="m-spacing-bottom-md">
+                <p className="evg-spacing-bottom-md">
                   Aliquam egestas mi quam, a tincidunt lectus faucibus euismod.
                   Pellentesque et metus nunc. Fusce ante arcu, mattis pretium
                   semper ac, pretium vitae velit. Donec vitae eros et arcu

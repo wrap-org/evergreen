@@ -42,7 +42,7 @@ export const parameters = {
           <Title />
           <Subtitle />
           {themeSupport && (
-            <Badge className="m-theme-info">
+            <Badge className="evg-theme-info">
               Theme support
             </Badge>
           )}
@@ -53,7 +53,7 @@ export const parameters = {
 
           <h2>Help us improve this component</h2>
 
-          <div className="sb-unstyled m-spacing-bottom-lg m-spacing-top-lg">
+          <div className="sb-unstyled evg-spacing-bottom-lg evg-spacing-top-lg">
             <evg-grid>
               <evg-grid-item>
                 <Button

@@ -2,7 +2,7 @@
 
 $directions: top, left, bottom, right;
 
-.m-spacing {
+.evg-spacing {
   @each $direction in $directions {
     &-#{$direction} {
       @each $size in spacing.$sizes {

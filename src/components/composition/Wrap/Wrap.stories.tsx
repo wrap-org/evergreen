@@ -74,7 +74,7 @@ export const SizesStory = () => {
   return (
     <>
       {sizes.map((size) => (
-        <evg-wrap size={size} class="m-spacing-bottom-md" key={size}>
+        <evg-wrap size={size} class="evg-spacing-bottom-md" key={size}>
           <docs-placeholder>{size}</docs-placeholder>
         </evg-wrap>
       ))}

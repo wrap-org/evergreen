@@ -1,0 +1,18 @@
+@use '../../../styles/variables/spacing';
+
+evg-section {
+  background: var(--evg-skin-background);
+  color: var(--evg-skin-color);
+  display: block;
+  padding-block: var(--evg-spacing-md);
+
+  @each $size in spacing.$sizes {
+    &[padding='#{$size}'] {
+      padding-block: var(--evg-spacing-#{$size});
+    }
+  }
+
+  &[padding='none'] {
+    padding-block: 0;
+  }
+}

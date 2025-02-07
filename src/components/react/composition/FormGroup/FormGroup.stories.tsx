@@ -30,7 +30,7 @@ Default.storyName = 'Form group';
 export function Horizontal() {
   return (
     <>
-      <FormGroup horizontal className="m-spacing-bottom-lg">
+      <FormGroup horizontal className="evg-spacing-bottom-lg">
         <FormGroup.Label>
           <Label htmlFor="my-input">Input label</Label>
         </FormGroup.Label>
@@ -69,7 +69,7 @@ export function WithInfo() {
 
   return (
     <>
-      <FormGroup className="m-spacing-bottom-lg">
+      <FormGroup className="evg-spacing-bottom-lg">
         <FormGroup.Label>
           <Label htmlFor="my-input-one">Input label</Label>
           <TextButton
@@ -84,7 +84,7 @@ export function WithInfo() {
           <Input id="my-input-one" name="my-input" />
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-one" open={infoOneOpen}>
-          <Alert className="m-theme-info">This is an info message</Alert>
+          <Alert className="evg-theme-info">This is an info message</Alert>
         </FormGroup.Info>
       </FormGroup>
 
@@ -103,7 +103,7 @@ export function WithInfo() {
           <Input id="my-input-two" name="my-input-two" />
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-two" open={infoTwoOpen}>
-          <Alert className="m-theme-info">This is an info message</Alert>
+          <Alert className="evg-theme-info">This is an info message</Alert>
         </FormGroup.Info>
       </FormGroup>
     </>
@@ -113,7 +113,7 @@ export function WithInfo() {
 export function AsFieldset() {
   return (
     <>
-      <FormGroup as="fieldset" className="m-spacing-bottom-lg">
+      <FormGroup as="fieldset" className="evg-spacing-bottom-lg">
         <FormGroup.Label as="legend">
           <Label as="span">Legend</Label>
         </FormGroup.Label>
