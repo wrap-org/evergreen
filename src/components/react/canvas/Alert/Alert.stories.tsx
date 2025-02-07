@@ -20,7 +20,10 @@ export function Default() {
   return (
     <>
       {emphasis.map((theme) => (
-        <Alert className={`m-theme-${theme} m-spacing-bottom-md`} key={theme}>
+        <Alert
+          className={`evg-theme-${theme} evg-spacing-bottom-md`}
+          key={theme}
+        >
           <evg-grid wrap="wrap">
             <evg-grid-item grow shrink>
               <strong>Alert title</strong>

@@ -3,7 +3,7 @@ import React from 'react';
 const description = `
 Spacing is a set of utility classes that can be added to any component or element.
 
-The spacing class name format is \`m-spacing-{direction}-{size}\`, e.g. \`m-spacing-bottom-sm\`.
+The spacing class name format is \`evg-spacing-{direction}-{size}\`, e.g. \`evg-spacing-bottom-sm\`.
 
 Spacing tweaks are one of the most common reasons for introducing page level CSS, which is a slippery slope to a bloated CSS file. Keeping spacing separate to the component allows for a more modular and maintainable codebase.
 
@@ -32,7 +32,7 @@ export default {
 };
 
 export const Spacing = (args) => {
-  const cx = `m-spacing-bottom-${args.size}`;
+  const cx = `evg-spacing-bottom-${args.size}`;
 
   return (
     <>

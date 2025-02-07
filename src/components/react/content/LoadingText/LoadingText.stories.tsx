@@ -23,9 +23,9 @@ export default {
 export const Default = () => (
   <>
     <LoadingText chars={350} />
-    <div className="m-spacing-bottom-md" />
+    <div className="evg-spacing-bottom-md" />
     <LoadingText chars={50} as="h2" />
-    <div className="m-spacing-bottom-md" />
+    <div className="evg-spacing-bottom-md" />
     <LoadingText chars={20} as="p" />
   </>
 );

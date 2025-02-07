@@ -1,4 +1,5 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { Spacing } from '../../../types/spacing.type';
 
 export interface GridAttributes {
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
@@ -12,7 +13,7 @@ export interface GridAttributes {
     | 'space-around'
     | 'space-evenly';
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline';
-  gap?: 'xs' | 'sm' | 'lg' | 'xl';
+  gap?: Spacing | 'none';
 }
 
 declare global {

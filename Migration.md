@@ -9,10 +9,10 @@
   - `max` -> `xxxl`
 
 ### Utilities
-- `Text`has been replaced with text utility classes. e.g. `.m-text-size-lg`
+- `Text`has been replaced with text utility classes. e.g. `.evg-text-size-lg`
 - `TextAlign`, `Lead` and `Title` components have been removed and should use the text utility classes instead.
-- `Skin` has been replaced with theme utility classes. e.g. `.m-theme-dark`
-- `Spacing` has been replaced with spacing utility classes. e.g. `.m-spacing-bottom-md`
+- `Skin` has been replaced with theme utility classes. e.g. `.evg-theme-dark`
+- `Spacing` has been replaced with spacing utility classes. e.g. `.evg-spacing-bottom-md`
 
 ### Components
 - `Wrap` has been replaced with `evg-wrap`
@@ -44,3 +44,6 @@
     - `align` has been removed
     - `flex` is now `fill`
     - `order` has been removed
+- `App` has been replaced with `evg-app`
+  - `App.Header`, `App.Main` and `App.Footer` have been removed. There are `header` and `footer` slots in `evg-app`.
+- `Section` has been replaced with `evg-section`. The new component is able to handle it's own vertical padding via the `padding` prop.

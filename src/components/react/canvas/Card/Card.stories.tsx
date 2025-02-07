@@ -19,7 +19,7 @@ const Template: StoryFn<typeof Card> = (args) => (
   <evg-grid wrap="wrap">
     {base.map((theme) => (
       <evg-grid-item key={theme} small-mobile="12" small-tablet="4">
-        <Card className={`m-theme-${theme}`} {...args}>
+        <Card className={`evg-theme-${theme}`} {...args}>
           <Card.Header>
             <h2>Card title</h2>
           </Card.Header>
@@ -62,7 +62,7 @@ export const MutedBody = () => (
   <evg-grid>
     {base.map((theme) => (
       <evg-grid-item key={theme} small-mobile="12" small-tablet="4" fill>
-        <Card border className={`m-theme-${theme}`}>
+        <Card border className={`evg-theme-${theme}`}>
           <Card.Header>
             <h2>Card title</h2>
           </Card.Header>

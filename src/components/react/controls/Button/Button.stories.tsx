@@ -3,7 +3,6 @@ import React, { PropsWithChildren } from 'react';
 
 import Button from './Button';
 
-import Section from 'components/react/canvas/Section/Section';
 import Icon from 'components/react/content/Icon/Icon';
 
 export default {
@@ -28,18 +27,16 @@ export function Types() {
 
 export function DarkMode() {
   return (
-    <Section className="m-theme-dark">
-      <div className="m-spacing-top-md m-spacing-bottom-md">
-        <Button>Button</Button>
-        <Button type="primary">Button</Button>{' '}
-        <Button type="secondary">Button</Button>{' '}
-        <Button type="positive">Button</Button>{' '}
-        <Button type="negative">Button</Button>{' '}
-        <Button type="primary" icon>
-          <Icon icon="edit" title="Moderate" />
-        </Button>
-      </div>
-    </Section>
+    <evg-section class="evg-theme-dark" padding="md">
+      <Button>Button</Button>
+      <Button type="primary">Button</Button>{' '}
+      <Button type="secondary">Button</Button>{' '}
+      <Button type="positive">Button</Button>{' '}
+      <Button type="negative">Button</Button>{' '}
+      <Button type="primary" icon>
+        <Icon icon="edit" title="Moderate" />
+      </Button>
+    </evg-section>
   );
 }
 

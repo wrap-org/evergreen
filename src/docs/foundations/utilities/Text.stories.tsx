@@ -154,7 +154,7 @@ export const Text = (args) => {
 
   Object.keys(rest).forEach((key) => {
     if (rest[key]) {
-      cxObj[`m-text-${key}-${rest[key]}`] = true;
+      cxObj[`evg-text-${key}-${rest[key]}`] = true;
     }
   });
 
@@ -171,7 +171,7 @@ export const Sizes = () => {
   return (
     <>
       {sizes.map((size) => (
-        <p key={size} className={`m-text-size-${size}`}>
+        <p key={size} className={`evg-text-size-${size}`}>
           This text is size {size}
         </p>
       ))}
@@ -183,7 +183,7 @@ export const Colors = () => {
   return (
     <>
       {colors.map((color) => (
-        <p key={color} className={`m-text-color-${color}`}>
+        <p key={color} className={`evg-text-color-${color}`}>
           {color}
         </p>
       ))}
@@ -195,7 +195,7 @@ export const Weights = () => {
   return (
     <>
       {weights.map((weight) => (
-        <p key={weight} className={`m-text-weight-${weight}`}>
+        <p key={weight} className={`evg-text-weight-${weight}`}>
           This text is weighted {weight}.
         </p>
       ))}
@@ -207,7 +207,7 @@ export const Align = () => {
   return (
     <>
       {alignments.map((alignment) => (
-        <p key={alignment} className={`m-text-align-${alignment}`}>
+        <p key={alignment} className={`evg-text-align-${alignment}`}>
           This text is {alignment} aligned.
         </p>
       ))}
