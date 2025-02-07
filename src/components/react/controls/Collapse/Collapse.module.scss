@@ -24,8 +24,8 @@
     display: grid;
     grid-template-rows: 0fr;
     transition:
-      grid-template-rows var(--mobius-transition),
-      content-visibility var(--mobius-transition) allow-discrete;
+      grid-template-rows var(--evg-transition),
+      content-visibility var(--evg-transition) allow-discrete;
 
     &--open {
       content-visibility: visible;
@@ -38,7 +38,7 @@
   }
 
   &--padded {
-    padding: var(--mobius-spacing-sm) var(--mobius-spacing-md);
+    padding: var(--evg-spacing-sm) var(--evg-spacing-md);
   }
 
   &--text-decoration-none {

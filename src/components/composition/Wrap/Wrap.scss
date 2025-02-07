@@ -6,7 +6,7 @@ evg-wrap {
   display: block;
   margin-inline: auto;
   max-width: 90em; /* 1440px */
-  padding: 0 var(--mobius-spacing-md);
+  padding: 0 var(--evg-spacing-md);
   width: 100%;
 
   @each $key, $size in size.$map {
@@ -22,7 +22,7 @@ evg-wrap {
 
   @each $size in spacing.$sizes {
     &[gutter='#{$size}'] {
-      padding-inline: var(--mobius-spacing-#{$size});
+      padding-inline: var(--evg-spacing-#{$size});
     }
   }
 

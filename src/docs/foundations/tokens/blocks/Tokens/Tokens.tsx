@@ -1,4 +1,4 @@
-import allTokens from '@etchteam/mobius-tokens/dist/index.css?raw';
+import allTokens from '@wrap.ngo/tokens/dist/index.css?raw';
 import React from 'react';
 
 import styles from './Tokens.module.scss';
@@ -8,7 +8,7 @@ export default function Tokens({
 }: {
   readonly collection: string;
 }) {
-  const regex = new RegExp(`--mobius-${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
+  const regex = new RegExp(`--evg-${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
   const tokensArray = allTokens.match(regex);
   const tokens = tokensArray?.map((token) => {
     const [key, value] = token.replace(';', '').split(': ');
@@ -36,14 +36,14 @@ export default function Tokens({
           // Check if the token.value includes one of our collections:
           //  color, radius, spacing, shadow
           const supportedCollection = [
-            '--mobius-color',
-            '--mobius-radius',
-            '--mobius-spacing',
-            '--mobius-shadow',
+            '--evg-color',
+            '--evg-radius',
+            '--evg-spacing',
+            '--evg-shadow',
           ].find((type) => token.value.includes(type));
 
           const previewType = supportedCollection
-            ? supportedCollection.replace('--mobius-', '')
+            ? supportedCollection.replace('--evg-', '')
             : collection;
 
           return (

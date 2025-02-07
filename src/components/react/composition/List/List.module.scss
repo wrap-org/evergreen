@@ -13,23 +13,23 @@
     }
 
     &-xs {
-      --list-spacing: var(--mobius-spacing-xs);
+      --list-spacing: var(--evg-spacing-xs);
     }
 
     &-sm {
-      --list-spacing: var(--mobius-spacing-sm);
+      --list-spacing: var(--evg-spacing-sm);
     }
 
     &-md {
-      --list-spacing: var(--mobius-spacing-md);
+      --list-spacing: var(--evg-spacing-md);
     }
 
     &-lg {
-      --list-spacing: var(--mobius-spacing-lg);
+      --list-spacing: var(--evg-spacing-lg);
     }
 
     &-xl {
-      --list-spacing: var(--mobius-spacing-xl);
+      --list-spacing: var(--evg-spacing-xl);
     }
   }
 }

@@ -2,25 +2,25 @@
 @use '../../../../styles/variables/font';
 
 .badge {
-  background: var(--mobius-skin-background);
-  border-radius: var(--mobius-radius-lg);
-  color: var(--mobius-skin-color);
+  background: var(--evg-skin-background);
+  border-radius: var(--evg-radius-lg);
+  color: var(--evg-skin-color);
   display: inline-block;
-  font-weight: var(--mobius-font-weight-bold);
-  padding: var(--mobius-spacing-sm) calc(var(--mobius-spacing-sm) * 1.5);
+  font-weight: var(--evg-font-weight-bold);
+  padding: var(--evg-spacing-sm) calc(var(--evg-spacing-sm) * 1.5);
 
   &--muted {
-    background: var(--mobius-skin-background-muted);
-    color: var(--mobius-skin-color-muted);
+    background: var(--evg-skin-background-muted);
+    color: var(--evg-skin-color-muted);
   }
 
   &--inverse {
-    background: var(--mobius-skin-color);
-    color: var(--mobius-skin-background);
+    background: var(--evg-skin-color);
+    color: var(--evg-skin-background);
 
     &.badge--muted {
-      background-color: var(--mobius-skin-color-muted);
-      color: var(--mobius-skin-background-muted);
+      background-color: var(--evg-skin-color-muted);
+      color: var(--evg-skin-background-muted);
     }
   }
 
@@ -34,6 +34,6 @@
 
   // This is obsolete now that all badges are rounded. TODO: Remove this
   &--rounded {
-    border-radius: var(--mobius-radius-lg);
+    border-radius: var(--evg-radius-lg);
   }
 }

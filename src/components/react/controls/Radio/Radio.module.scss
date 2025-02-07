@@ -6,7 +6,7 @@
 
   @include forms.input;
   @include forms.input-padding;
-  border-radius: var(--mobius-input-checkradio-border-radius);
+  border-radius: var(--evg-input-checkradio-border-radius);
   cursor: pointer;
 
   &--checked {
@@ -18,11 +18,11 @@
   }
 
   &--valid {
-    border-color: var(--mobius-input-border);
+    border-color: var(--evg-input-border);
   }
 
   &--valid.radio--checked {
-    border-color: var(--mobius-color-positive);
+    border-color: var(--evg-color-positive);
   }
 
   &__input {
@@ -42,9 +42,9 @@
     opacity: 0;
     transform: scale(0.8);
     transition:
-      opacity var(--mobius-transition),
-      transform var(--mobius-transition-duration-boing)
-        var(--mobius-transition-timing-boing);
+      opacity var(--evg-transition),
+      transform var(--evg-transition-duration-boing)
+        var(--evg-transition-timing-boing);
     width: var(--radio-dot-size);
 
     .radio--checked & {

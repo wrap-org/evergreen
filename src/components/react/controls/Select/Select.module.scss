@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins/forms';
 
 .select {
-  --select-border-color: var(--mobius-input-border);
+  --select-border-color: var(--evg-input-border);
 
   @include forms.input;
   cursor: pointer;
@@ -12,7 +12,7 @@
     max-width: 100%;
     overflow: hidden;
     padding-right: calc(
-      var(--mobius-spacing-thumb) + var(--mobius-input-padding-horizontal)
+      var(--evg-spacing-thumb) + var(--evg-input-padding-horizontal)
     );
     text-overflow: ellipsis;
 
@@ -24,19 +24,19 @@
   &__affix {
     align-items: center;
     border-left: 1px solid var(--select-border-color);
-    border-radius: 0 var(--mobius-input-border-radius)
-      var(--mobius-input-border-radius) 0;
+    border-radius: 0 var(--evg-input-border-radius)
+      var(--evg-input-border-radius) 0;
     bottom: 0;
     display: flex;
-    font-size: var(--mobius-font-size-xl);
+    font-size: var(--evg-font-size-xl);
     justify-content: center;
-    min-width: var(--mobius-spacing-thumb);
-    padding: 0 var(--mobius-spacing-sm);
+    min-width: var(--evg-spacing-thumb);
+    padding: 0 var(--evg-spacing-sm);
     pointer-events: none;
     position: absolute;
     right: 0;
     top: 0;
-    transition: border-color var(--mobius-transition);
+    transition: border-color var(--evg-transition);
   }
 
   &--disabled {
@@ -44,19 +44,19 @@
   }
 
   &--valid {
-    --select-border-color: var(--mobius-color-positive);
+    --select-border-color: var(--evg-color-positive);
   }
 
   &--invalid {
-    --select-border-color: var(--mobius-color-negative);
+    --select-border-color: var(--evg-color-negative);
   }
 
   &:hover {
-    --select-border-color: var(--mobius-input-border-hover);
+    --select-border-color: var(--evg-input-border-hover);
   }
 
   &:focus-within {
-    --mobius-input-outline-offset-focus: 1px;
-    --select-border-color: var(--mobius-input-border-focus);
+    --evg-input-outline-offset-focus: 1px;
+    --select-border-color: var(--evg-input-border-focus);
   }
 }

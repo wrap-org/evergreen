@@ -36,8 +36,8 @@ addons.setConfig({
     inputTextColor: '#0b301a',
     inputBorderRadius: '0.25rem',
 
-    brandTitle: 'Mobius',
+    brandTitle: 'Evergreen',
     brandUrl: 'https://wrap.ngo/',
-    brandImage: '/logo-horizontal.png',
+    brandImage: '/logo.png',
   }),
 });

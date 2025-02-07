@@ -1,31 +1,31 @@
 .longform {
   h1 {
-    margin-bottom: var(--mobius-spacing-lg);
+    margin-bottom: var(--evg-spacing-lg);
   }
 
   h2 {
-    margin-bottom: var(--mobius-spacing-md);
+    margin-bottom: var(--evg-spacing-md);
   }
 
   h3,
   h4,
   h5 {
-    margin-bottom: var(--mobius-spacing-sm);
+    margin-bottom: var(--evg-spacing-sm);
   }
 
   p,
   ul,
   ol {
-    margin-bottom: var(--mobius-spacing-md);
+    margin-bottom: var(--evg-spacing-md);
   }
 
   ul,
   ol {
-    padding-left: calc(var(--mobius-font-line-height) * 1rem);
+    padding-left: calc(var(--evg-font-line-height) * 1rem);
   }
 
   li {
-    margin-bottom: var(--mobius-spacing-sm);
+    margin-bottom: var(--evg-spacing-sm);
 
     p:last-child {
       margin-bottom: 0;
@@ -39,7 +39,7 @@
     h3,
     h4,
     h5 {
-      margin-top: var(--mobius-spacing-lg);
+      margin-top: var(--evg-spacing-lg);
     }
   }
 
@@ -49,6 +49,6 @@
 
   table,
   img {
-    margin: var(--mobius-spacing-lg) 0;
+    margin: var(--evg-spacing-lg) 0;
   }
 }

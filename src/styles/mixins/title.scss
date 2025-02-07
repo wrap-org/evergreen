@@ -1,12 +1,12 @@
 @mixin title {
-  color: var(--mobius-skin-heading-color);
-  font-weight: var(--heading-font-weight, var(--mobius-font-weight-bold));
-  line-height: var(--mobius-font-line-height-sm);
-  margin-bottom: var(--mobius-spacing-xs);
+  color: var(--evg-skin-heading-color);
+  font-weight: var(--heading-font-weight, var(--evg-font-weight-bold));
+  line-height: var(--evg-font-line-height-sm);
+  margin-bottom: var(--evg-spacing-xs);
   margin-top: 0;
 
   b,
   strong {
-    font-weight: var(--mobius-font-weight-black);
+    font-weight: var(--evg-font-weight-black);
   }
 }

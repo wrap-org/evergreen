@@ -33,7 +33,7 @@ export const parameters = {
   docs: {
     page: ({ of }) => {
       const resolvedOf = useOf(of || 'story', ['story', 'meta']);
-      const name = resolvedOf.story.title?.split('/').slice(-1)[0] || 'Mobius';
+      const name = resolvedOf.story.title?.split('/').slice(-1)[0] || 'Evergreen';
 
       const themeSupport = resolvedOf.story?.parameters?.docs?.theming
 
@@ -57,7 +57,7 @@ export const parameters = {
             <evg-grid>
               <evg-grid-item>
                 <Button
-                  href={`https://github.com/etchteam/mobius/issues/new?labels=bug&template=bug_report.md&title=${name}+bug+report`}
+                  href={`https://github.com/wrap-org/evergreen/issues/new?labels=bug&template=bug_report.md&title=${name}+bug+report`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -66,7 +66,7 @@ export const parameters = {
               </evg-grid-item>
               <evg-grid-item>
                 <Button
-                  href={`https://github.com/etchteam/mobius/issues/new?labels=enhancement&template=feature_request.md&title=${name}+new+feature`}
+                  href={`https://github.com/wrap-org/evergreen/issues/new?labels=enhancement&template=feature_request.md&title=${name}+new+feature`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

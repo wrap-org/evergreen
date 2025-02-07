@@ -1,15 +1,15 @@
-@use '~@etchteam/mobius-tokens/dist/breakpoint';
+@use '~@wrap.ngo/tokens/dist/breakpoint';
 
 .menubar {
-  --tab-background: var(--mobius-skin-background);
-  --tab-background-active: var(--mobius-input-background-disabled);
-  --tab-color-active: var(--mobius-color-body);
-  --tab-highlight-color: var(--mobius-skin-color);
+  --tab-background: var(--evg-skin-background);
+  --tab-background-active: var(--evg-input-background-disabled);
+  --tab-color-active: var(--evg-color-body);
+  --tab-highlight-color: var(--evg-skin-color);
   --tab-highlight-width: 4px;
 
   background: var(--tab-background);
 
-  @media (min-width: breakpoint.$mobius-breakpoint-tablet) {
+  @media (min-width: breakpoint.$evg-breakpoint-tablet) {
     align-items: center;
     display: grid;
     grid-template-columns: 10rem auto 10rem;
@@ -18,11 +18,11 @@
   &__inner {
     grid-column-start: 2;
     margin: 0 auto;
-    max-width: breakpoint.$mobius-breakpoint-xl; // Same as <Container>
+    max-width: breakpoint.$evg-breakpoint-xl; // Same as <Container>
     width: 100%;
 
-    @media (min-width: breakpoint.$mobius-breakpoint-tablet) {
-      padding: 0 var(--mobius-spacing-md);
+    @media (min-width: breakpoint.$evg-breakpoint-tablet) {
+      padding: 0 var(--evg-spacing-md);
     }
   }
 
@@ -32,27 +32,26 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: breakpoint.$mobius-breakpoint-tablet) {
+    @media (min-width: breakpoint.$evg-breakpoint-tablet) {
       justify-content: center;
     }
   }
 
   &__tab {
     display: block;
-    font-size: var(--mobius-font-size-sm);
-    font-weight: var(--mobius-font-weight-bold);
+    font-size: var(--evg-font-size-sm);
+    font-weight: var(--evg-font-weight-bold);
     min-width: 25%;
     position: relative;
 
     a {
-      color: color-mix(in srgb, var(--mobius-skin-color) 75%, transparent 25%);
+      color: color-mix(in srgb, var(--evg-skin-color) 75%, transparent 25%);
       text-decoration: none;
-      transition: background var(--mobius-transition) color
-        var(--mobius-transition);
+      transition: background var(--evg-transition) color var(--evg-transition);
 
       &:hover,
       &:focus {
-        color: var(--mobius-skin-color);
+        color: var(--evg-skin-color);
       }
 
       &:focus {
@@ -70,16 +69,15 @@
         opacity: 0;
         position: absolute;
         top: 0;
-        transition: opacity var(--mobius-transition) height
-          var(--mobius-transition);
+        transition: opacity var(--evg-transition) height var(--evg-transition);
         width: 100%;
       }
 
       align-items: center;
       display: flex;
       justify-content: center;
-      min-height: var(--mobius-spacing-thumb);
-      padding: var(--mobius-spacing-md);
+      min-height: var(--evg-spacing-thumb);
+      padding: var(--evg-spacing-md);
       text-align: center;
     }
 
@@ -98,33 +96,33 @@
 
     &--completed &-inner {
       &::before {
-        --tab-highlight-color: var(--mobius-color-positive);
+        --tab-highlight-color: var(--evg-color-positive);
         opacity: 1;
       }
     }
 
     &-inner:focus-within::before {
-      --tab-highlight-color: var(--mobius-input-border-hover);
+      --tab-highlight-color: var(--evg-input-border-hover);
       opacity: 1;
     }
 
     &--disabled &-inner {
-      color: var(--mobius-button-color-disabled);
+      color: var(--evg-button-color-disabled);
     }
   }
 
   &__back {
     a {
       display: block;
-      min-height: var(--mobius-spacing-thumb);
-      padding: var(--mobius-spacing-md);
+      min-height: var(--evg-spacing-thumb);
+      padding: var(--evg-spacing-md);
       text-decoration: none;
     }
   }
 
   &--transparent {
     --tab-background: transparent;
-    --tab-background-active: var(--mobius-skin-background);
-    --tab-color-active: car(--mobius-skin-color);
+    --tab-background-active: var(--evg-skin-background);
+    --tab-color-active: car(--evg-skin-color);
   }
 }
