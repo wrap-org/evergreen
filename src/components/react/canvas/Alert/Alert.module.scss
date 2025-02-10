@@ -1,7 +1,7 @@
 .alert {
-  background: var(--evg-skin-background);
+  background: var(--evg-theme-background);
   border-radius: var(--evg-radius-md);
-  color: var(--evg-skin-color);
+  color: var(--evg-theme-color);
   padding: var(--evg-spacing-md);
 
   &__close {

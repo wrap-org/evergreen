@@ -44,11 +44,11 @@
   }
 
   &--valid {
-    --select-border-color: var(--evg-color-positive);
+    --select-border-color: var(--evg-state-positive);
   }
 
   &--invalid {
-    --select-border-color: var(--evg-color-negative);
+    --select-border-color: var(--evg-state-negative);
   }
 
   &:hover {

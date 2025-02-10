@@ -3,10 +3,17 @@
 ## v8 -> v9
 
 ### Tokens
+- All tokens have has `--mobius-` replaced with `--evg-`
 - `breakpoint.scss` has been replaced with `size.scss`. The structure is slightly different, but the key values remain almost the same.
   - `tablet` -> `lg`
   - `desktop` -> `xl`
   - `max` -> `xxxl`
+- Container colours have been removed
+- Breakpoint variables have been removed
+- Stream has been split out from colours into it's own `--evg-stream-` collection
+- State has been split out from colours into it's own `--evg-state-` collection
+- The color tokens `body`, `body-muted`, `background`, `background-muted`, `accent`, `link` have been removed in favour of using themes.
+- `skin` tokens have been renamed to `theme`
 
 ### Utilities
 - `Text`has been replaced with text utility classes. e.g. `.evg-text-size-lg`
@@ -47,3 +54,5 @@
 - `App` has been replaced with `evg-app`
   - `App.Header`, `App.Main` and `App.Footer` have been removed. There are `header` and `footer` slots in `evg-app`.
 - `Section` has been replaced with `evg-section`. The new component is able to handle it's own vertical padding via the `padding` prop.
+- `ContainerSvg` has been removed and will stay local to the LA portal
+- `Container` has been removed and will stay local to the LA portal

@@ -27,11 +27,11 @@
   }
 
   &--valid {
-    border-color: var(--evg-color-positive);
+    border-color: var(--evg-state-positive);
   }
 
   &--invalid {
-    border-color: var(--evg-color-negative);
+    border-color: var(--evg-state-negative);
   }
 
   &--pending,
@@ -98,7 +98,7 @@
 
 @mixin label() {
   align-items: center;
-  color: var(--evg-skin-color);
+  color: var(--evg-theme-color);
   display: flex;
   font-size: var(--evg-font-size-base);
   font-weight: var(--evg-font-weight-bold);

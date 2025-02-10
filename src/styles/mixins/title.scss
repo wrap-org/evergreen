@@ -1,5 +1,5 @@
 @mixin title {
-  color: var(--evg-skin-heading-color);
+  color: var(--evg-theme-heading-color);
   font-weight: var(--heading-font-weight, var(--evg-font-weight-bold));
   line-height: var(--evg-font-line-height-sm);
   margin-bottom: var(--evg-spacing-xs);

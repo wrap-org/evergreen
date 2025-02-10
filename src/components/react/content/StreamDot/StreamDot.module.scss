@@ -1,5 +1,5 @@
 .stream-dot {
-  background: var(--evg-color-no-stream);
+  background: var(--evg-stream-none);
   border-radius: 50%;
   display: inline-block;
   height: 1em;
@@ -9,22 +9,22 @@
   width: 1em;
 
   &--dry {
-    background: var(--evg-color-dry-stream);
+    background: var(--evg-stream-dry);
   }
 
   &--residual {
-    background: var(--evg-color-residual-stream);
+    background: var(--evg-stream-residual);
   }
 
   &--food {
-    background: var(--evg-color-food-stream);
+    background: var(--evg-stream-food);
   }
 
   &--garden {
-    background: var(--evg-color-garden-stream);
+    background: var(--evg-stream-garden);
   }
 
   &--organic {
-    background: var(--evg-color-organic-stream);
+    background: var(--evg-stream-organic);
   }
 }

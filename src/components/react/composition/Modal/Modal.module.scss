@@ -37,7 +37,7 @@
   &__overlay {
     animation: fade-in var(--evg-transition-duration) both
       var(--evg-transition-timing);
-    background-color: var(--evg-color-background);
+    background-color: var(--evg-theme-background);
     opacity: 0.65;
   }
 

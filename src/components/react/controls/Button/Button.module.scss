@@ -1,5 +1,4 @@
 @use '../../../../styles/mixins/button';
-@use '~@wrap.ngo/tokens/dist/breakpoint';
 
 .button {
   $types: primary, secondary, positive, negative;
@@ -43,7 +42,7 @@
       display: block;
       width: 100%;
 
-      @media (min-width: breakpoint.$evg-breakpoint-md) {
+      @media (width >= 600px) {
         display: inline-block;
         width: auto;
       }
