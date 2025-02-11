@@ -2,25 +2,25 @@
 @use '../../../../styles/variables/font';
 
 .badge {
-  background: var(--evg-skin-background);
+  background: var(--evg-theme-background);
   border-radius: var(--evg-radius-lg);
-  color: var(--evg-skin-color);
+  color: var(--evg-theme-color);
   display: inline-block;
   font-weight: var(--evg-font-weight-bold);
   padding: var(--evg-spacing-sm) calc(var(--evg-spacing-sm) * 1.5);
 
   &--muted {
-    background: var(--evg-skin-background-muted);
-    color: var(--evg-skin-color-muted);
+    background: var(--evg-theme-background-muted);
+    color: var(--evg-theme-color-muted);
   }
 
   &--inverse {
-    background: var(--evg-skin-color);
-    color: var(--evg-skin-background);
+    background: var(--evg-theme-color);
+    color: var(--evg-theme-background);
 
     &.badge--muted {
-      background-color: var(--evg-skin-color-muted);
-      color: var(--evg-skin-background-muted);
+      background-color: var(--evg-theme-color-muted);
+      color: var(--evg-theme-background-muted);
     }
   }
 

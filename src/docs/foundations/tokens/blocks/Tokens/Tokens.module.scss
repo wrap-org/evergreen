@@ -52,7 +52,7 @@
     }
 
     &--radius {
-      border: 1px solid var(--evg-color-neutral);
+      border: 1px solid var(--evg-state-neutral);
       border-radius: var(--token-preview) 0 0 0;
       border-width: 2px 0 0 2px;
       height: 2rem;
@@ -66,8 +66,8 @@
     }
 
     &--spacing {
-      background: var(--evg-color-neutral-light);
-      border: 2px solid var(--evg-color-neutral);
+      background: var(--evg-state-neutral-light);
+      border: 2px solid var(--evg-state-neutral);
       border-width: 0 2px;
       height: 1rem;
       width: var(--token-preview);

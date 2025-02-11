@@ -54,7 +54,7 @@
     }
 
     &.checkbox--invalid .checkbox__indicator {
-      border-color: var(--evg-color-negative);
+      border-color: var(--evg-state-negative);
     }
 
     &.checkbox--disabled {

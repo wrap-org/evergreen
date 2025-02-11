@@ -1,6 +1,6 @@
 .faq {
-  background: var(--evg-skin-background-muted);
-  border: 1px solid var(--evg-skin-border-color-muted);
+  background: var(--evg-theme-background-muted);
+  border: 1px solid var(--evg-theme-border-color-muted);
   border-radius: var(--evg-radius-sm);
   transition:
     background-color var(--evg-transition),
@@ -9,8 +9,8 @@
   width: 100%;
 
   &--open {
-    background: var(--evg-skin-background);
-    border-color: var(--evg-skin-border-color);
+    background: var(--evg-theme-background);
+    border-color: var(--evg-theme-border-color);
     box-shadow: var(--evg-shadow);
   }
 

@@ -1,15 +1,16 @@
-@use '~@wrap.ngo/tokens/dist/breakpoint';
+@use 'sass:map';
+@use '../../../../styles/variables/size';
 
 .menubar {
-  --tab-background: var(--evg-skin-background);
+  --tab-background: var(--evg-theme-background);
   --tab-background-active: var(--evg-input-background-disabled);
-  --tab-color-active: var(--evg-color-body);
-  --tab-highlight-color: var(--evg-skin-color);
+  --tab-color-active: var(--evg-theme-color);
+  --tab-highlight-color: var(--evg-theme-color);
   --tab-highlight-width: 4px;
 
   background: var(--tab-background);
 
-  @media (min-width: breakpoint.$evg-breakpoint-tablet) {
+  @media (width >= 768px) {
     align-items: center;
     display: grid;
     grid-template-columns: 10rem auto 10rem;
@@ -18,10 +19,10 @@
   &__inner {
     grid-column-start: 2;
     margin: 0 auto;
-    max-width: breakpoint.$evg-breakpoint-xl; // Same as <Container>
+    width: map.get(size.$map, xl, value);
     width: 100%;
 
-    @media (min-width: breakpoint.$evg-breakpoint-tablet) {
+    @media (width >= 768px) {
       padding: 0 var(--evg-spacing-md);
     }
   }
@@ -32,7 +33,7 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: breakpoint.$evg-breakpoint-tablet) {
+    @media (width >= 768px) {
       justify-content: center;
     }
   }
@@ -45,13 +46,13 @@
     position: relative;
 
     a {
-      color: color-mix(in srgb, var(--evg-skin-color) 75%, transparent 25%);
+      color: color-mix(in srgb, var(--evg-theme-color) 75%, transparent 25%);
       text-decoration: none;
       transition: background var(--evg-transition) color var(--evg-transition);
 
       &:hover,
       &:focus {
-        color: var(--evg-skin-color);
+        color: var(--evg-theme-color);
       }
 
       &:focus {
@@ -96,7 +97,7 @@
 
     &--completed &-inner {
       &::before {
-        --tab-highlight-color: var(--evg-color-positive);
+        --tab-highlight-color: var(--evg-state-positive);
         opacity: 1;
       }
     }
@@ -122,7 +123,7 @@
 
   &--transparent {
     --tab-background: transparent;
-    --tab-background-active: var(--evg-skin-background);
-    --tab-color-active: car(--evg-skin-color);
+    --tab-background-active: var(--evg-theme-background);
+    --tab-color-active: car(--evg-theme-color);
   }
 }

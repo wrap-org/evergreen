@@ -5,7 +5,7 @@
   background: none;
   border: 0 none;
   border-radius: var(--evg-radius-sm);
-  color: var(--evg-skin-link-color);
+  color: var(--evg-theme-link-color);
   cursor: pointer;
   padding: var(--evg-spacing-sm) 0;
   transition:
@@ -49,7 +49,7 @@
     }
 
     &:focus {
-      background: var(--evg-skin-border-color);
+      background: var(--evg-theme-border-color);
       text-decoration: none;
     }
   }

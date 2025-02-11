@@ -19,11 +19,11 @@ function sortColors(colors: string[]) {
     const bNumber = parseInt(bNumberString, 10);
 
     if (aNumber < bNumber) {
-      return -1;
+      return 1;
     }
 
     if (aNumber > bNumber) {
-      return 1;
+      return -1;
     }
 
     return 0;
@@ -43,7 +43,11 @@ function formatGroups(groups: Dictionary<string[]>, prefix = '--evg-color-') {
   }));
 }
 
-function groupColors(colors: string[], prefix = '--evg-color-') {
+function groupColors(colors: string[] | null, prefix = '--evg-color-') {
+  if (!colors) {
+    return {};
+  }
+
   const groups = groupBy(colors, (color) => {
     if (color.includes('-stream')) {
       return color.replace(prefix, '').replace('-', ' ');
@@ -56,12 +60,17 @@ function groupColors(colors: string[], prefix = '--evg-color-') {
 }
 
 const palette = tokens.match(/--evg-color-[a-z0-9-]+(?=: .*;)/g);
-const containers = tokens.match(/--evg-container-color-[a-z0-9-]+(?=: .*;)/g);
+const states = tokens.match(/--evg-state-[a-z0-9-]+(?=: .*;)/g);
+const streams = tokens.match(/--evg-stream-[a-z0-9-]+(?=: .*;)/g);
 
 export const colorGroups = formatGroups(groupColors(palette));
-export const containerColorGroups = formatGroups(
-  groupColors(containers, '--evg-container-color-'),
-  '--evg-container-color-',
+export const stateColorGroups = formatGroups(
+  groupColors(states, '--evg-state-'),
+  '--evg-state-',
+);
+export const streamColorGroups = formatGroups(
+  groupColors(streams, '--evg-stream-'),
+  '--evg-stream-',
 );
 
 export const skinColorGroups = [
@@ -82,11 +91,11 @@ export const skinColorGroups = [
 ].map((skin) => ({
   name: skin.charAt(0).toUpperCase() + skin.slice(1),
   colors: {
-    background: `var(--evg-skin-background-${skin})`,
-    border: `var(--evg-skin-border-color-${skin})`,
-    color: `var(--evg-skin-color-${skin})`,
-    heading: `var(--evg-skin-heading-color-${skin.replace('muted-', '')})`,
-    link: `var(--evg-skin-link-color-${skin.replace('muted-', '')})`,
+    background: `var(--evg-theme-background-${skin})`,
+    border: `var(--evg-theme-border-color-${skin})`,
+    color: `var(--evg-theme-color-${skin})`,
+    heading: `var(--evg-theme-heading-color-${skin.replace('muted-', '')})`,
+    link: `var(--evg-theme-link-color-${skin.replace('muted-', '')})`,
   },
 }));
 

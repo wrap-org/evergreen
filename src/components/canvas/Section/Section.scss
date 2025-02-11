@@ -1,8 +1,8 @@
 @use '../../../styles/variables/spacing';
 
 evg-section {
-  background: var(--evg-skin-background);
-  color: var(--evg-skin-color);
+  background: var(--evg-theme-background);
+  color: var(--evg-theme-color);
   display: block;
   padding-block: var(--evg-spacing-md);
 

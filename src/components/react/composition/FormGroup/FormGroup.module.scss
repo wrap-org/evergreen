@@ -1,5 +1,4 @@
 @use 'sass:math';
-@use '~@wrap.ngo/tokens/dist/breakpoint';
 
 .form-group {
   &__label {
@@ -40,7 +39,7 @@
   }
 
   &--horizontal {
-    @media (min-width: breakpoint.$evg-breakpoint-tablet) {
+    @media (width >= 768px) {
       column-gap: var(--evg-spacing-md);
       display: grid;
       grid-template-columns: 1fr 1fr;

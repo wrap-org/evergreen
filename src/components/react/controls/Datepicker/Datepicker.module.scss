@@ -37,7 +37,7 @@
 
   &__daypicker {
     --rdp-cell-size: 2rem;
-    --rdp-accent-color: var(--evg-color-link);
+    --rdp-accent-color: var(--evg-theme-link-color);
     --rdp-background-color: var(--evg-input-border-hover); // hover color
     --rdp-outline: 2px solid var(--rdp-accent-color);
 
@@ -57,7 +57,7 @@
     }
 
     &-caption-label {
-      color: var(--evg-color-link);
+      color: var(--evg-theme-link-color);
       font-size: var(--evg-font-size-sm);
       font-weight: var(--evg-font-weight-bold);
       margin: 0;
@@ -66,7 +66,7 @@
     }
 
     &-head-cell {
-      color: var(--evg-color-body);
+      color: var(--evg-theme-color-body);
       font-size: var(--evg-font-size-sm);
       font-weight: var(--evg-font-weight-base);
       height: var(--rdp-cell-size);
@@ -82,7 +82,7 @@
 
     &-day {
       border-radius: var(--evg-input-border-radius);
-      color: var(--evg-color-body);
+      color: var(--evg-theme-color-body);
       font-size: var(--evg-font-size-sm);
       height: var(--rdp-cell-size);
       text-align: center;
@@ -98,14 +98,14 @@
       &,
       &:hover,
       &:focus {
-        background: var(--evg-color-neutral-light) !important;
+        background: var(--evg-state-neutral-light) !important;
       }
     }
 
     &-nav-button {
       align-items: center;
       border-radius: var(--evg-input-border-radius);
-      color: var(--evg-color-body);
+      color: var(--evg-theme-color);
       display: inline-flex;
       height: 1.65rem;
       justify-content: center;
@@ -125,7 +125,7 @@
     }
 
     &-dropdown-icon {
-      color: var(--evg-color-body);
+      color: var(--evg-theme-color);
       height: var(--evg-font-size-sm);
       margin: -1px 0 0 var(--evg-spacing-xs);
       width: var(--evg-font-size-sm);

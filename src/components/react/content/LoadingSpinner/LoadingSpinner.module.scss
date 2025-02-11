@@ -1,5 +1,3 @@
-@use '~@wrap.ngo/tokens/dist/breakpoint';
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -18,7 +16,7 @@
   border-top: calc(var(--evg-font-size-xl) * 0.2) solid var(--evg-color-forest);
   height: calc(var(--evg-font-size-xl));
 
-  @media screen and (min-width: breakpoint.$evg-breakpoint-md) {
+  @media (width >= 600px) {
     height: calc(var(--evg-font-size-xl) * 2);
   }
 }
