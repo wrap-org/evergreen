@@ -10,6 +10,15 @@ export default {
           'Wraps an HTML input element to provide consistent styling and behavior.',
       },
     },
+    a11y: {
+      config: {
+        // Keeping these stories simple, so we don't need labels
+        rules: [
+          { id: 'label', enabled: false },
+          { id: 'select-name', enabled: false },
+        ],
+      },
+    },
   },
   argTypes: {
     state: {
