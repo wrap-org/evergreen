@@ -1,16 +1,21 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import Longform from './Longform';
-
 export default {
-  title: 'React/Components/Content/Longform',
-  component: Longform,
+  title: 'Foundations/Utilities/Longform',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'The longform class can be added to a wrapper around any longform content, such as from a CMS WYSIWYG to ensure that the text is easy to read.',
+      },
+    },
+  },
 } as Meta;
 
-export function Default() {
+export function Longform() {
   return (
-    <Longform>
+    <div className="evg-longform">
       <h2>Lorem ipsum dolor sit amet</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at
@@ -81,8 +86,6 @@ export function Default() {
         <li>Number 2</li>
         <li>Number 3</li>
       </ol>
-    </Longform>
+    </div>
   );
 }
-
-Default.storyName = 'Longform';

@@ -5,9 +5,10 @@
 @use 'base/typography';
 @use 'base/forms';
 
-@use 'utilities/spacing' as spacingUtilities;
-@use 'utilities/text' as textUtilities;
-@use 'utilities/theme' as themeUtilities;
+@use 'utilities/longform';
+@use 'utilities/spacing';
+@use 'utilities/text';
+@use 'utilities/theme';
 
 @use '../components/composition/App/App';
 @use '../components/composition/Grid/Grid';
