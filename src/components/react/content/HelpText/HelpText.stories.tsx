@@ -4,7 +4,6 @@ import React from 'react';
 import HelpText from './HelpText';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Input from 'components/react/controls/Input/Input';
 import Label from 'components/react/controls/Label/Label';
 
 export default {
@@ -28,11 +27,13 @@ export default {
 export const Default = () => (
   <FormGroup>
     <Label htmlFor="my-input-1">Input label</Label>
-    <Input
-      id="my-input-1"
-      name="my-input-1"
-      aria-describedby="my-input-1-helptext"
-    />
+    <evg-input>
+      <input
+        id="my-input-1"
+        name="my-input-1"
+        aria-describedby="my-input-1-helptext"
+      />
+    </evg-input>
     <HelpText id="my-input-1-helptext">Some help text for this input</HelpText>
   </FormGroup>
 );
@@ -40,11 +41,13 @@ export const Default = () => (
 export const Positive = () => (
   <FormGroup>
     <Label htmlFor="my-input-2">Input label</Label>
-    <Input
-      id="my-input-2"
-      name="my-input-2"
-      aria-describedby="my-input-2-helptext"
-    />
+    <evg-input>
+      <input
+        id="my-input-2"
+        name="my-input-2"
+        aria-describedby="my-input-2-helptext"
+      />
+    </evg-input>
     <HelpText id="my-input-2-helptext" type="positive">
       Yay, it worked!
     </HelpText>
@@ -54,12 +57,14 @@ export const Positive = () => (
 export const Negative = () => (
   <FormGroup>
     <Label htmlFor="my-input-3">Input label</Label>
-    <Input
-      id="my-input-3"
-      name="my-input-3"
-      aria-invalid="true"
-      aria-describedby="my-input-3-helptext"
-    />
+    <evg-input state="invalid">
+      <input
+        id="my-input-3"
+        name="my-input-3"
+        aria-invalid="true"
+        aria-describedby="my-input-3-helptext"
+      />
+    </evg-input>
     <HelpText id="my-input-3-helptext" type="negative">
       There was a problem
     </HelpText>
