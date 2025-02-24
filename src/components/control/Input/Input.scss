@@ -1,0 +1,103 @@
+evg-input {
+  --_background: var(--evg-input-background);
+  --_border-color: var(--evg-input-border);
+  --evg-icon-baseline-adjust: 0.1em;
+
+  align-items: center;
+  background: var(--_background);
+  border: 1px solid var(--_border-color);
+  border-radius: var(--evg-input-border-radius);
+  color: var(--evg-input-color);
+  display: flex;
+  min-width: 0;
+  position: relative;
+  transition:
+    border-color var(--evg-transition),
+    background-color var(--evg-transition);
+
+  &:hover,
+  &:focus-within {
+    --_border-color: var(--evg-input-border-hover);
+  }
+
+  &:has(input:focus-visible),
+  &:has(textarea:focus-visible),
+  &:has(select:focus-visible) {
+    --_background: var(--evg-input-background-focus);
+    /* https://css-tricks.com/copy-the-browsers-native-focus-styles/ */
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: var(--evg-input-outline-offset);
+  }
+
+  &[state='valid'] {
+    --_border-color: var(--evg-state-positive);
+  }
+
+  &[state='invalid'] {
+    --_border-color: var(--evg-state-negative);
+  }
+
+  &:has([disabled]) {
+    --_background: var(--evg-input-background-disabled);
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  input,
+  textarea,
+  select {
+    appearance: none;
+    background: none;
+    border: 0 none;
+    color: inherit;
+    display: block;
+    flex: 1 1 auto;
+    font-size: var(--evg-font-size-base);
+    line-height: var(--evg-font-line-height);
+    min-height: var(--evg-spacing-thumb);
+    padding: var(--evg-input-padding);
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select {
+    cursor: pointer;
+    margin-right: calc(
+      var(--evg-icon-size) * -1 - var(--evg-input-padding-inline)
+    );
+    padding-right: calc(var(--evg-icon-size) + var(--evg-input-padding-inline));
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  svg {
+    align-self: center;
+    block-size: var(--evg-icon-size);
+    box-sizing: content-box;
+    flex-shrink: 0;
+    inline-size: var(--evg-icon-size);
+    pointer-events: none;
+  }
+
+  /* Prefix */
+  &:has(* + :is(input, textarea, select)) > :first-child {
+    margin-right: calc(var(--evg-input-padding-inline) / 2 * -1);
+    padding: 0 0 0 calc(var(--evg-input-padding-inline) / 2);
+  }
+
+  /* Suffix */
+  :is(input, textarea, select) + * {
+    padding: 0 calc(var(--evg-input-padding-inline) / 2);
+  }
+
+  :is(input, textarea):has(+ *) {
+    padding-right: 0;
+  }
+}

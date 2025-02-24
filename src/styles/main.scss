@@ -15,3 +15,16 @@
 @use '../components/composition/Wrap/Wrap';
 
 @use '../components/canvas/Section/Section';
+
+@use '../components/control/Input/Input';
+
+// Trial extra variables, will need moving to tokens
+:root {
+  --evg-input-outline-offset: 4px;
+  --evg-input-padding-inline: var(--evg-input-padding-horizontal);
+  --evg-input-padding-block: var(--evg-input-padding-vertical);
+  --evg-input-font-size: var(--evg-font-size-base);
+  --evg-input-line-height: 1.75;
+
+  --evg-icon-size: 1.25em;
+}

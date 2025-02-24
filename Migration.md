@@ -56,3 +56,6 @@
 - `Section` has been replaced with `evg-section`. The new component is able to handle it's own vertical padding via the `padding` prop.
 - `ContainerSvg` has been removed and will stay local to the LA portal
 - `Container` has been removed and will stay local to the LA portal
+- `Input`, `Textarea` and `Select` are now `evg-input`
+  - `prefix` and `suffix` are no longer props on these and should be passed in as an svg or icon child component
+  - These components control their own validation state display via the `state` prop

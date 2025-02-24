@@ -6,7 +6,6 @@ import FormGroup from './FormGroup';
 import Alert from 'components/react/canvas/Alert/Alert';
 import Icon from 'components/react/content/Icon/Icon';
 import Checkbox from 'components/react/controls/Checkbox/Checkbox';
-import Input from 'components/react/controls/Input/Input';
 import Label from 'components/react/controls/Label/Label';
 import Radio from 'components/react/controls/Radio/Radio';
 import TextButton from 'components/react/controls/TextButton/TextButton';
@@ -20,7 +19,9 @@ export function Default() {
   return (
     <FormGroup>
       <Label htmlFor="my-input">Input label</Label>
-      <Input id="my-input" name="my-input" />
+      <evg-input>
+        <input id="my-input" name="my-input" />
+      </evg-input>
     </FormGroup>
   );
 }
@@ -35,7 +36,9 @@ export function Horizontal() {
           <Label htmlFor="my-input">Input label</Label>
         </FormGroup.Label>
         <FormGroup.Control>
-          <Input id="my-input" name="my-input" />
+          <evg-input>
+            <input id="my-input" name="my-input" />
+          </evg-input>
         </FormGroup.Control>
       </FormGroup>
 
@@ -81,7 +84,9 @@ export function WithInfo() {
           </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>
-          <Input id="my-input-one" name="my-input" />
+          <evg-input>
+            <input id="my-input-one" name="my-input" />
+          </evg-input>
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-one" open={infoOneOpen}>
           <Alert className="evg-theme-info">This is an info message</Alert>
@@ -100,7 +105,9 @@ export function WithInfo() {
           </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>
-          <Input id="my-input-two" name="my-input-two" />
+          <evg-input>
+            <input id="my-input-two" name="my-input-two" />
+          </evg-input>
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-two" open={infoTwoOpen}>
           <Alert className="evg-theme-info">This is an info message</Alert>
