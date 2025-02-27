@@ -14,6 +14,9 @@
 - State has been split out from colours into it's own `--evg-state-` collection
 - The color tokens `body`, `body-muted`, `background`, `background-muted`, `accent`, `link` have been removed in favour of using themes.
 - `skin` tokens have been renamed to `theme`
+- colors `cloud-75`, `steel`, `lemon`, `orange`, `violet`, `lilac`, `white` and `black` have been removed
+- `stream` colours have been removed
+
 
 ### Utilities
 - `Text`has been replaced with text utility classes. e.g. `.evg-text-size-lg`
