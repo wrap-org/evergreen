@@ -19,6 +19,8 @@
 
 @use '../components/control/Input/Input';
 
+@use '../components/content/Img/Img';
+
 // Trial extra variables, will need moving to tokens
 :root {
   --evg-input-outline-offset: 4px;

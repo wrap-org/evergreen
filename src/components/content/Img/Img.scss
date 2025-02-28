@@ -1,0 +1,47 @@
+@use '../../../styles/variables/radius';
+
+evg-img {
+  display: inline-block;
+
+  &[block],
+  &[block] img,
+  &[block] evg-loading-img {
+    display: block;
+  }
+
+  &[responsive] {
+    width: 100%;
+
+    img,
+    evg-loading-img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &[radius] {
+    overflow: hidden;
+  }
+
+  @each $size in radius.$sizes {
+    &[radius='#{$size}'] {
+      border-radius: var(--evg-radius-#{$size});
+    }
+  }
+
+  &[aspect-ratio],
+  &[aspect-ratio] img,
+  &[aspect-ratio] evg-loading-img {
+    aspect-ratio: var(--evg-img-aspect-ratio);
+  }
+
+  &[object-fit] img,
+  &[object-fit] evg-loading-img {
+    object-fit: var(--evg-img-object-fit);
+  }
+
+  &[object-position] img,
+  &[object-position] evg-loading-img {
+    object-position: var(--evg-img-object-position);
+  }
+}
