@@ -17,6 +17,8 @@
     "baseUrl": ".",
     "noImplicitAny": false,
     "allowJs": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
     "paths": {
       "components/*": [
         "./src/components/*"
