@@ -57,23 +57,27 @@ const colors = [
 ];
 
 const sizes = [
-  'base',
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-  'xl',
-  'lg',
-  'md',
-  'sm',
-  'xs',
+  'display-lg',
+  'display-md',
+  'display-sm',
+  'heading-xl',
+  'heading-lg',
+  'heading-md',
+  'heading-sm',
+  'heading-xs',
+  'heading-xxs',
+  'body-xl',
+  'body-lg',
+  'body-md',
+  'body-sm',
+  'body-xs',
 ];
 
 const transforms = ['uppercase', 'lowercase', 'capitalize'];
 
 const weights = ['base', 'light', 'bold', 'black'];
+
+const wraps = ['balance', 'pretty'];
 
 export default {
   title: 'Foundations/Utilities/Text',
@@ -125,6 +129,12 @@ export default {
         type: 'select',
       },
       options: weights,
+    },
+    wrap: {
+      control: {
+        type: 'radio',
+      },
+      options: wraps,
     },
   },
   parameters: {

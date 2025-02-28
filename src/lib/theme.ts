@@ -1,11 +1,12 @@
-export const base = ['light', 'dark'];
-
-export const emphasis = [
-  'info',
-  'attention',
-  'neutral',
-  'positive',
-  'negative',
+export const themes = [
+  'default',
+  'sand',
+  'forest',
+  'forest-light',
+  'earth',
+  'earth-light',
+  'lime',
+  'lime-light',
+  'sky',
+  'sky-light',
 ];
-
-export const themes = [...base, ...emphasis];

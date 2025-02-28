@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Button from 'components/react/controls/Button/Button';
-import { base, emphasis, themes } from 'lib/theme';
+import { themes } from 'lib/theme';
 
 const description = `
   Many components in the design system accept a theme context. The theme context
   enables a set of variables for display properties like background, text and border
   colours.
 
-  Themes can be applied to components by setting a theme utility class (\`evg-theme-dark\`) on the
+  Themes can be applied to components by setting a theme utility class (\`evg-theme-forest\`) on the
   component or one of the parent elements.
 
   Components that support theming have a 'theme support' badge at the top of their docs page.
@@ -79,20 +79,12 @@ const ThemedSection = ({ theme }) => (
 export const Theme = ({ theme }) => <ThemedSection theme={theme} />;
 
 Theme.args = {
-  theme: 'light',
+  theme: 'default',
 };
 
-export const Base = () => (
+export const Variations = () => (
   <>
-    {base.map((theme) => (
-      <ThemedSection key={theme} theme={theme} />
-    ))}
-  </>
-);
-
-export const Emphasis = () => (
-  <>
-    {emphasis.map((theme) => (
+    {themes.map((theme) => (
       <ThemedSection key={theme} theme={theme} />
     ))}
   </>

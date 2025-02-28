@@ -14,11 +14,17 @@
 - State has been split out from colours into it's own `--evg-state-` collection
 - The color tokens `body`, `body-muted`, `background`, `background-muted`, `accent`, `link` have been removed in favour of using themes.
 - `skin` tokens have been renamed to `theme`
+  - emphasis themes have been removed and components now use state directly because components such as alert and badge should not accept all themes and states should not be used on cards and sections.
+  - `light` is `default`
+  - `dark` is `forest`
+- colors `cloud-75`, `white` and `black` have been removed
+- `stream` colours have been removed
+- h1, h2, h3, h4, h5, h6 font size tokens have been renamed heading-xl/lg/md/sm/xs/xxs
 
 ### Utilities
 - `Text`has been replaced with text utility classes. e.g. `.evg-text-size-lg`
 - `TextAlign`, `Lead` and `Title` components have been removed and should use the text utility classes instead.
-- `Skin` has been replaced with theme utility classes. e.g. `.evg-theme-dark`
+- `Skin` has been replaced with theme utility classes. e.g. `.evg-theme-forest`
 - `Spacing` has been replaced with spacing utility classes. e.g. `.evg-spacing-bottom-md`
 
 ### Components

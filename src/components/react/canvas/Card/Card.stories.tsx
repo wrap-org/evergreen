@@ -3,7 +3,7 @@ import React from 'react';
 
 import Card from './Card';
 
-import { base } from 'lib/theme';
+import { themes } from 'lib/theme';
 
 export default {
   title: 'React/Components/Canvas/Card',
@@ -17,7 +17,7 @@ export default {
 
 const Template: StoryFn<typeof Card> = (args) => (
   <evg-grid wrap="wrap">
-    {base.map((theme) => (
+    {themes.map((theme) => (
       <evg-grid-item key={theme} small-mobile="12" small-tablet="4">
         <Card className={`evg-theme-${theme}`} {...args}>
           <Card.Header>
@@ -60,7 +60,7 @@ Arrow.args = {
 
 export const MutedBody = () => (
   <evg-grid>
-    {base.map((theme) => (
+    {themes.map((theme) => (
       <evg-grid-item key={theme} small-mobile="12" small-tablet="4" fill>
         <Card border className={`evg-theme-${theme}`}>
           <Card.Header>

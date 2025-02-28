@@ -1,6 +1,8 @@
 @use '../mixins/theme';
 
-$themes: light, dark, info, attention, neutral, positive, negative;
+// stylelint-disable-next-line color-named
+$themes: default, sand, forest, forest-light, earth, earth-light, lime,
+  lime-light, sky, sky-light;
 
 .evg-theme {
   @each $theme in $themes {

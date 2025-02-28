@@ -1,6 +1,8 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
-export interface DocsPlaceholderAttributes {}
+export interface DocsPlaceholderAttributes {
+  inline?: boolean;
+}
 
 declare global {
   interface HTMLElementTagNameMap {

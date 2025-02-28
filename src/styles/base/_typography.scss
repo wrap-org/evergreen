@@ -6,7 +6,7 @@
 
 body {
   font-family: var(--evg-font-family);
-  font-size: var(--evg-font-size-base);
+  font-size: var(--evg-font-size-body-md);
   -webkit-font-smoothing: antialiased;
   line-height: var(--evg-font-line-height);
 }
@@ -25,37 +25,36 @@ h2,
 h3,
 h4 {
   font-family: var(--evg-font-family-heading);
-  text-transform: uppercase;
 }
 
 h1 {
-  font-size: var(--evg-font-size-h1);
+  font-size: var(--evg-font-size-heading-xl);
   font-weight: var(--evg-font-weight-black);
 }
 
 h2 {
-  font-size: var(--evg-font-size-h2);
+  font-size: var(--evg-font-size-heading-lg);
 }
 
 h3 {
-  font-size: var(--evg-font-size-h3);
+  font-size: var(--evg-font-size-heading-md);
 }
 
 h4 {
-  font-size: var(--evg-font-size-h4);
+  font-size: var(--evg-font-size-heading-sm);
 }
 
 h5 {
-  font-size: var(--evg-font-size-h5);
+  font-size: var(--evg-font-size-heading-xs);
 }
 
 h6 {
-  font-size: var(--evg-font-size-h6);
+  font-size: var(--evg-font-size-heading-xxs);
 }
 
 p {
   line-height: var(--evg-font-line-height-lg);
-  margin-bottom: var(--evg-spacing-sm);
+  margin-bottom: var(--evg-spacing-md);
   margin-top: 0;
 
   &:last-child {

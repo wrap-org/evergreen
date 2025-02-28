@@ -3,8 +3,6 @@ import React from 'react';
 
 import Badge, { BadgeProps } from './Badge';
 
-import { emphasis } from 'lib/theme';
-
 export default {
   title: 'React/Components/Content/Badge',
   component: Badge,
@@ -17,7 +15,7 @@ export default {
 
 export const Default = (args: BadgeProps) => (
   <evg-grid wrap="wrap">
-    {emphasis.map((theme) => (
+    {[1].map((theme) => (
       <evg-grid-item key={theme}>
         <Badge
           className={`evg-theme-${theme} evg-text-transform-capitalize`}
