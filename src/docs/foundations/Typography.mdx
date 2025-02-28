@@ -4,16 +4,29 @@ import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
 
 # Typography
 
+## Display
+
+<Typeset
+  fontSizes={[
+    'var(--evg-font-size-display-lg)',
+    'var(--evg-font-size-display-md)',
+    'var(--evg-font-size-display-sm)',
+  ]}
+  fontWeight="var(--evg-font-weight-bold)"
+  sampleText="The future is in our hands to shape."
+  fontFamily="var(--evg-font-family-heading)"
+/>
+
 ## Headings
 
 <Typeset
   fontSizes={[
-    'var(--evg-font-size-h1)',
-    'var(--evg-font-size-h2)',
-    'var(--evg-font-size-h3)',
-    'var(--evg-font-size-h4)',
-    'var(--evg-font-size-h5)',
-    'var(--evg-font-size-h6)',
+    'var(--evg-font-size-heading-xl)',
+    'var(--evg-font-size-heading-lg)',
+    'var(--evg-font-size-heading-md)',
+    'var(--evg-font-size-heading-sm)',
+    'var(--evg-font-size-heading-xs)',
+    'var(--evg-font-size-heading-xxs)',
   ]}
   fontWeight="var(--evg-font-weight-bold)"
   sampleText="The future is in our hands to shape."
@@ -24,12 +37,11 @@ import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
 
 <Typeset
   fontSizes={[
-    'var(--evg-font-size-xl)',
-    'var(--evg-font-size-lg)',
-    'var(--evg-font-size-md)',
-    'var(--evg-font-size-base)',
-    'var(--evg-font-size-sm)',
-    'var(--evg-font-size-xs)',
+    'var(--evg-font-size-body-xl)',
+    'var(--evg-font-size-body-lg)',
+    'var(--evg-font-size-body-md)',
+    'var(--evg-font-size-body-sm)',
+    'var(--evg-font-size-body-xs)',
   ]}
   sampleText="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   fontFamily="var(--evg-font-family)"

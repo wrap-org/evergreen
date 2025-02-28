@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from 'components/react/controls/Button/Button';
-import { base, emphasis, themes } from 'lib/theme';
+import { themes } from 'lib/theme';
 
 const description = `
   Many components in the design system accept a theme context. The theme context
@@ -79,20 +79,12 @@ const ThemedSection = ({ theme }) => (
 export const Theme = ({ theme }) => <ThemedSection theme={theme} />;
 
 Theme.args = {
-  theme: 'light',
+  theme: 'default',
 };
 
-export const Base = () => (
+export const Variations = () => (
   <>
-    {base.map((theme) => (
-      <ThemedSection key={theme} theme={theme} />
-    ))}
-  </>
-);
-
-export const Emphasis = () => (
-  <>
-    {emphasis.map((theme) => (
+    {themes.map((theme) => (
       <ThemedSection key={theme} theme={theme} />
     ))}
   </>

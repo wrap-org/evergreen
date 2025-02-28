@@ -1,16 +1,6 @@
 @mixin theme($type) {
   --evg-theme-background: var(--evg-theme-background-#{$type});
-  --evg-theme-background-muted: var(--evg-theme-background-muted-#{$type});
-  --evg-theme-border-color: var(--evg-theme-border-color-#{$type});
-  --evg-theme-border-color-muted: var(--evg-theme-border-color-muted-#{$type});
   --evg-theme-color: var(--evg-theme-color-#{$type});
-  --evg-theme-color-muted: var(--evg-theme-color-muted-#{$type});
   --evg-theme-heading-color: var(--evg-theme-heading-color-#{$type});
   --evg-theme-link-color: var(--evg-theme-link-color-#{$type});
-  --evg-theme-link-text-decoration: var(
-    --evg-theme-link-text-decoration-#{$type}
-  );
-  --evg-theme-link-text-decoration-hover: var(
-    --evg-theme-link-text-decoration-hover-#{$type}
-  );
 }

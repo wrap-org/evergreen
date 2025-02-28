@@ -1,7 +1,13 @@
 docs-placeholder {
-  background: var(--evg-theme-background-muted-light);
-  border: 2px dashed var(--evg-theme-border-color-muted-light);
-  color: var(--evg-theme-color-muted-light);
+  background: var(--evg-color-sand-25);
+  background-clip: padding-box;
+  border: 2px dashed var(--evg-color-sand);
+  color: var(--evg-color-forest);
   display: block;
   padding: var(--evg-spacing-md);
+
+  &[inline] {
+    display: inline-block;
+    padding: 0 var(--evg-spacing-xs);
+  }
 }
