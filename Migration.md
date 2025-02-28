@@ -16,6 +16,7 @@
 - `skin` tokens have been renamed to `theme`
 - colors `cloud-75`, `white` and `black` have been removed
 - `stream` colours have been removed
+- h1, h2, h3, h4, h5, h6 font size tokens have been renamed heading-xl/lg/md/sm/xs/xxs
 
 
 ### Utilities
