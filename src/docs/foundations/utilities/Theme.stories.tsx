@@ -8,7 +8,7 @@ const description = `
   enables a set of variables for display properties like background, text and border
   colours.
 
-  Themes can be applied to components by setting a theme utility class (\`evg-theme-dark\`) on the
+  Themes can be applied to components by setting a theme utility class (\`evg-theme-forest\`) on the
   component or one of the parent elements.
 
   Components that support theming have a 'theme support' badge at the top of their docs page.

@@ -4,7 +4,6 @@ import React from 'react';
 import Alert from './Alert';
 
 import Button from 'components/react/controls/Button/Button';
-import { emphasis } from 'lib/theme';
 
 export default {
   title: 'React/Components/Canvas/Alert',
@@ -19,7 +18,7 @@ export default {
 export function Default() {
   return (
     <>
-      {emphasis.map((theme) => (
+      {[1].map((theme) => (
         <Alert
           className={`evg-theme-${theme} evg-spacing-bottom-md`}
           key={theme}

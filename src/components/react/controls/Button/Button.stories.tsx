@@ -27,7 +27,7 @@ export function Types() {
 
 export function DarkMode() {
   return (
-    <evg-section class="evg-theme-dark" padding="md">
+    <evg-section class="evg-theme-forest" padding="md">
       <Button>Button</Button>
       <Button type="primary">Button</Button>{' '}
       <Button type="secondary">Button</Button>{' '}

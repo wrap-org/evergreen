@@ -9,7 +9,7 @@ export default {
 
 export function Full(props) {
   return (
-    <evg-section padding="md" class="evg-theme-dark" {...props}>
+    <evg-section padding="md" class="evg-theme-forest" {...props}>
       <evg-wrap size="xxl">
         <docs-placeholder>Footer</docs-placeholder>
       </evg-wrap>
@@ -19,7 +19,7 @@ export function Full(props) {
 
 export function Minimal(props) {
   return (
-    <evg-section padding="md" class="evg-theme-dark" {...props}>
+    <evg-section padding="md" class="evg-theme-forest" {...props}>
       <evg-wrap size="xxl">
         <docs-placeholder>Footer</docs-placeholder>
       </evg-wrap>
