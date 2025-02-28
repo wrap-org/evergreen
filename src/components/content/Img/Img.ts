@@ -50,7 +50,7 @@ export class Img extends LitElement {
   };
 
   ariaHidden = 'true';
-  aspectRatio = 'inherit';
+  aspectRatio = 'auto';
   objectFit = 'fill';
   objectPosition = '50% 50%';
 
