@@ -30,7 +30,7 @@ export default {
 export const Img: StoryFn = (props) => (
   <evg-img {...props}>
     <img
-      src="https://placehold.co/300x300"
+      src="/images/placeholder/400x300.svg"
       alt="Placeholder"
       width="300"
       height="300"
