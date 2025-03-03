@@ -1,9 +1,14 @@
 evg-card-img {
   display: block;
+  grid-area: image;
+  padding: var(--evg-card-img-padding);
 
   img {
+    border-radius: var(--evg-card-img-radius);
     display: block;
-    height: auto;
+    height: var(--evg-card-img-height);
+    object-fit: cover;
+    object-position: center;
     width: 100%;
   }
 }

@@ -1,8 +1,16 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 import { Radius } from '../../../types/radius.type';
+import { Spacing } from '../../../types/spacing.type';
 
 export interface CardAttributes {
-  radius: Radius;
+  radius?: Radius;
+  padding?: Spacing | 'none';
+  layout?:
+    | 'image-top'
+    | 'image-left'
+    | 'image-right'
+    | 'image-bottom'
+    | 'thumb';
 }
 
 declare global {

@@ -2,20 +2,77 @@
 @use '../../../styles/variables/spacing';
 
 evg-card {
-  --evg-card-padding: var(--evg-spacing-md);
+  --evg-card-radius: 0;
+
+  --evg-card-content-gap: var(--evg-spacing-md);
+  --evg-card-content-padding: var(--evg-spacing-md);
+
+  --evg-card-img-height: 100%;
+  --evg-card-img-padding: 0;
+  --evg-card-img-radius: 0;
+
   background: var(--evg-theme-background);
   border: 1px solid var(--evg-color-forest-25);
+  border-radius: var(--evg-card-radius);
   color: var(--evg-theme-color);
-  display: block;
+  display: grid;
+  grid-template-areas:
+    'image'
+    'content';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+
+  &[layout='image-bottom'] {
+    grid-template-areas: 'content' 'image';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  &[layout='image-left'] {
+    @media (width >= 768px) {
+      grid-template-areas: 'image content';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &[layout='image-right'] {
+    @media (width >= 768px) {
+      grid-template-areas: 'content image';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &[layout='thumb'] {
+    --evg-card-img-height: auto;
+    --evg-card-img-padding: var(--evg-card-content-padding) 0
+      var(--evg-card-content-padding) var(--evg-card-content-padding);
+    --evg-card-img-radius: var(--evg-card-radius);
+    --evg-card-img-padding: var(--evg-card-content-padding)
+      var(--evg-card-content-padding) 0 var(--evg-card-content-padding);
+    --evg-card-img-radius: var(--evg-card-radius);
+
+    @media (width >= 768px) {
+      --evg-card-content-gap: var(--evg-spacing-sm);
+      --evg-card-img-padding: var(--evg-card-content-padding) 0
+        var(--evg-card-content-padding) var(--evg-card-content-padding);
+      --evg-card-img-radius: var(--evg-card-radius);
+
+      grid-template-areas: 'image content';
+      grid-template-columns: calc(8rem + var(--evg-card-content-padding)) 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
 
   @each $size in spacing.$sizes {
     &[padding='#{$size}'] {
-      --evg-card-padding: var(--evg-spacing-#{$size});
+      --evg-card-content-padding: var(--evg-spacing-#{$size});
     }
   }
 
   &[padding='none'] {
-    --evg-card-padding: 0;
+    --evg-card-content-padding: 0;
   }
 
   &[radius] {
@@ -24,7 +81,7 @@ evg-card {
 
   @each $size in radius.$sizes {
     &[radius='#{$size}'] {
-      border-radius: var(--evg-radius-#{$size});
+      --evg-card-radius: var(--evg-radius-#{$size});
     }
   }
 }
