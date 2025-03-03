@@ -21,6 +21,7 @@ evg-card {
     'content';
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  transition: border-color var(--evg-transition);
 
   &[layout='image-bottom'] {
     grid-template-areas: 'content' 'image';
@@ -82,6 +83,20 @@ evg-card {
   @each $size in radius.$sizes {
     &[radius='#{$size}'] {
       --evg-card-radius: var(--evg-radius-#{$size});
+    }
+  }
+}
+
+button,
+a {
+  &:has(evg-card) {
+    display: grid;
+  }
+
+  &:hover,
+  &:focus-visible {
+    evg-card {
+      border-color: var(--evg-color-forest-75);
     }
   }
 }
