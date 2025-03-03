@@ -1,0 +1,37 @@
+@use '../../../styles/variables/radius';
+@use '../../../styles/variables/spacing';
+
+evg-box {
+  --evg-box-border-width: 1px;
+  --evg-box-border: var(--evg-box-border-width) solid transparent;
+  background: var(--evg-theme-background);
+  border: var(--evg-box-border);
+  color: var(--evg-theme-color);
+  display: block;
+  padding: 0;
+
+  @each $size in spacing.$sizes {
+    &[padding='#{$size}'] {
+      padding: var(--evg-spacing-#{$size});
+    }
+  }
+
+  &[padding='none'],
+  &:has(evg-box-section) {
+    padding: 0;
+  }
+
+  &[border] {
+    --evg-box-border: 1px solid var(--evg-color-forest-25);
+  }
+
+  &[radius] {
+    overflow: hidden;
+  }
+
+  @each $size in radius.$sizes {
+    &[radius='#{$size}'] {
+      border-radius: var(--evg-radius-#{$size});
+    }
+  }
+}

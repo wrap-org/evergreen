@@ -15,6 +15,9 @@
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Wrap/Wrap';
 
+@use '../components/canvas/Box/Box';
+@use '../components/canvas/Box/BoxSection';
+@use '../components/canvas/Card/Card';
 @use '../components/canvas/Section/Section';
 
 @use '../components/control/Input/Input';

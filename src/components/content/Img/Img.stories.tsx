@@ -1,6 +1,8 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
+import { radius } from 'lib/tokens';
+
 import './Img';
 
 const description = `
@@ -11,6 +13,12 @@ such as making it responsive or fitting a specific aspect ratio.
 export default {
   component: 'evg-img',
   argTypes: {
+    radius: {
+      control: {
+        type: 'select',
+      },
+      options: radius,
+    },
     'object-fit': {
       control: {
         type: 'radio',
@@ -41,7 +49,6 @@ export const Img: StoryFn = (props) => (
 Img.args = {
   block: false,
   responsive: false,
-  radius: false,
   'aspect-ratio': 'auto',
   'object-fit': 'fill',
   'object-position': '50% 50%',
