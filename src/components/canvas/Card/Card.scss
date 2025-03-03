@@ -1,0 +1,30 @@
+@use '../../../styles/variables/radius';
+@use '../../../styles/variables/spacing';
+
+evg-card {
+  --evg-card-padding: var(--evg-spacing-md);
+  background: var(--evg-theme-background);
+  border: 1px solid var(--evg-color-forest-25);
+  color: var(--evg-theme-color);
+  display: block;
+
+  @each $size in spacing.$sizes {
+    &[padding='#{$size}'] {
+      --evg-card-padding: var(--evg-spacing-#{$size});
+    }
+  }
+
+  &[padding='none'] {
+    --evg-card-padding: 0;
+  }
+
+  &[radius] {
+    overflow: hidden;
+  }
+
+  @each $size in radius.$sizes {
+    &[radius='#{$size}'] {
+      border-radius: var(--evg-radius-#{$size});
+    }
+  }
+}

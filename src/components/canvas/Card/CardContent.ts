@@ -1,20 +1,17 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
-import { Radius } from '../../../types/radius.type';
 
-export interface CardAttributes {
-  radius: Radius;
-}
+export interface CardContentAttributes {}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'evg-card': CardAttributes;
+    'evg-card-content': CardContentAttributes;
   }
 }
 
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'evg-card': JSXCustomElement<CardAttributes>;
+      'evg-card-content': JSXCustomElement<CardContentAttributes>;
     }
   }
 }

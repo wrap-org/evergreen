@@ -1,0 +1,6 @@
+evg-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--evg-spacing-md);
+  padding: var(--evg-card-padding);
+}

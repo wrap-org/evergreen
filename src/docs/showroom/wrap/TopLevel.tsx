@@ -133,9 +133,15 @@ export function TopLevel() {
                 small-tablet="6"
                 tablet="4"
               >
-                <docs-placeholder class="evg-spacing-bottom-md">
-                  Image
-                </docs-placeholder>
+                <evg-img radius="md">
+                  <img
+                    src="/images/placeholder/400x300.svg"
+                    alt="Placeholder"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </evg-img>
 
                 <h3 className="evg-text-size-heading-sm">{item}</h3>
               </evg-grid-item>

@@ -3,10 +3,10 @@
   border: var(--evg-button-border-width) solid transparent;
   cursor: pointer;
   display: inline-block;
-  line-height: 1.75;
+  line-height: 1.5;
   min-height: var(--evg-spacing-thumb);
   min-width: 6.5em;
-  padding: calc(var(--evg-spacing-sm) - var(--evg-button-border-width))
+  padding: calc(var(--evg-spacing-sm) - var(--evg-button-border-width) * 2)
     var(--evg-spacing-md);
   text-align: center;
   text-decoration: none;

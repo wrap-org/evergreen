@@ -3,11 +3,14 @@
 
 .badge {
   background: var(--evg-theme-background);
-  border-radius: var(--evg-radius-lg);
+  border-radius: var(--evg-radius-xs);
   color: var(--evg-theme-color);
   display: inline-block;
-  font-weight: var(--evg-font-weight-bold);
-  padding: var(--evg-spacing-sm) calc(var(--evg-spacing-sm) * 1.5);
+  font-family: var(--evg-font-family-heading);
+  font-size: var(--evg-font-size-body-xs);
+  font-weight: var(--evg-font-weight-base);
+  padding: var(--evg-spacing-4) var(--evg-spacing-12);
+  text-transform: uppercase;
 
   &--muted {
     background: var(--evg-theme-background-muted);
@@ -30,10 +33,5 @@
         font-size: $size;
       }
     }
-  }
-
-  // This is obsolete now that all badges are rounded. TODO: Remove this
-  &--rounded {
-    border-radius: var(--evg-radius-lg);
   }
 }
