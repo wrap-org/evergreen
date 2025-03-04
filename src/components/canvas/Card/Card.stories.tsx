@@ -20,37 +20,41 @@ export default {
   },
 } as Meta;
 
+const cardContent = (
+  <>
+    <evg-card-img>
+      <img
+        src="/images/placeholder/400x300.svg"
+        alt="Placeholder"
+        width="400"
+        height="300"
+        loading="lazy"
+      />
+    </evg-card-img>
+    <evg-card-content>
+      <evg-meta>
+        <Badge className="evg-theme-sky-light">Info</Badge>
+        <span className="evg-text-size-body-xs">Jan 1, 2025</span>
+      </evg-meta>
+      <h3 className="evg-text-size-heading-sm">
+        Extending Product Lifetimes: WRAP&apos;s Work on Clothing Durability
+      </h3>
+      <p className="evg-text-size-body-sm">
+        Through our Clothing Longevity Protocol and our collaboration with the
+        Leeds Institute of Textiles and Colour (LITAC) on the Durability
+        Research Project as part of Textiles 2030, we have transformed the
+        fashion industry&apos;s approach to product design.
+      </p>
+      <Button type="primary" block>
+        Read more
+      </Button>
+    </evg-card-content>
+  </>
+);
+
 export const Card: StoryFn = (props) => (
   <evg-wrap size="sm">
-    <evg-card {...props}>
-      <evg-card-img>
-        <img
-          src="/images/placeholder/400x300.svg"
-          alt="Placeholder"
-          width="400"
-          height="300"
-          loading="lazy"
-        />
-      </evg-card-img>
-      <evg-card-content>
-        <evg-meta>
-          <Badge className="evg-theme-sky-light">Info</Badge>
-          <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-        </evg-meta>
-        <h3 className="evg-text-size-heading-sm">
-          Extending Product Lifetimes: WRAP&apos;s Work on Clothing Durability
-        </h3>
-        <p className="evg-text-size-body-sm">
-          Through our Clothing Longevity Protocol and our collaboration with the
-          Leeds Institute of Textiles and Colour (LITAC) on the Durability
-          Research Project as part of Textiles 2030, we have transformed the
-          fashion industry&apos;s approach to product design.
-        </p>
-        <Button type="primary" block>
-          Read more
-        </Button>
-      </evg-card-content>
-    </evg-card>
+    <evg-card {...props}>{cardContent}</evg-card>
   </evg-wrap>
 );
 
@@ -64,35 +68,7 @@ export const Theming: StoryFn = () => (
       {themes.map((theme) => (
         <evg-grid-item small-mobile="12" tablet="6" key={theme}>
           <evg-card class={`evg-theme-${theme}`} radius="md">
-            <evg-card-img>
-              <img
-                src="/images/placeholder/400x300.svg"
-                alt="Placeholder"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
-            </evg-card-img>
-            <evg-card-content>
-              <evg-meta>
-                <Badge className="evg-theme-sky-light">Info</Badge>
-                <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-              </evg-meta>
-              <h3 className="evg-text-size-heading-sm">
-                Extending Product Lifetimes: WRAP&apos;s Work on Clothing
-                Durability
-              </h3>
-              <p className="evg-text-size-body-sm">
-                Through our Clothing Longevity Protocol and our collaboration
-                with the Leeds Institute of Textiles and Colour (LITAC) on the
-                Durability Research Project as part of Textiles 2030, we have
-                transformed the fashion industry&apos;s approach to product
-                design.
-              </p>
-              <Button type="primary" block>
-                Read more
-              </Button>
-            </evg-card-content>
+            {cardContent}
           </evg-card>
         </evg-grid-item>
       ))}
@@ -102,74 +78,18 @@ export const Theming: StoryFn = () => (
 
 export const Layouts: StoryFn = () => (
   <>
-    {['top', 'bottom'].map((layout, index) => (
+    {(['top', 'bottom'] as const).map((layout, index) => (
       <evg-wrap size="sm" class="evg-spacing-bottom-lg" key={index}>
-        <evg-card radius="md" layout={`image-${layout}`}>
-          <evg-card-img>
-            <img
-              src="/images/placeholder/400x300.svg"
-              alt="Placeholder"
-              width="400"
-              height="300"
-              loading="lazy"
-            />
-          </evg-card-img>
-          <evg-card-content>
-            <evg-meta>
-              <Badge className="evg-theme-sky-light">Info</Badge>
-              <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-            </evg-meta>
-            <h3 className="evg-text-size-heading-sm">
-              Extending Product Lifetimes: WRAP&apos;s Work on Clothing
-              Durability
-            </h3>
-            <p className="evg-text-size-body-sm">
-              Through our Clothing Longevity Protocol and our collaboration with
-              the Leeds Institute of Textiles and Colour (LITAC) on the
-              Durability Research Project as part of Textiles 2030, we have
-              transformed the fashion industry&apos;s approach to product
-              design.
-            </p>
-            <Button type="primary" block>
-              Read more
-            </Button>
-          </evg-card-content>
+        <evg-card radius="md" layout={`image-${layout}` as const}>
+          {cardContent}
         </evg-card>
       </evg-wrap>
     ))}
 
-    {['left', 'right'].map((layout, index) => (
+    {(['left', 'right'] as const).map((layout, index) => (
       <evg-wrap size="xl" class="evg-spacing-bottom-lg" key={index}>
-        <evg-card radius="md" layout={`image-${layout}`}>
-          <evg-card-img>
-            <img
-              src="/images/placeholder/400x300.svg"
-              alt="Placeholder"
-              width="400"
-              height="300"
-              loading="lazy"
-            />
-          </evg-card-img>
-          <evg-card-content>
-            <evg-meta>
-              <Badge className="evg-theme-sky-light">Info</Badge>
-              <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-            </evg-meta>
-            <h3 className="evg-text-size-heading-sm">
-              Extending Product Lifetimes: WRAP&apos;s Work on Clothing
-              Durability
-            </h3>
-            <p className="evg-text-size-body-sm">
-              Through our Clothing Longevity Protocol and our collaboration with
-              the Leeds Institute of Textiles and Colour (LITAC) on the
-              Durability Research Project as part of Textiles 2030, we have
-              transformed the fashion industry&apos;s approach to product
-              design.
-            </p>
-            <Button type="primary" block>
-              Read more
-            </Button>
-          </evg-card-content>
+        <evg-card radius="md" layout={`image-${layout}` as const}>
+          {cardContent}
         </evg-card>
       </evg-wrap>
     ))}
