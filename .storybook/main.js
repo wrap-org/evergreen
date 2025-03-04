@@ -70,7 +70,7 @@ module.exports = {
     ${process.env.NODE_ENV === 'production' ? `
       <script
         defer
-        src="https://eu.umami.is/script.js"
+        src="https://cloud.umami.is/script.js"
         data-website-id="270a6507-0235-449a-93bd-5523021ac817"
       ></script>
     ` : ''}
