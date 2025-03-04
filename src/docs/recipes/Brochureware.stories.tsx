@@ -53,7 +53,7 @@ export function CardList({
             class={`evg-theme-default ${i < cards.length - 1 ? 'evg-spacing-bottom-lg' : ''}`}
             radius="md"
             padding="lg"
-            key={i}
+            key={card.title}
             layout={card.layout}
           >
             <evg-card-img>
