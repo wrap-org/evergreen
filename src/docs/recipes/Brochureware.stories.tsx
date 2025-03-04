@@ -17,7 +17,7 @@ const cardsPlaceholder: {
 }[] = [
   {
     title: 'Our work in action',
-    description: `Our case studies illustrate some of the work we have done to benefit the climate, nature and people. Explore details about the impact we\'ve had through our initiatives, collaborations and resources.`,
+    description: `Our case studies illustrate some of the work we have done to benefit the climate, nature and people. Explore details about the impact we've had through our initiatives, collaborations and resources.`,
     layout: 'image-left',
   },
   {
@@ -154,9 +154,9 @@ export function CardRow({
         </h2>
 
         <evg-grid wrap="wrap">
-          {cards.map((item, index) => (
+          {cards.map((item) => (
             <evg-grid-item
-              key={index}
+              key={item.title}
               small-mobile="12"
               small-tablet="6"
               large-tablet="3"

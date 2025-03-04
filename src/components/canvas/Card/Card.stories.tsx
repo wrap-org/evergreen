@@ -78,16 +78,16 @@ export const Theming: StoryFn = () => (
 
 export const Layouts: StoryFn = () => (
   <>
-    {(['top', 'bottom'] as const).map((layout, index) => (
-      <evg-wrap size="sm" class="evg-spacing-bottom-lg" key={index}>
+    {(['top', 'bottom'] as const).map((layout) => (
+      <evg-wrap size="sm" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
       </evg-wrap>
     ))}
 
-    {(['left', 'right'] as const).map((layout, index) => (
-      <evg-wrap size="xl" class="evg-spacing-bottom-lg" key={index}>
+    {(['left', 'right'] as const).map((layout) => (
+      <evg-wrap size="xl" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
@@ -137,8 +137,8 @@ export const Layouts: StoryFn = () => (
 export const Clickable: StoryFn = () => (
   <evg-wrap size="xl">
     <evg-grid wrap="wrap">
-      {Array.from({ length: 3 }).map((_, index) => (
-        <evg-grid-item small-mobile="12" tablet="4" key={index}>
+      {[1, 2, 3].map((item) => (
+        <evg-grid-item small-mobile="12" tablet="4" key={item}>
           <a href="https://wrap.ngo">
             <evg-card radius="md" layout="image-top">
               <evg-card-img>

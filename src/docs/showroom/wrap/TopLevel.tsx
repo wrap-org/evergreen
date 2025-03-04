@@ -34,7 +34,7 @@ const cardList: {
 }[] = [
   {
     title: 'Our work in action',
-    description: `Our case studies illustrate some of the work we have done to benefit the climate, nature and people. Explore details about the impact we\'ve had through our initiatives, collaborations and resources.`,
+    description: `Our case studies illustrate some of the work we have done to benefit the climate, nature and people. Explore details about the impact we've had through our initiatives, collaborations and resources.`,
     layout: 'image-left',
   },
   {
@@ -116,9 +116,9 @@ export function TopLevel() {
           </div>
 
           <evg-grid wrap="wrap">
-            {priorities.map((item, index) => (
+            {priorities.map((item) => (
               <evg-grid-item
-                key={index}
+                key={item.title}
                 small-mobile="12"
                 small-tablet="6"
                 large-tablet="3"
@@ -187,9 +187,9 @@ export function TopLevel() {
               'Finance for action and innovation',
               'Policy design and implementation',
               'Technical solutions and consultancy',
-            ].map((item, index) => (
+            ].map((item) => (
               <evg-grid-item
-                key={index}
+                key={item}
                 small-mobile="12"
                 small-tablet="6"
                 tablet="4"
@@ -219,8 +219,8 @@ export function TopLevel() {
             Explore more
           </h2>
           <evg-grid wrap="wrap">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <evg-grid-item key={index} small-mobile="12" small-tablet="4">
+            {[0, 1, 2, 3].map((item) => (
+              <evg-grid-item key={item} small-mobile="12" small-tablet="4">
                 <docs-placeholder>Menu item</docs-placeholder>
               </evg-grid-item>
             ))}

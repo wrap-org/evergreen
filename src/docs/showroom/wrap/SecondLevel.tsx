@@ -189,9 +189,9 @@ export function SecondLevel() {
           </evg-grid>
 
           <evg-grid wrap="wrap">
-            {initiatives.map((item, index) => (
+            {initiatives.map((item) => (
               <evg-grid-item
-                key={index}
+                key={item.title}
                 small-mobile="12"
                 small-tablet="6"
                 tablet="4"
