@@ -49,6 +49,8 @@ export const fontSizes = [
   'display-lg',
 ];
 
+export const fontWeights = ['base', 'light', 'bold', 'black'];
+
 export const radius = ['none', 'xs', 'sm', 'md', 'lg', 'xl'];
 
 export const spacing = ['xs', 'sm', 'md', 'lg', 'xl', 'fluid', 'fluid-lg'];

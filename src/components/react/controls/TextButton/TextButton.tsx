@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { Weights } from '../../../../types/font.type';
+import { FontWeight } from '../../../../types/tokens.type';
 
 import styles from './TextButton.module.scss';
 
@@ -13,7 +13,7 @@ interface TextButtonProps {
   readonly iconRight?: boolean;
   readonly size?: 'sm';
   readonly decorate?: boolean;
-  readonly weight?: Weights;
+  readonly weight?: FontWeight;
   [key: string]: unknown;
 }
 

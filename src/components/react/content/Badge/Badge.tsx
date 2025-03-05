@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { Sizes } from '../../../../types/font.type';
+import { FontSize } from '../../../../types/tokens.type';
 
 import styles from './Badge.module.scss';
 
 export interface BadgeProps {
   readonly children?: React.ReactNode;
-  readonly size?: Sizes;
+  readonly size?: FontSize;
   readonly muted?: boolean;
   readonly inverse?: boolean;
   readonly className?: string;

@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { Sizes } from '../../../../types/font.type';
-import { Color } from '../../../../types/tokens.type';
+import { Color, FontSize } from '../../../../types/tokens.type';
 
 import styles from './Icon.module.scss';
 
@@ -10,7 +9,7 @@ interface IconProps {
   readonly icon: string;
   readonly color?: Color;
   readonly title?: string;
-  readonly size?: Sizes | 'giant';
+  readonly size?: FontSize;
   /**
    * Whether to use https://icons.mono.company/ or a custom icon from the ./custom-icons
    */

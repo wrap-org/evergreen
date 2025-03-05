@@ -9,7 +9,7 @@ function getTokens() {
   // The other tokens are media query or desktop modes so
   // we could add a toggle later
   // TODO Add a way to demo dark mode or media query tokens
-  const rootRegex = /:root\s*{([^}]*)}/gs;
+  const rootRegex = /:root\s*{([^}]*)}/g;
   const root = rawTokens.match(rootRegex);
   return root?.join('\n');
 }
