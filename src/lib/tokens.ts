@@ -30,7 +30,7 @@ export const colors = [
   'orange',
   'violet',
   'lilac',
-];
+] as const;
 
 export const fontSizes = [
   'body-xs',
@@ -47,10 +47,18 @@ export const fontSizes = [
   'display-sm',
   'display-md',
   'display-lg',
-];
+] as const;
 
-export const fontWeights = ['base', 'light', 'bold', 'black'];
+export const fontWeights = ['base', 'light', 'bold', 'black'] as const;
 
-export const radius = ['none', 'xs', 'sm', 'md', 'lg', 'xl'];
+export const radius = ['none', 'xs', 'sm', 'md', 'lg', 'xl'] as const;
 
-export const spacing = ['xs', 'sm', 'md', 'lg', 'xl', 'fluid', 'fluid-lg'];
+export const spacing = [
+  'xs',
+  'sm',
+  'md',
+  'lg',
+  'xl',
+  'fluid',
+  'fluid-lg',
+] as const;
