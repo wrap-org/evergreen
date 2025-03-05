@@ -2,59 +2,9 @@ import { Meta } from '@storybook/react';
 import classNames from 'classnames';
 import React from 'react';
 
-const alignments = ['left', 'center', 'right'];
+import { colors } from 'lib/tokens';
 
-const colors = [
-  'forest',
-  'forest-75',
-  'forest-50',
-  'forest-25',
-  'earth',
-  'earth-75',
-  'earth-50',
-  'earth-25',
-  'sand',
-  'sand-75',
-  'sand-50',
-  'sand-25',
-  'lime',
-  'lime-75',
-  'lime-50',
-  'lime-25',
-  'sky',
-  'sky-75',
-  'sky-50',
-  'sky-25',
-  'rose',
-  'rose-75',
-  'rose-50',
-  'rose-25',
-  'cloud',
-  'cloud-75',
-  'steel',
-  'coal',
-  'lemon',
-  'orange',
-  'lilac',
-  'violet',
-  'body',
-  'body-muted',
-  'background',
-  'background-muted',
-  'link',
-  'neutral',
-  'neutral-light',
-  'positive',
-  'positive-light',
-  'negative',
-  'negative-light',
-  'no-stream',
-  'dry-stream',
-  'food-stream',
-  'garden-stream',
-  'organic-stream',
-  'residual-stream',
-];
+const alignments = ['left', 'center', 'right'];
 
 const sizes = [
   'display-lg',
@@ -155,7 +105,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Text = (args) => {
   const { as, ...rest } = args;

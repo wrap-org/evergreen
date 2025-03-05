@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
@@ -7,9 +7,11 @@ export interface AppAttributes {
   header?: 'sticky';
 }
 
-@customElement('diamond-app')
+@customElement('evg-app')
 export class App extends LitElement {
-  @property({ reflect: true }) header?: 'sticky' | undefined;
+  static readonly properties = {
+    header: { type: String, reflect: true },
+  };
 
   render() {
     return html`

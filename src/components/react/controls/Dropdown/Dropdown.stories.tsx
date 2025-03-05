@@ -9,7 +9,7 @@ import Button from 'components/react/controls/Button/Button';
 export default {
   title: 'React/Components/Controls/Dropdown',
   component: Dropdown,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => {
   const [open, setOpen] = useState(false);

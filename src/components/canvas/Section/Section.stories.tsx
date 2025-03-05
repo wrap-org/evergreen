@@ -1,10 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import './Section';
-import '../../composition/Grid/Grid';
-import '../../composition/Grid/GridItem';
-import '../../composition/Wrap/Wrap';
+import { themes } from 'lib/theme';
 
 const description = `
 A section component represents a horizontal slice of a page.
@@ -23,6 +20,7 @@ export default {
       description: {
         component: description,
       },
+      theming: true,
     },
   },
   argTypes: {
@@ -30,7 +28,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['light', 'medium', 'dark'],
+      options: themes,
     },
     padding: {
       control: {
@@ -49,10 +47,10 @@ export default {
       ],
     },
   },
-} as Meta;
+} satisfies Meta;
 
-export const Section: StoryFn = ({ padding, theme }) => (
-  <evg-section padding={padding} class={`evg-theme-${theme}`}>
+export const Section: StoryFn = ({ theme, ...props }) => (
+  <evg-section class={`evg-theme-${theme}`} {...props}>
     <evg-wrap size="lg">
       <h3>Section title</h3>
       <p className="evg-spacing-bottom-lg">
@@ -81,7 +79,7 @@ Section.args = {
 
 export const Theming: StoryFn = () => (
   <>
-    {['light', 'medium', 'dark'].map((theme) => (
+    {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
         <evg-wrap size="lg">
           <h3>Section title</h3>

@@ -13,7 +13,7 @@ export default {
   subcomponents: {
     ListItem: List.Item,
   },
-} as Meta<typeof List>;
+} satisfies Meta<typeof List>;
 
 const Template: StoryFn<typeof List> = (args) => (
   <List {...args}>

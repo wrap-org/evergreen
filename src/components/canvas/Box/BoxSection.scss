@@ -1,0 +1,20 @@
+@use '../../../styles/variables/spacing';
+
+evg-box-section {
+  background: var(--evg-theme-background);
+  border: var(--evg-box-border);
+  color: var(--evg-theme-color);
+  display: block;
+  margin: calc(var(--evg-box-border-width) * -1);
+  padding: 0;
+
+  @each $size in spacing.$sizes {
+    &[padding='#{$size}'] {
+      padding: var(--evg-spacing-#{$size});
+    }
+  }
+
+  &[padding='none'] {
+    padding: 0;
+  }
+}

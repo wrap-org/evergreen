@@ -25,7 +25,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default = (args) => (
   <>

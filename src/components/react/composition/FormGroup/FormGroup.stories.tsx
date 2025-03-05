@@ -13,7 +13,7 @@ import TextButton from 'components/react/controls/TextButton/TextButton';
 export default {
   title: 'React/Components/Composition/Form group',
   component: FormGroup,
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   return (

@@ -42,7 +42,7 @@ export const parameters = {
           <Title />
           <Subtitle />
           {themeSupport && (
-            <Badge className="evg-theme-info">
+            <Badge className="evg-theme-sky-light">
               Theme support
             </Badge>
           )}

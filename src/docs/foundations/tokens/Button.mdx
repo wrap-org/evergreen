@@ -1,17 +1,8 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
-import { buttonColorGroups } from './lib/colors';
+import { Meta } from '@storybook/blocks';
+import Tokens from './blocks/Tokens/Tokens';
 
 <Meta title="Foundations/Tokens/Button" />
 
 # Button
 
-<ColorPalette>
-  {buttonColorGroups.map((group) => (
-    <ColorItem
-      key={group.name}
-      title={group.name}
-      subtitle={group.subtitle}
-      colors={group.colors}
-    />
-  ))}
-</ColorPalette>
+<Tokens collection="button" />

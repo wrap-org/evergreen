@@ -9,7 +9,7 @@ import Datepicker from './Datepicker';
 export default {
   title: 'React/Components/Controls/Datepicker',
   component: Datepicker,
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   const [value, setValue] = useState('');

@@ -6,7 +6,7 @@ import PieChart from './PieChart';
 export default {
   title: 'React/Components/Content/PieChart',
   component: PieChart,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <PieChart

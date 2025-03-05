@@ -13,7 +13,7 @@ export default {
       theming: true,
     },
   },
-} as Meta<typeof Card>;
+} satisfies Meta<typeof Card>;
 
 const Template: StoryFn<typeof Card> = (args) => (
   <evg-grid wrap="wrap">

@@ -1,8 +1,6 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import './App';
-
 export default {
   parameters: {
     layout: 'fullscreen',
@@ -21,7 +19,7 @@ export default {
       options: ['', 'sticky'],
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const App = (args) => (
   <evg-app {...args}>

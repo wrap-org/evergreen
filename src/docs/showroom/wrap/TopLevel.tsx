@@ -1,13 +1,54 @@
 import React from 'react';
 
-import { CallToAction, CardList } from '../../recipes/Brochureware.stories';
-import { Full as Footer } from '../../recipes/Footer.stories';
-import { Wrap as Navigation } from '../../recipes/Navigation.stories';
+import {
+  CallToAction,
+  CardList,
+  AppLayout,
+} from '../../recipes/Brochureware.stories';
+
+const priorities = [
+  {
+    title: 'Future-proof food',
+    description:
+      "We're changing the way food is produced and consumed — reducing costs to the environment, to businesses and to people.",
+  },
+  {
+    title: 'Prevent plastic problems',
+    description:
+      "We're redesigning the plastics system, across the value chain — preventing waste and keeping the material out of the environment.",
+  },
+  {
+    title: 'Transform textiles',
+    description:
+      "We're transforming the way that textiles are made, bought and used - decreasing emissions, lowering water use and cutting pollution.",
+  },
+  {
+    title: 'Accelerate the Circular Economy',
+    description:
+      "We're leading the world away from a 'take-make-dispose' culture to a 'design-makereuse' approach - radically reducing waste and carbon emissions from everyday products.",
+  },
+];
+
+const cardList: {
+  title: string;
+  description: string;
+  layout: 'image-left' | 'image-right';
+}[] = [
+  {
+    title: 'Our work in action',
+    description: `Our case studies illustrate some of the work we have done to benefit the climate, nature and people. Explore details about the impact we've had through our initiatives, collaborations and resources.`,
+    layout: 'image-left',
+  },
+  {
+    title: 'Our global impact',
+    description: `Throughout the past 20+ years, we have created meaningful change in over 40 countries. In the UK alone,we have united close to 700 organisations. We have multiple international pacts and partnerships, and we work with governments and governmental organisations around the world.`,
+    layout: 'image-right',
+  },
+];
 
 export function TopLevel() {
   return (
-    <evg-app>
-      <Navigation slot="header" />
+    <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
         <evg-wrap size="md" class="evg-text-align-center">
           <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
@@ -76,14 +117,35 @@ export function TopLevel() {
           </div>
 
           <evg-grid wrap="wrap">
-            {Array.from({ length: 4 }).map((_, index) => (
+            {priorities.map((item) => (
               <evg-grid-item
-                key={index}
+                key={item.title}
                 small-mobile="12"
                 small-tablet="6"
                 large-tablet="3"
+                fill
               >
-                <docs-placeholder>Card</docs-placeholder>
+                <a href="https://wrap.ngo">
+                  <evg-card class="evg-theme-default" radius="md">
+                    <evg-card-img>
+                      <img
+                        src="/images/placeholder/400x300.svg"
+                        alt="Placeholder"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                      />
+                    </evg-card-img>
+                    <evg-card-content>
+                      <h3 className="evg-text-size-body-md evg-text-family-body">
+                        {item.title}
+                      </h3>
+                      <p className="evg-text-size-body-sm">
+                        {item.description}
+                      </p>
+                    </evg-card-content>
+                  </evg-card>
+                </a>
               </evg-grid-item>
             ))}
           </evg-grid>
@@ -114,8 +176,8 @@ export function TopLevel() {
           </p>
 
           <p className="evg-spacing-bottom-lg">
-            We’re a trusted advisor to governments, businesses, multilateral
-            organisations and NGOs around the world.
+            We&apos;re a trusted advisor to governments, businesses,
+            multilateral organisations and NGOs around the world.
           </p>
 
           <evg-grid wrap="wrap">
@@ -126,16 +188,22 @@ export function TopLevel() {
               'Finance for action and innovation',
               'Policy design and implementation',
               'Technical solutions and consultancy',
-            ].map((item, index) => (
+            ].map((item) => (
               <evg-grid-item
-                key={index}
+                key={item}
                 small-mobile="12"
                 small-tablet="6"
                 tablet="4"
               >
-                <docs-placeholder class="evg-spacing-bottom-md">
-                  Image
-                </docs-placeholder>
+                <evg-img radius="md">
+                  <img
+                    src="/images/placeholder/400x300.svg"
+                    alt="Placeholder"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </evg-img>
 
                 <h3 className="evg-text-size-heading-sm">{item}</h3>
               </evg-grid-item>
@@ -144,7 +212,7 @@ export function TopLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CardList cards={[1, 2]} theme="earth-light" />
+      <CardList cards={cardList} theme="earth-light" />
 
       <evg-section padding="fluid">
         <evg-wrap size="xl">
@@ -152,8 +220,8 @@ export function TopLevel() {
             Explore more
           </h2>
           <evg-grid wrap="wrap">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <evg-grid-item key={index} small-mobile="12" small-tablet="4">
+            {[0, 1, 2, 3].map((item) => (
+              <evg-grid-item key={item} small-mobile="12" small-tablet="4">
                 <docs-placeholder>Menu item</docs-placeholder>
               </evg-grid-item>
             ))}
@@ -166,8 +234,6 @@ export function TopLevel() {
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
         button="Button"
       />
-
-      <Footer slot="footer" />
-    </evg-app>
+    </AppLayout>
   );
 }

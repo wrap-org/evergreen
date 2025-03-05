@@ -31,7 +31,7 @@ export default {
       theming: true,
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const FourTabs: StoryFn = (args) => (
   <Menubar {...args}>

@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './VehicleSvg.module.scss';
+import { Color } from '../../../../types/tokens.type';
 
-import { Colors } from 'src/types/colors.type';
+import styles from './VehicleSvg.module.scss';
 
 export interface VehicleSvgProps {
   readonly name: string;
-  readonly color?: Colors;
+  readonly color?: Color;
 }
 
 function VehicleSvg({ name, color = 'no-stream' }: VehicleSvgProps) {

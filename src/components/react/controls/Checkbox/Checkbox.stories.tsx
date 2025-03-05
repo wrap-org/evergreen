@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   return (

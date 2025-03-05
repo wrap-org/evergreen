@@ -24,6 +24,16 @@
     }
   }
 
+  &-family {
+    &-heading {
+      font-family: var(--evg-font-family-heading);
+    }
+
+    &-body {
+      font-family: var(--evg-font-family);
+    }
+  }
+
   &-size {
     @each $name, $size in font.$sizes {
       &-#{$name} {

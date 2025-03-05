@@ -4,6 +4,7 @@ evg-grid {
   --evg-grid-gap: var(--evg-spacing-md);
   display: flex;
   margin: calc(var(--evg-grid-gap) * -0.5);
+  width: calc(100% + var(--evg-grid-gap));
 
   &[inline]:not([inline='false']) {
     display: inline-flex;

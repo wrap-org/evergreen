@@ -10,7 +10,7 @@ import FormGroup from 'components/react/composition/FormGroup/FormGroup';
 export default {
   title: 'React/Components/Controls/Radio',
   component: Radio,
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   return (

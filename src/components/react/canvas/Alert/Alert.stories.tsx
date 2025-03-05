@@ -13,7 +13,7 @@ export default {
       theming: true,
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   return (

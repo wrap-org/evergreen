@@ -6,7 +6,7 @@ import Sticky from './Sticky';
 export default {
   title: 'React/Components/Composition/Sticky',
   component: Sticky,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <Sticky>Wrap an element in Sticky to make it `position: sticky;`</Sticky>

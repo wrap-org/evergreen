@@ -1,0 +1,12 @@
+evg-card-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: var(--evg-card-content-gap);
+  grid-area: content;
+  padding: var(--evg-card-content-padding);
+
+  p {
+    margin: 0;
+  }
+}

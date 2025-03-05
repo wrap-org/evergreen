@@ -13,11 +13,19 @@
 @use '../components/composition/App/App';
 @use '../components/composition/Grid/Grid';
 @use '../components/composition/Grid/GridItem';
+@use '../components/composition/Meta/Meta';
 @use '../components/composition/Wrap/Wrap';
 
+@use '../components/canvas/Box/Box';
+@use '../components/canvas/Box/BoxSection';
+@use '../components/canvas/Card/Card';
+@use '../components/canvas/Card/CardContent';
+@use '../components/canvas/Card/CardImg';
 @use '../components/canvas/Section/Section';
 
 @use '../components/control/Input/Input';
+
+@use '../components/content/Img/Img';
 
 // Trial extra variables, will need moving to tokens
 :root {

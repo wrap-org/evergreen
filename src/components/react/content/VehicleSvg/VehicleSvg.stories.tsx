@@ -6,7 +6,7 @@ import VehicleSvg from './VehicleSvg';
 export default {
   title: 'React/Components/Content/VehicleSvg',
   component: VehicleSvg,
-} as Meta;
+} satisfies Meta;
 
 export const Default: StoryFn = () => (
   <evg-grid wrap="wrap">

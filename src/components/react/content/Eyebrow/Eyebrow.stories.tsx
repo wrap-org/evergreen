@@ -6,7 +6,7 @@ import Eyebrow from './Eyebrow';
 export default {
   title: 'React/Components/Content/Eyebrow',
   component: Eyebrow,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <>

@@ -14,7 +14,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default: Story<{ question: React.ReactNode }> = ({ question }) => (
   <Faq question={question}>Answer goes here</Faq>

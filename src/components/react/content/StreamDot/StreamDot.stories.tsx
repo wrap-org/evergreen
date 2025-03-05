@@ -6,7 +6,7 @@ import StreamDot from './StreamDot';
 export default {
   title: 'React/Components/Content/Stream Dot',
   component: StreamDot,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <>
