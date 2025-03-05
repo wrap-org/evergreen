@@ -5,16 +5,9 @@ import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
 import { themes } from 'lib/theme';
 
-const description = `
-A box is a rectangle on a page to group related content together visually.
-`;
-
 export default {
   parameters: {
     docs: {
-      description: {
-        component: description,
-      },
       theming: true,
     },
   },
