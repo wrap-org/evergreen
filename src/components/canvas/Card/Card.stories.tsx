@@ -1,7 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
 import { themes } from 'lib/theme';
 
@@ -26,7 +25,7 @@ const cardContent = (
     </evg-card-img>
     <evg-card-content>
       <evg-meta>
-        <Badge className="evg-theme-sky-light">Info</Badge>
+        <evg-badge type="info">Info</evg-badge>
         <span className="evg-text-size-body-xs">Jan 1, 2025</span>
       </evg-meta>
       <h3 className="evg-text-size-heading-sm">
@@ -111,7 +110,7 @@ export const Layouts: StoryFn = () => (
           <evg-grid justify-content="space-between" align-items="center">
             <evg-grid-item>
               <evg-meta>
-                <Badge className="evg-theme-sky-light">Info</Badge>
+                <evg-badge type="info">Info</evg-badge>
                 <span className="evg-text-size-body-xs">Jan 1, 2025</span>
               </evg-meta>
             </evg-grid-item>
@@ -145,7 +144,7 @@ export const Clickable: StoryFn = () => (
               </evg-card-img>
               <evg-card-content>
                 <evg-meta>
-                  <Badge className="evg-theme-sky-light">Press release</Badge>
+                  <evg-badge type="info">Press release</evg-badge>
                   <span className="evg-text-size-body-xs">Jan 1, 2025</span>
                 </evg-meta>
                 <h3 className="evg-text-size-heading-sm evg-text-family-body">
