@@ -1,8 +1,9 @@
+import { HtmlBoolean } from '../../..//types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 import { Spacing } from '../../../types/tokens.type';
 
 export interface BoxAttributes {
-  border?: string | boolean;
+  border?: HtmlBoolean;
   padding?: Spacing | 'none';
 }
 

@@ -1,13 +1,14 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
+import { HtmlBoolean } from '../../../types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface ImgAttributes {
-  block?: string | boolean;
-  responsive?: string | boolean;
+  block?: HtmlBoolean;
+  responsive?: HtmlBoolean;
   aspectRatio?: string;
-  radius?: string | boolean;
+  radius?: HtmlBoolean;
   objectFit?: 'cover' | 'contain';
   objectPosition?: string;
 }
