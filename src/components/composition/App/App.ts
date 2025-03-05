@@ -9,7 +9,7 @@ export interface AppAttributes {
 
 @customElement('evg-app')
 export class App extends LitElement {
-  static properties = {
+  static readonly properties = {
     header: { type: String, reflect: true },
   };
 

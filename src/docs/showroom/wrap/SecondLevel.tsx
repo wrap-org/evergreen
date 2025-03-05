@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {
+  AppLayout,
   CallToAction,
   CardList,
   CardRow,
   Featured,
 } from '../../recipes/Brochureware.stories';
-import { Full as Footer } from '../../recipes/Footer.stories';
-import { Wrap as Navigation } from '../../recipes/Navigation.stories';
 
 const initiatives = [
   {
@@ -98,8 +97,7 @@ const relatedResources = [
 
 export function SecondLevel() {
   return (
-    <evg-app>
-      <Navigation slot="header" />
+    <AppLayout>
       <evg-grid wrap="wrap" gap="none">
         <evg-grid-item small-mobile="12" small-desktop="6" fill>
           <evg-section padding="fluid-lg" class="evg-theme-forest">
@@ -249,8 +247,6 @@ export function SecondLevel() {
         text="If you are interested in setting up your own food waste campaign within a country or region that we do not currently work in, please do get in touch."
         button="Button"
       />
-
-      <Footer slot="footer" />
-    </evg-app>
+    </AppLayout>
   );
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { CallToAction, CardList } from '../../recipes/Brochureware.stories';
-import { Full as Footer } from '../../recipes/Footer.stories';
-import { Wrap as Navigation } from '../../recipes/Navigation.stories';
+import {
+  CallToAction,
+  CardList,
+  AppLayout,
+} from '../../recipes/Brochureware.stories';
 
 const priorities = [
   {
@@ -46,8 +48,7 @@ const cardList: {
 
 export function TopLevel() {
   return (
-    <evg-app>
-      <Navigation slot="header" />
+    <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
         <evg-wrap size="md" class="evg-text-align-center">
           <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
@@ -233,8 +234,6 @@ export function TopLevel() {
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
         button="Button"
       />
-
-      <Footer slot="footer" />
-    </evg-app>
+    </AppLayout>
   );
 }

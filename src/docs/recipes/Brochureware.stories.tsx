@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { Full as Footer } from './Footer.stories';
+import { Wrap as Navigation } from './Navigation.stories';
+
+import '../../components/composition/App/App';
 import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
 
@@ -26,6 +30,16 @@ const cardsPlaceholder: {
     layout: 'image-right',
   },
 ];
+
+export function AppLayout({ children }) {
+  return (
+    <evg-app header="sticky">
+      <Navigation slot="header" />
+      {children}
+      <Footer slot="footer" />
+    </evg-app>
+  );
+}
 
 export function CardList({
   theme = 'default',

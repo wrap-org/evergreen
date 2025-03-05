@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {
+  AppLayout,
   CallToAction,
   CardList,
   CardRow,
   Featured,
 } from '../../recipes/Brochureware.stories';
-import { Full as Footer } from '../../recipes/Footer.stories';
-import { Wrap as Navigation } from '../../recipes/Navigation.stories';
 
 import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
@@ -66,9 +65,7 @@ const moreOpportunities = [
 
 export function ThirdLevel() {
   return (
-    <evg-app>
-      <Navigation slot="header" />
-
+    <AppLayout>
       <evg-section padding="fluid-lg" class="evg-theme-forest">
         <evg-wrap size="xxl" gutter="fluid-lg">
           <evg-grid wrap="wrap" gap="none">
@@ -245,8 +242,6 @@ export function ThirdLevel() {
         text="Find out how the Courtauld Commitment 2030 can help achieve your sustainability goals."
         button="Button"
       />
-
-      <Footer slot="footer" />
-    </evg-app>
+    </AppLayout>
   );
 }

@@ -3,19 +3,20 @@ import { customElement } from 'lit/decorators.js';
 
 import { HtmlBoolean } from '../../../types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { Radius } from '../../../types/tokens.type';
 
 export interface ImgAttributes {
   block?: HtmlBoolean;
   responsive?: HtmlBoolean;
   aspectRatio?: string;
-  radius?: HtmlBoolean;
+  radius?: Radius;
   objectFit?: 'cover' | 'contain';
   objectPosition?: string;
 }
 
 @customElement('evg-img')
 export class Img extends LitElement {
-  static properties = {
+  static readonly properties = {
     ariaHidden: {
       type: String,
       reflect: true,
