@@ -65,3 +65,4 @@
 - `Input`, `Textarea` and `Select` are now `evg-input`
   - `prefix` and `suffix` are no longer props on these and should be passed in as an svg or icon child component
   - These components control their own validation state display via the `state` prop
+  - `HelpText` has been replaced with `evg-help-text` it should wrap a div or span element
