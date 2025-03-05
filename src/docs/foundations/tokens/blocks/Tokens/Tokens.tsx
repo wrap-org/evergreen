@@ -5,18 +5,18 @@ import React from 'react';
 import styles from './Tokens.module.scss';
 
 function getTokens() {
-  // Only get tokens inside :root for now
-  // The other tokens are media query or desktop modes so
-  // we could add a toggle later
-  // TODO Add a way to demo dark mode or media query tokens
   const rootRegex = /:root\s*{([^}]*)}/g;
-  const root = rawTokens.match(rootRegex);
-  return root?.join('\n');
+  const root = [] as string[];
+  let match;
+  while ((match = rootRegex.exec(rawTokens)) !== null) {
+    root.push(match[0]);
+  }
+  return root.join('\n');
 }
 
 function tokenLink(key: string) {
   const collectionRegex = /--([a-z]+)-/;
-  const collection = key.match(collectionRegex)?.[1];
+  const collection = collectionRegex.exec(key)?.[1];
 
   if (!collection) {
     return '#';
@@ -33,14 +33,15 @@ export default function Tokens({
   readonly collection: string;
 }) {
   const regex = new RegExp(`--evg-${collection}[a-z0-9-^:]*: [^;]+;`, 'gs');
-  const tokensArray = allTokens?.match(regex);
-  const tokens = tokensArray?.map((token) => {
-    const [key, value] = token.replace(';', '').split(': ');
-    return {
+  const tokens = [] as { key: string; value: string }[];
+  let match;
+  while ((match = regex.exec(allTokens ?? '')) !== null) {
+    const [key, value] = match[0].replace(';', '').split(': ');
+    tokens.push({
       key: key,
       value: value,
-    };
-  });
+    });
+  }
 
   return (
     <table className={styles.tokens}>
@@ -93,7 +94,7 @@ export default function Tokens({
           const previewType = getPreviewType(
             token.value,
             collection,
-            supportedCollection || supportedCollectionValue,
+            supportedCollection ?? supportedCollectionValue,
           );
 
           const hasText = [
