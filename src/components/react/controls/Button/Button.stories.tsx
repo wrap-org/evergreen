@@ -8,7 +8,7 @@ import Icon from 'components/react/content/Icon/Icon';
 export default {
   title: 'React/Components/Controls/Button',
   component: Button,
-} as Meta;
+} satisfies Meta;
 
 export function Types() {
   return (

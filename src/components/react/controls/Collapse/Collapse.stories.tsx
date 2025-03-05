@@ -8,7 +8,7 @@ import Card from 'components/react/canvas/Card/Card';
 export default {
   title: 'React/Components/Controls/Collapse',
   component: Collapse,
-} as Meta;
+} satisfies Meta;
 
 export const Default: Story<CollapseProps> = (props) => (
   <Collapse {...props}>

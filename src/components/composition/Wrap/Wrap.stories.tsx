@@ -55,7 +55,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 const Template: StoryFn = (args) => (
   <evg-wrap {...args}>

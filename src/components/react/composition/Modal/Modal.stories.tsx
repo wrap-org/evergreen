@@ -13,7 +13,7 @@ export default {
     ModalInner: Modal.Inner,
     ModalHeader: Modal.Header,
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => {
   const modalRef = useModalRef();

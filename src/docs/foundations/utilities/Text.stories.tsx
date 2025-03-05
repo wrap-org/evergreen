@@ -155,7 +155,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Text = (args) => {
   const { as, ...rest } = args;

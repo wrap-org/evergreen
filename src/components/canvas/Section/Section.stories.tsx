@@ -47,7 +47,7 @@ export default {
       ],
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Section: StoryFn = ({ theme, ...props }) => (
   <evg-section class={`evg-theme-${theme}`} {...props}>

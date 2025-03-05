@@ -11,7 +11,7 @@ export default {
       theming: true,
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default = (args: BadgeProps) => (
   <evg-grid wrap="wrap">

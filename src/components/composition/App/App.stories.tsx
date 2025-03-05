@@ -19,7 +19,7 @@ export default {
       options: ['', 'sticky'],
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const App = (args) => (
   <evg-app {...args}>

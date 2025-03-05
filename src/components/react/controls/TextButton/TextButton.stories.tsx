@@ -19,7 +19,7 @@ export default {
       },
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => (
   <TextButton icon="chevron-down">TextButton label</TextButton>

@@ -18,7 +18,7 @@ export default {
       theming: true,
     },
   },
-} as Meta;
+} satisfies Meta;
 
 const cardContent = (
   <>

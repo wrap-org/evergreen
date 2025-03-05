@@ -8,7 +8,7 @@ import Card from 'components/react/canvas/Card/Card';
 export default {
   title: 'React/Components/Content/Icon',
   component: Icon,
-} as Meta;
+} satisfies Meta;
 
 function importAll(r) {
   return r.keys().map((i) => i.replace('./', '').replace('.svg', ''));

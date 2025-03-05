@@ -6,7 +6,7 @@ import LoadingButton from './LoadingButton';
 export default {
   title: 'React/Components/Content/Loading Button',
   component: LoadingButton,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => <LoadingButton />;
 

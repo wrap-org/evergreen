@@ -52,7 +52,7 @@ export default {
       options: radius,
     },
   },
-} as Meta;
+} satisfies Meta;
 
 export const Box: StoryFn = ({ theme, ...props }) => (
   <evg-box class={`evg-theme-${theme}`} {...props}>

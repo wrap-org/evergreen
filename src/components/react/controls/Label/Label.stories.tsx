@@ -6,7 +6,7 @@ import Label from './Label';
 export default {
   title: 'React/Components/Controls/Label',
   component: Label,
-} as Meta;
+} satisfies Meta;
 
 export function Primary() {
   return <Label htmlFor="my-input">Label</Label>;

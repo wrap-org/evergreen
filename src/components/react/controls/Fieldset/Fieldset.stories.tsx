@@ -10,7 +10,7 @@ export default {
   subcomponents: {
     Legend,
   },
-} as Meta;
+} satisfies Meta;
 
 export function Default() {
   return (

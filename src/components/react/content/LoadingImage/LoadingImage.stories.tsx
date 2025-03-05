@@ -6,7 +6,7 @@ import LoadingImage from './LoadingImage';
 export default {
   title: 'React/Components/Content/Loading Image',
   component: LoadingImage,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => <LoadingImage width={300} height={200} />;
 

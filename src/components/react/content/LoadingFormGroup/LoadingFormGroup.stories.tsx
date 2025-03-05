@@ -6,7 +6,7 @@ import LoadingFormGroup from './LoadingFormGroup';
 export default {
   title: 'React/Components/Content/Loading Form Group',
   component: LoadingFormGroup,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => <LoadingFormGroup />;
 

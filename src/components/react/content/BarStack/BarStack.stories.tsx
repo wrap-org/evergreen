@@ -9,7 +9,7 @@ export default {
   subcomponents: {
     BarStackItem: BarStack.Item,
   },
-} as Meta;
+} satisfies Meta;
 
 export const Default = (args: {
   readonly children?: React.ReactNode;

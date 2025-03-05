@@ -6,7 +6,7 @@ import LoadingSpinner from './LoadingSpinner';
 export default {
   title: 'React/Components/Content/Loading Spinner',
   component: LoadingSpinner,
-} as Meta;
+} satisfies Meta;
 
 export const Default = () => <LoadingSpinner />;
 
