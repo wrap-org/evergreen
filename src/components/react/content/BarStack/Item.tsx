@@ -1,12 +1,12 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import { Colors } from '../../../../types/colors.type';
+import { Color } from '../../../../types/tokens.type';
 
 import styles from './BarStack.module.scss';
 
 export interface ItemProps {
-  readonly color: Colors;
+  readonly color: Color;
   readonly size: number;
 }
 

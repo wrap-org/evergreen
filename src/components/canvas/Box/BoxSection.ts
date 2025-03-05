@@ -1,5 +1,5 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
-import { Spacing } from '../../../types/spacing.type';
+import { Spacing } from '../../../types/tokens.type';
 
 export interface BoxSectionAttributes {
   padding?: Spacing | 'none';

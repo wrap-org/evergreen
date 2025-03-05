@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import { Sizes } from '../../../types/size.type';
-import { Spacing } from '../../../types/spacing.type';
+import { Spacing } from '../../../types/tokens.type';
 
 const sizes: (Sizes | 'auto')[] = [
   'xxs',

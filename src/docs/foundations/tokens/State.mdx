@@ -1,17 +1,8 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
-import { stateColorGroups } from './lib/colors';
+import Tokens from './blocks/Tokens/Tokens';
 
 <Meta title="Foundations/Tokens/State" />
 
 # State
 
-<ColorPalette>
-  {stateColorGroups.map((group) => (
-    <ColorItem
-      key={group.name}
-      title={group.name}
-      subtitle={group.subtitle}
-      colors={group.colors}
-    />
-  ))}
-</ColorPalette>
+<Tokens collection="state" />

@@ -1,6 +1,5 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
-import { Radius } from '../../../types/radius.type';
-import { Spacing } from '../../../types/spacing.type';
+import { Radius, Spacing } from '../../../types/tokens.type';
 
 export interface CardAttributes {
   radius?: Radius;
