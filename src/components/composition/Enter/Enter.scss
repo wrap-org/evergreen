@@ -1,0 +1,75 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -1em, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate(0, 1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes boing {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+evg-enter {
+  --enter-transition-duration: 0.5s;
+  --enter-transition-timing: ease-in-out;
+  --enter-transition-timing-boing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  animation-duration: var(--enter-transition-duration);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: var(--enter-transition-timing);
+  display: block;
+  opacity: 0;
+  z-index: 1;
+
+  &[type='boing'] {
+    animation-timing-function: var(--evg-transition-timing-boing);
+  }
+
+  &[enter='true'] {
+    animation-name: var(--evg-transition-enter-animation);
+  }
+
+  &[delay] {
+    animation-delay: var(--evg-transition-enter-delay);
+  }
+
+  &[fill] {
+    display: grid;
+  }
+}
