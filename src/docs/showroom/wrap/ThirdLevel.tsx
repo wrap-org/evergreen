@@ -8,7 +8,6 @@ import {
   Featured,
 } from '../../recipes/Brochureware.stories';
 
-import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
 
 const workWithUs: {
@@ -204,7 +203,7 @@ export function ThirdLevel() {
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
                   <evg-meta>
-                    <Badge className="evg-theme-sky-light">Report</Badge>
+                    <evg-badge type="info">Report</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
                   </evg-meta>
                 </evg-grid-item>

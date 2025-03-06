@@ -68,3 +68,8 @@
 - `Radio` and `Checkbox` have been combined into `evg-radio-checkbox`
   - These components control their own validation state display via the `state` prop
   - They must contain a label and the appropriate input
+  - `HelpText` has been replaced with `evg-help-text`
+    - The `inline` prop can be used instead of setting the `as` prop to span
+- `Badge` has been replaced with `evg-badge`
+  - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
+  - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options

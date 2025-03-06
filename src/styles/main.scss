@@ -27,6 +27,8 @@
 @use '../components/control/RadioCheckbox/RadioCheckbox';
 
 @use '../components/content/Img/Img';
+@use '../components/content/HelpText/HelpText';
+@use '../components/content/Badge/Badge';
 
 // Trial extra variables, will need moving to tokens
 :root {
