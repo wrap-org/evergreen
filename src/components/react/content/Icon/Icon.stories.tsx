@@ -3,8 +3,6 @@ import React from 'react';
 
 import Icon from './Icon';
 
-import Card from 'components/react/canvas/Card/Card';
-
 export default {
   title: 'React/Components/Content/Icon',
   component: Icon,
@@ -41,17 +39,15 @@ const Template = ({
         fill
         key={icon}
       >
-        <Card border>
-          <Card.Body>
-            <div className="evg-text-align-center">
-              <span className="evg-text-size-xl">
-                <Icon icon={icon} type={type} />
-              </span>
-              <br />
-              <span className="evg-text-size-sm">{icon}</span>
-            </div>
-          </Card.Body>
-        </Card>
+        <evg-box border>
+          <div className="evg-text-align-center">
+            <span className="evg-text-size-xl">
+              <Icon icon={icon} type={type} />
+            </span>
+            <br />
+            <span className="evg-text-size-sm">{icon}</span>
+          </div>
+        </evg-box>
       </evg-grid-item>
     ))}
   </evg-grid>

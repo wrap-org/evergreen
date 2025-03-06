@@ -3,7 +3,6 @@ import React from 'react';
 
 import Modal, { useModalRef } from './Modal';
 
-import Card from 'components/react/canvas/Card/Card';
 import Button from 'components/react/controls/Button/Button';
 
 export default {
@@ -31,8 +30,8 @@ export const Default = () => {
         ref={modalRef}
         onModalMounted={(modalInstance) => modalInstance.current?.show()}
       >
-        <Card border>
-          <Card.Body>
+        <evg-box border>
+          <evg-box-section>
             <Modal.Inner>
               <Modal.Header onClose={() => modalRef.current?.hide()}>
                 <h3>Modal</h3>
@@ -40,8 +39,8 @@ export const Default = () => {
 
               <p>Content goes here</p>
             </Modal.Inner>
-          </Card.Body>
-          <Card.Body>
+          </evg-box-section>
+          <evg-box-section>
             <Modal.Inner>
               <evg-grid justify-content="flex-end">
                 <evg-grid-item
@@ -59,8 +58,8 @@ export const Default = () => {
                 </evg-grid-item>
               </evg-grid>
             </Modal.Inner>
-          </Card.Body>
-        </Card>
+          </evg-box-section>
+        </evg-box>
       </Modal>
     </>
   );

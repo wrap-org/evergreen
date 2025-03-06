@@ -4,7 +4,6 @@ import React from 'react';
 
 import Menubar from './Menubar';
 
-import Card from 'components/react/canvas/Card/Card';
 import Icon from 'components/react/content/Icon/Icon';
 
 export default {
@@ -84,24 +83,22 @@ export const WithBackButton = () => (
 );
 
 export const Transparent: StoryFn = () => (
-  <Card muted>
-    <Card.Body>
-      <Menubar transparent>
-        <Menubar.Tabs>
-          <Menubar.Tab completed>
-            <a href="#">Waste</a>
-          </Menubar.Tab>
-          <Menubar.Tab active>
-            <a href="#">Containers</a>
-          </Menubar.Tab>
-          <Menubar.Tab>
-            <a href="#">Cost</a>
-          </Menubar.Tab>
-          <Menubar.Tab disabled>
-            <span>Results</span>
-          </Menubar.Tab>
-        </Menubar.Tabs>
-      </Menubar>
-    </Card.Body>
-  </Card>
+  <evg-box class="evg-theme-sand">
+    <Menubar transparent>
+      <Menubar.Tabs>
+        <Menubar.Tab completed>
+          <a href="#">Waste</a>
+        </Menubar.Tab>
+        <Menubar.Tab active>
+          <a href="#">Containers</a>
+        </Menubar.Tab>
+        <Menubar.Tab>
+          <a href="#">Cost</a>
+        </Menubar.Tab>
+        <Menubar.Tab disabled>
+          <span>Results</span>
+        </Menubar.Tab>
+      </Menubar.Tabs>
+    </Menubar>
+  </evg-box>
 );

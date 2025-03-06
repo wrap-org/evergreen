@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 
 import Collapse, { CollapseProps } from './Collapse';
 
-import Card from 'components/react/canvas/Card/Card';
-
 export default {
   title: 'React/Components/Controls/Collapse',
   component: Collapse,
@@ -60,17 +58,18 @@ export const CollapseState: Story = () => {
   };
 
   return (
-    <Card muted={!open} border={open} shadow={open}>
-      <Card.Body>
-        <Collapse onToggle={onToggle} headerLabel="Click me" align="right">
-          <div>
-            <p>
-              When the collapse is toggled the onToggle event handler is called
-            </p>
-          </div>
-        </Collapse>
-      </Card.Body>
-    </Card>
+    <evg-box
+      class={open ? 'evg-theme-default' : 'evg-theme-sand'}
+      border={open}
+    >
+      <Collapse onToggle={onToggle} headerLabel="Click me" align="right">
+        <div>
+          <p>
+            When the collapse is toggled the onToggle event handler is called
+          </p>
+        </div>
+      </Collapse>
+    </evg-box>
   );
 };
 
