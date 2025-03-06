@@ -5,7 +5,7 @@ import List from './List';
 
 import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
-import Checkbox from 'components/react/controls/Checkbox/Checkbox';
+import 'components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'React/Components/Composition/List',
@@ -69,7 +69,12 @@ export const ListOfCheckboxes: StoryFn<typeof List> = (args) => (
   <List {...args}>
     {[1, 2, 3, 4, 5].map((item) => (
       <List.Item key={item}>
-        <Checkbox>{' * '.repeat(item)}</Checkbox>
+        <evg-radio-checkbox>
+          <label>
+            <input type="checkbox" />
+            {' * '.repeat(item)}
+          </label>
+        </evg-radio-checkbox>
       </List.Item>
     ))}
   </List>

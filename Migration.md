@@ -65,6 +65,9 @@
 - `Input`, `Textarea` and `Select` are now `evg-input`
   - `prefix` and `suffix` are no longer props on these and should be passed in as an svg or icon child component
   - These components control their own validation state display via the `state` prop
+- `Radio` and `Checkbox` have been combined into `evg-radio-checkbox`
+  - These components control their own validation state display via the `state` prop
+  - They must contain a label and the appropriate input
   - `HelpText` has been replaced with `evg-help-text`
     - The `inline` prop can be used instead of setting the `as` prop to span
 - `Badge` has been replaced with `evg-badge`

@@ -24,6 +24,7 @@
 @use '../components/canvas/Section/Section';
 
 @use '../components/control/Input/Input';
+@use '../components/control/RadioCheckbox/RadioCheckbox';
 
 @use '../components/content/Img/Img';
 @use '../components/content/HelpText/HelpText';
@@ -34,7 +35,7 @@
   --evg-input-outline-offset: 4px;
   --evg-input-padding-inline: var(--evg-input-padding-horizontal);
   --evg-input-padding-block: var(--evg-input-padding-vertical);
-  --evg-input-font-size: var(--evg-font-size-base);
+  --evg-input-font-size: var(--evg-font-size-16);
   --evg-input-line-height: 1.75;
 
   --evg-icon-size: 1.25em;

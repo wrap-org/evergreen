@@ -54,8 +54,8 @@ evg-input {
     color: inherit;
     display: block;
     flex: 1 1 auto;
-    font-size: var(--evg-font-size-base);
-    line-height: var(--evg-font-line-height);
+    font-size: var(--evg-font-size-16);
+    line-height: var(--evg-input-line-height);
     min-height: var(--evg-spacing-thumb);
     padding: var(--evg-input-padding);
     width: 100%;
