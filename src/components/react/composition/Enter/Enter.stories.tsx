@@ -3,7 +3,6 @@ import React from 'react';
 
 import Enter from './Enter';
 
-import Card from 'components/react/canvas/Card/Card';
 import Button from 'components/react/controls/Button/Button';
 
 export default {
@@ -33,11 +32,11 @@ const Template: ComponentStory<typeof Enter> = (args) => {
       {[0, 1, 2].map((item) => (
         <evg-grid-item key={item} small-mobile="12" small-tablet="4">
           <Enter {...args} delay={`${delayValue * item * 0.2}s`}>
-            <Card>
-              <Card.Header>
+            <evg-box>
+              <evg-box-section>
                 <h2>Card title</h2>
-              </Card.Header>
-              <Card.Body>
+              </evg-box-section>
+              <evg-box-section>
                 <p className="evg-spacing-bottom-md">
                   Aliquam egestas mi quam, a tincidunt lectus faucibus euismod.
                   Pellentesque et metus nunc. Fusce ante arcu, mattis pretium
@@ -47,8 +46,8 @@ const Template: ComponentStory<typeof Enter> = (args) => {
                   mauris. Nulla eget dui in mauris tempus tincidunt a eget enim.
                 </p>
                 <Button block="mobile">Button text</Button>
-              </Card.Body>
-            </Card>
+              </evg-box-section>
+            </evg-box>
           </Enter>
         </evg-grid-item>
       ))}
