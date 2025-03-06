@@ -1,14 +1,12 @@
 evg-help-text {
   --_background-color: var(--evg-state-neutral-light);
 
-  span,
-  div {
-    background-color: var(--_background-color);
-    color: var(--evg-theme-color);
-    font-size: var(--evg-font-size-sm);
-    margin-top: var(--evg-spacing-sm);
-    padding: var(--evg-spacing-sm) var(--evg-spacing-md);
-  }
+  background-color: var(--_background-color);
+  color: var(--evg-theme-color);
+  display: block;
+  font-size: var(--evg-font-size-sm);
+  margin-top: var(--evg-spacing-sm);
+  padding: var(--evg-spacing-sm) var(--evg-spacing-md);
 
   &[type='positive'] {
     --_background-color: var(--evg-state-positive-light);
@@ -16,5 +14,9 @@ evg-help-text {
 
   &[type='negative'] {
     --_background-color: var(--evg-state-negative-light);
+  }
+
+  &[inline] {
+    display: inline;
   }
 }

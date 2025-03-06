@@ -8,9 +8,16 @@ export default {
   title: 'Components/Content/Help text',
   argTypes: {
     type: {
-      control: 'radio',
+      control: {
+        type: 'radio',
+      },
       options: ['neutral', 'positive', 'negative'],
       defaultValue: 'neutral',
+    },
+    inline: {
+      control: {
+        type: 'boolean',
+      },
     },
   },
   parameters: {
@@ -40,75 +47,50 @@ export const HelpText: StoryFn = (args) => (
       />
     </evg-input>
     <evg-help-text id="my-input-helptext" type={args.type}>
-      <div>Some help text for this input</div>
+      Some help text for this input
     </evg-help-text>
   </FormGroup>
 );
 
 HelpText.args = {
   type: 'neutral',
+  inline: false,
 };
 
 export const HelpTextTypes: StoryFn = () => (
   <evg-grid direction="column">
     <evg-grid-item>
       <evg-help-text id="my-input-helptext" type={'neutral'}>
-        <div>Some help text for this input</div>
+        Some help text for this input
       </evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
       <evg-help-text id="my-input-helptext" type={'positive'}>
-        <div>Yay, it worked!</div>
+        Yay, it worked!
       </evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
       <evg-help-text id="my-input-helptext" type={'negative'}>
-        <div>There was a problem</div>
+        There was a problem
       </evg-help-text>
     </evg-grid-item>
   </evg-grid>
 );
 
-export const HelpTextElement: StoryFn = () => (
-  <evg-grid direction="column">
-    <evg-grid-item>
-      <FormGroup>
-        <Label htmlFor="my-input1">Input label</Label>
-        <evg-input>
-          <input
-            id="my-input1"
-            name="my-input1"
-            aria-describedby="my-input-helptext1"
-          />
-        </evg-input>
-        <evg-help-text id="my-input-helptext1">
-          <div>Some help text in a div element</div>
-        </evg-help-text>
-      </FormGroup>
-    </evg-grid-item>
-    <evg-grid-item>
-      <FormGroup>
-        <Label htmlFor="my-input2">Input label</Label>
-        <evg-input>
-          <input
-            id="my-input2"
-            name="my-input2"
-            aria-describedby="my-input-helptext2"
-          />
-        </evg-input>
-        <evg-help-text id="my-input-helptext2">
-          <span>Some help text in a span element</span>
-        </evg-help-text>
-      </FormGroup>
-    </evg-grid-item>
-  </evg-grid>
+export const HelpTextInline: StoryFn = () => (
+  <FormGroup>
+    <Label htmlFor="my-input">Input label</Label>
+    <evg-input>
+      <input
+        id="my-input"
+        name="my-input"
+        aria-describedby="my-input-helptext"
+      />
+    </evg-input>
+    This is{' '}
+    <evg-help-text id="my-input-helptext" inline>
+      some help text
+    </evg-help-text>{' '}
+    inline.
+  </FormGroup>
 );
-
-HelpTextElement.parameters = {
-  docs: {
-    description: {
-      story:
-        'Help text can wrap a div or a span element to control whether it is used inline or as a block element.',
-    },
-  },
-};
