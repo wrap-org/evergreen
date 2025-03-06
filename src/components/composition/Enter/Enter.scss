@@ -61,7 +61,7 @@ evg-enter {
     animation-timing-function: var(--evg-transition-timing-boing);
   }
 
-  &[enter='true'] {
+  &[enter]:not([enter='false']) {
     animation-name: var(--evg-transition-enter-animation);
   }
 
@@ -69,7 +69,7 @@ evg-enter {
     animation-delay: var(--evg-transition-enter-delay);
   }
 
-  &[fill] {
+  &[fill]:not([fill='false']) {
     display: grid;
   }
 }

@@ -3,10 +3,6 @@ import React from 'react';
 
 import './Enter';
 
-const description = `
-The enter component can be wrapped around content to animate it into view.
-`;
-
 export default {
   component: 'evg-enter',
   argTypes: {
@@ -20,7 +16,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: description,
+        component: `The enter component can be wrapped around content to animate it into view.`,
       },
     },
   },
@@ -36,7 +32,7 @@ export const Enter: StoryFn = (args) => (
 
 Enter.args = {
   type: 'fade',
-  enter: false,
+  enter: true,
   delay: '0.5',
   fill: false,
   enterOnScroll: false,

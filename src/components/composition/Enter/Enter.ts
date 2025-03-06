@@ -45,8 +45,10 @@ export class Enter extends LitElement {
   };
 
   type = 'fade';
+  enter = true;
   enterOnScroll = false;
   delay = '0.5';
+  fill = false;
   _inView = false;
 
   connectedCallback(): void {
