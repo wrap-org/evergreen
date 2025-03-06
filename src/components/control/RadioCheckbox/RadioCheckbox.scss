@@ -1,0 +1,176 @@
+evg-radio-checkbox {
+  --_background: var(--evg-input-background);
+  --_border-color: var(--evg-input-border);
+  --_color: var(--evg-input-color);
+
+  --_indicator-background: var(--evg-input-background);
+  --_indicator-border-color: var(--evg-input-border);
+  --_indicator-border-radius: var(--evg-input-checkradio-border-radius);
+  --_indicator-inner-border-radius: 0;
+  --_indicator-padding: 0.125rem;
+  --_indicator-width: 1.25rem;
+  --_indicator-inner-width: 1rem;
+
+  align-items: center;
+  border: 1px solid var(--_border-color);
+  border-radius: var(--evg-input-border-radius);
+  cursor: pointer;
+  display: flex;
+  font-size: inherit;
+  font-weight: inherit;
+  gap: var(--evg-spacing-sm);
+  line-height: inherit;
+  overflow: hidden;
+  transition: border-color var(--evg-transition);
+
+  &:hover,
+  &:focus-within {
+    --_border-color: var(--evg-input-border-hover);
+  }
+
+  &:focus-within:has(input:focus-visible) {
+    --_indicator-background: var(--evg-input-background-focus);
+
+    &::part(indicator) {
+      /* https://css-tricks.com/copy-the-browsers-native-focus-styles/ */
+      outline: 5px auto Highlight;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: var(--evg-input-outline-offset);
+    }
+  }
+
+  input {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  label {
+    background: var(--_background);
+    color: var(--_color);
+    cursor: pointer;
+    display: block;
+    font-size: var(--evg-input-font-size);
+    font-weight: inherit;
+    line-height: var(--evg-input-line-height);
+    margin-left: calc(
+      (
+          var(--_indicator-width) + var(--evg-spacing-sm) +
+            var(--evg-input-padding-horizontal)
+        ) * -1
+    );
+    min-height: var(--evg-spacing-thumb);
+    padding: var(--evg-input-padding);
+    padding-left: calc(
+      (
+        var(--_indicator-width) + var(--evg-spacing-sm) +
+          var(--evg-input-padding-horizontal)
+      )
+    );
+    transition: background-color var(--evg-transition);
+  }
+
+  svg,
+  img,
+  &::part(fallback-icon) {
+    display: block;
+    height: auto;
+    margin: calc(var(--_indicator-padding) * -1);
+    opacity: 0;
+    position: relative;
+    transform: scale(1.45);
+    transition:
+      transform var(--evg-transition),
+      opacity var(--evg-transition);
+    width: calc(100% - var(--evg-input-radio-checkbox-padding) * 2);
+    z-index: 1;
+  }
+
+  &::part(indicator) {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--_indicator-background);
+    border: 2px solid var(--_indicator-border-color);
+    border-radius: var(--_indicator-border-radius);
+    box-sizing: border-box;
+    color: var(--_indicator-background);
+    display: flex;
+    justify-content: center;
+    margin-left: var(--evg-input-padding-horizontal);
+    overflow: hidden;
+    padding: var(--_indicator-padding);
+    pointer-events: none;
+    position: relative;
+    transition:
+      border-color var(--evg-transition),
+      background-color var(--evg-transition);
+    width: var(--_indicator-width);
+  }
+
+  &::part(indicator)::before {
+    aspect-ratio: 1;
+    background-color: var(--_indicator-border-color);
+    border-radius: var(--_indicator-inner-border-radius);
+    content: '';
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.5);
+    transition:
+      background-color var(--evg-transition),
+      opacity var(--evg-transition),
+      transform var(--evg-transition);
+    width: var(--_indicator-inner-width);
+  }
+
+  &::part(content) {
+    flex: 1 1 auto;
+  }
+
+  &:has(input[type='radio']) {
+    --_indicator-border-radius: 50%;
+    --_indicator-inner-border-radius: 50%;
+    --_indicator-inner-width: calc(100% - (var(--_indicator-padding) * 2));
+
+    &::part(icon) {
+      visibility: hidden; /* Display none messes up alignment in horizontal forms */
+    }
+  }
+
+  &:has(input:checked) {
+    --_indicator-border-color: var(--evg-input-checked);
+
+    &::part(indicator)::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    svg,
+    img,
+    &::part(icon) {
+      opacity: 1;
+      transform: scale(1.25);
+      transition-delay: calc(var(--evg-transition-duration) / 2);
+    }
+  }
+
+  &[state='valid'] {
+    --_indicator-border-color: var(--evg-input-border-color-valid);
+  }
+
+  &[state='invalid'] {
+    --_indicator-border-color: var(--evg-input-border-color-invalid);
+  }
+
+  &:has([disabled]) {
+    --_background: var(--evg-input-background-disabled);
+    --_color: var(--evg-input-color-disabled);
+    --_indicator-background: var(--evg-input-background-disabled);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

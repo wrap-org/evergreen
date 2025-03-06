@@ -5,10 +5,9 @@ import FormGroup from './FormGroup';
 
 import Alert from 'components/react/canvas/Alert/Alert';
 import Icon from 'components/react/content/Icon/Icon';
-import Checkbox from 'components/react/controls/Checkbox/Checkbox';
 import Label from 'components/react/controls/Label/Label';
-import Radio from 'components/react/controls/Radio/Radio';
 import TextButton from 'components/react/controls/TextButton/TextButton';
+import 'components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'React/Components/Composition/Form group',
@@ -53,9 +52,16 @@ export function Horizontal() {
             <evg-grid wrap="wrap">
               {[1, 2, 3, 4].map((option) => (
                 <evg-grid-item small-mobile="12" key={option}>
-                  <Radio value={option} name="my-radio-input">
-                    Option {option}
-                  </Radio>
+                  <evg-radio-checkbox>
+                    <label>
+                      <input
+                        type="radio"
+                        value={option}
+                        name="my-radio-input"
+                      />
+                      Option {option}
+                    </label>
+                  </evg-radio-checkbox>
                 </evg-grid-item>
               ))}
             </evg-grid>
@@ -128,9 +134,16 @@ export function AsFieldset() {
           <evg-grid wrap="wrap">
             {[1, 2, 3].map((option) => (
               <evg-grid-item small-mobile="12" key={option}>
-                <Checkbox value={option} name="my-checkbox-input-1">
-                  Option {option}
-                </Checkbox>
+                <evg-radio-checkbox>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value={option}
+                      name="my-checkbox-input-1"
+                    />
+                    Option {option}
+                  </label>
+                </evg-radio-checkbox>
               </evg-grid-item>
             ))}
           </evg-grid>
@@ -145,9 +158,16 @@ export function AsFieldset() {
           <evg-grid wrap="wrap">
             {[1, 2, 3].map((option) => (
               <evg-grid-item small-mobile="12" key={option}>
-                <Checkbox value={option} name="my-checkbox-input-2">
-                  Option {option}
-                </Checkbox>
+                <evg-radio-checkbox>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value={option}
+                      name="my-checkbox-input-2"
+                    />
+                    Option {option}
+                  </label>
+                </evg-radio-checkbox>
               </evg-grid-item>
             ))}
           </evg-grid>

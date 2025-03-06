@@ -4,7 +4,7 @@ import FormGroup from 'components/react/composition/FormGroup/FormGroup';
 import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 import Label from 'components/react/controls/Label/Label';
-import Radio from 'components/react/controls/Radio/Radio';
+import 'components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'Recipes/Forms',
@@ -92,14 +92,20 @@ export function Form() {
               >
                 <evg-grid>
                   <evg-grid-item small-mobile="6">
-                    <Radio name="radio" id="yes">
-                      Yes
-                    </Radio>
+                    <evg-radio-checkbox>
+                      <label>
+                        <input type="radio" name="radio" value="yes" />
+                        Yes
+                      </label>
+                    </evg-radio-checkbox>
                   </evg-grid-item>
                   <evg-grid-item small-mobile="6">
-                    <Radio name="radio" id="no">
-                      No
-                    </Radio>
+                    <evg-radio-checkbox>
+                      <label>
+                        <input type="radio" name="radio" value="no" />
+                        No
+                      </label>
+                    </evg-radio-checkbox>
                   </evg-grid-item>
                 </evg-grid>
               </div>
