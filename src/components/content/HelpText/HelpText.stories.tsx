@@ -60,19 +60,15 @@ HelpText.args = {
 export const HelpTextTypes: StoryFn = () => (
   <evg-grid direction="column">
     <evg-grid-item>
-      <evg-help-text id="my-input-helptext" type={'neutral'}>
+      <evg-help-text type="neutral">
         Some help text for this input
       </evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-help-text id="my-input-helptext" type={'positive'}>
-        Yay, it worked!
-      </evg-help-text>
+      <evg-help-text type="positive">Yay, it worked!</evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-help-text id="my-input-helptext" type={'negative'}>
-        There was a problem
-      </evg-help-text>
+      <evg-help-text type="negative">There was a problem</evg-help-text>
     </evg-grid-item>
   </evg-grid>
 );
