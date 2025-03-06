@@ -68,4 +68,3 @@
 - `Badge` has been replaced with `evg-badge`
   - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
   - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options
-  
