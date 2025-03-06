@@ -1,0 +1,39 @@
+evg-badge {
+  --_background: var(--evg-color-forest-25);
+  --_color: var(--evg-color-forest);
+
+  background: var(--_background);
+  border-radius: var(--evg-radius-xs);
+  color: var(--_color);
+  display: inline-block;
+  font-family: var(--evg-font-family-heading);
+  font-size: var(--evg-font-size-body-xs);
+  font-weight: var(--evg-font-weight-base);
+  padding: var(--evg-spacing-xs) var(--evg-spacing-sm);
+  text-transform: uppercase;
+
+  &[type='dark'] {
+    --_background: var(--evg-color-forest-75);
+    --_color: var(--evg-color-cloud);
+  }
+
+  &[type='info'] {
+    --_background: var(--evg-color-sky-25);
+  }
+
+  &[type='attention'] {
+    --_background: var(--evg-color-lime);
+  }
+
+  &[type='positive'] {
+    --_background: var(--evg-color-lime-25);
+  }
+
+  &[type='negative'] {
+    --_background: var(--evg-color-rose-25);
+  }
+
+  &[type='neutral'] {
+    --_background: var(--evg-color-sky-50);
+  }
+}

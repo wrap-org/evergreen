@@ -4,7 +4,6 @@ import { Full as Footer } from './Footer.stories';
 import { Wrap as Navigation } from './Navigation.stories';
 
 import '../../components/composition/App/App';
-import Badge from 'components/react/content/Badge/Badge';
 import Button from 'components/react/controls/Button/Button';
 
 export default {
@@ -135,7 +134,7 @@ export function Featured({
           <evg-card-content>
             {card.meta && (
               <evg-meta>
-                <Badge className="evg-theme-forest-light">Guide</Badge>
+                <evg-badge>Guide</evg-badge>
                 <span className="evg-text-size-body-sm">March 1, 2023</span>
               </evg-meta>
             )}

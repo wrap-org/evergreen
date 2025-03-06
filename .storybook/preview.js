@@ -9,7 +9,6 @@ import {
   Description,
 } from '@storybook/blocks';
 import Button from 'components/react/controls/Button/Button'
-import Badge from 'components/react/content/Badge/Badge'
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 
@@ -42,9 +41,9 @@ export const parameters = {
           <Title />
           <Subtitle />
           {themeSupport && (
-            <Badge className="evg-theme-sky-light">
+            <evg-badge type="info">
               Theme support
-            </Badge>
+            </evg-badge>
           )}
           <Description />
           <Primary />
