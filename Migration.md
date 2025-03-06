@@ -65,3 +65,6 @@
 - `Input`, `Textarea` and `Select` are now `evg-input`
   - `prefix` and `suffix` are no longer props on these and should be passed in as an svg or icon child component
   - These components control their own validation state display via the `state` prop
+- `Badge` has been replaced with `evg-badge`
+  - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
+  - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options
