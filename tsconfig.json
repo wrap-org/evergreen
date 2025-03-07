@@ -1,24 +1,17 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "jsx": "react",
-    "target": "es2016",
-    "module": "ESNext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "declaration": true,
     "declarationDir": "dist/types",
-    "sourceMap": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": false,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "noImplicitAny": false,
-    "allowJs": true,
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "outDir": "dist",
     "paths": {
       "components/*": [
         "./src/components/*"
@@ -26,7 +19,9 @@
       "lib/*": [
         "./src/lib/*"
       ]
-    }
+    },
+    "sourceMap": true,
+    "useDefineForClassFields": false
   },
   "exclude": [
     "dist",
