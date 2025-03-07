@@ -75,7 +75,12 @@ export function ThirdLevel() {
                 Reducing food waste, cutting carbon and protecting critical
                 water resources.
               </p>
-              <docs-placeholder inline>Button</docs-placeholder>
+              <evg-button>
+                <button>
+                  In this section
+                  <evg-icon icon="chevron-down" />
+                </button>
+              </evg-button>
             </evg-grid-item>
           </evg-grid>
         </evg-wrap>
@@ -122,7 +127,10 @@ export function ThirdLevel() {
                 (a 20% reduction compared to 2015).
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>Read more</button>
+                <button>
+                  Read more
+                  <evg-icon icon="arrow-right" />
+                </button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -144,7 +152,10 @@ export function ThirdLevel() {
                 Roadmap.
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>Read more</button>
+                <button>
+                  Read more
+                  <evg-icon icon="arrow-right" />
+                </button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -168,7 +179,10 @@ export function ThirdLevel() {
                 overseas.
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>Read more</button>
+                <button>
+                  Read more
+                  <evg-icon icon="arrow-right" />
+                </button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -195,7 +209,7 @@ export function ThirdLevel() {
               />
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body">
+              <h3 className="evg-text-size-heading-sm evg-text-family-body evg-spacing-bottom-sm">
                 Courtauld 2030 Annual Progress Report 2024
               </h3>
               <evg-grid justify-content="space-between" align-items="center">
@@ -207,7 +221,10 @@ export function ThirdLevel() {
                 </evg-grid-item>
                 <evg-grid-item>
                   <evg-button variant="primary">
-                    <button>Read more</button>
+                    <button>
+                      Read more
+                      <evg-icon icon="arrow-right" />
+                    </button>
                   </evg-button>
                 </evg-grid-item>
               </evg-grid>

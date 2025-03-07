@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import FormGroup from './FormGroup';
 
 import Alert from 'components/react/canvas/Alert/Alert';
-import Icon from 'components/react/content/Icon/Icon';
 import Label from 'components/react/controls/Label/Label';
 import TextButton from 'components/react/controls/TextButton/TextButton';
 import 'components/control/RadioCheckbox/RadioCheckbox';
@@ -86,7 +85,7 @@ export function WithInfo() {
             aria-controls="form-group-info-one"
             aria-expanded={infoOneOpen}
           >
-            <Icon icon="circle-information" title="Information" />
+            <evg-icon icon="circle-information" label="Information" />
           </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>
@@ -107,7 +106,7 @@ export function WithInfo() {
             aria-controls="form-group-info-two"
             aria-expanded={infoTwoOpen}
           >
-            <Icon icon="circle-information" title="Information" />
+            <evg-icon icon="circle-information" label="Information" />
           </TextButton>
         </FormGroup.Label>
         <FormGroup.Control>

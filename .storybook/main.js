@@ -35,16 +35,6 @@ module.exports = {
       lib: path.resolve(__dirname, '../src/lib'),
     }
 
-    const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.test('.svg')
-    );
-
-    fileLoaderRule.exclude = /svg$/;
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack', 'url-loader'],
-    });
-
     config.module.rules.push({
       test: /\.(woff|woff2|eot|ttf|otf)$/i,
       type: 'asset/resource',

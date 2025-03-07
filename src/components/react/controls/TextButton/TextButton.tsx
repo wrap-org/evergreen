@@ -5,8 +5,6 @@ import { FontWeight } from '../../../../types/tokens.type';
 
 import styles from './TextButton.module.scss';
 
-import Icon from 'components/react/content/Icon/Icon';
-
 interface TextButtonProps {
   readonly children?: React.ReactNode;
   readonly icon?: string;
@@ -43,7 +41,7 @@ export default function TextButton({
             styles['text-button__icon--left'],
           )}
         >
-          <Icon icon={icon} />
+          <evg-icon icon={icon} />
         </span>
       )}
       {children}
@@ -54,7 +52,7 @@ export default function TextButton({
             styles['text-button__icon--right'],
           )}
         >
-          <Icon icon={icon} />
+          <evg-icon icon={icon} />
         </span>
       )}
     </button>

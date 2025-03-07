@@ -165,7 +165,12 @@ export function TopLevel() {
               </h2>
             </evg-grid-item>
             <evg-grid-item>
-              <docs-placeholder inline>Text button</docs-placeholder>
+              <evg-button variant="text">
+                <a href="https://wrap.ngo">
+                  Find out more
+                  <evg-icon icon="arrow-right" />
+                </a>
+              </evg-button>
             </evg-grid-item>
           </evg-grid>
           <p>

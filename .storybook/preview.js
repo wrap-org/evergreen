@@ -9,6 +9,11 @@ import {
   Description,
 } from '@storybook/blocks';
 
+// Load the actual web components
+import '../src/components/composition/App/App';
+import '../src/components/content/Img/Img';
+import '../src/components/content/Icon/Icon';
+
 import '../src/docs/components/Placeholder/Placeholder.scss'
 
 import './styles.scss'

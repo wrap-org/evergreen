@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import List from './List';
 
-import Icon from 'components/react/content/Icon/Icon';
 import 'components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
@@ -17,7 +16,7 @@ export default {
 const Template: StoryFn<typeof List> = (args) => (
   <List {...args}>
     {[1, 2, 3, 4, 5, 6].map((item) => (
-      <List.Item key={item} icon={<Icon icon="favorite" />}>
+      <List.Item key={item} icon={<evg-icon icon="favorite" />}>
         Icon List Item
       </List.Item>
     ))}
@@ -45,7 +44,7 @@ export const Animated: StoryFn<typeof List> = (args) => {
     <>
       <List {...args} className="evg-spacing-bottom-md">
         {items.map((item) => (
-          <List.Item key={item} icon={<Icon icon="favorite" />}>
+          <List.Item key={item} icon={<evg-icon icon="favorite" />}>
             Icon List Item
           </List.Item>
         ))}

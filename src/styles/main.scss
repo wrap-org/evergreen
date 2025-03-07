@@ -28,10 +28,6 @@
 @use '../components/control/RadioCheckbox/RadioCheckbox';
 
 @use '../components/content/Badge/Badge';
+@use '../components/content/Icon/Icon';
 @use '../components/content/HelpText/HelpText';
 @use '../components/content/Img/Img';
-
-// Trial extra variables, will need moving to tokens
-:root {
-  --evg-icon-size: 1.25em;
-}

@@ -37,7 +37,9 @@ const cardContent = (
         fashion industry&apos;s approach to product design.
       </p>
       <evg-button variant="primary" width="full-width">
-        <button>Read more</button>
+        <button>
+          Read more <evg-icon icon="arrow-right" />
+        </button>
       </evg-button>
     </evg-card-content>
   </>
@@ -115,7 +117,10 @@ export const Layouts: StoryFn = () => (
             </evg-grid-item>
             <evg-grid-item>
               <evg-button variant="primary" width="full-width">
-                <button>Read more</button>
+                <button>
+                  Read more
+                  <evg-icon icon="arrow-right" />
+                </button>
               </evg-button>
             </evg-grid-item>
           </evg-grid>
