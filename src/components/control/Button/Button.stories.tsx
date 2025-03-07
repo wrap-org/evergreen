@@ -101,7 +101,7 @@ export const IconOnlyButton: StoryFn = () => (
       </evg-button>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-button variant="text">
+      <evg-button variant="text" width="square">
         <button type="button" aria-label="Button text">
           <svg fill="none" viewBox="0 0 24 24" height="24" width="24">
             <path

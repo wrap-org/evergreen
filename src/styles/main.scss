@@ -16,6 +16,7 @@
 @use '../components/composition/Meta/Meta';
 @use '../components/composition/Wrap/Wrap';
 
+@use '../components/canvas/Alert/Alert';
 @use '../components/canvas/Box/Box';
 @use '../components/canvas/Box/BoxSection';
 @use '../components/canvas/Card/Card';
@@ -25,13 +26,10 @@
 
 @use '../components/control/Button/Button';
 @use '../components/control/Input/Input';
+@use '../components/control/Link/Link';
 @use '../components/control/RadioCheckbox/RadioCheckbox';
 
 @use '../components/content/Badge/Badge';
 @use '../components/content/HelpText/HelpText';
+@use '../components/content/Icon/Icon';
 @use '../components/content/Img/Img';
-
-// Trial extra variables, will need moving to tokens
-:root {
-  --evg-icon-size: 1.25em;
-}

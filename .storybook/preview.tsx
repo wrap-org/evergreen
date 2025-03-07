@@ -13,11 +13,14 @@ import {
 
 // Load the actual web components
 import '../src/components/composition/App/App';
-import '../src/components/content/Img/Img';
-import '../src/components/content/Badge/Badge';
-import '../src/components/control/Button/Button';
 import '../src/components/composition/Grid/Grid';
 import '../src/components/composition/Grid/GridItem';
+import '../src/components/content/Badge/Badge';
+import '../src/components/content/Icon/Icon';
+import '../src/components/content/Img/Img';
+import '../src/components/control/Button/Button';
+
+import '../src/docs/components/Placeholder/Placeholder.scss'
 
 import '../src/docs/components/Placeholder/Placeholder.scss';
 

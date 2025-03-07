@@ -4,8 +4,6 @@ import React, { useMemo, useState } from 'react';
 
 import styles from './Collapse.module.scss';
 
-import Icon from 'components/react/content/Icon/Icon';
-
 export interface CollapseProps {
   readonly children?: React.ReactNode;
   readonly headerLabel: React.ReactNode;
@@ -56,7 +54,10 @@ const Collapse = ({
       >
         <evg-grid direction={direction} gap="sm">
           <evg-grid-item>
-            <Icon icon={open ? iconOpen : iconClosed} size="lg" />
+            <evg-icon
+              icon={open ? iconOpen : iconClosed}
+              class="evg-text-size-body-lg"
+            />
           </evg-grid-item>
           <evg-grid-item grow shrink>
             {headerLabel}

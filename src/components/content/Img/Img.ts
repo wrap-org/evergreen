@@ -57,12 +57,14 @@ export class Img extends LitElement {
   objectPosition = '50% 50%';
 
   render() {
+    const { aspectRatio, objectFit, objectPosition } = this;
+
     return html`
       <style>
         :host {
-          --evg-img-aspect-ratio: ${this.aspectRatio};
-          --evg-img-object-fit: ${this.objectFit};
-          --evg-img-object-position: ${this.objectPosition};
+          --evg-img-aspect-ratio: ${aspectRatio};
+          --evg-img-object-fit: ${objectFit};
+          --evg-img-object-position: ${objectPosition};
         }
       </style>
       <slot></slot>

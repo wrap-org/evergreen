@@ -4,8 +4,6 @@ import React from 'react';
 
 import Menubar from './Menubar';
 
-import Icon from 'components/react/content/Icon/Icon';
-
 export default {
   title: 'React/Components/Controls/Menubar',
   component: Menubar,
@@ -68,7 +66,7 @@ export const WithBackButton = () => (
   <Menubar>
     <Menubar.Back>
       <a href="#">
-        <Icon icon="arrow-left" /> Back
+        <evg-icon icon="arrow-left" /> Back
       </a>
     </Menubar.Back>
     <Menubar.Tabs>

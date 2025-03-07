@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Icon from 'components/react/content/Icon/Icon';
 import TextButton from 'components/react/controls/TextButton/TextButton';
 
 export interface HeaderProps {
@@ -15,7 +14,7 @@ const ModalHeader = ({ onClose, children }: HeaderProps) => (
     </evg-grid-item>
     <evg-grid-item>
       <TextButton aria-label="Close dialog" onClick={onClose}>
-        <Icon icon="close" size="xl" />
+        <evg-icon icon="close" class="evg-text-size-body-xl" />
       </TextButton>
     </evg-grid-item>
   </evg-grid>
