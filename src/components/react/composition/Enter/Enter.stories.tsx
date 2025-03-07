@@ -3,8 +3,6 @@ import React from 'react';
 
 import Enter from './Enter';
 
-import Button from 'components/react/controls/Button/Button';
-
 export default {
   title: 'React/Components/Composition/Enter',
   component: Enter,
@@ -45,7 +43,9 @@ const Template: ComponentStory<typeof Enter> = (args) => {
                   blandit, purus elit ornare dui, nec dignissim mi ante sit amet
                   mauris. Nulla eget dui in mauris tempus tincidunt a eget enim.
                 </p>
-                <Button block="mobile">Button text</Button>
+                <evg-button width="full-width-mobile">
+                  <button>Button text</button>
+                </evg-button>
               </evg-box-section>
             </evg-box>
           </Enter>

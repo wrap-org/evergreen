@@ -1,7 +1,6 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import Button from 'components/react/controls/Button/Button';
 import { themes } from 'lib/theme';
 
 export default {
@@ -37,9 +36,9 @@ const cardContent = (
         Research Project as part of Textiles 2030, we have transformed the
         fashion industry&apos;s approach to product design.
       </p>
-      <Button type="primary" block>
-        Read more
-      </Button>
+      <evg-button variant="primary" width="full-width">
+        <button>Read more</button>
+      </evg-button>
     </evg-card-content>
   </>
 );
@@ -115,9 +114,9 @@ export const Layouts: StoryFn = () => (
               </evg-meta>
             </evg-grid-item>
             <evg-grid-item>
-              <Button type="primary" block>
-                Read more
-              </Button>
+              <evg-button variant="primary" width="full-width">
+                <button>Read more</button>
+              </evg-button>
             </evg-grid-item>
           </evg-grid>
         </evg-card-content>

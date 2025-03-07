@@ -61,7 +61,7 @@ evg-radio-checkbox {
     margin-left: calc(
       (
           var(--_indicator-width) + var(--evg-spacing-sm) +
-            var(--evg-input-padding-horizontal)
+            var(--evg-input-padding-inline)
         ) * -1
     );
     min-height: var(--evg-spacing-thumb);
@@ -69,7 +69,7 @@ evg-radio-checkbox {
     padding-left: calc(
       (
         var(--_indicator-width) + var(--evg-spacing-sm) +
-          var(--evg-input-padding-horizontal)
+          var(--evg-input-padding-inline)
       )
     );
     transition: background-color var(--evg-transition);
@@ -101,7 +101,7 @@ evg-radio-checkbox {
     color: var(--_indicator-background);
     display: flex;
     justify-content: center;
-    margin-left: var(--evg-input-padding-horizontal);
+    margin-left: var(--evg-input-padding-inline);
     overflow: hidden;
     padding: var(--_indicator-padding);
     pointer-events: none;

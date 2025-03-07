@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import List from './List';
 
 import Icon from 'components/react/content/Icon/Icon';
-import Button from 'components/react/controls/Button/Button';
 import 'components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
@@ -53,12 +52,14 @@ export const Animated: StoryFn<typeof List> = (args) => {
       </List>
       <evg-grid>
         <evg-grid-item>
-          <Button onClick={remove}>Remove item</Button>
+          <evg-button>
+            <button onClick={remove}>Remove item</button>
+          </evg-button>
         </evg-grid-item>
         <evg-grid-item>
-          <Button type="primary" onClick={add}>
-            Add item
-          </Button>
+          <evg-button variant="primary">
+            <button onClick={add}>Add item</button>
+          </evg-button>
         </evg-grid-item>
       </evg-grid>
     </>
