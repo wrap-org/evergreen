@@ -195,15 +195,30 @@ evg-button {
   }
 
   &[variant='text'] {
-    // Text button is square
-    --_padding-inline: var(--evg-button-padding-block);
+    --_padding-inline: 0;
+
+    &[width='square'] {
+      --_padding-inline: var(--evg-button-padding-block);
+
+      evg-loading-button,
+      button,
+      a,
+      input {
+        // Remove padding whilst retaining a clickable area large enough for thumbs
+        margin: calc(var(--_padding-block) * -1);
+      }
+    }
 
     evg-loading-button,
     button,
     a,
     input {
-      // Remove padding whilst retaining a clickable area large enough for thumbs
-      margin: calc(var(--_padding-block) * -1);
+      font-weight: var(--evg-font-weight-base);
+
+      &:not([disabled]):hover {
+        text-decoration: underline;
+        text-underline-offset: 0.125em;
+      }
     }
   }
 

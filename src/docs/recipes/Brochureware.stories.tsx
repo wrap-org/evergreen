@@ -81,7 +81,10 @@ export function CardList({
               <h3 className="evg-text-size-heading-md">{card.title}</h3>
               <p className="evg-text-size-body-sm">{card.description}</p>
               <evg-button variant="primary" width="full-width">
-                <button>Read more</button>
+                <button>
+                  Read more
+                  <evg-icon icon="arrow-right" />
+                </button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -140,7 +143,10 @@ export function Featured({
             <h3 className="evg-text-size-heading-md">{card.title}</h3>
             <p className="evg-text-size-body-sm">{card.description}</p>
             <evg-button variant="primary" width="full-width-mobile">
-              <button>Read more</button>
+              <button>
+                Read more
+                <evg-icon icon="arrow-right" />
+              </button>
             </evg-button>
           </evg-card-content>
         </evg-card>
@@ -222,7 +228,10 @@ export function CallToAction({
           <evg-grid-item small-mobile="12" tablet="6">
             <p className="evg-spacing-bottom-md">{text}</p>
             <evg-button variant="secondary" width="full-width-mobile">
-              <button>{button}</button>
+              <button>
+                {button}
+                <evg-icon icon="arrow-right" />
+              </button>
             </evg-button>
           </evg-grid-item>
         </evg-grid>
