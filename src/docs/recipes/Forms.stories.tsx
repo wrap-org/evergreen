@@ -1,7 +1,6 @@
 import React from 'react';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 import Label from 'components/react/controls/Label/Label';
 import 'components/control/RadioCheckbox/RadioCheckbox';
@@ -30,7 +29,7 @@ export function Form() {
         <h2>About your business</h2>
         <evg-grid gap="xs">
           <evg-grid-item>
-            <Icon color="positive" icon="circle-check" />
+            <evg-icon icon="circle-check" />
           </evg-grid-item>
           <evg-grid-item grow shrink>
             Your selections have been saved in your browser to save you time in

@@ -3,8 +3,6 @@ import React from 'react';
 
 import styles from './Alert.module.scss';
 
-import Icon from 'components/react/content/Icon/Icon';
-
 export default function Alert({
   children,
   onClose,
@@ -18,7 +16,7 @@ export default function Alert({
     <div className={cx([styles.alert, className])} role="alert">
       {!!onClose && (
         <button type="button" className={styles.alert__close} onClick={onClose}>
-          <Icon icon="close" title="Dismiss this message" />
+          <evg-icon icon="close" label="Dismiss this message"></evg-icon>
         </button>
       )}
       {children}

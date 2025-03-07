@@ -3,8 +3,6 @@ import React, { PropsWithChildren } from 'react';
 
 import Button from './Button';
 
-import Icon from 'components/react/content/Icon/Icon';
-
 export default {
   title: 'React/Components/Controls/Button',
   component: Button,
@@ -19,7 +17,7 @@ export function Types() {
       <Button type="positive">Button</Button>{' '}
       <Button type="negative">Button</Button>{' '}
       <Button type="primary" icon>
-        <Icon icon="edit" title="Moderate" />
+        <evg-icon icon="edit" label="Moderate" />
       </Button>
     </>
   );
@@ -34,7 +32,7 @@ export function DarkMode() {
       <Button type="positive">Button</Button>{' '}
       <Button type="negative">Button</Button>{' '}
       <Button type="primary" icon>
-        <Icon icon="edit" title="Moderate" />
+        <evg-icon icon="edit" label="Moderate" />
       </Button>
     </evg-section>
   );
@@ -57,7 +55,7 @@ export function Disabled() {
         Button
       </Button>{' '}
       <Button type="primary" icon disabled>
-        <Icon icon="edit" title="Moderate" />
+        <evg-icon icon="edit" label="Moderate" />
       </Button>
     </>
   );

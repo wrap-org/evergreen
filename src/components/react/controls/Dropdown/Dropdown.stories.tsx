@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import Dropdown from './Dropdown';
 
-import Icon from 'components/react/content/Icon/Icon';
 import Button from 'components/react/controls/Button/Button';
 
 export default {
@@ -16,7 +15,7 @@ export const Default = () => {
   return (
     <Dropdown open={open} onClickAway={() => setOpen(false)}>
       <Button onClick={() => setOpen(!open)}>
-        Dropdown <Icon icon="chevron-down" />
+        Dropdown <evg-icon icon="chevron-down" />
       </Button>
       <Dropdown.Content>
         <div>Content</div>

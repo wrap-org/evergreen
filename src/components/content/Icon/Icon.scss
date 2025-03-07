@@ -1,0 +1,53 @@
+evg-icon {
+  align-items: baseline;
+  color: var(--evg-theme-color);
+  display: inline-flex;
+  height: var(--evg-icon-size);
+  min-width: var(--evg-icon-size);
+  width: var(--evg-icon-size);
+
+  &::part(icon) {
+    align-items: center;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    position: relative;
+    top: var(--evg-icon-baseline-adjust);
+    width: var(--evg-icon-size);
+  }
+
+  // Handles light dom svgs passed into the slot
+  // We also style the shadow dom SVG inside the
+  // component. Make sure to update both.
+  svg {
+    aspect-ratio: 1 / 1;
+    display: block;
+    fill: currentColor;
+    flex: 0 0 var(--evg-icon-size);
+    height: var(--evg-icon-size);
+    min-width: var(--evg-icon-size);
+    width: var(--evg-icon-size);
+  }
+
+  path {
+    fill: currentColor;
+  }
+
+  &[variant='circle'] {
+    &::part(icon)::before {
+      background-color: var(--evg-theme-color);
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: var(--evg-icon-size);
+      position: absolute;
+      width: var(--evg-icon-size);
+    }
+
+    svg {
+      color: var(--evg-theme-background);
+      transform: scale(0.75);
+      z-index: 1;
+    }
+  }
+}
