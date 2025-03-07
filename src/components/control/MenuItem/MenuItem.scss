@@ -1,0 +1,84 @@
+evg-menu-item {
+  --_background: transparent;
+  --_background-hover: transparent;
+  --_background-focus: transparent;
+  --_background-disabled: transparent;
+  --_color: var(--evg-theme-color);
+  --_color-hover: var(--_color);
+  --_color-focus: var(--_color);
+  --_color-disabled: var(--_color);
+  --_size: var(--evg-font-size-16);
+  --_padding-block: var(--evg-spacing-sm);
+  --_padding-inline: var(--evg-spacing-sm);
+  --_line-height: var(--evg-font-line-height);
+  display: block;
+
+  // Structural styles
+  button,
+  a {
+    align-items: baseline;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    font-size: var(--_size, 1rem);
+    font-weight: var(--evg-font-weight-bold);
+    gap: var(--evg-spacing-8);
+    justify-content: flex-start;
+    letter-spacing: inherit;
+    line-height: var(--_line-height);
+    padding-block: var(--_padding-block);
+    padding-inline: var(--_padding-inline);
+    -webkit-tap-highlight-color: transparent;
+    text-align: left;
+    text-decoration: none;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    transition:
+      background var(--evg-transition),
+      color var(--evg-transition),
+      border-color var(--evg-transition);
+    user-select: none;
+    width: 100%;
+
+    @media (hover: hover) {
+      &:not([disabled]):hover {
+        --_background: var(--_background-hover);
+        --_border-color: var(--_border-color-hover);
+        --_color: var(--_color-hover);
+      }
+    }
+
+    &:not(:active):focus-visible {
+      --_background: var(--_background-focus);
+      --_border-color: var(--_border-color-focus);
+      --_color: var(--_color-focus);
+
+      outline-offset: var(--evg-button-outline-offset);
+      position: relative;
+      // This z-index prevents the focus outline from being clipped by the parent
+      z-index: 1;
+    }
+  }
+
+  // Presentational styles
+  button,
+  a {
+    background: var(--_background);
+    border: 0 none;
+    color: var(--_color);
+  }
+
+  svg {
+    block-size: var(--evg-icon-size);
+    flex-shrink: 0;
+    inline-size: var(--evg-icon-size);
+  }
+
+  [disabled] {
+    --_background: var(--_background-disabled);
+    --_color: var(--_color-disabled);
+    --_border-color: var(--_border-color-disabled);
+    cursor: not-allowed;
+  }
+}

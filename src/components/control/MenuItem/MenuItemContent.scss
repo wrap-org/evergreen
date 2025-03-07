@@ -1,0 +1,12 @@
+evg-menu-item-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--evg-spacing-sm);
+
+  p {
+    font-size: var(--evg-font-size-12);
+    font-weight: var(--evg-font-weight-base);
+    margin: 0;
+  }
+}
