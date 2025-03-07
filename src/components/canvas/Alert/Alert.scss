@@ -1,0 +1,25 @@
+evg-alert {
+  --_background: var(--evg-color-earth-50);
+  --_color: var(--evg-color-forest);
+  background: var(--_background);
+  border-radius: var(--evg-radius-md);
+  color: var(--_color);
+  display: block;
+  padding: var(--evg-spacing-20);
+
+  &[type='info'] {
+    --_background: var(--evg-color-sky-25);
+  }
+
+  &[type='attention'] {
+    --_background: var(--evg-color-lime);
+  }
+
+  &[type='positive'] {
+    --_background: var(--evg-color-lime-25);
+  }
+
+  &[type='negative'] {
+    --_background: var(--evg-color-rose-25);
+  }
+}
