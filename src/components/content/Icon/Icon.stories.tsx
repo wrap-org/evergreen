@@ -1,10 +1,10 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { iconKeys } from './icons';
+import { themes } from '@/lib/theme';
+import { fontSizes } from '@/lib/tokens';
 
-import { themes } from 'lib/theme';
-import { fontSizes } from 'lib/tokens';
+import { iconKeys } from './icons';
 
 import './Icon';
 

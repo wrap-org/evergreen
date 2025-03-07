@@ -1,7 +1,7 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { radius } from 'lib/tokens';
+import { radius } from '@/lib/tokens';
 
 import './Img';
 

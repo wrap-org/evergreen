@@ -14,6 +14,10 @@ export interface IconAttributes {
 
 @customElement('evg-icon')
 export class Icon extends LitElement {
+  variant?: 'default' | 'circle';
+  label?: string;
+  icon?: IconName;
+
   static readonly properties = {
     variant: { type: String },
     label: { type: String },

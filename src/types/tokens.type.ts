@@ -1,4 +1,4 @@
-import { colors, fontSizes, fontWeights, radius, spacing } from 'lib/tokens';
+import { colors, fontSizes, fontWeights, radius, spacing } from '@/lib/tokens';
 
 export type Color = (typeof colors)[number];
 export type FontSize = (typeof fontSizes)[number];
