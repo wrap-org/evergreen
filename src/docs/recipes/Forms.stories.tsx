@@ -1,7 +1,6 @@
 import React from 'react';
 
 import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Button from 'components/react/controls/Button/Button';
 import Label from 'components/react/controls/Label/Label';
 import 'components/control/RadioCheckbox/RadioCheckbox';
 
@@ -113,12 +112,14 @@ export function Form() {
         </FormGroup>
         <evg-grid direction="row-reverse">
           <evg-grid-item small-mobile="6">
-            <Button type="primary" block>
-              Save
-            </Button>
+            <evg-button variant="primary" width="full-width">
+              <button>Save</button>
+            </evg-button>
           </evg-grid-item>
           <evg-grid-item small-mobile="6">
-            <Button block>Skip</Button>
+            <evg-button width="full-width">
+              <button>Skip</button>
+            </evg-button>
           </evg-grid-item>
         </evg-grid>
       </form>

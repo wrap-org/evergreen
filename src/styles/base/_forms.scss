@@ -4,6 +4,14 @@ fieldset {
   padding: 0;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: var(--evg-font-size-16);
+}
+
 @mixin thumb {
   appearance: none;
   background-color: var(--evg-color-white);

@@ -1,0 +1,220 @@
+evg-button {
+  --_background: var(--evg-button-background-default);
+  --_background-hover: var(--evg-button-background-hover-default);
+  --_background-focus: var(--evg-button-background-focus-default);
+  --_background-disabled: var(--evg-button-background-disabled-default);
+  --_border-color: var(--evg-button-border-color-default);
+  --_border-color-hover: var(--evg-button-border-color-hover-default);
+  --_border-color-focus: var(--evg-button-border-color-focus-default);
+  --_border-color-disabled: var(--evg-button-border-color-disabled-default);
+  --_color: var(--evg-button-color-default);
+  --_color-hover: var(--evg-button-color-hover-default);
+  --_color-focus: var(--evg-button-color-focus-default);
+  --_color-disabled: var(--evg-button-color-disabled-default);
+  --_size: var(--evg-button-font-size);
+  --_padding-block: var(--evg-button-padding-block);
+  --_padding-inline: var(--evg-button-padding-inline);
+  --_line-height: var(--evg-button-line-height);
+  --evg-icon-baseline-adjust: 0.1em;
+  display: inline-block;
+
+  // Structural button styles
+  evg-loading-button,
+  button,
+  a,
+  input:not([type='file']),
+  input[type='file']::file-selector-button {
+    align-items: center;
+    appearance: none;
+    border-radius: var(--evg-button-border-radius);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: var(--_size, 1rem);
+    font-weight: var(--evg-button-font-weight);
+    gap: var(--evg-button-gap);
+    justify-content: center;
+    letter-spacing: inherit;
+    line-height: var(--_line-height);
+    padding-block: var(--_padding-block);
+    padding-inline: var(--_padding-inline);
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    transition:
+      background var(--evg-transition),
+      color var(--evg-transition),
+      border-color var(--evg-transition);
+    user-select: none;
+
+    @media (hover: hover) {
+      &:not([disabled]):hover {
+        --_background: var(--_background-hover);
+        --_border-color: var(--_border-color-hover);
+        --_color: var(--_color-hover);
+      }
+    }
+  }
+
+  @mixin button-hover {
+    --_background: var(--_background-hover);
+    --_border-color: var(--_border-color-hover);
+    --_color: var(--_color-hover);
+  }
+
+  @mixin button-focus {
+    --_background: var(--_background-focus);
+    --_border-color: var(--_border-color-focus);
+    --_color: var(--_color-focus);
+
+    outline-offset: var(--evg-button-outline-offset);
+    position: relative;
+    // This z-index prevents the focus outline from being clipped by the parent
+    z-index: 1;
+  }
+
+  evg-loading-button,
+  button,
+  a,
+  input:not([type='file']) {
+    @media (hover: hover) {
+      &:not([disabled]):hover {
+        @include button-hover;
+      }
+    }
+
+    &:not(:active):focus-visible {
+      @include button-focus;
+    }
+  }
+
+  input[type='file']:not([disabled])::file-selector-button {
+    @media (hover: hover) {
+      &:hover {
+        @include button-hover;
+      }
+    }
+  }
+
+  input[type='file']:not(:active)::file-selector-button {
+    &:focus-visible {
+      @include button-focus;
+    }
+  }
+
+  // Presentational button styles
+  button,
+  a,
+  input:not([type='file']),
+  input[type='file']::file-selector-button {
+    background: var(--_background);
+    border: 1px solid var(--_border-color);
+    color: var(--_color);
+  }
+
+  svg {
+    block-size: var(--evg-icon-size);
+    flex-shrink: 0;
+    inline-size: var(--evg-icon-size);
+  }
+
+  [disabled],
+  [type='file'][disabled]::file-selector-button {
+    --_background: var(--_background-disabled);
+    --_color: var(--_color-disabled);
+    --_border-color: var(--_border-color-disabled);
+    cursor: not-allowed;
+  }
+
+  &[size='sm'] {
+    evg-loading-button,
+    button,
+    a,
+    input {
+      --_padding-block: var(--evg-spacing-xs);
+      --_padding-inline: var(--evg-spacing-md);
+    }
+  }
+
+  &[width='full-width'] {
+    display: block;
+    width: 100%;
+
+    evg-loading-button,
+    button,
+    a,
+    input {
+      width: 100%;
+    }
+  }
+
+  @media (width < 480px) {
+    &[width='full-width-mobile'] {
+      display: block;
+
+      evg-loading-button,
+      button,
+      a,
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  &[width='square'] {
+    --_line-height: 1;
+    --_padding-inline: var(--evg-button-padding-block);
+
+    evg-loading-button,
+    button,
+    a,
+    input {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  @each $variant in primary, secondary, negative, text {
+    &[variant='#{$variant}'] {
+      --_background: var(--evg-button-background-#{$variant});
+      --_background-hover: var(--evg-button-background-hover-#{$variant});
+      --_background-focus: var(--evg-button-background-focus-#{$variant});
+      --_background-disabled: var(--evg-button-background-disabled-#{$variant});
+      --_border-color: var(--evg-button-border-color-#{$variant});
+      --_border-color-hover: var(--evg-button-border-color-hover-#{$variant});
+      --_border-color-focus: var(--evg-button-border-color-focus-#{$variant});
+      --_border-color-disabled: var(
+        --evg-button-border-color-disabled-#{$variant}
+      );
+      --_color: var(--evg-button-color-#{$variant});
+      --_color-hover: var(--evg-button-color-hover-#{$variant});
+      --_color-focus: var(--evg-button-color-focus-#{$variant});
+      --_color-disabled: var(--evg-button-color-disabled-#{$variant});
+    }
+  }
+
+  &[variant='text'] {
+    // Text button is square
+    --_padding-inline: var(--evg-button-padding-block);
+
+    evg-loading-button,
+    button,
+    a,
+    input {
+      // Remove padding whilst retaining a clickable area large enough for thumbs
+      margin: calc(var(--_padding-block) * -1);
+    }
+  }
+
+  input[type='file'] {
+    background-color: var(--evg-button-file-background);
+    border-radius: var(--evg-button-border-radius);
+    inline-size: 100%;
+    max-inline-size: max-content;
+
+    &::file-selector-button {
+      margin-inline-end: var(--evg-spacing);
+    }
+  }
+}

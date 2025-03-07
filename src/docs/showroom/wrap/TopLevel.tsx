@@ -232,7 +232,7 @@ export function TopLevel() {
       <CallToAction
         title="Join us in leading the change"
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
-        button="Button"
+        button="Sign up now"
       />
     </AppLayout>
   );

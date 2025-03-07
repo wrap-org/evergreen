@@ -8,7 +8,6 @@ import {
   useOf,
   Description,
 } from '@storybook/blocks';
-import Button from 'components/react/controls/Button/Button'
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 
@@ -55,22 +54,26 @@ export const parameters = {
           <div className="sb-unstyled evg-spacing-bottom-lg evg-spacing-top-lg">
             <evg-grid>
               <evg-grid-item>
-                <Button
-                  href={`https://github.com/wrap-org/evergreen/issues/new?labels=bug&template=bug_report.md&title=${name}+bug+report`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Report a bug
-                </Button>
+                <evg-button>
+                  <a
+                    href={`https://github.com/wrap-org/evergreen/issues/new?labels=bug&template=bug_report.md&title=${name}+bug+report`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Report a bug
+                  </a>
+                </evg-button>
               </evg-grid-item>
               <evg-grid-item>
-                <Button
-                  href={`https://github.com/wrap-org/evergreen/issues/new?labels=enhancement&template=feature_request.md&title=${name}+new+feature`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Request a feature
-                </Button>
+                <evg-button>
+                  <a
+                    href={`https://github.com/wrap-org/evergreen/issues/new?labels=enhancement&template=feature_request.md&title=${name}+new+feature`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Request a feature
+                  </a>
+                </evg-button>
               </evg-grid-item>
             </evg-grid>
           </div>
