@@ -65,6 +65,7 @@
     "@storybook/test": "^8.3.3",
     "@storybook/test-runner": "^0.19.1",
     "@storybook/theming": "^8.3.3",
+    "@swc/core": "1.11.7",
     "@types/lodash": "4.14.189",
     "@types/react": "^18.0.17",
     "autoprefixer": "^10.4.20",
