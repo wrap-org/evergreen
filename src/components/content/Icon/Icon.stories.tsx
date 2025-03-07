@@ -15,7 +15,7 @@ Icons must have the appropriate fill or stroke set to currentColor.
 
 Icons are hidden from screen readers by default and should be accompanied by text. If an icon is used on its own in a button or link, add a label prop to the component.
 
-Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds some custom icons just for this library. 
+Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds some custom icons just for this library.
 
 If you need to add an extra icon, you can use any SVG icon by passing it as a child of the component.`;
 
