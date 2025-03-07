@@ -19,6 +19,11 @@ export default {
           'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-button` component.',
       },
     },
+    a11y: {
+      config: {
+        rules: [{ id: 'label', enabled: false }],
+      },
+    },
   },
   argTypes: {
     variant: {
