@@ -4,7 +4,6 @@ import { Full as Footer } from './Footer.stories';
 import { Wrap as Navigation } from './Navigation.stories';
 
 import '../../components/composition/App/App';
-import Button from 'components/react/controls/Button/Button';
 
 export default {
   title: 'Recipes/Brochureware',
@@ -81,9 +80,9 @@ export function CardList({
             <evg-card-content>
               <h3 className="evg-text-size-heading-md">{card.title}</h3>
               <p className="evg-text-size-body-sm">{card.description}</p>
-              <Button type="primary" block>
-                Read more
-              </Button>
+              <evg-button variant="primary" width="full-width">
+                <button>Read more</button>
+              </evg-button>
             </evg-card-content>
           </evg-card>
         ))}
@@ -140,9 +139,9 @@ export function Featured({
             )}
             <h3 className="evg-text-size-heading-md">{card.title}</h3>
             <p className="evg-text-size-body-sm">{card.description}</p>
-            <Button type="primary" block="mobile">
-              Read more
-            </Button>
+            <evg-button variant="primary" width="full-width-mobile">
+              <button>Read more</button>
+            </evg-button>
           </evg-card-content>
         </evg-card>
       </evg-wrap>
@@ -222,7 +221,9 @@ export function CallToAction({
           </evg-grid-item>
           <evg-grid-item small-mobile="12" tablet="6">
             <p className="evg-spacing-bottom-md">{text}</p>
-            <docs-placeholder inline>{button}</docs-placeholder>
+            <evg-button variant="secondary" width="full-width-mobile">
+              <button>{button}</button>
+            </evg-button>
           </evg-grid-item>
         </evg-grid>
       </evg-wrap>

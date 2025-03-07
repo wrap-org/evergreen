@@ -3,8 +3,6 @@ import React from 'react';
 
 import Alert from './Alert';
 
-import Button from 'components/react/controls/Button/Button';
-
 export default {
   title: 'React/Components/Canvas/Alert',
   component: Alert,
@@ -33,7 +31,9 @@ export function Default() {
               </p>
             </evg-grid-item>
             <evg-grid-item small-mobile="12" small-tablet="auto">
-              <Button block="mobile">Button text</Button>
+              <evg-button width="full-width-mobile">
+                <button>Button text</button>
+              </evg-button>
             </evg-grid-item>
           </evg-grid>
         </Alert>

@@ -3,8 +3,6 @@ import React from 'react';
 
 import Modal, { useModalRef } from './Modal';
 
-import Button from 'components/react/controls/Button/Button';
-
 export default {
   title: 'React/Components/Composition/Modal',
   component: Modal,
@@ -19,9 +17,9 @@ export const Default = () => {
 
   return (
     <>
-      <Button type="primary" onClick={() => modalRef.current?.show()}>
-        Open the modal
-      </Button>
+      <evg-button variant="primary">
+        <button onClick={() => modalRef.current?.show()}>Open the modal</button>
+      </evg-button>
 
       <Modal
         id="story-modal"
@@ -48,13 +46,11 @@ export const Default = () => {
                   large-mobile="4"
                   small-tablet="3"
                 >
-                  <Button
-                    type="secondary"
-                    onClick={() => modalRef.current?.hide()}
-                    block
-                  >
-                    Cancel
-                  </Button>
+                  <evg-button variant="secondary" width="full-width">
+                    <button onClick={() => modalRef.current?.hide()}>
+                      Cancel
+                    </button>
+                  </evg-button>
                 </evg-grid-item>
               </evg-grid>
             </Modal.Inner>

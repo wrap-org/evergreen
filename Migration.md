@@ -73,3 +73,10 @@
 - `Badge` has been replaced with `evg-badge`
   - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
   - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options
+- `Button` has been replaced with `evg-button`. 
+  - This needs to wrap a `button` or `link` tag.
+  - `type` has been replaced with `variant`
+  - type `positive` has been replaced with `primary`
+  - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+  
+ 

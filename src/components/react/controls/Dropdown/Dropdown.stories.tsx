@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 
 import Icon from 'components/react/content/Icon/Icon';
-import Button from 'components/react/controls/Button/Button';
 
 export default {
   title: 'React/Components/Controls/Dropdown',
@@ -15,9 +14,11 @@ export const Default = () => {
   const [open, setOpen] = useState(false);
   return (
     <Dropdown open={open} onClickAway={() => setOpen(false)}>
-      <Button onClick={() => setOpen(!open)}>
-        Dropdown <Icon icon="chevron-down" />
-      </Button>
+      <evg-button>
+        <button onClick={() => setOpen(!open)}>
+          Dropdown <Icon icon="chevron-down" />
+        </button>
+      </evg-button>
       <Dropdown.Content>
         <div>Content</div>
       </Dropdown.Content>

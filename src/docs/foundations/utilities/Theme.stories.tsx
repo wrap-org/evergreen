@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Button from 'components/react/controls/Button/Button';
 import { themes } from 'lib/theme';
 
 const description = `
@@ -64,12 +63,14 @@ const ThemedSection = ({ theme }) => (
 
       <evg-grid>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <Button type="primary" block="mobile">
-            Button text
-          </Button>
+          <evg-button variant="primary" width="full-width-mobile">
+            <button>Button text</button>
+          </evg-button>
         </evg-grid-item>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <Button block="mobile">Button text</Button>
+          <evg-button width="full-width-mobile">
+            <button>Button text</button>
+          </evg-button>
         </evg-grid-item>
       </evg-grid>
     </evg-wrap>

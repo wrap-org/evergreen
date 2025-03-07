@@ -8,8 +8,6 @@ import {
   Featured,
 } from '../../recipes/Brochureware.stories';
 
-import Button from 'components/react/controls/Button/Button';
-
 const workWithUs: {
   title: string;
   description: string;
@@ -123,9 +121,9 @@ export function ThirdLevel() {
                 and household), as does the level of ambition for impact to 2025
                 (a 20% reduction compared to 2015).
               </p>
-              <Button type="primary" block="mobile">
-                Read more
-              </Button>
+              <evg-button variant="primary" width="full-width-mobile">
+                <button>Read more</button>
+              </evg-button>
             </evg-card-content>
           </evg-card>
 
@@ -145,9 +143,9 @@ export function ThirdLevel() {
                 e.g. within the British Retail Consortium&apos;s Climate
                 Roadmap.
               </p>
-              <Button type="primary" block="mobile">
-                Read more
-              </Button>
+              <evg-button variant="primary" width="full-width-mobile">
+                <button>Read more</button>
+              </evg-button>
             </evg-card-content>
           </evg-card>
 
@@ -169,9 +167,9 @@ export function ThirdLevel() {
                 important product & ingredient sourcing areas in the UK and
                 overseas.
               </p>
-              <Button type="primary" block="mobile">
-                Read more
-              </Button>
+              <evg-button variant="primary" width="full-width-mobile">
+                <button>Read more</button>
+              </evg-button>
             </evg-card-content>
           </evg-card>
 
@@ -208,7 +206,9 @@ export function ThirdLevel() {
                   </evg-meta>
                 </evg-grid-item>
                 <evg-grid-item>
-                  <Button type="primary">Read more</Button>
+                  <evg-button variant="primary">
+                    <button>Read more</button>
+                  </evg-button>
                 </evg-grid-item>
               </evg-grid>
             </evg-card-content>
@@ -239,7 +239,7 @@ export function ThirdLevel() {
       <CallToAction
         title="Get in touch"
         text="Find out how the Courtauld Commitment 2030 can help achieve your sustainability goals."
-        button="Button"
+        button="Contact us"
       />
     </AppLayout>
   );

@@ -245,7 +245,7 @@ export function SecondLevel() {
       <CallToAction
         title="Work with us on a food project"
         text="If you are interested in setting up your own food waste campaign within a country or region that we do not currently work in, please do get in touch."
-        button="Button"
+        button="Contact us"
       />
     </AppLayout>
   );
