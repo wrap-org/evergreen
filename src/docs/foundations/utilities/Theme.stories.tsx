@@ -1,3 +1,4 @@
+import startCase from 'lodash/startCase';
 import React from 'react';
 
 import { themes } from 'lib/theme';
@@ -51,7 +52,7 @@ export default {
 const ThemedSection = ({ theme }) => (
   <evg-section class={`evg-theme-${theme}`} padding="fluid">
     <evg-wrap size="md">
-      <h1>{theme} theme</h1>
+      <h1 className="evg-spacing-bottom-sm">{startCase(theme)}</h1>
       <p className="evg-spacing-bottom-md">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
         <a href="https://wrap.ngo">faucibus euismod</a>. Pellentesque et metus
