@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TextButton from 'components/react/controls/TextButton/TextButton';
+import TextButton from '@/components/react/controls/TextButton/TextButton';
 
 export interface HeaderProps {
   readonly children?: React.ReactNode;

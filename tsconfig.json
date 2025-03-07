@@ -13,12 +13,7 @@
     "noImplicitAny": false,
     "outDir": "dist",
     "paths": {
-      "components/*": [
-        "./src/components/*"
-      ],
-      "lib/*": [
-        "./src/lib/*"
-      ]
+      "@/*": ["src/*"],
     },
     "sourceMap": true,
     "useDefineForClassFields": false

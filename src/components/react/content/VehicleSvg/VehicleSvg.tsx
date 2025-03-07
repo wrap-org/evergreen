@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { Color } from '../../../../types/tokens.type';
+import { Color } from '@/types/tokens.type';
 
 import styles from './VehicleSvg.module.scss';
 

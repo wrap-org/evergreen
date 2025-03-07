@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { FontWeight } from '../../../../types/tokens.type';
+import { FontWeight } from '@/types/tokens.type';
 
 import styles from './TextButton.module.scss';
 
