@@ -1,5 +1,5 @@
 // Using Vite's import.meta.glob to import SVG files
-// / <reference types="vite/client" />
+/// <reference types="vite/client" />
 
 const svgImports = import.meta.glob('./assets/*.svg', {
   eager: true,
