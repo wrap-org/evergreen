@@ -21,9 +21,6 @@ import '../src/components/content/Img/Img';
 import '../src/components/control/Button/Button';
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
-
-import '../src/docs/components/Placeholder/Placeholder.scss';
-
 import './styles.scss';
 
 export const parameters = {
@@ -108,8 +105,8 @@ const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
   },

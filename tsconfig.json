@@ -14,7 +14,7 @@
     "noImplicitAny": false,
     "outDir": "dist",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     },
     "sourceMap": true,
     "useDefineForClassFields": false
