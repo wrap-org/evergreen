@@ -6,3 +6,5 @@ src/index.tsx
 .vscode/*
 
 !.vscode/settings.json
+
+*storybook.log

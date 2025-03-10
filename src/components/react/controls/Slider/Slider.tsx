@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 
-import { FormControl } from '../../../../types/form-control.type';
+import { FormControl } from '@/types/form-control.type';
 
 import styles from './Slider.module.scss';
 import Label from './SliderLabel';

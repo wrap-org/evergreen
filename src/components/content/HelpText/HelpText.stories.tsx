@@ -1,8 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
-import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Label from 'components/react/controls/Label/Label';
+import FormGroup from '@/components/react/composition/FormGroup/FormGroup';
+import Label from '@/components/react/controls/Label/Label';
 
 export default {
   title: 'Components/Content/Help text',

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import React, { useRef } from 'react';
 import { A11yDialog, ReactA11yDialogProps } from 'react-a11y-dialog';
 
-import { Sizes } from '../../../../types/size.type';
+import { Sizes } from '@/types/size.type';
 
 import styles from './Modal.module.scss';
 import Header from './ModalHeader';

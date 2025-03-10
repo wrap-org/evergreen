@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import { Color } from '../../../../types/tokens.type';
+import { Color } from '@/types/tokens.type';
 
 import styles from './BarStack.module.scss';
 

@@ -1,8 +1,8 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import { themes } from 'lib/theme';
-import { radius } from 'lib/tokens';
+import { themes } from '@/lib/theme';
+import { radius } from '@/lib/tokens';
 
 const description = `
 A box is a rectangle on a page to group related content together visually.

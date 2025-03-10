@@ -6,7 +6,6 @@ addons.setConfig({
   panelPosition: 'bottom',
   theme: create({
     base: 'light',
-    backgroundHoverable: '#fff',
 
     colorPrimary: '#0b301a',
     colorSecondary: '#a9ad94',
@@ -34,7 +33,7 @@ addons.setConfig({
     inputBg: '#fff',
     inputBorder: '#c2cbc6',
     inputTextColor: '#0b301a',
-    inputBorderRadius: '0.25rem',
+    inputBorderRadius: 0.25,
 
     brandTitle: 'Evergreen',
     brandUrl: 'https://wrap.ngo/',

@@ -4,9 +4,9 @@ if (process.env.npm_config_dry_run === 'true') {
   return;
 }
 
-const fs = require('fs');
+const fs = require('node:fs');
 
-const glob = require('glob');
+const glob = require('glob').glob;
 
 glob(`${__dirname}/../src/components/**/!(*.stories).tsx`, {}, (err, files) => {
   const components = files.map((file) => {

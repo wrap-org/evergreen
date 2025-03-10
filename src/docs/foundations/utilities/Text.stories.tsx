@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import { colors } from 'lib/tokens';
+import { colors } from '@/lib/tokens';
 
 const alignments = ['left', 'center', 'right'];
 
