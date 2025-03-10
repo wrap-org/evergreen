@@ -53,7 +53,7 @@ export class Icon extends LitElement {
         aria-label="${label || nothing}"
         role="img"
       >
-        <slot>${unsafeSVG(icons[icon] || '')}</slot>
+        <slot>${unsafeSVG(icon ? icons[icon] : '')}</slot>
       </div>
     `;
   }
