@@ -8,7 +8,7 @@
     "build-storybook": "storybook build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-storybook": "npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && test-storybook\"",
-    "prepare": "node .husky/install.mjs && node ./scripts/export-components.js",
+    "prepare": "node .husky/install.mjs && node ./scripts/export-components.mjs",
     "release": "semantic-release",
     "chromatic": "chromatic --exit-zero-on-changes",
     "storybook": "storybook dev -p 6006"
