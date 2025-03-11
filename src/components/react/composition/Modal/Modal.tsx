@@ -11,7 +11,7 @@ import Inner from './ModalInner';
 
 export type ModalInstance = A11yDialogInstance;
 
-interface ModalProps
+export interface ModalProps
   extends Pick<ReactA11yDialogProps, 'id' | 'title' | 'role'> {
   readonly children?: React.ReactNode;
   readonly size?: Sizes | 'auto';
