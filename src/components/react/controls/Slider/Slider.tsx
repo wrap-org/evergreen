@@ -34,7 +34,7 @@ const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
       maxValue = 100,
       disabled,
       ...props
-    },
+    }: SliderProps,
     ref,
   ) => {
     const defaultVal =
