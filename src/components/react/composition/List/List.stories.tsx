@@ -9,7 +9,7 @@ export default {
   title: 'React/Components/Composition/List',
   component: List,
   subcomponents: {
-    ListItem: List.Item,
+    ListItem: List.Item as React.FunctionComponent<any>,
   },
 } satisfies Meta<typeof List>;
 
