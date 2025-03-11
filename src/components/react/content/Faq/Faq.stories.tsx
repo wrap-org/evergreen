@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import Faq from './Faq';
@@ -16,9 +16,9 @@ export default {
   },
 } satisfies Meta;
 
-export const Default: Story<{ question: React.ReactNode }> = ({ question }) => (
-  <Faq question={question}>Answer goes here</Faq>
-);
+export const Default: StoryFn<{ question: React.ReactNode }> = ({
+  question,
+}) => <Faq question={question}>Answer goes here</Faq>;
 
 Default.storyName = 'Faq';
 Default.args = {

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import Enter from './Enter';
@@ -19,9 +19,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Enter>;
+} as Meta<typeof Enter>;
 
-const Template: ComponentStory<typeof Enter> = (args) => {
+const Template: StoryFn<typeof Enter> = (args) => {
   const { delay } = args;
   const delayValue = delay ? parseInt(delay, 10) : 1;
 

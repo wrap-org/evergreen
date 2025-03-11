@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 
 import List from './List';
 
-import 'components/control/RadioCheckbox/RadioCheckbox';
+import '@/components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'React/Components/Composition/List',
   component: List,
   subcomponents: {
-    ListItem: List.Item,
+    ListItem: List.Item as React.FunctionComponent<any>,
   },
 } satisfies Meta<typeof List>;
 

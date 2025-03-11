@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { Color } from '../../../../types/tokens.type';
+import { Color } from '@/types/tokens.type';
 
 import styles from './VehicleSvg.module.scss';
 
@@ -10,7 +10,7 @@ export interface VehicleSvgProps {
   readonly color?: Color;
 }
 
-function VehicleSvg({ name, color = 'no-stream' }: VehicleSvgProps) {
+function VehicleSvg({ name, color }: VehicleSvgProps) {
   const className = classNames(styles['vehicle-svg'], {
     [styles[`vehicle-svg--evg-color-${color}`]]: color,
   });

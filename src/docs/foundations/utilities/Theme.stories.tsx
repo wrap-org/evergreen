@@ -1,7 +1,7 @@
 import startCase from 'lodash/startCase';
 import React from 'react';
 
-import { themes } from 'lib/theme';
+import { themes } from '@/lib/theme';
 
 const description = `
   Many components in the design system accept a theme context. The theme context

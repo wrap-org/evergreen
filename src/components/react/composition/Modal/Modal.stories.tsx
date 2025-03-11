@@ -7,10 +7,10 @@ export default {
   title: 'React/Components/Composition/Modal',
   component: Modal,
   subcomponents: {
-    ModalInner: Modal.Inner,
-    ModalHeader: Modal.Header,
+    ModalInner: Modal.Inner as React.FunctionComponent<any>,
+    ModalHeader: Modal.Header as React.FunctionComponent<any>,
   },
-} satisfies Meta;
+} satisfies Meta<typeof Modal>;
 
 export const Default = () => {
   const modalRef = useModalRef();

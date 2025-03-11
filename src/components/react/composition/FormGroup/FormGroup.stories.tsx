@@ -1,11 +1,11 @@
 import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-import FormGroup from './FormGroup';
+import Label from '@/components/react/controls/Label/Label';
+import TextButton from '@/components/react/controls/TextButton/TextButton';
 
-import Label from 'components/react/controls/Label/Label';
-import TextButton from 'components/react/controls/TextButton/TextButton';
-import 'components/control/RadioCheckbox/RadioCheckbox';
+import FormGroup from './FormGroup';
+import '@/components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'React/Components/Composition/Form group',
