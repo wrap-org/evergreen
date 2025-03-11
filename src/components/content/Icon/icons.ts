@@ -1,3 +1,4 @@
+/** eslint-disable spaced-comment */
 // Using Vite's import.meta.glob to import SVG files
 /// <reference types="vite/client" />
 
