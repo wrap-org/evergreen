@@ -1,5 +1,5 @@
 // Set a default font path which works for dependants
-$evg-font-path: '~@wrap.ngo/evergreen/src/assets/fonts' !default;
+$evg-font-path: '@wrap.ngo/evergreen/src/assets/fonts' !default;
 
 // Optional font import
 @font-face {
