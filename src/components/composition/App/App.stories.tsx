@@ -25,17 +25,23 @@ export const App = (args) => (
   <evg-app {...args}>
     <evg-section padding="lg" slot="header" class="evg-theme-forest">
       <evg-wrap gutter="md">
-        <header>Header</header>
+        <header>
+          <docs-placeholder>Header</docs-placeholder>
+        </header>
       </evg-wrap>
     </evg-section>
     <evg-section padding="xl" class="evg-theme-default">
       <evg-wrap gutter="md">
-        <main>Main</main>
+        <main>
+          <docs-placeholder>Main</docs-placeholder>
+        </main>
       </evg-wrap>
     </evg-section>
     <evg-section padding="lg" class="evg-theme-forest" slot="footer">
       <evg-wrap gutter="md">
-        <footer>Footer</footer>
+        <footer>
+          <docs-placeholder>Footer</docs-placeholder>
+        </footer>
       </evg-wrap>
     </evg-section>
   </evg-app>

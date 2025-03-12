@@ -19,6 +19,7 @@ import '../src/components/content/Badge/Badge';
 import '../src/components/content/Icon/Icon';
 import '../src/components/content/Img/Img';
 import '../src/components/control/Button/Button';
+import '../src/components/control/RadioCheckbox/RadioCheckbox';
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';

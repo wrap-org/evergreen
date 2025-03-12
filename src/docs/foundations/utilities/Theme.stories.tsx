@@ -52,8 +52,8 @@ export default {
 const ThemedSection = ({ theme }) => (
   <evg-section class={`evg-theme-${theme}`} padding="fluid">
     <evg-wrap size="md">
-      <h1 className="evg-spacing-bottom-sm">{startCase(theme)}</h1>
-      <p className="evg-spacing-bottom-md">
+      <h2 className="evg-spacing-bottom-sm">{startCase(theme)}</h2>
+      <p className="evg-spacing-bottom-lg">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
         <a href="https://wrap.ngo">faucibus euismod</a>. Pellentesque et metus
         nunc. Fusce ante arcu, mattis pretium semper ac, pretium vitae velit.
