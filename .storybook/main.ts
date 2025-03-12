@@ -10,9 +10,18 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
     "@chromatic-com/storybook",
-    "@storybook/addon-essentials",
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        toolbars: true,
+        backgrounds: false,
+        actions: false,
+        outline: false,
+        measure: false,
+        viewport: true,
+      },
+    },
     "@storybook/addon-interactions",
-    "@storybook/addon-onboarding",
     {
       name: '@storybook/preset-scss',
       options: {

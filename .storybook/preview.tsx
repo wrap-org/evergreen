@@ -19,6 +19,7 @@ import '../src/components/content/Badge/Badge';
 import '../src/components/content/Icon/Icon';
 import '../src/components/content/Img/Img';
 import '../src/components/control/Button/Button';
+import '../src/components/control/RadioCheckbox/RadioCheckbox';
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
@@ -96,7 +97,42 @@ export const parameters = {
         </>
       );
     },
-  }
+  },
+  backgrounds: {
+    disable: true,
+  },
+  viewport: {
+    viewports: {
+      aaMinimum: {
+        name: 'AA minimum small mobile',
+        styles: {
+          width: '320px',
+          height: '480px',
+        },
+      },
+      mobile: {
+        name: 'Average mobile',
+        styles: {
+          width: '375px',
+          height: '667px',
+        },
+      },
+      largeMobile: {
+        name: 'Large mobile',
+        styles: {
+          width: '414px',
+          height: '736px',
+        },
+      },
+      tablet: {
+        name: 'Tablet',
+        styles: {
+          width: '768px',
+          height: '1024px',
+        },
+      },
+    },
+  },
 }
 
 export const tags = ['autodocs'];
