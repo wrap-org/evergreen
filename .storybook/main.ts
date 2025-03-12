@@ -14,10 +14,11 @@ const config: StorybookConfig = {
       name: '@storybook/addon-essentials',
       options: {
         toolbars: true,
-        backgrounds: true,
+        backgrounds: false,
         actions: false,
         outline: false,
         measure: false,
+        viewport: true,
       },
     },
     "@storybook/addon-interactions",
