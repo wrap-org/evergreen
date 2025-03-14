@@ -1,12 +1,14 @@
 evg-menu-item {
   --_background: transparent;
-  --_background-hover: transparent;
+  // Should these hover styles be part of themes?
+  --_background-hover: var(--evg-color-sand-25);
   --_background-focus: transparent;
   --_background-disabled: transparent;
   --_color: var(--evg-theme-color);
   --_color-hover: var(--_color);
   --_color-focus: var(--_color);
-  --_color-disabled: var(--_color);
+  // Should these disabled styles be part of themes?
+  --_color-disabled: var(--evg-color-forest-75);
   --_size: var(--evg-font-size-16);
   --_padding-block: var(--evg-spacing-sm);
   --_padding-inline: var(--evg-spacing-sm);
@@ -44,14 +46,12 @@ evg-menu-item {
     @media (hover: hover) {
       &:not([disabled]):hover {
         --_background: var(--_background-hover);
-        --_border-color: var(--_border-color-hover);
         --_color: var(--_color-hover);
       }
     }
 
     &:not(:active):focus-visible {
       --_background: var(--_background-focus);
-      --_border-color: var(--_border-color-focus);
       --_color: var(--_color-focus);
 
       outline-offset: var(--evg-button-outline-offset);
@@ -78,7 +78,6 @@ evg-menu-item {
   [disabled] {
     --_background: var(--_background-disabled);
     --_color: var(--_color-disabled);
-    --_border-color: var(--_border-color-disabled);
     cursor: not-allowed;
   }
 }
