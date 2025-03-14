@@ -1,6 +1,6 @@
 @use '../mixins/theme';
 
-// stylelint-disable-next-line color-named
+/* stylelint-disable-next-line scss/dollar-variable-colon-space-after */
 $themes:
   default, sand, forest, forest-light, earth, earth-light, lime, lime-light,
   sky, sky-light;
