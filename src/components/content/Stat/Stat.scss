@@ -17,34 +17,37 @@ evg-stat {
     }
   }
 
-  &[layout='row'] {
-    align-items: center;
-    display: flex;
-    gap: calc(var(--evg-spacing-md) * 2 + 0.5rem);
+  @media (width > 768px) {
+    &[layout='row'] {
+      align-items: center;
+      display: flex;
+      gap: calc(var(--evg-spacing-md) * 2 + 0.5rem);
 
-    &:has(evg-stat-icon) {
-      gap: var(--evg-spacing-md);
+      &:has(evg-stat-icon) {
+        gap: var(--evg-spacing-md);
+
+        evg-stat-value {
+          text-align: left;
+        }
+      }
+
+      evg-stat-value,
+      evg-stat-content {
+        flex: 1;
+      }
 
       evg-stat-value {
-        text-align: left;
-      }
-    }
+        max-width: 15rem;
+        position: relative;
+        text-align: right;
 
-    evg-stat-value,
-    evg-stat-content {
-      flex: 1;
-    }
-
-    evg-stat-value {
-      position: relative;
-      text-align: right;
-
-      &::after {
-        height: 100%;
-        left: calc(100% + var(--evg-spacing-md));
-        position: absolute;
-        top: 0;
-        width: 0.5rem;
+        &::after {
+          height: 100%;
+          left: calc(100% + var(--evg-spacing-md));
+          position: absolute;
+          top: 0;
+          width: 0.5rem;
+        }
       }
     }
   }
@@ -67,7 +70,7 @@ evg-stat-icon {
 evg-stat-value {
   display: block;
   font-family: var(--evg-font-family-heading);
-  font-size: var(--evg-font-size-display-lg);
+  font-size: var(--evg-font-size-display-md);
   font-weight: var(--evg-font-weight-bold);
   line-height: 1;
 
