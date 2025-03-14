@@ -70,10 +70,10 @@ export const Types: StoryFn = () => (
         <evg-alert type={type}>
           <evg-grid wrap="wrap" align-items="center">
             <evg-grid-item grow shrink small-mobile="12" large-mobile="auto">
-              <h4 className="evg-text-size-body-md evg-text-family-body">
+              <h4 className="evg-text-size-body-sm evg-text-family-body">
                 {types[type].title}
               </h4>
-              <p className="evg-text-size-body-md">{types[type].text}</p>
+              <p className="evg-text-size-body-sm">{types[type].text}</p>
             </evg-grid-item>
             <evg-grid-item small-mobile="12" large-mobile="auto">
               <evg-button width="full-width-mobile">
