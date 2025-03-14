@@ -1,11 +1,19 @@
-const svgContext = require.context('./assets', false, /\.svg$/);
+/** eslint-disable spaced-comment */
+// Using Vite's import.meta.glob to import SVG files
+// / <reference types="vite/client" />
 
-const icons = svgContext.keys().reduce(
-  (acc, path) => {
-    const key = path.replace('./', '').replace('.svg', '');
-    return { ...acc, [key]: require(`./assets/${key}.svg?raw`) };
+const svgImports = import.meta.glob('./assets/*.svg', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+});
+
+const icons = Object.entries(svgImports).reduce<Record<string, string>>(
+  (acc, [path, content]) => {
+    const key = path.replace('./assets/', '').replace('.svg', '');
+    return { ...acc, [key]: content as string };
   },
-  {} as Record<string, string>,
+  {},
 );
 
 export const iconKeys = Object.keys(icons) as (keyof typeof icons)[];

@@ -11,21 +11,18 @@ export default {
 export const Default: StoryFn = () => (
   <evg-grid wrap="wrap">
     <evg-grid-item tablet="3">
-      <VehicleSvg name="Five compartment stillage vehicle" color="dry-stream" />
+      <VehicleSvg name="Five compartment stillage vehicle" color="sky" />
     </evg-grid-item>
     <evg-grid-item tablet="3">
-      <VehicleSvg
-        name="65-35 split 2 compartment RCV"
-        color="residual-stream"
-      />
+      <VehicleSvg name="65-35 split 2 compartment RCV" color="rose" />
     </evg-grid-item>
     <evg-grid-item tablet="3">
-      <VehicleSvg name="Small single compartment RCV" color="food-stream" />
+      <VehicleSvg name="Small single compartment RCV" color="lilac" />
     </evg-grid-item>
     <evg-grid-item tablet="3">
       <VehicleSvg
         name="Single compartment RCV with recycling compaction"
-        color="garden-stream"
+        color="lime"
       />
     </evg-grid-item>
   </evg-grid>

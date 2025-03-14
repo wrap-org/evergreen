@@ -1,8 +1,7 @@
 import React from 'react';
 
-import FormGroup from 'components/react/composition/FormGroup/FormGroup';
-import Label from 'components/react/controls/Label/Label';
-import 'components/control/RadioCheckbox/RadioCheckbox';
+import FormGroup from '@/components/react/composition/FormGroup/FormGroup';
+import Label from '@/components/react/controls/Label/Label';
 
 export default {
   title: 'Recipes/Forms',

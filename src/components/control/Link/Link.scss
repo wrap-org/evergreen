@@ -1,0 +1,26 @@
+evg-link {
+  --evg-link-text-decoration: var(--evg-theme-link-text-decoration);
+
+  a,
+  button {
+    appearance: none;
+    background: none;
+    border: 0 none;
+    color: var(--evg-theme-link-color);
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    text-decoration: var(--evg-link-text-decoration);
+    text-underline-offset: 0.125em;
+  }
+
+  &[variant='underline'] {
+    --evg-link-text-decoration: underline;
+  }
+
+  &[variant='no-underline'] {
+    --evg-link-text-decoration: none;
+  }
+}

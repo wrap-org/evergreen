@@ -8,9 +8,9 @@ export default {
   title: 'React/Components/Controls/Menubar',
   component: Menubar,
   subcomponents: {
-    MenubarTabs: Menubar.Tabs,
-    MenubarTab: Menubar.Tab,
-    MenubarBack: Menubar.Back,
+    MenubarTabs: Menubar.Tabs as React.FunctionComponent<any>,
+    MenubarTab: Menubar.Tab as React.FunctionComponent<any>,
+    MenubarBack: Menubar.Back as React.FunctionComponent<any>,
   },
   parameters: {
     a11y: {
@@ -28,7 +28,7 @@ export default {
       theming: true,
     },
   },
-} satisfies Meta;
+} satisfies Meta<typeof Menubar>;
 
 export const FourTabs: StoryFn = (args) => (
   <Menubar {...args}>

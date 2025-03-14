@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import { StreamType } from '../../../../types/stream.type';
+import { StreamType } from '@/types/stream.type';
 
 import styles from './StreamDot.module.scss';
 

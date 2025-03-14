@@ -7,9 +7,9 @@ export default {
   title: 'React/Components/Content/Bar Stack',
   component: BarStack,
   subcomponents: {
-    BarStackItem: BarStack.Item,
+    BarStackItem: BarStack.Item as React.FunctionComponent<any>,
   },
-} satisfies Meta;
+} satisfies Meta<typeof BarStack>;
 
 export const Default = (args: {
   readonly children?: React.ReactNode;
@@ -18,10 +18,10 @@ export const Default = (args: {
 }) => {
   return (
     <BarStack {...args}>
-      <BarStack.Item color="dry-stream" size={20} />
-      <BarStack.Item color="residual-stream" size={20} />
-      <BarStack.Item color="food-stream" size={20} />
-      <BarStack.Item color="garden-stream" size={20} />
+      <BarStack.Item color="sky" size={20} />
+      <BarStack.Item color="rose" size={20} />
+      <BarStack.Item color="lilac" size={20} />
+      <BarStack.Item color="lime" size={20} />
     </BarStack>
   );
 };
@@ -36,9 +36,10 @@ Default.args = {
 export const Compact = () => {
   return (
     <BarStack compact>
-      <BarStack.Item color="dry-stream" size={20} />
-      <BarStack.Item color="residual-stream" size={20} />
-      <BarStack.Item color="organic-stream" size={20} />
+      <BarStack.Item color="sky" size={20} />
+      <BarStack.Item color="rose" size={20} />
+      <BarStack.Item color="lilac" size={20} />
+      <BarStack.Item color="lime" size={20} />
     </BarStack>
   );
 };

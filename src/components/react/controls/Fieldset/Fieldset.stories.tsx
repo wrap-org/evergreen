@@ -8,9 +8,9 @@ export default {
   title: 'React/Components/Controls/Fieldset',
   component: Fieldset,
   subcomponents: {
-    Legend,
+    Legend: Legend as React.FunctionComponent<any>,
   },
-} satisfies Meta;
+} satisfies Meta<typeof Legend>;
 
 export function Default() {
   return (

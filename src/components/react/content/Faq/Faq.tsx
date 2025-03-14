@@ -1,11 +1,11 @@
 import cx from 'classnames';
 import React, { useState } from 'react';
 
+import Collapse from '@/components/react/controls/Collapse/Collapse';
+
 import styles from './Faq.module.scss';
 
-import Collapse from 'components/react/controls/Collapse/Collapse';
-
-interface FaqProps {
+export interface FaqProps {
   readonly question: React.ReactNode;
   readonly children?: React.ReactNode;
 }

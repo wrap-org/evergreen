@@ -1,12 +1,11 @@
 import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
-import FormGroup from './FormGroup';
+import Label from '@/components/react/controls/Label/Label';
+import TextButton from '@/components/react/controls/TextButton/TextButton';
 
-import Alert from 'components/react/canvas/Alert/Alert';
-import Label from 'components/react/controls/Label/Label';
-import TextButton from 'components/react/controls/TextButton/TextButton';
-import 'components/control/RadioCheckbox/RadioCheckbox';
+import FormGroup from './FormGroup';
+import '@/components/control/RadioCheckbox/RadioCheckbox';
 
 export default {
   title: 'React/Components/Composition/Form group',
@@ -94,7 +93,7 @@ export function WithInfo() {
           </evg-input>
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-one" open={infoOneOpen}>
-          <Alert className="evg-theme-info">This is an info message</Alert>
+          <evg-alert type="info">This is an info message</evg-alert>
         </FormGroup.Info>
       </FormGroup>
 
@@ -115,7 +114,7 @@ export function WithInfo() {
           </evg-input>
         </FormGroup.Control>
         <FormGroup.Info controlId="form-group-info-two" open={infoTwoOpen}>
-          <Alert className="evg-theme-info">This is an info message</Alert>
+          <evg-alert type="info">This is an info message</evg-alert>
         </FormGroup.Info>
       </FormGroup>
     </>

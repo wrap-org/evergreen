@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@etchteam'],
+  extends: ['@etchteam', 'plugin:storybook/recommended'],
   rules: {
     '@next/next/no-html-link-for-pages': 0,
     '@next/next/no-img-element': 0,

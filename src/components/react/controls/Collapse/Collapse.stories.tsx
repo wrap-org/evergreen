@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
 import Collapse, { CollapseProps } from './Collapse';
@@ -8,7 +8,7 @@ export default {
   component: Collapse,
 } satisfies Meta;
 
-export const Default: Story<CollapseProps> = (props) => (
+export const Default: StoryFn<CollapseProps> = (props) => (
   <Collapse {...props}>
     <div>
       <p>Hidden content</p>
@@ -25,7 +25,7 @@ Default.args = {
   defaultOpen: false,
 };
 
-export const RightAlign: Story = () => (
+export const RightAlign: StoryFn = () => (
   <Collapse headerLabel="Click me" align="right">
     <div>
       <p>Hidden content</p>
@@ -33,7 +33,7 @@ export const RightAlign: Story = () => (
   </Collapse>
 );
 
-export const DefaultOpen: Story = () => (
+export const DefaultOpen: StoryFn = () => (
   <Collapse headerLabel="Click me" defaultOpen>
     <div>
       <p>Collapse is open from initial render</p>
@@ -50,7 +50,7 @@ DefaultOpen.parameters = {
   },
 };
 
-export const CollapseState: Story = () => {
+export const CollapseState: StoryFn = () => {
   const [open, setOpen] = useState(false);
 
   const onToggle = function (open?: boolean) {

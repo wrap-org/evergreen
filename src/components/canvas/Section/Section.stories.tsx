@@ -1,7 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import { themes } from 'lib/theme';
+import { themes } from '@/lib/theme';
 
 const description = `
 A section component represents a horizontal slice of a page.
@@ -52,7 +52,7 @@ export default {
 export const Section: StoryFn = ({ theme, ...props }) => (
   <evg-section class={`evg-theme-${theme}`} {...props}>
     <evg-wrap size="lg">
-      <h3>Section title</h3>
+      <h2 className="evg-spacing-bottom-sm">Section title</h2>
       <p className="evg-spacing-bottom-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -62,10 +62,14 @@ export const Section: StoryFn = ({ theme, ...props }) => (
       </p>
       <evg-grid>
         <evg-grid-item mobile="6" tablet="auto">
-          <button type="button">Button text</button>
+          <evg-button variant="primary">
+            <button type="button">Button text</button>
+          </evg-button>
         </evg-grid-item>
         <evg-grid-item mobile="6" tablet="auto">
-          <button type="button">Button text</button>
+          <evg-button>
+            <button type="button">Button text</button>
+          </evg-button>
         </evg-grid-item>
       </evg-grid>
     </evg-wrap>
@@ -82,7 +86,7 @@ export const Theming: StoryFn = () => (
     {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
         <evg-wrap size="lg">
-          <h3>Section title</h3>
+          <h2 className="evg-spacing-bottom-sm">Section title</h2>
           <p className="evg-spacing-bottom-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -92,10 +96,14 @@ export const Theming: StoryFn = () => (
           </p>
           <evg-grid>
             <evg-grid-item mobile="6" tablet="auto">
-              <button type="button">Button text</button>
+              <evg-button variant="primary">
+                <button type="button">Button text</button>
+              </evg-button>
             </evg-grid-item>
             <evg-grid-item mobile="6" tablet="auto">
-              <button type="button">Button text</button>
+              <evg-button>
+                <button type="button">Button text</button>
+              </evg-button>
             </evg-grid-item>
           </evg-grid>
         </evg-wrap>

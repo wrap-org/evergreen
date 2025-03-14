@@ -1,7 +1,7 @@
 import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
-import { themes } from 'lib/theme';
+import { themes } from '@/lib/theme';
 
 export default {
   parameters: {
