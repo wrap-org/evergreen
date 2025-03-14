@@ -142,15 +142,58 @@ export function SecondLevel() {
             Why we are working to transform the food system
           </h3>
 
-          <docs-placeholder class="evg-spacing-bottom-xl">
-            Stat
-          </docs-placeholder>
-          <docs-placeholder class="evg-spacing-bottom-xl">
-            Stat
-          </docs-placeholder>
-          <docs-placeholder class="evg-spacing-bottom-lg">
-            Stat
-          </docs-placeholder>
+          <evg-stat layout="row" class="evg-spacing-bottom-xl">
+            <evg-stat-icon>
+              <evg-icon icon="food" set="distinctive" />
+            </evg-stat-icon>
+            <evg-stat-value>30%</evg-stat-value>
+            <evg-stat-content>
+              <h4 className="evg-text-size-body-md evg-text-family-body">
+                Food production and consumption are responsible for around 30%
+                of global carbon emissions.
+              </h4>
+              <p>
+                By creating space for agriculture, it also contributes to
+                between 60%-80% biodiversity loss through the destruction of
+                natural habitats. IPCC, 2019, Chapter 5 Food security, Special
+                report on climate change and land.
+              </p>
+            </evg-stat-content>
+          </evg-stat>
+          <evg-stat layout="row" class="evg-spacing-bottom-xl">
+            <evg-stat-icon>
+              <evg-icon icon="plastics" set="distinctive" />
+            </evg-stat-icon>
+            <evg-stat-value>70%</evg-stat-value>
+            <evg-stat-content>
+              <h4 className="evg-text-size-body-md evg-text-family-body">
+                The proportion of global freshwater that is used for
+                agriculture.
+              </h4>
+              <p>
+                What&apos;s more, 8 out of the top 10 countries that the UK
+                sources fruit and vegetables from are drought-prone.
+              </p>
+            </evg-stat-content>
+          </evg-stat>
+          <evg-stat layout="row" class="evg-spacing-bottom-lg">
+            <evg-stat-icon>
+              <evg-icon icon="globe" set="distinctive" />
+            </evg-stat-icon>
+            <evg-stat-value>1.3 Bt</evg-stat-value>
+            <evg-stat-content>
+              <h4 className="evg-text-size-body-md evg-text-family-body">
+                1.3 billion tonnes of food is wasted globally
+              </h4>
+              <p>
+                This is one third of all food produced for human consumption,
+                according to the Food and Agriculture Organization (FAO) of the
+                United Nations. In the UK, we throw away 6.4 million tonnes of
+                household food waste a year, almost three quarters is food we
+                could have eaten.
+              </p>
+            </evg-stat-content>
+          </evg-stat>
 
           <h2 className="evg-text-size-heading-lg evg-spacing-bottom-lg evg-text-transform-uppercase">
             What WRAP is doing
