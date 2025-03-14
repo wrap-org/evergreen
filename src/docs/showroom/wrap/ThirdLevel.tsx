@@ -96,9 +96,18 @@ export function ThirdLevel() {
             UK food and drink sector achieve global environmental goals.
           </p>
 
-          <docs-placeholder class="evg-spacing-bottom-lg">
-            Video
-          </docs-placeholder>
+          <evg-video class="evg-spacing-bottom-lg">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/cTD-X0lhMWY?si=XrIxoMQQDj0nV34K"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </evg-video>
 
           <h2 className="evg-text-size-heading-lg evg-spacing-bottom-md evg-text-transform-uppercase">
             Our Targets

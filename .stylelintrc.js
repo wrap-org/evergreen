@@ -7,5 +7,6 @@ module.exports = {
         ignore: ['attribute'],
       },
     ],
+    'color-named': null
   }
 };

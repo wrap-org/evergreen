@@ -65,11 +65,7 @@ p {
 a {
   color: var(--evg-theme-link-color);
   font-weight: var(--link-font-weight);
-  text-decoration: var(--evg-theme-link-text-decoration);
-
-  &:hover {
-    text-decoration: var(--evg-theme-link-text-decoration-hover);
-  }
+  text-decoration: none;
 }
 
 b,
