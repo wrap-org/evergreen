@@ -1,20 +1,17 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
-export interface StatAttributes {
-  layout?: 'stack' | 'row';
-  align?: 'left' | 'center';
-}
+export interface StatIconAttributes {}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'evg-stat': StatAttributes;
+    'evg-stat-icon': StatIconAttributes;
   }
 }
 
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'evg-stat': JSXCustomElement<StatAttributes>;
+      'evg-stat-icon': JSXCustomElement<StatIconAttributes>;
     }
   }
 }
