@@ -5,6 +5,7 @@ evg-menu-item-content {
   gap: var(--evg-spacing-sm);
 
   p {
+    color: var(--evg-theme-color);
     font-size: var(--evg-font-size-12);
     font-weight: var(--evg-font-weight-base);
     margin: 0;

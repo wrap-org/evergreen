@@ -38,6 +38,8 @@
 @use '../components/content/Img/Img';
 
 :root {
+  --evg-theme-link-color-forest: var(--evg-color-lime);
+
   --evg-font-size-body-xs: clamp(
     var(--evg-font-size-12),
     calc(var(--evg-font-size-12) + ((100vw - 320px) * 0.004)),
@@ -111,24 +113,3 @@
     var(--evg-font-size-120)
   );
 }
-
-// @media (width >= 1024px) {
-//   :root {
-//     --evg-font-size-body-xs: var(--evg-font-size-14);
-//     --evg-font-size-body-sm: var(--evg-font-size-16);
-//     --evg-font-size-body-md: var(--evg-font-size-20);
-//     --evg-font-size-body-lg: var(--evg-font-size-24);
-//     --evg-font-size-body-xl: var(--evg-font-size-32);
-
-//     --evg-font-size-heading-xxs: var(--evg-font-size-14);
-//     --evg-font-size-heading-xs: var(--evg-font-size-16);
-//     --evg-font-size-heading-sm: var(--evg-font-size-24);
-//     --evg-font-size-heading-md: var(--evg-font-size-32);
-//     --evg-font-size-heading-lg: var(--evg-font-size-52);
-//     --evg-font-size-heading-xl: var(--evg-font-size-64);
-
-//     --evg-font-size-display-sm: var(--evg-font-size-80);
-//     --evg-font-size-display-md: var(--evg-font-size-96);
-//     --evg-font-size-display-lg: var(--evg-font-size-120);
-//   }
-// }

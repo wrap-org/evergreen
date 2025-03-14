@@ -1,8 +1,9 @@
 @use '../mixins/theme';
 
 // stylelint-disable-next-line color-named
-$themes: default, sand, forest, forest-light, earth, earth-light, lime,
-  lime-light, sky, sky-light;
+$themes:
+  default, sand, forest, forest-light, earth, earth-light, lime, lime-light,
+  sky, sky-light;
 
 .evg-theme {
   @each $theme in $themes {
@@ -10,4 +11,12 @@ $themes: default, sand, forest, forest-light, earth, earth-light, lime,
       @include theme.theme($theme);
     }
   }
+}
+
+// Special coal theme for the footer
+.evg-theme-coal {
+  --evg-theme-background: var(--evg-color-coal);
+  --evg-theme-color: var(--evg-color-forest-25);
+  --evg-theme-heading-color: var(--evg-color-forest-25);
+  --evg-theme-link-color: var(--evg-color-forest-25);
 }

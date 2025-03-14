@@ -4,7 +4,7 @@ evg-menu-item {
   --_background-hover: var(--evg-color-sand-25);
   --_background-focus: transparent;
   --_background-disabled: transparent;
-  --_color: var(--evg-theme-color);
+  --_color: var(--evg-theme-link-color);
   --_color-hover: var(--_color);
   --_color-focus: var(--_color);
   // Should these disabled styles be part of themes?
@@ -47,6 +47,11 @@ evg-menu-item {
       &:not([disabled]):hover {
         --_background: var(--_background-hover);
         --_color: var(--_color-hover);
+
+        @container style(--evg-theme-background: var(--evg-theme-background-forest)) {
+          --_background: var(--evg-color-forest-75);
+          --_color: var(--evg-color-cloud);
+        }
       }
     }
 
