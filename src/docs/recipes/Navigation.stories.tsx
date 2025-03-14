@@ -19,7 +19,7 @@ export function Wrap(props) {
           loading="eager"
         />
       </a>
-      <nav>
+      <nav aria-label="Main navigation">
         <evg-menu-item>
           <a href="https://wrap.ngo">
             <evg-menu-item-content>What we do</evg-menu-item-content>
@@ -50,7 +50,7 @@ export function Wrap(props) {
           </a>
         </evg-menu-item>
       </nav>
-      <nav>
+      <nav aria-label="Secondary navigation">
         <evg-button>
           <button type="button">
             Regions
@@ -64,7 +64,7 @@ export function Wrap(props) {
           </button>
         </evg-button>
         <evg-button width="square">
-          <button type="button">
+          <button type="button" aria-label="Search">
             <evg-icon icon="search" />
           </button>
         </evg-button>
@@ -85,14 +85,14 @@ export function Data(props) {
           loading="eager"
         />
       </a>
-      <nav>
+      <nav aria-label="Main navigation">
         <evg-menu-item>
           <a href="https://wrap.ngo">
             <evg-menu-item-content>Data stories</evg-menu-item-content>
           </a>
         </evg-menu-item>
       </nav>
-      <nav>
+      <nav aria-label="Secondary navigation">
         <evg-button>
           <a href="https://wrap.ngo">
             Go to main site

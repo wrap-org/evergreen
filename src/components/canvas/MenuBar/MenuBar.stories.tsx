@@ -41,7 +41,7 @@ const Template: StoryFn = ({ theme, ...args }) => (
         loading="eager"
       />
     </a>
-    <nav>
+    <nav aria-label="Main navigation">
       <evg-menu-item>
         <a href="https://wrap.ngo">
           <evg-menu-item-content>What we do</evg-menu-item-content>
@@ -72,7 +72,7 @@ const Template: StoryFn = ({ theme, ...args }) => (
         </a>
       </evg-menu-item>
     </nav>
-    <nav>
+    <nav aria-label="Secondary navigation">
       <evg-button>
         <button type="button">
           Regions
@@ -86,7 +86,7 @@ const Template: StoryFn = ({ theme, ...args }) => (
         </button>
       </evg-button>
       <evg-button width="square">
-        <button type="button">
+        <button type="button" aria-label="Search">
           <evg-icon icon="search" />
         </button>
       </evg-button>
