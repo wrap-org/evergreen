@@ -236,9 +236,18 @@ export function TopLevel() {
             Explore more
           </h2>
           <evg-grid wrap="wrap">
-            {[0, 1, 2, 3].map((item) => (
+            {[0, 1, 2].map((item) => (
               <evg-grid-item key={item} small-mobile="12" small-tablet="4">
-                <docs-placeholder>Menu item</docs-placeholder>
+                <evg-divider />
+                <evg-menu-item>
+                  <a href="https://wrap.ngo">
+                    <evg-menu-item-content>
+                      Menu item title
+                    </evg-menu-item-content>
+                    <evg-icon icon="arrow-right" />
+                  </a>
+                </evg-menu-item>
+                <evg-divider />
               </evg-grid-item>
             ))}
           </evg-grid>

@@ -2,14 +2,14 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import path from 'node:path';
 
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  stories: [
+    '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
   ],
-  "addons": [
+  addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    "@chromatic-com/storybook",
+    '@chromatic-com/storybook',
     {
       name: '@storybook/addon-essentials',
       options: {
@@ -21,7 +21,7 @@ const config: StorybookConfig = {
         viewport: true,
       },
     },
-    "@storybook/addon-interactions",
+    '@storybook/addon-interactions',
     {
       name: '@storybook/preset-scss',
       options: {
@@ -35,9 +35,9 @@ const config: StorybookConfig = {
       }
     },
   ],
-  "framework": {
-    "name": "@storybook/react-vite",
-    "options": {}
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
   },
   staticDirs: [path.resolve(__dirname, '../src/assets')],
 };
