@@ -58,8 +58,12 @@ export class Icon extends LitElement {
   }
 
   private get iconSet() {
-    if (this.set === 'functional') return functionalIcons;
-    if (this.set === 'distinctive') return distinctiveIcons;
+    if (this.set === 'functional') {
+      return functionalIcons;
+    }
+    if (this.set === 'distinctive') {
+      return distinctiveIcons;
+    }
     return icons;
   }
 
