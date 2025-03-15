@@ -103,3 +103,20 @@ export function Data(props) {
     </evg-menu-bar>
   );
 }
+
+export function LaPortal(props) {
+  return (
+    <>
+      <evg-section class="evg-theme-forest" padding="sm" {...props}>
+        <evg-wrap size="xxl">
+          <docs-placeholder>Navigation</docs-placeholder>
+        </evg-wrap>
+      </evg-section>
+      <evg-section class="evg-theme-default" padding="sm" {...props}>
+        <evg-wrap size="xxl">
+          <docs-placeholder>Secondary navigation</docs-placeholder>
+        </evg-wrap>
+      </evg-section>
+    </>
+  );
+}
