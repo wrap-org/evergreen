@@ -5,7 +5,7 @@ evg-alert {
   border-radius: var(--evg-radius-md);
   color: var(--_color);
   display: block;
-  padding: var(--evg-spacing-20);
+  padding: var(--evg-spacing-md);
 
   &[type='info'] {
     --_background: var(--evg-color-sky-25);

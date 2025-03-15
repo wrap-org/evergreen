@@ -1,10 +1,11 @@
 import { HtmlBoolean } from '../../..//types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
-import { Spacing } from '../../../types/tokens.type';
+import { Spacing, Radius } from '../../../types/tokens.type';
 
 export interface BoxAttributes {
   border?: HtmlBoolean;
   padding?: Spacing | 'none';
+  radius?: Radius | 'none';
 }
 
 declare global {
