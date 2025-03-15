@@ -104,19 +104,59 @@ export function Data(props) {
   );
 }
 
-export function LaPortal(props) {
+export function LaPortal({
+  secondaryNav,
+  slot,
+  ...props
+}: {
+  readonly secondaryNav?: boolean;
+  readonly slot?: string;
+}) {
   return (
-    <>
-      <evg-section class="evg-theme-forest" padding="sm" {...props}>
-        <evg-wrap size="xxl">
-          <docs-placeholder>Navigation</docs-placeholder>
-        </evg-wrap>
-      </evg-section>
-      <evg-section class="evg-theme-default" padding="sm" {...props}>
-        <evg-wrap size="xxl">
-          <docs-placeholder>Secondary navigation</docs-placeholder>
-        </evg-wrap>
-      </evg-section>
-    </>
+    <div slot={slot} {...props}>
+      <evg-menu-bar compact class="evg-theme-forest">
+        <img
+          src="/images/placeholder/400x200.svg"
+          alt="LA Portal logo"
+          width="75"
+          height="37"
+        />
+        <nav aria-label="Main navigation">
+          <evg-menu-item>
+            <a href="https://wrap.ngo">
+              <evg-menu-item-content>eTEEP</evg-menu-item-content>
+            </a>
+          </evg-menu-item>
+        </nav>
+        <nav aria-label="Secondary navigation">
+          <evg-menu-item>
+            <a href="https://wrap.ngo">
+              Manage data
+              <evg-icon icon="edit" />
+            </a>
+          </evg-menu-item>
+          <evg-menu-item>
+            <a href="https://wrap.ngo">
+              Firstname
+              <evg-icon icon="user" />
+            </a>
+          </evg-menu-item>
+        </nav>
+      </evg-menu-bar>
+      {secondaryNav && (
+        <evg-menu-bar compact class="evg-theme-default">
+          <nav aria-label="Tertiary navigation">
+            <evg-menu-item>
+              <a href="https://wrap.ngo">
+                <evg-icon icon="arrow-left" />
+                <evg-menu-item-content>
+                  Southampton City Council
+                </evg-menu-item-content>
+              </a>
+            </evg-menu-item>
+          </nav>
+        </evg-menu-bar>
+      )}
+    </div>
   );
 }

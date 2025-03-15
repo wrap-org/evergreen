@@ -9,10 +9,16 @@ export default {
   },
 };
 
-export function AppLayout({ children }) {
+export function AppLayout({
+  secondaryNav,
+  children,
+}: {
+  readonly secondaryNav?: boolean;
+  readonly children: React.ReactNode;
+}) {
   return (
     <evg-app header="sticky">
-      <Navigation slot="header" />
+      <Navigation secondaryNav={secondaryNav} slot="header" />
       {children}
     </evg-app>
   );

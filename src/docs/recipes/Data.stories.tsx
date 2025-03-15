@@ -12,7 +12,7 @@ export default {
 
 export function AppLayout({ children }) {
   return (
-    <evg-app header="sticky">
+    <evg-app>
       <Navigation slot="header" />
       {children}
       <Footer slot="footer" />
