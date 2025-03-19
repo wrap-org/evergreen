@@ -78,5 +78,5 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
-- `Sticky` has been replaces with `evg-sticky`
+- `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
