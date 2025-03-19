@@ -5,6 +5,13 @@ import './Enter';
 
 export default {
   component: 'evg-enter',
+  parameters: {
+    docs: {
+      description: {
+        component: `The enter component can be wrapped around content to animate it into view.`,
+      },
+    },
+  },
   argTypes: {
     type: {
       control: {
@@ -12,11 +19,19 @@ export default {
       },
       options: ['fade', 'fade-in-down', 'fade-in-up', 'boing'],
     },
-  },
-  parameters: {
-    docs: {
-      description: {
-        component: `The enter component can be wrapped around content to animate it into view.`,
+    delay: {
+      control: {
+        type: 'text',
+      },
+    },
+    enterOnScroll: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    fill: {
+      control: {
+        type: 'boolean',
       },
     },
   },
@@ -32,7 +47,6 @@ export const Enter: StoryFn = (args) => (
 
 Enter.args = {
   type: 'fade',
-  enter: true,
   delay: '0.5',
   fill: false,
   enterOnScroll: false,
@@ -72,7 +86,6 @@ export const EnterTypes: StoryFn = (args) => (
 );
 
 EnterTypes.args = {
-  enter: true,
   'enter-on-scroll': true,
 };
 
@@ -89,6 +102,5 @@ export const OnScroll: StoryFn = (args) => (
 
 OnScroll.args = {
   type: 'boing',
-  enter: true,
   'enter-on-scroll': true,
 };

@@ -7,7 +7,6 @@ import { HtmlBoolean } from 'src/types/html-boolean.type';
 
 export interface EnterAttributes {
   type?: 'fade' | 'fade-in-down' | 'fade-in-up' | 'boing';
-  enter?: HtmlBoolean;
   delay?: string | number;
   enterOnScroll?: HtmlBoolean;
   /**
@@ -28,10 +27,6 @@ export class Enter extends LitElement {
       type: String,
       reflect: true,
     },
-    enter: {
-      type: String,
-      reflect: true,
-    },
     enterOnScroll: {
       type: Boolean,
       reflect: true,
@@ -45,7 +40,6 @@ export class Enter extends LitElement {
   };
 
   type = 'fade';
-  enter = true;
   enterOnScroll = false;
   delay = '0.5';
   fill = false;
