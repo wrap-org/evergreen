@@ -104,7 +104,7 @@ DefinitionList.args = {
 };
 
 const definitionDescription = `
-The \`<dl>\` HTML element represents a description list. 
+The \`<dl>\` HTML element represents a description list.
 The element encloses a list of groups of terms (specified using the \`<dt>\` element) and descriptions (provided by \`<dd>\` elements).
 `;
 
