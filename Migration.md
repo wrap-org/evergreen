@@ -83,5 +83,5 @@
   - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
 - `Label` has been replaced with `evg-label`
   `evg-label` should always wrap a `label`, `span` or `legend` element
-- `Sticky` has been replaces with `evg-sticky`
+- `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
