@@ -78,6 +78,6 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
-- `Enter` has been replaced with `evg-enter`. 
+- `Enter` has been replaced with `evg-enter`.
   - `enter` has been removed as a prop
   - `enterOnScroll` has been added as a prop
