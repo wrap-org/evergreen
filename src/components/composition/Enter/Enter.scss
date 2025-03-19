@@ -52,7 +52,6 @@ evg-enter {
   animation-timing-function: var(--evg-transition-timing);
   display: block;
   opacity: 0;
-  z-index: 1;
 
   &[type='boing'] {
     animation-duration: var(--evg-transition-duration-boing);
