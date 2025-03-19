@@ -43,7 +43,7 @@ export class Enter extends LitElement {
   enterOnScroll = false;
   delay = '0.5';
   fill = false;
-  _inView = false;
+  private _inView = false;
 
   connectedCallback(): void {
     super.connectedCallback();
