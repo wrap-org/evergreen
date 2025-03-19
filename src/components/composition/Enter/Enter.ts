@@ -53,7 +53,6 @@ export class Enter extends LitElement {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               this._inView = true;
-              console.log('in view', this._inView);
               this.observer?.unobserve(this);
             }
           });
