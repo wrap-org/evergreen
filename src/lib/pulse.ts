@@ -22,17 +22,12 @@ export const pulse = css`
   }
 
   :host {
-    --evg-loading-delay: 0.5s;
-    --evg-transition-duration-enter: 0.5s;
-    --evg-transition-duration-pulse: 1.5s;
-    --evg-transition-timing-enter: ease-in-out;
-    --evg-transition-timing-pulse: ease-in-out;
+    --evg-loading-duration-pulse: 2.4s;
 
     animation:
-      fade-in var(--evg-transition-duration-enter) forwards
-        var(--evg-transition-timing-enter) var(--evg-loading-delay),
-      pulse var(--evg-transition-duration-pulse) infinite
-        var(--evg-transition-timing-pulse);
+      fade-in var(--evg-transition-duration) forwards var(--evg-transition),
+      pulse var(--evg-loading-duration-pulse) infinite
+        var(--evg-transition-timing);
     appearance: none;
     background: linear-gradient(
       to right,
