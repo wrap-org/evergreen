@@ -89,3 +89,8 @@
   - `evg-icon` can be used directly within a list child element, instead of as a `List.Item` prop.
 - `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
+- `FormGroup` has been replaced with `evg-form-group`
+  - The `FormGroup` sub-components have been removed
+  - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
+- `Label` has been replaced with `evg-label`
+  `evg-label` should always wrap a `label`, `span` or `legend` element
