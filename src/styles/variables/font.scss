@@ -1,18 +1,60 @@
 $sizes: (
-  'display-lg': var(--evg-font-size-display-lg),
-  'display-md': var(--evg-font-size-display-md),
-  'display-sm': var(--evg-font-size-display-sm),
-  'heading-xl': var(--evg-font-size-heading-xl),
-  'heading-lg': var(--evg-font-size-heading-lg),
-  'heading-md': var(--evg-font-size-heading-md),
-  'heading-sm': var(--evg-font-size-heading-sm),
-  'heading-xs': var(--evg-font-size-heading-xs),
-  'heading-xxs': var(--evg-font-size-heading-xxs),
-  'body-xl': var(--evg-font-size-body-xl),
-  'body-lg': var(--evg-font-size-body-lg),
-  'body-md': var(--evg-font-size-body-md),
-  'body-sm': var(--evg-font-size-body-sm),
-  'body-xs': var(--evg-font-size-body-xs),
+  'display-lg': (
+    size: var(--evg-font-size-display-lg),
+    line-height: var(--evg-font-line-height-xs),
+  ),
+  'display-md': (
+    size: var(--evg-font-size-display-md),
+    line-height: var(--evg-font-line-height-xs),
+  ),
+  'display-sm': (
+    size: var(--evg-font-size-display-sm),
+    line-height: var(--evg-font-line-height-xs),
+  ),
+  'heading-xl': (
+    size: var(--evg-font-size-heading-xl),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'heading-lg': (
+    size: var(--evg-font-size-heading-lg),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'heading-md': (
+    size: var(--evg-font-size-heading-md),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'heading-sm': (
+    size: var(--evg-font-size-heading-sm),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'heading-xs': (
+    size: var(--evg-font-size-heading-xs),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'heading-xxs': (
+    size: var(--evg-font-size-heading-xxs),
+    line-height: var(--evg-font-line-height-sm),
+  ),
+  'body-xl': (
+    size: var(--evg-font-size-body-xl),
+    line-height: var(--evg-font-line-height),
+  ),
+  'body-lg': (
+    size: var(--evg-font-size-body-lg),
+    line-height: var(--evg-font-line-height),
+  ),
+  'body-md': (
+    size: var(--evg-font-size-body-md),
+    line-height: var(--evg-font-line-height),
+  ),
+  'body-sm': (
+    size: var(--evg-font-size-body-sm),
+    line-height: var(--evg-font-line-height),
+  ),
+  'body-xs': (
+    size: var(--evg-font-size-body-xs),
+    line-height: var(--evg-font-line-height),
+  ),
 );
 
 $weights: (

@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../variables/font';
 @use '../variables/color';
 
@@ -35,9 +36,12 @@
   }
 
   &-size {
-    @each $name, $size in font.$sizes {
+    @each $name, $value in font.$sizes {
+      $size: map.get($value, size);
+      $line-height: map.get($value, line-height);
       &-#{$name} {
         font-size: $size;
+        line-height: $line-height;
       }
     }
   }
