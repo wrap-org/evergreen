@@ -53,9 +53,7 @@ export const ComposingElements: StoryFn = () => (
         </evg-grid>
       </evg-grid-item>
       <evg-grid-item>
-        <evg-help-text>
-          Collapsable help text can be grouped with the label on the left
-        </evg-help-text>
+        <evg-help-text>Help Text</evg-help-text>
       </evg-grid-item>
     </evg-grid>
     <evg-input>
