@@ -12,19 +12,13 @@ export default {
           'Used as a loading placeholder before the content is available.',
       },
     },
-    a11y: {
-      config: {
-        // Getting a false positive: h1 element correctly has no findable text content
-        rules: [{ id: 'empty-heading', enabled: false }],
-      },
-    },
   },
 } satisfies Meta;
 
 export const LoadingText = () => (
   <>
     <h1 className="evg-spacing-bottom-sm">
-      <evg-loading-text>Loading title</evg-loading-text>
+      <evg-loading-text ariaHidden={false}>Loading title</evg-loading-text>
     </h1>
     <p>
       <evg-loading-text>Loading text</evg-loading-text>
