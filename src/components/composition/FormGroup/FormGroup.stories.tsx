@@ -23,7 +23,9 @@ export default {
 
 export const FormGroup: StoryFn = (args) => (
   <evg-form-group {...args}>
-    <label htmlFor="name">Form group label</label>
+    <evg-label>
+      <label htmlFor="name">Form group label</label>
+    </evg-label>
     <evg-input>
       <input id="name" type="text" />
     </evg-input>
@@ -41,7 +43,9 @@ export const ComposingElements: StoryFn = () => (
       <evg-grid-item>
         <evg-grid align-items="center">
           <evg-grid-item grow>
-            <label htmlFor="composing-elements">Form group label</label>
+            <evg-label>
+              <label htmlFor="composing-elements">Form group label</label>
+            </evg-label>
           </evg-grid-item>
           <evg-grid-item>
             <evg-icon icon="circle-information" variant="default" />
