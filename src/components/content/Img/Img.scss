@@ -2,11 +2,14 @@
 @use '../../../styles/variables/spacing';
 
 evg-img {
-  --evg-icon-size: 1em;
-  --evg-icon-baseline-adjust: 0;
-  background: var(--evg-color-forest-25);
-  color: var(--evg-color-forest-75);
   display: inline-block;
+
+  &:has(evg-icon) {
+    --evg-icon-size: 1em;
+    --evg-icon-baseline-adjust: 0;
+    background: var(--evg-color-forest-25);
+    color: var(--evg-color-forest-75);
+  }
 
   &[block],
   &[block] img,
