@@ -9,6 +9,7 @@
 @use 'utilities/spacing';
 @use 'utilities/text';
 @use 'utilities/theme';
+@use 'utilities/screen-reader';
 
 @use '../components/composition/App/App';
 @use '../components/composition/Grid/Grid';
