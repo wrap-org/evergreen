@@ -209,16 +209,15 @@ export function ThirdLevel() {
 
           <evg-card radius="md" layout="thumb">
             <evg-card-img>
-              <img
-                src="/images/placeholder/400x300.svg"
-                alt="Placeholder"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <evg-img aspect-ratio="1 / 1" radius="sm" padding="sm">
+                <evg-icon
+                  icon="document-download"
+                  class="evg-text-size-heading-xl"
+                />
+              </evg-img>
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body evg-spacing-bottom-sm">
+              <h3 className="evg-text-size-heading-sm evg-text-family-body">
                 Courtauld 2030 Annual Progress Report 2024
               </h3>
               <evg-grid justify-content="space-between" align-items="center">
