@@ -9,7 +9,7 @@ export default {
 
 export function Wrap(props) {
   return (
-    <evg-menu-bar class="evg-theme-default" {...props}>
+    <evg-header class="evg-theme-default" {...props}>
       <a href="https://wrap.ngo">
         <img
           src="/images/logo/forest.svg"
@@ -69,13 +69,13 @@ export function Wrap(props) {
           </button>
         </evg-button>
       </nav>
-    </evg-menu-bar>
+    </evg-header>
   );
 }
 
 export function Data(props) {
   return (
-    <evg-menu-bar class="evg-theme-default" {...props}>
+    <evg-header class="evg-theme-default" {...props}>
       <a href="https://wrap.ngo">
         <img
           src="/images/logo/forest.svg"
@@ -100,7 +100,7 @@ export function Data(props) {
           </a>
         </evg-button>
       </nav>
-    </evg-menu-bar>
+    </evg-header>
   );
 }
 
@@ -114,7 +114,7 @@ export function LaPortal({
 }) {
   return (
     <div slot={slot} {...props}>
-      <evg-menu-bar compact class="evg-theme-forest">
+      <evg-header compact class="evg-theme-forest">
         <img
           src="/images/placeholder/400x200.svg"
           alt="LA Portal logo"
@@ -142,9 +142,9 @@ export function LaPortal({
             </a>
           </evg-menu-item>
         </nav>
-      </evg-menu-bar>
+      </evg-header>
       {secondaryNav && (
-        <evg-menu-bar compact class="evg-theme-default">
+        <evg-header compact class="evg-theme-default">
           <nav aria-label="Tertiary navigation">
             <evg-menu-item>
               <a href="https://wrap.ngo">
@@ -155,7 +155,7 @@ export function LaPortal({
               </a>
             </evg-menu-item>
           </nav>
-        </evg-menu-bar>
+        </evg-header>
       )}
     </div>
   );

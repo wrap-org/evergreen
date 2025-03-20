@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 export default {
-  title: 'Components/Canvas/MenuBar',
+  title: 'Components/Canvas/Header',
   parameters: {
     layout: 'fullscreen',
   },
@@ -27,7 +27,7 @@ export default {
 } satisfies Meta;
 
 const Template: StoryFn = ({ theme, ...args }) => (
-  <evg-menu-bar class={`evg-theme-${theme}`} {...args}>
+  <evg-header class={`evg-theme-${theme}`} {...args}>
     <a href="https://wrap.ngo">
       <img
         src={
@@ -91,12 +91,12 @@ const Template: StoryFn = ({ theme, ...args }) => (
         </button>
       </evg-button>
     </nav>
-  </evg-menu-bar>
+  </evg-header>
 );
 
-export const MenuBar = Template.bind({});
+export const Header = Template.bind({});
 
-MenuBar.args = {
+Header.args = {
   theme: 'default',
   compact: false,
   raised: false,
