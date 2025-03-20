@@ -78,3 +78,11 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+- `LoadingSpinner` has been replaced with `evg-loading-spinner`
+- `LoadingImg` has been replaced with `evg-loading-img`
+  - This needs to be wrapped by a `evg-img` tag
+- `LoadingText` and `LoadingTitle` has been replaced with `evg-loading-text`
+  - This needs to be wrapped by a text tag e.g. `h1` or `p`.
+- `LoadingButton` has been replaced with `evg-loading-button`
+  - This needs to be wrapped by a `evg-button` tag
+  - The props have been removed and the size instead can be controlled by the wrapping `evg-button` component
