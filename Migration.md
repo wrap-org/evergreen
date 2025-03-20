@@ -78,3 +78,5 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+- `Modal` has been replaced with custom styles on `dialog`.
+  - `ModalHeader` and `ModalInner` have also been removed - box can be used to create a modal canvas instead.
