@@ -25,7 +25,7 @@ export const Label: StoryFn = () => (
         htmlFor="input-with-secondary-label"
         className="evg-spacing-top-lg"
       >
-        Seconday Label
+        Secondary Label
       </label>
     </evg-label>
     <evg-input>

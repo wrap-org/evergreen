@@ -78,3 +78,8 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+- `FormGroup` has been replaced with `evg-form-group`
+  - The `FormGroup` sub-components have been removed
+  - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
+- `Label` has been replaced with `evg-label`
+  `evg-label` should always wrap a `label`, `span` or `legend` element
