@@ -1,6 +1,11 @@
 @use '../../../styles/variables/radius';
+@use '../../../styles/variables/spacing';
 
 evg-img {
+  --evg-icon-size: 1em;
+  --evg-icon-baseline-adjust: 0;
+  background: var(--evg-color-forest-25);
+  color: var(--evg-color-forest-75);
   display: inline-block;
 
   &[block],
@@ -43,5 +48,11 @@ evg-img {
   &[object-position] img,
   &[object-position] evg-loading-img {
     object-position: var(--evg-img-object-position);
+  }
+
+  @each $size in spacing.$sizes {
+    &[padding='#{$size}'] {
+      padding: var(--evg-spacing-#{$size});
+    }
   }
 }
