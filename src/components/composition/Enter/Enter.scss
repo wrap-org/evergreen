@@ -1,0 +1,68 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -1em, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translate(0, 1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes boing {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+evg-enter {
+  animation-duration: var(--evg-transition-duration);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: var(--evg-transition-enter-animation);
+  animation-timing-function: var(--evg-transition-timing);
+  display: block;
+  opacity: 0;
+
+  &[type='boing'] {
+    animation-duration: var(--evg-transition-duration-boing);
+    animation-timing-function: var(--evg-transition-timing-boing);
+  }
+
+  &[delay] {
+    animation-delay: var(--evg-transition-enter-delay);
+  }
+
+  &[fill]:not([fill='false']) {
+    display: grid;
+  }
+}

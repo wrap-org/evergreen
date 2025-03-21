@@ -15,6 +15,7 @@
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Meta/Meta';
 @use '../components/composition/Wrap/Wrap';
+@use '../components/composition/Enter/Enter';
 @use '../components/composition/Sticky/Sticky';
 
 @use '../components/canvas/Alert/Alert';
@@ -27,6 +28,7 @@
 @use '../components/canvas/Header/Header.scss';
 @use '../components/canvas/Section/Section';
 
+@use '../components/control/Breadcrumb/Breadcrumb';
 @use '../components/control/Button/Button';
 @use '../components/control/Input/Input';
 @use '../components/control/Link/Link';
@@ -41,6 +43,8 @@
 @use '../components/content/Img/Img';
 @use '../components/content/Stat/Stat';
 @use '../components/content/Video/Video';
+
+@use '../components/content/List/List';
 
 :root {
   --evg-button-padding-inline: var(--evg-spacing-md);
