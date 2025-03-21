@@ -61,7 +61,7 @@ evg-card {
       --evg-card-img-radius: var(--evg-card-radius);
 
       grid-template-areas: 'image content';
-      grid-template-columns: calc(8rem + var(--evg-card-content-padding)) 1fr;
+      grid-template-columns: auto 1fr;
       grid-template-rows: 1fr;
     }
   }

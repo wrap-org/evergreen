@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 import { HtmlBoolean } from '../../../types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
-import { Radius } from '../../../types/tokens.type';
+import { Radius, Spacing } from '../../../types/tokens.type';
 
 export interface ImgAttributes {
   block?: HtmlBoolean;
@@ -12,6 +12,7 @@ export interface ImgAttributes {
   radius?: Radius;
   objectFit?: 'cover' | 'contain';
   objectPosition?: string;
+  padding?: Spacing;
 }
 
 @customElement('evg-img')
@@ -48,6 +49,10 @@ export class Img extends LitElement {
       type: String,
       reflect: true,
       attribute: 'object-position',
+    },
+    padding: {
+      type: String,
+      reflect: true,
     },
   };
 

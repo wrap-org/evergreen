@@ -87,7 +87,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
-    "@wrap.ngo/tokens": "2.13.0",
+    "@wrap.ngo/tokens": "2.14.0",
     "classnames": "^2.3.1",
     "lit": "3.2.1",
     "normalize.css": "8.0.1",
