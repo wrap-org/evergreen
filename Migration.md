@@ -78,5 +78,9 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+- `List` has been replaced with `evg-list`.
+  - `List` must contain an unordered, ordered, or definition list element.
+  - `List.Item` has been removed, as the native list `<li>` component is used to control the list elements.
+  - `evg-icon` can be used directly within a list child element, instead of as a `List.Item` prop.
 - `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
