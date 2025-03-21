@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useEffect } from 'react';
 
-import DrawerContent from './DrawerContent';
+import { MobileNav } from '../../../docs/recipes/Navigation.stories';
 
 export default {
   title: 'Components/Canvas/Drawer',
@@ -29,7 +29,7 @@ const Template: StoryFn = (args) => {
   return (
     <evg-drawer {...args}>
       <dialog>
-        <DrawerContent />
+        <MobileNav />
       </dialog>
     </evg-drawer>
   );

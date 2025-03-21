@@ -1,14 +1,12 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
-import DrawerContent from '../Drawer/DrawerContent';
-
-import HeaderContent from './HeaderContent';
-import AboutUs from './mega-menu/AboutUs';
-import Regions from './mega-menu/Regions';
-import Resources from './mega-menu/Resources';
-import TakeAction from './mega-menu/TakeAction';
-import WhatWeDo from './mega-menu/WhatWeDo';
+import { MobileNav, Header } from '../../../docs/recipes/Navigation.stories';
+import AboutUs from '../../../docs/recipes/mega-menu/AboutUs';
+import Regions from '../../../docs/recipes/mega-menu/Regions';
+import Resources from '../../../docs/recipes/mega-menu/Resources';
+import TakeAction from '../../../docs/recipes/mega-menu/TakeAction';
+import WhatWeDo from '../../../docs/recipes/mega-menu/WhatWeDo';
 
 export default {
   title: 'Components/Canvas/Header',
@@ -40,9 +38,7 @@ const Template: StoryFn = ({ theme, ...args }) => {
 
   return (
     <>
-      <evg-header class={`evg-theme-${theme}`} {...args}>
-        <HeaderContent theme={theme} active={active} setActive={setActive} />
-      </evg-header>
+      <Header theme={theme} active={active} setActive={setActive} {...args} />
       <WhatWeDo open={active === 'what-we-do'} />
       <TakeAction open={active === 'take-action'} />
       <Resources open={active === 'resources'} />
@@ -50,16 +46,18 @@ const Template: StoryFn = ({ theme, ...args }) => {
       <Regions open={active === 'regions'} />
       <evg-drawer>
         <dialog>
-          <DrawerContent />
+          <MobileNav />
         </dialog>
       </evg-drawer>
     </>
   );
 };
 
-export const Header = Template.bind({});
+export const Default = Template.bind({});
 
-Header.args = {
+Default.storyName = 'Header';
+
+Default.args = {
   theme: 'default',
   compact: false,
   raised: false,
