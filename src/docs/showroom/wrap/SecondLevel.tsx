@@ -102,7 +102,13 @@ export function SecondLevel() {
         <evg-grid-item small-mobile="12" small-desktop="6" fill>
           <evg-section padding="fluid-lg" class="evg-theme-forest">
             <evg-wrap size="xxl" gutter="fluid-lg">
-              <docs-placeholder inline>Breadcrumb</docs-placeholder>
+              <evg-breadcrumb class="evg-spacing-bottom-md">
+                <ol>
+                  <li>
+                    <a href="https://wrap.ngo">Take action</a>
+                  </li>
+                </ol>
+              </evg-breadcrumb>
               <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
                 Food and drink
               </h1>

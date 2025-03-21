@@ -1,0 +1,54 @@
+@use '../../../styles/variables/spacing';
+
+evg-list {
+  --evg-list-spacing: 0;
+  display: block;
+
+  li,
+  dl > div {
+    margin-bottom: var(--evg-list-spacing);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &[variant='unstyled'] {
+    ul,
+    ol,
+    dl {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &[variant='icon'] {
+    ul,
+    ol {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    li,
+    dl > div {
+      padding-left: var(--evg-icon-size);
+    }
+
+    evg-icon {
+      /* The 4px handles inline block magic spacing */
+      margin-left: calc(-1 * (var(--evg-icon-size) + 4px));
+    }
+  }
+
+  @each $size in spacing.$sizes {
+    &[spacing='#{$size}'] {
+      --evg-list-spacing: var(--evg-spacing-#{$size});
+    }
+  }
+
+  &[spacing='none'] {
+    --evg-list-spacing: 0;
+  }
+}
