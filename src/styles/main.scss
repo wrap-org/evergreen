@@ -43,9 +43,11 @@
 @use '../components/content/Img/Img';
 @use '../components/content/Stat/Stat';
 @use '../components/content/Video/Video';
-
 @use '../components/content/List/List';
 
 :root {
-  --evg-button-padding-inline: var(--evg-spacing-md);
+  --evg-transition-duration-enter: 0.4s;
+
+  --evg-transition-enter: var(--evg-transition-duration-enter)
+    var(--evg-transition-timing);
 }

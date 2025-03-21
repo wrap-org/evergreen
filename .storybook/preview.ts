@@ -3,6 +3,7 @@ import { DocPage } from './DocPage';
 
 // Load the actual web components
 import '../src/components/composition/App/App';
+import '../src/components/composition/Collapse/Collapse';
 import '../src/components/composition/Grid/Grid';
 import '../src/components/composition/Grid/GridItem';
 import '../src/components/content/Badge/Badge';

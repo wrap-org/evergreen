@@ -1,7 +1,14 @@
 evg-drawer {
+  display: block;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+
   dialog {
-    background: var(--evg-color-cloud);
+    background: transparent;
     border: 0 none;
+    bottom: 0;
     box-shadow: var(--evg-shadow);
     display: flex;
     flex-direction: column;
@@ -12,28 +19,31 @@ evg-drawer {
     max-width: 25rem;
     opacity: 0;
     padding: 0;
+    pointer-events: auto;
+    position: fixed;
     right: 0;
+    top: 0;
     transform: translateX(100%);
     transition:
-      opacity var(--evg-transition),
-      display var(--evg-transition) allow-discrete,
-      overlay var(--evg-transition) allow-discrete,
-      transform var(--evg-transition);
+      opacity var(--evg-transition-enter),
+      display var(--evg-transition-enter) allow-discrete,
+      overlay var(--evg-transition-enter) allow-discrete,
+      transform var(--evg-transition-enter);
     width: 95vw;
 
     &::backdrop {
       background-color: var(--evg-color-forest);
       opacity: 0;
       transition:
-        opacity var(--evg-transition),
-        display var(--evg-transition) allow-discrete,
-        overlay var(--evg-transition) allow-discrete;
+        opacity var(--evg-transition-enter),
+        display var(--evg-transition-enter) allow-discrete,
+        overlay var(--evg-transition-enter) allow-discrete;
     }
 
     &[open] {
       opacity: 1;
       transform: none;
-      transition-delay: calc(var(--evg-transition-duration) * 0.5);
+      transition-delay: calc(var(--evg-transition-duration-enter) * 0.5);
     }
 
     &[open]::backdrop {
