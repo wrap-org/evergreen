@@ -36,6 +36,7 @@ evg-button {
     justify-content: center;
     letter-spacing: inherit;
     line-height: var(--_line-height);
+    min-height: calc(var(--_line-height) * 1em + var(--_padding-block) * 2);
     padding-block: var(--_padding-block);
     padding-inline: var(--_padding-inline);
     -webkit-tap-highlight-color: transparent;
@@ -164,7 +165,6 @@ evg-button {
   }
 
   &[width='square'] {
-    --_line-height: 1;
     --_padding-inline: var(--evg-button-padding-block);
 
     evg-loading-button,

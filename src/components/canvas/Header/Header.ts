@@ -19,3 +19,67 @@ declare module 'react' {
     }
   }
 }
+
+export interface HeaderLogoAttributes {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'evg-header-logo': HeaderLogoAttributes;
+  }
+}
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'evg-header-logo': JSXCustomElement<HeaderLogoAttributes>;
+    }
+  }
+}
+
+export interface HeaderPrimaryNavAttributes {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'evg-header-primary-nav': HeaderPrimaryNavAttributes;
+  }
+}
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'evg-header-primary-nav': JSXCustomElement<HeaderPrimaryNavAttributes>;
+    }
+  }
+}
+
+export interface HeaderSecondaryNavAttributes {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'evg-header-secondary-nav': HeaderSecondaryNavAttributes;
+  }
+}
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'evg-header-secondary-nav': JSXCustomElement<HeaderSecondaryNavAttributes>;
+    }
+  }
+}
+
+export interface HeaderMobileNavAttributes {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'evg-header-mobile-nav': HeaderMobileNavAttributes;
+  }
+}
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'evg-header-mobile-nav': JSXCustomElement<HeaderMobileNavAttributes>;
+    }
+  }
+}

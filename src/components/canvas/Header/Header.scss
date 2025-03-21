@@ -4,16 +4,17 @@ evg-header {
   color: var(--evg-theme-color);
   display: flex;
   gap: var(--evg-spacing-lg);
-  padding: var(--evg-spacing-lg);
+  justify-content: space-between;
+  padding: var(--evg-spacing-md);
+
+  @media (width >= 1024px) {
+    padding: var(--evg-spacing-lg);
+  }
 
   nav {
     --evg-theme-link-color: var(--evg-theme-color);
     display: flex;
     gap: var(--evg-spacing-sm);
-
-    &:first-of-type {
-      flex-grow: 1;
-    }
   }
 
   &[raised]:not([raised='false']) {
@@ -24,5 +25,25 @@ evg-header {
 
   &[compact]:not([compact='false']) {
     padding: var(--evg-spacing-sm) var(--evg-spacing-md);
+  }
+}
+
+evg-header-primary-nav {
+  display: none;
+  flex-grow: 1;
+}
+
+evg-header-secondary-nav {
+  display: none;
+}
+
+@media (width >= 1280px) {
+  evg-header-primary-nav,
+  evg-header-secondary-nav {
+    display: block;
+  }
+
+  evg-header-mobile-nav {
+    display: none;
   }
 }

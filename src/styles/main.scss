@@ -23,6 +23,7 @@
 @use '../components/canvas/Card/Card';
 @use '../components/canvas/Card/CardContent';
 @use '../components/canvas/Card/CardImg';
+@use '../components/canvas/Drawer/Drawer';
 @use '../components/canvas/Header/Header.scss';
 @use '../components/canvas/Section/Section';
 
@@ -40,3 +41,7 @@
 @use '../components/content/Img/Img';
 @use '../components/content/Stat/Stat';
 @use '../components/content/Video/Video';
+
+:root {
+  --evg-button-padding-inline: var(--evg-spacing-md);
+}

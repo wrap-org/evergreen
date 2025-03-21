@@ -1,0 +1,58 @@
+evg-drawer {
+  dialog {
+    background: var(--evg-color-cloud);
+    border: 0 none;
+    box-shadow: var(--evg-shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: auto;
+    margin: 0;
+    max-height: 100%;
+    max-width: 25rem;
+    opacity: 0;
+    padding: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition:
+      opacity var(--evg-transition),
+      display var(--evg-transition) allow-discrete,
+      overlay var(--evg-transition) allow-discrete,
+      transform var(--evg-transition);
+    width: 95vw;
+
+    &::backdrop {
+      background-color: var(--evg-color-forest);
+      opacity: 0;
+      transition:
+        opacity var(--evg-transition),
+        display var(--evg-transition) allow-discrete,
+        overlay var(--evg-transition) allow-discrete;
+    }
+
+    &[open] {
+      opacity: 1;
+      transform: none;
+      transition-delay: calc(var(--evg-transition-duration) * 0.5);
+    }
+
+    &[open]::backdrop {
+      opacity: var(--evg-backdrop-opacity, 0.4);
+    }
+
+    > *:last-child {
+      flex-grow: 1;
+    }
+  }
+
+  @starting-style {
+    dialog[open] {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+}
