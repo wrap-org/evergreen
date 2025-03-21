@@ -67,7 +67,21 @@ export function ThirdLevel() {
         <evg-wrap size="xxl" gutter="fluid-lg">
           <evg-grid wrap="wrap" gap="none">
             <evg-grid-item small-mobile="12" small-desktop="6">
-              <docs-placeholder inline>Breadcrumb</docs-placeholder>
+              <evg-breadcrumb class="evg-spacing-bottom-md">
+                <ol>
+                  <li>
+                    <a href="https://wrap.ngo">Take action</a>
+                  </li>
+                  <li>
+                    <a href="https://wrap.ngo">Food and drink</a>
+                  </li>
+                  <li>
+                    <a href="https://wrap.ngo" aria-current="page">
+                      Initiatives
+                    </a>
+                  </li>
+                </ol>
+              </evg-breadcrumb>
               <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
                 The Courtauld Commitment 2030
               </h1>
@@ -209,16 +223,15 @@ export function ThirdLevel() {
 
           <evg-card radius="md" layout="thumb">
             <evg-card-img>
-              <img
-                src="/images/placeholder/400x300.svg"
-                alt="Placeholder"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <evg-img aspect-ratio="1 / 1" radius="sm" padding="sm">
+                <evg-icon
+                  icon="document-download"
+                  class="evg-text-size-heading-xl"
+                />
+              </evg-img>
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body evg-spacing-bottom-sm">
+              <h3 className="evg-text-size-heading-sm evg-text-family-body">
                 Courtauld 2030 Annual Progress Report 2024
               </h3>
               <evg-grid justify-content="space-between" align-items="center">

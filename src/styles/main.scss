@@ -15,6 +15,7 @@
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Meta/Meta';
 @use '../components/composition/Wrap/Wrap';
+@use '../components/composition/Sticky/Sticky';
 
 @use '../components/canvas/Alert/Alert';
 @use '../components/canvas/Box/Box';
@@ -25,6 +26,7 @@
 @use '../components/canvas/MenuBar/MenuBar.scss';
 @use '../components/canvas/Section/Section';
 
+@use '../components/control/Breadcrumb/Breadcrumb';
 @use '../components/control/Button/Button';
 @use '../components/control/Input/Input';
 @use '../components/control/Link/Link';
