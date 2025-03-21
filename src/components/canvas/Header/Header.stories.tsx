@@ -1,5 +1,14 @@
 import { Meta, StoryFn } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
+
+import DrawerContent from '../Drawer/DrawerContent';
+
+import HeaderContent from './HeaderContent';
+import AboutUs from './mega-menu/AboutUs';
+import Regions from './mega-menu/Regions';
+import Resources from './mega-menu/Resources';
+import TakeAction from './mega-menu/TakeAction';
+import WhatWeDo from './mega-menu/WhatWeDo';
 
 export default {
   title: 'Components/Canvas/Header',
@@ -26,86 +35,27 @@ export default {
   },
 } satisfies Meta;
 
-const Template: StoryFn = ({ theme, ...args }) => (
-  <evg-header class={`evg-theme-${theme}`} {...args}>
-    <evg-header-logo>
-      <a href="https://wrap.ngo">
-        <img
-          src={
-            theme === 'forest'
-              ? '/images/logo/white.svg'
-              : '/images/logo/forest.svg'
-          }
-          alt="WRAP logo"
-          width="166"
-          height="48"
-          loading="eager"
-        />
-      </a>
-    </evg-header-logo>
-    <evg-header-primary-nav>
-      <nav aria-label="Main navigation">
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>What we do</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Take action</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Resources</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>About</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Latest</evg-menu-item-content>
-          </a>
-        </evg-menu-item>
-      </nav>
-    </evg-header-primary-nav>
-    <evg-header-secondary-nav>
-      <nav aria-label="Secondary navigation">
-        <evg-button>
-          <button type="button">
-            Regions
-            <evg-icon icon="chevron-down" />
-          </button>
-        </evg-button>
-        <evg-button>
-          <button type="button">
-            Log in / Sign up
-            <evg-icon icon="user" />
-          </button>
-        </evg-button>
-        <evg-button width="square">
-          <button type="button" aria-label="Search">
-            <evg-icon icon="search" />
-          </button>
-        </evg-button>
-      </nav>
-    </evg-header-secondary-nav>
-    <evg-header-mobile-nav>
-      <evg-button width="square">
-        <button type="button" aria-label="Open mobile navigation">
-          <evg-icon icon="menu" />
-        </button>
-      </evg-button>
-    </evg-header-mobile-nav>
-  </evg-header>
-);
+const Template: StoryFn = ({ theme, ...args }) => {
+  const [active, setActive] = useState('');
+
+  return (
+    <>
+      <evg-header class={`evg-theme-${theme}`} {...args}>
+        <HeaderContent theme={theme} active={active} setActive={setActive} />
+      </evg-header>
+      <WhatWeDo open={active === 'what-we-do'} />
+      <TakeAction open={active === 'take-action'} />
+      <Resources open={active === 'resources'} />
+      <AboutUs open={active === 'about-us'} />
+      <Regions open={active === 'regions'} />
+      <evg-drawer>
+        <dialog>
+          <DrawerContent />
+        </dialog>
+      </evg-drawer>
+    </>
+  );
+};
 
 export const Header = Template.bind({});
 

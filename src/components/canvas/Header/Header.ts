@@ -68,6 +68,24 @@ declare module 'react' {
   }
 }
 
+export interface HeaderMegaMenuAttributes {
+  open?: HtmlBoolean;
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'evg-header-mega-menu': HeaderMegaMenuAttributes;
+  }
+}
+
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'evg-header-mega-menu': JSXCustomElement<HeaderMegaMenuAttributes>;
+    }
+  }
+}
+
 export interface HeaderMobileNavAttributes {}
 
 declare global {

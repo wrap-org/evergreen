@@ -19,7 +19,6 @@ evg-drawer {
     max-width: 25rem;
     opacity: 0;
     padding: 0;
-    pointer-events: auto;
     position: fixed;
     right: 0;
     top: 0;
@@ -42,6 +41,7 @@ evg-drawer {
 
     &[open] {
       opacity: 1;
+      pointer-events: auto;
       transform: none;
       transition-delay: calc(var(--evg-transition-duration-enter) * 0.5);
     }

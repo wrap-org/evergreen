@@ -1,3 +1,13 @@
+@mixin menu-item-hover-active {
+  --_background: var(--_background-hover);
+  --_color: var(--_color-hover);
+
+  @container style(--evg-theme-background: var(--evg-theme-background-forest)) {
+    --_background: var(--evg-color-forest-75);
+    --_color: var(--evg-color-cloud);
+  }
+}
+
 evg-menu-item {
   --_background: transparent;
   // Should these hover styles be part of themes?
@@ -45,13 +55,7 @@ evg-menu-item {
 
     @media (hover: hover) {
       &:not([disabled]):hover {
-        --_background: var(--_background-hover);
-        --_color: var(--_color-hover);
-
-        @container style(--evg-theme-background: var(--evg-theme-background-forest)) {
-          --_background: var(--evg-color-forest-75);
-          --_color: var(--evg-color-cloud);
-        }
+        @include menu-item-hover-active;
       }
     }
 
@@ -84,5 +88,16 @@ evg-menu-item {
     --_background: var(--_background-disabled);
     --_color: var(--_color-disabled);
     cursor: not-allowed;
+  }
+
+  &[active]:not([active='false']) button,
+  &[active]:not([active='false']) a {
+    --_background: var(--_background-hover);
+    --_color: var(--_color-hover);
+
+    @container style(--evg-theme-background: var(--evg-theme-background-forest)) {
+      --_background: var(--evg-color-forest-75);
+      --_color: var(--evg-color-cloud);
+    }
   }
 }
