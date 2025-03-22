@@ -1,9 +1,0 @@
-/*
-  This CSS file disables animations when running a11y tests on CI
-  It sets animation-related CSS variables to 0s
-*/
-
-:root {
-  --evg-transition-duration: 0s;
-  --evg-transition-duration-enter: 0s;
-}
