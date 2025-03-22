@@ -1,4 +1,4 @@
-/* 
+/*
   This CSS file disables animations when running a11y tests on CI
   It sets animation-related CSS variables to 0s
 */
