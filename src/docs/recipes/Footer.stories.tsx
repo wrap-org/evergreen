@@ -77,8 +77,8 @@ export function Full(props) {
                 <img
                   src="/images/logo/white.svg"
                   alt="WRAP logo"
-                  width="166"
-                  height="48"
+                  width="152"
+                  height="44"
                   loading="lazy"
                 />
               </evg-img>
@@ -137,8 +137,8 @@ export function Minimal(props) {
                 <img
                   src="/images/logo/white.svg"
                   alt="WRAP logo"
-                  width="166"
-                  height="48"
+                  width="152"
+                  height="44"
                   loading="lazy"
                 />
               </evg-img>

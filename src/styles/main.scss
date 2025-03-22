@@ -24,7 +24,8 @@
 @use '../components/canvas/Card/Card';
 @use '../components/canvas/Card/CardContent';
 @use '../components/canvas/Card/CardImg';
-@use '../components/canvas/MenuBar/MenuBar.scss';
+@use '../components/canvas/Drawer/Drawer';
+@use '../components/canvas/Header/Header';
 @use '../components/canvas/Section/Section';
 
 @use '../components/control/Breadcrumb/Breadcrumb';
@@ -43,3 +44,10 @@
 @use '../components/content/Stat/Stat';
 @use '../components/content/Video/Video';
 @use '../components/content/List/List';
+
+:root {
+  --evg-transition-duration-enter: 0.4s;
+
+  --evg-transition-enter: var(--evg-transition-duration-enter)
+    var(--evg-transition-timing);
+}

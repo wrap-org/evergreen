@@ -3,6 +3,8 @@ import { DocPage } from './DocPage';
 
 // Load the actual web components
 import '../src/components/composition/App/App';
+import '../src/components/composition/Collapse/Collapse';
+import '../src/components/composition/Enter/Enter';
 import '../src/components/composition/Grid/Grid';
 import '../src/components/composition/Grid/GridItem';
 import '../src/components/content/Badge/Badge';
@@ -13,6 +15,11 @@ import '../src/components/control/RadioCheckbox/RadioCheckbox';
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
+
+// Conditionally import the no-animations CSS file for a11y tests on CI
+if (process.env.CI === 'true') {
+  require('./a11y-no-animations.css');
+}
 
 const preview: Preview = {
   parameters: {

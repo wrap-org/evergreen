@@ -1,0 +1,83 @@
+evg-header {
+  align-items: center;
+  background: var(--evg-theme-background);
+  color: var(--evg-theme-color);
+  display: flex;
+  gap: var(--evg-spacing-lg);
+  justify-content: space-between;
+  padding: var(--evg-spacing-md);
+  position: relative;
+  z-index: 20;
+
+  @media (width >= 1024px) {
+    padding: var(--evg-spacing-lg);
+  }
+
+  nav {
+    --evg-theme-link-color: var(--evg-theme-color);
+    display: flex;
+    gap: var(--evg-spacing-sm);
+  }
+
+  &[raised]:not([raised='false']) {
+    border-radius: var(--evg-radius-lg);
+    // TODO should this be a token?
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &[compact]:not([compact='false']) {
+    padding: var(--evg-spacing-sm) var(--evg-spacing-md);
+  }
+}
+
+evg-header-primary-nav {
+  display: none;
+  flex-grow: 1;
+}
+
+evg-header-secondary-nav {
+  display: none;
+}
+
+evg-header-mega-menu {
+  display: none;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(-1rem);
+  transition:
+    opacity var(--evg-transition-enter),
+    display var(--evg-transition-enter) allow-discrete,
+    transform var(--evg-transition-enter);
+  width: 100%;
+  z-index: 10;
+
+  &[open] {
+    > * {
+      pointer-events: auto;
+    }
+  }
+}
+
+@media (width >= 1280px) {
+  evg-header-primary-nav,
+  evg-header-secondary-nav {
+    display: block;
+  }
+
+  evg-header-mobile-nav {
+    display: none;
+  }
+
+  evg-header-mega-menu[open]:not([open='false']) {
+    display: block;
+    opacity: 1;
+    transform: none;
+
+    @starting-style {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  }
+}

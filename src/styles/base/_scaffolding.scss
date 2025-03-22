@@ -4,6 +4,10 @@
 
 html {
   overscroll-behavior-y: none;
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 html,
