@@ -11,6 +11,19 @@ export default {
   title: 'Recipes/Mega Menu',
   parameters: {
     layout: 'fullscreen',
+    a11y: {
+      config: {
+        rules: [
+          // This is giving a false positive
+          // because of the entrance animation
+          {
+            id: 'color-contrast',
+            selector: 'evg-header-mega-menu',
+            enabled: false,
+          },
+        ],
+      },
+    },
   },
   tags: ['!autodocs'],
 } satisfies Meta;
