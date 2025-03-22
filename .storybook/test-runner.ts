@@ -10,7 +10,7 @@ const config: TestRunnerConfig = {
   async preVisit(page) {
     // Inject axe for accessibility testing
     await injectAxe(page);
-    
+
     // Disable animations
     await page.addStyleTag({
       content: `
