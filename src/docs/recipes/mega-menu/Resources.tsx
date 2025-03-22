@@ -4,6 +4,7 @@ export default function Resources({ open }: { readonly open: boolean }) {
   return (
     <evg-header-mega-menu
       id="resources"
+      role="menu"
       aria-label="resources"
       tabIndex={-1}
       open={open}
@@ -37,7 +38,9 @@ export default function Resources({ open }: { readonly open: boolean }) {
                     'Campaign assets',
                   ].map((item) => (
                     <evg-menu-item key={item}>
-                      <a href="https://wrap.ngo">{item}</a>
+                      <a href="https://wrap.ngo" role="menuitem">
+                        {item}
+                      </a>
                     </evg-menu-item>
                   ))}
                 </evg-grid-item>
@@ -56,7 +59,9 @@ export default function Resources({ open }: { readonly open: boolean }) {
                     'Archive',
                   ].map((item) => (
                     <evg-menu-item key={item}>
-                      <a href="https://wrap.ngo">{item}</a>
+                      <a href="https://wrap.ngo" role="menuitem">
+                        {item}
+                      </a>
                     </evg-menu-item>
                   ))}
                 </evg-grid-item>

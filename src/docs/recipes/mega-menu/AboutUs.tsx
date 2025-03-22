@@ -4,6 +4,7 @@ export default function About({ open }: { readonly open: boolean }) {
   return (
     <evg-header-mega-menu
       id="about-us"
+      role="menu"
       aria-label="about-us"
       tabIndex={-1}
       open={open}
@@ -29,7 +30,9 @@ export default function About({ open }: { readonly open: boolean }) {
                 'Media Centre',
               ].map((item) => (
                 <evg-menu-item key={item}>
-                  <a href="https://wrap.ngo">{item}</a>
+                  <a href="https://wrap.ngo" role="menuitem">
+                    {item}
+                  </a>
                 </evg-menu-item>
               ))}
             </evg-wrap>

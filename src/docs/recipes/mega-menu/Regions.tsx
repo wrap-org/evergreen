@@ -4,6 +4,7 @@ export default function Regions({ open }: { readonly open: boolean }) {
   return (
     <evg-header-mega-menu
       id="regions"
+      role="menu"
       aria-label="regions"
       tabIndex={-1}
       open={open}
@@ -31,7 +32,9 @@ export default function Regions({ open }: { readonly open: boolean }) {
                 'Cymru',
               ].map((item) => (
                 <evg-menu-item key={item}>
-                  <a href="https://wrap.ngo">{item}</a>
+                  <a href="https://wrap.ngo" role="menuitem">
+                    {item}
+                  </a>
                 </evg-menu-item>
               ))}
             </evg-wrap>

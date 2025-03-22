@@ -4,6 +4,7 @@ export default function WhatWeDo({ open }: { readonly open: boolean }) {
   return (
     <evg-header-mega-menu
       id="what-we-do"
+      role="menu"
       aria-label="what we do"
       tabIndex={-1}
       open={open}
@@ -33,7 +34,9 @@ export default function WhatWeDo({ open }: { readonly open: boolean }) {
                       {['Mission and vision', 'Services', 'Impact'].map(
                         (item) => (
                           <evg-menu-item key={item}>
-                            <a href="https://wrap.ngo">{item}</a>
+                            <a href="https://wrap.ngo" role="menuitem">
+                              {item}
+                            </a>
                           </evg-menu-item>
                         ),
                       )}
@@ -42,7 +45,9 @@ export default function WhatWeDo({ open }: { readonly open: boolean }) {
                       {['Case studies', 'Key reports', 'Get in touch'].map(
                         (item) => (
                           <evg-menu-item key={item}>
-                            <a href="https://wrap.ngo">{item}</a>
+                            <a href="https://wrap.ngo" role="menuitem">
+                              {item}
+                            </a>
                           </evg-menu-item>
                         ),
                       )}
@@ -62,7 +67,9 @@ export default function WhatWeDo({ open }: { readonly open: boolean }) {
                     'Accelerate the Circular Economy',
                   ].map((item) => (
                     <evg-menu-item key={item}>
-                      <a href="https://wrap.ngo">{item}</a>
+                      <a href="https://wrap.ngo" role="menuitem">
+                        {item}
+                      </a>
                     </evg-menu-item>
                   ))}
                 </evg-grid-item>

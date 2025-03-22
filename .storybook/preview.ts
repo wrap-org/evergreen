@@ -16,6 +16,11 @@ import '../src/components/control/RadioCheckbox/RadioCheckbox';
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
 
+// Conditionally import the no-animations CSS file for a11y tests on CI
+if (process.env.CI === 'true') {
+  require('./a11y-no-animations.css');
+}
+
 const preview: Preview = {
   parameters: {
     viewMode: 'docs',

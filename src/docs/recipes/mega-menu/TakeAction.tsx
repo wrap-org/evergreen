@@ -59,6 +59,7 @@ export default function TakeAction({ open }: { readonly open: boolean }) {
   return (
     <evg-header-mega-menu
       id="take-action"
+      role="menu"
       aria-label="take action"
       tabIndex={-1}
       open={open}
@@ -84,6 +85,7 @@ export default function TakeAction({ open }: { readonly open: boolean }) {
                         type="button"
                         aria-controls={id}
                         aria-expanded={active === id}
+                        role="menuitem"
                         onClick={() => {
                           setActive(id);
                         }}
@@ -104,7 +106,9 @@ export default function TakeAction({ open }: { readonly open: boolean }) {
                     <evg-collapse key={id} id={id} open={active === id}>
                       {items.map((item) => (
                         <evg-menu-item key={item}>
-                          <a href="https://wrap.ngo">{item}</a>
+                          <a href="https://wrap.ngo" role="menuitem">
+                            {item}
+                          </a>
                         </evg-menu-item>
                       ))}
                     </evg-collapse>
