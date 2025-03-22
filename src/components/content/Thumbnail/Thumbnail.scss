@@ -1,0 +1,57 @@
+evg-thumbnail {
+  --evg-icon-size: 1em;
+  --evg-icon-baseline-adjust: 0;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: var(--evg-color-forest-25);
+  border-radius: var(--evg-radius-sm);
+  color: var(--evg-color-forest-75);
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+  overflow: hidden;
+  width: 4rem;
+
+  &:has(evg-icon) {
+    padding: var(--evg-spacing-sm);
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  &[size='lg'],
+  &[size='xl'] {
+    border-radius: var(--evg-radius-md);
+    width: 5rem;
+
+    &:has(evg-icon) {
+      padding: var(--evg-spacing-md);
+    }
+  }
+
+  &[size='sm'] {
+    font-size: 2rem;
+    width: 3rem;
+  }
+
+  &[size='md'] {
+    font-size: 3rem;
+    width: 4rem;
+  }
+
+  &[size='lg'] {
+    font-size: 4rem;
+    width: 6rem;
+  }
+
+  &[size='xl'] {
+    font-size: 6rem;
+    width: 8rem;
+  }
+}

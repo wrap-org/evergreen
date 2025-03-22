@@ -4,13 +4,6 @@
 evg-img {
   display: inline-block;
 
-  &:has(evg-icon) {
-    --evg-icon-size: 1em;
-    --evg-icon-baseline-adjust: 0;
-    background: var(--evg-color-forest-25);
-    color: var(--evg-color-forest-75);
-  }
-
   &[block],
   &[block] img,
   &[block] evg-loading-img {
@@ -51,11 +44,5 @@ evg-img {
   &[object-position] img,
   &[object-position] evg-loading-img {
     object-position: var(--evg-img-object-position);
-  }
-
-  @each $size in spacing.$sizes {
-    &[padding='#{$size}'] {
-      padding: var(--evg-spacing-#{$size});
-    }
   }
 }
