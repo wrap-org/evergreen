@@ -50,16 +50,25 @@ export function TopLevel() {
   return (
     <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-wrap size="md" class="evg-text-align-center">
-          <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
-            What we do
-          </h1>
-          <p className="evg-text-size-body-lg evg-text-wrap-balance">
-            WRAP is a global environmental action NGO transforming our broken
-            product and food systems to create Circular Living. For the benefit
-            of the climate, nature, and people.
-          </p>
-        </evg-wrap>
+        <evg-section-img treatment="dark">
+          <img
+            src="/images/placeholder/page-header.webp"
+            alt="Placeholder"
+            slot="image"
+            width="1280"
+            height="640"
+          />
+          <evg-wrap size="md" class="evg-text-align-center">
+            <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
+              What we do
+            </h1>
+            <p className="evg-text-size-body-lg evg-text-wrap-balance">
+              WRAP is a global environmental action NGO transforming our broken
+              product and food systems to create Circular Living. For the
+              benefit of the climate, nature, and people.
+            </p>
+          </evg-wrap>
+        </evg-section-img>
       </evg-section>
 
       <evg-section padding="fluid">

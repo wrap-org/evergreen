@@ -63,42 +63,44 @@ const moreOpportunities = [
 export function ThirdLevel() {
   return (
     <AppLayout>
-      <evg-section padding="fluid-lg" class="evg-theme-forest">
-        <evg-wrap size="xxl" gutter="fluid-lg">
-          <evg-grid wrap="wrap" gap="none">
-            <evg-grid-item small-mobile="12" small-desktop="6">
-              <evg-breadcrumb class="evg-spacing-bottom-md">
-                <ol>
-                  <li>
-                    <a href="https://wrap.ngo">Take action</a>
-                  </li>
-                  <li>
-                    <a href="https://wrap.ngo">Food and drink</a>
-                  </li>
-                  <li>
-                    <a href="https://wrap.ngo" aria-current="page">
-                      Initiatives
-                    </a>
-                  </li>
-                </ol>
-              </evg-breadcrumb>
-              <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
-                The Courtauld Commitment 2030
-              </h1>
-              <p className="evg-text-size-body-lg">
-                Reducing food waste, cutting carbon and protecting critical
-                water resources.
-              </p>
-              <evg-button>
-                <button>
-                  In this section
-                  <evg-icon icon="chevron-down" />
-                </button>
-              </evg-button>
-            </evg-grid-item>
-          </evg-grid>
-        </evg-wrap>
-      </evg-section>
+      <evg-supergraphic class="evg-theme-forest" position="bottom-right">
+        <evg-section padding="fluid-lg" class="evg-theme-forest">
+          <evg-wrap size="xxl" gutter="fluid-lg">
+            <evg-grid wrap="wrap" gap="none">
+              <evg-grid-item small-mobile="12" tablet="9" large-tablet="7">
+                <evg-breadcrumb class="evg-spacing-bottom-md">
+                  <ol>
+                    <li>
+                      <a href="https://wrap.ngo">Take action</a>
+                    </li>
+                    <li>
+                      <a href="https://wrap.ngo">Food and drink</a>
+                    </li>
+                    <li>
+                      <a href="https://wrap.ngo" aria-current="page">
+                        Initiatives
+                      </a>
+                    </li>
+                  </ol>
+                </evg-breadcrumb>
+                <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
+                  The Courtauld Commitment 2030
+                </h1>
+                <p className="evg-text-size-body-lg">
+                  Reducing food waste, cutting carbon and protecting critical
+                  water resources.
+                </p>
+                <evg-button>
+                  <button>
+                    In this section
+                    <evg-icon icon="chevron-down" />
+                  </button>
+                </evg-button>
+              </evg-grid-item>
+            </evg-grid>
+          </evg-wrap>
+        </evg-section>
+      </evg-supergraphic>
 
       <evg-section padding="fluid">
         <evg-wrap size="lg">

@@ -49,30 +49,34 @@ export default {
   },
 } satisfies Meta;
 
+const Content = () => (
+  <evg-wrap size="lg">
+    <h2 className="evg-spacing-bottom-sm">Section title</h2>
+    <p className="evg-spacing-bottom-lg">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam.
+    </p>
+    <evg-grid>
+      <evg-grid-item small-mobile="6" small-tablet="auto">
+        <evg-button variant="primary" width="full-width-mobile">
+          <button type="button">Button text</button>
+        </evg-button>
+      </evg-grid-item>
+      <evg-grid-item small-mobile="6" small-tablet="auto">
+        <evg-button width="full-width-mobile">
+          <button type="button">Button text</button>
+        </evg-button>
+      </evg-grid-item>
+    </evg-grid>
+  </evg-wrap>
+);
+
 export const Section: StoryFn = ({ theme, ...props }) => (
   <evg-section class={`evg-theme-${theme}`} {...props}>
-    <evg-wrap size="lg">
-      <h2 className="evg-spacing-bottom-sm">Section title</h2>
-      <p className="evg-spacing-bottom-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam.
-      </p>
-      <evg-grid>
-        <evg-grid-item mobile="6" tablet="auto">
-          <evg-button variant="primary">
-            <button type="button">Button text</button>
-          </evg-button>
-        </evg-grid-item>
-        <evg-grid-item mobile="6" tablet="auto">
-          <evg-button>
-            <button type="button">Button text</button>
-          </evg-button>
-        </evg-grid-item>
-      </evg-grid>
-    </evg-wrap>
+    <Content />
   </evg-section>
 );
 
@@ -85,28 +89,41 @@ export const Theming: StoryFn = () => (
   <>
     {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <evg-wrap size="lg">
-          <h2 className="evg-spacing-bottom-sm">Section title</h2>
-          <p className="evg-spacing-bottom-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam.
-          </p>
-          <evg-grid>
-            <evg-grid-item mobile="6" tablet="auto">
-              <evg-button variant="primary">
-                <button type="button">Button text</button>
-              </evg-button>
-            </evg-grid-item>
-            <evg-grid-item mobile="6" tablet="auto">
-              <evg-button>
-                <button type="button">Button text</button>
-              </evg-button>
-            </evg-grid-item>
-          </evg-grid>
-        </evg-wrap>
+        <Content />
+      </evg-section>
+    ))}
+  </>
+);
+
+export const WithImage: StoryFn = () => (
+  <evg-section padding="fluid">
+    <evg-section-img treatment="dark">
+      <img
+        src="/images/placeholder/page-header.webp"
+        alt="Placeholder"
+        slot="image"
+        width="1280"
+        height="640"
+      />
+      <Content />
+    </evg-section-img>
+  </evg-section>
+);
+
+export const WithNestedImage: StoryFn = () => (
+  <>
+    {['sand', 'earth', 'forest'].map((theme) => (
+      <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
+        <evg-section-img treatment="dark" layout="nested">
+          <img
+            src="/images/placeholder/page-header.webp"
+            alt="Placeholder"
+            slot="image"
+            width="1280"
+            height="640"
+          />
+          <Content />
+        </evg-section-img>
       </evg-section>
     ))}
   </>

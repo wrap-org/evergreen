@@ -48,6 +48,15 @@ evg-img {
     object-fit: var(--evg-img-object-fit);
   }
 
+  &[object-fit='cover'] {
+    display: grid;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &[object-position] img,
   &[object-position] evg-loading-img {
     object-position: var(--evg-img-object-position);
