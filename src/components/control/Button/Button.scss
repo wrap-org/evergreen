@@ -151,7 +151,7 @@ evg-button {
     }
   }
 
-  @media (width < 480px) {
+  @media (width < 600px) {
     &[width='full-width-mobile'] {
       display: block;
 
