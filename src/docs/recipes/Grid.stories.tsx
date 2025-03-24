@@ -183,7 +183,7 @@ export const AdditionalContent = () => (
             desperately need.
           </p>{' '}
           <p>
-            We&apod;re a trusted advisor to governments, businesses,
+            We&apos;re a trusted advisor to governments, businesses,
             multilateral organisations and NGOs around the world.
           </p>
         </evg-grid-item>
@@ -196,7 +196,7 @@ export const AdditionalContent = () => (
           'Collaboration and collective action',
           'Finance for action and innovation',
           'Policy design and implementation',
-          'Technical solutions and consiultancy',
+          'Technical solutions and consultancy',
         ].map((item) => (
           <evg-grid-item
             small-mobile="12"
