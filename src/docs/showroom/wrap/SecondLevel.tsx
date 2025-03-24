@@ -1,12 +1,8 @@
 import React from 'react';
 
-import {
-  AppLayout,
-  CallToAction,
-  CardList,
-  CardRow,
-  Featured,
-} from '../../recipes/Brochureware.stories';
+import { Brochureware as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
+import { List, Row, Featured } from '../../recipes/Cards.stories';
 
 const initiatives = [
   {
@@ -288,15 +284,15 @@ export function SecondLevel() {
         }}
       />
 
-      <CardList
+      <List
         theme="earth-light"
         title="How WRAP can help you"
         cards={howWrapCanHelpYou}
       />
 
-      <CardRow title="Related resources" cards={relatedResources} />
+      <Row title="Related resources" cards={relatedResources} />
 
-      <CallToAction
+      <Banner
         title="Work with us on a food project"
         text="If you are interested in setting up your own food waste campaign within a country or region that we do not currently work in, please do get in touch."
         button="Contact us"
