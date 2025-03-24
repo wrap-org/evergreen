@@ -1,18 +1,77 @@
 @use '../../../styles/variables/spacing';
 
 evg-section {
+  --evg-section-padding: var(--evg-spacing-md);
   background: var(--evg-theme-background);
   color: var(--evg-theme-color);
   display: block;
-  padding-block: var(--evg-spacing-md);
+  padding-block: var(--evg-section-padding);
 
   @each $size in spacing.$sizes {
     &[padding='#{$size}'] {
-      padding-block: var(--evg-spacing-#{$size});
+      --evg-section-padding: var(--evg-spacing-#{$size});
     }
   }
 
   &[padding='none'] {
+    --evg-section-padding: 0;
+  }
+
+  &:has(evg-section-img) {
     padding-block: 0;
+  }
+}
+
+evg-section-img {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  &::part(image) {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::part(content) {
+    grid-area: 1 / 1 / 2 / 2;
+    padding-block: var(--evg-section-padding);
+    position: relative;
+    z-index: 1;
+  }
+
+  img[slot='image'] {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &[text='light'] {
+    --evg-theme-heading-color: var(--evg-color-cloud);
+    --evg-theme-color: var(--evg-color-cloud);
+    color: var(--evg-theme-color);
+  }
+
+  &[text='dark'] {
+    --evg-theme-heading-color: var(--evg-color-forest);
+    --evg-theme-color: var(--evg-color-forest);
+    color: var(--evg-theme-color);
+  }
+
+  &[layout='nested'] {
+    padding: clamp(
+      var(--evg-spacing-md),
+      var(--evg-spacing-fluid),
+      var(--evg-spacing-lg)
+    );
+
+    &::part(image) {
+      border-radius: var(--evg-radius-xl);
+      overflow: hidden;
+    }
   }
 }

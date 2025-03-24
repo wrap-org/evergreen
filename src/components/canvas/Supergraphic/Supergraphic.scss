@@ -1,0 +1,90 @@
+evg-supergraphic {
+  background: var(--evg-theme-background);
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  &::part(svg) {
+    aspect-ratio: 930 / 800;
+    // Generic supergraphic for browsers that don't support
+    // container style queries or fallback
+    color: color-mix(
+      in sRGB,
+      var(--evg-theme-background),
+      var(--evg-color-cloud) 25%
+    );
+    height: 200%;
+    position: absolute;
+    width: auto;
+
+    @container style(--evg-theme-background: var(--evg-color-cloud)) {
+      color: var(--evg-color-forest-25);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-sand-50)) {
+      color: var(--evg-color-sand-25);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-forest)) {
+      color: var(--evg-color-forest-75);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-forest-25)) {
+      color: var(--evg-color-forest-50);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-earth-50)) {
+      color: var(--evg-color-earth-25);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-earth-25)) {
+      color: var(--evg-color-earth-50);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-lime)) {
+      color: var(--evg-color-lime-50);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-lime-25)) {
+      color: var(--evg-color-lime-50);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-sky-50)) {
+      color: var(--evg-color-sky-25);
+    }
+
+    @container style(--evg-theme-background: var(--evg-color-sky-25)) {
+      color: var(--evg-color-sky-50);
+    }
+  }
+
+  > * {
+    background: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  &[position='top-left']::part(svg) {
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+  }
+
+  &[position='top-right']::part(svg) {
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+  }
+
+  &[position='bottom-left']::part(svg) {
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &[position='bottom-right']::part(svg) {
+    right: 0;
+    top: 0;
+    transform: translateX(50%);
+  }
+}
