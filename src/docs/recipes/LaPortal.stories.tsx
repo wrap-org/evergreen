@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LaPortal as Navigation } from './Navigation.stories';
+import { LaPortal as Navigation } from './Header.stories';
 
 export default {
   title: 'Recipes/La Portal',
