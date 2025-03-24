@@ -1,10 +1,8 @@
 import React from 'react';
 
-import TextButton from '@/components/react/controls/TextButton/TextButton';
-
 export interface HeaderProps {
   readonly children?: React.ReactNode;
-  readonly onClose: (event: Event) => void;
+  readonly onClose: () => void;
 }
 
 const ModalHeader = ({ onClose, children }: HeaderProps) => (
@@ -13,9 +11,15 @@ const ModalHeader = ({ onClose, children }: HeaderProps) => (
       {children}
     </evg-grid-item>
     <evg-grid-item>
-      <TextButton aria-label="Close dialog" onClick={onClose}>
-        <evg-icon icon="close" class="evg-text-size-body-xl" />
-      </TextButton>
+      <evg-button variant="text">
+        <button
+          type="button"
+          onClick={() => onClose()}
+          aria-label="Close dialog"
+        >
+          <evg-icon icon="close" class="evg-text-size-body-xl" />{' '}
+        </button>
+      </evg-button>
     </evg-grid-item>
   </evg-grid>
 );
