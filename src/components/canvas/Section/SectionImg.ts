@@ -4,7 +4,7 @@ import { customElement } from 'lit/decorators.js';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface SectionImgAttributes {
-  treatment?: 'light' | 'dark';
+  text?: 'light' | 'dark';
   layout?: 'nested' | 'default';
 }
 

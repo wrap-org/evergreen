@@ -50,7 +50,7 @@ export function TopLevel() {
   return (
     <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-section-img treatment="dark">
+        <evg-section-img text="light">
           <img
             src="/images/placeholder/page-header.webp"
             alt="Placeholder"

@@ -168,7 +168,7 @@ export const SideImage = () => (
 
 export const FullImage = () => (
   <evg-section padding="fluid" class="evg-theme-forest">
-    <evg-section-img treatment="dark">
+    <evg-section-img text="light">
       <img
         src="/images/placeholder/page-header.webp"
         alt="Placeholder"
@@ -202,7 +202,7 @@ export const NestedImage = () => (
   <>
     {['sand', 'earth', 'forest'].map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <evg-section-img treatment="dark" layout="nested">
+        <evg-section-img text="light" layout="nested">
           <img
             src="/images/placeholder/page-header.webp"
             alt="Placeholder"

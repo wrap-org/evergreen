@@ -97,7 +97,7 @@ export const Theming: StoryFn = () => (
 
 export const WithImage: StoryFn = () => (
   <evg-section padding="fluid">
-    <evg-section-img treatment="dark">
+    <evg-section-img text="light">
       <img
         src="/images/placeholder/page-header.webp"
         alt="Placeholder"
@@ -114,7 +114,7 @@ export const WithNestedImage: StoryFn = () => (
   <>
     {['sand', 'earth', 'forest'].map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <evg-section-img treatment="dark" layout="nested">
+        <evg-section-img text="light" layout="nested">
           <img
             src="/images/placeholder/page-header.webp"
             alt="Placeholder"

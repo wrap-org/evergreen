@@ -50,13 +50,13 @@ evg-section-img {
     width: 100%;
   }
 
-  &[treatment='dark'] {
+  &[text='light'] {
     --evg-theme-heading-color: var(--evg-color-cloud);
     --evg-theme-color: var(--evg-color-cloud);
     color: var(--evg-theme-color);
   }
 
-  &[treatment='light'] {
+  &[text='dark'] {
     --evg-theme-heading-color: var(--evg-color-forest);
     --evg-theme-color: var(--evg-color-forest);
     color: var(--evg-theme-color);
