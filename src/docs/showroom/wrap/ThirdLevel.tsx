@@ -225,12 +225,9 @@ export function ThirdLevel() {
 
           <evg-card radius="md" layout="thumb">
             <evg-card-img>
-              <evg-img aspect-ratio="1 / 1" radius="sm" padding="sm">
-                <evg-icon
-                  icon="document-download"
-                  class="evg-text-size-heading-xl"
-                />
-              </evg-img>
+              <evg-thumbnail size="md">
+                <evg-icon icon="document-download" />
+              </evg-thumbnail>
             </evg-card-img>
             <evg-card-content>
               <h3 className="evg-text-size-heading-sm evg-text-family-body">
