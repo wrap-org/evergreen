@@ -2,7 +2,6 @@ import { Meta } from '@storybook/react';
 import React, { useState } from 'react';
 
 import Label from '@/components/react/controls/Label/Label';
-import TextButton from '@/components/react/controls/TextButton/TextButton';
 
 import FormGroup from './FormGroup';
 import '@/components/control/RadioCheckbox/RadioCheckbox';
@@ -79,13 +78,16 @@ export function WithInfo() {
       <FormGroup className="evg-spacing-bottom-lg">
         <FormGroup.Label>
           <Label htmlFor="my-input-one">Input label</Label>
-          <TextButton
-            onClick={() => setInfoOneOpen(!infoOneOpen)}
-            aria-controls="form-group-info-one"
-            aria-expanded={infoOneOpen}
-          >
-            <evg-icon icon="circle-information" label="Information" />
-          </TextButton>
+          <evg-button variant="text">
+            <button
+              type="button"
+              onClick={() => setInfoOneOpen(!infoOneOpen)}
+              aria-controls="form-group-info-one"
+              aria-expanded={infoOneOpen}
+            >
+              <evg-icon icon="circle-information" label="Information" />
+            </button>
+          </evg-button>
         </FormGroup.Label>
         <FormGroup.Control>
           <evg-input>
@@ -100,13 +102,16 @@ export function WithInfo() {
       <FormGroup horizontal>
         <FormGroup.Label>
           <Label htmlFor="my-input-two">Input label</Label>
-          <TextButton
-            onClick={() => setInfoTwoOpen(!infoTwoOpen)}
-            aria-controls="form-group-info-two"
-            aria-expanded={infoTwoOpen}
-          >
-            <evg-icon icon="circle-information" label="Information" />
-          </TextButton>
+          <evg-button variant="text">
+            <button
+              type="button"
+              onClick={() => setInfoTwoOpen(!infoTwoOpen)}
+              aria-controls="form-group-info-two"
+              aria-expanded={infoTwoOpen}
+            >
+              <evg-icon icon="circle-information" label="Information" />
+            </button>
+          </evg-button>
         </FormGroup.Label>
         <FormGroup.Control>
           <evg-input>
