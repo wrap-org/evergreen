@@ -4,20 +4,27 @@ import React from 'react';
 import { themes } from '@/lib/theme';
 import { fontSizes } from '@/lib/tokens';
 
-import { iconKeys } from './icons';
+import { iconKeys, functionalIconKeys, distinctiveIconKeys } from './icons';
 
 import './Icon';
 
 const description = `
 Wraps an svg icon to provide alignment and sizing.
 
-Icons must have the appropriate fill or stroke set to currentColor.
+Icons must have the appropriate fill or stroke set to \`currentColor\`.
 
-Icons are hidden from screen readers by default and should be accompanied by text. If an icon is used on its own in a button or link, add a label prop to the component.
+Icons are hidden from screen readers by default and should be accompanied by text. 
+If an icon is used on its own in a button or link, add a \`label\` prop to the component.
 
-Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds some custom icons just for this library.
+Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds 
+some custom icons just for this library.
 
-If you need to add an extra icon, you can use any SVG icon by passing it as a child of the component.`;
+There are two sets of branded icons that were created when redesigning wrap.ngo 
+(the \`functional\` and \`distinctive\` sets). These should not be used for UI icons, 
+but as alternative to illustrations and images.
+
+If you need to add an extra icon, you can use any SVG icon by passing it as a child 
+of the component.`;
 
 export default {
   component: 'evg-icon',
@@ -29,11 +36,44 @@ export default {
     },
   },
   argTypes: {
+    set: {
+      control: {
+        type: 'radio',
+      },
+      options: ['default', 'distinctive', 'functional'],
+    },
     icon: {
+      name: 'icon',
       control: {
         type: 'select',
       },
       options: iconKeys,
+      if: {
+        arg: 'set',
+        eq: 'default',
+      },
+    },
+    functionalIcon: {
+      name: 'icon',
+      control: {
+        type: 'select',
+      },
+      options: functionalIconKeys,
+      if: {
+        arg: 'set',
+        eq: 'functional',
+      },
+    },
+    distinctiveIcon: {
+      name: 'icon',
+      control: {
+        type: 'select',
+      },
+      options: distinctiveIconKeys,
+      if: {
+        arg: 'set',
+        eq: 'distinctive',
+      },
     },
     variant: {
       control: {
@@ -50,14 +90,33 @@ export default {
   },
 };
 
-export const Icon: StoryFn = (props) => (
-  <>
-    <evg-icon {...props}></evg-icon> This is some text next to the icon
-  </>
-);
+export const Icon: StoryFn = ({
+  set,
+  icon,
+  functionalIcon,
+  distinctiveIcon,
+  ...props
+}) => {
+  let appliedIcon = icon;
+  if (set === 'functional') {
+    appliedIcon = functionalIcon;
+  } else if (set === 'distinctive') {
+    appliedIcon = distinctiveIcon;
+  }
+
+  return (
+    <>
+      <evg-icon set={set} icon={appliedIcon} {...props}></evg-icon> This is some
+      text next to the icon
+    </>
+  );
+};
 
 Icon.args = {
-  icon: 'home',
+  set: 'default',
+  icon: iconKeys[0],
+  functionalIcon: functionalIconKeys[0],
+  distinctiveIcon: distinctiveIconKeys[0],
   variant: 'default',
 };
 
