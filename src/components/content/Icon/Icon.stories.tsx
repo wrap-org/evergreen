@@ -13,17 +13,17 @@ Wraps an svg icon to provide alignment and sizing.
 
 Icons must have the appropriate fill or stroke set to \`currentColor\`.
 
-Icons are hidden from screen readers by default and should be accompanied by text. 
+Icons are hidden from screen readers by default and should be accompanied by text.
 If an icon is used on its own in a button or link, add a \`label\` prop to the component.
 
-Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds 
+Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds
 some custom icons just for this library.
 
-There are two sets of branded icons that were created when redesigning wrap.ngo 
-(the \`functional\` and \`distinctive\` sets). These should not be used for UI icons, 
+There are two sets of branded icons that were created when redesigning wrap.ngo
+(the \`functional\` and \`distinctive\` sets). These should not be used for UI icons,
 but as alternative to illustrations and images.
 
-If you need to add an extra icon, you can use any SVG icon by passing it as a child 
+If you need to add an extra icon, you can use any SVG icon by passing it as a child
 of the component.`;
 
 export default {
