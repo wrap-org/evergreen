@@ -90,4 +90,5 @@
 - `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
 - `Modal` has been replaced with custom styles on `dialog`.
+- `Modal` has been replaced with `evg-modal`.
   - `ModalHeader` and `ModalInner` have also been removed - box can be used to create a modal canvas instead.
