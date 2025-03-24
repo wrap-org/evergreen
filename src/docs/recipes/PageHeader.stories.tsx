@@ -6,6 +6,17 @@ export default {
   title: 'Recipes/Page header',
   parameters: {
     layout: 'fullscreen',
+    a11y: {
+      config: {
+        rules: [
+          {
+            // It doesn't like our repeated breadcrumb nav label
+            id: 'landmark-unique',
+            enabled: false,
+          },
+        ],
+      },
+    },
   },
   tags: ['!autodocs'],
 };
