@@ -31,6 +31,7 @@ const preview: Preview = {
           'Foundations',
           'Components',
           'Recipes',
+          ['Header', 'Footer', 'Page header']
         ],
       },
     },

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Full as Footer } from './Footer.stories';
-import { Wrap as Navigation } from './Navigation.stories';
+import { Light as Header } from './Header.stories';
 
 import '../../components/composition/App/App';
 
@@ -32,7 +32,7 @@ const cardsPlaceholder: {
 export function AppLayout({ children }) {
   return (
     <evg-app>
-      <Navigation slot="header" />
+      <Header slot="header" />
       {children}
       <Footer slot="footer" />
     </evg-app>

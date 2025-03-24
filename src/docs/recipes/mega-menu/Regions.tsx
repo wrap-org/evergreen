@@ -22,21 +22,26 @@ export default function Regions({ open }: { readonly open: boolean }) {
         <evg-grid-item grow fill>
           <evg-section padding="lg">
             <evg-wrap gutter="lg">
-              {[
-                'Global',
-                'Americas',
-                'Asia Pacific',
-                'EU',
-                'Northern Ireland',
-                'UK',
-                'Cymru',
-              ].map((item) => (
-                <evg-menu-item key={item}>
-                  <a href="https://wrap.ngo" role="menuitem">
-                    {item}
-                  </a>
-                </evg-menu-item>
-              ))}
+              <evg-grid>
+                <evg-grid-item small-mobile="3">
+                  {[
+                    'Global',
+                    'Americas',
+                    'Asia Pacific',
+                    'EU',
+                    'Northern Ireland',
+                    'UK',
+                    'Cymru',
+                  ].map((item) => (
+                    <evg-menu-item key={item} active={item === 'Global'}>
+                      <a href="https://wrap.ngo" role="menuitem">
+                        <evg-menu-item-content>{item}</evg-menu-item-content>
+                        {item === 'Global' && <evg-icon icon="check" />}
+                      </a>
+                    </evg-menu-item>
+                  ))}
+                </evg-grid-item>
+              </evg-grid>
             </evg-wrap>
           </evg-section>
         </evg-grid-item>

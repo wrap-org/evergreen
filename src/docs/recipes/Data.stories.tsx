@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Minimal as Footer } from './Footer.stories';
-import { Data as Navigation } from './Navigation.stories';
+import { Data as Navigation } from './Header.stories';
 
 export default {
   title: 'Recipes/Data',
