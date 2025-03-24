@@ -1,0 +1,45 @@
+evg-modal {
+  dialog {
+    background: none;
+    border: 0 none;
+    box-shadow: var(--evg-shadow);
+    opacity: 0;
+    padding: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity var(--evg-transition),
+      display var(--evg-transition) allow-discrete,
+      overlay var(--evg-transition) allow-discrete,
+      transform var(--evg-transition);
+
+    &::backdrop {
+      background-color: var(--evg-backdrop, var(--evg-color-earth-25));
+      opacity: 0;
+      transition:
+        opacity var(--evg-transition),
+        display var(--evg-transition) allow-discrete,
+        overlay var(--evg-transition) allow-discrete;
+    }
+
+    &[open] {
+      opacity: 1;
+      transform: none;
+      transition-delay: calc(var(--evg-transition-duration) * 0.5);
+    }
+
+    &[open]::backdrop {
+      opacity: var(--evg-backdrop-opacity, 0.65);
+    }
+  }
+
+  @starting-style {
+    dialog[open] {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+
+    dialog[open]::backdrop {
+      opacity: 0;
+    }
+  }
+}
