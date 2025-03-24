@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { CallToAction } from '../../recipes/Brochureware.stories';
-import { AppLayout } from '../../recipes/Data.stories';
+import { Data as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
 
 export function SecondLevel() {
   return (
@@ -333,7 +333,7 @@ export function SecondLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CallToAction
+      <Banner
         title="Join us in leading the change"
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
         button="Sign up now"

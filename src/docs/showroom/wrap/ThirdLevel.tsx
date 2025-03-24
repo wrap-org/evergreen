@@ -1,12 +1,8 @@
 import React from 'react';
 
-import {
-  AppLayout,
-  CallToAction,
-  CardList,
-  CardRow,
-  Featured,
-} from '../../recipes/Brochureware.stories';
+import { Brochureware as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
+import { List, Row, Featured } from '../../recipes/Cards.stories';
 
 const workWithUs: {
   title: string;
@@ -266,15 +262,15 @@ export function ThirdLevel() {
         }}
       />
 
-      <CardList title="Work with us" cards={workWithUs} />
+      <List title="Work with us" cards={workWithUs} />
 
-      <CardRow
+      <Row
         title="More opportunities"
         cards={moreOpportunities}
         theme="earth-light"
       />
 
-      <CallToAction
+      <Banner
         title="Get in touch"
         text="Find out how the Courtauld Commitment 2030 can help achieve your sustainability goals."
         button="Contact us"

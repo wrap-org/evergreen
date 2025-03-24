@@ -1,10 +1,8 @@
 import React from 'react';
 
-import {
-  CallToAction,
-  CardList,
-  AppLayout,
-} from '../../recipes/Brochureware.stories';
+import { Brochureware as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
+import { List } from '../../recipes/Cards.stories';
 
 const priorities = [
   {
@@ -237,7 +235,7 @@ export function TopLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CardList cards={cardList} theme="earth-light" />
+      <List cards={cardList} theme="earth-light" />
 
       <evg-section padding="fluid">
         <evg-wrap size="xl">
@@ -263,7 +261,7 @@ export function TopLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CallToAction
+      <Banner
         title="Join us in leading the change"
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
         button="Sign up now"
