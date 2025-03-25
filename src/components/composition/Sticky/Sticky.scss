@@ -1,0 +1,20 @@
+evg-sticky {
+  position: sticky;
+  top: var(--evg-sticky-top);
+  z-index: 1;
+
+  &[large-screen-only]:not([large-screen-only='false']) {
+    max-height: none;
+    position: static;
+
+    @media (width >= 768px) {
+      position: sticky;
+    }
+  }
+
+  @media (width > 1024px) {
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

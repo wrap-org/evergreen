@@ -1,12 +1,8 @@
 import React from 'react';
 
-import {
-  AppLayout,
-  CallToAction,
-  CardList,
-  CardRow,
-  Featured,
-} from '../../recipes/Brochureware.stories';
+import { Brochureware as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
+import { List, Row, Featured } from '../../recipes/Cards.stories';
 
 const workWithUs: {
   title: string;
@@ -63,28 +59,44 @@ const moreOpportunities = [
 export function ThirdLevel() {
   return (
     <AppLayout>
-      <evg-section padding="fluid-lg" class="evg-theme-forest">
-        <evg-wrap size="xxl" gutter="fluid-lg">
-          <evg-grid wrap="wrap" gap="none">
-            <evg-grid-item small-mobile="12" small-desktop="6">
-              <docs-placeholder inline>Breadcrumb</docs-placeholder>
-              <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
-                The Courtauld Commitment 2030
-              </h1>
-              <p className="evg-text-size-body-lg">
-                Reducing food waste, cutting carbon and protecting critical
-                water resources.
-              </p>
-              <evg-button>
-                <button>
-                  In this section
-                  <evg-icon icon="chevron-down" />
-                </button>
-              </evg-button>
-            </evg-grid-item>
-          </evg-grid>
-        </evg-wrap>
-      </evg-section>
+      <evg-supergraphic class="evg-theme-forest" position="bottom-right">
+        <evg-section padding="fluid-lg" class="evg-theme-forest">
+          <evg-wrap size="xxl" gutter="fluid-lg">
+            <evg-grid wrap="wrap" gap="none">
+              <evg-grid-item small-mobile="12" tablet="9" large-tablet="7">
+                <evg-breadcrumb class="evg-spacing-bottom-md">
+                  <ol>
+                    <li>
+                      <a href="https://wrap.ngo">Take action</a>
+                    </li>
+                    <li>
+                      <a href="https://wrap.ngo">Food and drink</a>
+                    </li>
+                    <li>
+                      <a href="https://wrap.ngo" aria-current="page">
+                        Initiatives
+                      </a>
+                    </li>
+                  </ol>
+                </evg-breadcrumb>
+                <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
+                  The Courtauld Commitment 2030
+                </h1>
+                <p className="evg-text-size-body-lg">
+                  Reducing food waste, cutting carbon and protecting critical
+                  water resources.
+                </p>
+                <evg-button>
+                  <button>
+                    In this section
+                    <evg-icon icon="chevron-down" />
+                  </button>
+                </evg-button>
+              </evg-grid-item>
+            </evg-grid>
+          </evg-wrap>
+        </evg-section>
+      </evg-supergraphic>
 
       <evg-section padding="fluid">
         <evg-wrap size="lg">
@@ -209,16 +221,12 @@ export function ThirdLevel() {
 
           <evg-card radius="md" layout="thumb">
             <evg-card-img>
-              <img
-                src="/images/placeholder/400x300.svg"
-                alt="Placeholder"
-                width="400"
-                height="300"
-                loading="lazy"
-              />
+              <evg-thumbnail size="md">
+                <evg-icon icon="document-download" />
+              </evg-thumbnail>
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body evg-spacing-bottom-sm">
+              <h3 className="evg-text-size-heading-sm evg-text-family-body">
                 Courtauld 2030 Annual Progress Report 2024
               </h3>
               <evg-grid justify-content="space-between" align-items="center">
@@ -254,15 +262,15 @@ export function ThirdLevel() {
         }}
       />
 
-      <CardList title="Work with us" cards={workWithUs} />
+      <List title="Work with us" cards={workWithUs} />
 
-      <CardRow
+      <Row
         title="More opportunities"
         cards={moreOpportunities}
         theme="earth-light"
       />
 
-      <CallToAction
+      <Banner
         title="Get in touch"
         text="Find out how the Courtauld Commitment 2030 can help achieve your sustainability goals."
         button="Contact us"

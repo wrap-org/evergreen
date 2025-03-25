@@ -1,10 +1,8 @@
 import React from 'react';
 
-import {
-  CallToAction,
-  CardList,
-  AppLayout,
-} from '../../recipes/Brochureware.stories';
+import { Brochureware as AppLayout } from '../../recipes/App.stories';
+import { Banner } from '../../recipes/Banner.stories';
+import { List } from '../../recipes/Cards.stories';
 
 const priorities = [
   {
@@ -50,16 +48,25 @@ export function TopLevel() {
   return (
     <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-wrap size="md" class="evg-text-align-center">
-          <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
-            What we do
-          </h1>
-          <p className="evg-text-size-body-lg evg-text-wrap-balance">
-            WRAP is a global environmental action NGO transforming our broken
-            product and food systems to create Circular Living. For the benefit
-            of the climate, nature, and people.
-          </p>
-        </evg-wrap>
+        <evg-section-img text="light">
+          <img
+            src="/images/placeholder/page-header.webp"
+            alt="Placeholder"
+            slot="image"
+            width="1280"
+            height="640"
+          />
+          <evg-wrap size="md" class="evg-text-align-center">
+            <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
+              What we do
+            </h1>
+            <p className="evg-text-size-body-lg evg-text-wrap-balance">
+              WRAP is a global environmental action NGO transforming our broken
+              product and food systems to create Circular Living. For the
+              benefit of the climate, nature, and people.
+            </p>
+          </evg-wrap>
+        </evg-section-img>
       </evg-section>
 
       <evg-section padding="fluid">
@@ -228,7 +235,7 @@ export function TopLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CardList cards={cardList} theme="earth-light" />
+      <List cards={cardList} theme="earth-light" />
 
       <evg-section padding="fluid">
         <evg-wrap size="xl">
@@ -254,7 +261,7 @@ export function TopLevel() {
         </evg-wrap>
       </evg-section>
 
-      <CallToAction
+      <Banner
         title="Join us in leading the change"
         text="We believe in the power of working together to create long lasting change. Work with us as we lead the way to building a more sustainable future."
         button="Sign up now"

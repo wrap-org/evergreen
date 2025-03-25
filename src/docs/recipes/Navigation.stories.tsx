@@ -7,156 +7,113 @@ export default {
   },
 };
 
-export function Wrap(props) {
-  return (
-    <evg-menu-bar class="evg-theme-default" {...props}>
-      <a href="https://wrap.ngo">
-        <img
-          src="/images/logo/forest.svg"
-          alt="WRAP logo"
-          width="166"
-          height="48"
-          loading="eager"
-        />
-      </a>
-      <nav aria-label="Main navigation">
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>What we do</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Take action</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Resources</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>About</evg-menu-item-content>
-            <evg-icon icon="chevron-down" />
-          </a>
-        </evg-menu-item>
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Latest</evg-menu-item-content>
-          </a>
-        </evg-menu-item>
-      </nav>
-      <nav aria-label="Secondary navigation">
-        <evg-button>
-          <button type="button">
-            Regions
-            <evg-icon icon="chevron-down" />
-          </button>
-        </evg-button>
-        <evg-button>
-          <button type="button">
-            Log in / Sign up
-            <evg-icon icon="user" />
-          </button>
-        </evg-button>
-        <evg-button width="square">
-          <button type="button" aria-label="Search">
-            <evg-icon icon="search" />
-          </button>
-        </evg-button>
-      </nav>
-    </evg-menu-bar>
-  );
-}
-
-export function Data(props) {
-  return (
-    <evg-menu-bar class="evg-theme-default" {...props}>
-      <a href="https://wrap.ngo">
-        <img
-          src="/images/logo/forest.svg"
-          alt="WRAP logo"
-          width="166"
-          height="48"
-          loading="eager"
-        />
-      </a>
-      <nav aria-label="Main navigation">
-        <evg-menu-item>
-          <a href="https://wrap.ngo">
-            <evg-menu-item-content>Data stories</evg-menu-item-content>
-          </a>
-        </evg-menu-item>
-      </nav>
-      <nav aria-label="Secondary navigation">
-        <evg-button>
-          <a href="https://wrap.ngo">
-            Go to main site
-            <evg-icon icon="external-link" />
-          </a>
-        </evg-button>
-      </nav>
-    </evg-menu-bar>
-  );
-}
-
-export function LaPortal({
-  secondaryNav,
-  slot,
-  ...props
-}: {
-  readonly secondaryNav?: boolean;
-  readonly slot?: string;
-}) {
-  return (
-    <div slot={slot} {...props}>
-      <evg-menu-bar compact class="evg-theme-forest">
-        <img
-          src="/images/placeholder/400x200.svg"
-          alt="LA Portal logo"
-          width="75"
-          height="37"
-        />
-        <nav aria-label="Main navigation">
-          <evg-menu-item>
-            <a href="https://wrap.ngo">
-              <evg-menu-item-content>eTEEP</evg-menu-item-content>
-            </a>
-          </evg-menu-item>
-        </nav>
-        <nav aria-label="Secondary navigation">
-          <evg-menu-item>
-            <a href="https://wrap.ngo">
-              Manage data
-              <evg-icon icon="edit" />
-            </a>
-          </evg-menu-item>
-          <evg-menu-item>
-            <a href="https://wrap.ngo">
-              Firstname
-              <evg-icon icon="user" />
-            </a>
-          </evg-menu-item>
-        </nav>
-      </evg-menu-bar>
-      {secondaryNav && (
-        <evg-menu-bar compact class="evg-theme-default">
-          <nav aria-label="Tertiary navigation">
+export const RelatedActions = () => (
+  <evg-section padding="fluid">
+    <evg-wrap size="xl">
+      <evg-grid gap="lg" wrap="wrap">
+        {[0, 1].map((item) => (
+          <evg-grid-item small-mobile="12" tablet="6" key={item}>
+            <evg-divider />
             <evg-menu-item>
-              <a href="https://wrap.ngo">
-                <evg-icon icon="arrow-left" />
+              <button type="button">
+                <evg-icon icon="document-check" />
                 <evg-menu-item-content>
-                  Southampton City Council
+                  Menu item title
+                  <p>Menu item description</p>
                 </evg-menu-item-content>
-              </a>
+                <evg-icon icon="arrow-right" />
+              </button>
             </evg-menu-item>
-          </nav>
-        </evg-menu-bar>
-      )}
-    </div>
-  );
-}
+            <evg-divider />
+          </evg-grid-item>
+        ))}
+      </evg-grid>
+    </evg-wrap>
+  </evg-section>
+);
+
+export const Dashboard = () => (
+  <evg-section padding="fluid" class="evg-theme-earth-light">
+    <evg-wrap size="xl">
+      <evg-box
+        class="evg-theme-default evg-spacing-bottom-lg"
+        padding="lg"
+        radius="md"
+      >
+        <h2 className="evg-text-size-heading-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
+          Manage data
+        </h2>
+        <evg-grid gap="lg" wrap="wrap">
+          {[0, 1, 2, 3].map((item) => (
+            <evg-grid-item small-mobile="12" tablet="6" key={item}>
+              <evg-divider />
+              <evg-menu-item>
+                <button type="button">
+                  <evg-icon icon="document-check" />
+                  <evg-menu-item-content>
+                    Menu item title
+                    <p>Menu item description</p>
+                    <evg-meta>
+                      <evg-badge type="info">Portal</evg-badge>
+                      <evg-badge type="positive">Locator</evg-badge>
+                    </evg-meta>
+                  </evg-menu-item-content>
+                  <evg-icon icon="arrow-right" />
+                </button>
+              </evg-menu-item>
+              <evg-divider />
+            </evg-grid-item>
+          ))}
+        </evg-grid>
+      </evg-box>
+
+      <evg-box class="evg-theme-default" padding="lg" radius="md">
+        <h2 className="evg-text-size-heading-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
+          View and update settings
+        </h2>
+        <evg-grid gap="lg" wrap="wrap">
+          {[0, 1, 2, 3].map((item) => (
+            <evg-grid-item small-mobile="12" tablet="6" key={item}>
+              <evg-divider />
+              <evg-menu-item>
+                <button type="button">
+                  <evg-icon icon="document-check" />
+                  <evg-menu-item-content>
+                    Menu item title
+                    <p>Menu item description</p>
+                    <evg-meta>
+                      <evg-badge type="info">Portal</evg-badge>
+                      <evg-badge type="positive">Locator</evg-badge>
+                    </evg-meta>
+                  </evg-menu-item-content>
+                </button>
+              </evg-menu-item>
+              <evg-divider />
+            </evg-grid-item>
+          ))}
+        </evg-grid>
+      </evg-box>
+    </evg-wrap>
+  </evg-section>
+);
+
+export const RelatedLinks = () => (
+  <evg-section padding="fluid" class="evg-theme-lime">
+    <evg-wrap size="xl">
+      <evg-grid wrap="wrap">
+        {[0, 1, 2].map((item) => (
+          <evg-grid-item small-mobile="12" tablet="4" key={item}>
+            <evg-divider />
+            <evg-menu-item>
+              <button type="button">
+                <evg-menu-item-content>Menu item title</evg-menu-item-content>
+                <evg-icon icon="arrow-right" />
+              </button>
+            </evg-menu-item>
+            <evg-divider />
+          </evg-grid-item>
+        ))}
+      </evg-grid>
+    </evg-wrap>
+  </evg-section>
+);

@@ -8,7 +8,18 @@ import { injectAxe, checkA11y, configureAxe } from 'axe-playwright';
  */
 const config: TestRunnerConfig = {
   async preVisit(page) {
+    // Inject axe for accessibility testing
     await injectAxe(page);
+
+    // Disable animations
+    await page.addStyleTag({
+      content: `
+        :root {
+          --evg-transition-duration: 0s;
+          --evg-transition-duration-enter: 0s;
+        }
+      `
+    });
   },
   async postVisit(page, context) {
     const storyContext = await getStoryContext(page, context);
