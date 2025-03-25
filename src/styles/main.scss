@@ -15,6 +15,8 @@
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Meta/Meta';
 @use '../components/composition/Wrap/Wrap';
+@use '../components/composition/Enter/Enter';
+@use '../components/composition/Sticky/Sticky';
 
 @use '../components/canvas/Alert/Alert';
 @use '../components/canvas/Box/Box';
@@ -22,9 +24,12 @@
 @use '../components/canvas/Card/Card';
 @use '../components/canvas/Card/CardContent';
 @use '../components/canvas/Card/CardImg';
-@use '../components/canvas/MenuBar/MenuBar.scss';
+@use '../components/canvas/Drawer/Drawer';
+@use '../components/canvas/Header/Header';
 @use '../components/canvas/Section/Section';
+@use '../components/canvas/Supergraphic/Supergraphic';
 
+@use '../components/control/Breadcrumb/Breadcrumb';
 @use '../components/control/Button/Button';
 @use '../components/control/Input/Input';
 @use '../components/control/Link/Link';
@@ -40,3 +45,12 @@
 @use '../components/content/Stat/Stat';
 @use '../components/content/Video/Video';
 @use '../components/content/LoadingSpinner/LoadingSpinner';
+@use '../components/content/List/List';
+@use '../components/content/Thumbnail/Thumbnail';
+
+:root {
+  --evg-transition-duration-enter: 0.4s;
+
+  --evg-transition-enter: var(--evg-transition-duration-enter)
+    var(--evg-transition-timing);
+}

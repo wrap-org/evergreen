@@ -4,6 +4,7 @@ evg-app {
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
+  overflow: hidden;
 
   &::part(header) {
     grid-area: header;

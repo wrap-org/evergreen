@@ -3,6 +3,7 @@ name: 👮 CI
 on: pull_request
 env:
   HUSKY: 0
+  CI: true
 permissions:
   contents: read
 jobs:

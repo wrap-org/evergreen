@@ -3,6 +3,8 @@ import { DocPage } from './DocPage';
 
 // Load the actual web components
 import '../src/components/composition/App/App';
+import '../src/components/composition/Collapse/Collapse';
+import '../src/components/composition/Enter/Enter';
 import '../src/components/composition/Grid/Grid';
 import '../src/components/composition/Grid/GridItem';
 import '../src/components/content/Badge/Badge';
@@ -10,6 +12,8 @@ import '../src/components/content/Icon/Icon';
 import '../src/components/content/Img/Img';
 import '../src/components/control/Button/Button';
 import '../src/components/control/RadioCheckbox/RadioCheckbox';
+import '../src/components/canvas/Supergraphic/Supergraphic';
+import '../src/components/canvas/Section/SectionImg';
 
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
@@ -27,6 +31,7 @@ const preview: Preview = {
           'Foundations',
           'Components',
           'Recipes',
+          ['App', 'Header', 'Footer', 'Page header', 'Cards', 'Forms', 'Navigation', 'Stat group', 'Tag group', 'Banner', 'Grid']
         ],
       },
     },

@@ -1,54 +1,86 @@
 .evg-longform {
-  h1 {
-    margin-bottom: var(--evg-spacing-lg);
-  }
+  --evg-longform-spacing: calc(var(--evg-font-line-height) * 1rem);
+  --evg-longform-spacing-sm: calc(var(--evg-longform-spacing) * 0.5);
+  --evg-longform-spacing-xs: calc(var(--evg-longform-spacing) * 0.25);
 
-  h2 {
-    margin-bottom: var(--evg-spacing-md);
-  }
-
+  h1,
+  h2,
   h3,
-  h4,
-  h5 {
-    margin-bottom: var(--evg-spacing-sm);
-  }
-
   p,
   ul,
-  ol {
-    margin-bottom: var(--evg-spacing-md);
-  }
+  ol,
+  dl,
+  dd,
+  figure {
+    margin: 0 0 var(--evg-longform-spacing);
 
-  ul,
-  ol {
-    padding-left: calc(var(--evg-font-line-height) * 1rem);
-  }
-
-  li {
-    margin-bottom: var(--evg-spacing-sm);
-
-    p:last-child {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  p +,
-  ul +,
-  ol + {
-    h2,
-    h3,
-    h4,
-    h5 {
-      margin-top: var(--evg-spacing-lg);
+  h4 {
+    margin: 0 0 var(--evg-longform-spacing-xs);
+  }
+
+  ul,
+  ol {
+    padding-left: var(--evg-longform-spacing);
+  }
+
+  dt,
+  dd {
+    display: block;
+  }
+
+  dt {
+    font-weight: var(--evg-font-weight-bold);
+  }
+
+  li {
+    margin-bottom: var(--evg-longform-spacing-sm);
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+  }
+
+  q {
+    font-style: italic;
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
     }
   }
 
-  a:hover {
-    text-decoration: underline;
+  figure:has(blockquote) {
+    border-left: 0.25rem solid var(--evg-color-lime);
+    padding-left: var(--evg-spacing-md);
+
+    blockquote {
+      font-family: var(--evg-font-family-heading);
+      font-size: var(--evg-font-size-heading-md);
+      line-height: var(--evg-font-line-height-sm);
+      margin: 0 0 var(--evg-spacing-md);
+      padding: 0;
+
+      /* stylelint-disable-next-line selector-max-compound-selectors */
+      p {
+        line-height: var(--evg-font-line-height-sm);
+      }
+    }
+
+    @media (width >= 768px) {
+      padding-left: var(--evg-spacing-lg);
+    }
   }
 
-  table,
-  img {
-    margin: var(--evg-spacing-lg) 0;
+  figcaption {
+    font-size: var(--evg-font-size-body-sm);
   }
 }

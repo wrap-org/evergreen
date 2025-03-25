@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppLayout } from '../../recipes/LaPortal.stories';
+import { LaPortal as AppLayout } from '../../recipes/App.stories';
 
 export function Home() {
   return (

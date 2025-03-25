@@ -86,3 +86,14 @@
 - `LoadingButton` has been replaced with `evg-loading-button`
   - This needs to be wrapped by a `evg-button` tag
   - The props have been removed and the size instead can be controlled by the wrapping `evg-button` component
+- `Collapse` has been replaced with  `evg-collapse`
+  - Any button can be used to control the collapse element rather than it being dicated by the collapse element.
+- `Enter` has been replaced with `evg-enter`.
+  - `enter` has been removed as a prop
+  - `enterOnScroll` has been added as a prop
+- `List` has been replaced with `evg-list`.
+  - `List` must contain an unordered, ordered, or definition list element.
+  - `List.Item` has been removed, as the native list `<li>` component is used to control the list elements.
+  - `evg-icon` can be used directly within a list child element, instead of as a `List.Item` prop.
+- `Sticky` has been replaced with `evg-sticky`
+  - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
