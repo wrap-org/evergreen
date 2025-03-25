@@ -49,7 +49,7 @@ export const ScreenReaderOnly: StoryFn = () => (
   <>
     <p>The invisible label content below is read by screen readers</p>
     <evg-label class="evg-sr-only">
-      <label htmlFor="input-with-label">Label</label>
+      <label htmlFor="input-with-sr-label">Label</label>
     </evg-label>
   </>
 );
