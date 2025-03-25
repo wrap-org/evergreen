@@ -106,7 +106,7 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
         </evg-header-primary-nav>
         <evg-header-secondary-nav>
           <nav aria-label="Secondary navigation">
-            <evg-button>
+            <evg-button variant={theme === 'forest' ? 'secondary' : 'default'}>
               <button
                 type="button"
                 aria-controls="regions"
@@ -121,13 +121,16 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
                 />
               </button>
             </evg-button>
-            <evg-button>
+            <evg-button variant={theme === 'forest' ? 'secondary' : 'default'}>
               <button type="button">
                 Log in / Sign up
                 <evg-icon icon="user" />
               </button>
             </evg-button>
-            <evg-button width="square">
+            <evg-button
+              width="square"
+              variant={theme === 'forest' ? 'secondary' : 'default'}
+            >
               <button type="button" aria-label="Search">
                 <evg-icon icon="search" />
               </button>
@@ -135,7 +138,10 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
           </nav>
         </evg-header-secondary-nav>
         <evg-header-mobile-nav>
-          <evg-button width="square">
+          <evg-button
+            width="square"
+            variant={theme === 'forest' ? 'secondary' : 'default'}
+          >
             <button
               type="button"
               aria-label="Open mobile navigation"

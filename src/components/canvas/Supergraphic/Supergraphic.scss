@@ -11,18 +11,18 @@ evg-supergraphic {
     color: color-mix(
       in sRGB,
       var(--evg-theme-background),
-      var(--evg-color-cloud) 25%
+      var(--evg-color-coal) 5%
     );
     height: 200%;
     position: absolute;
     width: auto;
 
     @container style(--evg-theme-background: var(--evg-color-cloud)) {
-      color: var(--evg-color-forest-25);
+      color: var(--evg-color-sand-25);
     }
 
     @container style(--evg-theme-background: var(--evg-color-sand-50)) {
-      color: var(--evg-color-sand-25);
+      color: var(--evg-color-sand-75);
     }
 
     @container style(--evg-theme-background: var(--evg-color-forest)) {
@@ -33,8 +33,8 @@ evg-supergraphic {
       color: var(--evg-color-forest-50);
     }
 
-    @container style(--evg-theme-background: var(--evg-color-earth-50)) {
-      color: var(--evg-color-earth-25);
+    @container style(--evg-theme-background: var(--evg-color-earth-75)) {
+      color: var(--evg-color-earth);
     }
 
     @container style(--evg-theme-background: var(--evg-color-earth-25)) {
@@ -46,11 +46,11 @@ evg-supergraphic {
     }
 
     @container style(--evg-theme-background: var(--evg-color-lime-25)) {
-      color: var(--evg-color-lime-50);
+      color: var(--evg-color-lime-75);
     }
 
     @container style(--evg-theme-background: var(--evg-color-sky-50)) {
-      color: var(--evg-color-sky-25);
+      color: var(--evg-color-sky-75);
     }
 
     @container style(--evg-theme-background: var(--evg-color-sky-25)) {

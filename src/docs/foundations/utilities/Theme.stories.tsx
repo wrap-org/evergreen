@@ -64,12 +64,18 @@ const ThemedSection = ({ theme }) => (
 
       <evg-grid>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <evg-button variant="primary" width="full-width-mobile">
+          <evg-button
+            variant={theme === 'lime' ? 'default' : 'primary'}
+            width="full-width-mobile"
+          >
             <button>Button text</button>
           </evg-button>
         </evg-grid-item>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <evg-button width="full-width-mobile">
+          <evg-button
+            variant={theme === 'lime' ? 'secondary' : 'default'}
+            width="full-width-mobile"
+          >
             <button>Button text</button>
           </evg-button>
         </evg-grid-item>
