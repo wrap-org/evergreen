@@ -50,7 +50,7 @@ export default {
 } satisfies Meta;
 
 const Content = ({ theme }: { readonly theme?: string }) => (
-  <evg-wrap size="lg">
+  <evg-wrapper size="lg">
     <h2 className="evg-spacing-bottom-sm">Section title</h2>
     <p className="evg-spacing-bottom-lg">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -77,7 +77,7 @@ const Content = ({ theme }: { readonly theme?: string }) => (
         </evg-button>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 export const Section: StoryFn = ({ theme, ...props }) => (

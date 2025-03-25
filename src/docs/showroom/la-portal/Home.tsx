@@ -6,12 +6,12 @@ export function Home() {
   return (
     <AppLayout>
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <h1 className="evg-text-size-heading-lg">Southampton City Council</h1>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <h2 className="evg-text-size-heading-sm evg-text-transform-uppercase evg-spacing-bottom-md">
             Collection types
           </h2>
@@ -69,7 +69,7 @@ export function Home() {
           <docs-placeholder class="evg-spacing-bottom-md">FAQ</docs-placeholder>
           <docs-placeholder class="evg-spacing-bottom-md">FAQ</docs-placeholder>
           <docs-placeholder>FAQ</docs-placeholder>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </AppLayout>
   );

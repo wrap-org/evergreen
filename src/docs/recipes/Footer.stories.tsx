@@ -13,7 +13,7 @@ export function Full(props) {
     <footer {...props}>
       <evg-section padding="lg" class="evg-theme-forest">
         <h2 hidden>Footer</h2>
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <evg-grid gap="xl" wrap="wrap" class="evg-spacing-bottom-xl">
             <evg-grid-item small-mobile="12" tablet="6" large-tablet="8">
               <h3 className="evg-text-size-heading-xs evg-text-transform-uppercase evg-spacing-top-sm evg-spacing-bottom-sm">
@@ -106,10 +106,10 @@ export function Full(props) {
               </evg-button>
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="lg" class="evg-theme-coal">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <p className="evg-text-size-body-xs">
             The Waste and Resources Action Programme (which operates as WRAP) is
             a registered UK Charity No.1159512.
@@ -121,7 +121,7 @@ export function Full(props) {
             WRAP is an EU registered trade mark. Our terms & conditions include
             details of this and of WRAP’s other registered trade marks.
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </footer>
   );
@@ -131,7 +131,7 @@ export function Minimal(props) {
   return (
     <footer {...props}>
       <evg-section padding="lg" class="evg-theme-forest">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <evg-grid align-items="center" wrap="wrap">
             <evg-grid-item grow shrink small-mobile="12" large-mobile="auto">
               <evg-img block>
@@ -166,10 +166,10 @@ export function Minimal(props) {
               </evg-button>
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="lg" class="evg-theme-coal">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <p className="evg-text-size-body-xs">
             The Waste and Resources Action Programme (which operates as WRAP) is
             a registered UK Charity No.1159512.
@@ -181,7 +181,7 @@ export function Minimal(props) {
             WRAP is an EU registered trade mark. Our terms & conditions include
             details of this and of WRAP’s other registered trade marks.
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </footer>
   );

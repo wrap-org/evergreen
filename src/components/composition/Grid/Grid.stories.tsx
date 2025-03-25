@@ -155,7 +155,7 @@ ResponsiveColumns.parameters = {
 };
 
 export const MobileCTA = () => (
-  <evg-wrap gutter="none" size="md">
+  <evg-wrapper gutter="none" size="md">
     <evg-grid wrap="wrap" direction="row-reverse">
       <evg-grid-item mobile="12" tablet="3">
         <button type="button">Continue</button>
@@ -164,7 +164,7 @@ export const MobileCTA = () => (
         <button type="button">Cancel</button>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 const mobileCTADescription = `
@@ -181,7 +181,7 @@ MobileCTA.parameters = {
 };
 
 export const VerticalCenterContent = () => (
-  <evg-wrap gutter="none" size="sm">
+  <evg-wrapper gutter="none" size="sm">
     <evg-grid align-items="center">
       <evg-grid-item grow shrink>
         <p>
@@ -199,5 +199,5 @@ export const VerticalCenterContent = () => (
         />
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );

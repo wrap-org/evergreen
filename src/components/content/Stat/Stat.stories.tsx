@@ -30,7 +30,7 @@ export const Stat: StoryFn = ({ icon, ...args }) => (
 );
 
 export const Variations: StoryFn = () => (
-  <evg-wrap size="md">
+  <evg-wrapper size="md">
     <evg-grid wrap="wrap" gap="xl">
       <evg-grid-item small-mobile="12" small-tablet="6">
         <evg-stat layout="stack">
@@ -90,5 +90,5 @@ export const Variations: StoryFn = () => (
         </evg-stat>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );

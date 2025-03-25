@@ -28,7 +28,7 @@ export function StatGroup() {
   return (
     <>
       <evg-section padding="fluid">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
             Our impact
           </h2>
@@ -45,10 +45,10 @@ export function StatGroup() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
             Our impact
           </h2>
@@ -62,10 +62,10 @@ export function StatGroup() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-default">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <evg-grid gap="lg" wrap="wrap">
             <evg-grid-item small-mobile="12" tablet="4">
               <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
@@ -90,10 +90,10 @@ export function StatGroup() {
               ))}
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
             Our impact
           </h2>
@@ -110,10 +110,10 @@ export function StatGroup() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <evg-grid gap="lg" wrap="wrap">
             <evg-grid-item small-mobile="12" tablet="4">
               <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
@@ -141,10 +141,10 @@ export function StatGroup() {
               ))}
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="xxl">
+        <evg-wrapper size="xxl">
           <evg-grid gap="lg" wrap="wrap">
             <evg-grid-item small-mobile="12" tablet="4">
               <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
@@ -169,7 +169,7 @@ export function StatGroup() {
               ))}
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </>
   );
