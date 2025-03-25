@@ -49,7 +49,7 @@ export default {
   },
 } satisfies Meta;
 
-const Content = () => (
+const Content = ({ theme }: { readonly theme?: string }) => (
   <evg-wrap size="lg">
     <h2 className="evg-spacing-bottom-sm">Section title</h2>
     <p className="evg-spacing-bottom-lg">
@@ -61,12 +61,18 @@ const Content = () => (
     </p>
     <evg-grid>
       <evg-grid-item small-mobile="6" small-tablet="auto">
-        <evg-button variant="primary" width="full-width-mobile">
+        <evg-button
+          variant={theme === 'lime' ? 'default' : 'primary'}
+          width="full-width-mobile"
+        >
           <button type="button">Button text</button>
         </evg-button>
       </evg-grid-item>
       <evg-grid-item small-mobile="6" small-tablet="auto">
-        <evg-button width="full-width-mobile">
+        <evg-button
+          width="full-width-mobile"
+          variant={theme === 'lime' ? 'secondary' : 'default'}
+        >
           <button type="button">Button text</button>
         </evg-button>
       </evg-grid-item>
@@ -76,7 +82,7 @@ const Content = () => (
 
 export const Section: StoryFn = ({ theme, ...props }) => (
   <evg-section class={`evg-theme-${theme}`} {...props}>
-    <Content />
+    <Content theme={theme} />
   </evg-section>
 );
 
@@ -89,7 +95,7 @@ export const Theming: StoryFn = () => (
   <>
     {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <Content />
+        <Content theme={theme} />
       </evg-section>
     ))}
   </>
