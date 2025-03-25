@@ -74,9 +74,4 @@ evg-badge {
     --_background: var(--evg-color-coal);
     --_color: var(--evg-color-cloud);
   }
-
-  &[variant='steel'] {
-    --_background: var(--evg-color-steel);
-    --_color: var(--evg-color-cloud);
-  }
 }

@@ -16,8 +16,7 @@ export interface BadgeAttributes {
     | 'lemon'
     | 'violet'
     | 'lilac'
-    | 'coal'
-    | 'steel';
+    | 'coal';
 }
 
 declare global {

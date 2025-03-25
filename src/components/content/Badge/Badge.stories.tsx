@@ -19,7 +19,6 @@ const variants = [
   'violet',
   'lilac',
   'coal',
-  'steel',
 ] as const;
 
 export default {
