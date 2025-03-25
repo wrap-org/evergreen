@@ -1,0 +1,22 @@
+evg-form-group {
+  align-items: baseline;
+  display: grid;
+  gap: var(--evg-spacing-sm);
+
+  evg-label {
+    /* Negate the extra label height to account for the form group gap */
+    margin-block: calc(
+      (var(--evg-spacing-thumb) / var(--evg-font-line-height) / 4) * -1
+    );
+  }
+
+  @media (width >= 768px) {
+    &[orientation='horizontal'] {
+      grid-template-columns: 1fr 1fr;
+
+      :not(:first-child) {
+        grid-column: 2;
+      }
+    }
+  }
+}
