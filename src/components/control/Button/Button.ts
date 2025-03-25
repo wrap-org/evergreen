@@ -2,12 +2,7 @@ import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export type ButtonSize = 'sm' | 'md';
 
-export type ButtonVariant =
-  | 'default'
-  | 'primary'
-  | 'secondary'
-  | 'negative'
-  | 'text';
+export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'text';
 
 export type ButtonWidth = 'full-width' | 'full-width-mobile' | 'square';
 
