@@ -37,10 +37,10 @@ export const Label: StoryFn = () => (
 export const Legend: StoryFn = () => (
   <fieldset>
     <evg-label>
-      <legend>Legend</legend>
+      <legend id="input-fieldset">Legend</legend>
     </evg-label>
     <evg-input>
-      <input />
+      <input aria-labelledby="input-fieldset" />
     </evg-input>
   </fieldset>
 );
