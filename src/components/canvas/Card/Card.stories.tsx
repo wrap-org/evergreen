@@ -24,7 +24,7 @@ const cardContent = (
     </evg-card-img>
     <evg-card-content>
       <evg-meta>
-        <evg-badge type="info">Info</evg-badge>
+        <evg-badge variant="sky light">Info</evg-badge>
         <span className="evg-text-size-body-xs">Jan 1, 2025</span>
       </evg-meta>
       <h3 className="evg-text-size-heading-sm">
@@ -111,7 +111,7 @@ export const Layouts: StoryFn = () => (
           <evg-grid justify-content="space-between" align-items="center">
             <evg-grid-item>
               <evg-meta>
-                <evg-badge type="info">Info</evg-badge>
+                <evg-badge variant="sky light">Info</evg-badge>
                 <span className="evg-text-size-body-xs">Jan 1, 2025</span>
               </evg-meta>
             </evg-grid-item>
@@ -148,7 +148,7 @@ export const Clickable: StoryFn = () => (
               </evg-card-img>
               <evg-card-content>
                 <evg-meta>
-                  <evg-badge type="info">Press release</evg-badge>
+                  <evg-badge variant="sky light">Press release</evg-badge>
                   <span className="evg-text-size-body-xs">Jan 1, 2025</span>
                 </evg-meta>
                 <h3 className="evg-text-size-heading-sm evg-text-family-body">

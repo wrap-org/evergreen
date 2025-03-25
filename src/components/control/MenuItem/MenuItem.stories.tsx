@@ -69,9 +69,9 @@ export const WithDescriptionAndBadges: StoryFn = (props) => (
         <evg-menu-item-content>
           Menu item title
           <evg-meta>
-            <evg-badge type="info">Portal</evg-badge>
-            <evg-badge type="positive">Locator</evg-badge>
-            <evg-badge type="light">API</evg-badge>
+            <evg-badge variant="sky light">Portal</evg-badge>
+            <evg-badge variant="lime light">Locator</evg-badge>
+            <evg-badge variant="forest light">API</evg-badge>
           </evg-meta>
         </evg-menu-item-content>
         <evg-icon icon="arrow-right" />
@@ -84,9 +84,9 @@ export const WithDescriptionAndBadges: StoryFn = (props) => (
           Menu item title
           <p>Menu item description</p>
           <evg-meta>
-            <evg-badge type="info">Portal</evg-badge>
-            <evg-badge type="positive">Locator</evg-badge>
-            <evg-badge type="light">API</evg-badge>
+            <evg-badge variant="sky light">Portal</evg-badge>
+            <evg-badge variant="lime light">Locator</evg-badge>
+            <evg-badge variant="forest light">API</evg-badge>
           </evg-meta>
         </evg-menu-item-content>
         <evg-icon icon="arrow-right" />
@@ -107,9 +107,9 @@ export const Theming: StoryFn = (props) => (
                 Menu item title
                 <p>Menu item description</p>
                 <evg-meta>
-                  <evg-badge type="info">Portal</evg-badge>
-                  <evg-badge type="positive">Locator</evg-badge>
-                  <evg-badge type="light">API</evg-badge>
+                  <evg-badge variant="sky light">Portal</evg-badge>
+                  <evg-badge variant="lime light">Locator</evg-badge>
+                  <evg-badge variant="forest light">API</evg-badge>
                 </evg-meta>
               </evg-menu-item-content>
               <evg-icon icon="arrow-right" />

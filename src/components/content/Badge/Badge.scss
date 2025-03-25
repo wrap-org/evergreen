@@ -12,28 +12,71 @@ evg-badge {
   padding: var(--evg-spacing-xs) var(--evg-spacing-sm);
   text-transform: uppercase;
 
-  &[type='dark'] {
+  &[variant='forest'] {
     --_background: var(--evg-color-forest-75);
     --_color: var(--evg-color-cloud);
   }
 
-  &[type='info'] {
-    --_background: var(--evg-color-sky-25);
+  &[variant='forest light'] {
+    --_background: var(--evg-color-forest-25);
   }
 
-  &[type='attention'] {
+  &[variant='earth'] {
+    --_background: var(--evg-color-earth-75);
+  }
+
+  &[variant='sand'] {
+    --_background: var(--evg-color-sand);
+  }
+
+  &[variant='sky'] {
+    --_background: var(--evg-color-sky);
+  }
+
+  &[variant='sky light'] {
+    --_background: var(--evg-color-sky-50);
+  }
+
+  &[variant='lime'] {
     --_background: var(--evg-color-lime);
   }
 
-  &[type='positive'] {
-    --_background: var(--evg-color-lime-25);
+  &[variant='lime light'] {
+    --_background: var(--evg-color-lime-50);
   }
 
-  &[type='negative'] {
+  &[variant='rose'] {
+    --_background: var(--evg-color-rose-75);
+  }
+
+  &[variant='rose light'] {
     --_background: var(--evg-color-rose-25);
   }
 
-  &[type='neutral'] {
-    --_background: var(--evg-color-sky-50);
+  &[variant='orange'] {
+    --_background: var(--evg-color-orange);
+  }
+
+  &[variant='lemon'] {
+    --_background: var(--evg-color-lemon);
+  }
+
+  &[variant='violet'] {
+    --_background: var(--evg-color-violet);
+    --_color: var(--evg-color-cloud);
+  }
+
+  &[variant='lilac'] {
+    --_background: var(--evg-color-lilac);
+  }
+
+  &[variant='coal'] {
+    --_background: var(--evg-color-coal);
+    --_color: var(--evg-color-cloud);
+  }
+
+  &[variant='steel'] {
+    --_background: var(--evg-color-steel);
+    --_color: var(--evg-color-cloud);
   }
 }
