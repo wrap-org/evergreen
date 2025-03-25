@@ -57,7 +57,7 @@ export const ComposingElements: StoryFn = () => (
       </evg-grid-item>
     </evg-grid>
     <evg-input>
-      <input id="name" type="text" />
+      <input id="composing-elements" type="text" />
     </evg-input>
   </evg-form-group>
 );
