@@ -1,0 +1,130 @@
+evg-chip {
+  --_color: var(--evg-chip-color-light);
+  --_background: var(--evg-chip-background-light);
+  --_background-hover: var(--evg-chip-background-hover-light);
+  --_border-color: var(--evg-chip-border-color-light);
+  --_border-color-hover: var(--evg-chip-border-color-hover-light);
+
+  --_color-selected: var(--evg-chip-color-selected-light);
+  --_background-selected: var(--evg-chip-background-selected-light);
+  --_background-hover-selected: var(--evg-chip-background-hover-selected-light);
+  --_border-color-selected: var(--evg-chip-border-color-selected-light);
+  --_border-color-hover-selected: var(
+    --evg-chip-border-color-hover-selected-light
+  );
+
+  &[variant='dark'] {
+    --_color: var(--evg-chip-color-dark);
+    --_background: var(--evg-chip-background-dark);
+    --_background-hover: var(--evg-chip-background-hover-dark);
+    --_border-color: var(--evg-chip-border-color-dark);
+    --_border-color-hover: var(--evg-chip-border-color-hover-dark);
+
+    --_color-selected: var(--evg-chip-color-selected-dark);
+    --_background-selected: var(--evg-chip-background-selected-dark);
+    --_background-hover-selected: var(
+      --evg-chip-background-hover-selected-dark
+    );
+    --_border-color-selected: var(--evg-chip-border-color-selected-dark);
+    --_border-color-hover-selected: var(
+      --evg-chip-border-color-hover-selected-dark
+    );
+  }
+
+  display: inline-block;
+
+  button,
+  a,
+  label {
+    align-items: center;
+    appearance: none;
+    background: var(--_background);
+    border: 1px solid var(--_border-color);
+    border-radius: var(--evg-chip-border-radius);
+    color: var(--_color);
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: var(--evg-font-size-14);
+    font-weight: var(--evg-font-weight-medium);
+    justify-content: center;
+    letter-spacing: inherit;
+    padding-inline: var(--evg-spacing-sm);
+    transition: max-width var(--evg-transition-duration)
+      var(--evg-transition-timing);
+
+    input {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    @media (hover: hover) {
+      &:not([disabled]):hover {
+        --_background: var(--_background-hover);
+        --_border-color: var(--_border-color-hover);
+      }
+    }
+
+    &:not(:active):focus-visible {
+      --_background: var(--_background-hover);
+      --_border-color: var(--_border-color-hover);
+
+      outline-offset: var(--evg-chip-outline-offset);
+      position: relative;
+      // This z-index prevents the focus outline from being clipped by the parent
+      z-index: 1;
+    }
+
+    &::after {
+      appearance: none;
+      background-color: var(--_color);
+      content: '';
+      display: inline-block;
+      height: 1em;
+      /* mask-image allows icon color to be controlled */
+      mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z' fill='currentColor'/%3E%3C/svg%3E");
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      max-width: 0;
+      overflow: hidden;
+      transition: max-width var(--evg-transition-duration)
+        var(--evg-transition-timing);
+      width: 1em;
+    }
+  }
+
+  &[selected]:not([selected='false']) button,
+  &[selected]:not([selected='false']) a,
+  &[selected]:not([selected='false']) label,
+  label:has(input:checked) {
+    --_background: var(--_background-selected);
+    --_border-color: var(--_border-color-selected);
+    --_color: var(--_color-selected);
+    gap: var(--evg-spacing-xs);
+
+    @media (hover: hover) {
+      &:not([disabled]):hover {
+        --_background: var(--_background-hover-selected);
+        --_border-color: var(--_border-color-hover-selected);
+      }
+    }
+
+    &:not(:active):focus-visible {
+      --_background: var(--_background-hover-selected);
+      --_border-color: var(--_border-color-hover-selected);
+    }
+
+    &::after {
+      appearance: auto;
+      max-width: 1em;
+      transition: max-width var(--evg-transition-duration)
+        var(--evg-transition-timing);
+    }
+  }
+}

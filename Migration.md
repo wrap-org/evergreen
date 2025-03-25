@@ -95,4 +95,4 @@
   - The `FormGroup` sub-components have been removed
   - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
 - `Label` has been replaced with `evg-label`
-  `evg-label` should always wrap a `label`, `span` or `legend` element
+  - `evg-label` should always wrap a `label`, `span` or `legend` element
