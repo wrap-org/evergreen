@@ -73,13 +73,13 @@ const SupergraphicLayout = ({
   readonly children: React.ReactNode;
 }) => (
   <evg-section padding="fluid">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid>
         <evg-grid-item small-mobile="12" tablet="8" small-desktop="7">
           {children}
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 
@@ -102,7 +102,7 @@ export const Supergraphic = () => (
     </evg-supergraphic>
     <evg-supergraphic position="bottom-left" class="evg-theme-sand">
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <evg-breadcrumb class="evg-spacing-bottom-lg">
             <nav aria-label="Breadcrumb">
               <ol>
@@ -140,7 +140,7 @@ export const Supergraphic = () => (
               </p>
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </evg-supergraphic>
   </>
@@ -154,12 +154,12 @@ export const SideImage = () => (
       <evg-grid wrap="wrap" gap="none" key={direction} direction={direction}>
         <evg-grid-item small-mobile="12" large-tablet="6" fill>
           <evg-section padding="fluid-lg" class="evg-theme-forest">
-            <evg-wrap size="xxl" gutter="fluid-lg">
+            <evg-wrapper size="xxl" gutter="fluid-lg">
               <Content
                 title="Page Header with a much longer title which uses three lines"
                 description="Page description that uses a single sentence to summarise the content on this page – letting audiences know what they can expect to find."
               />
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
         <evg-grid-item small-mobile="12" large-tablet="6" fill="true">
@@ -187,7 +187,7 @@ export const FullImage = () => (
         width="1280"
         height="640"
       />
-      <evg-wrap size="lg" class="evg-text-align-center">
+      <evg-wrapper size="lg" class="evg-text-align-center">
         <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
           Page Header with short title
         </h1>
@@ -204,7 +204,7 @@ export const FullImage = () => (
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section-img>
   </evg-section>
 );
@@ -221,7 +221,7 @@ export const NestedImage = () => (
             width="1280"
             height="640"
           />
-          <evg-wrap size="lg" class="evg-text-align-center">
+          <evg-wrapper size="lg" class="evg-text-align-center">
             <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
               Page Header with short title
             </h1>
@@ -242,7 +242,7 @@ export const NestedImage = () => (
                 </evg-grid-item>
               ))}
             </evg-grid>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section-img>
       </evg-section>
     ))}

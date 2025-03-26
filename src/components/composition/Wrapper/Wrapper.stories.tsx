@@ -29,14 +29,14 @@ const gutters: (Spacing | 'none')[] = [
 ];
 
 export default {
-  title: 'Components/Composition/Wrap',
+  title: 'Components/Composition/Wrapper',
   argTypes: {
     size: {
       control: {
         type: 'select',
       },
       options: sizes,
-      description: 'The max width of the wrap.',
+      description: 'The max width of the wrapper.',
     },
     gutter: {
       control: {
@@ -58,9 +58,9 @@ export default {
 } satisfies Meta;
 
 const Template: StoryFn = (args) => (
-  <evg-wrap {...args}>
+  <evg-wrapper {...args}>
     <docs-placeholder>Wrap content</docs-placeholder>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 export const Wrap = Template.bind({});
@@ -74,9 +74,9 @@ export const SizesStory = () => {
   return (
     <>
       {sizes.map((size) => (
-        <evg-wrap size={size} class="evg-spacing-bottom-md" key={size}>
+        <evg-wrapper size={size} class="evg-spacing-bottom-md" key={size}>
           <docs-placeholder>{size}</docs-placeholder>
-        </evg-wrap>
+        </evg-wrapper>
       ))}
     </>
   );

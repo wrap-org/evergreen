@@ -67,16 +67,16 @@ export default function TakeAction({ open }: { readonly open: boolean }) {
       <evg-grid gap="none">
         <evg-grid-item small-mobile="3" desktop="2" fill>
           <evg-section padding="lg" class="evg-theme-sand">
-            <evg-wrap gutter="lg">
+            <evg-wrapper gutter="lg">
               <span className="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">
                 Take action
               </span>
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
         <evg-grid-item grow fill>
           <evg-section padding="lg">
-            <evg-wrap gutter="lg">
+            <evg-wrapper gutter="lg">
               <evg-grid gap="xl">
                 <evg-grid-item>
                   {menu.map(({ id, title }) => (
@@ -115,7 +115,7 @@ export default function TakeAction({ open }: { readonly open: boolean }) {
                   ))}
                 </evg-grid-item>
               </evg-grid>
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
       </evg-grid>

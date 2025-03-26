@@ -62,7 +62,7 @@ const Template: StoryFn = (args) => {
     <evg-drawer {...args}>
       <dialog>
         <evg-section padding="md">
-          <evg-wrap>
+          <evg-wrapper>
             <evg-grid justify-content="flex-end" class="evg-spacing-bottom-lg">
               <evg-grid-item>
                 <evg-button width="square">
@@ -218,10 +218,10 @@ const Template: StoryFn = (args) => {
                 <evg-menu-item-content>Latest</evg-menu-item-content>
               </button>
             </evg-menu-item>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
         <evg-section padding="md" class="evg-theme-sand">
-          <evg-wrap>
+          <evg-wrapper>
             <evg-menu-item>
               <button type="button">
                 <evg-icon icon="user" />
@@ -247,7 +247,7 @@ const Template: StoryFn = (args) => {
               </div>
             </DrawerExpandable>
             <evg-divider />
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       </dialog>
     </evg-drawer>
