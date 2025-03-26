@@ -1,5 +1,57 @@
 import { Meta, Markdown, Canvas } from '@storybook/addon-docs';
+import * as SectionStories from '../../components/canvas/Section/Section.stories.tsx';
+import * as SupergraphicStories from '../../components/canvas/Supergraphic/Supergraphic.stories.tsx';
+import * as WrapperStories from '../../components/composition/Wrapper/Wrapper.stories.tsx';
 
 <Meta title="Guides/Page sections and wrappers" />
 
 # Page sections and wrappers
+
+Our two foundational components for page layout are [sections](?path=/docs/components-canvas-section--docs) 
+and [wrappers](?path=/docs/components-composition-wrapper--docs). Almost 100% of the content on a page will 
+sit inside these elements, which provide spacing, [theming](?path=/docs/foundations-utilities-theme--docs) 
+and structure.
+
+## Section 
+
+<Markdown>{SectionStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={SectionStories.Section}
+/>
+
+### Supergraphic
+
+<Markdown>{SupergraphicStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={SupergraphicStories.Supergraphic}
+/>
+
+### Images
+
+<Markdown>{SectionStories.WithImage.parameters.docs.description.story}</Markdown>
+
+<Canvas
+  of={SectionStories.WithImage}
+/>
+
+<Canvas
+  of={SectionStories.WithNestedImage}
+/>
+
+
+
+## Wrapper
+
+<Markdown>{WrapperStories.default.parameters.docs.description.component}</Markdown>
+
+<docs-fullscreen-story>
+  <Canvas
+    of={WrapperStories.SizesStory}
+  />
+</docs-fullscreen-story>
+
+Once the initial content structure is in place using our page section and wrapper, we can either
+start adding text, or create further structure with 
+[grids, boxes and cards](?path=/docs/guides-grids-boxes-and-cards--docs).

@@ -27,6 +27,7 @@ export default {
       description: {
         component: description,
       },
+      theming: true,
     },
   },
   argTypes: {
