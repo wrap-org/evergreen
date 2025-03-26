@@ -99,9 +99,7 @@ evg-chip {
     }
   }
 
-  &[selected]:not([selected='false']) button,
-  &[selected]:not([selected='false']) a,
-  &[selected]:not([selected='false']) label,
+  button[aria-pressed='true'],
   label:has(input:checked) {
     --_background: var(--_background-selected);
     --_border-color: var(--_border-color-selected);

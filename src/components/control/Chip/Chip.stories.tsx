@@ -32,14 +32,17 @@ export const Chip: StoryFn = (args) => {
 
 Chip.args = {
   variant: 'light',
-  selected: false,
 };
 
 export const ControlledChip: StoryFn = (args) => {
   const [selected, setSelected] = useState(false);
   return (
-    <evg-chip {...args} selected={selected}>
-      <button type="button" onClick={() => setSelected(!selected)}>
+    <evg-chip {...args}>
+      <button
+        type="button"
+        aria-pressed={selected}
+        onClick={() => setSelected(!selected)}
+      >
         Chip Controlled
       </button>
     </evg-chip>
@@ -49,7 +52,7 @@ export const ControlledChip: StoryFn = (args) => {
 ControlledChip.parameters = {
   docs: {
     description: {
-      story: `Chips state can be controlled by the <code>selected</code> prop`,
+      story: `Chips state can be controlled by the <code>aria-pressed</code> attribute, on the button sub-element.`,
     },
   },
 };
