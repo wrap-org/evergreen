@@ -28,7 +28,7 @@ export function Grid({
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -71,7 +71,7 @@ export function Grid({
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -94,7 +94,7 @@ export function Featured({
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size={size}>
+      <evg-wrapper size={size}>
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -129,7 +129,7 @@ export function Featured({
             </evg-button>
           </evg-card-content>
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -160,7 +160,7 @@ export function List({
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="lg">
+      <evg-wrapper size="lg">
         {title && (
           <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
             {title}
@@ -195,7 +195,7 @@ export function List({
             </evg-card-content>
           </evg-card>
         ))}
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -232,7 +232,7 @@ export function Row({
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -268,7 +268,7 @@ export function Row({
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -277,7 +277,7 @@ export function ThumbList() {
   const cards = [0, 1, 2, 3];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Section with a list of cards
         </h2>
@@ -321,7 +321,7 @@ export function ThumbList() {
             </evg-card-content>
           </evg-card>
         ))}
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -330,7 +330,7 @@ export function People() {
   const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Leadership
         </h2>
@@ -371,7 +371,7 @@ export function People() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -380,7 +380,7 @@ export function SearchResults() {
   const cards = [0, 1, 2, 3, 4, 5];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Search results
         </h2>
@@ -416,7 +416,7 @@ export function SearchResults() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -425,7 +425,7 @@ export function Articles() {
   const cards = [0, 1, 2, 3, 4, 5, 6, 7];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <evg-grid class="evg-spacing-bottom-lg" align-items="center">
           <evg-grid-item grow shrink>
             <h2 className="evg-text-size-heading-md evg-text-transform-uppercase">
@@ -477,7 +477,7 @@ export function Articles() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }

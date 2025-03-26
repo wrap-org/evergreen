@@ -6,7 +6,7 @@ export function ReportHome() {
   return (
     <AppLayout secondaryNav>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <h1 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-sm">
             Communal report
           </h1>
@@ -182,7 +182,7 @@ export function ReportHome() {
           <docs-placeholder class="evg-spacing-bottom-md">FAQ</docs-placeholder>
           <docs-placeholder class="evg-spacing-bottom-md">FAQ</docs-placeholder>
           <docs-placeholder>FAQ</docs-placeholder>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </AppLayout>
   );

@@ -7,12 +7,12 @@ export function SecondLevel() {
   return (
     <AppLayout>
       <evg-section class="evg-theme-earth-light" padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <docs-placeholder>Page header</docs-placeholder>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg evg-text-align-center">
             Food waste is a big deal
           </h2>
@@ -35,10 +35,10 @@ export function SecondLevel() {
               height="200"
             />
           </evg-img>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h3>Household food waste has declined since 2007</h3>
           <p>
             In the UK between 2007 and 2010, household food waste decreased,
@@ -74,10 +74,10 @@ export function SecondLevel() {
             wasted via the sewer and home composting which make up 18% of all
             household food waste.
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h3>More household food waste could be recycled</h3>
           <p>
             Most household food and drink waste in the UK goes into the general
@@ -101,10 +101,10 @@ export function SecondLevel() {
               height="200"
             />
           </evg-img>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h3>Most food waste is preventable</h3>
           <p>
             Food waste is subdivided into i) parts of food that are generally
@@ -143,10 +143,10 @@ export function SecondLevel() {
             within both broad and specific food categories can help target
             efforts.
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <evg-grid
             justify-content="space-between"
             align-items="center"
@@ -194,11 +194,11 @@ export function SecondLevel() {
               </evg-stat>
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg evg-text-align-center">
             Take action
           </h2>
@@ -291,11 +291,11 @@ export function SecondLevel() {
               <evg-divider />
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg evg-text-align-center">
             Next story
           </h2>
@@ -330,7 +330,7 @@ export function SecondLevel() {
               </evg-button>
             </evg-card-content>
           </evg-card>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <Banner

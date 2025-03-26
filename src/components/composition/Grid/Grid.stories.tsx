@@ -3,7 +3,18 @@ import React from 'react';
 
 const description = `
 The grid and grid item components are used to create a grid layout by exposing
-the most commonly used flexbox properties as attributes.
+the most commonly used flexbox properties as attributes. The best way to understand
+how to use the grid, is to understand
+[flexbox layouts](https://css-tricks.com/snippets/css/a-guide-to-flexbox/),
+but there are some common examples in the [grid docs](?path=/docs/components-composition-grid--docs).
+
+The Evergreen Design System uses a fluid 12 column grid across all screen sizes,
+which gives many options for dividing space into 2, 3, 4, or 6 columns.
+
+The grid item component has various device size properties that allow you to
+control the number of columns that the item will span on different screen sizes.
+These come in mobile (375px), tablet (768px) and desktop (1440px), as well as small
+and large variants of each (e.g. small-mobile at 320px).
 `;
 
 export default {
@@ -155,16 +166,20 @@ ResponsiveColumns.parameters = {
 };
 
 export const MobileCTA = () => (
-  <evg-wrap gutter="none" size="md">
+  <evg-wrapper gutter="none" size="md">
     <evg-grid wrap="wrap" direction="row-reverse">
       <evg-grid-item mobile="12" tablet="3">
-        <button type="button">Continue</button>
+        <evg-button variant="primary" width="full-width">
+          <button type="button">Continue</button>
+        </evg-button>
       </evg-grid-item>
       <evg-grid-item mobile="12" tablet="3">
-        <button type="button">Cancel</button>
+        <evg-button width="full-width">
+          <button type="button">Cancel</button>
+        </evg-button>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 const mobileCTADescription = `
@@ -181,7 +196,7 @@ MobileCTA.parameters = {
 };
 
 export const VerticalCenterContent = () => (
-  <evg-wrap gutter="none" size="sm">
+  <evg-wrapper gutter="none" size="sm">
     <evg-grid align-items="center">
       <evg-grid-item grow shrink>
         <p>
@@ -199,5 +214,5 @@ export const VerticalCenterContent = () => (
         />
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );

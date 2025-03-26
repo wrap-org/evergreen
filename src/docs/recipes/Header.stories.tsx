@@ -19,7 +19,11 @@ export function Dark(props) {
 }
 
 export function Raised(props) {
-  return <Header theme="default" raised {...props} />;
+  return (
+    <div className="evg-spacing-left-sm evg-spacing-right-sm evg-spacing-top-md evg-spacing-bottom-md">
+      <Header theme="default" raised {...props} />
+    </div>
+  );
 }
 
 export function Compact(props) {

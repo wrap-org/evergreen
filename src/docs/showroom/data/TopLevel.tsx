@@ -27,12 +27,12 @@ export function TopLevel() {
   return (
     <AppLayout>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="xxl" class="evg-text-align-center">
-          <evg-wrap size="md" gutter="none">
+        <evg-wrapper size="xxl" class="evg-text-align-center">
+          <evg-wrapper size="md" gutter="none">
             <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase evg-spacing-bottom-lg">
               Stories and insights into food waste
             </h1>
-          </evg-wrap>
+          </evg-wrapper>
           <evg-grid
             gap="lg"
             justify-content="center"
@@ -99,19 +99,19 @@ export function TopLevel() {
               </evg-img>
             </evg-grid-item>
           </evg-grid>
-          <evg-wrap size="xl" gutter="none">
+          <evg-wrapper size="xl" gutter="none">
             <p className="evg-text-size-body-lg">
               WRAP is a climate action NGO working around the globe to tackle
               the causes of the climate crisis and give the planet a sustainable
               future. We were established in the UK in 2000; we now work in 40+
               countries. 
             </p>
-          </evg-wrap>
-        </evg-wrap>
+          </evg-wrapper>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
             Latest stories
           </h2>
@@ -154,11 +154,11 @@ export function TopLevel() {
               </evg-card-content>
             </evg-card>
           ))}
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <evg-grid
             justify-content="space-between"
             align-items="center"
@@ -227,7 +227,7 @@ export function TopLevel() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
       <Banner
         title="Join us in leading the change"

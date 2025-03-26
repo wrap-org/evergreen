@@ -61,7 +61,7 @@ export function ThirdLevel() {
     <AppLayout>
       <evg-supergraphic class="evg-theme-forest" position="bottom-right">
         <evg-section padding="fluid-lg" class="evg-theme-forest">
-          <evg-wrap size="xxl" gutter="fluid-lg">
+          <evg-wrapper size="xxl" gutter="fluid-lg">
             <evg-grid wrap="wrap" gap="none">
               <evg-grid-item small-mobile="12" tablet="9" large-tablet="7">
                 <evg-breadcrumb class="evg-spacing-bottom-md">
@@ -94,12 +94,12 @@ export function ThirdLevel() {
                 </evg-button>
               </evg-grid-item>
             </evg-grid>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       </evg-supergraphic>
 
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <p className="evg-spacing-bottom-lg">
             The Courtauld Commitment 2030 is a UK success story - a voluntary
             agreement that enables collaborative action across the entire UK
@@ -247,7 +247,7 @@ export function ThirdLevel() {
               </evg-grid>
             </evg-card-content>
           </evg-card>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <Featured

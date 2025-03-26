@@ -46,7 +46,7 @@ export const Modal: StoryFn = () => {
       </evg-button>
       <evg-modal>
         <dialog ref={dialogRef}>
-          <evg-wrap size="xs" gutter="none">
+          <evg-wrapper size="xs" gutter="none">
             <evg-box padding="md" radius="md">
               <evg-grid>
                 <evg-grid-item grow>
@@ -67,7 +67,7 @@ export const Modal: StoryFn = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </evg-box>
-          </evg-wrap>
+          </evg-wrapper>
         </dialog>
       </evg-modal>
     </>

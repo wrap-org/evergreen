@@ -2,21 +2,21 @@ import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 import { Sizes } from '../../../types/size.type';
 import { Spacing } from '../../../types/tokens.type';
 
-export interface WrapAttributes {
+export interface WrapperAttributes {
   size?: Sizes | 'auto';
   gutter?: Spacing | 'none';
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'evg-wrap': WrapAttributes;
+    'evg-wrapper': WrapperAttributes;
   }
 }
 
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'evg-wrap': JSXCustomElement<WrapAttributes>;
+      'evg-wrapper': JSXCustomElement<WrapperAttributes>;
     }
   }
 }

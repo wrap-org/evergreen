@@ -11,6 +11,7 @@ export default {
         component:
           'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-menu-item` component.',
       },
+      theming: true,
     },
   },
 };
@@ -99,7 +100,7 @@ export const Theming: StoryFn = (props) => (
   <>
     {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <evg-menu-item {...props}>
             <button type="button">
               <evg-icon icon="document-check" />
@@ -115,7 +116,7 @@ export const Theming: StoryFn = (props) => (
               <evg-icon icon="arrow-right" />
             </button>
           </evg-menu-item>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     ))}
   </>

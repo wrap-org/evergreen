@@ -181,11 +181,11 @@ export const IconColors: StoryFn = () => (
   <>
     {themes.map((theme) => (
       <evg-section class={`evg-theme-${theme}`} key={theme}>
-        <evg-wrap gutter="md">
+        <evg-wrapper gutter="md">
           <p>
             <evg-icon icon="edit"></evg-icon> This is a {theme} theme
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     ))}
   </>
