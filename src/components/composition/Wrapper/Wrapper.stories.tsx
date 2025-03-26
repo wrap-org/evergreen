@@ -29,7 +29,7 @@ const gutters: (Spacing | 'none')[] = [
 ];
 
 const description = `
-The wrapper component is used to provide inline (horizontal) spacing around content, as well as 
+The wrapper component is used to provide inline (horizontal) spacing around content, as well as
 setting the maximum width.
 
 Wrappers are almost always used inside a [section component](?path=/docs/components-canvas-section--docs)

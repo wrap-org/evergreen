@@ -4,14 +4,14 @@ import React from 'react';
 import { themes } from '@/lib/theme';
 
 const description = `
-A section component represents a horizontal slice of a page. Multiple sections and themes 
+A section component represents a horizontal slice of a page. Multiple sections and themes
 can be used to create visibly grouped parts of the page with different backgrounds.
 
-Sections support [theming](?path=/docs/foundations-utilities-theme--docs), applying a 
-background colour and default text colour based on the current theme as well as vertical 
+Sections support [theming](?path=/docs/foundations-utilities-theme--docs), applying a
+background colour and default text colour based on the current theme as well as vertical
 spacing.
 
-Some pages will have many sections to divide up the content, espcially on brochureware
+Some pages will have many sections to divide up the content, especially on brochureware
 sites, whilst other may only have a single section for the main content, such as in an
 app-like context.
 `;

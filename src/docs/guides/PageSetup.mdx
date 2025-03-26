@@ -9,13 +9,13 @@ import * as FooterRecipes from '../recipes/Footer.stories.tsx';
 
 # Page setup
 
-This guide covers setting up a brand new page from scratch using the Evergreen Design System. 
-It assumes [the system has been installed](?path=/docs/getting-started--docs) and the components 
+This guide covers setting up a brand new page from scratch using the Evergreen Design System.
+It assumes [the system has been installed](?path=/docs/getting-started--docs) and the components
 are ready to use on a page.
 
 ## Skip to content
 
-<Markdown>{SkipLinkStories.default.parameters.docs.description.component}</Markdown> 
+<Markdown>{SkipLinkStories.default.parameters.docs.description.component}</Markdown>
 
 <Canvas
   of={SkipLinkStories.SkipLink}
@@ -29,7 +29,7 @@ are ready to use on a page.
   of={AppStories.App}
 />
 
-## Site header 
+## Site header
 
 <Markdown>{HeaderStories.default.parameters.docs.description.component}</Markdown>
 
@@ -51,18 +51,18 @@ are ready to use on a page.
   />
 </docs-fullscreen-story>
 
-## Site footer 
+## Site footer
 
-The [site footer](?path=/story/recipes-footer--full) sits at the bottom of the page and is passed 
-into the `footer` slot of the [app wrapper](?path=/docs/components-composition-app--docs) component, 
+The [site footer](?path=/story/recipes-footer--full) sits at the bottom of the page and is passed
+into the `footer` slot of the [app wrapper](?path=/docs/components-composition-app--docs) component,
 which keeps it at the bottom of the page.
 
-There is currently no dedicated footer component, preferring instead to use generic 
+There is currently no dedicated footer component, preferring instead to use generic
 [page sections(?path=/docs/components-canvas-section--docs) (one of which uses a special coal theme
 just for the footer).
 
-This means the footer is extremely flexible and can be adapted to the current apps needs, such as 
-displaying a large, fully featured, footer in brochureware sites or something more minimal in an app 
+This means the footer is extremely flexible and can be adapted to the current apps needs, such as
+displaying a large, fully featured, footer in brochureware sites or something more minimal in an app
 context (or even none at all).
 
 <docs-fullscreen-story>
@@ -77,7 +77,7 @@ context (or even none at all).
   />
 </docs-fullscreen-story>
 
-## Main content 
+## Main content
 
 Once the app wrapper, header, and footer have been put in place, we can move on to the main content
 which begins with [page sections and wrappers](?path=/docs/guides-page-sections-and-wrappers--docs).
