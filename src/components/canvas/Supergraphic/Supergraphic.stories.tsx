@@ -3,6 +3,14 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const description = `
+A supergraphic component can be wrapped around a section to apply a subtle branded finish.
+The [theme](?path=/docs/foundations-utilities-theme--docs) should be applied to the supergraphic
+and the section will inherit it.
+
+The supergraphic can be positioned in one of the four corners of the section.
+`;
+
 export default {
   title: 'Components/Canvas/Supergraphic',
   argTypes: {
@@ -17,8 +25,9 @@ export default {
     layout: 'fullscreen',
     docs: {
       description: {
-        component: 'Used with sections to apply a subtle branded finish',
+        component: description,
       },
+      theming: true,
     },
   },
 } satisfies Meta;

@@ -1,0 +1,83 @@
+import { Meta, Markdown, Canvas } from '@storybook/addon-docs';
+import * as SkipLinkStories from '../../components/control/SkipLink/SkipLink.stories.tsx';
+import * as AppStories from '../../components/composition/App/App.stories.tsx';
+import * as HeaderStories from '../../components/canvas/Header/Header.stories.tsx';
+import * as HeaderRecipes from '../recipes/Header.stories.tsx';
+import * as FooterRecipes from '../recipes/Footer.stories.tsx';
+
+<Meta title="Guides/Page setup" />
+
+# Page setup
+
+This guide covers setting up a brand new page from scratch using the Evergreen Design System.
+It assumes [the system has been installed](?path=/docs/getting-started--docs) and the components
+are ready to use on a page.
+
+## Skip to content
+
+<Markdown>{SkipLinkStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={SkipLinkStories.SkipLink}
+/>
+
+## App wrapper
+
+<Markdown>{AppStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={AppStories.App}
+/>
+
+## Site header
+
+<Markdown>{HeaderStories.default.parameters.docs.description.component}</Markdown>
+
+<docs-fullscreen-story>
+  <Canvas
+    of={HeaderRecipes.Light}
+  />
+</docs-fullscreen-story>
+
+<docs-fullscreen-story>
+  <Canvas
+    of={HeaderRecipes.Dark}
+  />
+</docs-fullscreen-story>
+
+<docs-fullscreen-story>
+  <Canvas
+    of={HeaderRecipes.Compact}
+  />
+</docs-fullscreen-story>
+
+## Site footer
+
+The [site footer](?path=/story/recipes-footer--full) sits at the bottom of the page and is passed
+into the `footer` slot of the [app wrapper](?path=/docs/components-composition-app--docs) component,
+which keeps it at the bottom of the page.
+
+There is currently no dedicated footer component, preferring instead to use generic
+[page sections(?path=/docs/components-canvas-section--docs) (one of which uses a special coal theme
+just for the footer).
+
+This means the footer is extremely flexible and can be adapted to the current apps needs, such as
+displaying a large, fully featured, footer in brochureware sites or something more minimal in an app
+context (or even none at all).
+
+<docs-fullscreen-story>
+  <Canvas
+    of={FooterRecipes.Full}
+  />
+</docs-fullscreen-story>
+
+<docs-fullscreen-story>
+  <Canvas
+    of={FooterRecipes.Minimal}
+  />
+</docs-fullscreen-story>
+
+## Main content
+
+Once the app wrapper, header, and footer have been put in place, we can move on to the main content
+which begins with [page sections and wrappers](?path=/docs/guides-page-sections-and-wrappers--docs).

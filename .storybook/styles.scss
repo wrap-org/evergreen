@@ -2,3 +2,7 @@
 @use '../src/styles/fonts' with (
   $evg-font-path: '../src/assets/fonts'
 );
+
+.docs-story > div {
+  overflow-x: hidden;
+}

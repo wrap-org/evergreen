@@ -11,6 +11,7 @@ export default {
         component:
           'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-menu-item` component.',
       },
+      theming: true,
     },
   },
 };

@@ -4,13 +4,16 @@ import React from 'react';
 import { themes } from '@/lib/theme';
 
 const description = `
-A section component represents a horizontal slice of a page.
+A section component represents a horizontal slice of a page. Multiple sections and themes
+can be used to create visibly grouped parts of the page with different backgrounds.
 
-Multiple sections and themes can be used to create visibly grouped parts
-of the page with different backgrounds.
+Sections support [theming](?path=/docs/foundations-utilities-theme--docs), applying a
+background colour and default text colour based on the current theme as well as vertical
+spacing.
 
-Sections support theming, applying a background colour and default
-text colour based on the current theme as well as vertical spacing.
+Some pages will have many sections to divide up the content, especially on brochureware
+sites, whilst other may only have a single section for the main content, such as in an
+app-like context.
 `;
 
 export default {
@@ -115,6 +118,17 @@ export const WithImage: StoryFn = () => (
     </evg-section-img>
   </evg-section>
 );
+
+WithImage.parameters = {
+  docs: {
+    description: {
+      story: `
+As well as solid background colours, sections also support images. This option is often used in page headers
+or heros to add visual interest to the page.
+      `,
+    },
+  },
+};
 
 export const WithNestedImage: StoryFn = () => (
   <>

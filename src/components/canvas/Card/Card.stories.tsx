@@ -3,9 +3,20 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const description = `
+A card component is used to provide a summary of content, with a clear call to action.
+
+Cards are a great way to display a collection of items, such as blog posts, products, or
+news articles. A card must always have an associated action, whether that is the whole card
+being clickable, or having a dedicated CTA button.
+`;
+
 export default {
   parameters: {
     docs: {
+      description: {
+        component: description,
+      },
       theming: true,
     },
   },
@@ -90,13 +101,9 @@ export const Layouts: StoryFn = () => (
     <evg-wrapper size="xl" class="evg-spacing-bottom-lg">
       <evg-card radius="md" layout="thumb">
         <evg-card-img>
-          <img
-            src="/images/placeholder/400x300.svg"
-            alt="Placeholder"
-            width="400"
-            height="300"
-            loading="lazy"
-          />
+          <evg-thumbnail size="xl">
+            <evg-icon icon="document-download" />
+          </evg-thumbnail>
         </evg-card-img>
         <evg-card-content>
           <h3 className="evg-text-size-heading-sm">
