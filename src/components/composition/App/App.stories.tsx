@@ -5,7 +5,7 @@ const description = `
 All pages start with an app wrapper. The app component wraps the whole site and provides
 slots for the header, footer and main content.
 
-The app wrapper's role is to keep the header at the top and the footer at the bottom, 
+The app wrapper's role is to keep the header at the top and the footer at the bottom,
 even when the content is too short to keep it there.
 
 The header component needs to be passed to the header slot with \`slot="header"\` and the footer

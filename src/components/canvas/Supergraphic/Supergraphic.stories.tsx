@@ -4,7 +4,7 @@ import React from 'react';
 import { themes } from '@/lib/theme';
 
 const description = `
-A supergraphic component can be wrapped around a section to apply a subtle branded finish. 
+A supergraphic component can be wrapped around a section to apply a subtle branded finish.
 The [theme](?path=/docs/foundations-utilities-theme--docs) should be applied to the supergraphic
 and the section will inherit it.
 

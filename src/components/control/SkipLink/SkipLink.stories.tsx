@@ -6,7 +6,7 @@ The very first element on a page is the skip to content link . This provides a w
 for keyboard users to skip the main navigation and get straight to the content.
 
 The skip link is hidden until it is focused by tabbing with the keyboard.
- 
+
 The href should point at the \`main\` element and the element will need tabindex="-1" to make
 it programmatically focusable. If a user presses the link, the focus will move to the main content
 and it will be announced to the screen reader.
