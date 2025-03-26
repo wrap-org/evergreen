@@ -12,6 +12,9 @@ const description = `
   component or one of the parent elements.
 
   Components that support theming have a 'theme support' badge at the top of their docs page.
+
+  <evg-badge type="info">Theme support</evg-badge>
+
 `;
 
 export default {

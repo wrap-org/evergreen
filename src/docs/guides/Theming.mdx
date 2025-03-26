@@ -1,0 +1,61 @@
+import { Meta, Markdown, Canvas, Source } from '@storybook/addon-docs';
+import * as FooterRecipes from '../recipes/Footer.stories.tsx';
+import * as HeaderRecipes from '../recipes/Header.stories.tsx';
+
+<Meta title="Guides/Theming" />
+
+# Theming
+
+Evergreen comes with a set of pre-approved [theme utility classes](?path=/docs/foundations-utilities-theme--docs)
+that can be applied to supporting components or used as context providers for custom, product level, components.
+
+Evergreen themes use CSS custom properties that are scoped to the HTML element that they are attached to
+(and it's children), but they are not applied to any CSS properties directly. Instead, the component can apply
+them in the way that is most appropriate.
+
+<Source code={`
+
+/* Custom properties for the forest theme */
+:root {
+  --evg-theme-background-forest: var(--evg-color-forest);
+  --evg-theme-color-forest: var(--evg-color-cloud);
+  --evg-theme-heading-color-forest: var(--evg-color-cloud);
+  --evg-theme-link-color-forest: var(--evg-color-lime);
+}
+
+/* Applying the properties to a theme utility class */
+.evg-theme-forest {
+  --evg-theme-background: var(--evg-theme-background);
+  --evg-theme-color: var(--evg-theme-color-forest);
+  --evg-theme-heading-color: var(--evg-theme-heading-color-forest);
+  --evg-theme-link-color: var(--evg-theme-link-color-forest);
+}
+
+/* A themable component that applies a theme */
+evg-header {
+  background: var(--evg-theme-background);
+  color: var(--evg-theme-color);
+}
+`}
+/>
+
+<docs-fullscreen-story>
+  <Canvas of={HeaderRecipes.CompactDark} />
+</docs-fullscreen-story>
+
+This creates incredibly powerful, flexible, nestable, themes that can ensure branding is applied
+correctly and we retain [WCAG AA contrast compliance](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+across a wide range of components.
+
+All components that support theming in Evergreen have a 'theme support' badge at the top of their
+docs page.
+
+<evg-badge type="info" class="evg-spacing-bottom-lg">Theme support</evg-badge>
+
+## Custom themes
+
+Because themes only create a context for components to consume, it is possible to create custom themes,
+either for special components, or white labelled pages or sections. In Evergreen, we use a custom theme
+just for the bottom of the footer (coal/black), which is applied to a page section component.
+
+<Canvas of={FooterRecipes.Minimal} />
