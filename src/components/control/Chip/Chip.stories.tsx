@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 
 import './Chip';
 
+const description = `Chips are used to filter content by category or type. They can be used in groups to represent a selection of options or tag links.
+
+Chips are always interactive - either to select or as a link. If you need a non-interactive tag or label, use the <code><evg-badge></code> component instead.`;
+
 export default {
   component: 'evg-chip',
   parameters: {
     docs: {
       description: {
-        component: `Chips are used to filter content by category or type. They can be used in groups to represent a selection of options or tag links.`,
+        component: description,
       },
     },
   },
@@ -34,10 +38,10 @@ Chip.args = {
   variant: 'light',
 };
 
-export const ControlledChip: StoryFn = (args) => {
+export const ControlledChip: StoryFn = () => {
   const [selected, setSelected] = useState(false);
   return (
-    <evg-chip {...args}>
+    <evg-chip>
       <button
         type="button"
         aria-pressed={selected}
