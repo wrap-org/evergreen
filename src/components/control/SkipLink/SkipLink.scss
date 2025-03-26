@@ -1,0 +1,21 @@
+evg-skip-link {
+  display: block;
+
+  a {
+    background-color: var(--evg-color-forest);
+    color: var(--evg-color-cloud);
+    display: inline-block;
+    font-size: var(--evg-font-size-body-md);
+    line-height: var(--evg-font-line-height);
+    padding: var(--evg-spacing-sm) var(--evg-spacing-md);
+    position: absolute;
+    text-decoration: underline;
+    text-underline-offset: 0.125em;
+    transform: translateY(0);
+    transition: var(--evg-transition);
+
+    &:not(:focus) {
+      transform: translateY(-100%);
+    }
+  }
+}

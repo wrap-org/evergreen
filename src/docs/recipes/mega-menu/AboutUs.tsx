@@ -12,16 +12,16 @@ export default function About({ open }: { readonly open: boolean }) {
       <evg-grid gap="none">
         <evg-grid-item small-mobile="3" desktop="2" fill>
           <evg-section padding="lg" class="evg-theme-sand">
-            <evg-wrap gutter="lg">
+            <evg-wrapper gutter="lg">
               <span className="evg-text-size-heading-md evg-text-family-heading evg-text-transform-uppercase evg-text-weight-bold">
                 About us
               </span>
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
         <evg-grid-item grow fill>
           <evg-section padding="lg">
-            <evg-wrap gutter="lg">
+            <evg-wrapper gutter="lg">
               {[
                 'About us',
                 'Our team',
@@ -35,7 +35,7 @@ export default function About({ open }: { readonly open: boolean }) {
                   </a>
                 </evg-menu-item>
               ))}
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
       </evg-grid>

@@ -15,6 +15,7 @@ import '../src/components/control/RadioCheckbox/RadioCheckbox';
 import '../src/components/canvas/Supergraphic/Supergraphic';
 import '../src/components/canvas/Section/SectionImg';
 
+import '../src/docs/components/FullscreenStory/FullscreenStory.scss'
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
 
@@ -27,6 +28,8 @@ const preview: Preview = {
           'Getting started',
           'Migration',
           'Support',
+          'Guides',
+          ['Page setup'],
           'Showroom',
           'Foundations',
           'Components',

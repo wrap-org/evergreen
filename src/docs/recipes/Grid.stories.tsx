@@ -10,7 +10,7 @@ export default {
 export function Pair() {
   return (
     <evg-section padding="fluid" class="evg-theme-lime-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <evg-grid gap="xl" wrap="wrap">
           {[0, 1].map((item) => (
             <evg-grid-item small-mobile="12" small-tablet="6" key={item}>
@@ -21,7 +21,7 @@ export function Pair() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -29,7 +29,7 @@ export function Pair() {
 export function Trio() {
   return (
     <evg-section padding="fluid" class="evg-theme-lime-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <evg-grid gap="xl" wrap="wrap">
           {[
             {
@@ -56,7 +56,7 @@ export function Trio() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -64,7 +64,7 @@ export function Trio() {
 export function Quad() {
   return (
     <evg-section padding="fluid" class="evg-theme-lime-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <evg-grid gap="xl" wrap="wrap">
           {[
             {
@@ -94,7 +94,7 @@ export function Quad() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -123,7 +123,7 @@ export function ImagePairs() {
           class={`evg-theme-${item.theme}`}
           key={item.title}
         >
-          <evg-wrap size="xxl">
+          <evg-wrapper size="xxl">
             <evg-grid
               gap="xl"
               wrap="wrap"
@@ -148,7 +148,7 @@ export function ImagePairs() {
                 <p>{item.description}</p>
               </evg-grid-item>
             </evg-grid>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       ))}
     </>
@@ -157,7 +157,7 @@ export function ImagePairs() {
 
 export const AdditionalContent = () => (
   <evg-section padding="fluid">
-    <evg-wrap size="xxl">
+    <evg-wrapper size="xxl">
       <evg-grid class="evg-spacing-bottom-lg" align-items="center">
         <evg-grid-item grow shrink>
           <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase">
@@ -217,6 +217,6 @@ export const AdditionalContent = () => (
           </evg-grid-item>
         ))}
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );

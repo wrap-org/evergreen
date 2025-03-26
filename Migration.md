@@ -28,8 +28,8 @@
 - `Spacing` has been replaced with spacing utility classes. e.g. `.evg-spacing-bottom-md`
 
 ### Components
-- `Wrap` has been replaced with `evg-wrap`
-  - Wrap sizes have been updated
+- `Wrap` has been replaced with `evg-wrapper`
+  - Wrapper sizes have been updated
     - `tablet` -> `lg`
     - `desktop` -> `xl`
     - `max` -> `xxxl`

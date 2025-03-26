@@ -1,0 +1,10 @@
+docs-fullscreen-story {
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 97.5vw;
+
+  .docs-story > div {
+    overflow: hidden;
+  }
+}

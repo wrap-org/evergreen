@@ -1,0 +1,64 @@
+import { Meta, Markdown, Canvas } from '@storybook/addon-docs';
+import * as GridStories from '../../components/composition/Grid/Grid.stories.tsx';
+import * as BoxStories from '../../components/canvas/Box/Box.stories.tsx';
+import * as CardStories from '../../components/canvas/Card/Card.stories.tsx';
+import * as GridRecipes from '../recipes/Grid.stories.tsx';
+import * as CardRecipes from '../recipes/Cards.stories.tsx';
+
+<Meta title="Guides/Grids, boxes, and cards" />
+
+# Grids, boxes, and cards
+
+This guide covers subdividing content using [grids](?path=/docs/components-composition-grid--docs),
+[boxes](?path=/docs/components-canvas-box--docs) and [cards](?path=/docs/components-canvas-card--docs).
+It assumes the components have [been installed](?path=/docs/getting-started--docs), the
+[page is set up](?path=/docs/guides-page-setup--docs) and the basic structure has been
+put in place using some [sections and wrappers](?path=/docs/guides-page-sections-and-wrappers--docs).
+
+## Grids
+
+<Markdown>{GridStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={GridStories.Grid}
+/>
+
+The grid can be used to structure any grouped content, such as text, images, cards, and boxes. A
+general rule of thumb is, if 2 components or groups of content need to be next to each other, use
+the grid.
+
+<Canvas
+  of={GridRecipes.Quad}
+/>
+
+<Canvas
+  of={GridRecipes.ImagePairs}
+/>
+
+<Canvas
+  of={CardRecipes.Row}
+/>
+
+## Boxes
+
+<Markdown>{BoxStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={BoxStories.Box}
+/>
+
+<Canvas
+  of={BoxStories.BoxSection}
+/>
+
+## Cards
+
+<Markdown>{CardStories.default.parameters.docs.description.component}</Markdown>
+
+<Canvas
+  of={CardStories.Clickable}
+/>
+
+<Canvas
+  of={CardStories.Layouts}
+/>

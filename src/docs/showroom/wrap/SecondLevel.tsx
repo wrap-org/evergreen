@@ -97,7 +97,7 @@ export function SecondLevel() {
       <evg-grid wrap="wrap" gap="none">
         <evg-grid-item small-mobile="12" small-desktop="6" fill>
           <evg-section padding="fluid-lg" class="evg-theme-forest">
-            <evg-wrap size="xxl" gutter="fluid-lg">
+            <evg-wrapper size="xxl" gutter="fluid-lg">
               <evg-breadcrumb class="evg-spacing-bottom-md">
                 <ol>
                   <li>
@@ -112,7 +112,7 @@ export function SecondLevel() {
                 We want to cut waste out of our global food system and make it
                 more sustainable.
               </p>
-            </evg-wrap>
+            </evg-wrapper>
           </evg-section>
         </evg-grid-item>
         <evg-grid-item small-mobile="12" small-desktop="6" fill="true">
@@ -127,7 +127,7 @@ export function SecondLevel() {
         </evg-grid-item>
       </evg-grid>
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <h2 className="evg-text-size-heading-lg evg-spacing-bottom-md evg-text-transform-uppercase">
             Transforming the food system
           </h2>
@@ -214,11 +214,11 @@ export function SecondLevel() {
             resources. WRAP has helped to develop food & drink voluntary
             agreements around the world.
           </p>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid" class="evg-theme-lime-light">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <evg-grid
             justify-content="space-between"
             class="evg-spacing-bottom-lg"
@@ -270,7 +270,7 @@ export function SecondLevel() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <Featured

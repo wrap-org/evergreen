@@ -6,6 +6,17 @@ import { radius } from '@/lib/tokens';
 
 const description = `
 A box is a rectangle on a page to group related content together visually.
+
+A box can seem similar to a [section](?path=/docs/components-canvas-section--docs) or a
+[card](?path=/docs/components-canvas-card--docs), but there are some important differences.
+
+A section is used to create a horizontal slice of a whole page, whilst a box is used to group
+content within a section. Boxes can also be divided into sections, which is useful for creating
+segmented, related, content.
+
+A card is a much more opinionated component, with a specific layout and style, and always has
+an action that can be performed on it by clicking. Boxes are more flexible and can be used in
+many different ways.
 `;
 
 export default {
@@ -101,7 +112,7 @@ BoxSection.parameters = {
   docs: {
     description: {
       story:
-        'Box are made up of sections, which enable consistent division and spacing between groups of content',
+        'Boxes are made up of sections, which enable consistent division and spacing between groups of content',
     },
   },
 };

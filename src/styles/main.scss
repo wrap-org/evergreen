@@ -15,7 +15,7 @@
 @use '../components/composition/Grid/Grid';
 @use '../components/composition/Grid/GridItem';
 @use '../components/composition/Meta/Meta';
-@use '../components/composition/Wrap/Wrap';
+@use '../components/composition/Wrapper/Wrapper';
 @use '../components/composition/Enter/Enter';
 @use '../components/composition/Sticky/Sticky';
 @use '../components/composition/Modal/Modal';
@@ -40,6 +40,7 @@
 @use '../components/control/MenuItem/MenuItemContent';
 @use '../components/control/RadioCheckbox/RadioCheckbox';
 @use '../components/control/Chip/Chip';
+@use '../components/control/SkipLink/SkipLink';
 
 @use '../components/content/Badge/Badge';
 @use '../components/content/Divider/Divider';

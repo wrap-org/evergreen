@@ -3,6 +3,14 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const description = `
+A supergraphic component can be wrapped around a section to apply a subtle branded finish.
+The [theme](?path=/docs/foundations-utilities-theme--docs) should be applied to the supergraphic
+and the section will inherit it.
+
+The supergraphic can be positioned in one of the four corners of the section.
+`;
+
 export default {
   title: 'Components/Canvas/Supergraphic',
   argTypes: {
@@ -17,15 +25,16 @@ export default {
     layout: 'fullscreen',
     docs: {
       description: {
-        component: 'Used with sections to apply a subtle branded finish',
+        component: description,
       },
+      theming: true,
     },
   },
 } satisfies Meta;
 
 const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
   <evg-section padding="fluid">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid>
         <evg-grid-item small-mobile="12" tablet="8" small-desktop="7">
           <h2 className="evg-spacing-bottom-sm">{title}</h2>
@@ -50,7 +59,7 @@ const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
           </evg-grid>
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 

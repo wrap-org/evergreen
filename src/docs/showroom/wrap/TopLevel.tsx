@@ -56,7 +56,7 @@ export function TopLevel() {
             width="1280"
             height="640"
           />
-          <evg-wrap size="md" class="evg-text-align-center">
+          <evg-wrapper size="md" class="evg-text-align-center">
             <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
               What we do
             </h1>
@@ -65,12 +65,12 @@ export function TopLevel() {
               product and food systems to create Circular Living. For the
               benefit of the climate, nature, and people.
             </p>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section-img>
       </evg-section>
 
       <evg-section padding="fluid">
-        <evg-wrap size="lg" class="evg-longform">
+        <evg-wrapper size="lg" class="evg-longform">
           <p className="evg-text-size-body-lg">
             WRAP is a global environmental action NGO transforming our broken
             product and food systems to create Circular Living. For the benefit
@@ -118,11 +118,11 @@ export function TopLevel() {
               allowFullScreen
             ></iframe>
           </evg-video>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid" class="evg-theme-lime-light">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <div className="evg-spacing-bottom-lg evg-text-align-center">
             <h2 className="evg-text-size-heading-lg evg-spacing-bottom-md evg-text-transform-uppercase">
               Our priorities
@@ -167,11 +167,11 @@ export function TopLevel() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <evg-section padding="fluid">
-        <evg-wrap size="lg">
+        <evg-wrapper size="lg">
           <evg-grid
             justify-content="space-between"
             align-items="center"
@@ -232,13 +232,13 @@ export function TopLevel() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <List cards={cardList} theme="earth-light" />
 
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <h2 className="evg-text-size-heading-md evg-text-transform-uppercase evg-spacing-bottom-lg">
             Explore more
           </h2>
@@ -258,7 +258,7 @@ export function TopLevel() {
               </evg-grid-item>
             ))}
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
 
       <Banner

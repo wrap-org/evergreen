@@ -28,15 +28,23 @@ const gutters: (Spacing | 'none')[] = [
   'fluid-lg',
 ];
 
+const description = `
+The wrapper component is used to provide inline (horizontal) spacing around content, as well as
+setting the maximum width.
+
+Wrappers are almost always used inside a [section component](?path=/docs/components-canvas-section--docs)
+and each section will have one or more wrappers inside it to set the content widths.
+`;
+
 export default {
-  title: 'Components/Composition/Wrap',
+  title: 'Components/Composition/Wrapper',
   argTypes: {
     size: {
       control: {
         type: 'select',
       },
       options: sizes,
-      description: 'The max width of the wrap.',
+      description: 'The max width of the wrapper.',
     },
     gutter: {
       control: {
@@ -50,22 +58,21 @@ export default {
     layout: 'fullscreen',
     docs: {
       description: {
-        component:
-          'A wrapper component that centers content and sets a max-width. It also sets inline padding to create gutters.',
+        component: description,
       },
     },
   },
 } satisfies Meta;
 
 const Template: StoryFn = (args) => (
-  <evg-wrap {...args}>
+  <evg-wrapper {...args}>
     <docs-placeholder>Wrap content</docs-placeholder>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
-export const Wrap = Template.bind({});
+export const Wrapper = Template.bind({});
 
-Wrap.args = {
+Wrapper.args = {
   size: 'md',
   gutter: 'md',
 };
@@ -74,9 +81,9 @@ export const SizesStory = () => {
   return (
     <>
       {sizes.map((size) => (
-        <evg-wrap size={size} class="evg-spacing-bottom-md" key={size}>
+        <evg-wrapper size={size} class="evg-spacing-bottom-md" key={size}>
           <docs-placeholder>{size}</docs-placeholder>
-        </evg-wrap>
+        </evg-wrapper>
       ))}
     </>
   );
