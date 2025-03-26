@@ -8,10 +8,26 @@ import TakeAction from '../../../docs/recipes/mega-menu/TakeAction';
 import WhatWeDo from '../../../docs/recipes/mega-menu/WhatWeDo';
 import { Drawer } from '../Drawer/Drawer.stories';
 
+const description = `
+The header component sits at the top of the page and contains the main and secondary nav, as well as
+a trigger to open the [mobile navigation drawer](?path=/docs/components-canvas-drawer--docs).
+
+The header component is passed into the main [app wrapper](?path=/docs/components-composition-app--docs) 
+using the \`header\` slot, which keeps it at the top of the page.
+
+There are [several different display variants](?path=/story/recipes-header--light) for the header depending 
+on the app context, such as light, dark,compact and raised styles.
+`;
+
 export default {
   title: 'Components/Canvas/Header',
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component: description,
+      },
+    },
   },
   argTypes: {
     theme: {
