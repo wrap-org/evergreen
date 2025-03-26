@@ -13,24 +13,6 @@ evg-chip {
     --evg-chip-border-color-hover-selected-light
   );
 
-  &[variant='dark'] {
-    --_color: var(--evg-chip-color-dark);
-    --_background: var(--evg-chip-background-dark);
-    --_background-hover: var(--evg-chip-background-hover-dark);
-    --_border-color: var(--evg-chip-border-color-dark);
-    --_border-color-hover: var(--evg-chip-border-color-hover-dark);
-
-    --_color-selected: var(--evg-chip-color-selected-dark);
-    --_background-selected: var(--evg-chip-background-selected-dark);
-    --_background-hover-selected: var(
-      --evg-chip-background-hover-selected-dark
-    );
-    --_border-color-selected: var(--evg-chip-border-color-selected-dark);
-    --_border-color-hover-selected: var(
-      --evg-chip-border-color-hover-selected-dark
-    );
-  }
-
   button,
   a,
   label {
@@ -122,5 +104,23 @@ evg-chip {
       transition: max-width var(--evg-transition-duration)
         var(--evg-transition-timing);
     }
+  }
+
+  &[variant='dark'] {
+    --_color: var(--evg-chip-color-dark);
+    --_background: var(--evg-chip-background-dark);
+    --_background-hover: var(--evg-chip-background-hover-dark);
+    --_border-color: var(--evg-chip-border-color-dark);
+    --_border-color-hover: var(--evg-chip-border-color-hover-dark);
+
+    --_color-selected: var(--evg-chip-color-selected-dark);
+    --_background-selected: var(--evg-chip-background-selected-dark);
+    --_background-hover-selected: var(
+      --evg-chip-background-hover-selected-dark
+    );
+    --_border-color-selected: var(--evg-chip-border-color-selected-dark);
+    --_border-color-hover-selected: var(
+      --evg-chip-border-color-hover-selected-dark
+    );
   }
 }
