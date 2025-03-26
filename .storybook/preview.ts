@@ -28,6 +28,8 @@ const preview: Preview = {
           'Getting started',
           'Migration',
           'Support',
+          'Contributing',
+          'Changelog',
           'Guides',
           ['Page setup'],
           'Showroom',
