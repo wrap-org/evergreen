@@ -9,7 +9,7 @@ export default {
 
 export const RelatedActions = () => (
   <evg-section padding="fluid">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid gap="lg" wrap="wrap">
         {[0, 1].map((item) => (
           <evg-grid-item small-mobile="12" tablet="6" key={item}>
@@ -28,13 +28,13 @@ export const RelatedActions = () => (
           </evg-grid-item>
         ))}
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 
 export const Dashboard = () => (
   <evg-section padding="fluid" class="evg-theme-earth-light">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-box
         class="evg-theme-default evg-spacing-bottom-lg"
         padding="lg"
@@ -93,13 +93,13 @@ export const Dashboard = () => (
           ))}
         </evg-grid>
       </evg-box>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 
 export const RelatedLinks = () => (
   <evg-section padding="fluid" class="evg-theme-lime">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid wrap="wrap">
         {[0, 1, 2].map((item) => (
           <evg-grid-item small-mobile="12" tablet="4" key={item}>
@@ -114,6 +114,6 @@ export const RelatedLinks = () => (
           </evg-grid-item>
         ))}
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );

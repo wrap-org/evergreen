@@ -25,7 +25,7 @@ export default {
 
 const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
   <evg-section padding="fluid">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid>
         <evg-grid-item small-mobile="12" tablet="8" small-desktop="7">
           <h2 className="evg-spacing-bottom-sm">{title}</h2>
@@ -50,7 +50,7 @@ const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
           </evg-grid>
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 

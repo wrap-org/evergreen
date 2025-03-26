@@ -19,7 +19,7 @@ export default {
 
 export function Form() {
   return (
-    <evg-wrap size="lg">
+    <evg-wrapper size="lg">
       <form>
         <h2>About your business</h2>
         <evg-grid gap="xs">
@@ -103,6 +103,6 @@ export function Form() {
           </evg-grid-item>
         </evg-grid>
       </form>
-    </evg-wrap>
+    </evg-wrapper>
   );
 }

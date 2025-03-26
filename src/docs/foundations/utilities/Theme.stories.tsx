@@ -51,7 +51,7 @@ export default {
 
 const ThemedSection = ({ theme }) => (
   <evg-section class={`evg-theme-${theme}`} padding="fluid">
-    <evg-wrap size="md">
+    <evg-wrapper size="md">
       <h2 className="evg-spacing-bottom-sm">{startCase(theme)}</h2>
       <p className="evg-spacing-bottom-lg">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
@@ -80,7 +80,7 @@ const ThemedSection = ({ theme }) => (
           </evg-button>
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 

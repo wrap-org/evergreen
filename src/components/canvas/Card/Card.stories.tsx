@@ -46,9 +46,9 @@ const cardContent = (
 );
 
 export const Card: StoryFn = (props) => (
-  <evg-wrap size="sm">
+  <evg-wrapper size="sm">
     <evg-card {...props}>{cardContent}</evg-card>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 Card.args = {
@@ -56,7 +56,7 @@ Card.args = {
 };
 
 export const Theming: StoryFn = () => (
-  <evg-wrap size="lg">
+  <evg-wrapper size="lg">
     <evg-grid wrap="wrap">
       {themes.map((theme) => (
         <evg-grid-item small-mobile="12" tablet="6" key={theme}>
@@ -66,28 +66,28 @@ export const Theming: StoryFn = () => (
         </evg-grid-item>
       ))}
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 export const Layouts: StoryFn = () => (
   <>
     {(['top', 'bottom'] as const).map((layout) => (
-      <evg-wrap size="sm" class="evg-spacing-bottom-lg" key={layout}>
+      <evg-wrapper size="sm" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     ))}
 
     {(['left', 'right'] as const).map((layout) => (
-      <evg-wrap size="xl" class="evg-spacing-bottom-lg" key={layout}>
+      <evg-wrapper size="xl" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     ))}
 
-    <evg-wrap size="xl" class="evg-spacing-bottom-lg">
+    <evg-wrapper size="xl" class="evg-spacing-bottom-lg">
       <evg-card radius="md" layout="thumb">
         <evg-card-img>
           <img
@@ -126,12 +126,12 @@ export const Layouts: StoryFn = () => (
           </evg-grid>
         </evg-card-content>
       </evg-card>
-    </evg-wrap>
+    </evg-wrapper>
   </>
 );
 
 export const Clickable: StoryFn = () => (
-  <evg-wrap size="xl">
+  <evg-wrapper size="xl">
     <evg-grid wrap="wrap">
       {[1, 2, 3].map((item) => (
         <evg-grid-item small-mobile="12" tablet="4" key={item}>
@@ -161,5 +161,5 @@ export const Clickable: StoryFn = () => (
         </evg-grid-item>
       ))}
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
