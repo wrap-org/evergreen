@@ -41,26 +41,20 @@ FormGroup.args = {
 
 export const ComposingElements: StoryFn = () => (
   <evg-form-group orientation="horizontal">
-    <evg-grid direction="column" gap="sm">
-      <evg-grid-item>
-        <evg-grid align-items="center">
-          <evg-grid-item grow>
-            <evg-label>
-              <label htmlFor="composing-elements">Form group label</label>
-            </evg-label>
-          </evg-grid-item>
-          <evg-grid-item>
-            <evg-icon icon="circle-information" variant="default" />
-          </evg-grid-item>
-        </evg-grid>
+    <evg-grid align-items="center">
+      <evg-grid-item grow>
+        <evg-label>
+          <label htmlFor="composing-elements">Form group label</label>
+        </evg-label>
       </evg-grid-item>
       <evg-grid-item>
-        <evg-help-text>Help Text</evg-help-text>
+        <evg-icon icon="circle-information" variant="default" />
       </evg-grid-item>
     </evg-grid>
     <evg-input>
       <input id="composing-elements" type="text" />
     </evg-input>
+    <evg-help-text>Help Text</evg-help-text>
   </evg-form-group>
 );
 
