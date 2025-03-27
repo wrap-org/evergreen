@@ -13,7 +13,7 @@ export function ReportHome() {
           <p className="evg-text-size-body-lg evg-spacing-bottom-lg">
             Create a report for the households with a communal collection
           </p>
-          <evg-alert type="info" class="evg-spacing-bottom-lg">
+          <evg-alert variant="neutral light" class="evg-spacing-bottom-lg">
             <strong>A report should be completed for this collection</strong>
           </evg-alert>
 
