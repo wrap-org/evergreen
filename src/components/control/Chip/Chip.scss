@@ -30,8 +30,11 @@ evg-chip {
     justify-content: center;
     letter-spacing: inherit;
     padding-inline: var(--evg-spacing-sm);
-    transition: max-width var(--evg-transition-duration)
-      var(--evg-transition-timing);
+    transition:
+      max-width var(--evg-transition),
+      background-color var(--evg-transition),
+      border-color var(--evg-transition),
+      color var(--evg-transition);
 
     input {
       border: 0;

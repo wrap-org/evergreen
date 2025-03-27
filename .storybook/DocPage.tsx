@@ -9,6 +9,7 @@ import {
   Description,
 } from '@storybook/blocks';
 import { PreparedStory, Renderer } from 'storybook/internal/types';
+import Related from './blocks/Related';
 
 export const DocPage = ({ of }: { of: any }) => {
   const resolvedOf = useOf(of || 'story', ['story', 'meta']) as { type: "story"; story: PreparedStory<Renderer>; };
@@ -58,6 +59,8 @@ export const DocPage = ({ of }: { of: any }) => {
           </evg-grid-item>
         </evg-grid>
       </div>
+
+      <Related />
 
       <h2>Need help?</h2>
 
