@@ -78,6 +78,7 @@
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+  - type `negative` has been removed
 - `Collapse` has been replaced with  `evg-collapse`
   - Any button can be used to control the collapse element rather than it being dicated by the collapse element.
 - `Enter` has been replaced with `evg-enter`.

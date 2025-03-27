@@ -2,13 +2,7 @@ import { StoryFn } from '@storybook/react';
 import startCase from 'lodash/startCase';
 import React from 'react';
 
-const variants = [
-  'default',
-  'primary',
-  'secondary',
-  'negative',
-  'text',
-] as const;
+const variants = ['default', 'primary', 'secondary', 'text'] as const;
 
 export default {
   component: 'evg-button',
