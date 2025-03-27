@@ -72,6 +72,7 @@
     - The `inline` prop can be used instead of setting the `as` prop to span
 - `Badge` has been replaced with `evg-badge`
   - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
+  - `type`, `muted` and `inverse` props have been replaced with the `variant` prop which offers a range of colours
   - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options
 - `Button` has been replaced with `evg-button`.
   - This needs to wrap a `button` or `link` tag.

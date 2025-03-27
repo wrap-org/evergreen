@@ -21,7 +21,7 @@ export const DocPage = ({ of }: { of: any }) => {
       <Title />
       <Subtitle />
       {themeSupport && (
-        <evg-badge type="info">
+        <evg-badge variant="sky">
           Theme support
         </evg-badge>
       )}

@@ -1,14 +1,22 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface BadgeAttributes {
-  type?:
-    | 'light'
-    | 'dark'
-    | 'info'
-    | 'attention'
-    | 'positive'
-    | 'negative'
-    | 'neutral';
+  variant?:
+    | 'forest'
+    | 'forest-light'
+    | 'earth'
+    | 'sand'
+    | 'sky'
+    | 'sky-light'
+    | 'lime'
+    | 'lime-light'
+    | 'rose'
+    | 'rose-light'
+    | 'orange'
+    | 'lemon'
+    | 'violet'
+    | 'lilac'
+    | 'coal';
 }
 
 declare global {

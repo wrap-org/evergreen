@@ -138,7 +138,7 @@ export function TopLevel() {
                   {card.date ? (
                     <span className="evg-text-size-body-xs">{card.date}</span>
                   ) : (
-                    <evg-badge type="info">Coming soon</evg-badge>
+                    <evg-badge variant="sky-light">Coming soon</evg-badge>
                   )}
                 </evg-meta>
                 <h3 className="evg-text-size-heading-md">{card.title}</h3>

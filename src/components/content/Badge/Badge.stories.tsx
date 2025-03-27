@@ -3,14 +3,22 @@ import React from 'react';
 
 import './Badge';
 
-const types = [
-  'light',
-  'dark',
-  'info',
-  'attention',
-  'positive',
-  'negative',
-  'neutral',
+const variants = [
+  'forest',
+  'forest-light',
+  'earth',
+  'sand',
+  'sky',
+  'sky-light',
+  'lime',
+  'lime-light',
+  'rose',
+  'rose-light',
+  'orange',
+  'lemon',
+  'violet',
+  'lilac',
+  'coal',
 ] as const;
 
 export default {
@@ -22,26 +30,22 @@ export default {
     },
   },
   argTypes: {
-    type: {
+    variant: {
       control: {
         type: 'select',
       },
-      options: types,
+      options: variants,
     },
   },
 } as Meta;
 
 export const Badge: StoryFn = (args) => <evg-badge {...args}>Badge</evg-badge>;
 
-Badge.args = {
-  type: 'light',
-};
-
 export const BadgeTypes = () => (
   <evg-grid>
-    {types.map((type) => (
-      <evg-grid-item key={type}>
-        <evg-badge type={type}>{type}</evg-badge>
+    {variants.map((variant) => (
+      <evg-grid-item key={variant}>
+        <evg-badge variant={variant}>{variant}</evg-badge>
       </evg-grid-item>
     ))}
   </evg-grid>
