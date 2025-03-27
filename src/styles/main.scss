@@ -52,12 +52,3 @@
 @use '../components/content/List/List';
 @use '../components/content/Thumbnail/Thumbnail';
 @use '../components/content/Label/Label';
-
-:root {
-  --evg-transition-duration-enter: 0.4s;
-
-  --evg-transition-enter: var(--evg-transition-duration-enter)
-    var(--evg-transition-timing);
-
-  --evg-button-border-color-hover-secondary: var(--evg-color-coal);
-}

@@ -66,24 +66,28 @@ const howWrapCanHelpYou: {
 
 const relatedResources = [
   {
+    id: 'food-waste',
     title: 'Future-proof food',
     description:
       "We're changing the way food is produced and consumed — reducing costs to the environment, to businesses and to people.",
     theme: 'evg-theme-forest',
   },
   {
+    id: 'plastics',
     title: 'Prevent problem plastics',
     description:
       "We're redesigning the plastics system, across the value chain — preventing waste and keeping the material out of the environment.",
     theme: 'evg-theme-forest',
   },
   {
+    id: 'textiles',
     title: 'Transform textiles',
     description:
       "We're transforming the way that textiles are made, bought and used - decreasing emissions, lowering water use and cutting pollution.",
     theme: 'evg-theme-forest',
   },
   {
+    id: 'circular-economy',
     title: 'Accelerate the Circular Economy',
     description:
       "We're leading the world away from a 'take-make-dispose' culture to a 'design-makereuse' approach - radically reducing waste and carbon emissions from everyday products.",

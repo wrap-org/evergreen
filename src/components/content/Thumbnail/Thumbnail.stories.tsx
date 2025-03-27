@@ -5,6 +5,12 @@ const sizes = ['sm', 'md', 'lg', 'xl'] as const;
 
 export default {
   title: 'Components/Content/Thumbnail',
+  parameters: {
+    docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6238-4159&t=g3niGv3HxLa5NL0O-0',
+    },
+  },
   argTypes: {
     size: {
       control: {

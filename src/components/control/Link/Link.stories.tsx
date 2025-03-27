@@ -7,6 +7,7 @@ export default {
   component: 'evg-link',
   parameters: {
     docs: {
+      fima: 'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6298-11258&t=g3niGv3HxLa5NL0O-0',
       description: {
         component: 'Provides link styles for anchor or button elements.',
       },

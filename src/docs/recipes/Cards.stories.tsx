@@ -12,19 +12,22 @@ export function Grid({
   title = 'Section with a grid of cards',
   cards = [
     {
+      id: 1,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
     {
+      id: 2,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
     {
+      id: 3,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
   ],
 }: {
   readonly theme?: 'default' | 'earth-light';
   readonly title?: string;
-  readonly cards?: { title: string }[];
+  readonly cards?: { id: string | number; title: string }[];
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
@@ -36,38 +39,36 @@ export function Grid({
         <evg-grid wrap="wrap">
           {cards.map((item) => (
             <evg-grid-item
-              key={item.title}
+              key={item.id}
               small-mobile="12"
               small-tablet="6"
               large-tablet="4"
               fill
             >
-              <a href="https://wrap.ngo">
-                <evg-card class="evg-theme-default" radius="md">
-                  <evg-card-img>
-                    <img
-                      src="/images/placeholder/400x300.svg"
-                      alt="Placeholder"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                    />
-                  </evg-card-img>
-                  <evg-card-content>
-                    <evg-row>
-                      <evg-badge variant="sky-light">Info</evg-badge>
-                      <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-                    </evg-row>
+              <evg-card class="evg-theme-default" radius="md">
+                <evg-card-img>
+                  <img
+                    src="/images/placeholder/400x300.svg"
+                    alt="Placeholder"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </evg-card-img>
+                <evg-card-content>
+                  <evg-row>
+                    <evg-badge variant="sky-light">Info</evg-badge>
+                    <span className="evg-text-size-body-xs">Jan 1, 2025</span>
+                  </evg-row>
 
-                    <h3 className="evg-text-size-body-md evg-text-family-body">
-                      {item.title}
-                    </h3>
-                    <evg-button variant="primary" width="full-width-mobile">
-                      <a href="https://wrap.ngo">Read more</a>
-                    </evg-button>
-                  </evg-card-content>
-                </evg-card>
-              </a>
+                  <h3 className="evg-text-size-body-md evg-text-family-body">
+                    {item.title}
+                  </h3>
+                  <evg-button variant="primary" width="full-width-mobile">
+                    <a href="https://wrap.ngo">Read more</a>
+                  </evg-button>
+                </evg-card-content>
+              </evg-card>
             </evg-grid-item>
           ))}
         </evg-grid>
@@ -205,21 +206,25 @@ export function Row({
   title = 'Section title',
   cards = [
     {
+      id: 1,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 2,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 3,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 4,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
@@ -228,7 +233,12 @@ export function Row({
 }: {
   readonly theme?: 'default' | 'earth-light';
   readonly title?: string;
-  readonly cards?: { title: string; description: string; theme: string }[];
+  readonly cards?: {
+    id: string | number;
+    title: string;
+    description: string;
+    theme: string;
+  }[];
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
@@ -240,7 +250,7 @@ export function Row({
         <evg-grid wrap="wrap">
           {cards.map((item) => (
             <evg-grid-item
-              key={item.title}
+              key={item.id}
               small-mobile="12"
               small-tablet="6"
               large-tablet="3"

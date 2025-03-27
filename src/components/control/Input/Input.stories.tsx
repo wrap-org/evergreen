@@ -5,6 +5,8 @@ export default {
   component: 'evg-input',
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5105-4457&t=g3niGv3HxLa5NL0O-0',
       description: {
         component:
           'Wraps an HTML input element to provide consistent styling and behavior.',
