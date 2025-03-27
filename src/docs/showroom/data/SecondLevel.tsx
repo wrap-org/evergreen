@@ -219,7 +219,7 @@ export function SecondLevel() {
                   <p className="evg-text-size-body-sm">
                     Explore further details about this research
                   </p>
-                  <evg-button variant="primary" width="full-width">
+                  <evg-button variant="primary" width="full-width-mobile">
                     <button>
                       Read more
                       <evg-icon icon="arrow-right" />
@@ -244,7 +244,7 @@ export function SecondLevel() {
                   <p className="evg-text-size-body-sm">
                     Want to cut your household food waste?
                   </p>
-                  <evg-button variant="primary" width="full-width">
+                  <evg-button variant="primary" width="full-width-mobile">
                     <button>
                       Read more
                       <evg-icon icon="arrow-right" />
@@ -322,7 +322,7 @@ export function SecondLevel() {
                 Annual Survey of Redistribution Organisations in the UK
               </h3>
               <p className="evg-text-size-body-sm">2023 update</p>
-              <evg-button variant="primary" width="full-width">
+              <evg-button variant="primary" width="full-width-mobile">
                 <button>
                   View story
                   <evg-icon icon="arrow-right" />

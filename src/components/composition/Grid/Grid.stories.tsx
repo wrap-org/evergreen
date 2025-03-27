@@ -168,13 +168,13 @@ ResponsiveColumns.parameters = {
 export const MobileCTA = () => (
   <evg-wrapper gutter="none" size="md">
     <evg-grid wrap="wrap" direction="row-reverse">
-      <evg-grid-item mobile="12" tablet="3">
-        <evg-button variant="primary" width="full-width">
+      <evg-grid-item small-mobile="12" small-tablet="auto">
+        <evg-button variant="primary" width="full-width-mobile">
           <button type="button">Continue</button>
         </evg-button>
       </evg-grid-item>
-      <evg-grid-item mobile="12" tablet="3">
-        <evg-button width="full-width">
+      <evg-grid-item small-mobile="12" small-tablet="auto">
+        <evg-button width="full-width-mobile">
           <button type="button">Cancel</button>
         </evg-button>
       </evg-grid-item>
