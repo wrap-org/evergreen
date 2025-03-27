@@ -121,7 +121,7 @@ export function TopLevel() {
         </evg-wrapper>
       </evg-section>
 
-      <evg-section padding="fluid" class="evg-theme-lime-light">
+      <evg-section padding="fluid" class="evg-theme-earth-light">
         <evg-wrapper size="xl">
           <div className="evg-spacing-bottom-lg evg-text-align-center">
             <h2 className="evg-text-size-heading-lg evg-spacing-bottom-md evg-text-transform-uppercase">

@@ -217,7 +217,7 @@ export function SecondLevel() {
         </evg-wrapper>
       </evg-section>
 
-      <evg-section padding="fluid" class="evg-theme-lime-light">
+      <evg-section padding="fluid" class="evg-theme-earth-light">
         <evg-wrapper size="xl">
           <evg-grid
             justify-content="space-between"
