@@ -34,10 +34,10 @@ const cardContent = (
       />
     </evg-card-img>
     <evg-card-content>
-      <evg-meta>
+      <evg-row>
         <evg-badge variant="sky-light">Info</evg-badge>
         <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-      </evg-meta>
+      </evg-row>
       <h3 className="evg-text-size-heading-sm">
         Extending Product Lifetimes: WRAP&apos;s Work on Clothing Durability
       </h3>
@@ -117,10 +117,10 @@ export const Layouts: StoryFn = () => (
           </p>
           <evg-grid justify-content="space-between" align-items="center">
             <evg-grid-item>
-              <evg-meta>
+              <evg-row>
                 <evg-badge variant="sky-light">Info</evg-badge>
                 <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-              </evg-meta>
+              </evg-row>
             </evg-grid-item>
             <evg-grid-item>
               <evg-button variant="primary" width="full-width">
@@ -154,10 +154,10 @@ export const Clickable: StoryFn = () => (
                 />
               </evg-card-img>
               <evg-card-content>
-                <evg-meta>
+                <evg-row>
                   <evg-badge variant="sky-light">Press release</evg-badge>
                   <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-                </evg-meta>
+                </evg-row>
                 <h3 className="evg-text-size-heading-sm evg-text-family-body">
                   Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                   Durability

@@ -54,10 +54,10 @@ export function Grid({
                     />
                   </evg-card-img>
                   <evg-card-content>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge variant="sky-light">Info</evg-badge>
                       <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-                    </evg-meta>
+                    </evg-row>
 
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       {item.title}
@@ -115,10 +115,10 @@ export function Featured({
           </evg-card-img>
           <evg-card-content>
             {card.meta && (
-              <evg-meta>
+              <evg-row>
                 <evg-badge variant="sky-light">Info</evg-badge>
                 <span className="evg-text-size-body-sm">March 1, 2023</span>
-              </evg-meta>
+              </evg-row>
             )}
             <h3 className="evg-text-size-heading-md evg-text-transform-uppercase">
               {card.title}
@@ -307,10 +307,10 @@ export function ThumbList() {
               </p>
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
-                  <evg-meta>
+                  <evg-row>
                     <evg-badge variant="sky-light">Info</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                  </evg-meta>
+                  </evg-row>
                 </evg-grid-item>
                 <evg-grid-item>
                   <evg-button variant="primary">
@@ -362,9 +362,9 @@ export function People() {
                       Joanne Doe
                     </h3>
                     <p className="evg-text-size-body-sm">Job title</p>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge variant="sky-light">Trustee</evg-badge>
-                    </evg-meta>
+                    </evg-row>
                   </evg-card-content>
                 </evg-card>
               </a>
@@ -406,10 +406,10 @@ export function SearchResults() {
                       Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                       Durability
                     </h3>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge variant="sky-light">Article</evg-badge>
                       <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                    </evg-meta>
+                    </evg-row>
                   </evg-card-content>
                 </evg-card>
               </a>
@@ -463,10 +463,10 @@ export function Articles() {
                     />
                   </evg-card-img>
                   <evg-card-content>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge>Article</evg-badge>
                       <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                    </evg-meta>
+                    </evg-row>
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                       Durability

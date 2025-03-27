@@ -1,17 +1,17 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
-export interface MetaAttributes {}
+export interface RowAttributes {}
 
 declare global {
   interface HTMLElementTagNameMap {
-    'evg-meta': MetaAttributes;
+    'evg-row': RowAttributes;
   }
 }
 
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
-      'evg-meta': JSXCustomElement<MetaAttributes>;
+      'evg-row': JSXCustomElement<RowAttributes>;
     }
   }
 }

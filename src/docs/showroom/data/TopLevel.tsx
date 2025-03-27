@@ -104,7 +104,7 @@ export function TopLevel() {
               WRAP is a climate action NGO working around the globe to tackle
               the causes of the climate crisis and give the planet a sustainable
               future. We were established in the UK in 2000; we now work in 40+
-              countries. 
+              countries.
             </p>
           </evg-wrapper>
         </evg-wrapper>
@@ -134,13 +134,13 @@ export function TopLevel() {
                 />
               </evg-card-img>
               <evg-card-content>
-                <evg-meta>
+                <evg-row>
                   {card.date ? (
                     <span className="evg-text-size-body-xs">{card.date}</span>
                   ) : (
                     <evg-badge variant="sky-light">Coming soon</evg-badge>
                   )}
-                </evg-meta>
+                </evg-row>
                 <h3 className="evg-text-size-heading-md">{card.title}</h3>
                 <p className="evg-text-size-body-sm">{card.description}</p>
                 {card.button && (

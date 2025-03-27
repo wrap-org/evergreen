@@ -69,11 +69,11 @@ export const WithDescriptionAndBadges: StoryFn = (props) => (
         <evg-icon icon="document-check" />
         <evg-menu-item-content>
           Menu item title
-          <evg-meta>
+          <evg-row>
             <evg-badge variant="sky-light">Portal</evg-badge>
             <evg-badge variant="lime-light">Locator</evg-badge>
             <evg-badge variant="forest-light">API</evg-badge>
-          </evg-meta>
+          </evg-row>
         </evg-menu-item-content>
         <evg-icon icon="arrow-right" />
       </button>
@@ -84,11 +84,11 @@ export const WithDescriptionAndBadges: StoryFn = (props) => (
         <evg-menu-item-content>
           Menu item title
           <p>Menu item description</p>
-          <evg-meta>
+          <evg-row>
             <evg-badge variant="sky-light">Portal</evg-badge>
             <evg-badge variant="lime-light">Locator</evg-badge>
             <evg-badge variant="forest-light">API</evg-badge>
-          </evg-meta>
+          </evg-row>
         </evg-menu-item-content>
         <evg-icon icon="arrow-right" />
       </button>
@@ -107,11 +107,11 @@ export const Theming: StoryFn = (props) => (
               <evg-menu-item-content>
                 Menu item title
                 <p>Menu item description</p>
-                <evg-meta>
+                <evg-row>
                   <evg-badge variant="sky-light">Portal</evg-badge>
                   <evg-badge variant="lime-light">Locator</evg-badge>
                   <evg-badge variant="forest-light">API</evg-badge>
-                </evg-meta>
+                </evg-row>
               </evg-menu-item-content>
               <evg-icon icon="arrow-right" />
             </button>

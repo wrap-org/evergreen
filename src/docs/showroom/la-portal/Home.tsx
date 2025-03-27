@@ -19,9 +19,9 @@ export function Home() {
             <evg-grid-item small-mobile="12" small-tablet="6">
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
-                  <evg-meta>
+                  <evg-row>
                     <evg-badge variant="lime-light">Confirmed</evg-badge>
-                  </evg-meta>
+                  </evg-row>
                   <h3 className="evg-text-size-body-xl evg-text-family-body">
                     Kerbside collection
                   </h3>
@@ -41,9 +41,9 @@ export function Home() {
             <evg-grid-item small-mobile="12" small-tablet="6">
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
-                  <evg-meta>
+                  <evg-row>
                     <evg-badge variant="sky-light">In progress</evg-badge>
-                  </evg-meta>
+                  </evg-row>
                   <h3 className="evg-text-size-body-xl evg-text-family-body">
                     Communal collection
                   </h3>

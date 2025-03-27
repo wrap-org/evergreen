@@ -231,10 +231,10 @@ export function ThirdLevel() {
               </h3>
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
-                  <evg-meta>
+                  <evg-row>
                     <evg-badge variant="sky-light">Report</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                  </evg-meta>
+                  </evg-row>
                 </evg-grid-item>
                 <evg-grid-item>
                   <evg-button variant="primary">
