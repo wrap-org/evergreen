@@ -53,10 +53,10 @@ export const Dashboard = () => (
                   <evg-menu-item-content>
                     Menu item title
                     <p>Menu item description</p>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge variant="sky-light">Portal</evg-badge>
                       <evg-badge variant="lime-light">Locator</evg-badge>
-                    </evg-meta>
+                    </evg-row>
                   </evg-menu-item-content>
                   <evg-icon icon="arrow-right" />
                 </button>
@@ -81,10 +81,10 @@ export const Dashboard = () => (
                   <evg-menu-item-content>
                     Menu item title
                     <p>Menu item description</p>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge variant="sky-light">Portal</evg-badge>
                       <evg-badge variant="lime-light">Locator</evg-badge>
-                    </evg-meta>
+                    </evg-row>
                   </evg-menu-item-content>
                 </button>
               </evg-menu-item>

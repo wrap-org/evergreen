@@ -57,11 +57,11 @@ export function ReportHome() {
                       <evg-menu-item-content>
                         1. Service costs
                         <p>Menu item description</p>
-                        <evg-meta>
+                        <evg-row>
                           <evg-badge variant="lime-light">
                             Get started
                           </evg-badge>
-                        </evg-meta>
+                        </evg-row>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
                     </a>
@@ -77,9 +77,9 @@ export function ReportHome() {
                       <evg-menu-item-content>
                         2. Economic
                         <p>Menu item description</p>
-                        <evg-meta>
+                        <evg-row>
                           <evg-badge variant="sky-light">Upcoming</evg-badge>
-                        </evg-meta>
+                        </evg-row>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
                     </a>
@@ -95,9 +95,9 @@ export function ReportHome() {
                       <evg-menu-item-content>
                         3. Environmental
                         <p>Menu item description</p>
-                        <evg-meta>
+                        <evg-row>
                           <evg-badge variant="sky-light">Upcoming</evg-badge>
-                        </evg-meta>
+                        </evg-row>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
                     </a>
@@ -113,9 +113,9 @@ export function ReportHome() {
                       <evg-menu-item-content>
                         4 Technical
                         <p>Menu item description</p>
-                        <evg-meta>
+                        <evg-row>
                           <evg-badge variant="sky-light">Upcoming</evg-badge>
-                        </evg-meta>
+                        </evg-row>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
                     </a>

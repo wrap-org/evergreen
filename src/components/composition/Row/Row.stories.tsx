@@ -1,11 +1,10 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import './Meta';
+import './Row';
 
 const description = `
-A meta component for displaying metadata in a consistent layout.
-Commonly used for showing dates, authors, categories, and other metadata.
+Display items next to each other in a row with a small gap.
 `;
 
 export default {
@@ -19,8 +18,8 @@ export default {
 } satisfies Meta;
 
 export const Default = () => (
-  <evg-meta>
+  <evg-row>
     <span>Author Name</span>
     <span>Category</span>
-  </evg-meta>
+  </evg-row>
 );

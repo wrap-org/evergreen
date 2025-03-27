@@ -315,9 +315,9 @@ export function SecondLevel() {
               />
             </evg-card-img>
             <evg-card-content>
-              <evg-meta>
+              <evg-row>
                 <span className="evg-text-size-body-xs">January 2024</span>
-              </evg-meta>
+              </evg-row>
               <h3 className="evg-text-size-heading-md">
                 Annual Survey of Redistribution Organisations in the UK
               </h3>
