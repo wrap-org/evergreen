@@ -13,6 +13,8 @@ export default {
   },
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6299-12182&t=g3niGv3HxLa5NL0O-0',
       description: {
         component:
           'The form group component is a wrapper for grouping form elements with a label and optional help text.',

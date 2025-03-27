@@ -8,6 +8,8 @@ export default {
   component: 'evg-button',
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7485',
       description: {
         component:
           'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-button` component.',

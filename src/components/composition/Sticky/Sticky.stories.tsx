@@ -6,6 +6,8 @@ import './Sticky';
 export default {
   parameters: {
     docs: {
+      figma:
+        'http://figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7242&t=g3niGv3HxLa5NL0O-0',
       description: {
         component:
           'A sticky component is used to keep an element fixed at the top of the viewport when scrolling.',

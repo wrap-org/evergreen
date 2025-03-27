@@ -16,6 +16,8 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7138&t=g3niGv3HxLa5NL0O-0',
       story: {
         inline: false,
         height: '22rem',

@@ -10,6 +10,8 @@ Display items next to each other in a row with a small gap.
 export default {
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7230&t=g3niGv3HxLa5NL0O-0',
       description: {
         component: description,
       },

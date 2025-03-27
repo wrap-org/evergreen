@@ -1,12 +1,13 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
 import './Enter';
 
 export default {
-  component: 'evg-enter',
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7201&t=g3niGv3HxLa5NL0O-0',
       description: {
         component: `The enter component can be wrapped around content to animate it into view.`,
       },
@@ -35,7 +36,7 @@ export default {
       },
     },
   },
-};
+} satisfies Meta;
 
 export const Enter: StoryFn = (args) => (
   <evg-enter {...args}>

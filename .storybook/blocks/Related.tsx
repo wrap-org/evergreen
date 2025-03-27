@@ -24,7 +24,7 @@ function Item ({ story }) {
  * Gets stories for related components by looking at the story source
  * and finding other components that are used in the story
  */
-export default function Related({ of }) {
+export default function Related({ of }: { of?: any }) {
   const [allStories, setAllStories] = useState([] as IndexStory[]);
   const resolvedOf = useOf(of || 'story', ['story']);
 

@@ -3,6 +3,8 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+import './Section';
+
 const description = `
 A section component represents a horizontal slice of a page. Multiple sections and themes
 can be used to create visibly grouped parts of the page with different backgrounds.
@@ -20,6 +22,8 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6255-1432',
       description: {
         component: description,
       },
