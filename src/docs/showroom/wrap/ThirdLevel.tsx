@@ -252,7 +252,7 @@ export function ThirdLevel() {
 
       <Featured
         title="Featured resource"
-        theme="lime-light"
+        theme="earth-light"
         size="lg"
         card={{
           title: 'The Food System Transformation Plan',

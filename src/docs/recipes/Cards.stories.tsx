@@ -87,7 +87,7 @@ export function Featured({
     meta: true,
   },
 }: {
-  readonly theme?: 'default' | 'lime-light';
+  readonly theme?: 'default' | 'earth-light';
   readonly size?: 'lg' | 'xl';
   readonly title?: string;
   readonly card?: { title: string; description: string; meta?: boolean };
