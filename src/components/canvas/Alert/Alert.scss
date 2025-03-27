@@ -1,5 +1,5 @@
 evg-alert {
-  --_background: var(--evg-color-earth-50);
+  --_background: var(--evg-color-sky-75);
   --_color: var(--evg-color-forest);
   background: var(--_background);
   border-radius: var(--evg-radius-md);
@@ -7,19 +7,27 @@ evg-alert {
   display: block;
   padding: var(--evg-spacing-md);
 
-  &[type='info'] {
-    --_background: var(--evg-color-sky-25);
-  }
-
-  &[type='attention'] {
+  &[variant='postive'] {
     --_background: var(--evg-color-lime);
   }
 
-  &[type='positive'] {
-    --_background: var(--evg-color-lime-25);
+  &[variant='postive light'] {
+    --_background: var(--evg-color-lime-50);
   }
 
-  &[type='negative'] {
+  &[variant='negative'] {
+    --_background: var(--evg-color-rose-50);
+  }
+
+  &[variant='negative light'] {
     --_background: var(--evg-color-rose-25);
+  }
+
+  &[variant='neutral'] {
+    --_background: var(--evg-color-sky-75);
+  }
+
+  &[variant='neutral light'] {
+    --_background: var(--evg-color-sky-25);
   }
 }

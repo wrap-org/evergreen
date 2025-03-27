@@ -1,7 +1,13 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface AlertAttributes {
-  type?: 'info' | 'attention' | 'positive' | 'negative' | 'neutral';
+  variant?:
+    | 'postive'
+    | 'postive light'
+    | 'negative'
+    | 'negative light'
+    | 'neutral'
+    | 'neutral light';
 }
 
 declare global {

@@ -103,3 +103,5 @@ and, as such, this represents a much larger set of breaking changes than would n
   - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
 - `Label` has been replaced with `evg-label`
   - `evg-label` should always wrap a `label`, `span` or `legend` element
+- `Alert` has been replaced with `evg-alert`
+  - `type` prop has been replaced with the `variant` prop with more color options
