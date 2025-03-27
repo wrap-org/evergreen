@@ -154,6 +154,7 @@ evg-button {
   @media (width < 600px) {
     &[width='full-width-mobile'] {
       display: block;
+      width: 100%;
 
       evg-loading-button,
       button,

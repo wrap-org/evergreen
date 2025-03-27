@@ -62,7 +62,7 @@ export function Grid({
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       {item.title}
                     </h3>
-                    <evg-button variant="primary">
+                    <evg-button variant="primary" width="full-width-mobile">
                       <a href="https://wrap.ngo">Read more</a>
                     </evg-button>
                   </evg-card-content>
@@ -186,7 +186,7 @@ export function List({
             <evg-card-content>
               <h3 className="evg-text-size-heading-md">{card.title}</h3>
               <p className="evg-text-size-body-sm">{card.description}</p>
-              <evg-button variant="primary" width="full-width">
+              <evg-button variant="primary" width="full-width-mobile">
                 <button>
                   Read more
                   <evg-icon icon="arrow-right" />

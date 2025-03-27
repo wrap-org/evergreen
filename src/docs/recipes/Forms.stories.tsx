@@ -91,12 +91,12 @@ export function Form() {
           </div>
         </evg-form-group>
         <evg-grid direction="row-reverse">
-          <evg-grid-item small-mobile="6">
+          <evg-grid-item small-mobile="6" small-tablet="3">
             <evg-button variant="primary" width="full-width">
               <button>Save</button>
             </evg-button>
           </evg-grid-item>
-          <evg-grid-item small-mobile="6">
+          <evg-grid-item small-mobile="6" small-tablet="3">
             <evg-button width="full-width">
               <button>Skip</button>
             </evg-button>

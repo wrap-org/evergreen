@@ -16,7 +16,7 @@ export function Home() {
             Collection types
           </h2>
           <evg-grid wrap="wrap" gap="lg" class="evg-spacing-bottom-lg">
-            <evg-grid-item small-mobile="12" small-tablet="6">
+            <evg-grid-item small-mobile="12" small-tablet="6" fill>
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
                   <evg-meta>
@@ -29,7 +29,7 @@ export function Home() {
                     The details have been confirmed for this collection. The
                     report is available to download.
                   </p>
-                  <evg-button width="full-width">
+                  <evg-button width="full-width-mobile">
                     <a href="https://wrap.ngo">
                       View details
                       <evg-icon icon="arrow-right" />
@@ -38,7 +38,7 @@ export function Home() {
                 </evg-card-content>
               </evg-card>
             </evg-grid-item>
-            <evg-grid-item small-mobile="12" small-tablet="6">
+            <evg-grid-item small-mobile="12" small-tablet="6" fill>
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
                   <evg-meta>
@@ -51,7 +51,7 @@ export function Home() {
                     Complete a report for all households which receive a
                     Communal collection service.
                   </p>
-                  <evg-button width="full-width" variant="primary">
+                  <evg-button width="full-width-mobile" variant="primary">
                     <a href="https://wrap.ngo">
                       Start a report
                       <evg-icon icon="arrow-right" />

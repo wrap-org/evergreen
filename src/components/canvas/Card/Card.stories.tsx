@@ -3,6 +3,8 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const cardThemes = themes.filter((t) => !['lime', 'sky'].includes(t));
+
 const description = `
 A card component is used to provide a summary of content, with a clear call to action.
 
@@ -47,7 +49,7 @@ const cardContent = (
         Research Project as part of Textiles 2030, we have transformed the
         fashion industry&apos;s approach to product design.
       </p>
-      <evg-button variant="primary" width="full-width">
+      <evg-button variant="primary">
         <button>
           Read more <evg-icon icon="arrow-right" />
         </button>
@@ -69,7 +71,7 @@ Card.args = {
 export const Theming: StoryFn = () => (
   <evg-wrapper size="lg">
     <evg-grid wrap="wrap">
-      {themes.map((theme) => (
+      {cardThemes.map((theme) => (
         <evg-grid-item small-mobile="12" tablet="6" key={theme}>
           <evg-card class={`evg-theme-${theme}`} radius="md">
             {cardContent}
@@ -123,7 +125,7 @@ export const Layouts: StoryFn = () => (
               </evg-meta>
             </evg-grid-item>
             <evg-grid-item>
-              <evg-button variant="primary" width="full-width">
+              <evg-button variant="primary">
                 <button>
                   Read more
                   <evg-icon icon="arrow-right" />

@@ -129,7 +129,7 @@ export function ReportHome() {
                   small-tablet="6"
                   large-tablet="3"
                 >
-                  <evg-button variant="primary" width="full-width">
+                  <evg-button variant="primary" width="full-width-mobile">
                     <button type="button">
                       Continue
                       <evg-icon icon="arrow-right" />
