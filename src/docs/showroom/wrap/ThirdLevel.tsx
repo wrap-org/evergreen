@@ -232,7 +232,7 @@ export function ThirdLevel() {
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
                   <evg-meta>
-                    <evg-badge variant="sky light">Report</evg-badge>
+                    <evg-badge variant="sky-light">Report</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
                   </evg-meta>
                 </evg-grid-item>

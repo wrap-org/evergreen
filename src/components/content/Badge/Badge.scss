@@ -17,7 +17,7 @@ evg-badge {
     --_color: var(--evg-color-cloud);
   }
 
-  &[variant='forest light'] {
+  &[variant='forest-light'] {
     --_background: var(--evg-color-forest-25);
   }
 
@@ -33,7 +33,7 @@ evg-badge {
     --_background: var(--evg-color-sky);
   }
 
-  &[variant='sky light'] {
+  &[variant='sky-light'] {
     --_background: var(--evg-color-sky-50);
   }
 
@@ -49,7 +49,7 @@ evg-badge {
     --_background: var(--evg-color-rose-75);
   }
 
-  &[variant='rose light'] {
+  &[variant='rose-light'] {
     --_background: var(--evg-color-rose-25);
   }
 

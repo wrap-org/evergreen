@@ -20,7 +20,7 @@ export function Home() {
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
                   <evg-meta>
-                    <evg-badge variant="lime light">Confirmed</evg-badge>
+                    <evg-badge variant="lime-light">Confirmed</evg-badge>
                   </evg-meta>
                   <h3 className="evg-text-size-body-xl evg-text-family-body">
                     Kerbside collection
@@ -42,7 +42,7 @@ export function Home() {
               <evg-card radius="md" class="evg-theme-default">
                 <evg-card-content>
                   <evg-meta>
-                    <evg-badge variant="sky light">In progress</evg-badge>
+                    <evg-badge variant="sky-light">In progress</evg-badge>
                   </evg-meta>
                   <h3 className="evg-text-size-body-xl evg-text-family-body">
                     Communal collection

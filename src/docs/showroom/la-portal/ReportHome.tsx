@@ -58,7 +58,7 @@ export function ReportHome() {
                         1. Service costs
                         <p>Menu item description</p>
                         <evg-meta>
-                          <evg-badge variant="lime light">
+                          <evg-badge variant="lime-light">
                             Get started
                           </evg-badge>
                         </evg-meta>
@@ -78,7 +78,7 @@ export function ReportHome() {
                         2. Economic
                         <p>Menu item description</p>
                         <evg-meta>
-                          <evg-badge variant="sky light">Upcoming</evg-badge>
+                          <evg-badge variant="sky-light">Upcoming</evg-badge>
                         </evg-meta>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
@@ -96,7 +96,7 @@ export function ReportHome() {
                         3. Environmental
                         <p>Menu item description</p>
                         <evg-meta>
-                          <evg-badge variant="sky light">Upcoming</evg-badge>
+                          <evg-badge variant="sky-light">Upcoming</evg-badge>
                         </evg-meta>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />
@@ -114,7 +114,7 @@ export function ReportHome() {
                         4 Technical
                         <p>Menu item description</p>
                         <evg-meta>
-                          <evg-badge variant="sky light">Upcoming</evg-badge>
+                          <evg-badge variant="sky-light">Upcoming</evg-badge>
                         </evg-meta>
                       </evg-menu-item-content>
                       <evg-icon icon="arrow-right" />

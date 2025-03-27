@@ -55,7 +55,7 @@ export function Grid({
                   </evg-card-img>
                   <evg-card-content>
                     <evg-meta>
-                      <evg-badge variant="sky light">Info</evg-badge>
+                      <evg-badge variant="sky-light">Info</evg-badge>
                       <span className="evg-text-size-body-xs">Jan 1, 2025</span>
                     </evg-meta>
 
@@ -116,7 +116,7 @@ export function Featured({
           <evg-card-content>
             {card.meta && (
               <evg-meta>
-                <evg-badge variant="sky light">Info</evg-badge>
+                <evg-badge variant="sky-light">Info</evg-badge>
                 <span className="evg-text-size-body-sm">March 1, 2023</span>
               </evg-meta>
             )}
@@ -308,7 +308,7 @@ export function ThumbList() {
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
                   <evg-meta>
-                    <evg-badge variant="sky light">Info</evg-badge>
+                    <evg-badge variant="sky-light">Info</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
                   </evg-meta>
                 </evg-grid-item>
@@ -363,7 +363,7 @@ export function People() {
                     </h3>
                     <p className="evg-text-size-body-sm">Job title</p>
                     <evg-meta>
-                      <evg-badge variant="sky light">Trustee</evg-badge>
+                      <evg-badge variant="sky-light">Trustee</evg-badge>
                     </evg-meta>
                   </evg-card-content>
                 </evg-card>
@@ -407,7 +407,7 @@ export function SearchResults() {
                       Durability
                     </h3>
                     <evg-meta>
-                      <evg-badge variant="sky light">Article</evg-badge>
+                      <evg-badge variant="sky-light">Article</evg-badge>
                       <span className="evg-text-size-body-sm">Jan 1, 2025</span>
                     </evg-meta>
                   </evg-card-content>
