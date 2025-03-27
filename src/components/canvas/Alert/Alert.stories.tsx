@@ -5,24 +5,24 @@ const description = `
 Callout for key information within a page. Use and content should be kept to a minimum.
 `;
 
-const types = {
-  info: {
-    title: 'Info',
-    text: 'You may be interested to know this',
-    button: 'Learn more',
-  },
-  attention: {
-    title: 'Attention',
-    text: 'You need to know this!',
-    button: 'Try again',
-  },
-  positive: {
-    title: 'Positive',
+const variants = {
+  postive: {
+    title: 'Postive',
     text: 'It was a success!',
-    button: 'Done',
+    button: 'Continue',
+  },
+  'postive light': {
+    title: 'Postive light',
+    text: 'It was a success!',
+    button: 'Continue',
   },
   negative: {
     title: 'Negative',
+    text: 'Something terrible happened!',
+    button: 'Try again',
+  },
+  'negative light': {
+    title: 'Negative light',
     text: 'Something terrible happened!',
     button: 'Try again',
   },
@@ -31,9 +31,14 @@ const types = {
     text: 'All is as expected.',
     button: 'Learn more',
   },
+  'neutral light': {
+    title: 'Neutral light',
+    text: 'All is as expected.',
+    button: 'Learn more',
+  },
 };
 
-const typeOptions = Object.keys(types) as (keyof typeof types)[];
+const typeOptions = Object.keys(variants) as (keyof typeof variants)[];
 
 export default {
   parameters: {
@@ -62,25 +67,25 @@ export const Alert: StoryFn = ({ ...props }) => (
 );
 
 Alert.args = {
-  type: 'info',
+  type: 'postive',
 };
 
 export const Types: StoryFn = () => (
   <evg-grid wrap="wrap" direction="column">
-    {typeOptions.map((type) => (
-      <evg-grid-item key={type} small-mobile="12">
-        <evg-alert type={type}>
+    {typeOptions.map((variant) => (
+      <evg-grid-item key={variant} small-mobile="12">
+        <evg-alert type={variant}>
           <evg-grid wrap="wrap" align-items="center">
             <evg-grid-item grow shrink small-mobile="12" large-mobile="auto">
               <h4 className="evg-text-size-body-sm evg-text-family-body">
-                {types[type].title}
+                {variants[variant].title}
               </h4>
-              <p className="evg-text-size-body-sm">{types[type].text}</p>
+              <p className="evg-text-size-body-sm">{variants[variant].text}</p>
             </evg-grid-item>
             <evg-grid-item small-mobile="12" large-mobile="auto">
               <evg-button width="full-width-mobile">
                 <button>
-                  {types[type].button}
+                  {variants[variant].button}
                   <evg-icon icon="arrow-right" />
                 </button>
               </evg-button>
