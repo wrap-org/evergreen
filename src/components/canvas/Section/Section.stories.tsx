@@ -3,20 +3,33 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+import './Section';
+
 const description = `
-A section component represents a horizontal slice of a page.
+A structural element dividing content into meaningful segments for improved hierarchy and
+scanability. Sections can be configured with various padding options, background treatments,
+and can contain any combination of components.
 
-Multiple sections and themes can be used to create visibly grouped parts
-of the page with different backgrounds.
+A section component represents a horizontal slice of a page. Multiple sections and themes
+can be used to create visibly grouped parts of the page with different backgrounds.
 
-Sections support theming, applying a background colour and default
-text colour based on the current theme as well as vertical spacing.
+Sections support [theming](?path=/docs/foundations-utilities-theme--docs), applying a
+background colour and default text colour based on the current theme as well as vertical
+spacing.
+
+Some pages will have many sections to divide up the content, especially on brochureware
+sites, whilst other may only have a single section for the main content, such as in an
+app-like context.
 `;
 
 export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A structural element dividing content into meaningful segments.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6255-1432',
       description: {
         component: description,
       },
@@ -49,8 +62,8 @@ export default {
   },
 } satisfies Meta;
 
-const Content = () => (
-  <evg-wrap size="lg">
+const Content = ({ theme }: { readonly theme?: string }) => (
+  <evg-wrapper size="lg">
     <h2 className="evg-spacing-bottom-sm">Section title</h2>
     <p className="evg-spacing-bottom-lg">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -61,22 +74,28 @@ const Content = () => (
     </p>
     <evg-grid>
       <evg-grid-item small-mobile="6" small-tablet="auto">
-        <evg-button variant="primary" width="full-width-mobile">
+        <evg-button
+          variant={theme === 'lime' ? 'default' : 'primary'}
+          width="full-width-mobile"
+        >
           <button type="button">Button text</button>
         </evg-button>
       </evg-grid-item>
       <evg-grid-item small-mobile="6" small-tablet="auto">
-        <evg-button width="full-width-mobile">
+        <evg-button
+          width="full-width-mobile"
+          variant={theme === 'lime' ? 'secondary' : 'default'}
+        >
           <button type="button">Button text</button>
         </evg-button>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 export const Section: StoryFn = ({ theme, ...props }) => (
   <evg-section class={`evg-theme-${theme}`} {...props}>
-    <Content />
+    <Content theme={theme} />
   </evg-section>
 );
 
@@ -89,7 +108,7 @@ export const Theming: StoryFn = () => (
   <>
     {themes.map((theme) => (
       <evg-section padding="fluid" class={`evg-theme-${theme}`} key={theme}>
-        <Content />
+        <Content theme={theme} />
       </evg-section>
     ))}
   </>
@@ -109,6 +128,17 @@ export const WithImage: StoryFn = () => (
     </evg-section-img>
   </evg-section>
 );
+
+WithImage.parameters = {
+  docs: {
+    description: {
+      story: `
+As well as solid background colours, sections also support images. This option is often used in page headers
+or heros to add visual interest to the page.
+      `,
+    },
+  },
+};
 
 export const WithNestedImage: StoryFn = () => (
   <>

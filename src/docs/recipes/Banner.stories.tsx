@@ -19,7 +19,7 @@ export function Banner({
   return (
     <evg-supergraphic class="evg-theme-lime" position="bottom-left">
       <evg-section padding="fluid">
-        <evg-wrap size="xl">
+        <evg-wrapper size="xl">
           <evg-grid wrap="wrap" gap="fluid">
             <evg-grid-item small-mobile="12" tablet="6">
               <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase">
@@ -29,14 +29,11 @@ export function Banner({
             <evg-grid-item small-mobile="12" tablet="6">
               <p className="evg-spacing-bottom-md">{text}</p>
               <evg-button variant="secondary" width="full-width-mobile">
-                <button>
-                  {button}
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>{button}</button>
               </evg-button>
             </evg-grid-item>
           </evg-grid>
-        </evg-wrap>
+        </evg-wrapper>
       </evg-section>
     </evg-supergraphic>
   );

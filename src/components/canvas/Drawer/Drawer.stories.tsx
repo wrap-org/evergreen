@@ -1,11 +1,22 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useEffect, useState, useId } from 'react';
 
+const description = `
+A flexible panel that slides in from the edge of the screen, providing additional
+context without navigating away from the current view. Drawers can be configured to
+appear from different sides of the viewport with customisable sizes, backdrop options,
+and transition animations.
+`;
+
 export default {
-  title: 'Components/Canvas/Drawer',
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A sliding panel providing additional context without navigating away.',
+      description: {
+        component: description,
+      },
       story: {
         inline: false,
         height: '22rem',
@@ -62,7 +73,7 @@ const Template: StoryFn = (args) => {
     <evg-drawer {...args}>
       <dialog>
         <evg-section padding="md">
-          <evg-wrap>
+          <evg-wrapper>
             <evg-grid justify-content="flex-end" class="evg-spacing-bottom-lg">
               <evg-grid-item>
                 <evg-button width="square">
@@ -218,10 +229,10 @@ const Template: StoryFn = (args) => {
                 <evg-menu-item-content>Latest</evg-menu-item-content>
               </button>
             </evg-menu-item>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
         <evg-section padding="md" class="evg-theme-sand">
-          <evg-wrap>
+          <evg-wrapper>
             <evg-menu-item>
               <button type="button">
                 <evg-icon icon="user" />
@@ -247,7 +258,7 @@ const Template: StoryFn = (args) => {
               </div>
             </DrawerExpandable>
             <evg-divider />
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       </dialog>
     </evg-drawer>

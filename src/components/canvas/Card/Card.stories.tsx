@@ -3,9 +3,27 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const cardThemes = themes.filter((t) => !['lime', 'sky'].includes(t));
+
+const description = `
+Cards provide visual separation through elevation, borders, and padding, and can contain various
+elements, including headers, media, text, and action buttons in a cohesive presentation.
+
+Cards are a great way to display a collection of items, such as blog posts, products, or
+news articles. A card must always have an associated action, whether that is the whole card
+being clickable, or having a dedicated CTA button.
+`;
+
 export default {
   parameters: {
     docs: {
+      subtitle:
+        'A versatile container for grouping related content and actions with clear visual separation.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6338-13681&t=g3niGv3HxLa5NL0O-0',
+      description: {
+        component: description,
+      },
       theming: true,
     },
   },
@@ -23,10 +41,10 @@ const cardContent = (
       />
     </evg-card-img>
     <evg-card-content>
-      <evg-meta>
-        <evg-badge type="info">Info</evg-badge>
+      <evg-row>
+        <evg-badge variant="sky-light">Info</evg-badge>
         <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-      </evg-meta>
+      </evg-row>
       <h3 className="evg-text-size-heading-sm">
         Extending Product Lifetimes: WRAP&apos;s Work on Clothing Durability
       </h3>
@@ -36,7 +54,7 @@ const cardContent = (
         Research Project as part of Textiles 2030, we have transformed the
         fashion industry&apos;s approach to product design.
       </p>
-      <evg-button variant="primary" width="full-width">
+      <evg-button variant="primary">
         <button>
           Read more <evg-icon icon="arrow-right" />
         </button>
@@ -46,9 +64,9 @@ const cardContent = (
 );
 
 export const Card: StoryFn = (props) => (
-  <evg-wrap size="sm">
+  <evg-wrapper size="sm">
     <evg-card {...props}>{cardContent}</evg-card>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 Card.args = {
@@ -56,9 +74,9 @@ Card.args = {
 };
 
 export const Theming: StoryFn = () => (
-  <evg-wrap size="lg">
+  <evg-wrapper size="lg">
     <evg-grid wrap="wrap">
-      {themes.map((theme) => (
+      {cardThemes.map((theme) => (
         <evg-grid-item small-mobile="12" tablet="6" key={theme}>
           <evg-card class={`evg-theme-${theme}`} radius="md">
             {cardContent}
@@ -66,37 +84,33 @@ export const Theming: StoryFn = () => (
         </evg-grid-item>
       ))}
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );
 
 export const Layouts: StoryFn = () => (
   <>
     {(['top', 'bottom'] as const).map((layout) => (
-      <evg-wrap size="sm" class="evg-spacing-bottom-lg" key={layout}>
+      <evg-wrapper size="sm" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     ))}
 
     {(['left', 'right'] as const).map((layout) => (
-      <evg-wrap size="xl" class="evg-spacing-bottom-lg" key={layout}>
+      <evg-wrapper size="xl" class="evg-spacing-bottom-lg" key={layout}>
         <evg-card radius="md" layout={`image-${layout}` as const}>
           {cardContent}
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     ))}
 
-    <evg-wrap size="xl" class="evg-spacing-bottom-lg">
+    <evg-wrapper size="xl" class="evg-spacing-bottom-lg">
       <evg-card radius="md" layout="thumb">
         <evg-card-img>
-          <img
-            src="/images/placeholder/400x300.svg"
-            alt="Placeholder"
-            width="400"
-            height="300"
-            loading="lazy"
-          />
+          <evg-thumbnail size="xl">
+            <evg-icon icon="document-download" />
+          </evg-thumbnail>
         </evg-card-img>
         <evg-card-content>
           <h3 className="evg-text-size-heading-sm">
@@ -110,13 +124,13 @@ export const Layouts: StoryFn = () => (
           </p>
           <evg-grid justify-content="space-between" align-items="center">
             <evg-grid-item>
-              <evg-meta>
-                <evg-badge type="info">Info</evg-badge>
+              <evg-row>
+                <evg-badge variant="sky-light">Info</evg-badge>
                 <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-              </evg-meta>
+              </evg-row>
             </evg-grid-item>
             <evg-grid-item>
-              <evg-button variant="primary" width="full-width">
+              <evg-button variant="primary">
                 <button>
                   Read more
                   <evg-icon icon="arrow-right" />
@@ -126,12 +140,12 @@ export const Layouts: StoryFn = () => (
           </evg-grid>
         </evg-card-content>
       </evg-card>
-    </evg-wrap>
+    </evg-wrapper>
   </>
 );
 
 export const Clickable: StoryFn = () => (
-  <evg-wrap size="xl">
+  <evg-wrapper size="xl">
     <evg-grid wrap="wrap">
       {[1, 2, 3].map((item) => (
         <evg-grid-item small-mobile="12" tablet="4" key={item}>
@@ -147,10 +161,10 @@ export const Clickable: StoryFn = () => (
                 />
               </evg-card-img>
               <evg-card-content>
-                <evg-meta>
-                  <evg-badge type="info">Press release</evg-badge>
+                <evg-row>
+                  <evg-badge variant="sky-light">Press release</evg-badge>
                   <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-                </evg-meta>
+                </evg-row>
                 <h3 className="evg-text-size-heading-sm evg-text-family-body">
                   Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                   Durability
@@ -161,5 +175,5 @@ export const Clickable: StoryFn = () => (
         </evg-grid-item>
       ))}
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );

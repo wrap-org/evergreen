@@ -29,19 +29,27 @@ evg-card {
     grid-template-rows: 1fr auto;
   }
 
+  &[layout='image-left'],
+  &[layout='image-right'] {
+    @media (width >= 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+
+      evg-card-content {
+        justify-content: center;
+      }
+    }
+  }
+
   &[layout='image-left'] {
     @media (width >= 768px) {
       grid-template-areas: 'image content';
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
     }
   }
 
   &[layout='image-right'] {
     @media (width >= 768px) {
       grid-template-areas: 'content image';
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
     }
   }
 

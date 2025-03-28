@@ -3,8 +3,23 @@ import React from 'react';
 
 const sizes = ['sm', 'md', 'lg', 'xl'] as const;
 
+const description = `
+A compact image preview displaying representative visuals with various aspect ratios and cropping options.
+Thumbnail supports various aspect ratios, cropping options, fallback images, and can include overlay
+information such as duration, count, or status indicators.
+`;
+
 export default {
-  title: 'Components/Content/Thumbnail',
+  parameters: {
+    docs: {
+      subtitle: 'A compact image preview displaying representative visuals.',
+      description: {
+        component: description,
+      },
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6238-4159&t=g3niGv3HxLa5NL0O-0',
+    },
+  },
   argTypes: {
     size: {
       control: {

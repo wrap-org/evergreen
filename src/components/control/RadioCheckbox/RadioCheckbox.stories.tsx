@@ -3,13 +3,21 @@ import React from 'react';
 
 import './RadioCheckbox';
 
+const description = `
+Radio buttons enforce single selection while Checkboxes allow multiple selections, both featuring consistent
+styling, proper spacing, label alignment, and support for indeterminate states (checkboxes only).
+`;
+
 export default {
   component: 'evg-radio-checkbox',
   parameters: {
     docs: {
+      subtitle:
+        'Selection controls for single or multiple choices with consistent styling and proper accessibility.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6298-11670&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component:
-          'Wraps an HTML input type radio or checkbox element to provide consistent styling and behavior.',
+        component: description,
       },
     },
   },

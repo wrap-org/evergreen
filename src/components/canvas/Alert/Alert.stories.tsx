@@ -2,7 +2,8 @@ import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
 const description = `
-Callout for key information within a page. Use and content should be kept to a minimum.
+Visual indicators that provide feedback about system operations or important information.
+Alerts come in various severity levels (info, success, warning, error) with appropriate styling and can include dismiss options, icons, and action buttons.
 `;
 
 const types = {
@@ -38,6 +39,9 @@ const typeOptions = Object.keys(types) as (keyof typeof types)[];
 export default {
   parameters: {
     docs: {
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6337-13561&t=g3niGv3HxLa5NL0O-0',
+      subtitle: 'Visual indicators providing feedback about system operations.',
       description: {
         component: description,
       },

@@ -12,6 +12,9 @@ const description = `
   component or one of the parent elements.
 
   Components that support theming have a 'theme support' badge at the top of their docs page.
+
+  <evg-badge type="info">Theme support</evg-badge>
+
 `;
 
 export default {
@@ -51,7 +54,7 @@ export default {
 
 const ThemedSection = ({ theme }) => (
   <evg-section class={`evg-theme-${theme}`} padding="fluid">
-    <evg-wrap size="md">
+    <evg-wrapper size="md">
       <h2 className="evg-spacing-bottom-sm">{startCase(theme)}</h2>
       <p className="evg-spacing-bottom-lg">
         Aliquam egestas mi quam, a tincidunt lectus{' '}
@@ -64,17 +67,23 @@ const ThemedSection = ({ theme }) => (
 
       <evg-grid>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <evg-button variant="primary" width="full-width-mobile">
+          <evg-button
+            variant={theme === 'lime' ? 'default' : 'primary'}
+            width="full-width-mobile"
+          >
             <button>Button text</button>
           </evg-button>
         </evg-grid-item>
         <evg-grid-item small-mobile="12" mobile="auto">
-          <evg-button width="full-width-mobile">
+          <evg-button
+            variant={theme === 'lime' ? 'secondary' : 'default'}
+            width="full-width-mobile"
+          >
             <button>Button text</button>
           </evg-button>
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 

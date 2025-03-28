@@ -3,8 +3,19 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const description = `
+This versatile graphic asset maintains brand identity while allowing for creative applications
+across different formats and contexts. Use it to enhance brand consistency while adding visual
+depth to your designs.
+
+A supergraphic component can be wrapped around a section to apply a subtle branded finish.
+The [theme](?path=/docs/foundations-utilities-theme--docs) should be applied to the supergraphic
+and the section will inherit it.
+
+The supergraphic can be positioned in one of the four corners of the section.
+`;
+
 export default {
-  title: 'Components/Canvas/Supergraphic',
   argTypes: {
     position: {
       control: {
@@ -16,16 +27,21 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'An adaptable visual element derived from WRAP’s globe emblem that adds texture and visual interest to the brand.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6339-14667&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component: 'Used with sections to apply a subtle branded finish',
+        component: description,
       },
+      theming: true,
     },
   },
 } satisfies Meta;
 
 const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
   <evg-section padding="fluid">
-    <evg-wrap size="xl">
+    <evg-wrapper size="xl">
       <evg-grid>
         <evg-grid-item small-mobile="12" tablet="8" small-desktop="7">
           <h2 className="evg-spacing-bottom-sm">{title}</h2>
@@ -50,7 +66,7 @@ const Content = ({ title = 'Section title' }: { readonly title?: string }) => (
           </evg-grid>
         </evg-grid-item>
       </evg-grid>
-    </evg-wrap>
+    </evg-wrapper>
   </evg-section>
 );
 

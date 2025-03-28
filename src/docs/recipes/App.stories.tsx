@@ -21,9 +21,9 @@ export function Brochureware({ children }) {
       <Light slot="header" />
       {children ?? (
         <evg-section padding="fluid" class="evg-theme-sand">
-          <evg-wrap size="xxl">
+          <evg-wrapper size="xxl">
             <docs-placeholder>Content</docs-placeholder>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       )}
       <Full slot="footer" />
@@ -43,9 +43,9 @@ export function LaPortal({
       <LaPortalHeader secondaryNav={secondaryNav} slot="header" />
       {children ?? (
         <evg-section padding="md">
-          <evg-wrap size="xxl">
+          <evg-wrapper size="xxl">
             <docs-placeholder>Content</docs-placeholder>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       )}
     </evg-app>
@@ -58,9 +58,9 @@ export function Data({ children }) {
       <DataHeader slot="header" />
       {children ?? (
         <evg-section padding="fluid" class="evg-theme-sand">
-          <evg-wrap size="xxl">
+          <evg-wrapper size="xxl">
             <docs-placeholder>Content</docs-placeholder>
-          </evg-wrap>
+          </evg-wrapper>
         </evg-section>
       )}
       <Minimal slot="footer" />

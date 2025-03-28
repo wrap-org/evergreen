@@ -17,7 +17,7 @@ export default {
 export function Longform() {
   return (
     <evg-section padding="fluid">
-      <evg-wrap size="lg">
+      <evg-wrapper size="lg">
         <div className="evg-longform">
           <h2>About us</h2>
           <p>
@@ -241,7 +241,7 @@ export function Longform() {
             as part of his opening speech.
           </p>
         </div>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }

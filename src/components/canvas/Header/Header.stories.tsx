@@ -8,10 +8,34 @@ import TakeAction from '../../../docs/recipes/mega-menu/TakeAction';
 import WhatWeDo from '../../../docs/recipes/mega-menu/WhatWeDo';
 import { Drawer } from '../Drawer/Drawer.stories';
 
+const description = `
+A consistent navigation component that appears at the top of the interface, providing orientation and primary controls.
+Header component supports various configurations, including logo placement, navigation menus, search functionality,
+and user account controls.
+
+The header component sits at the top of the page and contains the main and secondary nav, as well as
+a trigger to open the [mobile navigation drawer](?path=/docs/components-canvas-drawer--docs).
+
+The header component is passed into the main [app wrapper](?path=/docs/components-composition-app--docs)
+using the \`header\` slot, which keeps it at the top of the page.
+
+There are [several different display variants](?path=/story/recipes-header--light) for the header depending
+on the app context, such as light, dark,compact and raised styles.
+`;
+
 export default {
-  title: 'Components/Canvas/Header',
   parameters: {
     layout: 'fullscreen',
+    docs: {
+      subtitle:
+        'A navigation component at the top of the interface offering orientation.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5705-7084&t=g3niGv3HxLa5NL0O-0',
+      description: {
+        component: description,
+      },
+      theming: true,
+    },
   },
   argTypes: {
     theme: {
@@ -106,7 +130,7 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
         </evg-header-primary-nav>
         <evg-header-secondary-nav>
           <nav aria-label="Secondary navigation">
-            <evg-button>
+            <evg-button variant={theme === 'forest' ? 'secondary' : 'default'}>
               <button
                 type="button"
                 aria-controls="regions"
@@ -121,13 +145,16 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
                 />
               </button>
             </evg-button>
-            <evg-button>
+            <evg-button variant={theme === 'forest' ? 'secondary' : 'default'}>
               <button type="button">
                 Log in / Sign up
                 <evg-icon icon="user" />
               </button>
             </evg-button>
-            <evg-button width="square">
+            <evg-button
+              width="square"
+              variant={theme === 'forest' ? 'secondary' : 'default'}
+            >
               <button type="button" aria-label="Search">
                 <evg-icon icon="search" />
               </button>
@@ -135,7 +162,10 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
           </nav>
         </evg-header-secondary-nav>
         <evg-header-mobile-nav>
-          <evg-button width="square">
+          <evg-button
+            width="square"
+            variant={theme === 'forest' ? 'secondary' : 'default'}
+          >
             <button
               type="button"
               aria-label="Open mobile navigation"

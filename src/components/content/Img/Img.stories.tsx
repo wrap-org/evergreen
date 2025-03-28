@@ -6,8 +6,9 @@ import { radius } from '@/lib/tokens';
 import './Img';
 
 const description = `
-The image component wraps an img tag to provide some common image controls,
-such as making it responsive or fitting a specific aspect ratio.
+An enhanced image component handling responsive behaviour, loading states, and fallbacks.
+Img supports various aspect ratios, object-fit properties, lazy loading, and placeholder
+options to optimise performance and user experience.
 `;
 
 export default {
@@ -28,6 +29,8 @@ export default {
   },
   parameters: {
     docs: {
+      subtitle:
+        'An enhanced image component handling responsive behaviour and loading states.',
       description: {
         component: description,
       },

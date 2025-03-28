@@ -12,23 +12,26 @@ export function Grid({
   title = 'Section with a grid of cards',
   cards = [
     {
+      id: 1,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
     {
+      id: 2,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
     {
+      id: 3,
       title: "Extending Product Lifetimes: WRAP's Work on Clothing Durability",
     },
   ],
 }: {
   readonly theme?: 'default' | 'earth-light';
   readonly title?: string;
-  readonly cards?: { title: string }[];
+  readonly cards?: { id: string | number; title: string }[];
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -36,42 +39,40 @@ export function Grid({
         <evg-grid wrap="wrap">
           {cards.map((item) => (
             <evg-grid-item
-              key={item.title}
+              key={item.id}
               small-mobile="12"
               small-tablet="6"
               large-tablet="4"
               fill
             >
-              <a href="https://wrap.ngo">
-                <evg-card class="evg-theme-default" radius="md">
-                  <evg-card-img>
-                    <img
-                      src="/images/placeholder/400x300.svg"
-                      alt="Placeholder"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                    />
-                  </evg-card-img>
-                  <evg-card-content>
-                    <evg-meta>
-                      <evg-badge type="info">Info</evg-badge>
-                      <span className="evg-text-size-body-xs">Jan 1, 2025</span>
-                    </evg-meta>
+              <evg-card class="evg-theme-default" radius="md">
+                <evg-card-img>
+                  <img
+                    src="/images/placeholder/400x300.svg"
+                    alt="Placeholder"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                  />
+                </evg-card-img>
+                <evg-card-content>
+                  <evg-row>
+                    <evg-badge variant="sky-light">Info</evg-badge>
+                    <span className="evg-text-size-body-xs">Jan 1, 2025</span>
+                  </evg-row>
 
-                    <h3 className="evg-text-size-body-md evg-text-family-body">
-                      {item.title}
-                    </h3>
-                    <evg-button variant="primary">
-                      <a href="https://wrap.ngo">Read more</a>
-                    </evg-button>
-                  </evg-card-content>
-                </evg-card>
-              </a>
+                  <h3 className="evg-text-size-body-md evg-text-family-body">
+                    {item.title}
+                  </h3>
+                  <evg-button variant="primary" width="full-width-mobile">
+                    <a href="https://wrap.ngo">Read more</a>
+                  </evg-button>
+                </evg-card-content>
+              </evg-card>
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -87,14 +88,14 @@ export function Featured({
     meta: true,
   },
 }: {
-  readonly theme?: 'default' | 'lime-light';
+  readonly theme?: 'default' | 'earth-light';
   readonly size?: 'lg' | 'xl';
   readonly title?: string;
   readonly card?: { title: string; description: string; meta?: boolean };
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size={size}>
+      <evg-wrapper size={size}>
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -115,21 +116,21 @@ export function Featured({
           </evg-card-img>
           <evg-card-content>
             {card.meta && (
-              <evg-meta>
-                <evg-badge type="info">Info</evg-badge>
+              <evg-row>
+                <evg-badge variant="earth">Case study</evg-badge>
                 <span className="evg-text-size-body-sm">March 1, 2023</span>
-              </evg-meta>
+              </evg-row>
             )}
             <h3 className="evg-text-size-heading-md evg-text-transform-uppercase">
               {card.title}
             </h3>
-            <p className="evg-text-size-body-sm">{card.description}</p>
+            <p className="evg-text-size-body-xs">{card.description}</p>
             <evg-button variant="primary" width="full-width-mobile">
               <button>Read more</button>
             </evg-button>
           </evg-card-content>
         </evg-card>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -154,13 +155,14 @@ export function List({
   readonly title?: string;
   readonly cards?: {
     title: string;
+    headingStyle?: string;
     description: string;
     layout: 'image-left' | 'image-right';
   }[];
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="lg">
+      <evg-wrapper size="lg">
         {title && (
           <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
             {title}
@@ -184,18 +186,17 @@ export function List({
               />
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-md">{card.title}</h3>
-              <p className="evg-text-size-body-sm">{card.description}</p>
-              <evg-button variant="primary" width="full-width">
-                <button>
-                  Read more
-                  <evg-icon icon="arrow-right" />
-                </button>
+              <h3 className={card.headingStyle || 'evg-text-size-heading-md'}>
+                {card.title}
+              </h3>
+              <p className="evg-text-size-body-xs">{card.description}</p>
+              <evg-button variant="primary" width="full-width-mobile">
+                <button>Read more</button>
               </evg-button>
             </evg-card-content>
           </evg-card>
         ))}
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -205,21 +206,25 @@ export function Row({
   title = 'Section title',
   cards = [
     {
+      id: 1,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 2,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 3,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
     },
     {
+      id: 4,
       title: 'Card title',
       description: 'Card description',
       theme: 'default',
@@ -228,11 +233,16 @@ export function Row({
 }: {
   readonly theme?: 'default' | 'earth-light';
   readonly title?: string;
-  readonly cards?: { title: string; description: string; theme: string }[];
+  readonly cards?: {
+    id: string | number;
+    title: string;
+    description: string;
+    theme: string;
+  }[];
 }) {
   return (
     <evg-section padding="fluid" class={`evg-theme-${theme}`}>
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           {title}
         </h2>
@@ -240,7 +250,7 @@ export function Row({
         <evg-grid wrap="wrap">
           {cards.map((item) => (
             <evg-grid-item
-              key={item.title}
+              key={item.id}
               small-mobile="12"
               small-tablet="6"
               large-tablet="3"
@@ -261,14 +271,14 @@ export function Row({
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       {item.title}
                     </h3>
-                    <p className="evg-text-size-body-sm">{item.description}</p>
+                    <p className="evg-text-size-body-xs">{item.description}</p>
                   </evg-card-content>
                 </evg-card>
               </a>
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -277,7 +287,7 @@ export function ThumbList() {
   const cards = [0, 1, 2, 3];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Section with a list of cards
         </h2>
@@ -307,10 +317,10 @@ export function ThumbList() {
               </p>
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
-                  <evg-meta>
-                    <evg-badge type="info">Info</evg-badge>
+                  <evg-row>
+                    <evg-badge variant="sky-light">Info</evg-badge>
                     <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                  </evg-meta>
+                  </evg-row>
                 </evg-grid-item>
                 <evg-grid-item>
                   <evg-button variant="primary">
@@ -321,7 +331,7 @@ export function ThumbList() {
             </evg-card-content>
           </evg-card>
         ))}
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -330,7 +340,7 @@ export function People() {
   const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xl">
+      <evg-wrapper size="xl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Leadership
         </h2>
@@ -362,16 +372,16 @@ export function People() {
                       Joanne Doe
                     </h3>
                     <p className="evg-text-size-body-sm">Job title</p>
-                    <evg-meta>
-                      <evg-badge type="info">Trustee</evg-badge>
-                    </evg-meta>
+                    <evg-row>
+                      <evg-badge variant="sky-light">Trustee</evg-badge>
+                    </evg-row>
                   </evg-card-content>
                 </evg-card>
               </a>
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -380,7 +390,7 @@ export function SearchResults() {
   const cards = [0, 1, 2, 3, 4, 5];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <h2 className="evg-text-size-heading-md evg-spacing-bottom-lg evg-text-transform-uppercase">
           Search results
         </h2>
@@ -406,17 +416,17 @@ export function SearchResults() {
                       Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                       Durability
                     </h3>
-                    <evg-meta>
-                      <evg-badge type="info">Article</evg-badge>
+                    <evg-row>
+                      <evg-badge variant="sky-light">Article</evg-badge>
                       <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                    </evg-meta>
+                    </evg-row>
                   </evg-card-content>
                 </evg-card>
               </a>
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }
@@ -425,7 +435,7 @@ export function Articles() {
   const cards = [0, 1, 2, 3, 4, 5, 6, 7];
   return (
     <evg-section padding="fluid" class="evg-theme-earth-light">
-      <evg-wrap size="xxl">
+      <evg-wrapper size="xxl">
         <evg-grid class="evg-spacing-bottom-lg" align-items="center">
           <evg-grid-item grow shrink>
             <h2 className="evg-text-size-heading-md evg-text-transform-uppercase">
@@ -433,7 +443,7 @@ export function Articles() {
             </h2>
           </evg-grid-item>
           <evg-grid-item>
-            <evg-button variant="text">
+            <evg-button variant="ghost">
               <a href="https://wrap.ngo">
                 Visit all articles
                 <evg-icon icon="arrow-right" />
@@ -463,10 +473,10 @@ export function Articles() {
                     />
                   </evg-card-img>
                   <evg-card-content>
-                    <evg-meta>
+                    <evg-row>
                       <evg-badge>Article</evg-badge>
                       <span className="evg-text-size-body-sm">Jan 1, 2025</span>
-                    </evg-meta>
+                    </evg-row>
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       Extending Product Lifetimes: WRAP&apos;s Work on Clothing
                       Durability
@@ -477,7 +487,7 @@ export function Articles() {
             </evg-grid-item>
           ))}
         </evg-grid>
-      </evg-wrap>
+      </evg-wrapper>
     </evg-section>
   );
 }

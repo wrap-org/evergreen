@@ -2,21 +2,25 @@ import { StoryFn } from '@storybook/react';
 import startCase from 'lodash/startCase';
 import React from 'react';
 
-const variants = [
-  'default',
-  'primary',
-  'secondary',
-  'negative',
-  'text',
-] as const;
+const variants = ['default', 'primary', 'secondary', 'ghost'] as const;
+
+const description = `
+Buttons come in various visual styles (primary, secondary, ghost), sizes, and states (default, hover, active,
+disabled) with support for icons, loading states, and keyboard accessibility.
+
+Provides styles for default HTML button elements that can be enhanced by wrapping them in a \`evg-button\` component.
+`;
 
 export default {
   component: 'evg-button',
   parameters: {
     docs: {
+      subtitle:
+        'A clickable control triggering actions with various colors, sizes and states',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7485',
       description: {
-        component:
-          'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-button` component.',
+        component: description,
       },
     },
     a11y: {
@@ -101,7 +105,7 @@ export const IconOnlyButton: StoryFn = () => (
       </evg-button>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-button variant="text" width="square">
+      <evg-button variant="ghost" width="square">
         <button type="button" aria-label="Button text">
           <svg fill="none" viewBox="0 0 24 24" height="24" width="24">
             <path

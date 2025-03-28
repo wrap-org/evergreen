@@ -15,6 +15,7 @@ import '../src/components/control/RadioCheckbox/RadioCheckbox';
 import '../src/components/canvas/Supergraphic/Supergraphic';
 import '../src/components/canvas/Section/SectionImg';
 
+import '../src/docs/components/FullscreenStory/FullscreenStory.scss'
 import '../src/docs/components/Placeholder/Placeholder.scss'
 import './styles.scss';
 
@@ -25,11 +26,18 @@ const preview: Preview = {
       storySort: {
         order: [
           'Getting started',
+          'Good to know',
           'Migration',
           'Support',
+          'Contributing',
+          'Changelog',
+          'Guides',
+          ['Page setup', 'Page sections and wrappers', 'Grids, boxes, and cards', 'Theming'],
           'Showroom',
           'Foundations',
+          ['Tokens', 'Typography', 'Breakpoints', 'Icons', 'Branded icons', 'Utilities'],
           'Components',
+          ['Content', 'Controls', 'Canvas', 'Composition'],
           'Recipes',
           ['App', 'Header', 'Footer', 'Page header', 'Cards', 'Forms', 'Navigation', 'Stat group', 'Tag group', 'Banner', 'Grid']
         ],

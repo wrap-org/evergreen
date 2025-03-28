@@ -1,8 +1,24 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+An embeddable player component providing consistent playback functionality with accessibility features.
+Video supports various sources (internal or external), responsive sizing, customisable controls, autoplay
+options, and accessibility features including captions and transcripts.
+`;
+
 export default {
-  title: 'Components/Content/Video',
+  parameters: {
+    docs: {
+      subtitle:
+        'An embeddable player component providing consistent playback functionality.',
+      description: {
+        component: description,
+      },
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6238-3731&t=g3niGv3HxLa5NL0O-0',
+    },
+  },
 } satisfies Meta;
 
 export const Video: StoryFn = (args) => (

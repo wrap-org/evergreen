@@ -1,0 +1,30 @@
+import { Meta, IconGallery, IconItem } from '@storybook/blocks';
+import { iconKeys, distinctiveIconKeys, functionalIconKeys } from '../../components/content/Icon/icons';
+import '../../components/content/Icon/Icon';
+
+<Meta title="Foundations/Branded icons" />
+
+# Branded icons
+
+A set of icons were created when redesigning wrap.ngo. These should not be used for UI icons, but as alternative to illustrations and images.
+
+# Distinctive
+
+<IconGallery style={{ '--evg-icon-baseline-adjust': '0.125em' }}>
+  {distinctiveIconKeys.map((icon) => (
+    <IconItem name={icon} key={icon}>
+      <evg-icon icon={icon} set="distinctive" class="evg-text-size-body-xl"></evg-icon>
+    </IconItem>
+  ))}
+</IconGallery>
+
+# Functional
+
+
+<IconGallery style={{ '--evg-icon-baseline-adjust': '0.125em' }}>
+  {functionalIconKeys.map((icon) => (
+    <IconItem name={icon} key={icon}>
+      <evg-icon icon={icon} set="functional" class="evg-text-size-body-xl"></evg-icon>
+    </IconItem>
+  ))}
+</IconGallery>

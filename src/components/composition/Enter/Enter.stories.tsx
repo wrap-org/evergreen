@@ -1,14 +1,23 @@
-import { StoryFn } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import React from 'react';
 
 import './Enter';
 
+const description = `
+A component providing entrance animations when elements appear in the interface. Enter
+offers various animation options, including fade, slide, and scale effects with customisable
+timing and easing to create polished transitions when content is added to the view.
+`;
+
 export default {
-  component: 'evg-enter',
   parameters: {
     docs: {
+      subtitle:
+        'A component providing entrance animations when elements appear.',
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7201&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component: `The enter component can be wrapped around content to animate it into view.`,
+        component: description,
       },
     },
   },
@@ -35,7 +44,7 @@ export default {
       },
     },
   },
-};
+} satisfies Meta;
 
 export const Enter: StoryFn = (args) => (
   <evg-enter {...args}>

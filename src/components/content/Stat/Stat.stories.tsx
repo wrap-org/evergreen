@@ -3,8 +3,25 @@ import React from 'react';
 
 import { iconKeys } from '../Icon/icons';
 
+const description = `
+A component highlighting important numeric values and metrics with consistent formatting.
+Stat provides consistent formatting for numbers, percentages, and currency values with
+options for labels, trends, and visual emphasis to make key metrics stand out in dashboards
+and reports.
+`;
+
 export default {
-  title: 'Components/Content/Stat',
+  parameters: {
+    docs: {
+      subtitle:
+        'A component highlighting important numeric values and metrics.',
+      description: {
+        component: description,
+      },
+      figma:
+        'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6238-3739&t=g3niGv3HxLa5NL0O-0',
+    },
+  },
   argTypes: {
     icon: {
       control: {
@@ -30,7 +47,7 @@ export const Stat: StoryFn = ({ icon, ...args }) => (
 );
 
 export const Variations: StoryFn = () => (
-  <evg-wrap size="md">
+  <evg-wrapper size="md">
     <evg-grid wrap="wrap" gap="xl">
       <evg-grid-item small-mobile="12" small-tablet="6">
         <evg-stat layout="stack">
@@ -90,5 +107,5 @@ export const Variations: StoryFn = () => (
         </evg-stat>
       </evg-grid-item>
     </evg-grid>
-  </evg-wrap>
+  </evg-wrapper>
 );

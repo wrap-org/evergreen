@@ -1,12 +1,19 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+A component displaying collections of related items with various marker styles and nesting support.
+List offers various styling options, including bulleted, numbered, or custom markers, along with
+consistent spacing, indentation, and nested list support for structured content presentation.
+`;
+
 export default {
   parameters: {
     docs: {
+      subtitle:
+        'A component displaying collections of related items with various styles.',
       description: {
-        component:
-          'The list component adds a bit more power to HTML lists, such as spacing control and icon support.',
+        component: description,
       },
     },
   },

@@ -154,6 +154,7 @@ evg-button {
   @media (width < 600px) {
     &[width='full-width-mobile'] {
       display: block;
+      width: 100%;
 
       evg-loading-button,
       button,
@@ -175,7 +176,7 @@ evg-button {
     }
   }
 
-  @each $variant in primary, secondary, negative, text {
+  @each $variant in primary, secondary, ghost {
     &[variant='#{$variant}'] {
       --_background: var(--evg-button-background-#{$variant});
       --_background-hover: var(--evg-button-background-hover-#{$variant});
@@ -194,7 +195,7 @@ evg-button {
     }
   }
 
-  &[variant='text'] {
+  &[variant='ghost'] {
     --_padding-inline: 0;
 
     &[width='square'] {
@@ -213,7 +214,7 @@ evg-button {
     button,
     a,
     input {
-      font-weight: var(--evg-font-weight-base);
+      font-weight: var(--evg-font-weight-bold);
 
       &:not([disabled]):hover {
         text-decoration: underline;

@@ -2,6 +2,10 @@
 
 ## v8 -> v9
 
+The v8 -> v9 jump represents the move from Mobius (the WRAP React Design System) to Evergreen (Web Components). We've taken
+this opportunity to include many small optimisations or different ways of doing things due to the framework capabilities
+and, as such, this represents a much larger set of breaking changes than would normally be expected.
+
 ### Tokens
 - All tokens have has `--mobius-` replaced with `--evg-`
 - `breakpoint.scss` has been replaced with `size.scss`. The structure is slightly different, but the key values remain almost the same.
@@ -28,8 +32,8 @@
 - `Spacing` has been replaced with spacing utility classes. e.g. `.evg-spacing-bottom-md`
 
 ### Components
-- `Wrap` has been replaced with `evg-wrap`
-  - Wrap sizes have been updated
+- `Wrap` has been replaced with `evg-wrapper`
+  - Wrapper sizes have been updated
     - `tablet` -> `lg`
     - `desktop` -> `xl`
     - `max` -> `xxxl`
@@ -72,12 +76,15 @@
     - The `inline` prop can be used instead of setting the `as` prop to span
 - `Badge` has been replaced with `evg-badge`
   - `rounded` and `size` are no longer props, all badges now having a smaller border radius and XS text size
+  - `type`, `muted` and `inverse` props have been replaced with the `variant` prop which offers a range of colours
   - `muted` and `inverse` are no longer props the `type` prop should be used to access the available colour options
 - `Button` has been replaced with `evg-button`.
   - This needs to wrap a `button` or `link` tag.
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
+  - type `text` has been replaced with `ghost`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
+  - type `negative` has been removed
 - `LoadingSpinner` has been replaced with `evg-loading-spinner`
 - `LoadingImg` has been replaced with `evg-loading-img`
   - This needs to be wrapped by a `evg-img` tag
@@ -97,3 +104,10 @@
   - `evg-icon` can be used directly within a list child element, instead of as a `List.Item` prop.
 - `Sticky` has been replaced with `evg-sticky`
   - `largeScreenOnly` now starts at `768px` rather than `600px`, to align with other breakpoints.
+- `Modal` has been replaced with `evg-modal`.
+  - `ModalHeader` and `ModalInner` have also been removed - box can be used to create a modal canvas instead.
+- `FormGroup` has been replaced with `evg-form-group`
+  - The `FormGroup` sub-components have been removed
+  - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
+- `Label` has been replaced with `evg-label`
+  - `evg-label` should always wrap a `label`, `span` or `legend` element

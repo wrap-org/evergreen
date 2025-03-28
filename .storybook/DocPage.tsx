@@ -9,26 +9,64 @@ import {
   Description,
 } from '@storybook/blocks';
 import { PreparedStory, Renderer } from 'storybook/internal/types';
+import Related from './blocks/Related';
+import Meta from './blocks/Meta';
+
+import '../src/components/content/Badge/Badge';
+import '../src/components/composition/Grid/Grid';
+import '../src/components/composition/Grid/GridItem';
+import '../src/components/control/Button/Button';
+import '../src/components/composition/Row/Row';
 
 export const DocPage = ({ of }: { of: any }) => {
   const resolvedOf = useOf(of || 'story', ['story', 'meta']) as { type: "story"; story: PreparedStory<Renderer>; };
   const name = resolvedOf.story.title?.split('/').slice(-1)[0] || 'Evergreen';
 
+  const search = new URLSearchParams(window.location.search);
+  const isRecipe = search.get('id')?.includes('recipe');
+  const isTemplates = search.get('id')?.includes('showroom');
+  const isComponent = search.get('id')?.includes('components');
+  const showPrimary = !isRecipe && !isTemplates;
+  const showMeta = isComponent;
   const themeSupport = resolvedOf.story?.parameters?.docs?.theming
+  const componentId = resolvedOf.story.componentId.replace(/components-(content|canvas|composition|control)-/g, '');
+  const element = isComponent && `evg-${componentId}`;
 
   return (
     <>
-      <Title />
-      <Subtitle />
-      {themeSupport && (
-        <evg-badge type="info">
-          Theme support
-        </evg-badge>
-      )}
+      <evg-grid>
+        <evg-grid-item grow shrink>
+          <evg-row gap="md" class="evg-spacing-bottom-sm">
+            <h1 style={{ marginBottom: '0' }}>{name}</h1>
+            {element && (
+              <evg-badge variant="sand">
+                {element}
+              </evg-badge>
+            )}
+            {themeSupport && (
+              <evg-badge variant="sky-light">
+                Theme support
+              </evg-badge>
+            )}
+          </evg-row>
+
+          <Subtitle />
+        </evg-grid-item>
+        {showMeta && (
+          <evg-grid-item>
+            <Meta />
+          </evg-grid-item>
+        )}
+      </evg-grid>
+
       <Description />
-      <Primary />
-      <Controls />
-      <Stories includePrimary={false} />
+      {showPrimary && (
+        <>
+          <Primary />
+          <Controls />
+        </>
+      )}
+      <Stories includePrimary={!showPrimary} />
 
       <h2>Help us improve this component</h2>
 
@@ -59,10 +97,12 @@ export const DocPage = ({ of }: { of: any }) => {
         </evg-grid>
       </div>
 
+      <Related />
+
       <h2>Need help?</h2>
 
       <p>
-        If you've got any questions or queries that need answering <a href="/?path=/story/about-get-in-touch--get-in-touch">get in touch</a>.
+        If you've got any questions or queries that need answering <a href="/?path=/docs/support--docs">get in touch</a>.
       </p>
     </>
   );
