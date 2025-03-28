@@ -50,7 +50,7 @@ Head over to the [page setup guide](https://evergreen.wrap.ngo/?path=/docs/guide
 
 # Contributing
 
-Please read through our [contributing guidelines](./CONTRIBUTING.md). Included are directions for local setup, coding standards, and notes on component development.
+Please read through our [contributing guidelines](https://evergreen.wrap.ngo/?path=/docs/contributing--docs). Included are directions for local setup, coding standards, and notes on component development.
 
 # Versioning
 
