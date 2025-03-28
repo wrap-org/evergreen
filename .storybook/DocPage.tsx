@@ -105,7 +105,7 @@ export const DocPage = ({ of }: { of: any }) => {
       <h2>Need help?</h2>
 
       <p>
-        If you've got any questions or queries that need answering <a href="/?path=/story/about-get-in-touch--get-in-touch">get in touch</a>.
+        If you've got any questions or queries that need answering <a href="/?path=/docs/support--docs">get in touch</a>.
       </p>
     </>
   );
