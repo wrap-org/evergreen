@@ -3,8 +3,8 @@ import React from 'react';
 
 const description = `
 A CSS Flexbox Grid-based layout system enabling complex, responsive arrangements with minimal markup.
- Grid component offers row and column configuration, gap controls, alignment options, and responsive
- behaviour to create consistent layouts across different screen sizes.
+Grid component offers row and column configuration, gap controls, alignment options, and responsive
+behaviour to create consistent layouts across different screen sizes.
 
 The grid and grid item components are used to create a grid layout by exposing
 the most commonly used flexbox properties as attributes. The best way to understand
