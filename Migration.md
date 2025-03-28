@@ -78,6 +78,7 @@
   - This needs to wrap a `button` or `link` tag.
   - `type` has been replaced with `variant`
   - type `positive` has been replaced with `primary`
+  - type `text` has been replaced with `ghost`
   - `block` has been replaced with `width`, which is likely to be `full-width` or `full-width-mobile`
   - type `negative` has been removed
 - `Collapse` has been replaced with  `evg-collapse`

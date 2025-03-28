@@ -176,7 +176,7 @@ evg-button {
     }
   }
 
-  @each $variant in primary, secondary, text {
+  @each $variant in primary, secondary, ghost {
     &[variant='#{$variant}'] {
       --_background: var(--evg-button-background-#{$variant});
       --_background-hover: var(--evg-button-background-hover-#{$variant});
@@ -195,7 +195,7 @@ evg-button {
     }
   }
 
-  &[variant='text'] {
+  &[variant='ghost'] {
     --_padding-inline: 0;
 
     &[width='square'] {

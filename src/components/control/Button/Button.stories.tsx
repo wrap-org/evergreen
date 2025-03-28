@@ -2,7 +2,7 @@ import { StoryFn } from '@storybook/react';
 import startCase from 'lodash/startCase';
 import React from 'react';
 
-const variants = ['default', 'primary', 'secondary', 'text'] as const;
+const variants = ['default', 'primary', 'secondary', 'ghost'] as const;
 
 export default {
   component: 'evg-button',
@@ -97,7 +97,7 @@ export const IconOnlyButton: StoryFn = () => (
       </evg-button>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-button variant="text" width="square">
+      <evg-button variant="ghost" width="square">
         <button type="button" aria-label="Button text">
           <svg fill="none" viewBox="0 0 24 24" height="24" width="24">
             <path
