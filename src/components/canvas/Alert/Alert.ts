@@ -2,12 +2,12 @@ import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
 export interface AlertAttributes {
   variant?:
-    | 'postive'
-    | 'postive light'
+    | 'positive'
+    | 'positive-light'
     | 'negative'
-    | 'negative light'
+    | 'negative-light'
     | 'neutral'
-    | 'neutral light';
+    | 'neutral-light';
 }
 
 declare global {
