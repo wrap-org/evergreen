@@ -6,6 +6,10 @@ import { themes } from '@/lib/theme';
 import './Section';
 
 const description = `
+A structural element dividing content into meaningful segments for improved hierarchy and
+scanability. Sections can be configured with various padding options, background treatments,
+and can contain any combination of components.
+
 A section component represents a horizontal slice of a page. Multiple sections and themes
 can be used to create visibly grouped parts of the page with different backgrounds.
 
@@ -22,6 +26,8 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A structural element dividing content into meaningful segments.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6255-1432',
       description: {

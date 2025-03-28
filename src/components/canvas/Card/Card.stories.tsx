@@ -6,7 +6,8 @@ import { themes } from '@/lib/theme';
 const cardThemes = themes.filter((t) => !['lime', 'sky'].includes(t));
 
 const description = `
-A card component is used to provide a summary of content, with a clear call to action.
+Cards provide visual separation through elevation, borders, and padding, and can contain various
+elements, including headers, media, text, and action buttons in a cohesive presentation.
 
 Cards are a great way to display a collection of items, such as blog posts, products, or
 news articles. A card must always have an associated action, whether that is the whole card
@@ -16,6 +17,8 @@ being clickable, or having a dedicated CTA button.
 export default {
   parameters: {
     docs: {
+      subtitle:
+        'A versatile container for grouping related content and actions with clear visual separation.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6338-13681&t=g3niGv3HxLa5NL0O-0',
       description: {

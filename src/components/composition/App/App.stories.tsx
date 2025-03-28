@@ -2,6 +2,9 @@ import { Meta } from '@storybook/react';
 import React from 'react';
 
 const description = `
+App component handles responsive behaviour, accessibility landmarks, and consistent spacing
+to provide a solid foundation for application interfaces.
+
 All pages start with an app wrapper. The app component wraps the whole site and provides
 slots for the header, footer and main content.
 
@@ -20,6 +23,8 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A base template establishing the overall application structure.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-6718&t=g3niGv3HxLa5NL0O-0',
       description: {

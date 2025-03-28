@@ -1,8 +1,13 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+A structured container for form elements managing layout, spacing, labels and validation
+states. Form Group maintains proper alignment and spacing between related inputs while
+supporting accessibility requirements, including proper labelling and error states.
+`;
+
 export default {
-  title: 'Components/Composition/Form Group',
   argTypes: {
     orientation: {
       control: {
@@ -13,11 +18,12 @@ export default {
   },
   parameters: {
     docs: {
+      subtitle:
+        'A structured container for form elements managing layout and validation.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6299-12182&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component:
-          'The form group component is a wrapper for grouping form elements with a label and optional help text.',
+        component: description,
       },
     },
   },

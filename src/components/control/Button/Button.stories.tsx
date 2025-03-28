@@ -4,15 +4,23 @@ import React from 'react';
 
 const variants = ['default', 'primary', 'secondary', 'ghost'] as const;
 
+const description = `
+Buttons come in various visual styles (primary, secondary, ghost), sizes, and states (default, hover, active,
+disabled) with support for icons, loading states, and keyboard accessibility.
+
+Provides styles for default HTML button elements that can be enhanced by wrapping them in a \`evg-button\` component.
+`;
+
 export default {
   component: 'evg-button',
   parameters: {
     docs: {
+      subtitle:
+        'A clickable control triggering actions with various colors, sizes and states',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7485',
       description: {
-        component:
-          'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-button` component.',
+        component: description,
       },
     },
     a11y: {

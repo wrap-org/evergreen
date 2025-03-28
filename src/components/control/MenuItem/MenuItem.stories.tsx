@@ -3,15 +3,21 @@ import React from 'react';
 
 import { themes } from '@/lib/theme';
 
+const description = `
+Menu Items support icons, keyboard navigation, various states (active, disabled, selected), and can include
+additional elements like descriptions, shortcuts, or nested submenus.
+`;
+
 export default {
   component: 'evg-menu-item',
   parameters: {
     docs: {
+      subtitle:
+        'An interactive option within dropdown menus supporting icons, states, and nested submenus.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5604-5934&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component:
-          'Provides styles for default HTML button elements that can be enhanced by wrapping them in a `evg-menu-item` component.',
+        component: description,
       },
       theming: true,
     },

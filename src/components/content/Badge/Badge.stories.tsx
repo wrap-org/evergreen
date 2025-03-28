@@ -21,13 +21,21 @@ const variants = [
   'coal',
 ] as const;
 
+const description = `
+A small visual indicator highlighting status, counts, or categories with customisable styling.
+Badges can be customised with different colours, sizes to represent various states, and can contain
+short text, numbers, or icons to provide at-a-glance information.
+`;
+
 export default {
   parameters: {
     docs: {
+      subtitle:
+        'A small visual indicator highlighting status, counts, or categories.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5104-2952&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component: 'Badges are used to tag an item or to display a status.',
+        component: description,
       },
     },
   },

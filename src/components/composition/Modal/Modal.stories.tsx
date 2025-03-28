@@ -4,7 +4,11 @@ import React, { useRef } from 'react';
 import '../../canvas/Card/Card';
 
 const description = `
-The Dialog component provides an unopinionated area for any content
+An overlay dialogue demanding user attention before returning to the main interface.
+Modals can include configurable headers, bodies, footers, size options, and accessibility
+features such as focus management, keyboard navigation, and proper ARIA attributes.
+
+The Modal component provides an unopinionated area for any content
 to be placed on top of the main app content.
 
 Other than the backdrop and box shadow, it does not provide any styles. Recommended
@@ -12,10 +16,11 @@ to be used with a wrap and a box.
 `;
 
 export default {
-  title: 'Components/Composition/Modal',
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'An overlay dialogue demanding user attention before returning.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-7138&t=g3niGv3HxLa5NL0O-0',
       story: {

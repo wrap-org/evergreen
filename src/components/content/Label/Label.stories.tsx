@@ -1,14 +1,22 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+Labels provide clear descriptions for form fields, maintain consistent styling and positioning, and
+support accessibility through proper association with inputs via htmlFor attributes and ARIA properties,
+ensuring forms are usable for all users including those using assistive technologies.
+`;
+
 export default {
   component: 'label',
   parameters: {
     docs: {
+      subtitle:
+        'A text element identifying form inputs and controls to improve usability and accessibility.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6299-12182&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component: `Evergreen provides base styles applied to the \`<label>\` and \`<legend>\` elements.`,
+        component: description,
       },
     },
   },

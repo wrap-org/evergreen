@@ -1,6 +1,8 @@
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 
-export interface RowAttributes {}
+export interface RowAttributes {
+  gap?: 'sm' | 'md' | 'lg' | 'xl';
+}
 
 declare global {
   interface HTMLElementTagNameMap {
