@@ -16,6 +16,7 @@ import '../src/components/content/Badge/Badge';
 import '../src/components/composition/Grid/Grid';
 import '../src/components/composition/Grid/GridItem';
 import '../src/components/control/Button/Button';
+import '../src/components/composition/Row/Row';
 
 export const DocPage = ({ of }: { of: any }) => {
   const resolvedOf = useOf(of || 'story', ['story', 'meta']) as { type: "story"; story: PreparedStory<Renderer>; };
@@ -35,29 +36,25 @@ export const DocPage = ({ of }: { of: any }) => {
     <>
       <evg-grid>
         <evg-grid-item grow shrink>
-          <Title />
+          <evg-row gap="md" class="evg-spacing-bottom-sm">
+            <h1 style={{ marginBottom: '0' }}>{name}</h1>
+            {element && (
+              <evg-badge variant="sand">
+                {element}
+              </evg-badge>
+            )}
+            {themeSupport && (
+              <evg-badge variant="sky-light">
+                Theme support
+              </evg-badge>
+            )}
+          </evg-row>
+
           <Subtitle />
         </evg-grid-item>
         {showMeta && (
           <evg-grid-item>
             <Meta />
-          </evg-grid-item>
-        )}
-      </evg-grid>
-
-      <evg-grid gap="sm">
-        {element && (
-          <evg-grid-item>
-            <evg-badge variant="sand">
-              {element}
-            </evg-badge>
-          </evg-grid-item>
-        )}
-        {themeSupport && (
-          <evg-grid-item>
-            <evg-badge variant="sky-light">
-              Theme support
-            </evg-badge>
           </evg-grid-item>
         )}
       </evg-grid>

@@ -5,7 +5,8 @@ import { themes } from '@/lib/theme';
 import { radius } from '@/lib/tokens';
 
 const description = `
-A box is a rectangle on a page to group related content together visually.
+The Box component provides consistent spacing, borders, and background properties while supporting
+responsive behaviour through a comprehensive props API.
 
 A box can seem similar to a [section](?path=/docs/components-canvas-section--docs) or a
 [card](?path=/docs/components-canvas-card--docs), but there are some important differences.
@@ -22,6 +23,8 @@ many different ways.
 export default {
   parameters: {
     docs: {
+      subtitle:
+        'A fundamental layout primitive serving as the foundation for components.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5176-4903&t=g3niGv3HxLa5NL0O-0',
       description: {

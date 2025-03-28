@@ -3,14 +3,21 @@ import React, { useState } from 'react';
 
 import './Chip';
 
-const description = `Chips are used to filter content by category or type. They can be used in groups to represent a selection of options or tag links.
+const description = `
+Chips can be dismissible, selectable, or action-based with support for icons, avatars, and various states,
+making them ideal for filtering, tagging, or selection interfaces.
 
-Chips are always interactive - either to select or as a link. If you need a non-interactive tag or label, use the <code><evg-badge></code> component instead.`;
+They can be used in groups to represent a selection of options or tag links.
+
+Chips are always interactive - either to select or as a link. If you need a non-interactive tag or label, use
+the <code><evg-badge></code> component instead.`;
 
 export default {
   component: 'evg-chip',
   parameters: {
     docs: {
+      subtitle:
+        'A compact interactive element representing inputs, attributes, or actions in a space-efficient format.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6126-10033&t=g3niGv3HxLa5NL0O-0',
       description: {

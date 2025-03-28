@@ -9,6 +9,10 @@ import WhatWeDo from '../../../docs/recipes/mega-menu/WhatWeDo';
 import { Drawer } from '../Drawer/Drawer.stories';
 
 const description = `
+A consistent navigation component that appears at the top of the interface, providing orientation and primary controls.
+Header component supports various configurations, including logo placement, navigation menus, search functionality,
+and user account controls.
+
 The header component sits at the top of the page and contains the main and secondary nav, as well as
 a trigger to open the [mobile navigation drawer](?path=/docs/components-canvas-drawer--docs).
 
@@ -20,10 +24,11 @@ on the app context, such as light, dark,compact and raised styles.
 `;
 
 export default {
-  title: 'Components/Canvas/Header',
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A navigation component at the top of the interface offering orientation.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5705-7084&t=g3niGv3HxLa5NL0O-0',
       description: {

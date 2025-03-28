@@ -29,15 +29,14 @@ const gutters: (Spacing | 'none')[] = [
 ];
 
 const description = `
-The wrapper component is used to provide inline (horizontal) spacing around content, as well as
-setting the maximum width.
+A container providing consistent maximum width and inline (horizontal) padding for properly constrained content.
+Wrapper helps maintain readable line lengths and consistent margins across different screen sizes.
 
 Wrappers are almost always used inside a [section component](?path=/docs/components-canvas-section--docs)
 and each section will have one or more wrappers inside it to set the content widths.
 `;
 
 export default {
-  title: 'Components/Composition/Wrapper',
   argTypes: {
     size: {
       control: {
@@ -57,6 +56,8 @@ export default {
   parameters: {
     layout: 'fullscreen',
     docs: {
+      subtitle:
+        'A container providing consistent maximum width and horizontal padding.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-6734&t=g3niGv3HxLa5NL0O-0',
       description: {

@@ -32,11 +32,12 @@ const preview: Preview = {
           'Contributing',
           'Changelog',
           'Guides',
-          ['Page setup'],
+          ['Page setup', 'Page sections and wrappers', 'Grids, boxes, and cards', 'Theming'],
           'Showroom',
           'Foundations',
           ['Tokens', 'Typography', 'Breakpoints', 'Icons', 'Branded icons', 'Utilities'],
           'Components',
+          ['Content', 'Controls', 'Canvas', 'Composition'],
           'Recipes',
           ['App', 'Header', 'Footer', 'Page header', 'Cards', 'Forms', 'Navigation', 'Stat group', 'Tag group', 'Banner', 'Grid']
         ],
