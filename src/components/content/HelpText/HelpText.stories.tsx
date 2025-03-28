@@ -9,7 +9,7 @@ and supports various styling options to indicate different types of guidance.
 
 export default {
   argTypes: {
-    type: {
+    variant: {
       control: {
         type: 'radio',
       },
@@ -51,37 +51,37 @@ export const HelpText: StoryFn = (args) => (
     <evg-label>
       <label htmlFor="my-input">Input label</label>
     </evg-label>
-    <evg-input state={args.type === 'negative' ? 'invalid' : undefined}>
+    <evg-input state={args.variant === 'negative' ? 'invalid' : undefined}>
       <input
         id="my-input"
         name="my-input"
-        aria-invalid={args.type === 'negative'}
+        aria-invalid={args.variant === 'negative'}
         aria-describedby="my-input-helptext"
       />
     </evg-input>
-    <evg-help-text id="my-input-helptext" type={args.type}>
+    <evg-help-text id="my-input-helptext" variant={args.variant}>
       Some help text for this input
     </evg-help-text>
   </evg-form-group>
 );
 
 HelpText.args = {
-  type: 'neutral',
+  variant: 'neutral',
   inline: false,
 };
 
 export const HelpTextTypes: StoryFn = () => (
   <evg-grid direction="column">
     <evg-grid-item>
-      <evg-help-text type="neutral">
+      <evg-help-text variant="neutral">
         Some help text for this input
       </evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-help-text type="positive">Yay, it worked!</evg-help-text>
+      <evg-help-text variant="positive">Yay, it worked!</evg-help-text>
     </evg-grid-item>
     <evg-grid-item>
-      <evg-help-text type="negative">There was a problem!</evg-help-text>
+      <evg-help-text variant="negative">There was a problem!</evg-help-text>
     </evg-grid-item>
   </evg-grid>
 );

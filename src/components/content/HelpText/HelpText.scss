@@ -8,7 +8,7 @@ evg-help-text {
   font-size: var(--evg-font-size-body-sm);
   padding: var(--evg-spacing-sm) var(--evg-spacing-md);
 
-  @each $variant in postive, negative, neutral {
+  @each $variant in positive, negative, neutral {
     &[variant='#{$variant}'] {
       --_background-color: var(--evg-sentiment-#{$variant}-light);
     }
