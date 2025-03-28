@@ -15,7 +15,7 @@ and, as such, this represents a much larger set of breaking changes than would n
 - Container colours have been removed
 - Breakpoint variables have been removed
 - Stream has been split out from colours into it's own `--evg-stream-` collection
-- State has been split out from colours into it's own `--evg-state-` collection
+- State has been split out from colours into it's own `--evg-sentiment-` collection
 - The color tokens `body`, `body-muted`, `background`, `background-muted`, `accent`, `link` have been removed in favour of using themes.
 - `skin` tokens have been renamed to `theme`
   - emphasis themes have been removed and components now use state directly because components such as alert and badge should not accept all themes and states should not be used on cards and sections.
@@ -111,3 +111,5 @@ and, as such, this represents a much larger set of breaking changes than would n
   - Styling for `FormGroup` info collapse toggle should be controlled by `evg-collapse`
 - `Label` has been replaced with `evg-label`
   - `evg-label` should always wrap a `label`, `span` or `legend` element
+- `Alert` has been replaced with `evg-alert`
+  - `type` prop has been replaced with the `variant` prop with more color options

@@ -1,5 +1,5 @@
 evg-alert {
-  --_background: var(--evg-color-earth-50);
+  --_background: var(--evg-sentiment-neutral);
   --_color: var(--evg-color-forest);
   background: var(--_background);
   border-radius: var(--evg-radius-md);
@@ -7,19 +7,11 @@ evg-alert {
   display: block;
   padding: var(--evg-spacing-md);
 
-  &[type='info'] {
-    --_background: var(--evg-color-sky-25);
-  }
-
-  &[type='attention'] {
-    --_background: var(--evg-color-lime);
-  }
-
-  &[type='positive'] {
-    --_background: var(--evg-color-lime-25);
-  }
-
-  &[type='negative'] {
-    --_background: var(--evg-color-rose-25);
+  @each $variant in positive, positive-light, negative, negative-light, neutral,
+    neutral-light
+  {
+    &[variant='#{$variant}'] {
+      --_background: var(--evg-sentiment-#{$variant});
+    }
   }
 }

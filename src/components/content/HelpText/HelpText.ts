@@ -3,7 +3,7 @@ import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 import { HtmlBoolean } from 'src/types/html-boolean.type';
 
 export interface HelpTextAttributes {
-  type?: 'neutral' | 'positive' | 'negative';
+  variant?: 'neutral' | 'positive' | 'negative';
   inline?: HtmlBoolean;
 }
 

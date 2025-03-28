@@ -1,5 +1,5 @@
 evg-help-text {
-  --_background-color: var(--evg-state-neutral-light);
+  --_background-color: var(--evg-sentiment-neutral-lightest);
 
   background-color: var(--_background-color);
   border-radius: var(--evg-radius-sm);
@@ -8,12 +8,10 @@ evg-help-text {
   font-size: var(--evg-font-size-body-sm);
   padding: var(--evg-spacing-sm) var(--evg-spacing-md);
 
-  &[type='positive'] {
-    --_background-color: var(--evg-state-positive-light);
-  }
-
-  &[type='negative'] {
-    --_background-color: var(--evg-state-negative-light);
+  @each $variant in positive, negative, neutral {
+    &[variant='#{$variant}'] {
+      --_background-color: var(--evg-sentiment-#{$variant}-light);
+    }
   }
 
   &[inline] {
