@@ -7,6 +7,7 @@
 [WRAP](https://www.wrap.ngo/)’s official design system – serving as the primary resource for creating and improving our websites and applications.
 
 [Report a bug](https://github.com/wrap-org/evergreen/issues/new?labels=bug&template=bug_report.md&title=Screen%20Reader%20Only+bug+report)
+&nbsp;
 [Request a feature](https://github.com/wrap-org/evergreen/issues/new?labels=enhancement&template=feature_request.md&title=Screen%20Reader%20Only+new+feature)
 
 # Storybook docs
