@@ -54,6 +54,10 @@ evg-chip {
       }
     }
 
+    &:active {
+      transform: translateY(1px);
+    }
+
     &:not(:active):focus-visible {
       --_background: var(--_background-hover);
       --_border-color: var(--_border-color-hover);

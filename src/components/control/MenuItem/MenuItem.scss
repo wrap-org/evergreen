@@ -59,6 +59,10 @@ evg-menu-item {
       }
     }
 
+    &:active {
+      transform: translateY(1px);
+    }
+
     &:not(:active):focus-visible {
       --_background: var(--_background-focus);
       --_color: var(--_color-focus);
