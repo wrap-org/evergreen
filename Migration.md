@@ -2,6 +2,10 @@
 
 ## v8 -> v9
 
+The v8 -> v9 jump represents the move from Mobius (the WRAP React Design System) to Evergreen (Web Components). We've taken
+this opportunity to include many small optimisations or different ways of doing things due to the framework capabilities
+and, as such, this represents a much larger set of breaking changes than would normally be expected.
+
 ### Tokens
 - All tokens have has `--mobius-` replaced with `--evg-`
 - `breakpoint.scss` has been replaced with `size.scss`. The structure is slightly different, but the key values remain almost the same.
