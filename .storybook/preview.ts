@@ -28,6 +28,7 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          'Home',
           'Getting started',
           'Good to know',
           'Migration',
