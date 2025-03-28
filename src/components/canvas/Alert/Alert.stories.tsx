@@ -6,13 +6,13 @@ Callout for key information within a page. Use and content should be kept to a m
 `;
 
 const variants = {
-  postive: {
-    title: 'Postive',
+  positive: {
+    title: 'Positive',
     text: 'It was a success!',
     button: 'Continue',
   },
-  'postive light': {
-    title: 'Postive light',
+  'positive-light': {
+    title: 'Positive light',
     text: 'It was a success!',
     button: 'Continue',
   },
@@ -21,7 +21,7 @@ const variants = {
     text: 'Something terrible happened!',
     button: 'Try again',
   },
-  'negative light': {
+  'negative-light': {
     title: 'Negative light',
     text: 'Something terrible happened!',
     button: 'Try again',
@@ -31,14 +31,14 @@ const variants = {
     text: 'All is as expected.',
     button: 'Learn more',
   },
-  'neutral light': {
+  'neutral-light': {
     title: 'Neutral light',
     text: 'All is as expected.',
     button: 'Learn more',
   },
 };
 
-const typeOptions = Object.keys(variants) as (keyof typeof variants)[];
+const variantOptions = Object.keys(variants) as (keyof typeof variants)[];
 
 export default {
   parameters: {
@@ -51,11 +51,11 @@ export default {
     },
   },
   argTypes: {
-    type: {
+    variant: {
       control: {
         type: 'select',
       },
-      options: typeOptions,
+      options: variantOptions,
     },
   },
 } satisfies Meta;
@@ -70,11 +70,11 @@ Alert.args = {
   type: 'postive',
 };
 
-export const Types: StoryFn = () => (
+export const Variants: StoryFn = () => (
   <evg-grid wrap="wrap" direction="column">
-    {typeOptions.map((variant) => (
+    {variantOptions.map((variant) => (
       <evg-grid-item key={variant} small-mobile="12">
-        <evg-alert type={variant}>
+        <evg-alert variant={variant}>
           <evg-grid wrap="wrap" align-items="center">
             <evg-grid-item grow shrink small-mobile="12" large-mobile="auto">
               <h4 className="evg-text-size-body-sm evg-text-family-body">
