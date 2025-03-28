@@ -23,92 +23,32 @@ const latestStories = [
   },
 ];
 
-export function TopLevel() {
+export function ProjectLandingPage() {
   return (
     <AppLayout>
-      <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrapper size="xxl" class="evg-text-align-center">
-          <evg-wrapper size="md" gutter="none">
-            <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase evg-spacing-bottom-lg">
-              Stories and insights into food waste
-            </h1>
+      <evg-supergraphic position="bottom-left" class="evg-theme-sand">
+        <evg-section padding="fluid-lg">
+          <evg-wrapper size="xxl">
+            <evg-wrapper size="xxl" gutter="none">
+              <evg-grid gap="lg" wrap="wrap">
+                <evg-grid-item small-mobile="12" tablet="6">
+                  <h1 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg">
+                    Stories and insights into food waste
+                  </h1>
+                </evg-grid-item>
+                <evg-grid-item small-mobile="12" tablet="6">
+                  <p className="evg-text-size-body-lg">
+                    WRAP is a climate action NGO working around the globe to
+                    tackle the causes of the climate crisis and give the planet
+                    a sustainable future. We were established in the UK in 2000;
+                    we now work in 40+ countries.
+                  </p>
+                </evg-grid-item>
+              </evg-grid>
+            </evg-wrapper>
           </evg-wrapper>
-          <evg-grid
-            gap="lg"
-            justify-content="center"
-            align-items="center"
-            class="evg-spacing-bottom-lg"
-            wrap="wrap"
-          >
-            <evg-grid-item>
-              <evg-img block>
-                <img
-                  src="/images/placeholder/400x200.svg"
-                  alt=""
-                  width="200"
-                  height="100"
-                />
-              </evg-img>
-            </evg-grid-item>
-            <evg-grid-item>
-              <evg-img block>
-                <img
-                  src="/images/placeholder/400x400.svg"
-                  alt=""
-                  width="200"
-                  height="200"
-                />
-              </evg-img>
-            </evg-grid-item>
-            <evg-grid-item>
-              <evg-img block class="evg-spacing-bottom-lg">
-                <img
-                  src="/images/placeholder/400x400.svg"
-                  alt=""
-                  width="100"
-                  height="100"
-                />
-              </evg-img>
-              <evg-img block>
-                <img
-                  src="/images/placeholder/400x400.svg"
-                  alt=""
-                  width="100"
-                  height="100"
-                />
-              </evg-img>
-            </evg-grid-item>
-            <evg-grid-item>
-              <evg-img block>
-                <img
-                  src="/images/placeholder/400x400.svg"
-                  alt=""
-                  width="200"
-                  height="200"
-                />
-              </evg-img>
-            </evg-grid-item>
-            <evg-grid-item>
-              <evg-img block>
-                <img
-                  src="/images/placeholder/400x200.svg"
-                  alt=""
-                  width="200"
-                  height="100"
-                />
-              </evg-img>
-            </evg-grid-item>
-          </evg-grid>
-          <evg-wrapper size="xl" gutter="none">
-            <p className="evg-text-size-body-lg">
-              WRAP is a climate action NGO working around the globe to tackle
-              the causes of the climate crisis and give the planet a sustainable
-              future. We were established in the UK in 2000; we now work in 40+
-              countries.
-            </p>
-          </evg-wrapper>
-        </evg-wrapper>
-      </evg-section>
+        </evg-section>
+      </evg-supergraphic>
 
       <evg-section padding="fluid">
         <evg-wrapper size="lg">
@@ -126,29 +66,31 @@ export function TopLevel() {
             >
               <evg-card-img>
                 <img
-                  src="/images/placeholder/400x300.svg"
+                  src="/images/placeholder/400x200.svg"
                   alt="Placeholder"
                   width="400"
-                  height="300"
+                  height="200"
                   loading="lazy"
                 />
               </evg-card-img>
               <evg-card-content>
                 <evg-row>
                   {card.date ? (
-                    <span className="evg-text-size-body-xs">{card.date}</span>
+                    <>
+                      <evg-badge variant="earth">Case study</evg-badge>
+                      <span className="evg-text-size-body-xs">{card.date}</span>
+                    </>
                   ) : (
                     <evg-badge variant="sky-light">Coming soon</evg-badge>
                   )}
                 </evg-row>
-                <h3 className="evg-text-size-heading-md">{card.title}</h3>
-                <p className="evg-text-size-body-sm">{card.description}</p>
+                <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
+                  {card.title}
+                </h3>
+                <p className="evg-text-size-body-xs">{card.description}</p>
                 {card.button && (
                   <evg-button variant="primary">
-                    <button>
-                      {card.button}
-                      <evg-icon icon="arrow-right" />
-                    </button>
+                    <button>{card.button}</button>
                   </evg-button>
                 )}
               </evg-card-content>
@@ -170,7 +112,7 @@ export function TopLevel() {
               </h2>
             </evg-grid-item>
             <evg-grid-item>
-              <evg-button variant="text">
+              <evg-button variant="ghost">
                 <a href="https://wrap.ngo">
                   Visit our main site
                   <evg-icon icon="external-link" />
@@ -198,7 +140,7 @@ export function TopLevel() {
             Our services
           </h3>
 
-          <evg-grid wrap="wrap">
+          <evg-grid wrap="wrap" gap="lg">
             {[
               'Behaviour change',
               'Certification and standards',
@@ -213,7 +155,7 @@ export function TopLevel() {
                 small-tablet="6"
                 tablet="4"
               >
-                <evg-img radius="md">
+                <evg-img radius="md" class="evg-spacing-bottom-sm">
                   <img
                     src="/images/placeholder/400x300.svg"
                     alt="Placeholder"

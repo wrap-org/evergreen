@@ -214,7 +214,7 @@ evg-button {
     button,
     a,
     input {
-      font-weight: var(--evg-font-weight-base);
+      font-weight: var(--evg-font-weight-bold);
 
       &:not([disabled]):hover {
         text-decoration: underline;

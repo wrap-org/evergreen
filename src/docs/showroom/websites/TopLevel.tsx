@@ -48,7 +48,7 @@ export function TopLevel() {
   return (
     <AppLayout>
       <evg-section padding="fluid" class="evg-theme-forest">
-        <evg-section-img text="light">
+        <evg-section-img text="light" layout="nested">
           <img
             src="/images/placeholder/page-header.webp"
             alt="Placeholder"
@@ -56,15 +56,18 @@ export function TopLevel() {
             width="1280"
             height="640"
           />
-          <evg-wrapper size="md" class="evg-text-align-center">
+          <evg-wrapper size="lg" class="evg-text-align-center">
             <h1 className="evg-text-size-display-sm evg-text-transform-uppercase evg-spacing-bottom-lg">
               What we do
             </h1>
-            <p className="evg-text-size-body-lg evg-text-wrap-balance">
+            <p className="evg-text-size-body-lg evg-text-wrap-balance evg-spacing-bottom-lg">
               WRAP is a global environmental action NGO transforming our broken
               product and food systems to create Circular Living. For the
               benefit of the climate, nature, and people.
             </p>
+            <evg-button>
+              <button type="button">In this section&hellip;</button>
+            </evg-button>
           </evg-wrapper>
         </evg-section-img>
       </evg-section>
@@ -158,7 +161,7 @@ export function TopLevel() {
                       <h3 className="evg-text-size-body-md evg-text-family-body">
                         {item.title}
                       </h3>
-                      <p className="evg-text-size-body-sm">
+                      <p className="evg-text-size-body-xs">
                         {item.description}
                       </p>
                     </evg-card-content>
@@ -183,7 +186,7 @@ export function TopLevel() {
               </h2>
             </evg-grid-item>
             <evg-grid-item>
-              <evg-button variant="text">
+              <evg-button variant="ghost">
                 <a href="https://wrap.ngo">
                   Find out more
                   <evg-icon icon="arrow-right" />
@@ -203,7 +206,7 @@ export function TopLevel() {
             multilateral organisations and NGOs around the world.
           </p>
 
-          <evg-grid wrap="wrap">
+          <evg-grid wrap="wrap" gap="lg">
             {[
               'Behaviour change',
               'Certification and standards',

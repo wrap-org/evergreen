@@ -29,10 +29,7 @@ export function Banner({
             <evg-grid-item small-mobile="12" tablet="6">
               <p className="evg-spacing-bottom-md">{text}</p>
               <evg-button variant="secondary" width="full-width-mobile">
-                <button>
-                  {button}
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>{button}</button>
               </evg-button>
             </evg-grid-item>
           </evg-grid>

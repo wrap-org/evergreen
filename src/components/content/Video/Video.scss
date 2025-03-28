@@ -2,7 +2,9 @@ evg-video {
   // Can be overriden, but defaults to WRAP standard youtube vidseo size
   --_aspect-ratio: var(--evg-video-aspect-ratio, 560 / 315);
   aspect-ratio: var(--_aspect-ratio);
+  border-radius: var(--evg-radius-lg);
   display: block;
+  overflow: hidden;
   position: relative;
 
   iframe {
