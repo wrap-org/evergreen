@@ -31,11 +31,11 @@ evg-input {
   }
 
   &[state='valid'] {
-    --_border-color: var(--evg-state-positive);
+    --_border-color: var(--evg-sentiment-positive);
   }
 
   &[state='invalid'] {
-    --_border-color: var(--evg-state-negative);
+    --_border-color: var(--evg-sentiment-negative);
   }
 
   &:has([disabled]) {

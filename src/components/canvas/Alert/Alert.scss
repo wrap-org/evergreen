@@ -8,26 +8,26 @@ evg-alert {
   padding: var(--evg-spacing-md);
 
   &[variant='postive'] {
-    --_background: var(--evg-color-lime);
+    --_background: var(--evg-sentiment-positive);
   }
 
   &[variant='postive light'] {
-    --_background: var(--evg-color-lime-50);
+    --_background: var(--evg-sentiment-positive-light);
   }
 
   &[variant='negative'] {
-    --_background: var(--evg-color-rose-50);
+    --_background: var(--evg-sentiment-negative-light);
   }
 
   &[variant='negative light'] {
-    --_background: var(--evg-color-rose-25);
+    --_background: var(--evg-sentiment-negative-lightest);
   }
 
   &[variant='neutral'] {
-    --_background: var(--evg-color-sky-75);
+    --_background: var(--evg-sentiment-neutral-medium);
   }
 
   &[variant='neutral light'] {
-    --_background: var(--evg-color-sky-25);
+    --_background: var(--evg-sentiment-neutral-lightest);
   }
 }
