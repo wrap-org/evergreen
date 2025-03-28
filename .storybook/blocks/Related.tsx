@@ -12,7 +12,6 @@ type IndexStory = {
 function Item ({ story }) {
   const title = story.title.split('/').pop();
 
-
   return (
     <evg-chip>
       <a href={`/?path=/docs/${story.id}`}>
