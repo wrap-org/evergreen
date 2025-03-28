@@ -91,8 +91,8 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
                   : '/images/logo/forest.svg'
               }
               alt="WRAP logo"
-              width={compact ? '83' : '152'}
-              height={compact ? '24' : '44'}
+              width={compact ? '83' : '110'}
+              height={compact ? '24' : '32'}
               loading="eager"
             />
           </a>

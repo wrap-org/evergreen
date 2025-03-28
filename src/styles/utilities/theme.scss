@@ -1,5 +1,3 @@
-@use '../mixins/theme';
-
 /* stylelint-disable-next-line scss/dollar-variable-colon-space-after */
 $themes:
   default, sand, forest, forest-light, earth, earth-light, lime, lime-light,
@@ -8,7 +6,10 @@ $themes:
 .evg-theme {
   @each $theme in $themes {
     &-#{$theme} {
-      @include theme.theme($theme);
+      --evg-theme-background: var(--evg-theme-background-#{$theme});
+      --evg-theme-color: var(--evg-theme-color-#{$theme});
+      --evg-theme-heading-color: var(--evg-theme-heading-color-#{$theme});
+      --evg-theme-link-color: var(--evg-theme-link-color-#{$theme});
     }
   }
 }

@@ -42,8 +42,8 @@ export function Data(props) {
           <img
             src="/images/logo/forest.svg"
             alt="WRAP logo"
-            width="152"
-            height="44"
+            width="110"
+            height="32"
             loading="eager"
           />
         </a>
