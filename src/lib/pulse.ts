@@ -25,7 +25,7 @@ export const pulse = css`
     --evg-loading-duration-pulse: 2.4s;
 
     animation:
-      fade-in var(--evg-transition-duration) forwards var(--evg-transition),
+      fade-in 0.5s forwards var(--evg-transition-enter),
       pulse var(--evg-loading-duration-pulse) infinite
         var(--evg-transition-timing);
     appearance: none;
