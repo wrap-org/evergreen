@@ -1,6 +1,55 @@
 # Contributing
 
-We love having contributors to Evergreen, let's help get you set up and running.
+By contributing to Evergreen, you help create a more comprehensive, robust resource that elevates the quality of all WRAP digital experiences.
+
+## Types of contributions
+
+We welcome various forms of contribution:
+
+- **New components**: UI elements that solve recurring problems
+- **Component enhancements**: Additional props, variants or features
+- **Documentation improvements**: Clearer explanations or additional examples
+- **Bug fixes**: Corrections to existing components
+- **Design tokens**: New or refined colour, spacing, or typography values
+
+## Benefits of contributing
+
+Contributing to Evergreen offers several advantages:
+
+- **Reduced maintenance**: Your team's custom solution becomes part of the maintained system
+- **Consistency**: Creates greater harmony across WRAP's digital products
+- **Recognition**: Your team's innovation benefits the wider organisation
+- **Influence**: Help shape the direction of WRAP's digital design language
+
+## Contribution process
+
+Evergreen is designed to grow and adapt as WRAP's digital products evolve. We actively encourage contributions from teams across the organisation.
+
+### From snowflake to standardised
+
+Many great design system components begin as custom solutions (or "snowflakes") built for specific product needs.
+
+If you've created something on a project that could benefit other teams, please follow these steps:
+
+1. **Initial assessment**: Contact the Evergreen team with details of your component
+2. **Review**: We'll evaluate the component against these criteria:
+    - Solves a recurring problem across multiple products
+    - Follows Evergreen's design principles and accessibility standards
+    - Can be abstracted for broader application
+    - Doesn't duplicate existing functionality
+3. **Refinement**: Collaborative improvement to meet design system standards
+4. **Documentation**: Creating clear usage guidelines and examples
+5. **Integration**: Adding the component to Figma libraries and code repositories
+
+### Submission guidelines
+
+When proposing a contribution:
+
+- **Provide context**: Explain the problem your solution addresses
+- **Include examples**: Show how it's currently used in your product
+- **Consider variations**: Identify potential variants or configurations
+- **Think about states**: Detail different states (hover, active, disabled, etc.)
+- **Accessibility**: Explain how it meets WCAG 2.1 AA standards
 
 ## Local setup
 

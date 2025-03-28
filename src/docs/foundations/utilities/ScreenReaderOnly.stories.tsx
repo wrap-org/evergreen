@@ -1,9 +1,8 @@
 import React from 'react';
 
 const description = `
-Screen reader only content is hidden visually but read by screen readers.
-
-This is useful for providing required context to screen reader users without cluttering the visual interface.
+Screen-reader-only content is hidden visually but read by screen readers. This is useful for
+providing required context to screen reader users without cluttering the visual interface.
 `;
 
 export default {
