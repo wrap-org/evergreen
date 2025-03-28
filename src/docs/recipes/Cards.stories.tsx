@@ -117,14 +117,14 @@ export function Featured({
           <evg-card-content>
             {card.meta && (
               <evg-row>
-                <evg-badge variant="sky-light">Info</evg-badge>
+                <evg-badge variant="earth">Case study</evg-badge>
                 <span className="evg-text-size-body-sm">March 1, 2023</span>
               </evg-row>
             )}
             <h3 className="evg-text-size-heading-md evg-text-transform-uppercase">
               {card.title}
             </h3>
-            <p className="evg-text-size-body-sm">{card.description}</p>
+            <p className="evg-text-size-body-xs">{card.description}</p>
             <evg-button variant="primary" width="full-width-mobile">
               <button>Read more</button>
             </evg-button>
@@ -155,6 +155,7 @@ export function List({
   readonly title?: string;
   readonly cards?: {
     title: string;
+    headingStyle?: string;
     description: string;
     layout: 'image-left' | 'image-right';
   }[];
@@ -185,13 +186,12 @@ export function List({
               />
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-md">{card.title}</h3>
-              <p className="evg-text-size-body-sm">{card.description}</p>
+              <h3 className={card.headingStyle || 'evg-text-size-heading-md'}>
+                {card.title}
+              </h3>
+              <p className="evg-text-size-body-xs">{card.description}</p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>
-                  Read more
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>Read more</button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -271,7 +271,7 @@ export function Row({
                     <h3 className="evg-text-size-body-md evg-text-family-body">
                       {item.title}
                     </h3>
-                    <p className="evg-text-size-body-sm">{item.description}</p>
+                    <p className="evg-text-size-body-xs">{item.description}</p>
                   </evg-card-content>
                 </evg-card>
               </a>
@@ -443,7 +443,7 @@ export function Articles() {
             </h2>
           </evg-grid-item>
           <evg-grid-item>
-            <evg-button variant="text">
+            <evg-button variant="ghost">
               <a href="https://wrap.ngo">
                 Visit all articles
                 <evg-icon icon="arrow-right" />

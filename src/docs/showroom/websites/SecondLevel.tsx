@@ -231,7 +231,7 @@ export function SecondLevel() {
               <h2 className="evg-text-size-heading-md">Our initiatives</h2>
             </evg-grid-item>
             <evg-grid-item>
-              <evg-button variant="text">
+              <evg-button variant="ghost">
                 <a href="https://wrap.ngo">
                   View all
                   <evg-icon icon="arrow-right" />
@@ -265,7 +265,7 @@ export function SecondLevel() {
                       <h3 className="evg-text-size-heading-sm evg-text-family-body">
                         {item.title}
                       </h3>
-                      <p className="evg-text-size-body-sm">
+                      <p className="evg-text-size-body-xs">
                         {item.description}
                       </p>
                     </evg-card-content>

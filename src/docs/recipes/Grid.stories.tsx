@@ -165,7 +165,7 @@ export const AdditionalContent = () => (
           </h2>
         </evg-grid-item>
         <evg-grid-item>
-          <evg-button variant="text">
+          <evg-button variant="ghost">
             <a href="https://wrap.ngo">
               Find out more
               <evg-icon icon="arrow-right" />

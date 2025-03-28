@@ -56,7 +56,7 @@ export const Modal: StoryFn = () => {
                 </evg-grid-item>
                 <evg-grid-item>
                   <form method="dialog">
-                    <evg-button width="square" variant="text">
+                    <evg-button width="square" variant="ghost">
                       <button>
                         <evg-icon icon="close" />
                       </button>

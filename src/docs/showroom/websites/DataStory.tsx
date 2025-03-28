@@ -3,23 +3,35 @@ import React from 'react';
 import { Data as AppLayout } from '../../recipes/App.stories';
 import { Banner } from '../../recipes/Banner.stories';
 
-export function SecondLevel() {
+export function DataStory() {
   return (
     <AppLayout>
-      <evg-section class="evg-theme-earth-light" padding="fluid">
-        <evg-wrapper size="xl">
-          <docs-placeholder>Page header</docs-placeholder>
-        </evg-wrapper>
+      <evg-section padding="fluid" class="evg-theme-earth-light">
+        <evg-section-img text="light" layout="nested">
+          <img
+            src="/images/placeholder/page-header.webp"
+            alt="Placeholder"
+            slot="image"
+            width="1280"
+            height="640"
+          />
+          <evg-wrapper size="lg" class="evg-text-align-center">
+            <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase evg-spacing-bottom-lg">
+              Household food waste requires action
+            </h1>
+            <p className="evg-text-size-body-xl evg-text-wrap-balance evg-spacing-bottom-lg">
+              Key findings from WRAP&apos;s measurement research
+            </p>
+          </evg-wrapper>
+        </evg-section-img>
       </evg-section>
       <evg-section padding="fluid">
-        <evg-wrapper size="lg">
-          <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-spacing-bottom-lg evg-text-align-center">
+        <evg-wrapper size="lg" class="evg-longform">
+          <h2 className="evg-text-size-heading-lg evg-text-transform-uppercase evg-text-align-center">
             Food waste is a big deal
           </h2>
-          <h3 className="evg-spacing-bottom-lg">
-            Most food waste in the UK comes from our homes
-          </h3>
-          <p className="evg-spacing-bottom-lg">
+          <h3>Most food waste in the UK comes from our homes</h3>
+          <p>
             Food waste is produced by households and the following sectors:
             on-farm, food manufacture, hospitality and food service (HaFS), and
             retail. In the UK, WRAP estimates total food waste in 2021 at 10.7
@@ -38,7 +50,7 @@ export function SecondLevel() {
         </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrapper size="lg">
+        <evg-wrapper size="lg" class="evg-longform">
           <h3>Household food waste has declined since 2007</h3>
           <p>
             In the UK between 2007 and 2010, household food waste decreased,
@@ -77,7 +89,7 @@ export function SecondLevel() {
         </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid">
-        <evg-wrapper size="lg">
+        <evg-wrapper size="lg" class="evg-longform">
           <h3>More household food waste could be recycled</h3>
           <p>
             Most household food and drink waste in the UK goes into the general
@@ -104,7 +116,7 @@ export function SecondLevel() {
         </evg-wrapper>
       </evg-section>
       <evg-section padding="fluid" class="evg-theme-earth-light">
-        <evg-wrapper size="lg">
+        <evg-wrapper size="lg" class="evg-longform">
           <h3>Most food waste is preventable</h3>
           <p>
             Food waste is subdivided into i) parts of food that are generally
@@ -132,6 +144,7 @@ export function SecondLevel() {
               height="200"
             />
           </evg-img>
+
           <h4>Edible parts of food waste by food category</h4>
 
           <p>
@@ -147,18 +160,7 @@ export function SecondLevel() {
       </evg-section>
       <evg-section padding="fluid">
         <evg-wrapper size="xl">
-          <evg-grid
-            justify-content="space-between"
-            align-items="center"
-            class="evg-spacing-bottom-lg"
-          >
-            <evg-grid-item>
-              <h3>The impact of food waste</h3>
-            </evg-grid-item>
-            <evg-grid-item>
-              <docs-placeholder inline>Tabs</docs-placeholder>
-            </evg-grid-item>
-          </evg-grid>
+          <h3 className="evg-spacing-bottom-lg">The impact of food waste</h3>
           <evg-grid gap="lg" wrap="wrap">
             <evg-grid-item small-mobile="12" large-tablet="4">
               <evg-stat align="center">
@@ -207,23 +209,22 @@ export function SecondLevel() {
               <evg-card class="evg-theme-default" radius="md" padding="lg">
                 <evg-card-img>
                   <img
-                    src="/images/placeholder/400x300.svg"
+                    src="/images/placeholder/400x200.svg"
                     alt="Placeholder"
                     width="400"
-                    height="300"
+                    height="200"
                     loading="lazy"
                   />
                 </evg-card-img>
                 <evg-card-content>
-                  <h3 className="evg-text-size-heading-md">Delve deeper</h3>
+                  <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
+                    Delve deeper
+                  </h3>
                   <p className="evg-text-size-body-sm">
                     Explore further details about this research
                   </p>
                   <evg-button variant="primary" width="full-width-mobile">
-                    <button>
-                      Read more
-                      <evg-icon icon="arrow-right" />
-                    </button>
+                    <button>Read more</button>
                   </evg-button>
                 </evg-card-content>
               </evg-card>
@@ -232,23 +233,22 @@ export function SecondLevel() {
               <evg-card class="evg-theme-default" radius="md" padding="lg">
                 <evg-card-img>
                   <img
-                    src="/images/placeholder/400x300.svg"
+                    src="/images/placeholder/400x200.svg"
                     alt="Placeholder"
                     width="400"
-                    height="300"
+                    height="200"
                     loading="lazy"
                   />
                 </evg-card-img>
                 <evg-card-content>
-                  <h3 className="evg-text-size-heading-md">For citizens</h3>
+                  <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
+                    For citizens
+                  </h3>
                   <p className="evg-text-size-body-sm">
                     Want to cut your household food waste?
                   </p>
                   <evg-button variant="primary" width="full-width-mobile">
-                    <button>
-                      Read more
-                      <evg-icon icon="arrow-right" />
-                    </button>
+                    <button>Read more</button>
                   </evg-button>
                 </evg-card-content>
               </evg-card>
@@ -316,17 +316,15 @@ export function SecondLevel() {
             </evg-card-img>
             <evg-card-content>
               <evg-row>
+                <evg-badge variant="earth">Case study</evg-badge>
                 <span className="evg-text-size-body-xs">January 2024</span>
               </evg-row>
-              <h3 className="evg-text-size-heading-md">
+              <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
                 Annual Survey of Redistribution Organisations in the UK
               </h3>
               <p className="evg-text-size-body-sm">2023 update</p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>
-                  View story
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>View story</button>
               </evg-button>
             </evg-card-content>
           </evg-card>

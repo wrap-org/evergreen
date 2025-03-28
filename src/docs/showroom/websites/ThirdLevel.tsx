@@ -6,23 +6,30 @@ import { List, Row, Featured } from '../../recipes/Cards.stories';
 
 const workWithUs: {
   title: string;
+  headingStyle: string;
   description: string;
   layout: 'image-right' | 'image-left';
 }[] = [
   {
     title: 'Retailers',
+    headingStyle:
+      'evg-text-size-body-md evg-text-weight-base evg-text-family-body',
     description:
       'We help retailers and their supply chains to be more resource efficient, encourage consumers to reduce their waste, and redistribute more surplus food to those in need.',
     layout: 'image-right',
   },
   {
     title: 'Manufacturers',
+    headingStyle:
+      'evg-text-size-body-md evg-text-weight-base evg-text-family-body',
     description:
       'By making their production processes more efficient, manufacturers are instrumental in protecting key resources - food, water carbon.',
     layout: 'image-right',
   },
   {
     title: 'Hospitality',
+    headingStyle:
+      'evg-text-size-body-md evg-text-weight-base evg-text-family-body',
     description:
       "With award-winning campaigns, we're helping businesses to reduce the amount of food thrown away, reduce water stress and GHG emissions.",
     layout: 'image-right',
@@ -31,24 +38,28 @@ const workWithUs: {
 
 const moreOpportunities = [
   {
+    id: '1',
     title: 'Future-proof food',
     description:
       "We're changing the way food is produced and consumed — reducing costs to the environment, to businesses and to people.",
     theme: 'evg-theme-default',
   },
   {
+    id: '2',
     title: 'Prevent problem plastics',
     description:
       "We're redesigning the plastics system, across the value chain — preventing waste and keeping the material out of the environment.",
     theme: 'evg-theme-default',
   },
   {
+    id: '3',
     title: 'Transform textiles',
     description:
       "We're transforming the way that textiles are made, bought and used - decreasing emissions, lowering water use and cutting pollution.",
     theme: 'evg-theme-default',
   },
   {
+    id: '4',
     title: 'Accelerate the Circular Economy',
     description:
       "We're leading the world away from a 'take-make-dispose' culture to a 'design-makereuse' approach - radically reducing waste and carbon emissions from everyday products.",
@@ -79,18 +90,15 @@ export function ThirdLevel() {
                     </li>
                   </ol>
                 </evg-breadcrumb>
-                <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase">
+                <h1 className="evg-text-size-heading-xl evg-text-transform-uppercase evg-spacing-bottom-md">
                   The Courtauld Commitment 2030
                 </h1>
-                <p className="evg-text-size-body-lg">
+                <p className="evg-text-size-body-lg evg-spacing-bottom-md">
                   Reducing food waste, cutting carbon and protecting critical
                   water resources.
                 </p>
                 <evg-button>
-                  <button>
-                    In this section
-                    <evg-icon icon="chevron-down" />
-                  </button>
+                  <button>In this section&hellip;</button>
                 </evg-button>
               </evg-grid-item>
             </evg-grid>
@@ -130,9 +138,9 @@ export function ThirdLevel() {
             aligned with UK and international environmental goals.
           </p>
 
-          <evg-card class="evg-spacing-bottom-lg">
+          <evg-card class="evg-spacing-bottom-lg" padding="lg" radius="md">
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body">
+              <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
                 For food waste
               </h3>
               <p className="evg-text-size-body-sm">
@@ -148,17 +156,14 @@ export function ThirdLevel() {
                 (a 20% reduction compared to 2015).
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>
-                  Read more
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>Read more</button>
               </evg-button>
             </evg-card-content>
           </evg-card>
 
-          <evg-card class="evg-spacing-bottom-lg">
+          <evg-card class="evg-spacing-bottom-lg" padding="lg" radius="md">
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body">
+              <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
                 For GHG emissions
               </h3>
               <p className="evg-text-size-body-sm">
@@ -173,17 +178,14 @@ export function ThirdLevel() {
                 Roadmap.
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>
-                  Read more
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>Read more</button>
               </evg-button>
             </evg-card-content>
           </evg-card>
 
-          <evg-card class="evg-spacing-bottom-lg">
+          <evg-card class="evg-spacing-bottom-lg" padding="lg" radius="md">
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body">
+              <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
                 For water
               </h3>
               <p className="evg-text-size-body-sm">
@@ -200,10 +202,7 @@ export function ThirdLevel() {
                 overseas.
               </p>
               <evg-button variant="primary" width="full-width-mobile">
-                <button>
-                  Read more
-                  <evg-icon icon="arrow-right" />
-                </button>
+                <button>Read more</button>
               </evg-button>
             </evg-card-content>
           </evg-card>
@@ -226,22 +225,19 @@ export function ThirdLevel() {
               </evg-thumbnail>
             </evg-card-img>
             <evg-card-content>
-              <h3 className="evg-text-size-heading-sm evg-text-family-body">
+              <h3 className="evg-text-size-body-md evg-text-weight-base evg-text-family-body">
                 Courtauld 2030 Annual Progress Report 2024
               </h3>
               <evg-grid justify-content="space-between" align-items="center">
                 <evg-grid-item>
                   <evg-row>
-                    <evg-badge variant="sky-light">Report</evg-badge>
-                    <span className="evg-text-size-body-sm">Jan 1, 2025</span>
+                    <evg-badge variant="earth">PDF</evg-badge>
+                    <span className="evg-text-size-body-xs">Jan 1, 2025</span>
                   </evg-row>
                 </evg-grid-item>
                 <evg-grid-item>
                   <evg-button variant="primary">
-                    <button>
-                      Read more
-                      <evg-icon icon="arrow-right" />
-                    </button>
+                    <button>Read more</button>
                   </evg-button>
                 </evg-grid-item>
               </evg-grid>
