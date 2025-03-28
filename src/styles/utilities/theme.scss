@@ -8,7 +8,10 @@ $themes:
 .evg-theme {
   @each $theme in $themes {
     &-#{$theme} {
-      @include theme.theme($theme);
+      --evg-theme-background: var(--evg-theme-background-#{$type});
+      --evg-theme-color: var(--evg-theme-color-#{$type});
+      --evg-theme-heading-color: var(--evg-theme-heading-color-#{$type});
+      --evg-theme-link-color: var(--evg-theme-link-color-#{$type});
     }
   }
 }
