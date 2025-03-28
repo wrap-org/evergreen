@@ -1,8 +1,13 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+Supplementary information providing context or instructions for UI elements and interactions.
+Help Text can be positioned below form fields, adjacent to interactive elements, or within tooltips,
+and supports various styling options to indicate different types of guidance.
+`;
+
 export default {
-  title: 'Components/Content/Help text',
   argTypes: {
     type: {
       control: {
@@ -19,8 +24,13 @@ export default {
   },
   parameters: {
     docs: {
+      subtitle:
+        'Supplementary information providing context or instructions for UI elements.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6299-12182&t=g3niGv3HxLa5NL0O-0',
+      description: {
+        component: description,
+      },
     },
     a11y: {
       config: {

@@ -2,6 +2,10 @@ import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 const description = `
+A CSS Flexbox Grid-based layout system enabling complex, responsive arrangements with minimal markup.
+Grid component offers row and column configuration, gap controls, alignment options, and responsive
+behaviour to create consistent layouts across different screen sizes.
+
 The grid and grid item components are used to create a grid layout by exposing
 the most commonly used flexbox properties as attributes. The best way to understand
 how to use the grid, is to understand
@@ -18,7 +22,6 @@ and large variants of each (e.g. small-mobile at 320px).
 `;
 
 export default {
-  title: 'Components/Composition/Grid',
   argTypes: {
     wrap: {
       control: {
@@ -60,6 +63,8 @@ export default {
   },
   parameters: {
     docs: {
+      subtitle:
+        'A CSS Grid-based layout system enabling complex, responsive arrangements.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=6288-5714&t=g3niGv3HxLa5NL0O-0',
       description: {

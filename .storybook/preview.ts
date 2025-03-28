@@ -14,6 +14,9 @@ import '../src/components/control/Button/Button';
 import '../src/components/control/RadioCheckbox/RadioCheckbox';
 import '../src/components/canvas/Supergraphic/Supergraphic';
 import '../src/components/canvas/Section/SectionImg';
+import '../src/components/content/LoadingButton/LoadingButton';
+import '../src/components/content/LoadingImg/LoadingImg';
+import '../src/components/content/LoadingText/LoadingText';
 
 import '../src/docs/components/FullscreenStory/FullscreenStory.scss'
 import '../src/docs/components/Placeholder/Placeholder.scss'
@@ -32,11 +35,12 @@ const preview: Preview = {
           'Contributing',
           'Changelog',
           'Guides',
-          ['Page setup'],
+          ['Page setup', 'Page sections and wrappers', 'Grids, boxes, and cards', 'Theming'],
           'Showroom',
           'Foundations',
           ['Tokens', 'Typography', 'Breakpoints', 'Icons', 'Branded icons', 'Utilities'],
           'Components',
+          ['Content', 'Controls', 'Canvas', 'Composition'],
           'Recipes',
           ['App', 'Header', 'Footer', 'Page header', 'Cards', 'Forms', 'Navigation', 'Stat group', 'Tag group', 'Banner', 'Grid']
         ],

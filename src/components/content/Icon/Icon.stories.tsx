@@ -9,6 +9,9 @@ import { iconKeys, functionalIconKeys, distinctiveIconKeys } from './icons';
 import './Icon';
 
 const description = `
+Icon component provides consistent sizing, colouring, and accessibility features across the system,
+with support for various icon sets and custom SVG implementations.
+
 Wraps an svg icon to provide alignment and sizing.
 
 Icons must have the appropriate fill or stroke set to \`currentColor\`.
@@ -30,6 +33,8 @@ export default {
   component: 'evg-icon',
   parameters: {
     docs: {
+      subtitle:
+        'Vector-based graphics communicating meaning or actions with consistency.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5259-5161&t=g3niGv3HxLa5NL0O-0',
       description: {

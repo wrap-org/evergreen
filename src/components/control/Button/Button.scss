@@ -89,6 +89,10 @@ evg-button {
     &:not(:active):focus-visible {
       @include button-focus;
     }
+
+    &:active {
+      transform: translateY(1px);
+    }
   }
 
   input[type='file']:not([disabled])::file-selector-button {
@@ -96,6 +100,10 @@ evg-button {
       &:hover {
         @include button-hover;
       }
+    }
+
+    &:active {
+      transform: translateY(1px);
     }
   }
 

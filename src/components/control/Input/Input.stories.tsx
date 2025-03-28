@@ -1,15 +1,21 @@
 import { StoryFn } from '@storybook/react';
 import React from 'react';
 
+const description = `
+Input supports various types (text, email, password, etc.), validation states,
+prefixes/suffixes, clear functionality, and responsive behaviour while maintaining
+consistent styling and accessibility.
+`;
+
 export default {
   component: 'evg-input',
   parameters: {
     docs: {
+      subtitle: 'A form control collecting text data with validation states.',
       figma:
         'https://www.figma.com/design/FTracH5vU8pdOK0jLKWnSU/%F0%9F%8C%B2-Evergreen?node-id=5105-4457&t=g3niGv3HxLa5NL0O-0',
       description: {
-        component:
-          'Wraps an HTML input element to provide consistent styling and behavior.',
+        component: description,
       },
     },
     a11y: {
@@ -91,10 +97,18 @@ export const Textarea: StoryFn = (args) => (
   </evg-input>
 );
 
+const textareaDescription = `
+> A multi-line text input for longer form entries with auto-adjusting size.
+
+A multi-line text input for longer form entries with auto-resizing and character counting.
+Textarea supports auto-resizing, character counters, minimum and maximum heights, and properly
+handles text wrapping while maintaining consistent styling with other form controls.
+`;
+
 Textarea.parameters = {
   docs: {
     description: {
-      story: 'The input wrapper can be used on textarea elements as well.',
+      story: textareaDescription,
     },
   },
 };
@@ -122,10 +136,17 @@ export const Select: StoryFn = (args) => (
   </evg-input>
 );
 
+const selectDescription = `
+> A dropdown control for choosing from predefined options with selection and filtering capabilities.
+
+Select provides single or multiple selection capabilities, option grouping, search/filtering, custom rendering
+of options, and proper keyboard navigation to enhance usability.
+`;
+
 Select.parameters = {
   docs: {
     description: {
-      story: 'The input wrapper can be used on select elements as well.',
+      story: selectDescription,
     },
   },
 };

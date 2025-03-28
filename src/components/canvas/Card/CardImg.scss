@@ -3,7 +3,8 @@ evg-card-img {
   grid-area: image;
   padding: var(--evg-card-img-padding);
 
-  img {
+  img,
+  evg-loading-img {
     border-radius: var(--evg-card-img-radius);
     display: block;
     height: var(--evg-card-img-height);
