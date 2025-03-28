@@ -2,6 +2,7 @@ import { useOf } from '@storybook/blocks';
 import React, { useEffect, useState } from 'react';
 
 import '../../src/components/composition/Grid/Grid';
+import '../../src/components/composition/Grid/GridItem';
 import '../../src/components/control/Chip/Chip';
 
 type IndexStory = {
@@ -11,9 +12,11 @@ type IndexStory = {
 function Item ({ story }) {
   const title = story.title.split('/').pop();
 
+  console.info(story);
+
   return (
     <evg-chip>
-      <a href={story.path}>
+      <a href={`/?path=/docs/${story.id}`}>
         {title}
       </a>
     </evg-chip>
