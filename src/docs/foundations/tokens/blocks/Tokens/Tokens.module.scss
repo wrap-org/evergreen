@@ -22,12 +22,9 @@
 
   &__preview-cell {
     &--color,
-    &--state {
-      background-image: linear-gradient(
-          to bottom,
-          var(--token-preview),
-          var(--token-preview)
-        ),
+    &--sentiment {
+      background-image:
+        linear-gradient(to bottom, var(--token-preview), var(--token-preview)),
         repeating-linear-gradient(-45deg, #ccc, #ccc 1px, #fff 1px, #fff 16px);
       padding: 0 !important;
     }
@@ -54,7 +51,7 @@
     }
 
     &--radius {
-      border: 1px solid var(--evg-state-neutral);
+      border: 1px solid var(--evg-sentiment-neutral);
       border-radius: var(--token-preview) 0 0 0;
       border-width: 2px 0 0 2px;
       height: 2rem;
@@ -68,8 +65,8 @@
     }
 
     &--spacing {
-      background: var(--evg-state-neutral-light);
-      border: 2px solid var(--evg-state-neutral);
+      background: var(--evg-sentiment-neutral-lightest);
+      border: 2px solid var(--evg-sentiment-neutral);
       border-width: 0 2px;
       height: 1rem;
       width: var(--token-preview);

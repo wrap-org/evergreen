@@ -65,7 +65,7 @@ export default function Tokens({
             '--evg-radius',
             '--evg-shadow',
             '--evg-spacing',
-            '--evg-state',
+            '--evg-sentiment',
           ];
 
           const supportedCollectionValue = supportedCollections.find((type) =>
