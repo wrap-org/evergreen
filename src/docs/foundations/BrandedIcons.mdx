@@ -2,29 +2,13 @@ import { Meta, IconGallery, IconItem } from '@storybook/blocks';
 import { iconKeys, distinctiveIconKeys, functionalIconKeys } from '../../components/content/Icon/icons';
 import '../../components/content/Icon/Icon';
 
-<Meta title="Foundations/Icons" />
+<Meta title="Foundations/Branded icons" />
 
-# Icons
-
-> A comprehensive library of visual symbols designed to communicate meaning.
->
-
-Comprehensive library of visual symbols is designed to communicate meaning with clarity and consistency.
-Each icon follows design principles that ensure visual cohesion with other elements of the Evergreen system.
-
-<IconGallery style={{ '--evg-icon-baseline-adjust': '0.125em' }}>
-  {iconKeys.map((icon) => (
-    <IconItem name={icon} key={icon}>
-      <evg-icon icon={icon}></evg-icon>
-    </IconItem>
-  ))}
-</IconGallery>
-
-## Branded icons
+# Branded icons
 
 A set of icons were created when redesigning wrap.ngo. These should not be used for UI icons, but as alternative to illustrations and images.
 
-### Distinctive
+# Distinctive
 
 <IconGallery style={{ '--evg-icon-baseline-adjust': '0.125em' }}>
   {distinctiveIconKeys.map((icon) => (
@@ -34,7 +18,7 @@ A set of icons were created when redesigning wrap.ngo. These should not be used 
   ))}
 </IconGallery>
 
-### Functional
+# Functional
 
 
 <IconGallery style={{ '--evg-icon-baseline-adjust': '0.125em' }}>

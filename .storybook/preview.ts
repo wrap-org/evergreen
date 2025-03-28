@@ -26,6 +26,7 @@ const preview: Preview = {
       storySort: {
         order: [
           'Getting started',
+          'Good to know',
           'Migration',
           'Support',
           'Contributing',
@@ -34,6 +35,7 @@ const preview: Preview = {
           ['Page setup'],
           'Showroom',
           'Foundations',
+          ['Tokens', 'Typography', 'Breakpoints', 'Icons', 'Branded icons', 'Utilities'],
           'Components',
           'Recipes',
           ['App', 'Header', 'Footer', 'Page header', 'Cards', 'Forms', 'Navigation', 'Stat group', 'Tag group', 'Banner', 'Grid']
