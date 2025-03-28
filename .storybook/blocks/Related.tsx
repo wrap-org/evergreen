@@ -12,7 +12,6 @@ type IndexStory = {
 function Item ({ story }) {
   const title = story.title.split('/').pop();
 
-  console.info(story);
 
   return (
     <evg-chip>
