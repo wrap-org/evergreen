@@ -45,11 +45,19 @@ export class Icon extends LitElement {
       flex: 0 0 var(--evg-icon-size);
       height: var(--evg-icon-size);
       min-width: var(--evg-icon-size);
+      position: relative;
       width: var(--evg-icon-size);
+      z-index: 1;
     }
 
     path {
       fill: currentColor;
+    }
+
+    :host([variant='circle']) {
+      svg {
+        transform: scale(0.75);
+      }
     }
   `;
 

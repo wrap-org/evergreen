@@ -26,7 +26,9 @@ evg-icon {
     flex: 0 0 var(--evg-icon-size);
     height: var(--evg-icon-size);
     min-width: var(--evg-icon-size);
+    position: relative;
     width: var(--evg-icon-size);
+    z-index: 1;
   }
 
   path {
@@ -34,20 +36,22 @@ evg-icon {
   }
 
   &[variant='circle'] {
-    &::part(icon)::before {
-      background-color: var(--evg-theme-color);
-      border-radius: 100%;
-      content: '';
-      display: block;
-      height: var(--evg-icon-size);
-      position: absolute;
-      width: var(--evg-icon-size);
+    &::part(icon) {
+      color: var(--evg-theme-background);
+
+      &::before {
+        background-color: var(--evg-theme-color);
+        border-radius: 100%;
+        content: '';
+        display: block;
+        height: var(--evg-icon-size);
+        position: absolute;
+        width: var(--evg-icon-size);
+      }
     }
 
     svg {
-      color: var(--evg-theme-background);
       transform: scale(0.75);
-      z-index: 1;
     }
   }
 }
