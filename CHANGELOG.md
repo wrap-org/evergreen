@@ -1,3 +1,27 @@
+## [2.0.0](https://github.com/wrap-org/evergreen/compare/v1.0.0...v2.0.0) (2025-03-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* update help text to sentiment colors
+* update alert colors to just sentiment colors
+* update state tokens to sentiment
+* evg-alert type changed to variant and more colors
+
+### Features
+
+* evg-alert type changed to variant and more colors ([d0b10b0](https://github.com/wrap-org/evergreen/commit/d0b10b01ed97a75d4c3289f7fd2dbc97fd0f4751))
+* remove use of lightest sentiment colors ([7b987f4](https://github.com/wrap-org/evergreen/commit/7b987f46fcea432640e8bc4717e86f833616c343))
+* rename help text type to variant ([c63af61](https://github.com/wrap-org/evergreen/commit/c63af61a7b4ab4397d359e39c7dae5e7b4175dfc))
+* update alert colors to just sentiment colors ([48e97c8](https://github.com/wrap-org/evergreen/commit/48e97c89be4de9f5db7ce8e5a7cba6d706093cea))
+* update help text to sentiment colors ([93ffc93](https://github.com/wrap-org/evergreen/commit/93ffc93c05d51e62ce691b82cf0cbe23cfdee82f))
+* update state tokens to sentiment ([6695c32](https://github.com/wrap-org/evergreen/commit/6695c32339f0e437ffd2fd253f73d38ab75357c8))
+
+
+### Bug Fixes
+
+* use input border colors for input ([95fbff2](https://github.com/wrap-org/evergreen/commit/95fbff2efbeecfa73a2490422cf88554ef80d195))
+
 ## 1.0.0 (2025-03-31)
 
 
