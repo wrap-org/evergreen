@@ -36,7 +36,7 @@ addons.setConfig({
     inputBorderRadius: 0.25,
 
     brandTitle: 'Evergreen',
-    brandUrl: 'https://wrap.ngo/',
     brandImage: '/logo.png',
+    brandTarget: '_self',
   }),
 });
