@@ -66,8 +66,8 @@ Evergreen serves as a resource for:
 Evergreen provides tools for both designers and developers:
 
 - **Figma Resources:** Design with our component library, design tokens, and templates to create experiences that align with WRAP's visual identity.
-- **Storybook Components:** Build interfaces efficiently with our coded components, complete with documentation, usage guidelines, and examples.
-- **Brand Guidelines:** Access WRAP's complete brand guidelines on Frontify, including logos, tone of voice, photography direction, and printed media.
+- **[Storybook Components](https://evergreen.wrap.ngo/):** Build interfaces efficiently with our coded components, complete with documentation, usage guidelines, and examples.
+- **[Brand Guidelines](https://brand.wrap.ngo):** Access WRAP's complete brand guidelines on Frontify, including logos, tone of voice, photography direction, and printed media.
 
 By using these resources, you can create experiences that feel cohesive and authentic to the WRAP brand while saving time on your projects.
 
