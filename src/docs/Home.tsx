@@ -181,20 +181,6 @@ export function Home() {
                   official design system – serving as the primary resource for
                   creating and improving our websites and applications.
                 </p>
-                <evg-row>
-                  {links.map((link) => (
-                    <evg-button key={link.id}>
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.icon}
-                        {link.text}
-                      </a>
-                    </evg-button>
-                  ))}
-                </evg-row>
               </evg-grid-item>
             </evg-grid>
           </evg-wrapper>
