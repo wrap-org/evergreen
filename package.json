@@ -1,6 +1,6 @@
 {
   "name": "@wrap.ngo/evergreen",
-  "version": "8.5.0",
+  "version": "1.0.0",
   "description": "WRAP's design system",
   "scripts": {
     "build": "node ./scripts/build.js",
