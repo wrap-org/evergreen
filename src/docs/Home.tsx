@@ -173,13 +173,9 @@ export function Home() {
                   Evergreen
                 </h1>
                 <p className="evg-text-size-body-lg evg-spacing-bottom-md">
-                  <evg-link>
-                    <a href="https://wrap.ngo" target="_blank" rel="noreferrer">
-                      WRAP’s
-                    </a>
-                  </evg-link>{' '}
-                  official design system – serving as the primary resource for
-                  creating and improving our websites and applications.
+                  WRAP’s official design system – serving as the primary
+                  resource for creating and improving our websites and
+                  applications.
                 </p>
               </evg-grid-item>
             </evg-grid>
