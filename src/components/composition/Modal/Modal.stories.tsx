@@ -5,11 +5,9 @@ import '../../canvas/Card/Card';
 
 const description = `
 An overlay dialogue demanding user attention before returning to the main interface.
-Modals can include configurable headers, bodies, footers, size options, and accessibility
-features such as focus management, keyboard navigation, and proper ARIA attributes.
-
-The Modal component provides an unopinionated area for any content
-to be placed on top of the main app content.
+The modal component provides a flexible overlay content area that can have any content
+dropped in, whilst handling accessibility features such as focus management and
+keyboard navigation.
 
 Other than the backdrop and box shadow, it does not provide any styles. Recommended
 to be used with a wrap and a box.

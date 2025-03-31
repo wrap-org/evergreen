@@ -3,8 +3,7 @@ import React from 'react';
 
 const description = `
 An embeddable player component providing consistent playback functionality with accessibility features.
-Video supports various sources (internal or external), responsive sizing, customisable controls, autoplay
-options, and accessibility features including captions and transcripts.
+Video supports various sources (internal or external) and responsive sizing.
 `;
 
 export default {

@@ -52,7 +52,7 @@ export default {
 export const Badge: StoryFn = (args) => <evg-badge {...args}>Badge</evg-badge>;
 
 export const BadgeTypes = () => (
-  <evg-grid>
+  <evg-grid wrap="wrap">
     {variants.map((variant) => (
       <evg-grid-item key={variant}>
         <evg-badge variant={variant}>{variant}</evg-badge>
