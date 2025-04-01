@@ -184,7 +184,7 @@ export function Home() {
               </evg-menu-item>
               <evg-divider />
               <evg-menu-item>
-                <a href="https://wrap.ngo">Contrinbuting Guidelines</a>
+                <a href="https://wrap.ngo">Contributing Guidelines</a>
               </evg-menu-item>
               <evg-divider />
               <evg-menu-item>
