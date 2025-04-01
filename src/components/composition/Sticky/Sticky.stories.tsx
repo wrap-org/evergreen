@@ -10,6 +10,7 @@ important UI elements within view regardless of scroll position.
 
 export default {
   parameters: {
+    layout: 'fullscreen',
     docs: {
       subtitle:
         'A sticky component is used to keep an element fixed at the top of the viewport when scrolling.',
@@ -49,7 +50,7 @@ export const Default: StoryFn = ({ ...args }) => (
 
 Default.args = {
   largeScreenOnly: false,
-  top: '20',
+  top: '0',
 };
 
 Default.parameters = {

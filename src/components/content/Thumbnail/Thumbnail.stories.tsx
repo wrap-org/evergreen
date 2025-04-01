@@ -5,8 +5,6 @@ const sizes = ['sm', 'md', 'lg', 'xl'] as const;
 
 const description = `
 A compact image preview displaying representative visuals with various aspect ratios and cropping options.
-Thumbnail supports various aspect ratios, cropping options, fallback images, and can include overlay
-information such as duration, count, or status indicators.
 `;
 
 export default {
