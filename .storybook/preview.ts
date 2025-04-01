@@ -24,6 +24,7 @@ import './styles.scss';
 
 const preview: Preview = {
   parameters: {
+    docsStyles: false,
     viewMode: 'docs',
     options: {
       storySort: {

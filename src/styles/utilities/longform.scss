@@ -58,22 +58,23 @@
     }
   }
 
-  figure:has(blockquote) {
+  blockquote {
+    font-family: var(--evg-font-family-heading);
+    font-size: var(--evg-font-size-heading-md);
+    line-height: var(--evg-font-line-height-sm);
+    margin: 0 0 var(--evg-spacing-md);
+    padding: 0;
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    p {
+      line-height: var(--evg-font-line-height-sm);
+    }
+  }
+
+  figure:has(blockquote),
+  .sbdocs-content blockquote {
     border-left: 0.25rem solid var(--evg-color-lime);
     padding-left: var(--evg-spacing-md);
-
-    blockquote {
-      font-family: var(--evg-font-family-heading);
-      font-size: var(--evg-font-size-heading-md);
-      line-height: var(--evg-font-line-height-sm);
-      margin: 0 0 var(--evg-spacing-md);
-      padding: 0;
-
-      /* stylelint-disable-next-line selector-max-compound-selectors */
-      p {
-        line-height: var(--evg-font-line-height-sm);
-      }
-    }
 
     @media (width >= 768px) {
       padding-left: var(--evg-spacing-lg);
