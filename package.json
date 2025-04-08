@@ -37,6 +37,7 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.4.1",
     "@etchteam/eslint-config": "^2.2.32",
+    "@etchteam/storybook-addon-design-token-tables": "1.1.0",
     "@etchteam/stylelint-config": "^1.7.2",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",

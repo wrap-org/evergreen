@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 import { DocPage } from './DocPage';
+import tokens from '@wrap.ngo/tokens/dist/index.css?raw'
 
 // Load the actual web components
 import '../src/components/composition/App/App';
@@ -52,6 +53,23 @@ const preview: Preview = {
     },
     backgrounds: {
       disable: true,
+    },
+    designTokenTables: {
+      tokens: [
+        tokens,
+      ],
+      collections: {
+        'evg-color': 'color',
+        'evg-radius': 'radius',
+        'evg-spacing': 'spacing',
+        'evg-shadow': 'shadow',
+        'evg-font-family': 'font-family',
+        'evg-font-line-height': 'line-height',
+        'evg-font-size': 'font-size',
+        'evg-font-weight': 'font-weight',
+        'evg-theme': 'color',
+        'evg-sentiment': 'color',
+      },
     },
     viewport: {
       viewports: {
