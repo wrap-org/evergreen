@@ -114,7 +114,7 @@ export function Full(props) {
             The Waste and Resources Action Programme (which operates as WRAP) is
             a registered UK Charity No.1159512.
             <br aria-hidden />
-            Registered office at Second Floor, Blenheim Court, 19 George Street,
+            Registered office at Ground Floor, Blenheim Court, 19 George Street,
             Banbury, Oxon, OX16 5BH.
           </p>
           <p className="evg-text-size-body-xs">
@@ -174,7 +174,7 @@ export function Minimal(props) {
             The Waste and Resources Action Programme (which operates as WRAP) is
             a registered UK Charity No.1159512.
             <br aria-hidden />
-            Registered office at Second Floor, Blenheim Court, 19 George Street,
+            Registered office at Ground Floor, Blenheim Court, 19 George Street,
             Banbury, Oxon, OX16 5BH.
           </p>
           <p className="evg-text-size-body-xs">
