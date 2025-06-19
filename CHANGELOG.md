@@ -1,3 +1,10 @@
+## [2.1.0](https://github.com/wrap-org/evergreen/compare/v2.0.0...v2.1.0) (2025-06-19)
+
+
+### Features
+
+* update wrap office address ([d668538](https://github.com/wrap-org/evergreen/commit/d668538a48eeaed90c8e8c2cea3f6ff2955ee276))
+
 ## [2.0.0](https://github.com/wrap-org/evergreen/compare/v1.0.0...v2.0.0) (2025-03-31)
 
 
