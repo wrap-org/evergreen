@@ -1,4 +1,5 @@
 @use 'normalize';
+@use '@wrap.ngo/tokens/dist/index.css';
 
 @use 'base/scaffolding';
 @use 'base/typography';
@@ -52,6 +53,3 @@
 @use '../components/content/List/List';
 @use '../components/content/Thumbnail/Thumbnail';
 @use '../components/content/Label/Label';
-
-// Import CSS files after all @use rules
-@import '@wrap.ngo/tokens/dist/index.css';
