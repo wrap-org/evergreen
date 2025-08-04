@@ -5,7 +5,7 @@ $themes:
 
 .evg-theme {
   @each $theme in $themes {
-    &-#{$theme} {
+    &-#{'' + $theme} {
       --evg-theme-background: var(--evg-theme-background-#{$theme});
       --evg-theme-color: var(--evg-theme-color-#{$theme});
       --evg-theme-heading-color: var(--evg-theme-heading-color-#{$theme});
