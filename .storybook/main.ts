@@ -40,6 +40,13 @@ const config: StorybookConfig = {
     options: {}
   },
   staticDirs: [path.resolve(__dirname, '../src/assets')],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+    },
+  },
 };
 
 export default config;
