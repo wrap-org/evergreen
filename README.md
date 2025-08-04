@@ -50,7 +50,7 @@ Use the component anywhere in HTML or JSX.
 </evg-button>
 ```
 
-Head over to the [page setup guide](https://evergreen.wrap.ngo/?path=/docs/guides-page-setup--docs) for information on setting up your first page.
+See the [example directory (`./example`)](https://github.com/wrap-org/evergreen/tree/main/example) for a working code example or head over to the [page setup guide](https://evergreen.wrap.ngo/?path=/docs/guides-page-setup--docs) for information on setting up your first page.
 
 ## Who should use Evergreen
 
