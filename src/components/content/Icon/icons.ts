@@ -1,5 +1,5 @@
-/** eslint-disable spaced-comment */
 // Using Vite's import.meta.glob to import SVG files
+// eslint-disable-next-line spaced-comment
 /// <reference types="vite/client" />
 
 const formatIcons = (imports) =>
