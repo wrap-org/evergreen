@@ -2,20 +2,90 @@
   "name": "@wrap.ngo/evergreen",
   "version": "2.1.0",
   "description": "WRAP's design system",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/esm/button.js",
+      "require": "./dist/cjs/button.js",
+      "types": "./dist/types/button.d.ts"
+    },
+    "./icon": {
+      "import": "./dist/esm/icon.js",
+      "require": "./dist/cjs/icon.js",
+      "types": "./dist/types/icon.d.ts"
+    },
+    "./input": {
+      "import": "./dist/esm/input.js",
+      "require": "./dist/cjs/input.js",
+      "types": "./dist/types/input.d.ts"
+    },
+    "./modal": {
+      "import": "./dist/esm/modal.js",
+      "require": "./dist/cjs/modal.js",
+      "types": "./dist/types/modal.d.ts"
+    },
+    "./card": {
+      "import": "./dist/esm/card.js",
+      "require": "./dist/cjs/card.js",
+      "types": "./dist/types/card.d.ts"
+    },
+    "./grid": {
+      "import": "./dist/esm/grid.js",
+      "require": "./dist/cjs/grid.js",
+      "types": "./dist/types/grid.d.ts"
+    },
+    "./alert": {
+      "import": "./dist/esm/alert.js",
+      "require": "./dist/cjs/alert.js", 
+      "types": "./dist/types/alert.d.ts"
+    },
+    "./loading-button": {
+      "import": "./dist/esm/loading-button.js",
+      "require": "./dist/cjs/loading-button.js",
+      "types": "./dist/types/loading-button.d.ts"
+    },
+    "./collapse": {
+      "import": "./dist/esm/collapse.js",
+      "require": "./dist/cjs/collapse.js",
+      "types": "./dist/types/collapse.d.ts"
+    },
+    "./browser": "./dist/browser/evergreen.min.js",
+    "./browser/dev": "./dist/browser/evergreen.js",
+    "./styles": "./dist/styles/main.css",
+    "./browser/styles": "./dist/browser/evergreen.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "node ./scripts/build.js",
     "start": "storybook dev -p 6006",
+    "build": "npm run clean && rollup -c && npm run build:types",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist/types",
+    "build:dev": "npm run clean && rollup -c --environment NODE_ENV:development",
+    "build:watch": "npm run clean && rollup -c --watch",
     "build-storybook": "storybook build",
+    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-storybook": "npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && test-storybook\"",
-    "prepare": "node .husky/install.mjs && node ./scripts/export-components.mjs",
+    "prepare": "node .husky/install.mjs",
+    "prepublishOnly": "npm run build",
     "release": "semantic-release",
     "chromatic": "chromatic --exit-zero-on-changes",
     "storybook": "storybook dev -p 6006"
   },
   "engines": {
-    "npm": "^9 || ^10",
-    "node": "^18 || ^20 || ^22"
+    "npm": "^10 || ^11",
+    "node": "^20 || ^22"
   },
   "postcss": {
     "plugins": {
@@ -95,14 +165,6 @@
     "react-a11y-dialog": "^7.4.0",
     "react-minimal-pie-chart": "^9.1.0"
   },
-  "main": "dist/index.cjs.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.esm.js",
-  "src": "src/index.tsx",
-  "files": [
-    "dist",
-    "src"
-  ],
   "readme": "README.md",
   "license": "MIT",
   "homepage": "https://evergreen.wrap.ngo"

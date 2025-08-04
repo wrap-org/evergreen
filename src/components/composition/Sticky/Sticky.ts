@@ -10,7 +10,7 @@ export interface StickyAttributes {
 }
 
 @customElement('evg-sticky')
-export class LoadingText extends LitElement {
+export class Sticky extends LitElement {
   static readonly properties = {
     top: {
       type: String,
