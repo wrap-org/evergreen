@@ -1,3 +1,5 @@
+// Import the styles and components needed for the example
+// Replace ../src with @wrap.ngo/evergreen/src/*
 // 1. Add the global CSS in the main app file
 import '../src/styles/main.scss';
 import '../src/styles/fonts.scss';
