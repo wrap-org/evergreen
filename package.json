@@ -96,8 +96,7 @@
   },
   "readme": "README.md",
   "license": "MIT",
-  "homepage": "https://evergreen.wrap.ngo"
-  ,
+  "homepage": "https://evergreen.wrap.ngo",
   "repository": {
     "type": "git",
     "url": "https://github.com/wrap-org/evergreen"
