@@ -1,49 +1,47 @@
 {
   "name": "@wrap.ngo/evergreen",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "description": "WRAP's design system",
+  "type": "module",
+  "exports": {
+    "./components": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./styles": "./dist/styles/main.css",
+    "./fonts": "./dist/styles/fonts.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "example": "vite example",
-    "build": "node ./scripts/build.js",
     "start": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build": "npm run build:clean && node ./scripts/export-components.js && node ./scripts/build.js && npm run build:types",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outDir dist/types",
+    "build:storybook": "storybook build",
+    "build:clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-storybook": "npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && test-storybook\"",
-    "prepare": "node .husky/install.mjs && node ./scripts/export-components.mjs",
+    "test:storybook": "npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && test-storybook\"",
+    "prepare": "node .husky/install.mjs",
+    "prepublishOnly": "npm run build",
     "release": "semantic-release",
     "chromatic": "chromatic --exit-zero-on-changes",
     "storybook": "storybook dev -p 6006"
   },
   "engines": {
-    "npm": "^9 || ^10",
-    "node": "^18 || ^20 || ^22"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+    "npm": "^10 || ^11",
+    "node": "^20 || ^22"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/plugin-proposal-class-properties": "7.18.6",
-    "@babel/plugin-proposal-decorators": "7.25.9",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.26.0",
     "@chromatic-com/storybook": "^3.2.5",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.4.1",
     "@etchteam/eslint-config": "^2.2.32",
     "@etchteam/storybook-addon-design-token-tables": "1.1.0",
     "@etchteam/stylelint-config": "^1.7.2",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.3",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "@rollup/plugin-typescript": "^12.1.2",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^8.6.4",
@@ -67,6 +65,9 @@
     "axe-playwright": "^2.1.0",
     "chromatic": "^11.7.0",
     "conventional-changelog-conventionalcommits": "^7.0.0",
+    "esbuild": "0.25.8",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-sass-plugin": "^3.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-storybook": "^0.11.4",
     "glob": "^11.0.1",
@@ -77,9 +78,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.54.2",
-    "rollup": "^4.35.0",
-    "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-postcss": "^4.0.2",
     "sass": "1.85.1",
     "sass-embedded": "^1.85.1",
     "semantic-release": "^23.1.1",
@@ -96,15 +94,11 @@
     "react-a11y-dialog": "^7.4.0",
     "react-minimal-pie-chart": "^9.1.0"
   },
-  "main": "dist/index.cjs.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.esm.js",
-  "src": "src/index.tsx",
-  "files": [
-    "dist",
-    "src"
-  ],
   "readme": "README.md",
   "license": "MIT",
-  "homepage": "https://evergreen.wrap.ngo"
+  "homepage": "https://evergreen.wrap.ngo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrap-org/evergreen"
+  }
 }

@@ -25,22 +25,18 @@ Install the module.
 npm install --save @wrap.ngo/evergreen
 ```
 
-Add the global CSS in your main app file or CSS.
+Add the global CSS and JS in your main app file.
 
 ```js
-import '@wrap.ngo/evergreen/src/styles/main.scss';
-
-// Optional font face
-import '@wrap.ngo/evergreen/src/styles/fonts.scss';
+// Global styles
+import '@wrap.ngo/evergreen/styles';
+// Optional font import
+import '@wrap.ngo/evergreen/fonts';
+// Component registration
+import '@wrap.ngo/evergreen/components'
 ```
 
-Components can be used by importing them into the files to be used or they can be installed once globally (because web components are all registered to a [global registry](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry) on the window).
-
-```js
-import '@wrap.ngo/evergreen/components/control/Button/Button';
-```
-
-Use the component anywhere in HTML or JSX.
+Use the components anywhere.
 
 ```html
 <evg-button variant="primary">
