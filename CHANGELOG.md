@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/wrap-org/evergreen/compare/v1.0.0...v1.0.1) (2025-08-06)
+
+
+### Bug Fixes
+
+* move normalize back into main.scss ([0d75504](https://github.com/wrap-org/evergreen/commit/0d75504d8784b4f32b19ec87bde6f13f113be2fb))
+
 ## 1.0.0 (2025-08-06)
 
 
