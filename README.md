@@ -17,15 +17,48 @@ Evergreen represents our commitment to creating cohesive, accessible, and user-f
 - **Efficiency:** Reduces design and development time through reusable patterns and shared resources
 - **Quality:** Maintains high standards as we scale our digital presence and collaborations
 
-## Quick start
+## Who should use Evergreen
 
-Install the module.
+Evergreen serves as a resource for:
+
+- WRAP's internal design and development teams
+- Partner organizations collaborating on WRAP initiatives
+- External suppliers and agencies contributing to WRAP projects
+- Anyone building digital experiences within the WRAP ecosystem
+
+## How to get started
+
+Evergreen provides tools for both designers and developers:
+
+- **[Figma Resources](https://www.figma.com/design/yJ6UMIUFdnGkcqwn99oe0d/%F0%9F%8C%B2-Evergreen?node-id=2-2&p=f&t=YNt7unTt6dRbwRy6-0):** Design with our component library, design tokens, and templates to create experiences that align with WRAP's visual identity.
+- **[Components](https://evergreen.wrap.ngo/):** Build interfaces efficiently with our coded components, complete with documentation, usage guidelines, and examples.
+- **[Brand Guidelines](https://brand.wrap.ngo):** Access WRAP's complete brand guidelines on Frontify, including logos, tone of voice, photography direction, and printed media.
+
+By using these resources, you can create experiences that feel cohesive and authentic to the WRAP brand while saving time on your projects.
+
+## Website installation
+
+Evergreen is distributed as an [NPM package](https://www.npmjs.com/package/@wrap.ngo/evergreen?activeTab=readme). The package contains exports for:
+
+- Styles (`@wrap.ngo/evergreen/styles`) CSS to import global Evergreen styles
+- Fonts (`@wrap.ngo/evergreen/fonts`) optional CSS to import Evergreen fonts
+- Components (`@wrap.ngo/evergreen/components`) JS to register Evergreen components
+
+### No build tools route
+
+Evergreen is packaged to be used directly in the browser, and doesn't require any build.
+
+[Here is a Codepen example](https://codepen.io/Dan-Webb/pen/OPymPKX) which shows how a CDN like esm.sh can be used to load Evergreen.
+
+### Build tools route
+
+First install the NPM package.
 
 ```bash
 npm install --save @wrap.ngo/evergreen
 ```
 
-Add the global CSS and JS in your main app file.
+Then, include the global CSS and JS in your main app file.
 
 ```js
 // Global styles
@@ -46,26 +79,7 @@ Use the components anywhere.
 </evg-button>
 ```
 
-Head over to the [page setup guide](https://evergreen.wrap.ngo/?path=/docs/guides-page-setup--docs) for information on setting up your first page.
-
-## Who should use Evergreen
-
-Evergreen serves as a resource for:
-
-- WRAP's internal design and development teams
-- Partner organizations collaborating on WRAP initiatives
-- External suppliers and agencies contributing to WRAP projects
-- Anyone building digital experiences within the WRAP ecosystem
-
-## How to get started
-
-Evergreen provides tools for both designers and developers:
-
-- **Figma Resources:** Design with our component library, design tokens, and templates to create experiences that align with WRAP's visual identity.
-- **[Storybook Components](https://evergreen.wrap.ngo/):** Build interfaces efficiently with our coded components, complete with documentation, usage guidelines, and examples.
-- **[Brand Guidelines](https://brand.wrap.ngo):** Access WRAP's complete brand guidelines on Frontify, including logos, tone of voice, photography direction, and printed media.
-
-By using these resources, you can create experiences that feel cohesive and authentic to the WRAP brand while saving time on your projects.
+See the [example directory (`./example`)](https://github.com/wrap-org/evergreen/tree/main/example) for a working code example using Vite or head over to the [page setup guide](https://evergreen.wrap.ngo/?path=/docs/guides-page-setup--docs) for information on setting up your first page.
 
 ## Contributing
 

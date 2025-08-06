@@ -1,0 +1,13 @@
+{
+  "name": "evergreen-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@wrap.ngo/evergreen": "^1.0.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.6"
+  }
+}
