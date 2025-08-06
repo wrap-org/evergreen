@@ -40,9 +40,9 @@ By using these resources, you can create experiences that feel cohesive and auth
 
 Evergreen is distributed as an [NPM package](https://www.npmjs.com/package/@wrap.ngo/evergreen?activeTab=readme). The package contains exports for:
 
-- Styles (@wrap.ngo/evergreen/styles) CSS to import global Evergreen styles
-- Fonts (@wrap.ngo/evergreen/fonts) optional CSS to import Evergreen fonts
-- Components (@wrap.ngo/evergreen/components) JS to register Evergreen components
+- Styles (`@wrap.ngo/evergreen/styles`) CSS to import global Evergreen styles
+- Fonts (`@wrap.ngo/evergreen/fonts`) optional CSS to import Evergreen fonts
+- Components (`@wrap.ngo/evergreen/components`) JS to register Evergreen components
 
 ### No build tools route
 
