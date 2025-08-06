@@ -36,9 +36,9 @@ jobs:
           node-version: ${{ matrix.version }}
           cache: npm
       - run: npm ci
-      - run: npm run build-storybook
+      - run: npm run build:storybook
       - run: npx playwright install --with-deps
-      - run: npm run test-storybook
+      - run: npm run test:storybook
   lint:
     name: 🧹 Lint
     runs-on: ubuntu-latest

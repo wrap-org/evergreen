@@ -1,71 +1,70 @@
-#!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-var-requires */
+import autoprefixer from 'autoprefixer';
+import * as esbuild from 'esbuild';
+import { copy } from 'esbuild-plugin-copy';
+import { sassPlugin } from 'esbuild-sass-plugin';
+import postcss from 'postcss';
 
-const path = require('path');
+import pkg from '../package.json' with { type: 'json' };
 
-const babel = require('@rollup/plugin-babel').default;
-const commonjs = require('@rollup/plugin-commonjs');
-const resolve = require('@rollup/plugin-node-resolve').default;
-const typescript = require('@rollup/plugin-typescript').default;
-const rollup = require('rollup');
-const copy = require('rollup-plugin-copy');
-const postcss = require('rollup-plugin-postcss');
+import { globSvgPlugin } from './esbuild-plugin-glob-svg.js';
 
-// see below for details on the options
-const inputOptions = {
-  input: path.resolve(__dirname, '../src/index.tsx'),
-  external: ['react'],
+const banner = `/*! ${pkg.name} v${pkg.version} | ${pkg.homepage} */`;
+
+// Build ESM version
+await esbuild.build({
+  entryPoints: ['src/index.ts'],
+  outfile: 'dist/esm/index.js',
+  banner: { js: banner },
+  bundle: true,
+  write: true,
+  format: 'esm',
+  platform: 'neutral',
+  target: 'es2020',
+  plugins: [globSvgPlugin()],
+});
+
+// Build CJS version
+await esbuild.build({
+  entryPoints: ['src/index.ts'],
+  outfile: 'dist/cjs/index.js',
+  banner: { js: banner },
+  bundle: true,
+  write: true,
+  format: 'cjs',
+  platform: 'node',
+  target: 'es2020',
+  plugins: [globSvgPlugin()],
+});
+
+// Build CSS styles
+await esbuild.build({
+  entryPoints: ['src/styles/**/*.scss'],
+  outbase: 'src',
+  outdir: 'dist',
+  banner: { css: banner },
+  bundle: true,
+  write: true,
+  // Prevent esbuild trying to resolve these font files
+  external: [
+    '/fonts/MarrSansCondensed-Regular-Web.woff',
+    '/fonts/MarrSansCondensed-Regular-Web.woff2',
+    '/fonts/MarrSansCondensed-Bold-Web.woff',
+    '/fonts/MarrSansCondensed-Bold-Web.woff2',
+  ],
   plugins: [
-    resolve(),
-    typescript(),
-    commonjs({
-      include: /node_modules/,
-      requireReturnsDefault: 'auto',
+    sassPlugin({
+      async transform(source) {
+        const { css } = await postcss([autoprefixer]).process(source, {
+          from: undefined, // Including "from" voids warnings about source maps
+        });
+        return css;
+      },
     }),
-    babel({
-      exclude: 'node_modules/**',
-      presets: ['@babel/preset-env', '@babel/preset-react'],
-      babelHelpers: 'bundled',
-    }),
-    postcss({
-      modules: true,
-      extract: 'components.css',
-      minimize: true,
-    }),
-    // Get the custom icons
     copy({
-      targets: [
-        {
-          src: 'src/components/content/Icon/custom-icons/**/*',
-          dest: 'dist/custom-icons',
-        },
-        {
-          src: 'src/assets/fonts/**/*',
-          dest: 'dist/fonts',
-        },
-      ],
+      assets: {
+        from: ['./src/assets/**/*'],
+        to: ['./assets'],
+      },
     }),
   ],
-};
-
-const outputOptions = [
-  {
-    file: 'dist/index.cjs.js',
-    format: 'cjs',
-  },
-  {
-    file: 'dist/index.esm.js',
-    format: 'esm',
-  },
-];
-
-async function build() {
-  // create bundle
-  const bundle = await rollup.rollup(inputOptions);
-  // loop through the options and write individual bundles
-  outputOptions.forEach(async (options) => {
-    await bundle.write(options);
-  });
-}
-
-build();
+});

@@ -9,7 +9,7 @@ export interface SectionImgAttributes {
 }
 
 @customElement('evg-section-img')
-export class App extends LitElement {
+export class SectionImg extends LitElement {
   static readonly properties = {
     treatment: { type: String, reflect: true, default: 'dark' },
   };

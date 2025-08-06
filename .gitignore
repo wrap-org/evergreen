@@ -1,7 +1,7 @@
 node_modules
 storybook-static
 dist
-src/index.tsx
+src/index.ts
 *.log
 .vscode/*
 
