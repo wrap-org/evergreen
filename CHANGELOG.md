@@ -1,3 +1,37 @@
+## [2.0.0](https://github.com/wrap-org/evergreen/compare/v1.0.0...v2.0.0) (2025-08-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* update help text to sentiment colors
+* update alert colors to just sentiment colors
+* update state tokens to sentiment
+* evg-alert type changed to variant and more colors
+
+### Features
+
+* evg-alert type changed to variant and more colors ([d0b10b0](https://github.com/wrap-org/evergreen/commit/d0b10b01ed97a75d4c3289f7fd2dbc97fd0f4751))
+* npm package ([ce0be2c](https://github.com/wrap-org/evergreen/commit/ce0be2c5a75e34e004d7155686f9a2011823f07a))
+* remove use of lightest sentiment colors ([7b987f4](https://github.com/wrap-org/evergreen/commit/7b987f46fcea432640e8bc4717e86f833616c343))
+* rename help text type to variant ([c63af61](https://github.com/wrap-org/evergreen/commit/c63af61a7b4ab4397d359e39c7dae5e7b4175dfc))
+* update alert colors to just sentiment colors ([48e97c8](https://github.com/wrap-org/evergreen/commit/48e97c89be4de9f5db7ce8e5a7cba6d706093cea))
+* update help text to sentiment colors ([93ffc93](https://github.com/wrap-org/evergreen/commit/93ffc93c05d51e62ce691b82cf0cbe23cfdee82f))
+* update state tokens to sentiment ([6695c32](https://github.com/wrap-org/evergreen/commit/6695c32339f0e437ffd2fd253f73d38ab75357c8))
+* update wrap office address ([d668538](https://github.com/wrap-org/evergreen/commit/d668538a48eeaed90c8e8c2cea3f6ff2955ee276))
+
+
+### Bug Fixes
+
+* browser compatible build using esbuild ([cd97174](https://github.com/wrap-org/evergreen/commit/cd9717458ee56b0de85cd78844a26300ea34045c))
+* storybook build ([ea72df5](https://github.com/wrap-org/evergreen/commit/ea72df5d88d075d561881ef23000a0e7fd6c9645))
+* use input border colors for input ([95fbff2](https://github.com/wrap-org/evergreen/commit/95fbff2efbeecfa73a2490422cf88554ef80d195))
+
+
+### Reverts
+
+* moving from use to import ([d86b7be](https://github.com/wrap-org/evergreen/commit/d86b7bed9e0fb4ac09deec8deb506aa6199ad374))
+* moving from use to import ([b6a4089](https://github.com/wrap-org/evergreen/commit/b6a4089d6f9e34b07a4c4c4d0a7590494d3e945d))
+
 ## [2.1.0](https://github.com/wrap-org/evergreen/compare/v2.0.0...v2.1.0) (2025-06-19)
 
 
