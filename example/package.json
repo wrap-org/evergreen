@@ -8,6 +8,6 @@
     "@wrap.ngo/evergreen": "^1.0.1"
   },
   "devDependencies": {
-    "vite": "^7.0.7"
+    "vite": "^7.0.8"
   }
 }
