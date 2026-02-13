@@ -1,4 +1,4 @@
-import { useOf } from '@storybook/blocks';
+import { useOf } from '@storybook/addon-docs/blocks';
 import React, { useEffect, useState } from 'react';
 
 import '../../src/components/composition/Grid/Grid';

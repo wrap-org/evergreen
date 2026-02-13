@@ -1,4 +1,5 @@
-import { StoryFn } from '@storybook/react';
+import { a11yButton } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import startCase from 'lodash/startCase';
 import React from 'react';
 
@@ -56,6 +57,10 @@ export const Button: StoryFn = (props) => (
     <button type="button">Button</button>
   </evg-button>
 );
+
+Button.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step });
+};
 
 export const AnchorButton: StoryFn = (props) => (
   <evg-button {...props}>

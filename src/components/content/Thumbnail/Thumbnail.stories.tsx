@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 const sizes = ['sm', 'md', 'lg', 'xl'] as const;

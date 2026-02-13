@@ -1,4 +1,5 @@
-import { StoryFn } from '@storybook/react';
+import { a11yLink } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 const description = `
@@ -37,3 +38,7 @@ export const SkipLink: StoryFn = (props) => (
     </main>
   </>
 );
+
+SkipLink.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
+};

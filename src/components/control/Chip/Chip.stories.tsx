@@ -1,4 +1,8 @@
-import { StoryFn } from '@storybook/react';
+import {
+  a11yButton,
+  a11yCheckbox,
+} from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React, { useState } from 'react';
 
 import './Chip';
@@ -47,6 +51,10 @@ Chip.args = {
   variant: 'light',
 };
 
+Chip.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step });
+};
+
 export const ControlledChip: StoryFn = () => {
   const [selected, setSelected] = useState(false);
   return (
@@ -68,6 +76,10 @@ ControlledChip.parameters = {
       story: `Chips state can be controlled by the <code>aria-pressed</code> attribute, on the button sub-element.`,
     },
   },
+};
+
+ControlledChip.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step, isToggle: true });
 };
 
 export const CheckboxChip: StoryFn = () => (
@@ -103,4 +115,8 @@ CheckboxChip.parameters = {
         'Chips can wrap a button or link, or they can wrap a checkbox input to offer better accessibility when they are used as filter options',
     },
   },
+};
+
+CheckboxChip.play = async ({ canvasElement, step }) => {
+  await a11yCheckbox({ canvasElement, step });
 };

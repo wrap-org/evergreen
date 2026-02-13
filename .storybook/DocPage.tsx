@@ -7,7 +7,7 @@ import {
   Stories,
   useOf,
   Description,
-} from '@storybook/blocks';
+} from '@storybook/addon-docs/blocks';
 import { PreparedStory, Renderer } from 'storybook/internal/types';
 import Related from './blocks/Related';
 import Meta from './blocks/Meta';

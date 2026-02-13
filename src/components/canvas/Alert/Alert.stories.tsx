@@ -1,4 +1,5 @@
-import { StoryFn, Meta } from '@storybook/react';
+import { a11yAlert } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import React from 'react';
 
 const description = `
@@ -63,13 +64,17 @@ export default {
 } satisfies Meta;
 
 export const Alert: StoryFn = ({ ...props }) => (
-  <evg-alert {...props}>
+  <evg-alert {...props} role="alert">
     <docs-placeholder>Alert content</docs-placeholder>
   </evg-alert>
 );
 
 Alert.args = {
   type: 'postive',
+};
+
+Alert.play = async ({ canvasElement, step }) => {
+  await a11yAlert({ canvasElement, step });
 };
 
 export const Variants: StoryFn = () => (

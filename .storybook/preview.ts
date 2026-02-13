@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react'
+import type { Preview } from '@storybook/react-vite'
 import { DocPage } from './DocPage';
 import tokens from '@wrap.ngo/tokens/dist/index.css?raw'
 
@@ -52,7 +52,7 @@ const preview: Preview = {
       page: ({ of }: { of: any }) => DocPage({ of }),
     },
     backgrounds: {
-      disable: true,
+      disabled: true,
     },
     designTokenTables: {
       tokens: [
@@ -72,7 +72,7 @@ const preview: Preview = {
       },
     },
     viewport: {
-      viewports: {
+      options: {
         aaMinimum: {
           name: 'AA minimum small mobile',
           styles: {

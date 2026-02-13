@@ -1,5 +1,7 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react-vite';
 import React, { useEffect, useState, useId } from 'react';
+
+import { a11yModal } from '@/lib/a11y-modal';
 
 const description = `
 A flexible panel that slides in from the edge of the screen, providing additional
@@ -71,7 +73,7 @@ const Template: StoryFn = (args) => {
 
   return (
     <evg-drawer {...args}>
-      <dialog>
+      <dialog aria-modal="true" aria-label="Main menu">
         <evg-section padding="md">
           <evg-wrapper>
             <evg-grid justify-content="flex-end" class="evg-spacing-bottom-lg">
@@ -266,3 +268,7 @@ const Template: StoryFn = (args) => {
 };
 
 export const Drawer = Template.bind({});
+
+Drawer.play = async ({ canvasElement, step }) => {
+  await a11yModal({ canvasElement, step });
+};

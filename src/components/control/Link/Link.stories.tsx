@@ -1,4 +1,5 @@
-import { StoryFn } from '@storybook/react';
+import { a11yLink } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 import './Link';
@@ -38,6 +39,10 @@ export const Link: StoryFn = (props) => (
 
 Link.args = {
   variant: 'underline',
+};
+
+Link.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
 };
 
 export const ButtonLink: StoryFn = (props) => (
