@@ -94,6 +94,7 @@
     "react-a11y-dialog": "^7.4.0",
     "react-minimal-pie-chart": "^9.1.0"
   },
+  "sideEffects": false,
   "readme": "README.md",
   "license": "MIT",
   "homepage": "https://evergreen.wrap.ngo",

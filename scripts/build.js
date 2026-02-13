@@ -16,6 +16,7 @@ await esbuild.build({
   outfile: 'dist/esm/index.js',
   banner: { js: banner },
   bundle: true,
+  minify: true,
   write: true,
   format: 'esm',
   platform: 'neutral',
@@ -29,6 +30,7 @@ await esbuild.build({
   outfile: 'dist/cjs/index.js',
   banner: { js: banner },
   bundle: true,
+  minify: true,
   write: true,
   format: 'cjs',
   platform: 'node',
@@ -43,6 +45,7 @@ await esbuild.build({
   outdir: 'dist',
   banner: { css: banner },
   bundle: true,
+  minify: true,
   write: true,
   // Prevent esbuild trying to resolve these font files
   external: [
