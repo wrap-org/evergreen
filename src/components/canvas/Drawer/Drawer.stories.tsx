@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react-vite';
 import React, { useEffect, useState, useId } from 'react';
 
-import { a11yModal } from '@/lib/a11y-modal';
+import { a11yModal } from '@/lib/a11y-tests/a11y-modal';
 
 const description = `
 A flexible panel that slides in from the edge of the screen, providing additional

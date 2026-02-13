@@ -12,6 +12,7 @@
     "src/**/*.stories.tsx",
     "src/**/*.test.ts",
     "src/**/*.test.tsx",
+    "src/lib/a11y-tests/*.*",
     "src/docs/**/*",
     "dist",
     "node_modules",
