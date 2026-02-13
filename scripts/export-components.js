@@ -29,11 +29,12 @@ function findTsFiles(dir, extensions = ['.ts', '.tsx']) {
         entry.isFile() &&
         extensions.some((ext) => entry.name.endsWith(ext))
       ) {
-        // Skip story files, test files, and spec files
+        // Skip story files, test files, spec files, and lazy-loaded icon data files
         if (
           !entry.name.includes('.stories.') &&
           !entry.name.includes('.test.') &&
-          !entry.name.includes('.spec.')
+          !entry.name.includes('.spec.') &&
+          !/^(functional|distinctive)-icons\.ts$/.test(entry.name)
         ) {
           files.push(fullPath);
         }
