@@ -1,5 +1,6 @@
 import {
   a11yButton,
+  a11yLink,
   a11yCheckbox,
 } from '@etchteam/storybook-addon-a11y-interaction-tests';
 import { StoryFn } from '@storybook/react-vite';
@@ -53,6 +54,22 @@ Chip.args = {
 
 Chip.play = async ({ canvasElement, step }) => {
   await a11yButton({ canvasElement, step });
+};
+
+export const AnchorChip: StoryFn = (args) => {
+  return (
+    <evg-chip {...args}>
+      <a href="https://wrap.ngo">Chip</a>
+    </evg-chip>
+  );
+};
+
+AnchorChip.args = {
+  variant: 'light',
+};
+
+AnchorChip.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
 };
 
 export const ControlledChip: StoryFn = () => {
