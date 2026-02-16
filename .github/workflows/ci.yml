@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        version: [18, 20, 22]
+        version: [20, 22]
     name: 🏗️ Build
     runs-on: ubuntu-latest
     permissions:
@@ -26,7 +26,7 @@ jobs:
   test:
     strategy:
       matrix:
-        version: [18, 20, 22]
+        version: [20, 22]
     name: 🧪 A11y tests
     runs-on: ubuntu-latest
     steps:

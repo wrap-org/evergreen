@@ -2,6 +2,9 @@
 // eslint-disable-next-line spaced-comment
 /// <reference types="vite/client" />
 
+import { distinctiveIcons } from './distinctive-icons';
+import { functionalIcons } from './functional-icons';
+
 const formatIcons = (imports) =>
   Object.entries(imports).reduce<Record<string, string>>(
     (acc, [path, content]) => {
@@ -18,20 +21,9 @@ const svgImports = import.meta.glob('./icons/*.svg', {
   query: '?raw',
   import: 'default',
 });
-const functionalSvgImport = import.meta.glob('./functional/*.svg', {
-  eager: true,
-  query: '?raw',
-  import: 'default',
-});
-const distinctiveSvgImport = import.meta.glob('./distinctive/*.svg', {
-  eager: true,
-  query: '?raw',
-  import: 'default',
-});
 
 export const icons = formatIcons(svgImports);
-export const functionalIcons = formatIcons(functionalSvgImport);
-export const distinctiveIcons = formatIcons(distinctiveSvgImport);
+export { functionalIcons, distinctiveIcons };
 
 export const iconKeys = Object.keys(icons) as (keyof typeof icons)[];
 export const functionalIconKeys = Object.keys(

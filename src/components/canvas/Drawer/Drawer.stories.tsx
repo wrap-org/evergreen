@@ -1,4 +1,5 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { a11yModal } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { Meta, StoryFn } from '@storybook/react-vite';
 import React, { useEffect, useState, useId } from 'react';
 
 const description = `
@@ -71,7 +72,7 @@ const Template: StoryFn = (args) => {
 
   return (
     <evg-drawer {...args}>
-      <dialog>
+      <dialog aria-modal="true" aria-label="Main menu">
         <evg-section padding="md">
           <evg-wrapper>
             <evg-grid justify-content="flex-end" class="evg-spacing-bottom-lg">
@@ -266,3 +267,7 @@ const Template: StoryFn = (args) => {
 };
 
 export const Drawer = Template.bind({});
+
+Drawer.play = async ({ canvasElement, step }) => {
+  await a11yModal({ canvasElement, step });
+};

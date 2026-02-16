@@ -10,7 +10,7 @@
     "emitDeclarationOnly": false,
     "experimentalDecorators": true,
     "jsx": "react",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noImplicitAny": false,
     "outDir": "dist",
     "paths": {

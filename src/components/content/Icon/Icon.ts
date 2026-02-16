@@ -9,8 +9,6 @@ import {
   IconName,
   FunctionalIconName,
   DistinctiveIconName,
-  functionalIcons,
-  distinctiveIcons,
 } from './icons';
 
 export interface IconAttributes {
@@ -61,18 +59,54 @@ export class Icon extends LitElement {
     }
   `;
 
+  // Static cache shared across all Icon instances
+  private static _functionalIcons?: Record<string, string>;
+  private static _distinctiveIcons?: Record<string, string>;
+  private static _functionalPromise?: Promise<Record<string, string>>;
+  private static _distinctivePromise?: Promise<Record<string, string>>;
+
   constructor() {
     super();
   }
 
-  private get iconSet() {
+  private get iconSet(): Record<string, string> {
     if (this.set === 'functional') {
-      return functionalIcons;
+      return Icon._functionalIcons ?? {};
     }
     if (this.set === 'distinctive') {
-      return distinctiveIcons;
+      return Icon._distinctiveIcons ?? {};
     }
     return icons;
+  }
+
+  private async loadIconSet() {
+    if (this.set === 'functional' && !Icon._functionalIcons) {
+      if (!Icon._functionalPromise) {
+        Icon._functionalPromise = import('./functional-icons').then(
+          (m) => m.functionalIcons,
+        );
+      }
+      Icon._functionalIcons = await Icon._functionalPromise;
+      this.requestUpdate();
+    } else if (this.set === 'distinctive' && !Icon._distinctiveIcons) {
+      if (!Icon._distinctivePromise) {
+        Icon._distinctivePromise = import('./distinctive-icons').then(
+          (m) => m.distinctiveIcons,
+        );
+      }
+      Icon._distinctiveIcons = await Icon._distinctivePromise;
+      this.requestUpdate();
+    }
+  }
+
+  updated(changedProperties: Map<string, unknown>) {
+    super.updated(changedProperties);
+    if (
+      (changedProperties.has('set') || changedProperties.has('icon')) &&
+      (this.set === 'functional' || this.set === 'distinctive')
+    ) {
+      this.loadIconSet();
+    }
   }
 
   render() {

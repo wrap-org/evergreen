@@ -1,4 +1,8 @@
-import { StoryFn } from '@storybook/react';
+import {
+  a11yRadio,
+  a11yCheckbox,
+} from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 import './RadioCheckbox';
@@ -32,7 +36,7 @@ export default {
 };
 
 export const Radio: StoryFn = (props) => (
-  <>
+  <div role="radiogroup" aria-label="Group label">
     <evg-radio-checkbox class="evg-spacing-bottom-sm" {...props}>
       <label>
         <input type="radio" name="my-radio" value="yes" defaultChecked />
@@ -47,15 +51,19 @@ export const Radio: StoryFn = (props) => (
     </evg-radio-checkbox>
     <evg-radio-checkbox {...props}>
       <label>
-        <input type="radio" name="my-radio" value="maybe" disabled />
+        <input type="radio" name="my-radio" value="maybe" />
         Item label three
       </label>
     </evg-radio-checkbox>
-  </>
+  </div>
 );
 
+Radio.play = async ({ canvasElement, step }) => {
+  await a11yRadio({ canvasElement, step });
+};
+
 export const Checkbox: StoryFn = (props) => (
-  <>
+  <div role="group" aria-label="Group label">
     <evg-radio-checkbox class="evg-spacing-bottom-sm" {...props}>
       <label>
         <input type="checkbox" name="my-checkbox" value="yes" defaultChecked />
@@ -74,5 +82,9 @@ export const Checkbox: StoryFn = (props) => (
         Item label three
       </label>
     </evg-radio-checkbox>
-  </>
+  </div>
 );
+
+Checkbox.play = async ({ canvasElement, step }) => {
+  await a11yCheckbox({ canvasElement, step });
+};

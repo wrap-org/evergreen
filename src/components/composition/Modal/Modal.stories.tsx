@@ -1,5 +1,6 @@
-import { Meta, StoryFn } from '@storybook/react';
-import React, { useRef } from 'react';
+import { a11yModal } from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { Meta, StoryFn } from '@storybook/react-vite';
+import React, { useRef, useEffect } from 'react';
 
 import '../../canvas/Card/Card';
 
@@ -34,6 +35,13 @@ export default {
 
 export const Modal: StoryFn = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const modal = document.querySelector(
+      'evg-modal dialog',
+    ) as HTMLDialogElement;
+    modal.showModal();
+  }, []);
   return (
     <>
       <evg-button>
@@ -50,17 +58,17 @@ export const Modal: StoryFn = () => {
         </button>
       </evg-button>
       <evg-modal>
-        <dialog ref={dialogRef}>
+        <dialog aria-modal="true" aria-labelledby="modal-title" ref={dialogRef}>
           <evg-wrapper size="xs" gutter="none">
             <evg-box padding="md" radius="md">
               <evg-grid>
                 <evg-grid-item grow>
-                  <h3>Modal title</h3>
+                  <h3 id="modal-title">Modal title</h3>
                 </evg-grid-item>
                 <evg-grid-item>
                   <form method="dialog">
                     <evg-button width="square" variant="ghost">
-                      <button>
+                      <button type="button" aria-label="Close">
                         <evg-icon icon="close" />
                       </button>
                     </evg-button>
@@ -77,4 +85,8 @@ export const Modal: StoryFn = () => {
       </evg-modal>
     </>
   );
+};
+
+Modal.play = async ({ canvasElement, step }) => {
+  await a11yModal({ canvasElement, step });
 };

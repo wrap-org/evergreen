@@ -1,4 +1,8 @@
-import { StoryFn } from '@storybook/react';
+import {
+  a11yButton,
+  a11yLink,
+} from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import startCase from 'lodash/startCase';
 import React from 'react';
 
@@ -57,11 +61,19 @@ export const Button: StoryFn = (props) => (
   </evg-button>
 );
 
+Button.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step });
+};
+
 export const AnchorButton: StoryFn = (props) => (
   <evg-button {...props}>
     <a href="https://wrap.ngo">Anchor</a>
   </evg-button>
 );
+
+AnchorButton.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
+};
 
 export const Variants: StoryFn = () => (
   <evg-grid wrap="wrap" align-items="center">

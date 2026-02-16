@@ -1,4 +1,8 @@
-import { StoryFn } from '@storybook/react';
+import {
+  a11yLink,
+  a11yButton,
+} from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 import './Link';
@@ -40,6 +44,10 @@ Link.args = {
   variant: 'underline',
 };
 
+Link.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
+};
+
 export const ButtonLink: StoryFn = (props) => (
   <evg-link {...props}>
     <button type="button">Link text</button>
@@ -48,4 +56,20 @@ export const ButtonLink: StoryFn = (props) => (
 
 ButtonLink.args = {
   variant: 'underline',
+};
+
+export const Chip: StoryFn = (args) => {
+  return (
+    <evg-chip {...args}>
+      <button type="button">Chip</button>
+    </evg-chip>
+  );
+};
+
+Chip.args = {
+  variant: 'light',
+};
+
+ButtonLink.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step });
 };

@@ -10,12 +10,14 @@ import { globSvgPlugin } from './esbuild-plugin-glob-svg.js';
 
 const banner = `/*! ${pkg.name} v${pkg.version} | ${pkg.homepage} */`;
 
-// Build ESM version
+// Build ESM version with code splitting for lazy-loaded icon sets
 await esbuild.build({
   entryPoints: ['src/index.ts'],
-  outfile: 'dist/esm/index.js',
+  outdir: 'dist/esm',
   banner: { js: banner },
   bundle: true,
+  splitting: true,
+  minify: false,
   write: true,
   format: 'esm',
   platform: 'neutral',
@@ -29,6 +31,7 @@ await esbuild.build({
   outfile: 'dist/cjs/index.js',
   banner: { js: banner },
   bundle: true,
+  minify: false,
   write: true,
   format: 'cjs',
   platform: 'node',
@@ -43,12 +46,11 @@ await esbuild.build({
   outdir: 'dist',
   banner: { css: banner },
   bundle: true,
+  minify: true,
   write: true,
   // Prevent esbuild trying to resolve these font files
   external: [
-    '/fonts/MarrSansCondensed-Regular-Web.woff',
     '/fonts/MarrSansCondensed-Regular-Web.woff2',
-    '/fonts/MarrSansCondensed-Bold-Web.woff',
     '/fonts/MarrSansCondensed-Bold-Web.woff2',
   ],
   plugins: [

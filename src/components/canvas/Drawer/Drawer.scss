@@ -10,6 +10,7 @@ evg-drawer {
     border: 0 none;
     bottom: 0;
     box-shadow: var(--evg-shadow);
+    content-visibility: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -24,6 +25,7 @@ evg-drawer {
     top: 0;
     transform: translateX(100%);
     transition:
+      content-visibility var(--evg-transition-enter) allow-discrete,
       opacity var(--evg-transition-enter),
       display var(--evg-transition-enter) allow-discrete,
       overlay var(--evg-transition-enter) allow-discrete,
@@ -40,6 +42,7 @@ evg-drawer {
     }
 
     &[open] {
+      content-visibility: visible;
       opacity: 1;
       pointer-events: auto;
       transform: none;

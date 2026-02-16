@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react';
+import { Meta } from '@storybook/react-vite';
 import classNames from 'classnames';
 import React from 'react';
 

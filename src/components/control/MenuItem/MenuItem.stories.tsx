@@ -1,4 +1,8 @@
-import { StoryFn } from '@storybook/react';
+import {
+  a11yButton,
+  a11yLink,
+} from '@etchteam/storybook-addon-a11y-interaction-tests';
+import { StoryFn } from '@storybook/react-vite';
 import React from 'react';
 
 import { themes } from '@/lib/theme';
@@ -30,11 +34,19 @@ export const MenuItem: StoryFn = (props) => (
   </evg-menu-item>
 );
 
+MenuItem.play = async ({ canvasElement, step }) => {
+  await a11yButton({ canvasElement, step });
+};
+
 export const AnchorMenuItem: StoryFn = (props) => (
   <evg-menu-item {...props}>
     <a href="https://wrap.ngo">Menu item title</a>
   </evg-menu-item>
 );
+
+AnchorMenuItem.play = async ({ canvasElement, step }) => {
+  await a11yLink({ canvasElement, step });
+};
 
 export const WithIcons: StoryFn = (props) => (
   <>
