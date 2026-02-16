@@ -81,7 +81,7 @@ export const Variants: StoryFn = () => (
   <evg-grid wrap="wrap" direction="column">
     {variantOptions.map((variant) => (
       <evg-grid-item key={variant} small-mobile="12">
-        <evg-alert variant={variant}>
+        <evg-alert variant={variant} role="alert">
           <evg-grid wrap="wrap" align-items="center">
             <evg-grid-item grow shrink small-mobile="12" large-mobile="auto">
               <h4 className="evg-text-size-body-sm evg-text-family-body">

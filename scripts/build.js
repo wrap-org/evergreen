@@ -50,9 +50,7 @@ await esbuild.build({
   write: true,
   // Prevent esbuild trying to resolve these font files
   external: [
-    '/fonts/MarrSansCondensed-Regular-Web.woff',
     '/fonts/MarrSansCondensed-Regular-Web.woff2',
-    '/fonts/MarrSansCondensed-Bold-Web.woff',
     '/fonts/MarrSansCondensed-Bold-Web.woff2',
   ],
   plugins: [

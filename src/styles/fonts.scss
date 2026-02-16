@@ -7,9 +7,8 @@ $evg-font-path: '/fonts' !default;
   font-family: 'Marr Sans Cond Web';
   font-style: normal;
   font-weight: 400;
-  src:
-    url('#{$evg-font-path}/MarrSansCondensed-Regular-Web.woff') format('woff'),
-    url('#{$evg-font-path}/MarrSansCondensed-Regular-Web.woff2') format('woff2');
+  src: url('#{$evg-font-path}/MarrSansCondensed-Regular-Web.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -17,7 +16,5 @@ $evg-font-path: '/fonts' !default;
   font-family: 'Marr Sans Cond Web';
   font-style: normal;
   font-weight: 700;
-  src:
-    url('#{$evg-font-path}/MarrSansCondensed-Bold-Web.woff') format('woff'),
-    url('#{$evg-font-path}/MarrSansCondensed-Bold-Web.woff2') format('woff2');
+  src: url('#{$evg-font-path}/MarrSansCondensed-Bold-Web.woff2') format('woff2');
 }
