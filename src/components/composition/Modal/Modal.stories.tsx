@@ -1,7 +1,6 @@
+import { a11yModal } from '@etchteam/storybook-addon-a11y-interaction-tests';
 import { Meta, StoryFn } from '@storybook/react-vite';
 import React, { useRef, useEffect } from 'react';
-
-import { a11yModal } from '@/lib/a11y-tests/a11y-modal';
 
 import '../../canvas/Card/Card';
 
