@@ -15,7 +15,8 @@ evg-chip {
 
   button,
   a,
-  label {
+  label,
+  span {
     align-items: center;
     appearance: none;
     background: var(--_background);
