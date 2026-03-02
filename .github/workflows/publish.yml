@@ -25,10 +25,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm audit signatures
       - run: npm run build
       - env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
         run: npm run release
