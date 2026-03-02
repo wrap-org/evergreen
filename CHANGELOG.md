@@ -1,3 +1,11 @@
+## 1.2.0 (2026-03-02)
+
+* Merge branch 'main' into feature/setup-trusted-publisher ([7940c87](https://github.com/wrap-org/evergreen/commit/7940c87))
+* Merge pull request #131 from wrap-org/dependabot/npm_and_yarn/rollup-4.59.0 ([fc0199c](https://github.com/wrap-org/evergreen/commit/fc0199c)), closes [#131](https://github.com/wrap-org/evergreen/issues/131)
+* Merge pull request #132 from wrap-org/feature/setup-trusted-publisher ([8314569](https://github.com/wrap-org/evergreen/commit/8314569)), closes [#132](https://github.com/wrap-org/evergreen/issues/132)
+* feat: set up trusted publisher ([87d1b60](https://github.com/wrap-org/evergreen/commit/87d1b60))
+* chore(deps): bump rollup from 4.35.0 to 4.59.0 ([3c066ed](https://github.com/wrap-org/evergreen/commit/3c066ed))
+
 ## 1.1.0 (2026-03-02)
 
 * Merge branch 'main' into docs/basic-example ([c56bc2c](https://github.com/wrap-org/evergreen/commit/c56bc2c))
