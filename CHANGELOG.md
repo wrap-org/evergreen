@@ -1,3 +1,14 @@
+## <small>1.2.1 (2026-03-21)</small>
+
+* Merge pull request #133 from wrap-org/dependabot/npm_and_yarn/immutable-5.1.5 ([127c1b0](https://github.com/wrap-org/evergreen/commit/127c1b0)), closes [#133](https://github.com/wrap-org/evergreen/issues/133)
+* Merge pull request #134 from wrap-org/dependabot/npm_and_yarn/multi-cc382f683c ([8baebee](https://github.com/wrap-org/evergreen/commit/8baebee)), closes [#134](https://github.com/wrap-org/evergreen/issues/134)
+* Merge pull request #135 from wrap-org/dependabot/npm_and_yarn/multi-b0fb9bdd2b ([1e06173](https://github.com/wrap-org/evergreen/commit/1e06173)), closes [#135](https://github.com/wrap-org/evergreen/issues/135)
+* Merge pull request #136 from wrap-org/wrap-2181-evergreen-duplicate-element-registration-issues ([c03f5b3](https://github.com/wrap-org/evergreen/commit/c03f5b3)), closes [#136](https://github.com/wrap-org/evergreen/issues/136)
+* fix: guard against duplicate custom element registration ([4d56a26](https://github.com/wrap-org/evergreen/commit/4d56a26))
+* chore(deps): bump immutable from 5.0.3 to 5.1.5 ([3ea25ab](https://github.com/wrap-org/evergreen/commit/3ea25ab))
+* chore(deps): bump tar and npm ([b2df9ca](https://github.com/wrap-org/evergreen/commit/b2df9ca))
+* chore(deps): bump undici and @actions/http-client ([d5c16f0](https://github.com/wrap-org/evergreen/commit/d5c16f0))
+
 ## 1.2.0 (2026-03-02)
 
 * Merge branch 'main' into feature/setup-trusted-publisher ([7940c87](https://github.com/wrap-org/evergreen/commit/7940c87))
