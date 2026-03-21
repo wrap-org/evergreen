@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { pulse } from '@/lib/pulse';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 import { JSXCustomElement } from '@/types/jsx-custom-element.type';
 
 export interface LoadingImgAttributes {
@@ -9,7 +9,7 @@ export interface LoadingImgAttributes {
   height?: string;
 }
 
-@customElement('evg-loading-img')
+@safeCustomElement('evg-loading-img')
 export class LoadingImg extends LitElement {
   static readonly properties = {
     width: {

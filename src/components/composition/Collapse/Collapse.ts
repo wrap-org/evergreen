@@ -1,13 +1,14 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 
+import { safeCustomElement } from '@/lib/safe-custom-element';
 import { JSXCustomElement } from '@/types/jsx-custom-element.type';
 
 export interface CollapseAttributes {
   open?: boolean;
 }
 
-@customElement('evg-collapse')
+@safeCustomElement('evg-collapse')
 export class Collapse extends LitElement {
   @property({ reflect: true, type: Boolean }) open?: boolean;
 

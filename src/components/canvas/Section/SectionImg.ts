@@ -1,14 +1,14 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 export interface SectionImgAttributes {
   text?: 'light' | 'dark';
   layout?: 'nested' | 'default';
 }
 
-@customElement('evg-section-img')
+@safeCustomElement('evg-section-img')
 export class SectionImg extends LitElement {
   static readonly properties = {
     treatment: { type: String, reflect: true, default: 'dark' },

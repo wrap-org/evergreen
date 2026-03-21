@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
+import { safeCustomElement } from '@/lib/safe-custom-element';
 import { HtmlBoolean } from '@/types/html-boolean.type';
 import { JSXCustomElement } from '@/types/jsx-custom-element.type';
 
@@ -9,7 +9,7 @@ export interface StickyAttributes {
   top?: string;
 }
 
-@customElement('evg-sticky')
+@safeCustomElement('evg-sticky')
 export class Sticky extends LitElement {
   static readonly properties = {
     top: {
