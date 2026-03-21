@@ -1,8 +1,8 @@
 import { LitElement, html, nothing, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 import {
   icons,
@@ -18,7 +18,7 @@ export interface IconAttributes {
   set?: 'default' | 'functional' | 'distinctive';
 }
 
-@customElement('evg-icon')
+@safeCustomElement('evg-icon')
 export class Icon extends LitElement {
   variant?: 'default' | 'circle';
   label?: string;

@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 export interface RadioCheckboxAttributes {
   state?: 'valid' | 'invalid';
 }
 
-@customElement('evg-radio-checkbox')
+@safeCustomElement('evg-radio-checkbox')
 export class RadioCheckbox extends LitElement {
   static readonly properties = {
     state: { type: String, reflect: true },

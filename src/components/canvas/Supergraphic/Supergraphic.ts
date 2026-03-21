@@ -1,8 +1,8 @@
 import { LitElement, css, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 import globe from './globe.svg?raw';
 
@@ -10,7 +10,7 @@ export interface SupergraphicAttributes {
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 }
 
-@customElement('evg-supergraphic')
+@safeCustomElement('evg-supergraphic')
 export class Supergraphic extends LitElement {
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 

@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { pulse } from '@/lib/pulse';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 import { HtmlBoolean } from '@/types/html-boolean.type';
 import { JSXCustomElement } from '@/types/jsx-custom-element.type';
 
@@ -9,7 +9,7 @@ export interface LoadingButtonAttributes {
   ariaHidden?: HtmlBoolean;
 }
 
-@customElement('evg-loading-button')
+@safeCustomElement('evg-loading-button')
 export class LoadingButton extends LitElement {
   static readonly properties = {
     ariaHidden: {

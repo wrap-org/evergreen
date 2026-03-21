@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 import { HtmlBoolean } from 'src/types/html-boolean.type';
 
@@ -15,7 +15,7 @@ export interface EnterAttributes {
   fill?: HtmlBoolean;
 }
 
-@customElement('evg-enter')
+@safeCustomElement('evg-enter')
 export class Enter extends LitElement {
   private observer?: IntersectionObserver;
   static readonly properties = {

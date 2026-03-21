@@ -1,9 +1,9 @@
 import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
 import { HtmlBoolean } from '../../../types/html-boolean.type';
 import { JSXCustomElement } from '../../../types/jsx-custom-element.type';
 import { Radius } from '../../../types/tokens.type';
+import { safeCustomElement } from '@/lib/safe-custom-element';
 
 export interface ImgAttributes {
   block?: HtmlBoolean;
@@ -14,7 +14,7 @@ export interface ImgAttributes {
   objectPosition?: string;
 }
 
-@customElement('evg-img')
+@safeCustomElement('evg-img')
 export class Img extends LitElement {
   static readonly properties = {
     ariaHidden: {
