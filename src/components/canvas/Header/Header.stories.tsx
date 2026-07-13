@@ -57,7 +57,7 @@ export default {
   },
 } satisfies Meta;
 
-const Template: StoryFn = ({ theme, compact, ...props }) => {
+const Template: StoryFn = ({ theme, compact, slot, ...props }) => {
   const [active, setActive] = useState('');
 
   const primary = [
@@ -80,7 +80,7 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
   ];
 
   return (
-    <>
+    <header slot={slot}>
       <evg-header class={`evg-theme-${theme}`} compact={compact} {...props}>
         <evg-header-logo>
           <a href="https://wrap.ngo">
@@ -189,7 +189,7 @@ const Template: StoryFn = ({ theme, compact, ...props }) => {
       <AboutUs open={active === 'about-us'} />
       <Regions open={active === 'regions'} />
       <Drawer />
-    </>
+    </header>
   );
 };
 

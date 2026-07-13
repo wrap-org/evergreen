@@ -34,50 +34,52 @@ export function CompactDark(props) {
   return <Header theme="forest" compact {...props} />;
 }
 
-export function Data(props) {
+export function Data({ slot, ...props }) {
   return (
-    <evg-header class="evg-theme-default" {...props}>
-      <evg-header-logo>
-        <a href="https://wrap.ngo">
-          <img
-            src="/images/logo/forest.svg"
-            alt="WRAP logo"
-            width="110"
-            height="32"
-            loading="eager"
-          />
-        </a>
-      </evg-header-logo>
-      <evg-header-primary-nav>
-        <nav aria-label="Main navigation">
-          <evg-menu-item>
-            <a href="https://wrap.ngo">
-              <evg-menu-item-content>Data stories</evg-menu-item-content>
-            </a>
-          </evg-menu-item>
-        </nav>
-      </evg-header-primary-nav>
-      <evg-header-secondary-nav>
-        <nav aria-label="Secondary navigation">
-          <evg-button>
-            <a href="https://wrap.ngo">
-              Go to main site
-              <evg-icon icon="external-link" />
-            </a>
-          </evg-button>
-        </nav>
-      </evg-header-secondary-nav>
-      <evg-header-mobile-nav>
-        <nav aria-label="Mobile navigation">
-          <evg-button>
-            <a href="https://wrap.ngo">
-              Main site
-              <evg-icon icon="external-link" />
-            </a>
-          </evg-button>
-        </nav>
-      </evg-header-mobile-nav>
-    </evg-header>
+    <header slot={slot}>
+      <evg-header class="evg-theme-default" {...props}>
+        <evg-header-logo>
+          <a href="https://wrap.ngo">
+            <img
+              src="/images/logo/forest.svg"
+              alt="WRAP logo"
+              width="110"
+              height="32"
+              loading="eager"
+            />
+          </a>
+        </evg-header-logo>
+        <evg-header-primary-nav>
+          <nav aria-label="Main navigation">
+            <evg-menu-item>
+              <a href="https://wrap.ngo">
+                <evg-menu-item-content>Data stories</evg-menu-item-content>
+              </a>
+            </evg-menu-item>
+          </nav>
+        </evg-header-primary-nav>
+        <evg-header-secondary-nav>
+          <nav aria-label="Secondary navigation">
+            <evg-button>
+              <a href="https://wrap.ngo">
+                Go to main site
+                <evg-icon icon="external-link" />
+              </a>
+            </evg-button>
+          </nav>
+        </evg-header-secondary-nav>
+        <evg-header-mobile-nav>
+          <nav aria-label="Mobile navigation">
+            <evg-button>
+              <a href="https://wrap.ngo">
+                Main site
+                <evg-icon icon="external-link" />
+              </a>
+            </evg-button>
+          </nav>
+        </evg-header-mobile-nav>
+      </evg-header>
+    </header>
   );
 }
 
@@ -90,7 +92,7 @@ export function LaPortal({
   readonly slot?: string;
 }) {
   return (
-    <div slot={slot} {...props}>
+    <header slot={slot} {...props}>
       <evg-header compact class="evg-theme-forest">
         <evg-header-logo>
           <img
@@ -154,6 +156,6 @@ export function LaPortal({
           </nav>
         </evg-header>
       )}
-    </div>
+    </header>
   );
 }
