@@ -208,8 +208,8 @@ evg-button {
       button,
       a,
       input {
-        // Remove padding whilst retaining a clickable area large enough for thumbs
-        margin: calc(var(--_padding-block) * -1);
+        // Remove padding and border whilst retaining a clickable area large enough for thumbs
+        margin: calc(var(--_padding-block) * -1 - 1px);
       }
     }
 

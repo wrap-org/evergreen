@@ -78,6 +78,10 @@ evg-input {
     resize: vertical;
   }
 
+  evg-button[variant='ghost'] :is(button, a) {
+    min-height: 0;
+  }
+
   evg-icon,
   svg {
     align-self: center;
