@@ -4,6 +4,11 @@ fieldset {
   padding: 0;
 }
 
+legend {
+  font-size: var(--evg-font-size-body-md);
+  font-weight: var(--evg-font-weight-bold);
+}
+
 button,
 input,
 optgroup,

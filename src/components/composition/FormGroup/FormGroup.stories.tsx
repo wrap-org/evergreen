@@ -72,3 +72,25 @@ ComposingElements.parameters = {
     },
   },
 };
+
+export const FormGroupFieldset: StoryFn = () => (
+  <fieldset>
+    <legend className="evg-spacing-md">Update password</legend>
+    <evg-form-group class="evg-spacing-md">
+      <evg-label>
+        <label htmlFor="new-password">New password</label>
+      </evg-label>
+      <evg-input>
+        <input id="new-password" type="password" />
+      </evg-input>
+    </evg-form-group>
+    <evg-form-group>
+      <evg-label>
+        <label htmlFor="confirm-password">Confirm password</label>
+      </evg-label>
+      <evg-input>
+        <input id="confirm-password" type="password" />
+      </evg-input>
+    </evg-form-group>
+  </fieldset>
+);
