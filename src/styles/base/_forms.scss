@@ -5,7 +5,8 @@ fieldset {
 }
 
 legend {
-  font-size: var(--evg-font-size-body-md);
+  color: var(--evg-theme-color);
+  font-size: var(--evg-font-size-body-sm);
   font-weight: var(--evg-font-weight-bold);
 }
 
