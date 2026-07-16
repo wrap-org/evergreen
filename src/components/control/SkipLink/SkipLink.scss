@@ -13,6 +13,7 @@ evg-skip-link {
     text-underline-offset: 0.125em;
     transform: translateY(0);
     transition: var(--evg-transition);
+    z-index: 30;
 
     &:not(:focus) {
       transform: translateY(-100%);

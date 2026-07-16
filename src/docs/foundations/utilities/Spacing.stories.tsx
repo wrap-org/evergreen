@@ -10,6 +10,8 @@ Spacing tweaks are one of the most common reasons for introducing page level CSS
 Individual components should not create spacing around themselves. Instead, they should use spacing classes to create the desired layout.
 
 It is generally recommended to use bottom spacing and no top spacing to prevent margin collapse.
+
+Because bottom spacing is preferred, this can be written without an explicit direction e.g.  \`evg-spacing-sm\`
 `;
 
 export default {
@@ -32,7 +34,7 @@ export default {
 };
 
 export const Spacing = (args) => {
-  const cx = `evg-spacing-bottom-${args.size}`;
+  const cx = `evg-spacing-${args.size}`;
 
   return (
     <>

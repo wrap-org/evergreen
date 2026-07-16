@@ -138,13 +138,8 @@ evg-button {
   }
 
   &[size='sm'] {
-    evg-loading-button,
-    button,
-    a,
-    input {
-      --_padding-block: var(--evg-spacing-xs);
-      --_padding-inline: var(--evg-spacing-md);
-    }
+    --_padding-block: var(--evg-spacing-xs);
+    --_padding-inline: var(--evg-spacing-md);
   }
 
   &[width='full-width'] {
@@ -174,7 +169,7 @@ evg-button {
   }
 
   &[width='square'] {
-    --_padding-inline: var(--evg-button-padding-block);
+    --_padding-inline: var(--_padding-block);
 
     evg-loading-button,
     button,
@@ -207,14 +202,14 @@ evg-button {
     --_padding-inline: 0;
 
     &[width='square'] {
-      --_padding-inline: var(--evg-button-padding-block);
+      --_padding-inline: var(--_padding-block);
 
       evg-loading-button,
       button,
       a,
       input {
-        // Remove padding whilst retaining a clickable area large enough for thumbs
-        margin: calc(var(--_padding-block) * -1);
+        // Remove padding and border whilst retaining a clickable area large enough for thumbs
+        margin: calc(var(--_padding-block) * -1 - 1px);
       }
     }
 

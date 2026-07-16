@@ -19,7 +19,7 @@ Icons must have the appropriate fill or stroke set to \`currentColor\`.
 Icons are hidden from screen readers by default and should be accompanied by text.
 If an icon is used on its own in a button or link, add a \`label\` prop to the component.
 
-Evergreen uses default icons from [mono icons](https://icons.mono.company/) and adds
+Evergreen uses [default icons](/?path=/docs/foundations-icons--docs) from mono icons and adds
 some custom icons just for this library.
 
 There are two sets of branded icons that were created when redesigning wrap.ngo

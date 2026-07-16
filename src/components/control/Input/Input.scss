@@ -1,7 +1,8 @@
 evg-input {
   --_background: var(--evg-input-background);
   --_border-color: var(--evg-input-border);
-  --evg-icon-baseline-adjust: 0.1em;
+  --evg-icon-size: 1.25rem;
+  --evg-icon-baseline-adjust: 0;
 
   align-items: center;
   background: var(--_background);
@@ -77,6 +78,11 @@ evg-input {
     resize: vertical;
   }
 
+  evg-button[variant='ghost'] :is(button, a) {
+    min-height: 0;
+  }
+
+  evg-icon,
   svg {
     align-self: center;
     block-size: var(--evg-icon-size);

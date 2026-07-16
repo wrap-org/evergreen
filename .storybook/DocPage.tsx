@@ -44,9 +44,11 @@ export const DocPage = ({ of }: { of: any }) => {
               </evg-badge>
             )}
             {themeSupport && (
-              <evg-badge variant="sky-light">
-                Theme support
-              </evg-badge>
+              <a href="/?path=/docs/guides-theming--docs">
+                <evg-badge variant="sky-light">
+                  Theme support
+                </evg-badge>
+              </a>
             )}
           </evg-row>
 

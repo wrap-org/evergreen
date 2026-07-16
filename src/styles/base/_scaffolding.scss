@@ -31,5 +31,6 @@ img {
 
 hr {
   border: 0 none;
-  border-bottom: 1px solid var(--evg-theme-border-color);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--evg-theme-color), transparent 80%);
 }

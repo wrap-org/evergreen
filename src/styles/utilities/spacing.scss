@@ -12,4 +12,11 @@ $directions: top, left, bottom, right;
       }
     }
   }
+
+  // Down is preferred so it can be shorthand e.g. .evg-spacing-md
+  @each $size in spacing.$sizes {
+    &-#{$size} {
+      margin-bottom: var(--evg-spacing-#{$size});
+    }
+  }
 }

@@ -4,6 +4,8 @@ import React from 'react';
 
 import { colors } from '@/lib/tokens';
 
+const families = ['heading', 'body'];
+
 const alignments = ['left', 'center', 'right'];
 
 const sizes = [
@@ -61,6 +63,12 @@ export default {
         type: 'select',
       },
       options: colors,
+    },
+    family: {
+      control: {
+        type: 'radio',
+      },
+      options: families,
     },
     size: {
       control: {
