@@ -59,7 +59,6 @@ List.args = {
 
 export const Unstyled: StoryFn = (args) => (
   <evg-list {...args}>
-    {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
     <ul role="list">
       <li>Item 1</li>
       <li>Item 2</li>

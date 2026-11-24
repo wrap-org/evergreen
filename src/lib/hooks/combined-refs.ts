@@ -12,7 +12,6 @@ export default function useCombinedRefs(...refs) {
       if (typeof ref === 'function') {
         ref(targetRef.current);
       } else {
-        // eslint-disable-next-line no-param-reassign
         ref.current = targetRef.current;
       }
     });

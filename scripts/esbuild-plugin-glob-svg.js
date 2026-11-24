@@ -45,7 +45,7 @@ export const globSvgPlugin = () => ({
           acc[key] = content;
           return acc;
         }, {});
-      } catch (err) {
+      } catch {
         console.warn(`Could not read directory: ${dirPath}`);
         return {};
       }
