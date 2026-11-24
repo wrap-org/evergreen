@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: ${{ matrix.version }}
           cache: npm
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: npm run build
   test:
     strategy:
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: ${{ matrix.version }}
           cache: npm
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: npm run build:storybook
       - run: npx playwright install --with-deps
       - run: npm run test:storybook
@@ -51,7 +51,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - uses: oxsecurity/megalinter/flavors/javascript@bacb5f8674e3730b904ca4d20c8bd477bc51b1a7 # v7.13.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
