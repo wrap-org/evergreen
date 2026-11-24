@@ -11,8 +11,6 @@ DISABLE:
   - SPELL
 
 DISABLE_LINTERS:
-  # We use stylelint for CSS and SCSS linting
-  - CSS_SCSS_LINT
   # Disable in favour of eslint
   - JAVASCRIPT_STANDARD
   # We use dependabot for vulnerability monitoring and patching
@@ -21,8 +19,6 @@ DISABLE_LINTERS:
   - REPOSITORY_TRIVY
   # Disable in favour of eslint
   - TYPESCRIPT_STANDARD
-  # Link check flags localhost links in the contributing docs
-  - MARKDOWN_MARKDOWN_LINK_CHECK
   # V8R keeps giving false positives
   - YAML_V8R
   # HTMLHint doesn't like Storybook partials
@@ -41,5 +37,5 @@ TYPESCRIPT_ES_CONFIG_FILE: .eslintrc.js
 CSS_STYLELINT_CLI_EXECUTABLE: ['./node_modules/.bin/stylelint']
 
 # Linters configuration
-REPOSITORY_GITLEAKS_DISABLE_ERRORS: true
+REPOSITORY_BETTERLEAKS_DISABLE_ERRORS: true
 REPOSITORY_TRUFFLEHOG_ARGUMENTS: --exclude_paths .trufflehog-ignore
